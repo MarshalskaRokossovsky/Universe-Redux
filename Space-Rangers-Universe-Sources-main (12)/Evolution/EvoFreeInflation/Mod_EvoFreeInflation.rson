@@ -1,0 +1,295 @@
+{
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -644,
+  "ViewPos.y":  -205,
+  "ScriptName":  "Mod_EvoFreeInflation",
+  "ScriptFileOut":  "H:\\Mod_EvoFreeInflation.scr",
+  "ScriptTextOut":  "H:\\Mod_EvoFreeInflation.txt",
+  "GraphPoint.Count":  11,
+  "GraphLink.Count":  4,
+  "GraphRectText.Count":  0,
+  "Variables.Count":  4,
+  "Stars.Count":  1,
+  "Planets.Count":  1,
+  "Ships.Count":  1,
+  "States.Count":  1,
+  "Groups.Count":  1,
+  "Places.Count":  0,
+  "Items.Count":  0,
+  "Ethers.Count":  0,
+  "Dialogs.Count":  0,
+  "DialogMessages.Count":  0,
+  "DialogAnswers.Count":  0,
+  "Operations.Count":  2,
+  "Statements.Count":  0,
+  "Loops.Count":  0,
+  "Visual.Objects":  
+  [
+    {
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "PlayerGroup",
+          "Pos.x":  60,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  3,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  90,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  5,
+          "Total.Lines":  16,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "start_capital_amount = PortionInDiapason(GalaxyDiffLevels(1), 50, 500, 75000, 10000); //Скалируем от сложности разброса цен",
+              "max_reached_GTL = GalaxyTechLevel();",
+              "",
+              "coef = 1.0;",
+              "//Рост по времени от самого начала игры и до 3330 года",
+              "if(CurTurn() < 11251) coef = coef * PortionInDiapason(CurTurn(), 301, 11251, 1.0, 4.0);",
+              "//До 3400 года",
+              "else if(CurTurn() < 36801) coef = coef * PortionInDiapason(CurTurn(), 11251, 36801, 4.0, 10.0);",
+              "//До 4000 года",
+              "else coef = coef * PortionInDiapason(CurTurn(), 36801, 219301, 10.0, 20.0);",
+              "",
+              "//Рост по ГТУ",
+              "coef = coef * PortionInDiapason(max_reached_GTL, 1, 8, 1.0, 4.0);",
+              "",
+              "cur_capital_amount = start_capital_amount * coef;",
+              "SetRangersCapital(cur_capital_amount, 1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  6,
+          "Total.Lines":  20,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Пришло время определять месячную инфляцию",
+              "if(!((CurTurn() - 301) % 30))",
+              "{",
+              "    max_reached_GTL = max(GalaxyTechLevel(), max_reached_GTL);",
+              "",
+              "    coef = 1.0;",
+              "",
+              "    //Рост по времени от самого начала игры и до 3330 года",
+              "    if(CurTurn() < 11251) coef = coef * PortionInDiapason(CurTurn(), 301, 11251, 1.0, 4.0);",
+              "    //До 3400 года",
+              "    else if(CurTurn() < 36801) coef = coef * PortionInDiapason(CurTurn(), 11251, 36801, 4.0, 10.0);",
+              "    //До 4000 года",
+              "    else coef = coef * PortionInDiapason(CurTurn(), 36801, 219301, 10.0, 20.0);",
+              "",
+              "    //Рост по ГТУ",
+              "    coef = coef * PortionInDiapason(max_reached_GTL, 1, 8, 1.0, 4.0);",
+              "",
+              "    cur_capital_amount = start_capital_amount * coef;",
+              "    SetRangersCapital(cur_capital_amount, 1);",
+              "}"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "InitPlanet",
+          "Pos.x":  60,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  2,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  0,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "InitStar",
+          "Pos.x":  60,
+          "Pos.y":  130,
+          "Parent":  -1,
+          "#":  1,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "PlayerState",
+          "Pos.x":  60,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  4,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "cur_capital_amount",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  8,
+          "#":  7,
+          "Var.Type":  "Dword",
+          "Init":  "50000",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "max_reached_GTL",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  9,
+          "#":  8,
+          "Var.Type":  "Int",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "coef",
+          "Pos.x":  90,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  9,
+          "Var.Type":  "Float",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "start_capital_amount",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  7,
+          "#":  10,
+          "Var.Type":  "Dword",
+          "Init":  "50000",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  3,
+      "End":  4,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  3,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  0,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  0,
+  "BlockPar.EC":  
+  [
+  
+  ]
+}
