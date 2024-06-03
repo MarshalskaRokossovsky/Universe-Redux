@@ -1,15 +1,15 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -683,
-  "ViewPos.y":  -635,
-  "ScriptName":  "Mod_RefExpHullsAbilities",
-  "ScriptFileOut":  "M:\\UniverseFixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.scr",
-  "ScriptTextOut":  "M:\\UniverseFixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.txt",
-  "GraphPoint.Count":  15,
-  "GraphLink.Count":  4,
+  "ViewPos.x":  -558,
+  "ViewPos.y":  -520,
+  "ScriptName":  "Mod_ShuBombs",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.txt",
+  "GraphPoint.Count":  27,
+  "GraphLink.Count":  11,
   "GraphRectText.Count":  0,
-  "Variables.Count":  8,
+  "Variables.Count":  11,
   "Stars.Count":  1,
   "Planets.Count":  1,
   "Ships.Count":  1,
@@ -18,15 +18,70 @@
   "Places.Count":  0,
   "Items.Count":  0,
   "Ethers.Count":  0,
-  "Dialogs.Count":  0,
-  "DialogMessages.Count":  0,
-  "DialogAnswers.Count":  0,
-  "Operations.Count":  2,
+  "Dialogs.Count":  2,
+  "DialogMessages.Count":  2,
+  "DialogAnswers.Count":  1,
+  "Operations.Count":  6,
   "Statements.Count":  0,
   "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  140,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "Выход",
+          "AMsg.Num":  "0"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "<tStr>",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "<tStr>",
+          "DMsg.Num":  "1"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "SelectTarget",
+          "Pos.x":  80,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  15        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "LaunchNuke",
+          "Pos.x":  140,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  19        
+        }      
+      ],
       "Groups":      
       [
         {
@@ -124,6 +179,98 @@
               "    novaCount=novaCount-1;",
               "    i=i+1;",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  16,
+          "Total.Lines":  13,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ArrayClear(tempArr);",
+              "tStar = ShipStar(Player());",
+              "for (i = 0; i < StarShips(tStar); i = i + 1) {",
+              "  tShip = StarShips(tStar, i);",
+              "  if (Dist(Player(), tShip) > ShipRadarRange(Player())) continue;",
+              "  if (!ShipInNormalSpace(tShip)) continue;",
+              "  if (NoTargetToShip(tShip)) continue;",
+              "  if (IsPlayer(tShip)) continue;",
+              "  ArrayAdd(tempArr, tShip);",
+              "}",
+              "num = GAnswerData; //Ядерка или нова-торпеда",
+              "if (ArrayDim(tempArr) <= 1) tStr = '</color>' + \"В зоне действия не обнаружено вражеских кораблей\";",
+              "else tStr = '</color>' + \"Выберите цель:\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  18,
+          "Total.Lines":  4,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if (ArrayDim(tempArr) > 1) {",
+              "  for (int i = 1; i < ArrayDim(tempArr); i = i + 1) InjectAnswer('LaunchNuke', Name(tempArr[i]) + '<Object=' + tempArr[i] + ',23,17,0>', i);",
+              "}",
+              "InjectAnswer('LaunchNuke', 'Отмена', -1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  20,
+          "Total.Lines":  21,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if (~GAnswerData) {",
+              "  tShip = tempArr[GAnswerData];",
+              "  tStr = '</color>' + \"Производится запуск ракеты в <Name(tShip)>\";",
+              "  if (!num) {",
+              "    tdwd = SpawnMissile(ShipStar(Player()), tShip, CoordX(Player()), CoordY(Player()), Angle(tShip, Player()), 200 + 65 * GalaxyTechLevel(), 300 + 85 * GalaxyTechLevel(), 700 + GalaxyTechLevel() * 50, t_Weapon15, -1, FindBonusByNameInCfg('ShuNukes_Nuke'));",
+              "    MissileOwner(tdwd, Player());",
+              "    UselessItemData(PlayerNuke, 1, UselessItemData(CurItem(), 1) - 1);",
+              "    UselessItemData(CurItem(), 2, 0);",
+              "  }",
+              "  else {",
+              "    tdwd = SpawnMissile(ShipStar(Player()), tShip, CoordX(Player()), CoordY(Player()), Angle(tShip, Player()), 4000, 5000, 400, 'nova', -1, FindBonusByNameInCfg('ShuNukes_Nova'));",
+              "    MissileOwner(tdwd, Player());",
+              "    for (i = 0; i < ShipItems(Player()); i = i + 1) {",
+              "      tdwd = ShipItems(Player(), i);",
+              "      if (EquipmentImageName(tdwd) == 'NovaTorpedo') {",
+              "        FreeItem(GetItemFromShip(Player(), tdwd));",
+              "        break;",
+              "      }",
+              "    }",
+              "  }",
+              "} else tStr = '</color>' + \"Запуск отменен\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  23,
+          "Total.Lines":  2,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipDestroy(GetTalkShip(), 1);",
+              "ArrayClear(tempArr);"          
           ]        
         }      
       ],
@@ -299,6 +446,39 @@
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tShip",
+          "Pos.x":  10,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  24,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "num",
+          "Pos.x":  10,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tStr",
+          "Pos.x":  -100,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  26,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
         }      
       ]    
     }  
@@ -332,11 +512,83 @@
       "End":  3,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  0,
+  "BlockPar.EC.Total.Strings":  6,
   "BlockPar.EC":  
   [
-  
+    {
+      "#":  "0",
+      "String":  "Выберите цель:"    
+    },
+    {
+      "#":  "1",
+      "String":  "В зоне действия не обнаружено вражеских кораблей"    
+    },
+    {
+      "#":  "2",
+      "String":  "Запуск отменен"    
+    },
+    {
+      "#":  "3",
+      "String":  "Производится запуск ракеты в <0>"    
+    },
+    {
+      "#":  "4",
+      "String":  "<0>"    
+    },
+    {
+      "#":  "5",
+      "String":  "Выход"    
+    }  
   ]
 }

@@ -6,8 +6,8 @@
   "ScriptName":  "Mod_ExpRC",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.txt",
-  "GraphPoint.Count":  148,
-  "GraphLink.Count":  111,
+  "GraphPoint.Count":  152,
+  "GraphLink.Count":  114,
   "GraphRectText.Count":  3,
   "Variables.Count":  38,
   "Stars.Count":  1,
@@ -18,10 +18,10 @@
   "Places.Count":  0,
   "Items.Count":  0,
   "Ethers.Count":  0,
-  "Dialogs.Count":  8,
-  "DialogMessages.Count":  23,
-  "DialogAnswers.Count":  29,
-  "Operations.Count":  25,
+  "Dialogs.Count":  9,
+  "DialogMessages.Count":  24,
+  "DialogAnswers.Count":  30,
+  "Operations.Count":  26,
   "Statements.Count":  20,
   "Loops.Count":  0,
   "Visual.Objects":  
@@ -318,6 +318,16 @@
           "#":  143,
           "Msg":  "",
           "AMsg.Num":  "28"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  570,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  151,
+          "Msg":  "",
+          "AMsg.Num":  "29"        
         }      
       ],
       "DialogMessages":      
@@ -551,6 +561,16 @@
           "#":  142,
           "Msg":  "<tstr3>",
           "DMsg.Num":  "22"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  150,
+          "Msg":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <RangerBaseNodes(Player())> нодов.\r\nКроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов.",
+          "DMsg.Num":  "23"        
         }      
       ],
       "Dialogs":      
@@ -618,6 +638,14 @@
           "Pos.y":  -20,
           "Parent":  145,
           "#":  144        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "SellNodes",
+          "Pos.x":  570,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  148        
         }      
       ],
       "Groups":      
@@ -1043,7 +1071,7 @@
           "Pos.y":  0,
           "Parent":  28,
           "#":  35,
-          "Total.Lines":  43,
+          "Total.Lines":  46,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1088,6 +1116,9 @@
               "",
               "        AddDialogBlock(CT('FormRuins.RC.GiveNod.PlayerSend'), 2);",
               "        AddDialogInject('SellMM', '', CT('FormRuins.RC.GiveNod.PlayerSendMod'), 0);",
+              "",
+              "        AddDialogBlock(CT('FormRuins.RC.SaleNod.PlayerSend'), 2);",
+              "        AddDialogInject('SellNodes', '', Format(CT('FormRuins.RC.SaleNod.PlayerSendMod'),'Count',GetNodesFromShip(Player())), 0);",
               "    }",
               "}"          
           ]        
@@ -1570,6 +1601,24 @@
               "    ArrayAdd(tarr1['Item'], item);",
               "    ArrayAdd(tarr1['Cost'], cost);",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  149,
+          "Total.Lines":  5,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "dwd0=GetNodesFromShip(Player());",
+              "GetNodesFromShip(Player(),dwd0);",
+              "RangerBaseNodes(Player(),RangerBaseNodes(Player()) + (dwd0*5));",
+              "ShipFreeExp(Player(),ShipFreeExp(Player()) + (dwd0*7));",
+              "Sound('Sound.Buy');"          
           ]        
         }      
       ],
@@ -3140,6 +3189,27 @@
       "End":  133,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  149,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  149,
+      "End":  150,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  150,
+      "End":  151,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -3214,7 +3284,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  44,
+  "BlockPar.EC.Total.Strings":  45,
   "BlockPar.EC":  
   [
     {
@@ -3392,6 +3462,10 @@
     {
       "#":  "92",
       "String":  "Желаете узнать что-нибудь ещё?"    
+    },
+    {
+      "#":  "93",
+      "String":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <0> нодов.<br>Кроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов."    
     }  
   ]
 }
