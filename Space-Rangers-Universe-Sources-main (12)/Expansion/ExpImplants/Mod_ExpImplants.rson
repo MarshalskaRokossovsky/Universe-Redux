@@ -2068,10 +2068,13 @@
           "Pos.y":  20,
           "Parent":  25,
           "#":  28,
-          "Total.Lines":  269,
+          "Total.Lines":  272,
           "Code.Type":  "Turn",
           "Code":          
           [
+              "SFT(ShipCustomShipInfoDescription(Player(),GAnswerData));",
+              "SFT(ShipCustomShipInfoTextData(Player(),GAnswerData,2));",
+              "",
               "var_dialog=1;",
               "PlayerImmunity(PlayerImmunity()-(PlayerImmunity()*RndObject(5,10, cur_ruin))/100);",
               "temp_str=CT(ShipCustomShipInfoTextData(Player(),GAnswerData,2)+DeleteTags('.Bonus_count'));",

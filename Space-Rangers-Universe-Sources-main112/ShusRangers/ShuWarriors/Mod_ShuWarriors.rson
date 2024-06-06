@@ -1,11 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -240,
-  "ViewPos.y":  -81,
+  "ViewPos.x":  -452,
+  "ViewPos.y":  -223,
   "ScriptName":  "Mod_ShuWarriors",
-  "ScriptFileOut":  "H:\\Mod_ShuWarriors.scr",
-  "ScriptTextOut":  "H:\\Mod_ShuWarriors.txt",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
   "GraphPoint.Count":  164,
   "GraphLink.Count":  105,
   "GraphRectText.Count":  0,
@@ -196,7 +196,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  0,
-          "Pos.y":  40,
+          "Pos.y":  30,
           "Parent":  72,
           "#":  37,
           "Msg":  "<tstr1>",
@@ -2011,7 +2011,7 @@
           "Pos.y":  20,
           "Parent":  35,
           "#":  36,
-          "Total.Lines":  106,
+          "Total.Lines":  107,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2120,7 +2120,8 @@
               "                                  '<StarToAttack'+'>', '<color=0,50,200>' + Name(GalaxyStar(GlobalWBOperationsArray[operation_num, 'StarToAttackId'] - 1)) + '</color>',",
               "                                  '');",
               "    tstr2 = '</color>' + CT(dialog_path + '.PlayerPrepareStatus');",
-              "}"          
+              "}",
+              "//SFT('3333333333333333333333333333333');"          
           ]        
         },
         {
@@ -2708,12 +2709,16 @@
           "Pos.y":  20,
           "Parent":  115,
           "#":  72,
-          "Total.Lines":  63,
+          "Total.Lines":  75,
           "Code.Type":  "Turn",
           "Code":          
           [
               "FindStarToAttack(cur_ruin, stars_to_attack_arr);",
               "ships_available = FindAllMilitaryShipsInSector(cur_sector, militaries_arr, 1);",
+              "",
+              "SFT('============');",
+              "SFT(ships_available);",
+              "SFT('============');",
               "",
               "if(ArrayDim(stars_to_attack_arr) > 1 && ArrayDim(militaries_arr['Warriors']) > 1)",
               "{",
@@ -2746,6 +2751,12 @@
               "    average_warrior_power = coals_power / coals_cnt; //Запоминаем среднюю силу для расчёта примерной сила при заказе достройки военных на планетах сектора",
               "    coals_cnt = 0;",
               "    coals_power = 0;",
+              "",
+              "    tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperation'),",
+              "                              '<PlayerRank'+'>', player_str_rank,",
+              "                              '<Sector'+'>', '<color=0,50,200>' + Name(StarToCon(ShipStar(cur_ruin))) + '</color>',",
+              "                              '<MilitaryBase'+'>', '<color=0,50,200>' + ShipName(cur_ruin) + '</color>',",
+              "                              '');",
               "}",
               "//Если вдруг атаковать нечего",
               "else if(ArrayDim(stars_to_attack_arr) > 1)",
@@ -2756,6 +2767,10 @@
               "                                  '');",
               "    tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNoTargetStars');",
               "    operation_lvl = -1;",
+              "",
+              "    SFT('999999999000000000000000000');",
+              "    SFT(tstr1);",
+              "    SFT(tstr2);",
               "}",
               "//Если вдруг атаковать некем (в секторе не нашлось ни одного простого военного)",
               "else //if(ArrayDim(militaries_arr['Warriors']) > 1)",
@@ -2768,13 +2783,11 @@
               "    operation_lvl = -1;",
               "}",
               "",
-              "tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperation'),",
-              "                              '<PlayerRank'+'>', player_str_rank,",
-              "                              '<Sector'+'>', '<color=0,50,200>' + Name(StarToCon(ShipStar(cur_ruin))) + '</color>',",
-              "                              '<MilitaryBase'+'>', '<color=0,50,200>' + ShipName(cur_ruin) + '</color>',",
-              "                              '');",
               "tstr2 = '</color>' + CT(dialog_path + '.PlayerConfirmationYes');",
-              "tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');"          
+              "tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');",
+              "",
+              "SFT(tstr1);",
+              "SFT(tstr2);"          
           ]        
         },
         {
@@ -3403,7 +3416,7 @@
           "Pos.y":  20,
           "Parent":  91,
           "#":  116,
-          "Total.Lines":  5,
+          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3411,7 +3424,8 @@
               "                              '<PlayerRank'+'>', player_str_rank,",
               "                              '');",
               "tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNo');",
-              "operation_lvl = -1;"          
+              "operation_lvl = -1;",
+              "//SFT('111111111111111111111111111111111');"          
           ]        
         },
         {
