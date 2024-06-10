@@ -1099,7 +1099,7 @@
           "Pos.y":  20,
           "Parent":  72,
           "#":  87,
-          "Total.Lines":  300,
+          "Total.Lines":  303,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1162,6 +1162,7 @@
               "        else if(tstr1 == 'Usl_PirateItem2') j = 1;",
               "        else if(tstr1 == 'Usl_38') j = 1;",
               "        else if(tstr1 == 'Usl_34') j = 1;",
+              "        else if(tstr1 == 'Usl_Blastshot') j = 1;",
               "    }",
               "    //Пиратская база",
               "    else if(cur_ruin_type == 'PB')",
@@ -1205,6 +1206,7 @@
               "        else if(tstr1 == 'Usl_24') j = 1;",
               "        else if(tstr1 == 'Usl_17') j = 1;",
               "        else if(tstr1 == 'Usl_16') j = 1;",
+              "        else if(tstr1 == 'Usl_Blastshot') j = 1;",
               "    }",
               "    //Научная база",
               "    else if(cur_ruin_type == 'SB')",
@@ -1323,6 +1325,7 @@
               "        else if(tstr1 == 'Usl_PirateItem9') j = 1;",
               "        else if(tstr1 == 'Usl_PirateItem8') j = 1;",
               "        else if(tstr1 == 'Usl_PirateItem1') j = 1;",
+              "        else if(tstr1 == 'Usl_Blastshot') j = 1;",
               "        //Маршал-вставка",
               "    }",
               "    //Центр рейнджеров",
@@ -1508,7 +1511,7 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  92,
-          "Total.Lines":  866,
+          "Total.Lines":  867,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -1526,6 +1529,7 @@
               "ArrayAdd(tarr1,  1, 'ShuBounty_Foolter');",
               "ArrayAdd(tarr1, -1, 'ShuBounty_SneerEngine'); //-1 означает, что базовый размер после генерации менять не нужно",
               "ArrayAdd(tarr1,  1, 'ShuBounty_TheSkullOfCaarDan');",
+              "ArrayAdd(tarr1,  1, 'ShuBounty_AriralDoll');",
               "tint1 = 7; //Стартовый шанс на дроп очередного уникального предмета на незаселёнку",
               "",
               "if(CurrentMods('Expansion\\ExpTC')) check = 1;",

@@ -2304,7 +2304,7 @@
           "Pos.y":  0,
           "Parent":  2,
           "#":  17,
-          "Total.Lines":  2096,
+          "Total.Lines":  2098,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -2320,6 +2320,9 @@
               "//Записываем номера Тортугаца и Нифигаца (для удобной читаемости в коде)",
               "TortugatzId = Id(PlanetToStar(PlanetPirateClan())) - 1;",
               "NifigatzId = 71;",
+              "",
+              "ShipAddCustomShipInfo(Player(),'ShuKlissan_LeprosyStop','NoShow');",
+              "ShipCustomShipInfoData(Player(),'ShuKlissan_LeprosyStop',1,0);",
               "",
               "//Создаём кастомные орудия",
               "InventShuKlissanCustomGuns();",
@@ -3996,7 +3999,6 @@
               "    else ScriptItemActParam(32769); //1+32768 (ослабленный дамагсет)",
               "}",
               "",
-              "ShipAddCustomShipInfo(Player(),'ShuKlissan_LeprosyStop','NoShow');",
               "function KlissanLeprosyInflict()",
               "{",
               "    //[t_OnWeaponShot2,t_OnDeath|]",

@@ -1,15 +1,15 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -225,
-  "ViewPos.y":  -535,
+  "ViewPos.x":  -483,
+  "ViewPos.y":  -375,
   "ScriptName":  "Mod_EvoTranc",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.txt",
-  "GraphPoint.Count":  327,
-  "GraphLink.Count":  254,
+  "GraphPoint.Count":  344,
+  "GraphLink.Count":  266,
   "GraphRectText.Count":  7,
-  "Variables.Count":  65,
+  "Variables.Count":  67,
   "Stars.Count":  1,
   "Planets.Count":  1,
   "Ships.Count":  1,
@@ -18,11 +18,11 @@
   "Places.Count":  0,
   "Items.Count":  0,
   "Ethers.Count":  0,
-  "Dialogs.Count":  33,
-  "DialogMessages.Count":  36,
-  "DialogAnswers.Count":  36,
-  "Operations.Count":  95,
-  "Statements.Count":  55,
+  "Dialogs.Count":  36,
+  "DialogMessages.Count":  38,
+  "DialogAnswers.Count":  39,
+  "Operations.Count":  100,
+  "Statements.Count":  57,
   "Loops.Count":  0,
   "Visual.Objects":  
   [
@@ -388,6 +388,36 @@
           "#":  318,
           "Msg":  "<color=135,118,73>Сиреневый</color> - лучший цвет для уроженца Эйпентака, наверное",
           "AMsg.Num":  "35"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  140,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  331,
+          "Msg":  "Пожалуй, не до этого сейчас",
+          "AMsg.Num":  "36"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  300,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  339,
+          "Msg":  "Далее",
+          "AMsg.Num":  "37"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  300,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  340,
+          "Msg":  "<TextCorr2>",
+          "AMsg.Num":  "38"        
         }      
       ],
       "DialogMessages":      
@@ -751,6 +781,26 @@
           "#":  269,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "35"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  329,
+          "Msg":  "Хозяин, вы можете указать мне, в какой ситуации я должен буду немедленно покинуть космическое пространство и сесть на ближайший объект. Кроме того, вы можете указать, куда мне садиться и могу ли я использовать при этом форсаж.\r\n\r\nТекущие правила:\r\n<TextCorr7>",
+          "DMsg.Num":  "36"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  335,
+          "Msg":  "",
+          "DMsg.Num":  "37"        
         }      
       ],
       "Dialogs":      
@@ -1018,6 +1068,30 @@
           "Pos.y":  -60,
           "Parent":  -1,
           "#":  267        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "TrancRun",
+          "Pos.x":  110,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  328        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "TT",
+          "Pos.x":  170,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  332        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogNew",
+          "Pos.x":  240,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  334        
         }      
       ],
       "Groups":      
@@ -4996,7 +5070,7 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  360,
+          "Pos.x":  350,
           "Pos.y":  -130,
           "Parent":  -1,
           "#":  284,
@@ -5069,7 +5143,7 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  289,
-          "Total.Lines":  105,
+          "Total.Lines":  114,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -5145,6 +5219,15 @@
               "                if(~temp_int_4)",
               "                {",
               "                    AddDialogInject('TrancNavigation', '', \"Настройка навигации и операции с кошельком\", 0);",
+              "                }",
+              "",
+              "                if(~ShipFindCustomShipInfoByType(cur_Tranc, 'TrancRun'))",
+              "                {",
+              "                    AddDialogInject('TrancRun', '', \"Настройка поведения в бою\", 0);",
+              "                }",
+              "",
+              "                if(ShipOrder(cur_Tranc) != 6) {",
+              "                    AddDialogInject('Follow', '', \"Следуй за мной\", 1);",
               "                }",
               "",
               "                AddDialogInject('TrancOptions', '', \"Настроить поведение при сборе предметов\", 0);",
@@ -5457,6 +5540,158 @@
               "Chameleon(cur_Tranc, 'Ship.TranclucatorPurple');",
               "TranclucatorData(cur_Tranc, 'ArtSysName', 'ArtTranclucatorPurple');",
               "if(cur_ItemTranc) EquipmentImageName(cur_ItemTranc, 'ArtTranclucatorPurple');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  327,
+          "Total.Lines":  5,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(PlayerTranclucators()>0) {",
+              "    for(t=0;PlayerTranclucators()>t;t=t+1) {",
+              "        if(!ShipFindCustomShipInfoByType(PlayerTranclucators(t),'TrancRun')) ShipAddCustomShipInfo(PlayerTranclucators(t),'TrancRun','NoShow');",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  330,
+          "Total.Lines":  49,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',1) == 0) {",
+              "    TextCorr7 = TextCorr7 + \"Я продолжу полёт, пока не получу указаний от вас\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 75%\",1);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 50%\",2);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 25%\",3);",
+              "}",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',1) == 1) {",
+              "    TextCorr7 = TextCorr7 + \"Я продолжу полёт, пока структура корпуса не опустится ниже 75%\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Продолжай полёт в любом случае\",0);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 50%\",2);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 25%\",3);",
+              "}",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',1) == 2) {",
+              "    TextCorr7 = TextCorr7 + \"Я продолжу полёт, пока структура корпуса не опустится ниже 50%\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 75%\",1);",
+              "    InjectAnswer('TT',\"Продолжай полёт в любом случае\",0);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 25%\",3);",
+              "}",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',1) == 3) {",
+              "    TextCorr7 = TextCorr7 + \"Я продолжу полёт, пока структура корпуса не опустится ниже 25%\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 75%\",1);",
+              "    InjectAnswer('TT',\"Улетай, если структуры корпуса будет меньше 50%\",2);",
+              "    InjectAnswer('TT',\"Продолжай полёт в любом случае\",0);",
+              "}",
+              "",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',2) == 0) {",
+              "    TextCorr7 = TextCorr7 + \"Пунктом назначения будет ближайшая планета или станция\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Лети только на планеты\",11);",
+              "    InjectAnswer('TT',\"Лети только на станции\",12);",
+              "}",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',2) == 1) {",
+              "    TextCorr7 = TextCorr7 + \"Пунктом назначения будет ближайшая планета\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Лети и на станции, и на планеты\",13);",
+              "    InjectAnswer('TT',\"Лети только на станции\",12);",
+              "}",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',2) == 2) {",
+              "    TextCorr7 = TextCorr7 + \"Пунктом назначения будет ближайшая станция\" + Format('<br>');",
+              "    InjectAnswer('TT',\"Лети только на планеты\",11);",
+              "    InjectAnswer('TT',\"Лети и на станции, и на планеты\",13);",
+              "}",
+              "",
+              "if(ShipCustomShipInfoData(cur_Tranc,'TrancRun',3) == 0) {",
+              "    TextCorr7 = TextCorr7 + \"Я не буду активировать форсаж\";",
+              "    InjectAnswer('TT',\"Используй форсаж\",21);",
+              "}",
+              "else {",
+              "    TextCorr7 = TextCorr7 + \"Я буду активировать форсаж\";",
+              "    InjectAnswer('TT',\"Не используй форсаж\",22);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  333,
+          "Total.Lines":  9,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GAnswerData == 0) ShipCustomShipInfoData(cur_Tranc,'TrancRun',1,0);",
+              "if(GAnswerData == 1) ShipCustomShipInfoData(cur_Tranc,'TrancRun',1,1);",
+              "if(GAnswerData == 2) ShipCustomShipInfoData(cur_Tranc,'TrancRun',1,2);",
+              "if(GAnswerData == 3) ShipCustomShipInfoData(cur_Tranc,'TrancRun',1,3);",
+              "if(GAnswerData == 11) ShipCustomShipInfoData(cur_Tranc,'TrancRun',2,1);",
+              "if(GAnswerData == 12) ShipCustomShipInfoData(cur_Tranc,'TrancRun',2,2);",
+              "if(GAnswerData == 13) ShipCustomShipInfoData(cur_Tranc,'TrancRun',2,0);",
+              "if(GAnswerData == 21) ShipCustomShipInfoData(cur_Tranc,'TrancRun',3,1);",
+              "if(GAnswerData == 22) ShipCustomShipInfoData(cur_Tranc,'TrancRun',3,0);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  336,
+          "Total.Lines":  16,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderFollowShip(cur_Tranc, Player());",
+              "InterfaceState('Talk', 'Close', 3);",
+              "",
+              "//Если транклюкаторов у игрока более одного, проверяем, сколько из них находятся в текущей системе",
+              "if(PlayerTranclucators() > 1)",
+              "{",
+              "    for(i = 0; i < PlayerTranclucators(); i = i + 1)",
+              "    {",
+              "        tempDwd = PlayerTranclucators(i);",
+              "        if(!ShipInNormalSpace(tempDwd)) continue;",
+              "        if(ShipStar(tempDwd) != cur_star) continue;",
+              "        ArrayAdd(tempArr, tempDwd);",
+              "    }",
+              "    //Если транклюкаторов у игрока несколько, выводим запрос и ответ о ретрансляции приказа всем доступным роботам",
+              "    if(ArrayDim(tempArr) > 2) TextCorr2 = '</color>' + CT('Talk.Tranclucator.OrderForAll');",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  341,
+          "Total.Lines":  8,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Игрок решил раздать общий приказ на следование всем доступным транклюкаторам",
+              "for(i = 1; i < ArrayDim(tempArr); i = i + 1)",
+              "{",
+              "    tempDwd = tempArr[i];",
+              "    //Пропускаем транка, с которым игрок вёл диалог, и который ранее уже получил свой приказ",
+              "    if(tempDwd == cur_Tranc) continue;",
+              "    OrderFollowShip(tempDwd, Player());",
+              "}"          
           ]        
         }      
       ],
@@ -6293,6 +6528,34 @@
           [
               "temp_int"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  337,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  338,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ArrayDim(tempArr) > 2"          
+          ]        
         }      
       ],
       "States":      
@@ -7047,6 +7310,28 @@
           "Pos.y":  470,
           "Parent":  -1,
           "#":  290,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "DefCnt",
+          "Pos.x":  700,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  342,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "targetID",
+          "Pos.x":  700,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  343,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -8833,6 +9118,90 @@
       "End":  36,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  328,
+      "End":  330,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  330,
+      "End":  329,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  329,
+      "End":  331,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  332,
+      "End":  333,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  333,
+      "End":  330,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  335,
+      "End":  338,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  335,
+      "End":  337,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  337,
+      "End":  339,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  338,
+      "End":  340,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  340,
+      "End":  341,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  334,
+      "End":  336,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  336,
+      "End":  335,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -8999,7 +9368,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  251,
+  "BlockPar.EC.Total.Strings":  274,
   "BlockPar.EC":  
   [
     {
@@ -10005,6 +10374,98 @@
     {
       "#":  "910",
       "String":  "<color=135,118,73>Сиреневый</color> - лучший цвет для уроженца Эйпентака, наверное"    
+    },
+    {
+      "#":  "911",
+      "String":  "Следуй за мной"    
+    },
+    {
+      "#":  "912",
+      "String":  "Настройка поведения в бою"    
+    },
+    {
+      "#":  "913",
+      "String":  "Не используй форсаж"    
+    },
+    {
+      "#":  "914",
+      "String":  "Я буду активировать форсаж"    
+    },
+    {
+      "#":  "915",
+      "String":  "Используй форсаж"    
+    },
+    {
+      "#":  "916",
+      "String":  "Я не буду активировать форсаж"    
+    },
+    {
+      "#":  "917",
+      "String":  "Лети и на станции, и на планеты"    
+    },
+    {
+      "#":  "918",
+      "String":  "Лети только на планеты"    
+    },
+    {
+      "#":  "919",
+      "String":  "Пунктом назначения будет ближайшая станция"    
+    },
+    {
+      "#":  "920",
+      "String":  "Лети только на станции"    
+    },
+    {
+      "#":  "921",
+      "String":  "Пунктом назначения будет ближайшая планета"    
+    },
+    {
+      "#":  "922",
+      "String":  "Пунктом назначения будет ближайшая планета или станция"    
+    },
+    {
+      "#":  "923",
+      "String":  "Продолжай полёт в любом случае"    
+    },
+    {
+      "#":  "924",
+      "String":  "Улетай, если структуры корпуса будет меньше 50%"    
+    },
+    {
+      "#":  "925",
+      "String":  "Улетай, если структуры корпуса будет меньше 75%"    
+    },
+    {
+      "#":  "926",
+      "String":  "Я продолжу полёт, пока структура корпуса не опустится ниже 25%"    
+    },
+    {
+      "#":  "927",
+      "String":  "Улетай, если структуры корпуса будет меньше 25%"    
+    },
+    {
+      "#":  "928",
+      "String":  "Я продолжу полёт, пока структура корпуса не опустится ниже 50%"    
+    },
+    {
+      "#":  "929",
+      "String":  "Я продолжу полёт, пока структура корпуса не опустится ниже 75%"    
+    },
+    {
+      "#":  "930",
+      "String":  "Я продолжу полёт, пока не получу указаний от вас"    
+    },
+    {
+      "#":  "931",
+      "String":  "Хозяин, вы можете указать мне, в какой ситуации я должен буду немедленно покинуть космическое пространство и сесть на ближайший объект. Кроме того, вы можете указать, куда мне садиться и могу ли я использовать при этом форсаж.<br><br>Текущие правила:<br><0>"    
+    },
+    {
+      "#":  "932",
+      "String":  ""    
+    },
+    {
+      "#":  "933",
+      "String":  "Пожалуй, не до этого сейчас"    
     }  
   ]
 }
