@@ -6,10 +6,10 @@
   "ScriptName":  "Mod_ShuNukes",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuNukes\\DATA\\Script\\Mod_ShuNukes.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuNukes\\DATA\\Script\\Mod_ShuNukes.txt",
-  "GraphPoint.Count":  70,
-  "GraphLink.Count":  46,
+  "GraphPoint.Count":  75,
+  "GraphLink.Count":  48,
   "GraphRectText.Count":  0,
-  "Variables.Count":  23,
+  "Variables.Count":  24,
   "Stars.Count":  1,
   "Planets.Count":  1,
   "Ships.Count":  1,
@@ -21,8 +21,8 @@
   "Dialogs.Count":  1,
   "DialogMessages.Count":  5,
   "DialogAnswers.Count":  9,
-  "Operations.Count":  11,
-  "Statements.Count":  16,
+  "Operations.Count":  13,
+  "Statements.Count":  18,
   "Loops.Count":  0,
   "Visual.Objects":  
   [
@@ -953,6 +953,42 @@
               "}",
               "else tint1 = 0;"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  800,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  73,
+          "Total.Lines":  9,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Костыльная заплатка проёба Клаксоном имени игрока",
+              "if(name1 == 0) name1 = ShipName(Player());",
+              "if(ShipIsTakeoff(Player())) name1 = ShipName(Player());",
+              "if(name1 != 0) {",
+              "    if(name1 != ShipName(Player()) && ShipCustomShipInfoData(Player(),'NameChangeFix',1,0)) {",
+              "        SetName(Player(),name1);",
+              "    }",
+              "}",
+              "name1 = ShipName(Player());"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  840,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  74,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "name1 = Name(Player());"          
+          ]        
         }      
       ],
       "Planets":      
@@ -1242,6 +1278,34 @@
           [
               "1"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  800,
+          "Pos.y":  470,
+          "Parent":  -1,
+          "#":  70,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(Player()) && !ShipIsTakeoff(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  840,
+          "Pos.y":  470,
+          "Parent":  -1,
+          "#":  71,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipIsTakeoff(Player())"          
+          ]        
         }      
       ],
       "States":      
@@ -1517,6 +1581,17 @@
           "Parent":  -1,
           "#":  69,
           "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "name1",
+          "Pos.x":  940,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  72,
+          "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
         }      
@@ -1844,6 +1919,20 @@
       "Type":  "TGraphLink",
       "Begin":  57,
       "End":  61,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  70,
+      "End":  73,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  71,
+      "End":  74,
       "Nom":  0,
       "Arrow":  true    
     }  

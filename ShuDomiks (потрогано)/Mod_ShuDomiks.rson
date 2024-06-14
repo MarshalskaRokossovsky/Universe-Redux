@@ -13590,7 +13590,7 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "DetraimentExp",
+          "Name":  "DetrimentExp",
           "Pos.x":  570,
           "Pos.y":  -240,
           "Parent":  -1,
@@ -13634,7 +13634,7 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "SpeedDrop",
+          "Name":  "SpeedExp",
           "Pos.x":  710,
           "Pos.y":  -220,
           "Parent":  -1,

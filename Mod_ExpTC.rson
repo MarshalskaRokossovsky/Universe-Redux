@@ -1880,7 +1880,7 @@
               "                AddDialogInject('TrancCreate',\"Кстати, если у вас нет транклюкатора, то мы можем собрать для вас одного по низкой цене.\",\"Хочу собрать транклюкатора\",50);",
               "                mcost = GalaxyMoney(4,4);",
               "                tcost = 120+GalaxyTechLevel()*80;",
-              "    ",
+              "",
               "            }",
               "        }",
               "        if(TrancStage == 2) {",
@@ -3250,7 +3250,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "ready == 3 && ShipMoney(Player()) >= mcost && ShipGoods(Player(),t_Technics) >= tcost"          
+              "ready == 3 && ShipMoney(Player()) >= mcost && GoodsCount(Player(),t_Technics) >= tcost"          
           ]        
         }      
       ],

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -452,
-  "ViewPos.y":  -223,
+  "ViewPos.x":  -300,
+  "ViewPos.y":  -348,
   "ScriptName":  "Mod_ShuWarriors",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
@@ -2716,9 +2716,9 @@
               "FindStarToAttack(cur_ruin, stars_to_attack_arr);",
               "ships_available = FindAllMilitaryShipsInSector(cur_sector, militaries_arr, 1);",
               "",
-              "SFT('============');",
-              "SFT(ships_available);",
-              "SFT('============');",
+              "//SFT('============');",
+              "//SFT(ships_available);",
+              "//SFT('============');",
               "",
               "if(ArrayDim(stars_to_attack_arr) > 1 && ArrayDim(militaries_arr['Warriors']) > 1)",
               "{",
@@ -2768,9 +2768,9 @@
               "    tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNoTargetStars');",
               "    operation_lvl = -1;",
               "",
-              "    SFT('999999999000000000000000000');",
-              "    SFT(tstr1);",
-              "    SFT(tstr2);",
+              "    //SFT('999999999000000000000000000');",
+              "    //SFT(tstr1);",
+              "    //SFT(tstr2);",
               "}",
               "//Если вдруг атаковать некем (в секторе не нашлось ни одного простого военного)",
               "else //if(ArrayDim(militaries_arr['Warriors']) > 1)",
@@ -2786,8 +2786,8 @@
               "tstr2 = '</color>' + CT(dialog_path + '.PlayerConfirmationYes');",
               "tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');",
               "",
-              "SFT(tstr1);",
-              "SFT(tstr2);"          
+              "//SFT(tstr1);",
+              "//SFT(tstr2);"          
           ]        
         },
         {

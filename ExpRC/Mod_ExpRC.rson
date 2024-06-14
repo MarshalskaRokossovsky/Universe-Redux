@@ -1,15 +1,15 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -401,
-  "ViewPos.y":  -345,
+  "ViewPos.x":  -327,
+  "ViewPos.y":  -228,
   "ScriptName":  "Mod_ExpRC",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.txt",
-  "GraphPoint.Count":  133,
-  "GraphLink.Count":  101,
+  "GraphPoint.Count":  152,
+  "GraphLink.Count":  114,
   "GraphRectText.Count":  3,
-  "Variables.Count":  34,
+  "Variables.Count":  38,
   "Stars.Count":  1,
   "Planets.Count":  1,
   "Ships.Count":  1,
@@ -18,11 +18,11 @@
   "Places.Count":  0,
   "Items.Count":  0,
   "Ethers.Count":  0,
-  "Dialogs.Count":  6,
-  "DialogMessages.Count":  21,
-  "DialogAnswers.Count":  27,
-  "Operations.Count":  21,
-  "Statements.Count":  19,
+  "Dialogs.Count":  9,
+  "DialogMessages.Count":  24,
+  "DialogAnswers.Count":  30,
+  "Operations.Count":  26,
+  "Statements.Count":  20,
   "Loops.Count":  0,
   "Visual.Objects":  
   [
@@ -298,6 +298,36 @@
           "#":  130,
           "Msg":  "",
           "AMsg.Num":  "26"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  0,
+          "Parent":  139,
+          "#":  140,
+          "Msg":  "<tstr2>",
+          "AMsg.Num":  "27"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  142,
+          "#":  143,
+          "Msg":  "",
+          "AMsg.Num":  "28"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  570,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  151,
+          "Msg":  "",
+          "AMsg.Num":  "29"        
         }      
       ],
       "DialogMessages":      
@@ -339,7 +369,7 @@
           "Pos.y":  120,
           "Parent":  -1,
           "#":  18,
-          "Msg":  "Выберите микромодуль имеющийся на вашем корабле.",
+          "Msg":  "Выберите микромодуль, имеющийся на вашем корабле.",
           "DMsg.Num":  "3"        
         },
         {
@@ -349,7 +379,7 @@
           "Pos.y":  140,
           "Parent":  -1,
           "#":  22,
-          "Msg":  "Выберите микромодуль имеющийся в хранилище.",
+          "Msg":  "Выберите микромодуль, имеющийся в хранилище.",
           "DMsg.Num":  "4"        
         },
         {
@@ -511,6 +541,36 @@
           "#":  124,
           "Msg":  "<str0>",
           "DMsg.Num":  "20"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  133,
+          "#":  134,
+          "Msg":  "<tstr1>",
+          "DMsg.Num":  "21"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  0,
+          "Parent":  140,
+          "#":  142,
+          "Msg":  "<tstr3>",
+          "DMsg.Num":  "22"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  150,
+          "Msg":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <RangerBaseNodes(Player())> нодов.\r\nКроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов.",
+          "DMsg.Num":  "23"        
         }      
       ],
       "Dialogs":      
@@ -562,6 +622,30 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  103        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "SellMM",
+          "Pos.x":  440,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  132        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "SellMMDone",
+          "Pos.x":  0,
+          "Pos.y":  -20,
+          "Parent":  145,
+          "#":  144        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "SellNodes",
+          "Pos.x":  570,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  148        
         }      
       ],
       "Groups":      
@@ -630,7 +714,7 @@
               "mmTake = 0;",
               "BonMMRand1 = -1;",
               "BonMMRand1 = -1;",
-              "//if(CurrentMods('Expansion\\ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;  //Флаг выдачи ММ без повторов",
+              "if(CT('ExpRC.ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;  //Флаг выдачи ММ без повторов",
               "//Раздаём доминаторам неизвестные ММ, а также вешаем спец. инфошки на ЦР на старте скрипта",
               "//Ищем все корабли в Галактике, после чего начинаем их подробный перебор",
               "int2 = BuildListOfNewShips(array0, lastShipId, 1, 32, 1, '');",
@@ -886,17 +970,14 @@
           "Pos.y":  50,
           "Parent":  -1,
           "#":  28,
-          "Total.Lines":  91,
+          "Total.Lines":  88,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "/*if(!ExpRCRebootMMChainInit) //Флаг выдачи ММ без повторов",
+              "if(!ExpRCRebootMMChainInit) //Флаг выдачи ММ без повторов",
               "{",
-              "    if(CurrentMods('Expansion\\ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;",
+              "    if(CT('ExpRC.ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;",
               "}",
-              "else {",
-              "    if(!CurrentMods('Expansion\\ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 0;",
-              "}*/",
               "//Проверяем, что текущий тёрн не сработал второй раз за ход",
               "if(CurTurn() != lastRun)",
               "{",
@@ -990,7 +1071,7 @@
           "Pos.y":  0,
           "Parent":  28,
           "#":  35,
-          "Total.Lines":  39,
+          "Total.Lines":  48,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1002,7 +1083,7 @@
               "        if(GetGameOptions('FontDialog') == '0') DefSplt = '</color>-------------------------------------------------------------';",
               "        else if(GetGameOptions('FontDialog') == '1') DefSplt = '</color>------------------------------------------';",
               "        else if(GetGameOptions('FontDialog') == '2') DefSplt = '</color>-----------------------------------------';",
-              "        else DefSplt = '</color>-------------------------------------';",
+              "        else /*if(GetGameOptions('FontDialog') == '3')*/ DefSplt = '</color>-------------------------------------';",
               "",
               "        AddDialogBlock(CT('FormRuins.RC.AboutNod.PlayerSend'), 2);",
               "        AddDialogBlock(CT('FormRuins.RC.PirateClan.PlayerSend'), 2);",
@@ -1025,11 +1106,20 @@
               "",
               "        if(int0 == 1) AddDialogInject('UniMM', '', \"Сдать неизвестные микромодули за ноды\", 0);",
               "        AddDialogInject('X', Format(CT('FormRuins.RC.GreetingAddMod'), '#BaseNod#', RangerBaseNodes(Player())), 'NodeStateInfoPosCorrection', 0);",
-              "        if(CurrentMods('Expansion\\ExpRCRebootMMChain'))",
-              "        {",
-              "            //Добавляем подмену оригинального диалога для приобретения новых ММ",
+              "",
+              "        //Добавляем подмену оригинальных диалогов для приобретения и сдачи ММ",
+              "        if(ExpRCRebootMMChainInit) {",
+              "            //Так сказал Маршалтустра",
               "            AddDialogBlock(CT('FormRuins.RC.TakeNod.PlayerSend'), 2);",
-              "            AddDialogInject('BuyNewMM', '', CT('FormRuins.RC.TakeNod.PlayerSend'), 0);",
+              "            AddDialogInject('BuyNewMM', '', CT('FormRuins.RC.TakeNod.PlayerSendMod'), 0);",
+              "        }",
+              "",
+              "        AddDialogBlock(CT('FormRuins.RC.GiveNod.PlayerSend'), 2);",
+              "        AddDialogInject('SellMM', '', CT('FormRuins.RC.GiveNod.PlayerSendMod'), 0);",
+              "",
+              "        if(GetNodesFromShip(Player())) {",
+              "            AddDialogBlock(Format(CT('FormRuins.RC.SaleNod.PlayerSend'),'Count',GetNodesFromShip(Player())), 2);",
+              "            AddDialogInject('SellNodes', '', Format(CT('FormRuins.RC.SaleNod.PlayerSendMod'),'Count',GetNodesFromShip(Player())), 0);",
               "        }",
               "    }",
               "}"          
@@ -1217,7 +1307,7 @@
           "Pos.y":  20,
           "Parent":  103,
           "#":  120,
-          "Total.Lines":  60,
+          "Total.Lines":  59,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1246,7 +1336,6 @@
               "",
               "    //Рассчитываем стоимость очередного ММ (по умолчанию как для первого уровня) в нодах (использованы оригинальные формулы)",
               "    k = round(PortionInDiapason(BonusPriority(int0), 100, 0, 100, 2000));",
-              "",
               "    k = Rnd(round(0.8 * k), round(1.2 * k), k + Id(cur_ruin));",
               "",
               "    //Выполняем необходимые округления",
@@ -1268,9 +1357,9 @@
               "    }",
               "",
               "    //Добавляем в текст название, описанием и стоимость в нодах очередного ММ",
-              "    str0 = str0 + \"<br>\" + DefSplt;",
-              "    str0 = str0 + \"<br>\" + i + Format(CT('FormRuins.RC.TakeNod.RCAnswerMM'), '<Name'+'>', BonusName(int0)) + \"<br>\" + BonusText(int0);",
-              "    str0 = str0 + \"<br>\" + '<clr><clrEnd>' + \"<br>\" + Format(CT('FormRuins.RC.TakeNod.RCAnswerMMCost'), '<Count'+'>', k);",
+              "    str0 = str0 + Format('<br>') + DefSplt;",
+              "    str0 = str0 + Format('<br>') + i + Format(CT('FormRuins.RC.TakeNod.RCAnswerMM'), '<Name'+'>', BonusName(int0)) + Format('<br>') + BonusText(int0);",
+              "    str0 = str0 + Format('<br>') + Format('<clr><clrEnd><br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerMMCost'), '<Count'+'>', k);",
               "",
               "    //Запоминаем текст ответов игрока для выбора приобретаемого ММ",
               "    if(i == 1) str1 = '</color>' + Format(CT('FormRuins.RC.TakeNod.PlayerOk'), '<Count'+'>', k, '<Name'+'>', BonusName(int0));",
@@ -1279,7 +1368,7 @@
               "}",
               "",
               "//Собираем строчки для подстановки",
-              "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + \"<br>\" + DefSplt + \"<br>\" + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'), '<BaseNod'+'>', RangerBaseNodes(Player()));",
+              "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'), '<BaseNod'+'>', RangerBaseNodes(Player()));",
               "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');"          
           ]        
         },
@@ -1388,6 +1477,150 @@
               "str2 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInfoRC.KlissanInfo1');",
               "str3 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInfoRC.KlissanInfo2');",
               "str4 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInfoRC.KlissanInfo3');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  146,
+          "#":  133,
+          "Total.Lines":  19,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "str MMList = '';",
+              "if(ArrayDim(tarr1))",
+              "{",
+              "    ArraySort(tarr1['Cost'], tarr1['Item']);",
+              "    MMList = DefSplt;",
+              "",
+              "    for(i = 0; i < ArrayDim(tarr1['Item']); i = i + 1)",
+              "    {",
+              "        str name = '<' + GetParFromString(ItemFullName(tarr1['Item', i]), '<', 1, 0) + '</color>';",
+              "        MMList = MMList + Format('<br>') + Format(CT('FormRuins.RC.GiveNod.Nod'), '<Name'+'>', name, '<Count'+'>', '<color=0,50,200>' + tarr1['Cost', i] + '</color>', '');",
+              "    }",
+              "",
+              "    MMList = MMList + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.GiveNod.Sum'), '<BaseNod'+'>', RangerBaseNodes(Player()));",
+              "}",
+              "else MMList = DefSplt + Format('<br>') + CT('FormRuins.RC.GiveNod.Nothing');",
+              "",
+              "tstr1 = '</color>' + Format(CT('FormRuins.RC.GiveNod.Answer'), '<MMList'+'>', MMList, '');",
+              "tstr2 = '</color>' + CT('FormRuins.RC.GiveNod.PlayerNo');",
+              "tstr3 = '</color>' + CT('FormRuins.RC.GiveNod.AfterNo');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  134,
+          "#":  138,
+          "Total.Lines":  11,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//У игрока в трюме нашлись какие-то ММ для сдачи",
+              "if(ArrayDim(tarr1))",
+              "{",
+              "    ArraySort(tarr1['Cost'], tarr1['Item']);",
+              "    for(i = 0; i < ArrayDim(tarr1['Item']); i = i + 1)",
+              "    {",
+              "        str name = '<' + GetParFromString(ItemFullName(tarr1['Item', i]), '<', 1, 0) + '</color>';",
+              "        InjectAnswer('SellMMDone', Format(CT('FormRuins.RC.GiveNod.PlayerOk'), '<Name'+'>', name, '<Count'+'>', '<color=0,50,200>' + tarr1['Cost', i] + '</color>', ''), i);",
+              "    }",
+              "}",
+              "else ArrayAdd(tarr1, 0);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  20,
+          "Pos.y":  0,
+          "Parent":  133,
+          "#":  145,
+          "Total.Lines":  6,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "RangerBaseNodes(Player(), RangerBaseNodes(Player()) + tarr1['Cost', GAnswerData]);",
+              "FreeItem(GetItemFromShip(Player(), tarr1['Item', GAnswerData]));",
+              "ArrayDelete(tarr1['Item'], GAnswerData);",
+              "ArrayDelete(tarr1['Cost'], GAnswerData);",
+              "",
+              "Sound('Sound.Sell');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  132,
+          "#":  146,
+          "Total.Lines":  38,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ArrayClear(tarr1);",
+              "ArrayDelete(tarr1, 0);",
+              "",
+              "if(GetGameOptions('FontDialog') == '0') DefSplt = '-------------------------------------------------------------';",
+              "else if(GetGameOptions('FontDialog') == '1') DefSplt = '------------------------------------------';",
+              "else if(GetGameOptions('FontDialog') == '2') DefSplt = '-----------------------------------------';",
+              "else /*if(GetGameOptions('FontDialog') == '3')*/ DefSplt = '-------------------------------------';",
+              "",
+              "for(int i = 1; i < ShipItems(Player()); i = i + 1)",
+              "{",
+              "    dword item = ShipItems(Player(), i);",
+              "    if(ItemType(item) != t_MicroModule) continue;",
+              "    int bon_num = EqModule(item);",
+              "    if(CT('MicroModuls.' + BonusNumInCfg(bon_num) + '.NamePrefix') != '') continue; //Пропускаем клисанские споры и прочий \"нестандарт\"",
+              "",
+              "    int cost = round(PortionInDiapason(BonusPriority(bon_num), 100, 0, 100, 2000));",
+              "    cost = Rnd(round(0.8 * cost), round(1.2 * cost), cost + Id(cur_ruin));",
+              "",
+              "    //Модификатор для повышения стоимости сдачи особых ММ",
+              "    int unique = CT('MicroModuls.' + BonusNumInCfg(bon_num) + '.UniqueMM');",
+              "    if(unique == 1) cost = 3.5 * cost; //Цена сдачи уникальных ММ (тех, что могут быть получены лишь раз за игру)",
+              "    else if(unique == 2) cost = 1.5 * cost; //Цена сдачи условно уникальных (редких) ММ",
+              "",
+              "    if(BonusPriority(bon_num) <= 69) cost = RoundTo(1.0 * cost / 1.5, 100, -1);",
+              "    else cost = RoundTo(1.0 * cost / 1.5, 10, -1);",
+              "    cost = max(5, round(0.3 * cost));",
+              "",
+              "    if(!ArrayDim(tarr1))",
+              "    {",
+              "        ArrayAdd(tarr1, newarray(1), 'Item');",
+              "        ArrayAdd(tarr1, newarray(1), 'Cost');",
+              "        ArrayDelete(tarr1['Item'], 0);",
+              "        ArrayDelete(tarr1['Cost'], 0);",
+              "    }",
+              "",
+              "    ArrayAdd(tarr1['Item'], item);",
+              "    ArrayAdd(tarr1['Cost'], cost);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  149,
+          "Total.Lines":  5,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "dwd0=GetNodesFromShip(Player());",
+              "GetNodesFromShip(Player(),dwd0);",
+              "RangerBaseNodes(Player(),RangerBaseNodes(Player()) + (dwd0*5));",
+              "ShipFreeExp(Player(),ShipFreeExp(Player()) + (dwd0*7));",
+              "Sound('Sound.Buy');"          
           ]        
         }      
       ],
@@ -1714,6 +1947,20 @@
           "Pos.y":  0,
           "Parent":  104,
           "#":  115,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  0,
+          "Parent":  134,
+          "#":  139,
           "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
@@ -2110,11 +2357,55 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "ExpRCRebootMMChainInit",
-          "Pos.x":  800,
-          "Pos.y":  130,
+          "Name":  "tstr1",
+          "Pos.x":  820,
+          "Pos.y":  410,
           "Parent":  -1,
-          "#":  132,
+          "#":  135,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tstr2",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  135,
+          "#":  136,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tarr1",
+          "Pos.x":  890,
+          "Pos.y":  320,
+          "Parent":  -1,
+          "#":  137,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tstr3",
+          "Pos.x":  820,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  141,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ExpRCRebootMMChainInit",
+          "Pos.x":  670,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  147,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2830,6 +3121,97 @@
       "End":  79,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  133,
+      "End":  134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  134,
+      "End":  138,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  134,
+      "End":  139,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  139,
+      "End":  140,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  140,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  142,
+      "End":  143,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  144,
+      "End":  145,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  145,
+      "End":  133,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  132,
+      "End":  146,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  146,
+      "End":  133,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  149,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  149,
+      "End":  150,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  150,
+      "End":  151,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -2904,7 +3286,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  44,
+  "BlockPar.EC.Total.Strings":  45,
   "BlockPar.EC":  
   [
     {
@@ -2961,7 +3343,7 @@
     },
     {
       "#":  "4",
-      "String":  "Выберите микромодуль имеющийся на вашем корабле."    
+      "String":  "Выберите микромодуль, имеющийся на вашем корабле."    
     },
     {
       "#":  "44",
@@ -2977,7 +3359,7 @@
     },
     {
       "#":  "5",
-      "String":  "Выберите микромодуль имеющийся в хранилище."    
+      "String":  "Выберите микромодуль, имеющийся в хранилище."    
     },
     {
       "#":  "54",
@@ -3082,6 +3464,10 @@
     {
       "#":  "92",
       "String":  "Желаете узнать что-нибудь ещё?"    
+    },
+    {
+      "#":  "93",
+      "String":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <0> нодов.<br>Кроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов."    
     }  
   ]
 }
