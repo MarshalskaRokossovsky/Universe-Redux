@@ -1555,7 +1555,7 @@
           "Pos.y":  0,
           "Parent":  52,
           "#":  100,
-          "Total.Lines":  132,
+          "Total.Lines":  134,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1670,6 +1670,8 @@
               "    //Если игрок уже провёл достаточное число экспериментов и акринация должна быть целевой",
               "    else",
               "    {",
+              "        SFT('haha');",
+              "        SFT(temp_str_2);",
               "        //Выводим опцию акринации данного акрина в ответы",
               "        //Делаем проверку чтобы узнать, имеются ли уровни у данного акрина",
               "        temp_str = CT('MicroModuls.' + temp_str_2 + '.AcrynSerie');",
@@ -4672,13 +4674,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  186,
-      "End":  50,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  187,
       "End":  80,
       "Nom":  0,
@@ -4849,6 +4844,13 @@
       "Type":  "TGraphLink",
       "Begin":  204,
       "End":  203,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  186,
+      "End":  50,
       "Nom":  0,
       "Arrow":  true    
     }  

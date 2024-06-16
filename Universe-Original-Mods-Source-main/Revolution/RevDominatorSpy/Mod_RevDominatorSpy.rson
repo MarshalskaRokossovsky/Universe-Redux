@@ -721,8 +721,8 @@
               "ReleaseItemFromScript(iOP);",
               "FreeItem(GetItemFromShip(Player(), item));",
               "i=CreateQuestItem('SB_scaner',ShipOwner(GetShipRuins(Player())));",
-              "ItemSize(i,15);",
-              "LinkItemToScript(i,SB_scaner);",
+              "ItemSize(i,CT('UselessItems.SB_scaner.Size'));",
+              "//LinkItemToScript(i,SB_scaner);",
               "AddItemToShip(Player(),i);",
               "if(GroupToShip(BSB))ShipOut(GroupToShip(BSB));",
               "if(GroupToShip(PelengSpy))ShipOut(GroupToShip(PelengSpy));"          

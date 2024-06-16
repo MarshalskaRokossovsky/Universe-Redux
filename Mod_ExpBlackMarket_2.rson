@@ -2433,7 +2433,7 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  56,
-          "Total.Lines":  55,
+          "Total.Lines":  58,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -2490,6 +2490,9 @@
               "                BMTurnCount = CurTurn() + RndObject(CT('BlackMarketShopList.BlackMarketTurnDelays.MinOpeningAfterStartEventDays'), CT('BlackMarketShopList.BlackMarketTurnDelays.MaxOpeningAfterStartEventDays'), cur_ruin);",
               "            }",
               "        }",
+              "    }",
+              "    if(ShipType(cur_ruin) != 'BM') {",
+              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', -1);",
               "    }",
               "}"          
           ]        

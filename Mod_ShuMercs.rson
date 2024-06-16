@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -178,
-  "ViewPos.y":  -14,
+  "ViewPos.x":  58,
+  "ViewPos.y":  -378,
   "ScriptName":  "Mod_ShuMercs",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -769,7 +769,7 @@
           "Pos.y":  20,
           "Parent":  301,
           "#":  41,
-          "Msg":  "Ты не видишь, моя ласточка разваливается налету? Какой контракт, <Player>?",
+          "Msg":  "Ты не видишь, моя ласточка разваливается на лету? Какой контракт, <Player>?",
           "DMsg.Num":  "9"        
         },
         {
@@ -5195,7 +5195,7 @@
           "Pos.y":  20,
           "Parent":  104,
           "#":  238,
-          "Total.Lines":  114,
+          "Total.Lines":  117,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5312,7 +5312,10 @@
               "    }",
               "",
               "    if(is_valid) break;",
-              "}"          
+              "}",
+              "",
+              "SFT(target_ship);",
+              "SFT(Name(target_ship));"          
           ]        
         },
         {
@@ -13212,7 +13215,7 @@
     },
     {
       "#":  "55",
-      "String":  "Ты не видишь, моя ласточка разваливается налету? Какой контракт, <Player>?"    
+      "String":  "Ты не видишь, моя ласточка разваливается на лету? Какой контракт, <Player>?"    
     },
     {
       "#":  "56",

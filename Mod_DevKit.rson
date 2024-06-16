@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1494,
-  "ViewPos.y":  437,
+  "ViewPos.x":  -1304,
+  "ViewPos.y":  1036,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -8184,7 +8184,7 @@
               "    PlanetGov(inhabitedPlanet,NumberBox('Bm.Items.2FuelTanks14s',\"Форма правления\",1,5,5,'',2,\"Анархия\",\"Диктатура\",\"Монархия\",\"Республика\",\"Демократия/Социализм\")-1);",
               "    PlanetEco(inhabitedPlanet,NumberBox('Bm.Items.2FuelTanks14s',\"Тип экономики\",1,3,3,'',2,\"Аграрная\",\"Смешанная\",\"Индустриальная\")-1);",
               "    PlanetPopulation(inhabitedPlanet,NumberBox('Bm.Items.2FuelTanks14s',\"Население планеты\",0,30000));",
-              "    PlanetOrbitalVelocity(inhabitedPlanet,NumberBox('Bm.Items.2FuelTanks14s',\"Скорость вращения\",0,10000));",
+              "    PlanetOrbitalVelocity(inhabitedPlanet,NumberBox('Bm.Items.2FuelTanks14s',\"Скорость вращения\",0,1000));",
               "    if(PlanetOwner(inhabitedPlanet)<Kling) RelationToRanger(inhabitedPlanet,Player(), GlobalRelationsPlanets(Player(), 0,int(exp(ln(2)*PlanetOwner(inhabitedPlanet)))));",
               "}",
               "Sound('Sound.Buy');"          

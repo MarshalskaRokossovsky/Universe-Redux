@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  120,
-  "ViewPos.y":  -534,
+  "ViewPos.x":  -44,
+  "ViewPos.y":  -610,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -6401,12 +6401,12 @@
               "if(!NoTalkToShip(Player()))",
               "{",
               "    temp_str = \"Разрешены\";",
-              "    AddDialogInject('Comm_OFF', \"Все входящие вызовы: <temp_str>\", \"Включить запрет\", 15);",
+              "    AddDialogInject('Comm_OFF', \"Все входящие вызовы: <temp_str>\", \"Запретить входящие вызовы\", 15);",
               "}",
               "else",
               "{",
               "    temp_str = \"Запрещены\";",
-              "    AddDialogInject('Comm_ON', \"Все входящие вызовы: <temp_str>\", \"Выключить запрет\", 15);",
+              "    AddDialogInject('Comm_ON', \"Все входящие вызовы: <temp_str>\", \"Разрешить входящие вызовы\", 15);",
               "}",
               "if(ShipFindCustomShipInfoByType(Player(), 'PlayerBridge_AutoDisableForsage')==-1)",
               "{",
@@ -18336,6 +18336,14 @@
       "String":  "был уничтожен центр рейнджеров"    
     },
     {
+      "#":  "1577",
+      "String":  "Разрешить входящие вызовы"    
+    },
+    {
+      "#":  "1578",
+      "String":  "Запретить входящие вызовы"    
+    },
+    {
       "#":  "212",
       "String":  "Спонсировать фонд"    
     },
@@ -18390,14 +18398,6 @@
     {
       "#":  "507",
       "String":  "Вернуться к оглавлению"    
-    },
-    {
-      "#":  "592",
-      "String":  "Включить запрет"    
-    },
-    {
-      "#":  "593",
-      "String":  "Выключить запрет"    
     },
     {
       "#":  "624",
