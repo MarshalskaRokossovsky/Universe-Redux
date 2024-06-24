@@ -929,12 +929,13 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  25,
-          "Total.Lines":  14,
+          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
               "for(j = 1; j < ArrayDim(mm_storage); j = j + 1)",
               "{",
+              "    if(Name(mm_storage[j]) == \"\") continue;",
               "    AddItemToShip(Player(), GetItemFromVault(mm_storage[j]));",
               "}",
               "ArrayClear(mm_storage);",
@@ -3286,7 +3287,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  45,
+  "BlockPar.EC.Total.Strings":  46,
   "BlockPar.EC":  
   [
     {
@@ -3468,6 +3469,10 @@
     {
       "#":  "93",
       "String":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <0> нодов.<br>Кроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов."    
+    },
+    {
+      "#":  "94",
+      "String":  ""    
     }  
   ]
 }

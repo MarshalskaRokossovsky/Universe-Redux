@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -340,
-  "ViewPos.y":  92,
+  "ViewPos.x":  -301,
+  "ViewPos.y":  -251,
   "ScriptName":  "Mod_ShuMercs",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -809,7 +809,7 @@
           "Pos.y":  20,
           "Parent":  319,
           "#":  45,
-          "Msg":  "<ShipName(target_ship)>? Нет уж, мне жизнь еще дорога, я за это дело не возьмусь.",
+          "Msg":  "<tstr3>? Нет уж, мне жизнь еще дорога, я за это дело не возьмусь.",
           "DMsg.Num":  "13"        
         },
         {
@@ -819,7 +819,7 @@
           "Pos.y":  20,
           "Parent":  316,
           "#":  46,
-          "Msg":  "<ShipName(target_ship)>? Столь серьезный риск должен хорошо оплачиваться. С учетом скидки <tstr5> (<rel>%) - скажем, <cost> cr.",
+          "Msg":  "<tstr3>? Столь серьезный риск должен хорошо оплачиваться. С учетом скидки <tstr5> (<rel>%) - скажем, <cost> cr.",
           "DMsg.Num":  "14"        
         },
         {
@@ -829,7 +829,7 @@
           "Pos.y":  20,
           "Parent":  307,
           "#":  47,
-          "Msg":  "<Name(target_ship)>, значит... О'кей, но тебе это выйдет в кругленькую сумму. Со скидкой <tstr5> (<rel>%) - <cost> cr.",
+          "Msg":  "<tstr4>, значит... О'кей, но тебе это выйдет в кругленькую сумму. Со скидкой <tstr5> (<rel>%) - <cost> cr.",
           "DMsg.Num":  "15"        
         },
         {
@@ -839,7 +839,7 @@
           "Pos.y":  20,
           "Parent":  308,
           "#":  48,
-          "Msg":  "<Name(target_ship)>? Разберемся, деньги вперед. Учитывая скидку <tstr5> (<rel>%), тебе это обойдется в <cost> cr.",
+          "Msg":  "<tstr4>? Разберемся, деньги вперед. Учитывая скидку <tstr5> (<rel>%), тебе это обойдется в <cost> cr.",
           "DMsg.Num":  "16"        
         },
         {
@@ -849,7 +849,7 @@
           "Pos.y":  20,
           "Parent":  309,
           "#":  49,
-          "Msg":  "<ShipName(target_ship)>? Ничего трудного. Плати <cost> cr. (с учетом скидки <rel>%), и все будет сделано.",
+          "Msg":  "<tstr3>? Ничего трудного. Плати <cost> cr. (с учетом скидки <rel>%), и все будет сделано.",
           "DMsg.Num":  "17"        
         },
         {
@@ -879,7 +879,7 @@
           "Pos.y":  20,
           "Parent":  310,
           "#":  52,
-          "Msg":  "<Name(target_ship)>? Столь серьезный риск должен хорошо оплачиваться. Cкажем, <cost> cr. будет достаточно.",
+          "Msg":  "<tstr4>? Столь серьезный риск должен хорошо оплачиваться. Cкажем, <cost> cr. будет достаточно.",
           "DMsg.Num":  "20"        
         },
         {
@@ -889,7 +889,7 @@
           "Pos.y":  20,
           "Parent":  311,
           "#":  53,
-          "Msg":  "<Name(target_ship)>, значит... О'кей, но такой заказ тебе обойдется в круглую сумму. <cost> cr.",
+          "Msg":  "<tstr4>, значит... О'кей, но такой заказ тебе обойдется в круглую сумму. <cost> cr.",
           "DMsg.Num":  "21"        
         },
         {
@@ -899,7 +899,7 @@
           "Pos.y":  20,
           "Parent":  312,
           "#":  54,
-          "Msg":  "<ShipName(target_ship)> так <ShortName(target_ship)>. Разберемся, деньги вперед. Переведи <cost> cr, и все будет сделано в кратчайшие сроки.",
+          "Msg":  "<tstr3> так <ShortName(target_ship)>. Разберемся, деньги вперед. Переведи <cost> cr, и все будет сделано в кратчайшие сроки.",
           "DMsg.Num":  "22"        
         },
         {
@@ -909,7 +909,7 @@
           "Pos.y":  20,
           "Parent":  313,
           "#":  55,
-          "Msg":  "<ShipName(target_ship)>? Ничего трудного. Плати <cost> cr., и все будет сделано.",
+          "Msg":  "<tstr3>? Ничего трудного. Плати <cost> cr., и все будет сделано.",
           "DMsg.Num":  "23"        
         },
         {
@@ -1239,7 +1239,7 @@
           "Pos.y":  20,
           "Parent":  317,
           "#":  88,
-          "Msg":  "<ShipName(target_ship)>? Мы на территории <clr>Обмена<clrEnd>, здесь запрещена стрельба между наемниками. Тебе необходимо выманить цель из системы.",
+          "Msg":  "<tstr3>? Мы на территории <clr>Обмена<clrEnd>, здесь запрещена стрельба между наемниками. Тебе необходимо выманить цель из системы.",
           "DMsg.Num":  "56"        
         },
         {
@@ -1249,7 +1249,7 @@
           "Pos.y":  20,
           "Parent":  318,
           "#":  89,
-          "Msg":  "<ShipName(target_ship)> - мой коллега. Я не пойду на нарушение наших договоренностей ради подобного заказа.",
+          "Msg":  "<tstr3> - мой коллега. Я не пойду на нарушение наших договоренностей ради подобного заказа.",
           "DMsg.Num":  "57"        
         },
         {
@@ -5195,7 +5195,7 @@
           "Pos.y":  20,
           "Parent":  104,
           "#":  238,
-          "Total.Lines":  117,
+          "Total.Lines":  120,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5315,7 +5315,10 @@
               "}",
               "",
               "SFT(target_ship);",
-              "SFT(Name(target_ship));"          
+              "SFT(Name(target_ship));",
+              "",
+              "tstr3 = ShipName(target_ship);",
+              "tstr4 = Name(target_ship);"          
           ]        
         },
         {
@@ -6841,7 +6844,7 @@
           "Pos.y":  0,
           "Parent":  425,
           "#":  424,
-          "Total.Lines":  107,
+          "Total.Lines":  109,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6930,6 +6933,8 @@
               "                        if(ItemDurability(ShipEqInSlot(CurShip, t_Engine)))",
               "                        {",
               "                            OrderLock(CurShip, 1);",
+              "                            //SFT(HQstar);",
+              "                            //SFT(Name(HQstar));",
               "                            OrderJump(CurShip, HQstar);",
               "                            exit;",
               "                        }",

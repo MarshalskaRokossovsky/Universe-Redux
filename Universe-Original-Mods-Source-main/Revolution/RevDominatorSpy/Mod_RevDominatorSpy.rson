@@ -1,15 +1,15 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -299,
-  "ViewPos.y":  -73,
+  "ViewPos.x":  -186,
+  "ViewPos.y":  -79,
   "ScriptName":  "Mod_RevDominatorSpy",
-  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.scr",
-  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.txt",
-  "GraphPoint.Count":  134,
-  "GraphLink.Count":  108,
+  "ScriptFileOut":  "H:\\Mod_RevDominatorSpy.scr",
+  "ScriptTextOut":  "H:\\Mod_RevDominatorSpy.txt",
+  "GraphPoint.Count":  122,
+  "GraphLink.Count":  98,
   "GraphRectText.Count":  2,
-  "Variables.Count":  22,
+  "Variables.Count":  21,
   "Stars.Count":  3,
   "Planets.Count":  3,
   "Ships.Count":  2,
@@ -17,12 +17,12 @@
   "Groups.Count":  4,
   "Places.Count":  5,
   "Items.Count":  2,
-  "Ethers.Count":  4,
-  "Dialogs.Count":  3,
-  "DialogMessages.Count":  11,
-  "DialogAnswers.Count":  11,
-  "Operations.Count":  22,
-  "Statements.Count":  34,
+  "Ethers.Count":  3,
+  "Dialogs.Count":  2,
+  "DialogMessages.Count":  9,
+  "DialogAnswers.Count":  9,
+  "Operations.Count":  20,
+  "Statements.Count":  31,
   "Loops.Count":  0,
   "Visual.Objects":  
   [
@@ -51,12 +51,12 @@
         },
         {
           "Type":  "TDialogAnswer",
-          "Name":  "",
+          "Name":  "exit",
           "Pos.x":  980,
           "Pos.y":  430,
           "Parent":  -1,
           "#":  47,
-          "Msg":  "Мне твои планы сдала здешняя научная база. Не знаю откуда ей о них стало известно, меня интересует лишь твой груз. Зонд выбрасывай, пока не стало поздно",
+          "Msg":  "Мне твои планы сдала здешняя научная база. Не знаю откуда ей о них стало известно, меня интересует лишь твой груз. Зонд выбрасывай пока не стало поздно",
           "AMsg.Num":  "2"        
         },
         {
@@ -83,7 +83,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  680,
-          "Pos.y":  620,
+          "Pos.y":  570,
           "Parent":  -1,
           "#":  65,
           "Msg":  "А как же остальные доминаторы? ",
@@ -116,28 +116,8 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  75,
-          "Msg":  "Служу Коалиции!",
+          "Msg":  "Спасибо за награду",
           "AMsg.Num":  "8"        
-        },
-        {
-          "Type":  "TDialogAnswer",
-          "Name":  "restart",
-          "Pos.x":  40,
-          "Pos.y":  520,
-          "Parent":  -1,
-          "#":  131,
-          "Msg":  "Это определённо стоит запомнить! (Вернуться на главную)",
-          "AMsg.Num":  "9"        
-        },
-        {
-          "Type":  "TDialogAnswer",
-          "Name":  "exit",
-          "Pos.x":  980,
-          "Pos.y":  510,
-          "Parent":  -1,
-          "#":  133,
-          "Msg":  "Вот так бы сразу",
-          "AMsg.Num":  "10"        
         }      
       ],
       "DialogMessages":      
@@ -159,7 +139,7 @@
           "Pos.y":  390,
           "Parent":  -1,
           "#":  40,
-          "Msg":  "Привет тебе, малорукое существо по имени <Player>. Рейнджер из тебя пока никудышный, торговец тоже. Ты займись делом - всякими грабежами и убийствами. Вот тогда быстро станешь уважаемым членом общества. Уж я-то знаю, что говорю!\r\n",
+          "Msg":  "Привет тебе, малорукое существо по имени <Player>. Рейнджер из тебя пока никудышный, торговец тоже. Ты займись делом, всякими грабежами и убийствами. Вот тогда быстро станешь уважаемым членом общества. Я знаю, что говорю!\r\n",
           "DMsg.Num":  "1"        
         },
         {
@@ -186,10 +166,10 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  870,
-          "Pos.y":  620,
+          "Pos.y":  570,
           "Parent":  -1,
           "#":  64,
-          "Msg":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторам известны практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.\r\nПерейдем ближе к делу. Для того, чтобы проследить за доминатором, вам понадобится зонд. Нам известно, что к научной базе скоро прибудет подозрительное судно <vshipname>. Почти наверняка - пеленги опять решили установить слежку за нами. Каждый год они посылают к нам кого-то из своих шпионов: уже традиция!\r\nТак вот, вам необходимо любым способом добыть зонд. Уничтожать корабль крайне нежелательно, ведь пеленги вам этого просто так не оставят. Можете припугнуть шпиона парой залпов, потому как вряд ли ему захочется умирать из-за какого-то там зонда. После того, как зонд окажется у вас, необходимо будет доставить его в систему <Name(StarDom)>. По нашим данным транслирующим кораблем является <Name(GroupToShip(BigShip))>. Вам необходимо собрать информации минимум на <(vZondMemory=90)>% памяти зонда и привезти его сюда, на <ShortName(GroupToShip(BSB))>.",
+          "Msg":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторы все обнаруживают практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.\r\nПерейдем ближе к делу. Для того, чтобы проследить за доминатором, вам понадобится зонд. Нам известно, что к научной базе скоро прибудет подозрительное судно <vshipname>. Почти наверняка, пеленги опять решили установить слежку за нами. Каждый год они посылают к нам кого-то из своих шпионов,это уже традиция!\r\nТак вот, вам необходимо любым способом добыть зонд. Уничтожать корабль крайне нежелательно, пеленги вам этого просто так не оставят. Можете припугнуть шпиона парой залпов, вряд ли ему захочется умирать из-за какого-то там зонда. После того, как зонд окажется у вас, необходимо будет доставить его в систему <Name(StarDom)>. По нашим данным транслирующем кораблем является <Name(GroupToShip(BigShip))>. Вам необходимо собрать информации минимум на <(vZondMemory=90)>% памяти зонда и привезти его сюда, на <ShortName(GroupToShip(BSB))>.",
           "DMsg.Num":  "4"        
         },
         {
@@ -199,7 +179,7 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  66,
-          "Msg":  "Это уже ваши проблемы. Можете уничтожить их всех, можете дождаться атаки военных... Кстати, <Name(GroupToShip(BigShip))> не будет проявлять никакой активности, так как мы смогли удаленно загрузить его центральный процессор бессмысленными директивами. Несмотря на это, доминатор все еще работает в режиме передатчика. Будьте внимательны, <Name(GroupToShip(BigShip))> в любой момент может справиться с нашей нагрузкой и вернуться в рабочее состояние. Также его могут \"пробудить\" какие-нибудь внешние факторы - например, повреждение обшивки. В таком случае хватайте зонд и улетайте оттуда как можно быстрей.",
+          "Msg":  "Это уже ваши проблемы. Можете уничтожить их всех, можете в камуфляже слетать... Кстати, <Name(GroupToShip(BigShip))> не будет проявлять никакой активности, так как мы смогли удаленно загрузить его центральный процессор бессмысленными директивами. Несмотря на это, доминатор все еще работает в режиме передатчика. Будьте внимательны, <Name(GroupToShip(BigShip))> в любой момент может восстановиться. Также его могут \"пробудить\" какие-нибудь внешние факторы, например повреждение обшивки. В таком случае хватайте зонд и улетайте оттуда как можно быстрей.",
           "DMsg.Num":  "5"        
         },
         {
@@ -219,38 +199,18 @@
           "Pos.y":  360,
           "Parent":  -1,
           "#":  74,
-          "Msg":  "Рейнджер! Вы молодец! Вы даже не представляете, насколько помогли Коалиции! Спасибо вам! Если все рейнджеры настолько бесстрашны - нам никакие доминаторы не смогут помешать! Ваша награда - <(vZondMemory*25)*(GalaxyMoney(0)/80)> cr.",
+          "Msg":  "Рейнджер! Вы молодец! Вы помогли коалиции! Спасибо вам! Если все рейнджеры настолько бесстрашны - нам никакие доминаторы не смогут помешать! Ваша награда <(vZondMemory*25)*(GalaxyMoney(0)/80)> cr.",
           "DMsg.Num":  "7"        
         },
         {
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  890,
-          "Pos.y":  620,
+          "Pos.y":  570,
           "Parent":  -1,
           "#":  118,
-          "Msg":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторам известны практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.\r\nПерейдем ближе к делу. Для того, чтобы проследить за доминатором, понадобится зонд. К счастью, он у нас есть. Необходимо будет доставить зонд в систему <Name(StarDom)>. По нашим данным транслирующим кораблем является <Name(GroupToShip(BigShip))>. Вам необходимо собрать информации минимум на <(vZondMemory=90)>% памяти зонда и привезти его сюда, на <ShortName(GroupToShip(BSB))>.",
+          "Msg":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторы все обнаруживают практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.\r\nПерейдем ближе к делу. Для того, чтобы проследить за доминатором, понадобится зонд. К счастью, он у нас есть. Необходимо будет доставить зонд в систему <Name(StarDom)>. По нашим данным транслирующем кораблем является <Name(GroupToShip(BigShip))>. Вам необходимо собрать информации минимум на <(vZondMemory=90)>% памяти зонда и привезти его сюда, на <ShortName(GroupToShip(BSB))>.",
           "DMsg.Num":  "8"        
-        },
-        {
-          "Type":  "TDialogMsg",
-          "Name":  "",
-          "Pos.x":  40,
-          "Pos.y":  480,
-          "Parent":  -1,
-          "#":  130,
-          "Msg":  "Пеленги постоянно раскидывают свои разведзонды, но, к вашему удивлению, от этого в Галанете больше информации не стало. Проведя несколько часов и начав чувствовать резь в глазах, вы наконец наткнулись на смутное описание правил пользования зондов - на пеленгском же источнике.\r\n\r\nИсходя из этого, зонд не может работать из трюма. Принципе его работы кроется в том, чтобы иметь возможность полностью исследовать цель, чему мешает корабль-носитель. В связи с этим все разведчики <clr>сбрасывают зонд в открытое космическое пространство<clrEnd> и маневрируют неподалёку.",
-          "DMsg.Num":  "9"        
-        },
-        {
-          "Type":  "TDialogMsg",
-          "Name":  "",
-          "Pos.x":  980,
-          "Pos.y":  470,
-          "Parent":  -1,
-          "#":  132,
-          "Msg":  "Рейнджер, может, догово... Ай, пакряк с тобой. Выбросил я твой зонд. Только отстань от меня, я ещё жить хочу.",
-          "DMsg.Num":  "10"        
         }      
       ],
       "Dialogs":      
@@ -270,14 +230,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  39        
-        },
-        {
-          "Type":  "TDialog",
-          "Name":  "ZondInfo",
-          "Pos.x":  40,
-          "Pos.y":  440,
-          "Parent":  -1,
-          "#":  129        
         }      
       ],
       "Ethers":      
@@ -291,7 +243,7 @@
           "#":  85,
           "Ether.Type":  3,
           "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
+          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Набрать информации минимум на <90>% памяти зонда.",
           "Ship1":  "",
           "Ship2":  "",
           "Ship3":  ""        
@@ -305,7 +257,7 @@
           "#":  86,
           "Ether.Type":  4,
           "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
+          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Набрать информации минимум на <90>% памяти зонда.",
           "Ship1":  "",
           "Ship2":  "",
           "Ship3":  ""        
@@ -319,21 +271,7 @@
           "#":  90,
           "Ether.Type":  5,
           "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
-          "Ship1":  "",
-          "Ship2":  "",
-          "Ship3":  ""        
-        },
-        {
-          "Type":  "TEther",
-          "Name":  "",
-          "Pos.x":  840,
-          "Pos.y":  590,
-          "Parent":  -1,
-          "#":  126,
-          "Ether.Type":  1,
-          "Unique":  "",
-          "Msg":  "Хм. И что делать с этой штуковиной? Может, посмотреть в Галанете?",
+          "Msg":  "В системе <Name(StarDom)> найти корабль <vNameShip> и прошпионить за ним. Набрать информации минимум на <90>% памяти зонда.",
           "Ship1":  "",
           "Ship2":  "",
           "Ship3":  ""        
@@ -602,7 +540,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  980,
-          "Pos.y":  550,
+          "Pos.y":  480,
           "Parent":  -1,
           "#":  48,
           "Total.Lines":  5,
@@ -721,8 +659,8 @@
               "ReleaseItemFromScript(iOP);",
               "FreeItem(GetItemFromShip(Player(), item));",
               "i=CreateQuestItem('SB_scaner',ShipOwner(GetShipRuins(Player())));",
-              "ItemSize(i,CT('UselessItems.SB_scaner.Size'));",
-              "//LinkItemToScript(i,SB_scaner);",
+              "ItemSize(i,15);",
+              "LinkItemToScript(i,SB_scaner);",
               "AddItemToShip(Player(),i);",
               "if(GroupToShip(BSB))ShipOut(GroupToShip(BSB));",
               "if(GroupToShip(PelengSpy))ShipOut(GroupToShip(PelengSpy));"          
@@ -777,98 +715,95 @@
           "Pos.y":  100,
           "Parent":  -1,
           "#":  110,
-          "Total.Lines":  88,
+          "Total.Lines":  85,
           "Code.Type":  "Turn",
           "Code":          
           [
               "//Шукод на юзлесс-сканер, не трогать",
-              "",
-              "//Маршал в чате, трогаем ВСЁ",
-              "//Теперь эта херовина, уже исправленная, засунута в юзкод",
-              "//if(ItemIn(SB_scaner,Player())) {",
-              "//  sh=ShipStar(Player());",
-              "//  min_dist=750;",
-              "//  for(i=0; i<StarShips(sh); i=i+1) {",
-              "//    s=StarShips(sh,i);",
-              "//    if(IsPlayer(s)) continue;",
-              "//    if(!ShipInNormalSpace(s)) continue;",
-              "//    if(Dist(s,Player())<min_dist) min_dist=Dist(s,Player());",
-              "//  }",
-              "//  for(i=0; i<StarShips(sh); i=i+1) {",
-              "//    s=StarShips(sh,i);",
-              "//    if(IsPlayer(s)) continue;",
-              "//    if(!ShipInNormalSpace(s)) continue;",
-              "//    if(Dist(s,Player())==min_dist) { min_dist=1000; break; }",
-              "//  }",
-              "//  if(min_dist==1000) {",
-              "//    stroka='Name(s)';",
-              "//    if(ShipEqInSlot(s,t_Hull)) {",
-              "//        it=ShipEqInSlot(s,t_Hull);",
-              "//        stroka=stroka+\"<br>Корпус: <Name(it)> (броня <GetEquipmentStats(it,0)>), уровень: <ItemLevel(it)>, структура: <HullHP(it)>/<ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr<br>\";",
-              "//    }",
-              "//    if(ShipEqInSlot(s,t_Engine)) {",
-              "//        it=ShipEqInSlot(s,t_Engine);",
-              "//        stroka=stroka+\"Двигатель: <Name(it)> (скорость <GetEquipmentStats(it,0)> ед, прыжок <GetEquipmentStats(it,1)> парсек), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Двигатель: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_FuelTanks)) {",
-              "//        it=ShipEqInSlot(s,t_FuelTanks);",
-              "//        stroka=stroka+\"Топливный бак: <Name(it)> (емкость <GetEquipmentStats(it,0)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Топливный бак: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_RepairRobot)) {",
-              "//        it=ShipEqInSlot(s,t_RepairRobot);",
-              "//        stroka=stroka+\"Дроид: <Name(it)> (эффективность <GetEquipmentStats(it,0)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Дроид: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_CargoHook)) {",
-              "//        it=ShipEqInSlot(s,t_CargoHook);",
-              "//        stroka=stroka+\"Захват: <Name(it)> (мощность <GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,1)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Захват: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_DefGenerator)) {",
-              "//        it=ShipEqInSlot(s,t_DefGenerator);",
-              "//        stroka=stroka+\"Генератор защиты: <Name(it)> (защита <GetEquipmentStats(it,0)>%), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Генератор защиты: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_Radar)) {",
-              "//        it=ShipEqInSlot(s,t_Radar);",
-              "//        stroka=stroka+\"Радар: <Name(it)> (дальность <GetEquipmentStats(it,0)> млн. км), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Радар: N/A<br>\";",
-              "//    if(ShipEqInSlot(s,t_Scaner)) {",
-              "//        it=ShipEqInSlot(s,t_Scaner);",
-              "//        stroka=stroka+\"Сканер: <Name(it)> (мощность <GetEquipmentStats(it,0)>%), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Сканер: N/A<br>\";",
-              "//    if(ShipWeapon(s,1)) {",
-              "//        it=ShipWeapon(s,1);",
-              "//        stroka=stroka+\"Орудие 1: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Орудие 1: N/A<br>\";",
-              "//    if(ShipWeapon(s,2)) {",
-              "//        it=ShipWeapon(s,2);",
-              "//        stroka=stroka+\"Орудие 2: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Орудие 2: N/A<br>\";",
-              "//    if(ShipWeapon(s,3)) {",
-              "//        it=ShipWeapon(s,3);",
-              "//        stroka=stroka+\"Орудие 3: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Орудие 3: N/A<br>\";",
-              "//    if(ShipWeapon(s,4)) {",
-              "//        it=ShipWeapon(s,4);",
-              "//        stroka=stroka+\"Орудие 4: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Орудие 4: N/A<br>\";",
-              "//    if(ShipWeapon(s,5)) {",
-              "//        it=ShipWeapon(s,5);",
-              "//        stroka=stroka+\"Орудие 5: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
-              "//    }",
-              "//    else stroka=stroka+\"Орудие 5: N/A<br>\";",
-              "//    Ether(7,'SB_scaner',stroka);",
-              "//  }",
-              "//}"          
+              "if(ItemIn(SB_scaner,Player())) {",
+              "  sh=ShipStar(Player());",
+              "  min_dist=750;",
+              "  for(i=0; i<StarShips(sh); i=i+1) {",
+              "    s=StarShips(sh,i);",
+              "    if(IsPlayer(s)) continue;",
+              "    if(!ShipInNormalSpace(s)) continue;",
+              "    if(Dist(s,Player())<min_dist) min_dist=Dist(s,Player());",
+              "  }",
+              "  for(i=0; i<StarShips(sh); i=i+1) {",
+              "    s=StarShips(sh,i);",
+              "    if(IsPlayer(s)) continue;",
+              "    if(!ShipInNormalSpace(s)) continue;",
+              "    if(Dist(s,Player())==min_dist) { min_dist=1000; break; }",
+              "  }",
+              "  if(min_dist==1000) {",
+              "    stroka='Name(s)';",
+              "    if(ShipEqInSlot(s,t_Hull)) {",
+              "        it=ShipEqInSlot(s,t_Hull);",
+              "        stroka=stroka+\"<br>Корпус: <Name(it)> (броня <GetEquipmentStats(it,0)>), уровень: <ItemLevel(it)>, структура: <HullHP(it)>/<ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr<br>\";",
+              "    }",
+              "    if(ShipEqInSlot(s,t_Engine)) {",
+              "        it=ShipEqInSlot(s,t_Engine);",
+              "        stroka=stroka+\"Двигатель: <Name(it)> (скорость <GetEquipmentStats(it,0)> ед, прыжок <GetEquipmentStats(it,1)> парсек), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Двигатель: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_FuelTanks)) {",
+              "        it=ShipEqInSlot(s,t_FuelTanks);",
+              "        stroka=stroka+\"Топливный бак: <Name(it)> (емкость <GetEquipmentStats(it,0)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Топливный бак: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_RepairRobot)) {",
+              "        it=ShipEqInSlot(s,t_RepairRobot);",
+              "        stroka=stroka+\"Дроид: <Name(it)> (эффективность <GetEquipmentStats(it,0)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Дроид: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_CargoHook)) {",
+              "        it=ShipEqInSlot(s,t_CargoHook);",
+              "        stroka=stroka+\"Захват: <Name(it)> (мощность <GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,1)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Захват: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_DefGenerator)) {",
+              "        it=ShipEqInSlot(s,t_DefGenerator);",
+              "        stroka=stroka+\"Генератор защиты: <Name(it)> (защита <GetEquipmentStats(it,0)>%), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Генератор защиты: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_Radar)) {",
+              "        it=ShipEqInSlot(s,t_Radar);",
+              "        stroka=stroka+\"Радар: <Name(it)> (дальность <GetEquipmentStats(it,0)> млн. км), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Радар: N/A<br>\";",
+              "    if(ShipEqInSlot(s,t_Scaner)) {",
+              "        it=ShipEqInSlot(s,t_Scaner);",
+              "        stroka=stroka+\"Сканер: <Name(it)> (мощность <GetEquipmentStats(it,0)>%), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Сканер: N/A<br>\";",
+              "    if(ShipWeapon(s,1)) {",
+              "        it=ShipWeapon(s,1);",
+              "        stroka=stroka+\"Орудие 1: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Орудие 1: N/A<br>\";",
+              "    if(ShipWeapon(s,2)) {",
+              "        it=ShipWeapon(s,2);",
+              "        stroka=stroka+\"Орудие 2: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Орудие 2: N/A<br>\";",
+              "    if(ShipWeapon(s,3)) {",
+              "        it=ShipWeapon(s,3);",
+              "        stroka=stroka+\"Орудие 3: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Орудие 3: N/A<br>\";",
+              "    if(ShipWeapon(s,4)) {",
+              "        it=ShipWeapon(s,4);",
+              "        stroka=stroka+\"Орудие 4: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Орудие 4: N/A<br>\";",
+              "    if(ShipWeapon(s,5)) {",
+              "        it=ShipWeapon(s,5);",
+              "        stroka=stroka+\"Орудие 5: <Name(it)> (урон <GetEquipmentStats(it,1)>-<GetEquipmentStats(it,0)> ед, дальность <GetEquipmentStats(it,2)> ед), уровень: <ItemLevel(it)>, вес: <ItemSize(it)> тонн, стоимость: <ItemCost(it)> cr, прочность: <ItemDurability(it)>%<br>\";",
+              "    }",
+              "    else stroka=stroka+\"Орудие 5: N/A<br>\";",
+              "    Ether(7,'SB_scaner',stroka);",
+              "  }",
+              "}"          
           ]        
         },
         {
@@ -987,52 +922,6 @@
               "  }",
               "}"          
           ]        
-        },
-        {
-          "Type":  "Top",
-          "Name":  "",
-          "Pos.x":  870,
-          "Pos.y":  570,
-          "Parent":  -1,
-          "#":  123,
-          "Total.Lines":  19,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "//Часто пеленг находится не пойми где. Особенно интересно, когда пеленг находится в пиратской системе.",
-              "//То есть через пять секунд погибнет. Или ещё чего. В общем, всё не слава богу бывает, и ломать из-за этого скрипт...",
-              "//Это было бы неправильно. Поэтому делаем дополнительные проверки на все случаи жизни.",
-              "NoFlag = 0;",
-              "",
-              "if(StarOwner(ShipStar(GroupToShip(PelengSpy))) == 2) {",
-              "    if(ShipOrder(GroupToShip(PelengSpy)) != 7) {",
-              "        if(ShipOrder(GroupToShip(PelengSpy)) == 5) {",
-              "            if(ShipTurnBeforeEndOrder(GroupToShip(PelengSpy)) > 2) NoFlag = 1;",
-              "        }",
-              "        else NoFlag = 1;",
-              "        ReleaseItemFromScript(iOP);",
-              "    } //Если пеленг у пиратов и явно не сваливает, то он не жилец. Точка.",
-              "}",
-              "",
-              "if(NoFlag == 1) {",
-              "    ShipOut(GroupToShip(PelengSpy));",
-              "    ReleaseItemFromScript(iOP);",
-              "}"          
-          ]        
-        },
-        {
-          "Type":  "Top",
-          "Name":  "",
-          "Pos.x":  0,
-          "Pos.y":  480,
-          "Parent":  -1,
-          "#":  128,
-          "Total.Lines":  1,
-          "Code.Type":  "DialogBegin",
-          "Code":          
-          [
-              "AddDialogInject('ZondInfo', '', \"Поискать информацию о зонде\", 90);"          
-          ]        
         }      
       ],
       "Places":      
@@ -1060,7 +949,7 @@
           "#":  35,
           "Place.Type":  1,
           "Angle":  "0",
-          "Dist":  "0.5",
+          "Dist":  "0,5",
           "Radius":  100,
           "Obj1":  6,
           "Obj2":  -1        
@@ -1074,7 +963,7 @@
           "#":  49,
           "Place.Type":  4,
           "Angle":  "0",
-          "Dist":  "0.5",
+          "Dist":  "0,5",
           "Radius":  300,
           "Obj1":  9,
           "Obj2":  -1        
@@ -1088,7 +977,7 @@
           "#":  55,
           "Place.Type":  3,
           "Angle":  "0",
-          "Dist":  "0.200000002980232",
+          "Dist":  "0,200000002980232",
           "Radius":  25,
           "Obj1":  2,
           "Obj2":  -1        
@@ -1102,7 +991,7 @@
           "#":  97,
           "Place.Type":  4,
           "Angle":  "0",
-          "Dist":  "0.5",
+          "Dist":  "0,5",
           "Radius":  50,
           "Obj1":  9,
           "Obj2":  -1        
@@ -1634,7 +1523,7 @@
           "Type":  "Tif",
           "Name":  "",
           "Pos.x":  870,
-          "Pos.y":  540,
+          "Pos.y":  550,
           "Parent":  -1,
           "#":  116,
           "Total.Lines":  1,
@@ -1648,7 +1537,7 @@
           "Type":  "Tif",
           "Name":  "",
           "Pos.x":  890,
-          "Pos.y":  540,
+          "Pos.y":  550,
           "Parent":  -1,
           "#":  117,
           "Total.Lines":  1,
@@ -1662,7 +1551,7 @@
           "Type":  "Tif",
           "Name":  "",
           "Pos.x":  680,
-          "Pos.y":  650,
+          "Pos.y":  600,
           "Parent":  -1,
           "#":  119,
           "Total.Lines":  1,
@@ -1676,7 +1565,7 @@
           "Type":  "Tif",
           "Name":  "",
           "Pos.x":  890,
-          "Pos.y":  650,
+          "Pos.y":  600,
           "Parent":  -1,
           "#":  121,
           "Total.Lines":  1,
@@ -1684,48 +1573,6 @@
           "Code":          
           [
               "1"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  870,
-          "Pos.y":  600,
-          "Parent":  -1,
-          "#":  124,
-          "Total.Lines":  1,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "!NoFlag"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  890,
-          "Pos.y":  600,
-          "Parent":  -1,
-          "#":  125,
-          "Total.Lines":  1,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "NoFlag"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  0,
-          "Pos.y":  440,
-          "Parent":  -1,
-          "#":  127,
-          "Total.Lines":  1,
-          "Code.Type":  "DialogBegin",
-          "Code":          
-          [
-              "PlayerBridge() == 11"          
           ]        
         }      
       ],
@@ -2108,17 +1955,6 @@
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
-        },
-        {
-          "Type":  "TVar",
-          "Name":  "NoFlag",
-          "Pos.x":  940,
-          "Pos.y":  610,
-          "Parent":  -1,
-          "#":  122,
-          "Var.Type":  "Int",
-          "Init":  "0",
-          "Global":  false        
         }      
       ]    
     }  
@@ -2366,6 +2202,13 @@
       "Type":  "TGraphLink",
       "Begin":  46,
       "End":  47,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
+      "End":  48,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -2766,29 +2609,15 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  119,
-      "End":  65,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  118,
-      "End":  121,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  121,
-      "End":  119,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  63,
       "End":  116,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  116,
+      "End":  64,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -2808,85 +2637,22 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  116,
-      "End":  123,
+      "Begin":  119,
+      "End":  65,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  123,
-      "End":  125,
+      "Begin":  118,
+      "End":  121,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  123,
-      "End":  124,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  124,
-      "End":  64,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  125,
-      "End":  118,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  76,
-      "End":  126,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  127,
-      "End":  128,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  129,
-      "End":  130,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  130,
-      "End":  131,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  47,
-      "End":  132,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  132,
-      "End":  133,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  133,
-      "End":  48,
+      "Begin":  121,
+      "End":  119,
       "Nom":  0,
       "Arrow":  true    
     }  
@@ -2904,7 +2670,7 @@
       "BStyle":  0,
       "BColor":  14474460,
       "BSize":  1,
-      "BCoef":  "0.300000011920929",
+      "BCoef":  "0,300000011920929",
       "AlignX":  -1,
       "AlignY":  -1,
       "AlignRect":  false,
@@ -2927,7 +2693,7 @@
       "BStyle":  0,
       "BColor":  14474460,
       "BSize":  1,
-      "BCoef":  "0.300000011920929",
+      "BCoef":  "0,300000011920929",
       "AlignX":  -1,
       "AlignY":  -1,
       "AlignRect":  false,
@@ -2940,7 +2706,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  26,
+  "BlockPar.EC.Total.Strings":  45,
   "BlockPar.EC":  
   [
     {
@@ -2953,7 +2719,7 @@
     },
     {
       "#":  "28",
-      "String":  "Привет тебе, малорукое существо по имени <Player>. Рейнджер из тебя пока никудышный, торговец тоже. Ты займись делом - всякими грабежами и убийствами. Вот тогда быстро станешь уважаемым членом общества. Уж я-то знаю, что говорю!<br>"    
+      "String":  "Привет тебе, малорукое существо по имени <Player>. Рейнджер из тебя пока никудышный, торговец тоже. Ты займись делом, всякими грабежами и убийствами. Вот тогда быстро станешь уважаемым членом общества. Я знаю, что говорю!<br>"    
     },
     {
       "#":  "29",
@@ -2961,7 +2727,7 @@
     },
     {
       "#":  "34",
-      "String":  "В системе <0> найти корабль <1> и прошпионить за ним. Зонд должен собрать информации как минимум на <2>% своей памяти."    
+      "String":  "В системе <0> найти корабль <1> и прошпионить за ним. Набрать информации минимум на <2>% памяти зонда."    
     },
     {
       "#":  "35",
@@ -2989,15 +2755,115 @@
     },
     {
       "#":  "50",
-      "String":  "Рейнджер! Вы молодец! Вы даже не представляете, насколько помогли Коалиции! Спасибо вам! Если все рейнджеры настолько бесстрашны - нам никакие доминаторы не смогут помешать! Ваша награда - <0> cr."    
+      "String":  "Рейнджер! Вы молодец! Вы помогли коалиции! Спасибо вам! Если все рейнджеры настолько бесстрашны - нам никакие доминаторы не смогут помешать! Ваша награда <0> cr."    
     },
     {
       "#":  "51",
-      "String":  "Служу Коалиции!"    
+      "String":  "Спасибо за награду"    
     },
     {
       "#":  "53",
-      "String":  "Мне твои планы сдала здешняя научная база. Не знаю откуда ей о них стало известно, меня интересует лишь твой груз. Зонд выбрасывай, пока не стало поздно"    
+      "String":  "Мне твои планы сдала здешняя научная база. Не знаю откуда ей о них стало известно, меня интересует лишь твой груз. Зонд выбрасывай пока не стало поздно"    
+    },
+    {
+      "#":  "57",
+      "String":  "Орудие 5: N/A<br>"    
+    },
+    {
+      "#":  "58",
+      "String":  "Орудие 5: <0> (урон <1>-<2> ед, дальность <3> ед), уровень: <4>, вес: <5> тонн, стоимость: <6> cr, прочность: <7>%<br>"    
+    },
+    {
+      "#":  "59",
+      "String":  "Орудие 4: N/A<br>"    
+    },
+    {
+      "#":  "60",
+      "String":  "Орудие 4: <0> (урон <1>-<2> ед, дальность <3> ед), уровень: <4>, вес: <5> тонн, стоимость: <6> cr, прочность: <7>%<br>"    
+    },
+    {
+      "#":  "61",
+      "String":  "Орудие 3: N/A<br>"    
+    },
+    {
+      "#":  "62",
+      "String":  "Орудие 3: <0> (урон <1>-<2> ед, дальность <3> ед), уровень: <4>, вес: <5> тонн, стоимость: <6> cr, прочность: <7>%<br>"    
+    },
+    {
+      "#":  "63",
+      "String":  "Орудие 2: N/A<br>"    
+    },
+    {
+      "#":  "64",
+      "String":  "Орудие 2: <0> (урон <1>-<2> ед, дальность <3> ед), уровень: <4>, вес: <5> тонн, стоимость: <6> cr, прочность: <7>%<br>"    
+    },
+    {
+      "#":  "65",
+      "String":  "Орудие 1: N/A<br>"    
+    },
+    {
+      "#":  "66",
+      "String":  "Орудие 1: <0> (урон <1>-<2> ед, дальность <3> ед), уровень: <4>, вес: <5> тонн, стоимость: <6> cr, прочность: <7>%<br>"    
+    },
+    {
+      "#":  "67",
+      "String":  "Сканер: N/A<br>"    
+    },
+    {
+      "#":  "68",
+      "String":  "Сканер: <0> (мощность <1>%), уровень: <2>, вес: <3> тонн, стоимость: <4> cr, прочность: <5>%<br>"    
+    },
+    {
+      "#":  "69",
+      "String":  "Радар: N/A<br>"    
+    },
+    {
+      "#":  "70",
+      "String":  "Радар: <0> (дальность <1> млн. км), уровень: <2>, вес: <3> тонн, стоимость: <4> cr, прочность: <5>%<br>"    
+    },
+    {
+      "#":  "71",
+      "String":  "Генератор защиты: N/A<br>"    
+    },
+    {
+      "#":  "72",
+      "String":  "Генератор защиты: <0> (защита <1>%), уровень: <2>, вес: <3> тонн, стоимость: <4> cr, прочность: <5>%<br>"    
+    },
+    {
+      "#":  "73",
+      "String":  "Захват: N/A<br>"    
+    },
+    {
+      "#":  "74",
+      "String":  "Захват: <0> (мощность <1> ед, дальность <2> ед), уровень: <3>, вес: <4> тонн, стоимость: <5> cr, прочность: <6>%<br>"    
+    },
+    {
+      "#":  "75",
+      "String":  "Дроид: N/A<br>"    
+    },
+    {
+      "#":  "76",
+      "String":  "Дроид: <0> (эффективность <1> ед), уровень: <2>, вес: <3> тонн, стоимость: <4> cr, прочность: <5>%<br>"    
+    },
+    {
+      "#":  "77",
+      "String":  "Топливный бак: N/A<br>"    
+    },
+    {
+      "#":  "78",
+      "String":  "Топливный бак: <0> (емкость <1> ед), уровень: <2>, вес: <3> тонн, стоимость: <4> cr, прочность: <5>%<br>"    
+    },
+    {
+      "#":  "79",
+      "String":  "Двигатель: N/A<br>"    
+    },
+    {
+      "#":  "80",
+      "String":  "Двигатель: <0> (скорость <1> ед, прыжок <2> парсек), уровень: <3>, вес: <4> тонн, стоимость: <5> cr, прочность: <6>%<br>"    
+    },
+    {
+      "#":  "81",
+      "String":  "<br>Корпус: <0> (броня <1>), уровень: <2>, структура: <3>/<4> тонн, стоимость: <5> cr<br>"    
     },
     {
       "#":  "82",
@@ -3013,39 +2879,15 @@
     },
     {
       "#":  "85",
-      "String":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторам известны практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.<br>Перейдем ближе к делу. Для того, чтобы проследить за доминатором, вам понадобится зонд. Нам известно, что к научной базе скоро прибудет подозрительное судно <0>. Почти наверняка - пеленги опять решили установить слежку за нами. Каждый год они посылают к нам кого-то из своих шпионов: уже традиция!<br>Так вот, вам необходимо любым способом добыть зонд. Уничтожать корабль крайне нежелательно, ведь пеленги вам этого просто так не оставят. Можете припугнуть шпиона парой залпов, потому как вряд ли ему захочется умирать из-за какого-то там зонда. После того, как зонд окажется у вас, необходимо будет доставить его в систему <1>. По нашим данным транслирующим кораблем является <2>. Вам необходимо собрать информации минимум на <3>% памяти зонда и привезти его сюда, на <4>."    
+      "String":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторы все обнаруживают практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.<br>Перейдем ближе к делу. Для того, чтобы проследить за доминатором, вам понадобится зонд. Нам известно, что к научной базе скоро прибудет подозрительное судно <0>. Почти наверняка, пеленги опять решили установить слежку за нами. Каждый год они посылают к нам кого-то из своих шпионов,это уже традиция!<br>Так вот, вам необходимо любым способом добыть зонд. Уничтожать корабль крайне нежелательно, пеленги вам этого просто так не оставят. Можете припугнуть шпиона парой залпов, вряд ли ему захочется умирать из-за какого-то там зонда. После того, как зонд окажется у вас, необходимо будет доставить его в систему <1>. По нашим данным транслирующем кораблем является <2>. Вам необходимо собрать информации минимум на <3>% памяти зонда и привезти его сюда, на <4>."    
     },
     {
       "#":  "86",
-      "String":  "Это уже ваши проблемы. Можете уничтожить их всех, можете дождаться атаки военных... Кстати, <0> не будет проявлять никакой активности, так как мы смогли удаленно загрузить его центральный процессор бессмысленными директивами. Несмотря на это, доминатор все еще работает в режиме передатчика. Будьте внимательны, <1> в любой момент может справиться с нашей нагрузкой и вернуться в рабочее состояние. Также его могут \"пробудить\" какие-нибудь внешние факторы - например, повреждение обшивки. В таком случае хватайте зонд и улетайте оттуда как можно быстрей."    
+      "String":  "Это уже ваши проблемы. Можете уничтожить их всех, можете в камуфляже слетать... Кстати, <0> не будет проявлять никакой активности, так как мы смогли удаленно загрузить его центральный процессор бессмысленными директивами. Несмотря на это, доминатор все еще работает в режиме передатчика. Будьте внимательны, <1> в любой момент может восстановиться. Также его могут \"пробудить\" какие-нибудь внешние факторы, например повреждение обшивки. В таком случае хватайте зонд и улетайте оттуда как можно быстрей."    
     },
     {
       "#":  "87",
-      "String":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторам известны практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.<br>Перейдем ближе к делу. Для того, чтобы проследить за доминатором, понадобится зонд. К счастью, он у нас есть. Необходимо будет доставить зонд в систему <0>. По нашим данным транслирующим кораблем является <1>. Вам необходимо собрать информации минимум на <2>% памяти зонда и привезти его сюда, на <3>."    
-    },
-    {
-      "#":  "88",
-      "String":  "Поискать информацию о зонде"    
-    },
-    {
-      "#":  "89",
-      "String":  "Пеленги постоянно раскидывают свои разведзонды, но, к вашему удивлению, от этого в Галанете больше информации не стало. Проведя несколько часов и начав чувствовать резь в глазах, вы наконец наткнулись на смутное описание правил пользования зондов - на пеленгском же источнике.<br><br>Исходя из этого, зонд не может работать из трюма. Принципе его работы кроется в том, чтобы иметь возможность полностью исследовать цель, чему мешает корабль-носитель. В связи с этим все разведчики <clr>сбрасывают зонд в открытое космическое пространство<clrEnd> и маневрируют неподалёку."    
-    },
-    {
-      "#":  "90",
-      "String":  "Рейнджер, может, догово... Ай, пакряк с тобой. Выбросил я твой зонд. Только отстань от меня, я ещё жить хочу."    
-    },
-    {
-      "#":  "91",
-      "String":  "Хм. И что делать с этой штуковиной? Может, посмотреть в Галанете?"    
-    },
-    {
-      "#":  "92",
-      "String":  "Это определённо стоит запомнить! (Вернуться на главную)"    
-    },
-    {
-      "#":  "93",
-      "String":  "Вот так бы сразу"    
+      "String":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторы все обнаруживают практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.<br>Перейдем ближе к делу. Для того, чтобы проследить за доминатором, понадобится зонд. К счастью, он у нас есть. Необходимо будет доставить зонд в систему <0>. По нашим данным транслирующем кораблем является <1>. Вам необходимо собрать информации минимум на <2>% памяти зонда и привезти его сюда, на <3>."    
     }  
   ]
 }

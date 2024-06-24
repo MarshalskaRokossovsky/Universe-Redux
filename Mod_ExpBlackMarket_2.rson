@@ -2433,7 +2433,7 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  56,
-          "Total.Lines":  58,
+          "Total.Lines":  63,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -2493,6 +2493,11 @@
               "    }",
               "    if(ShipType(cur_ruin) != 'BM') {",
               "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', -1);",
+              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', -1);",
+              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', -1);",
               "    }",
               "}"          
           ]        

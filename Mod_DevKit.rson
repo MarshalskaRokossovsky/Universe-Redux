@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1304,
-  "ViewPos.y":  1036,
+  "ViewPos.x":  -471,
+  "ViewPos.y":  770,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -1893,7 +1893,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  730,
-          "Pos.y":  -170,
+          "Pos.y":  -90,
           "Parent":  -1,
           "#":  508,
           "Msg":  "Конкретное",
@@ -2838,11 +2838,18 @@
           "Pos.y":  350,
           "Parent":  -1,
           "#":  46,
-          "Total.Lines":  21,
+          "Total.Lines":  28,
           "Code.Type":  "Turn",
           "Code":          
           [
               "tdwd =  NumberBox('Bm.Items.2FuelTanks14s',\"Выберите желаемый промежуток\",1,4,4,'',2,\"Немного (1-10000 cr)\",\"Средне (10000-100000 cr)\",\"Много (100000-1000000 cr)\",\"Огромно (1000000-100000000 cr)\");",
+              "if(ShipMoney(Player()) > 99999990) tdwd = -1;",
+              "if(tdwd == 2 && 100000000 - ShipMoney(Player()) < 10000) tdwd = 1;",
+              "if(tdwd == 3 && 100000000 - ShipMoney(Player()) < 100000) tdwd = 2;",
+              "if(tdwd == 3 && 100000000 - ShipMoney(Player()) < 10000) tdwd = 1;",
+              "if(tdwd == 4 && 100000000 - ShipMoney(Player()) < 1000000) tdwd = 3;",
+              "if(tdwd == 4 && 100000000 - ShipMoney(Player()) < 100000) tdwd = 2;",
+              "if(tdwd == 4 && 100000000 - ShipMoney(Player()) < 10000) tdwd = 1;",
               "if(tdwd == 1) {",
               "    tint2 = 10000;",
               "    if(100000000 - ShipMoney(Player()) < 10000) tint2 = 100000000 - ShipMoney(Player());",
@@ -2851,16 +2858,16 @@
               "if(tdwd == 2) {",
               "    tint2 = 100000;",
               "    if(100000000 - ShipMoney(Player()) < 100000) tint2 = 100000000 - ShipMoney(Player());",
-              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 1, tint2);",
+              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 10000, tint2);",
               "}",
               "if(tdwd == 3) {",
               "    tint2 = 1000000;",
               "    if(100000000 - ShipMoney(Player()) < 1000000) tint2 = 100000000 - ShipMoney(Player());",
-              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 1, tint2);",
+              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 100000, tint2);",
               "}",
               "if(tdwd == 4) {",
               "    tint2 = 100000000 - ShipMoney(Player());",
-              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 1, tint2);",
+              "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Количество\", 1000000, tint2);",
               "}",
               "if(tdwd == -1) tint = 0;"          
           ]        
@@ -3158,9 +3165,9 @@
           "Code.Type":  "DialogBegin",
           "Code":          
           [
-              "if(GetTalkShip()) AddDialogInject('KillThisShit', '', \"Самоуничтожься\", 50);",
               "if(DevFlag == 1) {",
               "    AddDialogInject('DevKit', '', \"DevKit\", 1000);",
+              "    if(GetTalkShip()) AddDialogInject('KillThisShit', '', \"Самоуничтожься\", 50);",
               "}",
               "if(DevFlag == 0) {",
               "    if(PlayerBridge() == 11) AddDialogInject('DevKit', '', \"DevKit\", 1000);",
@@ -6648,12 +6655,11 @@
           "Pos.y":  1110,
           "Parent":  -1,
           "#":  273,
-          "Total.Lines":  4,
+          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "temp_int = CountBox('Bm.Items.2FuelTanks14s', \"Количество дополнительных выстрелов\", 1, 200);",
-              "temp_int = temp_int + 1;",
+              "temp_int = CountBox('Bm.Items.2FuelTanks14s', \"Количество дополнительных выстрелов\", 0, 200);",
               "ShipSpecialBonuses(Player(), bonAttacks,temp_int);",
               "Sound('Sound.Buy');"          
           ]        
@@ -6670,7 +6676,7 @@
           "Code":          
           [
               "if(ShipInNormalSpace(Player())) {",
-              "    for(int i=ShipItems(Player())-1; i>0; i=i-1) {",
+              "    for(i=ShipItems(Player())-1; i>0; i=i-1) {",
               "        dword item=ShipItems(Player(),i);",
               "        if(ItemIsInUse(item)) continue;",
               "        DropItem(Player(), item);",
@@ -8143,8 +8149,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  780,
-          "Pos.y":  -170,
+          "Pos.x":  770,
+          "Pos.y":  -90,
           "Parent":  -1,
           "#":  509,
           "Total.Lines":  9,
@@ -8612,10 +8618,10 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "for(i=0;ShipItems(Player())>i;i=i+1) {",
+              "Sound('Sound.Buy');",
+              "for(i=ShipItems(Player())-1; i>0; i=i-1) {",
               "    if(ItemType(ShipItems(Player(),i)) != t_Hull && ItemType(ShipItems(Player(),i)) > 7 && ItemType(ShipItems(Player(),i)) < 69) ItemSize(ShipItems(Player(),i),temp_size);",
-              "}",
-              "Sound('Sound.Buy');"          
+              "}"          
           ]        
         },
         {
