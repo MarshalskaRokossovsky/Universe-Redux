@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -258,
-  "ViewPos.y":  -262,
+  "ViewPos.x":  -486,
+  "ViewPos.y":  -32,
   "ScriptName":  "Mod_ExpBlackMarket_2",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBlackMarket\\DATA\\Script\\Mod_ExpBlackMarket_2.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBlackMarket\\DATA\\Script\\Mod_ExpBlackMarket_2.txt",
-  "GraphPoint.Count":  76,
-  "GraphLink.Count":  24,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  44,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  2,
-  "Groups.Count":  2,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  2,
-  "DialogMessages.Count":  4,
-  "DialogAnswers.Count":  6,
-  "Operations.Count":  8,
-  "Statements.Count":  5,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -222,7 +204,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  5,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -236,7 +217,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  6,
-          "Total.Lines":  716,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -965,7 +945,6 @@
           "Pos.y":  20,
           "Parent":  16,
           "#":  17,
-          "Total.Lines":  39,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1017,7 +996,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  46,
-          "Total.Lines":  1017,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -2047,7 +2025,6 @@
           "Pos.y":  40,
           "Parent":  18,
           "#":  47,
-          "Total.Lines":  373,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2433,7 +2410,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  56,
-          "Total.Lines":  63,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -2491,14 +2467,6 @@
               "            }",
               "        }",
               "    }",
-              "    if(ShipType(cur_ruin) != 'BM') {",
-              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', -1);",
-              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
-              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', -1);",
-              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
-              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
-              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', -1);",
-              "    }",
               "}"          
           ]        
         },
@@ -2509,7 +2477,6 @@
           "Pos.y":  20,
           "Parent":  61,
           "#":  68,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2536,7 +2503,6 @@
           "Pos.y":  20,
           "Parent":  59,
           "#":  72,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2618,7 +2584,6 @@
           "Pos.y":  20,
           "Parent":  18,
           "#":  16,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2632,7 +2597,6 @@
           "Pos.y":  160,
           "Parent":  -1,
           "#":  18,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2646,7 +2610,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  65,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2660,7 +2623,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  69,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2674,7 +2636,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  71,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [

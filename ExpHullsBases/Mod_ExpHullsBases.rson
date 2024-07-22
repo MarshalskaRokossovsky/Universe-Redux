@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  11,
-  "ViewPos.y":  -518,
+  "ViewPos.x":  -151,
+  "ViewPos.y":  -470,
   "ScriptName":  "Mod_ExpHullsBases",
-  "ScriptFileOut":  "C:\\Users\\DmitB\\Downloads\\Mod_ExpHullsBases.scr",
-  "ScriptTextOut":  "C:\\Users\\DmitB\\Downloads\\Mod_ExpHullsBases.txt",
-  "GraphPoint.Count":  467,
-  "GraphLink.Count":  422,
-  "GraphRectText.Count":  3,
-  "Variables.Count":  66,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  29,
-  "DialogMessages.Count":  68,
-  "DialogAnswers.Count":  71,
-  "Operations.Count":  103,
-  "Statements.Count":  125,
-  "Loops.Count":  0,
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpHullsBases\\DATA\\Script\\Mod_ExpHullsBases.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpHullsBases\\DATA\\Script\\Mod_ExpHullsBases.txt",
   "Visual.Objects":  
   [
     {
@@ -532,8 +514,8 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  380,
+          "Pos.x":  1550,
+          "Pos.y":  350,
           "Parent":  -1,
           "#":  304,
           "Msg":  "А знаете что, передумал я делать этот самый скачок",
@@ -572,8 +554,8 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "",
-          "Pos.x":  1030,
-          "Pos.y":  340,
+          "Pos.x":  1740,
+          "Pos.y":  410,
           "Parent":  -1,
           "#":  320,
           "Msg":  "Отставить дальний скачок, я передумал",
@@ -622,8 +604,8 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "",
-          "Pos.x":  800,
-          "Pos.y":  450,
+          "Pos.x":  1370,
+          "Pos.y":  330,
           "Parent":  -1,
           "#":  355,
           "Msg":  "Расслабиться и наслаждаться полётом",
@@ -722,8 +704,8 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "exit",
-          "Pos.x":  740,
-          "Pos.y":  450,
+          "Pos.x":  1370,
+          "Pos.y":  390,
           "Parent":  -1,
           "#":  407,
           "Msg":  "",
@@ -1076,7 +1058,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  810,
-          "Pos.y":  370,
+          "Pos.y":  420,
           "Parent":  -1,
           "#":  270,
           "Msg":  "Будем искренне рады исполнить ваше желание. Итак, как же именно вы хотите воспользоваться нашим генератором?",
@@ -1115,8 +1097,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  340,
+          "Pos.x":  1550,
+          "Pos.y":  270,
           "Parent":  -1,
           "#":  302,
           "Msg":  "Конечно, <Player>, в конце концов, именно благодаря вам у нас и появилось это замечательное устройство. Мы можем переправить ваш корабль в любую систему в пределах радиуса действия нашего портального генератора (<ShipCustomShipInfoData(cur_ruin,k,1)> пк.).\r\nПопрошу обратить внимание, что в отличие от убогого пиратского поделия, выбирающего доступные системы исходя из малопредсказуемого принципа <clr>квантовой неопределённости<clrEnd>, наши генераторы проходят тщательную настройку и калибровку перед каждым дальним скачком. Вероятность неудачного исхода с последующим расщеплением на атомы составляет ничтожные <clr>0.3%<clrEnd>, которыми на практике можно смело побрезговать. А вы ведь смелый рейнджер, не так ли <Player>?\r\nВот полный список доступных для отправки систем:",
@@ -1125,8 +1107,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1170,
-          "Pos.y":  380,
+          "Pos.x":  1550,
+          "Pos.y":  420,
           "Parent":  -1,
           "#":  306,
           "Msg":  "Не переживайте, <Player>, вас ведь совершенно никто не принуждает это делать. Возвращайтесь в любое время, как появится желание.",
@@ -1165,8 +1147,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1030,
-          "Pos.y":  290,
+          "Pos.x":  1700,
+          "Pos.y":  370,
           "Parent":  -1,
           "#":  318,
           "Msg":  "Очень хорошо, <Player>, и куда же вы хотите нас отправить?\r\n<TextCorr>",
@@ -1175,8 +1157,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1050,
-          "Pos.y":  340,
+          "Pos.x":  1740,
+          "Pos.y":  450,
           "Parent":  -1,
           "#":  321,
           "Msg":  "Хорошо, <Player>, наша станция пока остаётся в системе <StarName(cur_star)>. Сообщите, если вновь измените ваше решение.",
@@ -1195,8 +1177,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1050,
-          "Pos.y":  270,
+          "Pos.x":  1660,
+          "Pos.y":  330,
           "Parent":  -1,
           "#":  327,
           "Msg":  "Простите, <Player>, но покинуть систему в столь напряжённый момент, когда сотни и даже тысячи раненых могут нуждаться в нашей неотложной помощи, мы никак не можем. Это бы противоречило основоположным принципам <clr>медицинской этики<clrEnd>.",
@@ -1235,8 +1217,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  1110,
-          "Pos.y":  310,
+          "Pos.x":  1740,
+          "Pos.y":  260,
           "Parent":  -1,
           "#":  345,
           "Msg":  "Извините, доступных для скачка систем в радиусе действия нашего портального генератора не обнаружено.",
@@ -1245,8 +1227,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  800,
-          "Pos.y":  420,
+          "Pos.x":  1370,
+          "Pos.y":  300,
           "Parent":  -1,
           "#":  354,
           "Msg":  "Приветствуем, рейнджер <Player>. Напоминаем, что в настоящий момент <TextCorr> совершает гиперпространственный скачок до системы <StarName(ShipOrderObj(cur_ruin))>. В целях вашей же безопасности, до завершения скачка все вылеты со станции строго запрещены.\r\nПо расчётам навигаторов, мы выйдем из гиперпространственного пузыря уже через <ShipOrderData1(cur_ruin)> дн., после чего вы сможете совершенно безопасно нас покинуть. До тех же пор, предлагаю вам скоротать время в нашем отсеке для релаксаций или посетить обзорную палубу, откуда открывается совершенно потрясающий вид на гиперпространственные красоты.",
@@ -1385,8 +1367,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  770,
-          "Pos.y":  450,
+          "Pos.x":  1370,
+          "Pos.y":  360,
           "Parent":  -1,
           "#":  406,
           "Msg":  "",
@@ -1421,6 +1403,66 @@
           "#":  441,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "67"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1770,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  469,
+          "Msg":  "Прости, братиш, но мы не нашли ни одной самой завалящей системки, куда могли бы перебросить эту летучую свалку.",
+          "DMsg.Num":  "68"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1580,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  472,
+          "Msg":  "Конечно, <Player> - в конце концов, именно благодаря тебе у нас и появилось это замечательное устройство. Мы можем переправить твой корабль в любую систему в пределах радиуса действия нашего портального генератора (<ShipCustomShipInfoData(cur_ruin,k,1)> пк.).\r\n\r\nВот полный список доступных для отправки систем:",
+          "DMsg.Num":  "69"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1580,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  475,
+          "Msg":  "Конечно, <Player>! Приходи - как надумаешь, ради тебя наши парни расстараются!",
+          "DMsg.Num":  "70"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1400,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  478,
+          "Msg":  "Привет тебе, <Player>. Напоминаю, что в настоящий момент <TextCorr> совершает гиперпространственный скачок до системы <StarName(ShipOrderObj(cur_ruin))>. В целях нашей безопасности - а то ещё влетишь в рубку управления, - до завершения скачка все вылеты со станции строго запрещены.\r\nПо расчётам навигаторов, мы выйдем из гиперпространственного пузыря уже через <ShipOrderData1(cur_ruin)> дн., после чего ты сможете совершенно безопасно нас покинуть. До тех же пор, предлагаю скоротать время в баре за стаканчиком втыкиллы, или же поглазеть в иллюминаторы на гиперпространство.",
+          "DMsg.Num":  "71"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  790,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  481,
+          "Msg":  "О, конечно! Что будем делать с нашим портальным генератором?",
+          "DMsg.Num":  "72"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1080,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  484,
+          "Msg":  "Э-ге... Ну, так дела не делаются, пусть и право на такое у тебя есть! Но учти - в следующий раз придётся тебе всей нашей команде наливать по стакану втыкиллы!",
+          "DMsg.Num":  "73"        
         }      
       ],
       "Dialogs":      
@@ -1532,7 +1574,7 @@
         {
           "Type":  "TDialog",
           "Name":  "ShortJump",
-          "Pos.x":  1170,
+          "Pos.x":  1180,
           "Pos.y":  200,
           "Parent":  -1,
           "#":  276        
@@ -1540,16 +1582,16 @@
         {
           "Type":  "TDialog",
           "Name":  "LongJump",
-          "Pos.x":  1170,
-          "Pos.y":  270,
+          "Pos.x":  1700,
+          "Pos.y":  190,
           "Parent":  -1,
           "#":  277        
         },
         {
           "Type":  "TDialog",
           "Name":  "PlayerJump",
-          "Pos.x":  1170,
-          "Pos.y":  340,
+          "Pos.x":  1580,
+          "Pos.y":  190,
           "Parent":  -1,
           "#":  278        
         },
@@ -1588,8 +1630,8 @@
         {
           "Type":  "TDialog",
           "Name":  "Hyper",
-          "Pos.x":  750,
-          "Pos.y":  400,
+          "Pos.x":  1370,
+          "Pos.y":  210,
           "Parent":  -1,
           "#":  352        
         },
@@ -1699,7 +1741,6 @@
           "Pos.y":  -170,
           "Parent":  -1,
           "#":  5,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -1713,7 +1754,6 @@
           "Pos.y":  20,
           "Parent":  6,
           "#":  12,
-          "Total.Lines":  149,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1875,7 +1915,6 @@
           "Pos.y":  20,
           "Parent":  23,
           "#":  24,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1897,7 +1936,6 @@
           "Pos.y":  20,
           "Parent":  28,
           "#":  31,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1919,7 +1957,6 @@
           "Pos.y":  20,
           "Parent":  34,
           "#":  35,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1942,7 +1979,6 @@
           "Pos.y":  20,
           "Parent":  33,
           "#":  36,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1964,7 +2000,6 @@
           "Pos.y":  20,
           "Parent":  39,
           "#":  40,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1978,7 +2013,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  56,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2004,7 +2038,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  76,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2022,7 +2055,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  77,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2040,7 +2072,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  78,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2058,7 +2089,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  79,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2076,7 +2106,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  80,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2094,7 +2123,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  81,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2112,7 +2140,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  82,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2130,7 +2157,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  83,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2148,7 +2174,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  84,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2166,7 +2191,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  86,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2189,7 +2213,6 @@
           "Pos.y":  180,
           "Parent":  -1,
           "#":  92,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2211,7 +2234,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  103,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2225,7 +2247,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  104,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2251,7 +2272,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  118,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2265,7 +2285,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  119,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2279,7 +2298,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  120,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2293,7 +2311,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  121,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2307,7 +2324,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  122,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2321,7 +2337,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  141,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2339,7 +2354,6 @@
           "Pos.y":  20,
           "Parent":  27,
           "#":  146,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2361,7 +2375,6 @@
           "Pos.y":  20,
           "Parent":  22,
           "#":  147,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2382,7 +2395,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  153,
-          "Total.Lines":  34,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2429,12 +2441,11 @@
           "Pos.y":  0,
           "Parent":  450,
           "#":  171,
-          "Total.Lines":  93,
           "Code.Type":  "Turn",
           "Code":          
           [
               "//Добавляем опции для установки акриновых улучшений и портального генератора",
-              "if(ruin_str_type == 'WB' || ruin_str_type == 'PlayerMercHQ')",
+              "if(ruin_str_type == 'WB' || ruin_str_type == 'PlayerMercHQ' || ruin_str_type == 'PB' || ruin_str_type == 'CB')",
               "{",
               "    TextCorr2 = '</color>' + \"Что скажешь?\";",
               "    TextCorr3 = '</color>' + \"Остаток покроет твой карман.\";",
@@ -2535,7 +2546,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  188,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2551,7 +2561,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  190,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2575,7 +2584,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  193,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2590,7 +2598,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  198,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2606,7 +2613,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  204,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2622,7 +2628,6 @@
           "Pos.y":  380,
           "Parent":  -1,
           "#":  205,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2640,7 +2645,6 @@
           "Pos.y":  380,
           "Parent":  -1,
           "#":  206,
-          "Total.Lines":  18,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2671,7 +2675,6 @@
           "Pos.y":  480,
           "Parent":  -1,
           "#":  217,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2687,7 +2690,6 @@
           "Pos.y":  70,
           "Parent":  -1,
           "#":  218,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2702,7 +2704,6 @@
           "Pos.y":  210,
           "Parent":  -1,
           "#":  224,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2723,7 +2724,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  238,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2742,7 +2742,6 @@
           "Pos.y":  20,
           "Parent":  239,
           "#":  241,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2760,7 +2759,6 @@
           "Pos.y":  20,
           "Parent":  242,
           "#":  243,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2775,7 +2773,6 @@
           "Pos.y":  20,
           "Parent":  249,
           "#":  250,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2793,7 +2790,6 @@
           "Pos.y":  20,
           "Parent":  251,
           "#":  252,
-          "Total.Lines":  23,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2829,7 +2825,6 @@
           "Pos.y":  20,
           "Parent":  258,
           "#":  267,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2844,7 +2839,6 @@
           "Pos.y":  270,
           "Parent":  -1,
           "#":  269,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2853,7 +2847,8 @@
               "else if(ShipType(cur_ruin) == 'RC')  TextCorr = '</color>' + \"центра рейнджеров <ShipName(cur_ruin)>\";",
               "else if(ShipType(cur_ruin) == 'MC')TextCorr = '</color>' + \"медицинского центра <ShipName(cur_ruin)>\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr = '</color>' + \"бизнес-центра <ShipName(cur_ruin)>\";",
-              "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологического центра <ShipName(cur_ruin)>\";"          
+              "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологического центра <ShipName(cur_ruin)>\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"пиратской базы <ShipName(cur_ruin)>\";"          
           ]        
         },
         {
@@ -2863,7 +2858,6 @@
           "Pos.y":  270,
           "Parent":  -1,
           "#":  271,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2875,10 +2869,9 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  810,
-          "Pos.y":  400,
+          "Pos.y":  450,
           "Parent":  -1,
           "#":  272,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2897,7 +2890,6 @@
           "Pos.y":  20,
           "Parent":  131,
           "#":  273,
-          "Total.Lines":  51,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2961,7 +2953,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  279,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2972,11 +2963,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1010,
-          "Pos.y":  290,
+          "Pos.x":  1700,
+          "Pos.y":  410,
           "Parent":  -1,
           "#":  280,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2997,7 +2987,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  282,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3009,7 +2998,8 @@
               "else if(type == 'RC') TextCorr3 = '</color>'+\"центр рейнджеров <ShipName(cur_ruin)>\";",
               "else if(type == 'MC') TextCorr3 = '</color>'+\"медицинский центр <ShipName(cur_ruin)>\";",
               "else if(type == 'BK') TextCorr3 = '</color>'+\"бизнес-центр <ShipName(cur_ruin)>\";",
-              "else if(type == 'TC') TextCorr3 = '</color>'+\"технологический центр <ShipName(cur_ruin)>\";"          
+              "else if(type == 'TC') TextCorr3 = '</color>'+\"технологический центр <ShipName(cur_ruin)>\";",
+              "else if(type == 'PB') TextCorr3 = '</color>'+\"пиратская база <ShipName(cur_ruin)>\";"          
           ]        
         },
         {
@@ -3019,7 +3009,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  283,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3035,7 +3024,6 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  293,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3050,7 +3038,6 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  294,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3065,7 +3052,6 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  295,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3080,7 +3066,6 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  296,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3095,7 +3080,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  298,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3115,7 +3099,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  299,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3135,7 +3118,6 @@
           "Pos.y":  190,
           "Parent":  -1,
           "#":  301,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3145,11 +3127,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1110,
-          "Pos.y":  340,
+          "Pos.x":  1510,
+          "Pos.y":  270,
           "Parent":  -1,
           "#":  303,
-          "Total.Lines":  21,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3179,11 +3160,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1170,
-          "Pos.y":  360,
+          "Pos.x":  1550,
+          "Pos.y":  460,
           "Parent":  -1,
           "#":  307,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3201,7 +3181,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  309,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3213,6 +3192,7 @@
               "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
               "",
               "Sound('Sound.PG_Activation');",
               "jumpCheck = 'PlayerJumpReady';",
@@ -3228,7 +3208,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  314,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3249,7 +3228,6 @@
           "Pos.y":  480,
           "Parent":  -1,
           "#":  315,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3268,11 +3246,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1050,
-          "Pos.y":  310,
+          "Pos.x":  1740,
+          "Pos.y":  490,
           "Parent":  -1,
           "#":  322,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3291,7 +3268,6 @@
           "Pos.y":  20,
           "Parent":  323,
           "#":  325,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3303,11 +3279,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1030,
-          "Pos.y":  270,
+          "Pos.x":  1660,
+          "Pos.y":  370,
           "Parent":  -1,
           "#":  329,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3318,11 +3293,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1080,
+          "Pos.x":  1700,
           "Pos.y":  290,
           "Parent":  -1,
           "#":  332,
-          "Total.Lines":  56,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3331,7 +3305,9 @@
               "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"один <color=0,50,200>медицинский центр</color>\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"другой <color=0,50,200>бизнес-центр</color>\";",
               "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"другой <color=0,50,200>технологический центр</color>\";",
-              "if(ShipType(cur_ruin) == 'MC') TextCorr = '</color>' + \"Учтите, что в системы уже <clr>захваченные<clrEnd> противником мы отправиться <clr>не можем<clrEnd>. Однако, в системах ещё только находящихся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным) может находиться большое число раненых, которым требуется срочная медицинская помощь, а такое нам игнорировать никак нельзя.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <TextCorr2>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени.\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"другая <color=0,50,200>пиратская база</color>\";",
+              "if(ShipType(cur_ruin) == 'MC') TextCorr = '</color>' + \"Учтите, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправиться <clr>не можем<clrEnd>. Однако, в системах ещё только находящихся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным) может находиться большое число раненых, которым требуется срочная медицинская помощь, а такое нам игнорировать никак нельзя.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <TextCorr2>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени.\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"Учти, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправляться <clr>не будем<clrEnd>. Однако, в систему, ещё только находящуюся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным), если она принадлежит Клану, мы прыгнем с удовольствием.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <TextCorr2>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Увы, Верховные рассматривают это как чрезмерную растрату общака.\";",
               "else TextCorr = '</color>' + \"Учтите, что в системы <clr>захваченные<clrEnd> противником или находящиеся <clr>под угрозой захвата<clrEnd>, мы отправиться <clr>не можем<clrEnd>. В конце концов, наша станция не является военным объектом и будет принимать участие в боевых действиях лишь в самом крайнем случае.<br>Также мы <clr>не можем<clrEnd> совершить скачок в систему, где уже находится <TextCorr2> или в которой и так имеется <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени.\";",
               "//Формируем список доступных для скачка систем",
               "ArrayClear(tempArr);",
@@ -3344,7 +3320,7 @@
               "    if(StarNearbyStarsDist(cur_star, j) <= ShipCustomShipInfoData(cur_ruin, k, 1))",
               "    {",
               "        j = j + 1;",
-              "        if(StarOwner(tempInt3) != 0)",
+              "        if(StarOwner(tempInt3) == 1)",
               "        {",
               "            tempInt3 = 0;",
               "            continue;",
@@ -3360,7 +3336,12 @@
               "            tempInt3 = 0;",
               "            continue;",
               "        }",
-              "        if(StarBattle(tempInt3) && ShipType(cur_ruin) != 'MC')",
+              "        if(StarBattle(tempInt3) && ShipType(cur_ruin) != 'MC' && ShipType(cur_ruin) != 'PB')",
+              "        {",
+              "            tempInt3 = 0;",
+              "            continue;",
+              "        }",
+              "        if(StarBattle(tempInt3) && StarOwner(tempInt3) != 2 && ShipType(cur_ruin) == 'PB')",
               "        {",
               "            tempInt3 = 0;",
               "            continue;",
@@ -3371,6 +3352,11 @@
               "            continue;",
               "        }",
               "        if(StarRuins(tempInt3) >= 5)",
+              "        {",
+              "            tempInt3 = 0;",
+              "            continue;",
+              "        }",
+              "        if(StarOwner(tempInt3) == 2 && ShipType(cur_ruin) != 'MC' && ShipType(cur_ruin) != 'TC' && ShipType(cur_ruin) != 'PB')",
               "        {",
               "            tempInt3 = 0;",
               "            continue;",
@@ -3391,7 +3377,6 @@
           "Pos.y":  390,
           "Parent":  -1,
           "#":  334,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3405,6 +3390,7 @@
               "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
               "",
               "if(!PlayerBridge()) Sound('Sound.PG_Activation');",
               "",
@@ -3428,7 +3414,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  338,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3447,7 +3432,6 @@
           "Pos.y":  470,
           "Parent":  -1,
           "#":  341,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3470,11 +3454,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  310,
+          "Pos.x":  1740,
+          "Pos.y":  230,
           "Parent":  -1,
           "#":  346,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3496,7 +3479,6 @@
           "Pos.y":  20,
           "Parent":  405,
           "#":  350,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3515,11 +3497,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  750,
-          "Pos.y":  420,
+          "Pos.x":  1370,
+          "Pos.y":  240,
           "Parent":  -1,
           "#":  353,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3529,17 +3510,17 @@
               "else if(ShipType(cur_ruin) == 'RC') TextCorr = '</color>' + \"центр рейнджеров <ShipName(cur_ruin)>\";",
               "else if(ShipType(cur_ruin) == 'MC') TextCorr =  '</color>' + \"медицинский центр <ShipName(cur_ruin)>\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\";",
-              "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологический центр <ShipName(cur_ruin)>\";"          
+              "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологический центр <ShipName(cur_ruin)>\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"пиратская база <ShipName(cur_ruin)>\";"          
           ]        
         },
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  770,
-          "Pos.y":  430,
+          "Pos.x":  1370,
+          "Pos.y":  420,
           "Parent":  -1,
           "#":  356,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3553,7 +3534,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  360,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3572,7 +3552,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  362,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3586,7 +3565,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  370,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3608,7 +3586,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  373,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3626,7 +3603,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  376,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3648,7 +3624,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  381,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3668,7 +3643,6 @@
           "Pos.y":  20,
           "Parent":  403,
           "#":  387,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3690,7 +3664,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  389,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3719,7 +3692,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  390,
-          "Total.Lines":  28,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3738,6 +3710,7 @@
               "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"Медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"Бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
               "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"Технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+              "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"Пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
               "",
               "if(!PlayerBridge()) Sound('Sound.PG_Activation');",
               "jumpCheck = 'ShortJumpReady';",
@@ -3760,17 +3733,28 @@
           "Pos.y":  310,
           "Parent":  -1,
           "#":  395,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(RelationToRanger(cur_ruin,Player())>=10 && ShipGetBad(cur_ruin)!=Player())",
-              "{",
-              "    TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло раздражённое лицо управляющего:<br><br><Player>, вам должно быть прекрасно известно о нашем к вам отношении. Если нет, то вот подсказка: оно отстоит довольно далеко от понятия слова ~quot~радушие~quot~.<br>Будьте так любезны, освободить канал связи, и в дальнейшем воздержаться от повторных вызовов до тех пор, пока вы не измените своё поведение в лучшую сторону.\";",
+              "if(ShipType(cur_ruin) != 'PB') {",
+              "    if(RelationToRanger(cur_ruin,Player())>=10 && ShipGetBad(cur_ruin)!=Player())",
+              "    {",
+              "        TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло раздражённое лицо управляющего:<br><br><Player>, вам должно быть прекрасно известно о нашем к вам отношении. Если нет, то вот подсказка: оно отстоит довольно далеко от понятия слова ~quot~радушие~quot~.<br>Будьте так любезны, освободить канал связи, и в дальнейшем воздержаться от повторных вызовов до тех пор, пока вы не измените своё поведение в лучшую сторону.\";",
+              "    }",
+              "    else",
+              "    {",
+              "        TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло суровое лицо управляющего:<br><br>Мы не желаем иметь никаких дел с бандитами и террористами, <Player>! Не приближайтесь к нашей станции и на пушечный выстрел, иначе будете быстро и безапелляционно уничтожены!\";",
+              "    }",
               "}",
-              "else",
-              "{",
-              "    TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло суровое лицо управляющего:<br><br>Мы не желаем иметь никаких дел с бандитами и террористами, <Player>! Не приближайтесь к нашей станции и на пушечный выстрел, иначе будете быстро и безапелляционно уничтожены!\";",
+              "else {",
+              "    if(RelationToRanger(cur_ruin,Player())>=10 && ShipGetBad(cur_ruin)!=Player())",
+              "    {",
+              "        TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло раздражённое лицо управляющего:<br><br><Player>, тебе должно быть прекрасно известно о нашем к вам отношении. Если нет, то вот подсказка: оно отстоит довольно далеко от понятия слова ~quot~радушие~quot~.<br>Будь так любезен, отключись и больше не пробуй вызывать базу на связь. Мы не будем балякать с теми, кто преступает понятия братства!\";",
+              "    }",
+              "    else",
+              "    {",
+              "        TextCorr2='</color>'+\"Ваш коммуникатор подключился к каналу связи <TextCorr>, и вскоре на мониторе возникло суровое лицо управляющего:<br><br>Мы не желаем иметь никаких дел с преступившими наши понятия, <Player>! Подлети поближе, чтобы мы смогли расквитаться с тобой!\";",
+              "    }",
               "}"          
           ]        
         },
@@ -3781,7 +3765,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  410,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3803,7 +3786,6 @@
           "Pos.y":  390,
           "Parent":  -1,
           "#":  411,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3825,7 +3807,6 @@
           "Pos.y":  20,
           "Parent":  347,
           "#":  412,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3844,7 +3825,6 @@
           "Pos.y":  20,
           "Parent":  386,
           "#":  413,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3866,7 +3846,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  416,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3880,7 +3859,6 @@
           "Pos.y":  340,
           "Parent":  -1,
           "#":  417,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3895,7 +3873,6 @@
           "Pos.y":  20,
           "Parent":  42,
           "#":  436,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3910,7 +3887,6 @@
           "Pos.y":  20,
           "Parent":  438,
           "#":  437,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3936,7 +3912,6 @@
           "Pos.y":  20,
           "Parent":  439,
           "#":  440,
-          "Total.Lines":  373,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4322,7 +4297,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  442,
-          "Total.Lines":  32,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -4367,7 +4341,6 @@
           "Pos.y":  20,
           "Parent":  441,
           "#":  445,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4382,7 +4355,6 @@
           "Pos.y":  20,
           "Parent":  43,
           "#":  449,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4396,7 +4368,6 @@
           "Pos.y":  20,
           "Parent":  20,
           "#":  461,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4421,7 +4392,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  464,
-          "Total.Lines":  145,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -4460,10 +4430,10 @@
               "                //Добавляем стандартные диалоги для улучшения базы",
               "                if(RuinsAllowModernization(cur_ruin))",
               "                {",
-              "                    if(ruin_str_type != 'PB' && ruin_str_type != 'CB')",
-              "                    {",
+              "                    //if(ruin_str_type != 'PB' && ruin_str_type != 'CB')",
+              "                    //{",
               "                        AddDialogInject('ruinhull_upgrade_talk', '', \"Я желаю улучшить корпус вашей станции\", 0);",
-              "                    }",
+              "                    //}",
               "",
               "                    AddDialogInject('ruin_modernization_negation', '', \"Я прекращаю спонсирование этой станции\", 0);",
               "                }",
@@ -4579,7 +4549,6 @@
           "Pos.y":  -230,
           "Parent":  -1,
           "#":  466,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4658,7 +4627,6 @@
           "Pos.y":  20,
           "Parent":  461,
           "#":  19,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4672,11 +4640,10 @@
           "Pos.y":  30,
           "Parent":  171,
           "#":  20,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "HullSpecial(cur_ruin) == -1"          
+              "HullSpecial(cur_ruin) == -1 && ruin_str_type != 'PB' && ruin_str_type != 'CB'"          
           ]        
         },
         {
@@ -4686,7 +4653,6 @@
           "Pos.y":  20,
           "Parent":  461,
           "#":  26,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4700,7 +4666,6 @@
           "Pos.y":  20,
           "Parent":  461,
           "#":  32,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4714,7 +4679,6 @@
           "Pos.y":  20,
           "Parent":  12,
           "#":  42,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4728,7 +4692,6 @@
           "Pos.y":  20,
           "Parent":  12,
           "#":  43,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4742,7 +4705,6 @@
           "Pos.y":  110,
           "Parent":  -1,
           "#":  54,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4756,7 +4718,6 @@
           "Pos.y":  30,
           "Parent":  -1,
           "#":  55,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4770,7 +4731,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  57,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4784,7 +4744,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  58,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4798,7 +4757,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  59,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4812,7 +4770,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  60,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4826,7 +4783,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  61,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4840,7 +4796,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  62,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4854,7 +4809,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  63,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4868,7 +4822,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  64,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4882,7 +4835,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  65,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4896,7 +4848,6 @@
           "Pos.y":  90,
           "Parent":  -1,
           "#":  87,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4910,7 +4861,6 @@
           "Pos.y":  70,
           "Parent":  -1,
           "#":  88,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4924,7 +4874,6 @@
           "Pos.y":  30,
           "Parent":  -1,
           "#":  94,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4938,7 +4887,6 @@
           "Pos.y":  30,
           "Parent":  -1,
           "#":  95,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4952,7 +4900,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  111,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4966,7 +4913,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  112,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4980,7 +4926,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  113,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4994,7 +4939,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  114,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5008,7 +4952,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  115,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5022,7 +4965,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  116,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5036,7 +4978,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  124,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5050,7 +4991,6 @@
           "Pos.y":  640,
           "Parent":  -1,
           "#":  125,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5064,7 +5004,6 @@
           "Pos.y":  640,
           "Parent":  -1,
           "#":  126,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5078,7 +5017,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  128,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5092,7 +5030,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  129,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5106,7 +5043,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  133,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5120,7 +5056,6 @@
           "Pos.y":  700,
           "Parent":  -1,
           "#":  134,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5134,7 +5069,6 @@
           "Pos.y":  700,
           "Parent":  -1,
           "#":  136,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5148,7 +5082,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  137,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5162,7 +5095,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  139,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5176,7 +5108,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  143,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5190,7 +5121,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  144,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5204,7 +5134,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  148,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5218,7 +5147,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  149,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5232,7 +5160,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  160,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5246,7 +5173,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  161,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5266,7 +5192,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  182,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5280,7 +5205,6 @@
           "Pos.y":  60,
           "Parent":  -1,
           "#":  183,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5294,7 +5218,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  185,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5308,7 +5231,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  186,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5322,7 +5244,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  194,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5336,7 +5257,6 @@
           "Pos.y":  380,
           "Parent":  -1,
           "#":  196,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5350,7 +5270,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  197,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5364,7 +5283,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  202,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5378,7 +5296,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  203,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5392,7 +5309,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  208,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5406,7 +5322,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  209,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5420,7 +5335,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  210,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5434,7 +5348,6 @@
           "Pos.y":  150,
           "Parent":  -1,
           "#":  213,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5448,7 +5361,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  214,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5462,7 +5374,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  215,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5476,7 +5387,6 @@
           "Pos.y":  30,
           "Parent":  -1,
           "#":  219,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5490,7 +5400,6 @@
           "Pos.y":  150,
           "Parent":  -1,
           "#":  226,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5504,7 +5413,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  227,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5518,7 +5426,6 @@
           "Pos.y":  440,
           "Parent":  -1,
           "#":  229,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5532,7 +5439,6 @@
           "Pos.y":  440,
           "Parent":  -1,
           "#":  230,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5546,7 +5452,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  232,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5560,7 +5465,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  233,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5574,7 +5478,6 @@
           "Pos.y":  40,
           "Parent":  244,
           "#":  240,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5588,7 +5491,6 @@
           "Pos.y":  20,
           "Parent":  420,
           "#":  244,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5602,7 +5504,6 @@
           "Pos.y":  20,
           "Parent":  420,
           "#":  248,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5616,7 +5517,6 @@
           "Pos.y":  20,
           "Parent":  248,
           "#":  258,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5630,7 +5530,6 @@
           "Pos.y":  20,
           "Parent":  248,
           "#":  259,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5644,7 +5543,6 @@
           "Pos.y":  20,
           "Parent":  259,
           "#":  260,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5658,7 +5556,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  274,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5672,7 +5569,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  289,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5686,7 +5582,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  290,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5700,7 +5595,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  291,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5714,7 +5608,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  292,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5724,11 +5617,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  360,
+          "Pos.x":  1550,
+          "Pos.y":  310,
           "Parent":  -1,
           "#":  305,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5738,11 +5630,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1030,
-          "Pos.y":  310,
+          "Pos.x":  1740,
+          "Pos.y":  370,
           "Parent":  -1,
           "#":  319,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5756,7 +5647,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  323,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5767,11 +5657,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  290,
+          "Pos.x":  1700,
+          "Pos.y":  230,
           "Parent":  -1,
           "#":  326,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5781,11 +5670,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1140,
-          "Pos.y":  270,
+          "Pos.x":  1660,
+          "Pos.y":  230,
           "Parent":  -1,
           "#":  328,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5795,11 +5683,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1080,
-          "Pos.y":  270,
+          "Pos.x":  1660,
+          "Pos.y":  290,
           "Parent":  -1,
           "#":  330,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5809,11 +5696,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1110,
-          "Pos.y":  280,
+          "Pos.x":  1680,
+          "Pos.y":  260,
           "Parent":  -1,
           "#":  331,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5823,11 +5709,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1050,
-          "Pos.y":  290,
+          "Pos.x":  1700,
+          "Pos.y":  330,
           "Parent":  -1,
           "#":  343,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5837,11 +5722,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1080,
-          "Pos.y":  310,
+          "Pos.x":  1740,
+          "Pos.y":  330,
           "Parent":  -1,
           "#":  344,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5855,7 +5739,6 @@
           "Pos.y":  20,
           "Parent":  339,
           "#":  348,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5869,7 +5752,6 @@
           "Pos.y":  20,
           "Parent":  339,
           "#":  349,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5883,7 +5765,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  358,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5897,7 +5778,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  363,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5911,7 +5791,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  364,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5925,7 +5804,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  365,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5939,7 +5817,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  366,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5953,7 +5830,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  367,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5967,7 +5843,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  374,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5981,7 +5856,6 @@
           "Pos.y":  20,
           "Parent":  382,
           "#":  383,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5995,7 +5869,6 @@
           "Pos.y":  20,
           "Parent":  382,
           "#":  384,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6009,7 +5882,6 @@
           "Pos.y":  270,
           "Parent":  -1,
           "#":  391,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6023,7 +5895,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  392,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6037,7 +5908,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  396,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6051,7 +5921,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  397,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6065,7 +5934,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  400,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6079,7 +5947,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  401,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6093,7 +5960,6 @@
           "Pos.y":  30,
           "Parent":  171,
           "#":  420,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6109,7 +5975,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  421,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6123,7 +5988,6 @@
           "Pos.y":  150,
           "Parent":  -1,
           "#":  422,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6137,7 +6001,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  425,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6151,7 +6014,6 @@
           "Pos.y":  190,
           "Parent":  -1,
           "#":  426,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6165,7 +6027,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  427,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6179,7 +6040,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  428,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6193,7 +6053,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  429,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6207,7 +6066,6 @@
           "Pos.y":  550,
           "Parent":  -1,
           "#":  430,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6221,7 +6079,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  431,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6235,7 +6092,6 @@
           "Pos.y":  290,
           "Parent":  -1,
           "#":  432,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6249,7 +6105,6 @@
           "Pos.y":  40,
           "Parent":  164,
           "#":  438,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6263,7 +6118,6 @@
           "Pos.y":  20,
           "Parent":  440,
           "#":  446,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6277,7 +6131,6 @@
           "Pos.y":  40,
           "Parent":  451,
           "#":  450,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6291,7 +6144,6 @@
           "Pos.y":  40,
           "Parent":  164,
           "#":  451,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6305,7 +6157,6 @@
           "Pos.y":  40,
           "Parent":  164,
           "#":  452,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6319,7 +6170,6 @@
           "Pos.y":  20,
           "Parent":  132,
           "#":  454,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6333,7 +6183,6 @@
           "Pos.y":  20,
           "Parent":  132,
           "#":  455,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6347,7 +6196,6 @@
           "Pos.y":  30,
           "Parent":  457,
           "#":  456,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6361,7 +6209,6 @@
           "Pos.y":  0,
           "Parent":  456,
           "#":  458,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6375,7 +6222,6 @@
           "Pos.y":  0,
           "Parent":  242,
           "#":  459,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6389,7 +6235,6 @@
           "Pos.y":  30,
           "Parent":  262,
           "#":  460,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6403,11 +6248,166 @@
           "Pos.y":  40,
           "Parent":  242,
           "#":  462,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1740,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  467,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1770,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  468,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1580,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  470,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1550,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  471,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1550,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  473,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1580,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  474,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1370,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  476,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1400,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  477,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  810,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  479,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  790,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  480,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1060,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  482,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)!='PB'"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1080,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  483,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipType(cur_ruin)=='PB'"          
           ]        
         }      
       ],
@@ -8819,13 +8819,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  278,
-      "End":  302,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  302,
       "End":  303,
       "Nom":  0,
@@ -8842,13 +8835,6 @@
       "Type":  "TGraphLink",
       "Begin":  305,
       "End":  304,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  304,
-      "End":  306,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -8877,13 +8863,6 @@
       "Type":  "TGraphLink",
       "Begin":  310,
       "End":  312,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  312,
-      "End":  313,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -9127,13 +9106,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  344,
-      "End":  345,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  345,
       "End":  346,
       "Nom":  0,
@@ -9171,13 +9143,6 @@
       "Type":  "TGraphLink",
       "Begin":  352,
       "End":  353,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  353,
-      "End":  354,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -9472,13 +9437,6 @@
       "Type":  "TGraphLink",
       "Begin":  271,
       "End":  400,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  400,
-      "End":  270,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -10118,6 +10076,223 @@
       "End":  12,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  344,
+      "End":  467,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  344,
+      "End":  468,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  467,
+      "End":  345,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  468,
+      "End":  469,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  469,
+      "End":  346,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  472,
+      "End":  305,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  472,
+      "End":  303,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  278,
+      "End":  471,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  471,
+      "End":  302,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  278,
+      "End":  470,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  470,
+      "End":  472,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  304,
+      "End":  474,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  304,
+      "End":  473,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  473,
+      "End":  306,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  474,
+      "End":  475,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  475,
+      "End":  307,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  353,
+      "End":  476,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  353,
+      "End":  477,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  477,
+      "End":  478,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  476,
+      "End":  354,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  478,
+      "End":  355,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  271,
+      "End":  479,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  400,
+      "End":  480,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  480,
+      "End":  481,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  479,
+      "End":  270,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  481,
+      "End":  272,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  312,
+      "End":  483,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  312,
+      "End":  482,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  482,
+      "End":  313,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  483,
+      "End":  484,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  484,
+      "End":  314,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -10172,8 +10347,8 @@
       "Type":  "TGraphRectText",
       "Rect.Left":  722,
       "Rect.Top":  169,
-      "Rect.Right":  1265,
-      "Rect.Bottom":  572,
+      "Rect.Right":  1811,
+      "Rect.Bottom":  735,
       "FStyle":  1,
       "FColor":  10710818,
       "BStyle":  0,
@@ -10192,7 +10367,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  245,
+  "BlockPar.EC.Total.Strings":  258,
   "BlockPar.EC":  
   [
     {
@@ -10222,10 +10397,6 @@
     {
       "#":  "1007",
       "String":  "Извините, но наш генератор находится в процессе зарядки. Следующий скачок можно будет совершить не ранее, чем через <0> дн."    
-    },
-    {
-      "#":  "1010",
-      "String":  "Учтите, что в системы уже <clr>захваченные<clrEnd> противником мы отправиться <clr>не можем<clrEnd>. Однако, в системах ещё только находящихся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным) может находиться большое число раненых, которым требуется срочная медицинская помощь, а такое нам игнорировать никак нельзя.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <0>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени."    
     },
     {
       "#":  "1011",
@@ -10350,6 +10521,62 @@
     {
       "#":  "1049",
       "String":  "Ваш коммуникатор подключился к каналу связи военной базы <0>, и вскоре на мониторе возникло напряжённое лицо капитана:<br><color=1,1,1></color><br>Какого чёрта тебе нужно, <Player>?! Ты что не видишь, что мы ведём бой? А ну быстро вырубай чёртову связь и помоги уничтожить врага!"    
+    },
+    {
+      "#":  "1050",
+      "String":  "Учти, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправляться <clr>не будем<clrEnd>. Однако, в систему, ещё только находящуюся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным), если она принадлежит Клану, мы прыгнем с удовольствием.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <0>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Увы, Верховные рассматривают это как чрезмерную растрату общака."    
+    },
+    {
+      "#":  "1051",
+      "String":  "Учтите, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправиться <clr>не можем<clrEnd>. Однако, в системах ещё только находящихся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным) может находиться большое число раненых, которым требуется срочная медицинская помощь, а такое нам игнорировать никак нельзя.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <0>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени."    
+    },
+    {
+      "#":  "1052",
+      "String":  "другая <color=0,50,200>пиратская база</color>"    
+    },
+    {
+      "#":  "1053",
+      "String":  "пиратская база <0>"    
+    },
+    {
+      "#":  "1054",
+      "String":  "Пиратская база <0>"    
+    },
+    {
+      "#":  "1055",
+      "String":  "Ваш коммуникатор подключился к каналу связи <0>, и вскоре на мониторе возникло суровое лицо управляющего:<br><br>Мы не желаем иметь никаких дел с преступившими наши понятия, <Player>! Подлети поближе, чтобы мы смогли расквитаться с тобой!"    
+    },
+    {
+      "#":  "1056",
+      "String":  "Ваш коммуникатор подключился к каналу связи <0>, и вскоре на мониторе возникло раздражённое лицо управляющего:<br><br><Player>, тебе должно быть прекрасно известно о нашем к вам отношении. Если нет, то вот подсказка: оно отстоит довольно далеко от понятия слова \"радушие\".<br>Будь так любезен, отключись и больше не пробуй вызывать базу на связь. Мы не будем балякать с теми, кто преступает понятия братства!"    
+    },
+    {
+      "#":  "1057",
+      "String":  "пиратской базы <0>"    
+    },
+    {
+      "#":  "1058",
+      "String":  "Прости, братиш, но мы не нашли ни одной самой завалящей системки, куда могли бы перебросить эту летучую свалку."    
+    },
+    {
+      "#":  "1059",
+      "String":  "Конечно, <Player> - в конце концов, именно благодаря тебе у нас и появилось это замечательное устройство. Мы можем переправить твой корабль в любую систему в пределах радиуса действия нашего портального генератора (<0> пк.).<br><br>Вот полный список доступных для отправки систем:"    
+    },
+    {
+      "#":  "1060",
+      "String":  "Конечно, <Player>! Приходи - как надумаешь, ради тебя наши парни расстараются!"    
+    },
+    {
+      "#":  "1061",
+      "String":  "Привет тебе, <Player>. Напоминаю, что в настоящий момент <0> совершает гиперпространственный скачок до системы <1>. В целях нашей безопасности - а то ещё влетишь в рубку управления, - до завершения скачка все вылеты со станции строго запрещены.<br>По расчётам навигаторов, мы выйдем из гиперпространственного пузыря уже через <2> дн., после чего ты сможете совершенно безопасно нас покинуть. До тех же пор, предлагаю скоротать время в баре за стаканчиком втыкиллы, или же поглазеть в иллюминаторы на гиперпространство."    
+    },
+    {
+      "#":  "1062",
+      "String":  "О, конечно! Что будем делать с нашим портальным генератором?"    
+    },
+    {
+      "#":  "1063",
+      "String":  "Э-ге... Ну, так дела не делаются, пусть и право на такое у тебя есть! Но учти - в следующий раз придётся тебе всей нашей команде наливать по стакану втыкиллы!"    
     },
     {
       "#":  "164",

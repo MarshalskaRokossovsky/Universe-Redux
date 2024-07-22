@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -44,
-  "ViewPos.y":  -610,
+  "ViewPos.x":  38,
+  "ViewPos.y":  -895,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
-  "GraphPoint.Count":  686,
-  "GraphLink.Count":  423,
-  "GraphRectText.Count":  23,
-  "Variables.Count":  238,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  3,
-  "Groups.Count":  3,
-  "Places.Count":  0,
-  "Items.Count":  3,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  57,
-  "DialogMessages.Count":  65,
-  "DialogAnswers.Count":  78,
-  "Operations.Count":  135,
-  "Statements.Count":  101,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -808,6 +790,36 @@
           "#":  646,
           "Msg":  "Спонсировать фонд",
           "AMsg.Num":  "77"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  990,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  688,
+          "Msg":  "",
+          "AMsg.Num":  "78"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  960,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  693,
+          "Msg":  "Спонсировать постройку",
+          "AMsg.Num":  "79"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  990,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  694,
+          "Msg":  "Спонсировать постройку",
+          "AMsg.Num":  "80"        
         }      
       ],
       "DialogMessages":      
@@ -1461,6 +1473,16 @@
           "#":  635,
           "Msg":  "",
           "DMsg.Num":  "64"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  687,
+          "Msg":  "Мы - малокские инженеры, настоящие профессионалы касательно всего, что связано с техникой. Раньше мы работали в сети технологических центров, оказывая технические услуги любой сложности, начиная от обычного апгрейда старого оборудования, и заканчивая сложнейшими операциями по улучшению брони корпусов. Уверены, что даже если вы ни разу не пользовались нашими услугами, то точно слышали о существовании данной организации. К сожалению, война сильно ударила по сети технологических центров. Теперь их вовсе не осталось в Галактике, а ведь мы могли бы заниматься первоклассным обслуживанием любых военных и гражданских кораблей, а также оборудования, вооружения, и даже зондов. Галактический Совет не выделяет нам достаточно денег на открытие своей станции в системе <StarName(GalaxyStar(bld_system_Id_TC-1))>, а оборудование стоит слишком дорого, мы просто не сможем оплатить все из своего кармана. Поэтому нам остается только надеяться на помощь со стороны. Если наша кампания по сбору средств увенчается успехом, мы сможем принимать клиентов не только со всего сектора <Name(StarToCon(GalaxyStar(bld_system_Id_TC-1)))>, но и из соседних. Планируемая дата открытия: <GameDateTxtByTurn(bld_day_TC+1)>.\r\nСобранные средства: <credits_now_TC>/<bld_cost_TC> cr.",
+          "DMsg.Num":  "65"        
         }      
       ],
       "Dialogs":      
@@ -1920,6 +1942,14 @@
           "Pos.y":  50,
           "Parent":  -1,
           "#":  681        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "ProjTC",
+          "Pos.x":  930,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  686        
         }      
       ],
       "Groups":      
@@ -2010,6 +2040,35 @@
           "StrengthMin":  "0",
           "StrengthMax":  "0",
           "Ruins":  ""        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupTC",
+          "Pos.x":  460,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  708,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  0,
+          "CntShipMax":  0,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
         }      
       ],
       "Items":      
@@ -2069,7 +2128,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  5,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -2083,7 +2141,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  7,
-          "Total.Lines":  1261,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -2107,6 +2164,7 @@
               "if(CapitalShipStats(ShipItems(Player(), 0)) == 0) CapitalShipStats(ShipItems(Player(), 0), 3);",
               "else if(CapitalShipStats(ShipItems(Player(), 0)) == 2) CapitalShipStats(ShipItems(Player(), 0), 3);",
               "ShipAddCustomShipInfo(Player(), 'PlayerBridgeHV_infos', 'NoShow');",
+              "ShipAddCustomShipInfo(Player(), 'PlayerBridge_ContrabandWin', 'NoShow');",
               "",
               "//Выставляем самые первые планеты для слэпстартера",
               "for(i = 0; i < GalaxyStars(); i = i + 1)",
@@ -2900,6 +2958,71 @@
               "    result = ship;",
               "}",
               "",
+              "//Функция проверки условий для появления ТЦ. Возвращает Id системы для постройки или 0, если нет подходящей системы.",
+              "function SelectSystemTC() {",
+              "    int i, j, k;",
+              "    dword con, system, ruins_count, systems_count;",
+              "    for(i=0; i<GalaxySectors(); i=i+1) {",
+              "        con=GalaxySectors(i);",
+              "        if(con==StarToCon(PlanetToStar(PlanetPirateClan()))) continue;",
+              "        ruins_count=0;",
+              "        systems_count=0;",
+              "        for(j=0; j<ConStars(con); j=j+1) {",
+              "            system=ConStar(con, j);",
+              "            if(!StarOwner(system) || StarOwner(system)==2) systems_count=systems_count+1;",
+              "            if(StarRuins(system)) {",
+              "                ruins_count=ruins_count+StarRuins(system);",
+              "                if(StarRuins(system)>=3) continue;",
+              "            }",
+              "        }",
+              "        if(ruins_count<systems_count) { //Проверка на кол-во станций в секторе",
+              "            for(k=0; k<ConStars(con); k=k+1) {",
+              "                system=ConStar(con, k);",
+              "                if(StarOwner(system)==1) continue; //Пропуск доминаторов",
+              "                if(StarCustomFaction(system)!='') continue; //Пропуск кастомов",
+              "                if(StarBattle(system)) continue; //Пропуск оспариваемых систем",
+              "                if(StarRuins(system)>=3) continue; //Меньше 3 баз в системе",
+              "                ArrayAdd(bld_TC_array, Id(system));",
+              "            }",
+              "        }",
+              "    }",
+              "    if(ArrayDim(bld_TC_array)<=1) system=0;",
+              "    else system=bld_TC_array[Rnd(1,ArrayDim(bld_TC_array)-1)];",
+              "    ArrayClear(bld_TC_array);",
+              "    result=system;",
+              "}",
+              "//Функция создания нового ТЦ (запускается из тернкода)",
+              "function BuyTC(dword system) {",
+              "    dword station, planet; int tint;",
+              "    str station_name, temp_news;",
+              "    station = BuildCustomRuins(system, 'TC', 5); //Если подключён мод ExpBasesAutoUpgrade, то накидываем на ТЦ инфошку для автоулучшения",
+              "    if(BlockExist('ShipInfo.AddInfo.CustomInfos.ExpBasesAutoUpgradeInfo')) ShipAddCustomShipInfo(station, 'ExpBasesAutoUpgradeInfo', 'NoShow');",
+              "    Chameleon(station, 'Ruins.TC'); //Меняем шкурку на ТЦ",
+              "    //Меняем овнера и расу базы на малоков, заодно, на всякий случай, обновляя лицо капитана",
+              "    ShipOwner(station, 0);",
+              "    ShipPilotRace(station, 0);",
+              "    ShipFace(station, -1);",
+              "    station_name = CT('RuinName.TC.'+Rnd(1,CT('RuinName.TC.Name_count'))); //Выбираем имя для нового ТЦ",
+              "    SetName(station, station_name); //Устанавливаем имя новому ТЦ",
+              "    GlobalVarTcCount=GlobalVarTcCount+1; //Глобальный счётчик числа ТЦ в Галактике",
+              "    planet=FindPlanet(system, 'NotNone', 0, 0); //Ищем обитаемую планету, с нее полетит ТЦ",
+              "    ShipJoin(GroupTC, station);",
+              "    Coord_X_TC=CoordX(station); //Запоминаем координаты",
+              "    Coord_Y_TC=CoordY(station);",
+              "    TransferShip(station, planet);",
+              "    CoordX(station, planet); //Меняем координаты, т.к. они сами не поменяются",
+              "    CoordY(station, planet);",
+              "    //Выводим сообщение о постройке нового ТЦ, если у игрока есть карта этого сектора",
+              "    if(SectorVisible(StarToCon(system))) {",
+              "        tint = Rnd(0, 3);",
+              "        if(!tint) temp_news = \"Давно мечтали проапгрейдить своё старое ржавое корыто, доставшееся в наследство от прабабушки? Спешите в систему <StarName(system)>, где наши высококвалифицированные специалисты с удовольствием превратят его в настоящую ласточку! Технологический центр <station_name> - лучшие расценки в секторе <Name(StarToCon(system))>!\";",
+              "        else if(tint == 1) temp_news = \"Внимание всем пилотам! В системе <StarName(system)> сектора <Name(StarToCon(system))> главный архитектор только что перерезал красную ленточку нового технологического центра <station_name>! Информация на ваших галактических картах уже обновлена.\";",
+              "        else if(tint == 2) temp_news = \"Сегодня открылся новый технологический центр <station_name> в системе <StarName(system)> сектора <Name(StarToCon(system))>. Настоятельно рекомендуем всем небезразличным пилотам в кратчайшие сроки пройти техосмотр своих звездолетов.\";",
+              "        else temp_news = \"Мы рады сообщить вам, что наша сеть технологических центров расширяется! Новая сервисная станция <station_name> ждет пилотов в системе <StarName(system)> сектора <Name(StarToCon(system))>! Не пролетайте мимо! Только у нас вы найдете лучшие технологические услуги во всей Галактике!\";",
+              "        NewsAdd(temp_news);",
+              "        AddPlanetNews(temp_news);",
+              "    }",
+              "}",
               "function UpdateKillShipsStatistic(int type, int sub_type, str str_type, str name, str full_name, int owner, int in_hyper)",
               "{",
               "    //Доминаторы и клисане",
@@ -3357,7 +3480,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  9,
-          "Total.Lines":  73,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3443,7 +3565,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  11,
-          "Total.Lines":  441,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3482,15 +3603,15 @@
               "                temp_int=temp_int+1;",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4)) //Минимальное число названий предметов для переноса в следующее уведомление - 5",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
-              "                    else NewsAdd(\"Продолжение перечня доставки:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
+              "                    else CustomEther('MailGood',0,'',\"Продолжение перечня доставки:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
-              "            else NewsAdd(\"Продолжение перечня доставки:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
+              "            else CustomEther('MailGood',0,'',\"Продолжение перечня доставки:<br><transfer_list>\");",
               "            cargo_in_way=0;",
               "        }",
               "        //Прибытие груза на станцию доставки",
@@ -3508,15 +3629,15 @@
               "",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
-              "                    else NewsAdd(\"Продолжение перечня доставки:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
+              "                    else CustomEther('MailGood',0,'',\"Продолжение перечня доставки:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
-              "            else NewsAdd(\"Продолжение перечня доставки:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно доставлен на станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Благодарим вас за выбор <color=255,240,100>LGL</color>.<br>Перечень доставленного груза:<br><transfer_list>\");",
+              "            else CustomEther('MailGood',0,'',\"Продолжение перечня доставки:<br><transfer_list>\");",
               "            cargo_in_way=0;",
               "        }",
               "        //Прибытие груза на планету отправки",
@@ -3533,15 +3654,15 @@
               "                temp_int=temp_int+1;",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "                    else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "                    else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "            else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную планету <Name(point_1)> в систему <StarName(GalaxyStar(point_2_star))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "            else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+(TransDelCost/2));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3560,15 +3681,15 @@
               "                temp_int=temp_int+1;",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "                    else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "                    else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "            else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на отправную станцию <Name(point_1)> в систему <StarName(ShipStar(point_1))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "            else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+(TransDelCost/2));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3591,15 +3712,15 @@
               "            temp_int=temp_int+1;",
               "            if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "            {",
-              "                if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                transfer_list='';",
               "                temp_int_2 = temp_int_2 + 1;",
               "                temp_int=0;",
               "            }",
               "        }",
-              "        if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "        else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "        if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "        else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "        if(temp_int_3==1 || temp_int_3==5)ShipMoney(Player(),ShipMoney(Player())+TransDelCost+(TransDelCost/4));",
               "        else ShipMoney(Player(),ShipMoney(Player())+TransDelCost);",
               "        Sound('Sound.Sell');",
@@ -3625,9 +3746,9 @@
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
               "                    //Весь ранее сформированный список сразу попадает в первую новость",
-              "                    if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
+              "                    if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
               "                    //А весь последующий - в дополнительный(е)",
-              "                    else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                    else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                    //Обнуление списка и установка маркера (temp_int_2), чтобы все дальнейшие предметы попадали в дополнительную(е) новость",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
@@ -3636,9 +3757,9 @@
               "                }",
               "            }",
               "            //Если ранее новость не выводилась, то эта станет первой и последней",
-              "            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
+              "            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
               "            //А если уже выводилась(ись), то последней станет эта",
-              "            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+TransDelCost-(TransDelCost/4));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3659,15 +3780,15 @@
               "                temp_int=temp_int+1;",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                    else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                    else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+TransDelCost-(TransDelCost/4));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3688,15 +3809,15 @@
               "                temp_int=temp_int+1;",
               "                if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                {",
-              "                    if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                    else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                    if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                    else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                    transfer_list='';",
               "                    temp_int_2 = temp_int_2 + 1;",
               "                    temp_int=0;",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+TransDelCost-(TransDelCost/4));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3719,15 +3840,15 @@
               "            temp_int=temp_int+1;",
               "            if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "            {",
-              "                if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на вашу родную планету <Name(point_1)> в систему <StarName(PlanetToStar(IdToPlanet(point_3)))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br><color=0,50,200></color><br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "                else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "                if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на вашу родную планету <Name(point_1)> в систему <StarName(PlanetToStar(IdToPlanet(point_3)))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br><color=0,50,200></color><br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "                else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "                transfer_list='';",
               "                temp_int_2 = temp_int_2 + 1;",
               "                temp_int=0;",
               "            }",
               "        }",
-              "        if(temp_int_2 == 1) NewsAdd(\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на вашу родную планету <Name(point_1)> в систему <StarName(PlanetToStar(IdToPlanet(point_3)))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br><color=0,50,200></color><br>Перечень возвращённого груза:<br><transfer_list>\");",
-              "        else NewsAdd(\"Продолжение перечня возврата:<br><transfer_list>\");",
+              "        if(temp_int_2 == 1) CustomEther('MailGood',0,'',\"Сообщение от службы доставки:<br>Уважаемый клиент! Ваш груз был успешно возвращён на вашу родную планету <Name(point_1)> в систему <StarName(PlanetToStar(IdToPlanet(point_3)))>. Приносим извинения за доставленные неудобства и, в соответствии с условиями нарушения перевозки не по вине <color=255,240,100>LGL</color>, переводим на ваш счёт стандартную неустойку в размере <color=255,240,100>50%</color> от полной стоимости доставки.<br><color=0,50,200></color><br>Перечень возвращённого груза:<br><transfer_list>\");",
+              "        else CustomEther('MailGood',0,'',\"Продолжение перечня возврата:<br><transfer_list>\");",
               "        ShipMoney(Player(),ShipMoney(Player())+(TransDelCost/2));",
               "        Sound('Sound.Sell');",
               "        cargo_in_way=0;",
@@ -3753,8 +3874,8 @@
               "                    temp_int=temp_int+1;",
               "                    if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                    {",
-              "                        if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                        else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                        if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                        else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                        transfer_list='';",
               "                        temp_int_2 = temp_int_2 + 1;",
               "                        temp_int=0;",
@@ -3771,8 +3892,8 @@
               "                        temp_int=temp_int+1;",
               "                        if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                        {",
-              "                            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                            transfer_list='';",
               "                            temp_int_2 = temp_int_2 + 1;",
               "                            temp_int=0;",
@@ -3786,8 +3907,8 @@
               "                        temp_int=temp_int+1;",
               "                        if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                        {",
-              "                            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                            transfer_list='';",
               "                            temp_int_2 = temp_int_2 + 1;",
               "                            temp_int=0;",
@@ -3795,8 +3916,8 @@
               "                    }",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+(TransDelCost/2));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3819,8 +3940,8 @@
               "                    temp_int=temp_int+1;",
               "                    if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                    {",
-              "                        if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                        else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                        if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                        else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                        transfer_list='';",
               "                        temp_int_2 = temp_int_2 + 1;",
               "                        temp_int=0;",
@@ -3837,8 +3958,8 @@
               "                        temp_int=temp_int+1;",
               "                        if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                        {",
-              "                            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                            transfer_list='';",
               "                            temp_int_2 = temp_int_2 + 1;",
               "                            temp_int=0;",
@@ -3852,8 +3973,8 @@
               "                        temp_int=temp_int+1;",
               "                        if(temp_int > 35 && cargo_in_way > (35 * temp_int_2 + 4))",
               "                        {",
-              "                            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "                            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "                            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "                            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "                            transfer_list='';",
               "                            temp_int_2 = temp_int_2 + 1;",
               "                            temp_int=0;",
@@ -3861,8 +3982,8 @@
               "                    }",
               "                }",
               "            }",
-              "            if(temp_int_2 == 1) NewsAdd(temp_str_4+transfer_list);",
-              "            else NewsAdd(\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
+              "            if(temp_int_2 == 1) CustomEther('MailFailed',0,'',temp_str_4+transfer_list);",
+              "            else CustomEther('MailFailed',0,'',\"Продолжение перечня утерянного груза:<br><transfer_list>\");",
               "            ShipMoney(Player(),ShipMoney(Player())+(TransDelCost/2));",
               "            Sound('Sound.Sell');",
               "            cargo_in_way=0;",
@@ -3897,7 +4018,6 @@
           "Pos.y":  -420,
           "Parent":  -1,
           "#":  27,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3921,7 +4041,6 @@
           "Pos.y":  -420,
           "Parent":  -1,
           "#":  28,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3945,7 +4064,6 @@
           "Pos.y":  -420,
           "Parent":  -1,
           "#":  29,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3969,7 +4087,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  41,
-          "Total.Lines":  142,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4124,7 +4241,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  47,
-          "Total.Lines":  182,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4148,25 +4264,25 @@
               "//Считаем проваленные правительственные задания",
               "//SendLetter",
               "SendQuestsFailed = 0;",
-              "for(i = 0; i <= 86; i = i + 1)",
+              "for(i = 0; i <= CT('Quests.SendLetter.Count'); i = i + 1)",
               "{",
               "    if(QuestsStatusByNom(0, i) == 4) SendQuestsFailed = SendQuestsFailed + 1;",
               "}",
               "//KillShip",
               "KillQuestsFailed = 0;",
-              "for(i = 0; i <= 64; i = i + 1)",
+              "for(i = 0; i <= CT('Quests.KillShip.Count'); i = i + 1)",
               "{",
               "    if(QuestsStatusByNom(1, i) == 4) KillQuestsFailed = KillQuestsFailed + 1;",
               "}",
               "//DefSystem",
               "DefSysQuestsFailed = 0;",
-              "for(i = 0; i <= 55; i = i + 1)",
+              "for(i = 0; i <= CT('Quests.DefSystem.Count'); i = i + 1)",
               "{",
               "    if(QuestsStatusByNom(3, i) == 4) DefSysQuestsFailed = DefSysQuestsFailed + 1;",
               "}",
               "//DefShip",
               "DefShipQuestsFailed = 0;",
-              "for(i = 0; i <= 58; i = i + 1)",
+              "for(i = 0; i <= CT('Quests.DefShip.Count'); i = i + 1)",
               "{",
               "    if(QuestsStatusByNom(4, i) == 4) DefShipQuestsFailed = DefShipQuestsFailed + 1;",
               "}",
@@ -4242,7 +4358,7 @@
               "",
               "LArmWarStat = '';",
               "LArmPirStat = '';",
-              "if(CurrentMods('Evolution\\EvoArmada'))",
+              "if(CurrentMods('Evolution\\EvoArmada') || CurrentMods('Evolution\\EvoDreadnought'))",
               "{",
               "    LArmWarStat = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.DetailedShipsStatsDreadnoughts'), '<KillDreadnoughts'+'>', temp_str + GWarDreadStat);",
               "    LArmPirStat = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.DetailedShipsStatsPirateCapitals'),",
@@ -4268,6 +4384,8 @@
               "{",
               "    L_OtherStStat = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.TotalStatsKillOtherStations'), '<KillOtherStations'+'>', temp_str + (G_DomBStat + G_KBStat + G_MercCStat));",
               "}",
+              "",
+              "contra = Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.ContrabandCnt'),'mon',ShipCustomShipInfoData(Player(),'PlayerBridge_ContrabandWin',1));",
               "",
               "//Сборка готового текста в диалоговом окне",
               "tstr1 = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.TotalStats'),",
@@ -4298,6 +4416,7 @@
               "                     '<GoodsBoughtTotal'+'>', temp_str + money_buys,",
               "                     '<GoodsSellTotal'+'>', temp_str + money_sale,",
               "                     '<CurrentTradeLoss'+'>', temp_str + ShipStatistic(Player(), 9),",
+              "                     '<CurrentTradeLoss'+'>', temp_str + contra,",
               "                     '<EquipmentBoughtTotal'+'>', temp_str + money_equip,",
               "                     '<RacketeeringReceived'+'>', temp_str + money_take,",
               "                     '<RansomsReceived'+'>', temp_str + money_take_peace,",
@@ -4319,7 +4438,6 @@
           "Pos.y":  20,
           "Parent":  648,
           "#":  59,
-          "Total.Lines":  763,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4590,7 +4708,7 @@
               "    {",
               "        if(StarOwner(PlanetToStar(IdToPlanet(point_1_id)))==1 || StarCustomFaction(PlanetToStar(IdToPlanet(point_1_id)))!='')",
               "        {",
-              "            NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! С сожалением сообщаем, что отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> была захвачена противником. В соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "            CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! С сожалением сообщаем, что отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> была захвачена противником. В соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "            CargoLostChanceCalcHome();",
               "            point_3=Id(GetShipHomePlanet(Player()));",
               "            LTargetType=5;",
@@ -4613,7 +4731,7 @@
               "                temp_str='</color>'+\", ранее находившаяся в системе <StarName(GalaxyStar(point_1_star))>,\";",
               "                temp_str_2='</color>'+\"неожиданно её покинула\";",
               "            }",
-              "            NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! С сожалением сообщаем, что отправная станция <point_1_name><temp_str> <temp_str_2>. В соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "            CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! С сожалением сообщаем, что отправная станция <point_1_name><temp_str> <temp_str_2>. В соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "            CargoLostChanceCalcHome();",
               "            point_3=Id(GetShipHomePlanet(Player()));",
               "            LTargetType=5;",
@@ -4629,7 +4747,7 @@
               "                //Груз был в пути на планету доставки, но её захватили, а груз перенаправили на планету отправки",
               "                if(StarOwner(PlanetToStar(IdToPlanet(point_1_id)))!=1 && StarCustomFaction(PlanetToStar(IdToPlanet(point_1_id)))=='')",
               "                {",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. Ваш груз будет возвращён обратно на планету <PlanetName(IdToPlanet(point_1_id))> в систему <StarName(PlanetToStar(IdToPlanet(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. Ваш груз будет возвращён обратно на планету <PlanetName(IdToPlanet(point_1_id))> в систему <StarName(PlanetToStar(IdToPlanet(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
               "                    CargoLostChanceCalc();",
               "                    point_3=point_1_id;",
               "                    LTargetType=3;",
@@ -4637,7 +4755,7 @@
               "                //Груз был в пути на планету доставки, но её захватили, а планета отправки уже была захвачена (груз перенаправлен в родную систему)",
               "                else",
               "                {",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. К сожалению, отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> также захвачена врагом, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. К сожалению, отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> также захвачена врагом, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "                    CargoLostChanceCalcHome();",
               "                    point_3=Id(GetShipHomePlanet(Player()));",
               "                    LTargetType=5;",
@@ -4651,7 +4769,7 @@
               "                //Груз был в пути на планету доставки, но её захватили, а груз перенаправили на станцию отправки",
               "                if(!LStationSExist)",
               "                {",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. Ваш груз будет возвращён обратно на станцию <ShipName(IdToShip(point_1_id))> в систему <StarName(ShipStar(IdToShip(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. Ваш груз будет возвращён обратно на станцию <ShipName(IdToShip(point_1_id))> в систему <StarName(ShipStar(IdToShip(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
               "                    CargoLostChanceCalc();",
               "                    point_3=point_1_id;",
               "                    LTargetType=4;",
@@ -4671,7 +4789,7 @@
               "                        temp_str='</color>'+\", ранее находившаяся в системе <StarName(GalaxyStar(point_1_star))>,\";",
               "                        temp_str_2='</color>'+\"неожиданно её покинула\";",
               "                    }",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. К сожалению, отправная станция <point_1_name><temp_str> <temp_str_2>, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Система <StarName(PlanetToStar(IdToPlanet(point_3)))> была захвачена противником. Доставка груза на планету <PlanetName(IdToPlanet(point_3))> более невозможна. К сожалению, отправная станция <point_1_name><temp_str> <temp_str_2>, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "                    CargoLostChanceCalcHome();",
               "                    point_3=Id(GetShipHomePlanet(Player()));",
               "                    LTargetType=5;",
@@ -4701,7 +4819,7 @@
               "                        temp_str='</color>'+\", ранее находившаяся в системе <point_3_star_name>,\";",
               "                        temp_str_2='</color>'+\"неожиданно её покинула\";",
               "                    }",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. Ваш груз будет возвращён обратно на планету <PlanetName(IdToPlanet(point_1_id))> в систему <StarName(PlanetToStar(IdToPlanet(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. Ваш груз будет возвращён обратно на планету <PlanetName(IdToPlanet(point_1_id))> в систему <StarName(PlanetToStar(IdToPlanet(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
               "                    CargoLostChanceCalc();",
               "                    point_3=point_1_id;",
               "                    LTargetType=3;",
@@ -4721,7 +4839,7 @@
               "                        temp_str='</color>'+\", ранее находившаяся в системе <point_3_star_name>,\";",
               "                        temp_str_2='</color>'+\"неожиданно её покинула\";",
               "                    }",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. К сожалению, отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> также захвачена врагом, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. К сожалению, отправная планета <PlanetName(IdToPlanet(point_1_id))> в системе <StarName(PlanetToStar(IdToPlanet(point_1_id)))> также захвачена врагом, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "                    CargoLostChanceCalcHome();",
               "                    point_3=Id(GetShipHomePlanet(Player()));",
               "                    LTargetType=5;",
@@ -4747,7 +4865,7 @@
               "                        temp_str='</color>'+\", ранее находившаяся в системе <point_3_star_name>,\";",
               "                        temp_str_2='</color>'+\"неожиданно её покинула\";",
               "                    }",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. Ваш груз будет возвращён обратно на станцию <ShipName(IdToShip(point_1_id))> в систему <StarName(ShipStar(IdToShip(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. Ваш груз будет возвращён обратно на станцию <ShipName(IdToShip(point_1_id))> в систему <StarName(ShipStar(IdToShip(point_1_id)))>.<br>Приносим извинения за доставленные неудобства.\");",
               "                    CargoLostChanceCalc();",
               "                    point_3=point_1_id;",
               "                    LTargetType=4;",
@@ -4781,7 +4899,7 @@
               "                        if(LStationDExist==1)temp_str_4='</color>'+\"неожиданно её покинула\";",
               "                        else temp_str_4='</color>'+\"также пропала\";",
               "                    }",
-              "                    NewsAdd(\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. К сожалению, отправная станция <point_1_name><temp_str_3> <temp_str_4>, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
+              "                    CustomEther('MailFailed',0,'',\"<color=255,240,100>Сообщение от службы доставки LGL:</color><br>Уважаемый клиент! Станция <point_3_name><temp_str> <temp_str_2> и доставка груза на неё более невозможна. К сожалению, отправная станция <point_1_name><temp_str_3> <temp_str_4>, поэтому, в соответствии с протоколом внештатных ситуаций, ваш груз будет перенаправлен в вашу родную систему <StarName(PlanetToStar(GetShipHomePlanet(Player())))> на планету <PlanetName(GetShipHomePlanet(Player()))>.<br>Обратите внимание, что доставка груза в вашу родную систему может занять дополнительное время.\");",
               "                    CargoLostChanceCalcHome();",
               "                    point_3=Id(GetShipHomePlanet(Player()));",
               "                    LTargetType=5;",
@@ -4816,7 +4934,7 @@
               "        {",
               "            temp_dword=GetItemFromVault('saved_by_miracle_'+j);",
               "            AddItemToStorage(GetShipHomePlanet(Player()),temp_dword);",
-              "            NewsAdd(\"На складах недавно освобождённой планеты <PlanetName(GetShipHomePlanet(Player()))> обнаружился ваш пропавший груз, перевозку которого вы однажды заказали в <color=255,240,100>LGL</color>. По-видимому, тот отчаянный пилот сумел не просто добраться до поверхности живым, но при этом ещё и сохранить вверенное ему имущество. Бывают же чудеса!\");",
+              "            CustomEther('MailGood',0,'',\"На складах недавно освобождённой планеты <PlanetName(GetShipHomePlanet(Player()))> обнаружился ваш пропавший груз, перевозку которого вы однажды заказали в <color=255,240,100>LGL</color>. По-видимому, тот отчаянный пилот сумел не просто добраться до поверхности живым, но при этом ещё и сохранить вверенное ему имущество. Бывают же чудеса!\");",
               "        }",
               "        saved_items=0;",
               "    }",
@@ -5095,7 +5213,6 @@
           "Pos.y":  -250,
           "Parent":  -1,
           "#":  83,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5116,7 +5233,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  84,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5137,7 +5253,6 @@
           "Pos.y":  20,
           "Parent":  59,
           "#":  91,
-          "Total.Lines":  229,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5369,6 +5484,58 @@
               "    bld_planet_chsn_2 = 0;",
               "    credits_now_2 = 0;",
               "    wait_day_2 = CurTurn() + Rnd(5, 20);",
+              "}",
+              "",
+              "//Создаем проект ТЦ",
+              "if(!bld_TC_chsn && bld_system_Id_TC) {",
+              "    repay_TC=0;//Обнуляем сумму возврата в случае не набора проектом требуемой суммы",
+              "    temp_int=Rnd(1,ArrayDim(bld_ship_planet_list)-1);",
+              "    bld_TC_chsn=1;//Проверочная переменная, что сбор коалиционных донатов начался",
+              "    bld_cost_TC=GTL*GalaxyDiffLevels()*800+Rnd(GalaxyMoney(2,2),GalaxyMoney(4,4));//Устанавливаем общую стоимость реализации проекта",
+              "    bld_day_TC=CurTurn()+Rnd(45,60);//Устанавливаем общее время сбора донатов (от 45 до 60 дней)",
+              "    temp_int_7=GalaxyDiffLevels();//Задаём общий размер всех пассивных взносов, которые поступят на проект",
+              "    if(temp_int_7<=125) dif_koef_3=bld_cost_TC-round(0.35*bld_cost_TC)+round((0.01*Rnd(0,15))*bld_cost_TC);",
+              "    else if(temp_int_7>125 && temp_int_7<=250) dif_koef_3=bld_cost_TC-round(0.45*bld_cost_TC)+round((0.01*Rnd(0,15))*bld_cost_TC);",
+              "    else dif_koef_3=bld_cost_TC-round(0.60*bld_cost_TC)+round((0.01*Rnd(0,15))*bld_cost_TC);",
+              "    temp_int_3=bld_cost_TC-CurTurn();",
+              "    add_cr_day_TC=dif_koef/temp_int_3;//Задаём размер ежедневных пассивных взносов на проект ТЦ",
+              "}",
+              "//Идёт пассивный набор донатов на постройку ТЦ",
+              "if(bld_day_TC!=0 && bld_day_TC>CurTurn() && credits_now_TC<dif_koef_3) {",
+              "    credits_now_TC=credits_now_TC+add_cr_day_TC;",
+              "}",
+              "//Проверка на захват системы, в которой будет построен ТЦ",
+              "if(bld_day_TC>CurTurn() && bld_system_Id_TC) {",
+              "    temp_dword=GalaxyStar(bld_system_Id_TC-1);",
+              "    if(StarOwner(temp_dword) && StarOwner(temp_dword)!=2) {",
+              "        bld_day_TC=CurTurn()-10;",
+              "        if(repay_TC>=100) {",
+              "            temp_int=round(0.90*repay_TC);",
+              "            Ether('mp_Galaxy','',\"Система <StarName(temp_dword)> захвачена противником, сбор средств для постройки нового технологического центра прекращён. Ваша компенсация <temp_int> cr.\");",
+              "            ShipMoney(Player(),ShipMoney(Player())+temp_int);",
+              "            Sound('Sound.Buy');",
+              "        }",
+              "        bld_system_Id_TC=0;",
+              "        bld_TC_chsn=0;",
+              "        credits_now_TC=0;",
+              "        wait_day_3=CurTurn()+Rnd(5,20);",
+              "    }",
+              "}",
+              "//Спавним ТЦ или выдаём сообщение о нехватке денег (если игрок вносил платеж)",
+              "if(bld_day_TC<=CurTurn() && bld_system_Id_TC) {",
+              "    if(credits_now_TC>=bld_cost_TC) {",
+              "        BuyTC(GalaxyStar(bld_system_Id_TC-1));",
+              "    }",
+              "    if(credits_now_TC<bld_cost_TC && repay_TC>=100) {",
+              "        temp_int=round(0.90*repay_TC);",
+              "        Ether('mp_Galaxy',CurTurn(),\"Постройка нового технологического центра отменяется, в связи с нехваткой кредитов для закупки необходимого оборудования. Ваша компенсация <temp_int> cr.\");",
+              "        ShipMoney(Player(),ShipMoney(Player())+temp_int);",
+              "        Sound('Sound.Sell');",
+              "    }",
+              "    bld_system_Id_TC=0;",
+              "    bld_TC_chsn=0;",
+              "    credits_now_TC=0;",
+              "    wait_day_3=CurTurn()+Rnd(5,20);",
               "}"          
           ]        
         },
@@ -5379,7 +5546,6 @@
           "Pos.y":  -340,
           "Parent":  -1,
           "#":  98,
-          "Total.Lines":  37,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5429,7 +5595,6 @@
           "Pos.y":  -210,
           "Parent":  -1,
           "#":  121,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5445,7 +5610,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  129,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5463,7 +5627,6 @@
           "Pos.y":  -320,
           "Parent":  -1,
           "#":  131,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5487,7 +5650,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  141,
-          "Total.Lines":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5532,7 +5694,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  142,
-          "Total.Lines":  66,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5611,7 +5772,6 @@
           "Pos.y":  -400,
           "Parent":  -1,
           "#":  144,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5627,7 +5787,6 @@
           "Pos.y":  -550,
           "Parent":  -1,
           "#":  146,
-          "Total.Lines":  27,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5667,7 +5826,6 @@
           "Pos.y":  -550,
           "Parent":  -1,
           "#":  147,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5686,7 +5844,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  148,
-          "Total.Lines":  135,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5834,7 +5991,6 @@
           "Pos.y":  -530,
           "Parent":  -1,
           "#":  150,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5863,7 +6019,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  151,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5893,7 +6048,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  153,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5907,7 +6061,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  155,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5937,7 +6090,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  158,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5962,7 +6114,6 @@
           "Pos.y":  -400,
           "Parent":  -1,
           "#":  160,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5989,7 +6140,6 @@
           "Pos.y":  -400,
           "Parent":  -1,
           "#":  162,
-          "Total.Lines":  28,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6030,7 +6180,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  163,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6053,7 +6202,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  165,
-          "Total.Lines":  18,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6084,7 +6232,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  167,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6112,7 +6259,6 @@
           "Pos.y":  -480,
           "Parent":  -1,
           "#":  172,
-          "Total.Lines":  74,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6199,7 +6345,6 @@
           "Pos.y":  -170,
           "Parent":  -1,
           "#":  175,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6214,7 +6359,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  177,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6228,7 +6372,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  179,
-          "Total.Lines":  7,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -6248,7 +6391,6 @@
           "Pos.y":  -60,
           "Parent":  -1,
           "#":  181,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6264,7 +6406,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  183,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6278,7 +6419,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  185,
-          "Total.Lines":  39,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -6330,7 +6470,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  186,
-          "Total.Lines":  33,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6376,7 +6515,6 @@
           "Pos.y":  -160,
           "Parent":  -1,
           "#":  200,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6390,7 +6528,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  201,
-          "Total.Lines":  36,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -6439,7 +6576,6 @@
           "Pos.y":  -210,
           "Parent":  -1,
           "#":  203,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6455,7 +6591,6 @@
           "Pos.y":  -40,
           "Parent":  -1,
           "#":  210,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6469,7 +6604,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  212,
-          "Total.Lines":  37,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -6508,6 +6642,16 @@
               "    AddDialogInject('','',\"Проект Viva la revolucion! (недоступен)\",15);",
               "    AddDialogBlock(\"Проект Viva la revolucion! (недоступен)\",1);",
               "}",
+              "//Постройка ТЦ, если их нет в Галактике",
+              "if(InitExpTC) {",
+              "    if(bld_system_Id_TC && wait_day_3<=CurTurn()) {",
+              "        AddDialogInject('ProjTC','',\"Проект Техносила\",20);",
+              "    }",
+              "    if(wait_day_3>CurTurn()) {",
+              "        AddDialogInject('','',\"Проект Техносила(block)\",20);",
+              "        AddDialogBlock(\"Проект Техносила(block)\",1);",
+              "    }",
+              "}",
               "AddDialogInject('Galanet','',\"Покинуть сайт\",-1);",
               "AddDialogBlock(\"Покинуть сайт\",0);"          
           ]        
@@ -6519,7 +6663,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  226,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6533,7 +6676,6 @@
           "Pos.y":  -480,
           "Parent":  -1,
           "#":  238,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6559,7 +6701,6 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  248,
-          "Total.Lines":  19,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6591,7 +6732,6 @@
           "Pos.y":  -500,
           "Parent":  -1,
           "#":  250,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6615,7 +6755,6 @@
           "Pos.y":  -480,
           "Parent":  -1,
           "#":  299,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6633,7 +6772,6 @@
           "Pos.y":  -500,
           "Parent":  -1,
           "#":  308,
-          "Total.Lines":  21,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6667,7 +6805,6 @@
           "Pos.y":  -440,
           "Parent":  -1,
           "#":  310,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6683,7 +6820,6 @@
           "Pos.y":  -440,
           "Parent":  -1,
           "#":  314,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6706,7 +6842,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  319,
-          "Total.Lines":  66,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6785,7 +6920,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  322,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6805,7 +6939,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  323,
-          "Total.Lines":  297,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7115,7 +7248,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  324,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7145,7 +7277,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  327,
-          "Total.Lines":  51,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7209,7 +7340,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  330,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7225,7 +7355,6 @@
           "Pos.y":  -360,
           "Parent":  -1,
           "#":  338,
-          "Total.Lines":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7270,7 +7399,6 @@
           "Pos.y":  -360,
           "Parent":  -1,
           "#":  340,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7284,7 +7412,6 @@
           "Pos.y":  -330,
           "Parent":  -1,
           "#":  343,
-          "Total.Lines":  55,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7352,7 +7479,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  344,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7380,7 +7506,6 @@
           "Pos.y":  -230,
           "Parent":  -1,
           "#":  357,
-          "Total.Lines":  23,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7416,7 +7541,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  358,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7446,7 +7570,6 @@
           "Pos.y":  -260,
           "Parent":  -1,
           "#":  359,
-          "Total.Lines":  38,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7497,7 +7620,6 @@
           "Pos.y":  -230,
           "Parent":  -1,
           "#":  360,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7516,7 +7638,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  364,
-          "Total.Lines":  41,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7570,7 +7691,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  365,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7607,7 +7727,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  366,
-          "Total.Lines":  77,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7697,7 +7816,6 @@
           "Pos.y":  -20,
           "Parent":  378,
           "#":  380,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7722,7 +7840,6 @@
           "Pos.y":  -20,
           "Parent":  377,
           "#":  381,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7747,7 +7864,6 @@
           "Pos.y":  -20,
           "Parent":  379,
           "#":  382,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7772,7 +7888,6 @@
           "Pos.y":  -370,
           "Parent":  -1,
           "#":  388,
-          "Total.Lines":  287,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8072,7 +8187,6 @@
           "Pos.y":  -330,
           "Parent":  -1,
           "#":  389,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8090,7 +8204,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  392,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8118,7 +8231,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  419,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8132,7 +8244,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  424,
-          "Total.Lines":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8177,7 +8288,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  425,
-          "Total.Lines":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8222,7 +8332,6 @@
           "Pos.y":  -470,
           "Parent":  -1,
           "#":  426,
-          "Total.Lines":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8267,7 +8376,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  431,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8281,7 +8389,6 @@
           "Pos.y":  -470,
           "Parent":  -1,
           "#":  432,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8295,7 +8402,6 @@
           "Pos.y":  -470,
           "Parent":  -1,
           "#":  434,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8312,7 +8418,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  450,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8328,7 +8433,6 @@
           "Pos.y":  -450,
           "Parent":  -1,
           "#":  454,
-          "Total.Lines":  5,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8346,7 +8450,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  456,
-          "Total.Lines":  31,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8390,7 +8493,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  460,
-          "Total.Lines":  27,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8430,7 +8532,6 @@
           "Pos.y":  -340,
           "Parent":  -1,
           "#":  462,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8458,7 +8559,6 @@
           "Pos.y":  -340,
           "Parent":  -1,
           "#":  465,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8480,7 +8580,6 @@
           "Pos.y":  -380,
           "Parent":  -1,
           "#":  470,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8502,7 +8601,6 @@
           "Pos.y":  -360,
           "Parent":  -1,
           "#":  472,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8524,7 +8622,6 @@
           "Pos.y":  -290,
           "Parent":  -1,
           "#":  474,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8538,7 +8635,6 @@
           "Pos.y":  -290,
           "Parent":  -1,
           "#":  477,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8554,7 +8650,6 @@
           "Pos.y":  -260,
           "Parent":  -1,
           "#":  479,
-          "Total.Lines":  124,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8691,7 +8786,6 @@
           "Pos.y":  -260,
           "Parent":  -1,
           "#":  482,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8714,7 +8808,6 @@
           "Pos.y":  -290,
           "Parent":  -1,
           "#":  489,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8728,7 +8821,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  490,
-          "Total.Lines":  19,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8750,6 +8842,11 @@
               "if(CurTurn() == 301) {",
               "    Tips(19);",
               "    Tips(20);",
+              "}",
+              "//Выбор системы для постройки ТЦ, определение стоимости",
+              "if(InitExpTC) {",
+              "    if(!GlobalVarTcCount && !bld_system_Id_TC) bld_system_Id_TC=SelectSystemTC();",
+              "//    if(bld_system_Id_TC) bld_cost_TC=GTL*GalaxyDiffLevels()*800+Rnd(GalaxyMoney(2,2),GalaxyMoney(4,4));",
               "}"          
           ]        
         },
@@ -8760,7 +8857,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  492,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8774,7 +8870,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  496,
-          "Total.Lines":  17,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8804,7 +8899,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  499,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8818,7 +8912,6 @@
           "Pos.y":  -180,
           "Parent":  -1,
           "#":  501,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8835,7 +8928,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  506,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8849,7 +8941,6 @@
           "Pos.y":  -180,
           "Parent":  -1,
           "#":  513,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8863,7 +8954,6 @@
           "Pos.y":  -180,
           "Parent":  -1,
           "#":  514,
-          "Total.Lines":  2,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8878,7 +8968,6 @@
           "Pos.y":  -160,
           "Parent":  -1,
           "#":  516,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8896,7 +8985,6 @@
           "Pos.y":  -190,
           "Parent":  -1,
           "#":  521,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8924,7 +9012,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  523,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8945,7 +9032,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  531,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8974,7 +9060,6 @@
           "Pos.y":  -110,
           "Parent":  -1,
           "#":  544,
-          "Total.Lines":  2,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -8989,7 +9074,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  546,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9015,7 +9099,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  550,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9044,7 +9127,6 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  555,
-          "Total.Lines":  2,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9059,7 +9141,6 @@
           "Pos.y":  -60,
           "Parent":  -1,
           "#":  558,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9085,7 +9166,6 @@
           "Pos.y":  -70,
           "Parent":  -1,
           "#":  562,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9114,7 +9194,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  572,
-          "Total.Lines":  10,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9137,7 +9216,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  587,
-          "Total.Lines":  3,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9153,7 +9231,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  588,
-          "Total.Lines":  2,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9168,7 +9245,6 @@
           "Pos.y":  50,
           "Parent":  -1,
           "#":  590,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9190,7 +9266,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  597,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9211,7 +9286,6 @@
           "Pos.y":  -240,
           "Parent":  -1,
           "#":  602,
-          "Total.Lines":  3,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9227,7 +9301,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  610,
-          "Total.Lines":  2,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9242,7 +9315,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  612,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9259,7 +9331,6 @@
           "Pos.y":  -40,
           "Parent":  -1,
           "#":  637,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9274,7 +9345,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  639,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9289,7 +9359,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  642,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9306,7 +9375,6 @@
           "Pos.y":  -160,
           "Parent":  -1,
           "#":  653,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9320,7 +9388,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  654,
-          "Total.Lines":  6,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9339,7 +9406,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  658,
-          "Total.Lines":  42,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9394,7 +9460,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  671,
-          "Total.Lines":  100,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9507,7 +9572,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  678,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9523,7 +9587,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  679,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9539,7 +9602,6 @@
           "Pos.y":  90,
           "Parent":  -1,
           "#":  682,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9555,7 +9617,6 @@
           "Pos.y":  90,
           "Parent":  -1,
           "#":  683,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9571,7 +9632,6 @@
           "Pos.y":  50,
           "Parent":  -1,
           "#":  685,
-          "Total.Lines":  20,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9593,6 +9653,49 @@
               "                NewsAdd(\"В системе \"+' '+ Name(GalaxyStar(GalaxyEventData(i,2) - 1)) + ' ' +temp_str);",
               "            }",
               "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  692,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_int=NumberBox('Bm.ItemsUseless.2Usl_Elus_s',\"Сколько пожертвовать?\",100,bld_cost_TC-credits_now_TC,ShipMoney(Player()),'Bm.FormCount2.2KindCredits');",
+              "if(temp_int>0)",
+              "{",
+              "    ShipMoney(Player(),ShipMoney(Player())-temp_int);",
+              "    credits_now_TC=credits_now_TC+temp_int;",
+              "    repay_TC=repay_TC+temp_int;",
+              "    Sound('Sound.Sell');",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  460,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  710,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!OrderLock(CurShip)) OrderLock(CurShip,1);",
+              "if(GetShipPlanet(CurShip)) OrderTakeOff(CurShip);",
+              "else if(ShipInNormalSpace(CurShip)) {",
+              "    if(CoordX(CurShip)!=Coord_X_TC && CoordY(CurShip)!=Coord_Y_TC) {",
+              "        OrderMove(CurShip, Coord_X_TC, Coord_Y_TC);",
+              "    }",
+              "    else {",
+              "        if(OrderLock(CurShip)) OrderLock(CurShip,0);",
+              "        ShipOut(CurShip);",
               "    }",
               "}"          
           ]        
@@ -9669,7 +9772,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  30,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9683,7 +9785,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  32,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9697,7 +9798,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  33,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9711,7 +9811,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  34,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9725,7 +9824,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  60,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9739,7 +9837,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  67,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9753,7 +9850,6 @@
           "Pos.y":  -320,
           "Parent":  -1,
           "#":  85,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9767,7 +9863,6 @@
           "Pos.y":  -340,
           "Parent":  -1,
           "#":  86,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9781,7 +9876,6 @@
           "Pos.y":  -320,
           "Parent":  -1,
           "#":  101,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9795,7 +9889,6 @@
           "Pos.y":  -280,
           "Parent":  -1,
           "#":  106,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9809,7 +9902,6 @@
           "Pos.y":  -280,
           "Parent":  -1,
           "#":  107,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9823,7 +9915,6 @@
           "Pos.y":  -280,
           "Parent":  -1,
           "#":  108,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9837,7 +9928,6 @@
           "Pos.y":  -280,
           "Parent":  -1,
           "#":  109,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9851,7 +9941,6 @@
           "Pos.y":  -280,
           "Parent":  -1,
           "#":  110,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9865,7 +9954,6 @@
           "Pos.y":  -320,
           "Parent":  -1,
           "#":  111,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9879,7 +9967,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  178,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9893,7 +9980,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  184,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9907,7 +9993,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  199,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9921,7 +10006,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  211,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -9935,7 +10019,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  232,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9949,7 +10032,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  233,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9963,7 +10045,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  234,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9977,7 +10058,6 @@
           "Pos.y":  -480,
           "Parent":  -1,
           "#":  252,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9991,7 +10071,6 @@
           "Pos.y":  -440,
           "Parent":  -1,
           "#":  253,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10005,7 +10084,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  325,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10019,7 +10097,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  326,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10033,7 +10110,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  346,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10047,7 +10123,6 @@
           "Pos.y":  -250,
           "Parent":  -1,
           "#":  347,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10061,7 +10136,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  368,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10075,7 +10149,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  369,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10089,7 +10162,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  370,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10103,7 +10175,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  371,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10117,7 +10188,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  372,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10131,7 +10201,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  373,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10145,7 +10214,6 @@
           "Pos.y":  -250,
           "Parent":  -1,
           "#":  383,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10159,7 +10227,6 @@
           "Pos.y":  -250,
           "Parent":  -1,
           "#":  391,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10173,7 +10240,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  416,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10187,7 +10253,6 @@
           "Pos.y":  -460,
           "Parent":  -1,
           "#":  417,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10201,7 +10266,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  418,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10215,7 +10279,6 @@
           "Pos.y":  -470,
           "Parent":  -1,
           "#":  421,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10229,7 +10292,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  422,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10243,7 +10305,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  423,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10257,7 +10318,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  427,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10271,7 +10331,6 @@
           "Pos.y":  -450,
           "Parent":  -1,
           "#":  428,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10285,7 +10344,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  429,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10299,7 +10357,6 @@
           "Pos.y":  -470,
           "Parent":  -1,
           "#":  430,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10313,7 +10370,6 @@
           "Pos.y":  -450,
           "Parent":  -1,
           "#":  439,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10327,7 +10383,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  440,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10341,7 +10396,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  441,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10355,7 +10409,6 @@
           "Pos.y":  -510,
           "Parent":  -1,
           "#":  445,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10369,7 +10422,6 @@
           "Pos.y":  -440,
           "Parent":  -1,
           "#":  446,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10383,7 +10435,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  449,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10397,7 +10448,6 @@
           "Pos.y":  -450,
           "Parent":  -1,
           "#":  452,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10411,7 +10461,6 @@
           "Pos.y":  -490,
           "Parent":  -1,
           "#":  453,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10425,7 +10474,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  459,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10439,7 +10487,6 @@
           "Pos.y":  -290,
           "Parent":  -1,
           "#":  487,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10453,7 +10500,6 @@
           "Pos.y":  -290,
           "Parent":  -1,
           "#":  488,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10467,7 +10513,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  491,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10481,7 +10526,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  494,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10495,7 +10539,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  495,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10509,7 +10552,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  497,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10523,7 +10565,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  498,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10537,7 +10578,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  504,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10551,7 +10591,6 @@
           "Pos.y":  -200,
           "Parent":  -1,
           "#":  505,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10565,7 +10604,6 @@
           "Pos.y":  -180,
           "Parent":  -1,
           "#":  512,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10579,7 +10617,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  519,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10596,7 +10633,6 @@
           "Pos.y":  -260,
           "Parent":  -1,
           "#":  520,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10614,7 +10650,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  534,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10628,7 +10663,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  535,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10642,7 +10676,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  542,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10656,7 +10689,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  543,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10670,7 +10702,6 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  554,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10684,7 +10715,6 @@
           "Pos.y":  -110,
           "Parent":  -1,
           "#":  556,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10698,7 +10728,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  565,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10712,7 +10741,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  566,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10726,7 +10754,6 @@
           "Pos.y":  -70,
           "Parent":  -1,
           "#":  569,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10740,7 +10767,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  570,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10754,7 +10780,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  574,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10768,7 +10793,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  576,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10782,7 +10806,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  577,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10796,7 +10819,6 @@
           "Pos.y":  -300,
           "Parent":  -1,
           "#":  578,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10810,7 +10832,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  579,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10824,7 +10845,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  582,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10838,7 +10858,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  583,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10852,7 +10871,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  584,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10866,7 +10884,6 @@
           "Pos.y":  -100,
           "Parent":  -1,
           "#":  585,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10880,7 +10897,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  586,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10894,7 +10910,6 @@
           "Pos.y":  50,
           "Parent":  -1,
           "#":  589,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10908,7 +10923,6 @@
           "Pos.y":  -240,
           "Parent":  -1,
           "#":  599,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10922,7 +10936,6 @@
           "Pos.y":  -240,
           "Parent":  -1,
           "#":  600,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10936,7 +10949,6 @@
           "Pos.y":  -220,
           "Parent":  -1,
           "#":  601,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10950,7 +10962,6 @@
           "Pos.y":  -430,
           "Parent":  -1,
           "#":  609,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10964,7 +10975,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  615,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10978,7 +10988,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  617,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -10992,7 +11001,6 @@
           "Pos.y":  -410,
           "Parent":  -1,
           "#":  618,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -11006,7 +11014,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  640,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -11020,7 +11027,6 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  641,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -11034,7 +11040,6 @@
           "Pos.y":  -320,
           "Parent":  -1,
           "#":  643,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -11048,7 +11053,6 @@
           "Pos.y":  -340,
           "Parent":  -1,
           "#":  645,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -11062,7 +11066,6 @@
           "Pos.y":  20,
           "Parent":  490,
           "#":  648,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -11076,11 +11079,49 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  652,
-          "Total.Lines":  1,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
               "PlayerBridge() == 14"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  689,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  960,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  690,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "credits_now_TC<bld_cost_TC && ShipMoney(Player())>99 && bld_system_Id_TC"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  990,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  691,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "credits_now_TC>=bld_cost_TC || ShipMoney(Player())<=99 || !bld_system_Id_TC"          
           ]        
         }      
       ],
@@ -11129,6 +11170,24 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  622,
+          "Move":  5,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "StateTC",
+          "Pos.x":  460,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  709,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -13759,6 +13818,160 @@
           "#":  684,
           "Var.Type":  "Int",
           "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "InitExpTC",
+          "Pos.x":  880,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  695,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bld_cost_TC",
+          "Pos.x":  880,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  696,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "credits_now_TC",
+          "Pos.x":  880,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  697,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bld_TC_array",
+          "Pos.x":  880,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  698,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bld_system_Id_TC",
+          "Pos.x":  880,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  699,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bld_TC_chsn",
+          "Pos.x":  1040,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  700,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bld_day_TC",
+          "Pos.x":  1040,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  701,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "wait_day_3",
+          "Pos.x":  1040,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  702,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "dif_koef_3",
+          "Pos.x":  1040,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  703,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "add_cr_day_TC",
+          "Pos.x":  1040,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  704,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "repay_TC",
+          "Pos.x":  1180,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  705,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Coord_X_TC",
+          "Pos.x":  1180,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  706,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Coord_Y_TC",
+          "Pos.x":  1180,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  707,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "contra",
+          "Pos.x":  670,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  711,
+          "Var.Type":  "Str",
+          "Init":  "",
           "Global":  false        
         }      
       ]    
@@ -16726,6 +16939,90 @@
       "End":  683,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  686,
+      "End":  687,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  687,
+      "End":  688,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  687,
+      "End":  691,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  687,
+      "End":  690,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  690,
+      "End":  693,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  691,
+      "End":  694,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  693,
+      "End":  692,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  692,
+      "End":  689,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  689,
+      "End":  687,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  708,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  708,
+      "End":  709,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  709,
+      "End":  710,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -16962,8 +17259,8 @@
     },
     {
       "Type":  "TGraphRectText",
-      "Rect.Left":  -297,
-      "Rect.Top":  -506,
+      "Rect.Left":  -405,
+      "Rect.Top":  -529,
       "Rect.Right":  38,
       "Rect.Bottom":  -370,
       "FStyle":  1,
@@ -17258,9 +17555,32 @@
       "fsBold":  false,
       "fsItalic":  false,
       "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  907,
+      "Rect.Top":  -40,
+      "Rect.Right":  1084,
+      "Rect.Bottom":  128,
+      "FStyle":  1,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  369,
+  "BlockPar.EC.Total.Strings":  379,
   "BlockPar.EC":  
   [
     {
@@ -18342,6 +18662,46 @@
     {
       "#":  "1578",
       "String":  "Запретить входящие вызовы"    
+    },
+    {
+      "#":  "1579",
+      "String":  "Мы рады сообщить вам, что наша сеть технологических центров расширяется! Новая сервисная станция <0> ждет пилотов в системе <1> сектора <2>! Не пролетайте мимо! Только у нас вы найдете лучшие технологические услуги во всей Галактике!"    
+    },
+    {
+      "#":  "1580",
+      "String":  "Сегодня открылся новый технологический центр <0> в системе <1> сектора <2>. Настоятельно рекомендуем всем небезразличным пилотам в кратчайшие сроки пройти техосмотр своих звездолетов."    
+    },
+    {
+      "#":  "1581",
+      "String":  "Внимание всем пилотам! В системе <0> сектора <1> главный архитектор только что перерезал красную ленточку нового технологического центра <2>! Информация на ваших галактических картах уже обновлена."    
+    },
+    {
+      "#":  "1582",
+      "String":  "Давно мечтали проапгрейдить своё старое ржавое корыто, доставшееся в наследство от прабабушки? Спешите в систему <0>, где наши высококвалифицированные специалисты с удовольствием превратят его в настоящую ласточку! Технологический центр <1> - лучшие расценки в секторе <2>!"    
+    },
+    {
+      "#":  "1583",
+      "String":  "Постройка нового технологического центра отменяется, в связи с нехваткой кредитов для закупки необходимого оборудования. Ваша компенсация <0> cr."    
+    },
+    {
+      "#":  "1584",
+      "String":  "Система <0> захвачена противником, сбор средств для постройки нового технологического центра прекращён. Ваша компенсация <1> cr."    
+    },
+    {
+      "#":  "1585",
+      "String":  "Проект Техносила(block)"    
+    },
+    {
+      "#":  "1586",
+      "String":  "Проект Техносила"    
+    },
+    {
+      "#":  "1587",
+      "String":  "Мы - малокские инженеры, настоящие профессионалы касательно всего, что связано с техникой. Раньше мы работали в сети технологических центров, оказывая технические услуги любой сложности, начиная от обычного апгрейда старого оборудования, и заканчивая сложнейшими операциями по улучшению брони корпусов. Уверены, что даже если вы ни разу не пользовались нашими услугами, то точно слышали о существовании данной организации. К сожалению, война сильно ударила по сети технологических центров. Теперь их вовсе не осталось в Галактике, а ведь мы могли бы заниматься первоклассным обслуживанием любых военных и гражданских кораблей, а также оборудования, вооружения, и даже зондов. Галактический Совет не выделяет нам достаточно денег на открытие своей станции в системе <0>, а оборудование стоит слишком дорого, мы просто не сможем оплатить все из своего кармана. Поэтому нам остается только надеяться на помощь со стороны. Если наша кампания по сбору средств увенчается успехом, мы сможем принимать клиентов не только со всего сектора <1>, но и из соседних. Планируемая дата открытия: <2>.<br>Собранные средства: <3>/<4> cr."    
+    },
+    {
+      "#":  "1588",
+      "String":  "Спонсировать постройку"    
     },
     {
       "#":  "212",

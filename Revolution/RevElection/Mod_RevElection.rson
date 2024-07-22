@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  1254,
-  "ViewPos.y":  230,
+  "ViewPos.x":  -514,
+  "ViewPos.y":  -257,
   "ScriptName":  "Mod_RevElection",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.txt",
-  "GraphPoint.Count":  582,
-  "GraphLink.Count":  731,
-  "GraphRectText.Count":  2,
-  "Variables.Count":  27,
-  "Stars.Count":  1,
-  "Planets.Count":  3,
-  "Ships.Count":  1,
-  "States.Count":  29,
-  "Groups.Count":  9,
-  "Places.Count":  10,
-  "Items.Count":  11,
-  "Ethers.Count":  9,
-  "Dialogs.Count":  9,
-  "DialogMessages.Count":  96,
-  "DialogAnswers.Count":  126,
-  "Operations.Count":  95,
-  "Statements.Count":  156,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -2898,7 +2880,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  4,
-          "Total.Lines":  7,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -2918,7 +2899,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  8,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2932,7 +2912,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  19,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2949,7 +2928,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  23,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2964,7 +2942,6 @@
           "Pos.y":  340,
           "Parent":  -1,
           "#":  38,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2978,7 +2955,6 @@
           "Pos.y":  300,
           "Parent":  -1,
           "#":  39,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2992,7 +2968,6 @@
           "Pos.y":  340,
           "Parent":  -1,
           "#":  47,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3006,7 +2981,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  57,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3020,7 +2994,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  62,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3035,7 +3008,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  80,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3049,7 +3021,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  111,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3063,7 +3034,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  112,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3077,7 +3047,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  113,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3091,7 +3060,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  114,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3105,7 +3073,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  115,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3119,7 +3086,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  116,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3133,7 +3099,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  120,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3147,7 +3112,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  131,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3161,7 +3125,6 @@
           "Pos.y":  980,
           "Parent":  -1,
           "#":  157,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3175,7 +3138,6 @@
           "Pos.y":  980,
           "Parent":  -1,
           "#":  167,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3189,7 +3151,6 @@
           "Pos.y":  1070,
           "Parent":  -1,
           "#":  168,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3203,7 +3164,6 @@
           "Pos.y":  1260,
           "Parent":  -1,
           "#":  176,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3218,7 +3178,6 @@
           "Pos.y":  870,
           "Parent":  -1,
           "#":  188,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3232,7 +3191,6 @@
           "Pos.y":  610,
           "Parent":  -1,
           "#":  192,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3247,7 +3205,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  205,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3261,7 +3218,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  206,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3275,7 +3231,6 @@
           "Pos.y":  930,
           "Parent":  -1,
           "#":  216,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3289,7 +3244,6 @@
           "Pos.y":  840,
           "Parent":  -1,
           "#":  231,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3303,7 +3257,6 @@
           "Pos.y":  1000,
           "Parent":  -1,
           "#":  232,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3319,7 +3272,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  233,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3333,7 +3285,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  234,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3347,7 +3298,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  235,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3357,11 +3307,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  2460,
+          "Pos.x":  2390,
           "Pos.y":  800,
           "Parent":  -1,
           "#":  236,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3376,7 +3325,6 @@
           "Pos.y":  1120,
           "Parent":  -1,
           "#":  237,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3390,7 +3338,6 @@
           "Pos.y":  840,
           "Parent":  -1,
           "#":  243,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3405,7 +3352,6 @@
           "Pos.y":  920,
           "Parent":  -1,
           "#":  268,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3420,7 +3366,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  270,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3434,7 +3379,6 @@
           "Pos.y":  990,
           "Parent":  -1,
           "#":  285,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3448,7 +3392,6 @@
           "Pos.y":  1140,
           "Parent":  -1,
           "#":  295,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3462,7 +3405,6 @@
           "Pos.y":  1020,
           "Parent":  -1,
           "#":  304,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3476,7 +3418,6 @@
           "Pos.y":  230,
           "Parent":  -1,
           "#":  309,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3492,7 +3433,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  312,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3506,7 +3446,6 @@
           "Pos.y":  640,
           "Parent":  -1,
           "#":  315,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3520,7 +3459,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  321,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3534,7 +3472,6 @@
           "Pos.y":  520,
           "Parent":  -1,
           "#":  335,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3548,7 +3485,6 @@
           "Pos.y":  -60,
           "Parent":  -1,
           "#":  353,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3562,7 +3498,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  360,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3578,7 +3513,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  361,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3596,7 +3530,6 @@
           "Pos.y":  340,
           "Parent":  -1,
           "#":  363,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3611,7 +3544,6 @@
           "Pos.y":  990,
           "Parent":  -1,
           "#":  385,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3625,7 +3557,6 @@
           "Pos.y":  1050,
           "Parent":  -1,
           "#":  386,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3639,7 +3570,6 @@
           "Pos.y":  970,
           "Parent":  -1,
           "#":  398,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3654,7 +3584,6 @@
           "Pos.y":  970,
           "Parent":  -1,
           "#":  399,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3669,7 +3598,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  411,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3684,7 +3612,6 @@
           "Pos.y":  740,
           "Parent":  -1,
           "#":  415,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3698,7 +3625,6 @@
           "Pos.y":  680,
           "Parent":  -1,
           "#":  417,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3712,7 +3638,6 @@
           "Pos.y":  470,
           "Parent":  -1,
           "#":  418,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3728,7 +3653,6 @@
           "Pos.y":  620,
           "Parent":  -1,
           "#":  419,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3743,7 +3667,6 @@
           "Pos.y":  470,
           "Parent":  -1,
           "#":  424,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3757,7 +3680,6 @@
           "Pos.y":  430,
           "Parent":  -1,
           "#":  437,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3771,7 +3693,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  448,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3785,7 +3706,6 @@
           "Pos.y":  60,
           "Parent":  -1,
           "#":  471,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3799,7 +3719,6 @@
           "Pos.y":  -140,
           "Parent":  -1,
           "#":  476,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3814,7 +3733,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  484,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3828,7 +3746,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  492,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3842,7 +3759,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  494,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3856,7 +3772,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  496,
-          "Total.Lines":  5,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -3874,7 +3789,6 @@
           "Pos.y":  820,
           "Parent":  -1,
           "#":  511,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3889,7 +3803,6 @@
           "Pos.y":  850,
           "Parent":  -1,
           "#":  513,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3903,7 +3816,6 @@
           "Pos.y":  650,
           "Parent":  -1,
           "#":  516,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3918,7 +3830,6 @@
           "Pos.y":  380,
           "Parent":  -1,
           "#":  520,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3944,7 +3855,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  522,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3958,7 +3868,6 @@
           "Pos.y":  430,
           "Parent":  -1,
           "#":  523,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3972,7 +3881,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  525,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3988,7 +3896,6 @@
           "Pos.y":  550,
           "Parent":  -1,
           "#":  526,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4002,7 +3909,6 @@
           "Pos.y":  820,
           "Parent":  -1,
           "#":  528,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4016,7 +3922,6 @@
           "Pos.y":  760,
           "Parent":  -1,
           "#":  529,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4030,7 +3935,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  530,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4044,7 +3948,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  531,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4054,17 +3957,15 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  -40,
+          "Pos.x":  -80,
           "Pos.y":  240,
           "Parent":  -1,
           "#":  534,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
               "ShipOut();",
-              "Exit;",
-              "vShips=vShips+1;"          
+              "exit;"          
           ]        
         },
         {
@@ -4074,7 +3975,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  536,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4092,7 +3992,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  542,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4109,7 +4008,6 @@
           "Pos.y":  420,
           "Parent":  -1,
           "#":  543,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4123,7 +4021,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  548,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4138,7 +4035,6 @@
           "Pos.y":  0,
           "Parent":  -1,
           "#":  550,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4154,7 +4050,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  555,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4170,7 +4065,6 @@
           "Pos.y":  610,
           "Parent":  -1,
           "#":  557,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4185,7 +4079,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  561,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4199,7 +4092,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  562,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4213,7 +4105,6 @@
           "Pos.y":  350,
           "Parent":  -1,
           "#":  564,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4228,7 +4119,6 @@
           "Pos.y":  770,
           "Parent":  -1,
           "#":  569,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4242,7 +4132,6 @@
           "Pos.y":  760,
           "Parent":  -1,
           "#":  573,
-          "Total.Lines":  36,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4291,7 +4180,6 @@
           "Pos.y":  760,
           "Parent":  -1,
           "#":  574,
-          "Total.Lines":  75,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4336,7 +4224,8 @@
               "        }",
               "    }",
               "}",
-              "Ether(0,'027B1887-D0DC-4A76-8141-F0B0F2109CC4','vRunScrElection <vRunScrElection> vTalkAgit <vTalkAgit> vState <vState> vSearchD <vSearchD> vTerm <vTerm> vPassP <vPassP> vMoney <vMoney> vPeleng <vPeleng> vDron <vDron> vBegin <vBegin> vGaal <vGaal> vFeiV <vFeiV> vFei <vFei> vPeople <vPeople>  vMaloc <vMaloc> vShips <vShips> vWar <vWar> vSerachStr <vSerachStr>',Player());",
+              "//Для отладки",
+              "//Ether(0,'027B1887-D0DC-4A76-8141-F0B0F2109CC4','vRunScrElection <vRunScrElection> vTalkAgit <vTalkAgit> vState <vState> vSearchD <vSearchD> vTerm <vTerm> vPassP <vPassP> vMoney <vMoney> vPeleng <vPeleng> vDron <vDron> vBegin <vBegin> vGaal <vGaal> vFeiV <vFeiV> vFei <vFei> vPeople <vPeople>  vMaloc <vMaloc> vShips <vShips> vWar <vWar> vSerachStr <vSerachStr>',Player());",
               "vSearchD=vSearchD-1;",
               "vTerm=vTerm+1;",
               "//проверим, нет ли у малока лишнего в трюме",
@@ -4379,7 +4268,6 @@
           "Pos.y":  940,
           "Parent":  -1,
           "#":  580,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4393,7 +4281,6 @@
           "Pos.y":  710,
           "Parent":  -1,
           "#":  581,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4645,7 +4532,6 @@
           "Pos.y":  140,
           "Parent":  -1,
           "#":  11,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4659,7 +4545,6 @@
           "Pos.y":  530,
           "Parent":  -1,
           "#":  18,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4673,7 +4558,6 @@
           "Pos.y":  160,
           "Parent":  -1,
           "#":  26,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4687,7 +4571,6 @@
           "Pos.y":  300,
           "Parent":  -1,
           "#":  40,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4701,7 +4584,6 @@
           "Pos.y":  260,
           "Parent":  -1,
           "#":  41,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4715,7 +4597,6 @@
           "Pos.y":  530,
           "Parent":  -1,
           "#":  53,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4729,7 +4610,6 @@
           "Pos.y":  530,
           "Parent":  -1,
           "#":  54,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4743,7 +4623,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  55,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4757,7 +4636,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  56,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4771,7 +4649,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  63,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4785,7 +4662,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  67,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4799,7 +4675,6 @@
           "Pos.y":  300,
           "Parent":  -1,
           "#":  68,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4813,7 +4688,6 @@
           "Pos.y":  480,
           "Parent":  -1,
           "#":  81,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4827,7 +4701,6 @@
           "Pos.y":  1000,
           "Parent":  -1,
           "#":  117,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4841,7 +4714,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  118,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4855,7 +4727,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  119,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4869,7 +4740,6 @@
           "Pos.y":  850,
           "Parent":  -1,
           "#":  132,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4883,7 +4753,6 @@
           "Pos.y":  820,
           "Parent":  -1,
           "#":  133,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4897,7 +4766,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  144,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4911,7 +4779,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  145,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4925,7 +4792,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  146,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4939,7 +4805,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  147,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4953,7 +4818,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  148,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4967,7 +4831,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  149,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4981,7 +4844,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  150,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4995,7 +4857,6 @@
           "Pos.y":  920,
           "Parent":  -1,
           "#":  152,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5009,7 +4870,6 @@
           "Pos.y":  970,
           "Parent":  -1,
           "#":  153,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5023,7 +4883,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  154,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5037,7 +4896,6 @@
           "Pos.y":  990,
           "Parent":  -1,
           "#":  155,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5051,7 +4909,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  156,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5065,7 +4922,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  169,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5079,7 +4935,6 @@
           "Pos.y":  1040,
           "Parent":  -1,
           "#":  170,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5093,7 +4948,6 @@
           "Pos.y":  1100,
           "Parent":  -1,
           "#":  172,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5107,7 +4961,6 @@
           "Pos.y":  1160,
           "Parent":  -1,
           "#":  177,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5121,7 +4974,6 @@
           "Pos.y":  1130,
           "Parent":  -1,
           "#":  180,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5135,7 +4987,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  183,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5149,7 +5000,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  186,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5163,7 +5013,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  187,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5177,7 +5026,6 @@
           "Pos.y":  750,
           "Parent":  -1,
           "#":  189,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5191,7 +5039,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  190,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5205,7 +5052,6 @@
           "Pos.y":  750,
           "Parent":  -1,
           "#":  196,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5219,7 +5065,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  197,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5233,7 +5078,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  198,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5247,7 +5091,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  199,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5261,7 +5104,6 @@
           "Pos.y":  620,
           "Parent":  -1,
           "#":  208,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5275,7 +5117,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  209,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5289,7 +5130,6 @@
           "Pos.y":  840,
           "Parent":  -1,
           "#":  217,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5303,7 +5143,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  239,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5317,7 +5156,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  240,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5331,7 +5169,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  241,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5345,7 +5182,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  248,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5359,7 +5195,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  251,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5373,7 +5208,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  254,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5387,7 +5221,6 @@
           "Pos.y":  350,
           "Parent":  -1,
           "#":  255,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5401,7 +5234,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  257,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5415,7 +5247,6 @@
           "Pos.y":  590,
           "Parent":  -1,
           "#":  259,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5429,7 +5260,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  263,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5443,7 +5273,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  265,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5457,7 +5286,6 @@
           "Pos.y":  350,
           "Parent":  -1,
           "#":  266,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5471,7 +5299,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  269,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5485,7 +5312,6 @@
           "Pos.y":  760,
           "Parent":  -1,
           "#":  273,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5499,7 +5325,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  286,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5513,7 +5338,6 @@
           "Pos.y":  950,
           "Parent":  -1,
           "#":  287,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5527,7 +5351,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  298,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5541,7 +5364,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  301,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5555,7 +5377,6 @@
           "Pos.y":  280,
           "Parent":  -1,
           "#":  305,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5569,7 +5390,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  308,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5583,7 +5403,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  311,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5597,7 +5416,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  313,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5611,7 +5429,6 @@
           "Pos.y":  610,
           "Parent":  -1,
           "#":  316,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5625,7 +5442,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  319,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5639,7 +5455,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  320,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5653,7 +5468,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  322,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5667,7 +5481,6 @@
           "Pos.y":  360,
           "Parent":  -1,
           "#":  325,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5681,7 +5494,6 @@
           "Pos.y":  360,
           "Parent":  -1,
           "#":  336,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5695,7 +5507,6 @@
           "Pos.y":  110,
           "Parent":  -1,
           "#":  339,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5709,7 +5520,6 @@
           "Pos.y":  40,
           "Parent":  -1,
           "#":  346,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5723,7 +5533,6 @@
           "Pos.y":  10,
           "Parent":  -1,
           "#":  349,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5737,7 +5546,6 @@
           "Pos.y":  -30,
           "Parent":  -1,
           "#":  351,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5751,7 +5559,6 @@
           "Pos.y":  -30,
           "Parent":  -1,
           "#":  354,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5765,7 +5572,6 @@
           "Pos.y":  0,
           "Parent":  -1,
           "#":  355,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5779,7 +5585,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  359,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5793,7 +5598,6 @@
           "Pos.y":  110,
           "Parent":  -1,
           "#":  362,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5807,7 +5611,6 @@
           "Pos.y":  380,
           "Parent":  -1,
           "#":  366,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5821,7 +5624,6 @@
           "Pos.y":  750,
           "Parent":  -1,
           "#":  367,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5835,7 +5637,6 @@
           "Pos.y":  990,
           "Parent":  -1,
           "#":  379,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5849,7 +5650,6 @@
           "Pos.y":  960,
           "Parent":  -1,
           "#":  380,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5863,7 +5663,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  387,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5877,7 +5676,6 @@
           "Pos.y":  800,
           "Parent":  -1,
           "#":  389,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5891,7 +5689,6 @@
           "Pos.y":  890,
           "Parent":  -1,
           "#":  392,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5905,7 +5702,6 @@
           "Pos.y":  890,
           "Parent":  -1,
           "#":  395,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5919,7 +5715,6 @@
           "Pos.y":  430,
           "Parent":  -1,
           "#":  400,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5933,7 +5728,6 @@
           "Pos.y":  510,
           "Parent":  -1,
           "#":  403,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5947,7 +5741,6 @@
           "Pos.y":  740,
           "Parent":  -1,
           "#":  407,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5961,7 +5754,6 @@
           "Pos.y":  770,
           "Parent":  -1,
           "#":  408,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5975,7 +5767,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  409,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -5989,7 +5780,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  410,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6003,7 +5793,6 @@
           "Pos.y":  710,
           "Parent":  -1,
           "#":  412,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6017,7 +5806,6 @@
           "Pos.y":  710,
           "Parent":  -1,
           "#":  420,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6031,7 +5819,6 @@
           "Pos.y":  510,
           "Parent":  -1,
           "#":  423,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6045,7 +5832,6 @@
           "Pos.y":  450,
           "Parent":  -1,
           "#":  425,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6059,7 +5845,6 @@
           "Pos.y":  430,
           "Parent":  -1,
           "#":  426,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6073,7 +5858,6 @@
           "Pos.y":  470,
           "Parent":  -1,
           "#":  427,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6087,7 +5871,6 @@
           "Pos.y":  930,
           "Parent":  -1,
           "#":  428,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6101,7 +5884,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  438,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6115,7 +5897,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  440,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6129,7 +5910,6 @@
           "Pos.y":  500,
           "Parent":  -1,
           "#":  444,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6143,7 +5923,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  445,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6157,7 +5936,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  446,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6171,7 +5949,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  447,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6185,7 +5962,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  449,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6199,7 +5975,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  470,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6213,7 +5988,6 @@
           "Pos.y":  360,
           "Parent":  -1,
           "#":  472,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6227,7 +6001,6 @@
           "Pos.y":  130,
           "Parent":  -1,
           "#":  479,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6241,7 +6014,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  480,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6255,7 +6027,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  486,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6269,7 +6040,6 @@
           "Pos.y":  880,
           "Parent":  -1,
           "#":  487,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6283,7 +6053,6 @@
           "Pos.y":  850,
           "Parent":  -1,
           "#":  488,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6297,7 +6066,6 @@
           "Pos.y":  820,
           "Parent":  -1,
           "#":  489,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6311,7 +6079,6 @@
           "Pos.y":  790,
           "Parent":  -1,
           "#":  490,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6325,7 +6092,6 @@
           "Pos.y":  760,
           "Parent":  -1,
           "#":  491,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6339,7 +6105,6 @@
           "Pos.y":  730,
           "Parent":  -1,
           "#":  493,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6353,7 +6118,6 @@
           "Pos.y":  570,
           "Parent":  -1,
           "#":  495,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6367,7 +6131,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  498,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6381,7 +6144,6 @@
           "Pos.y":  150,
           "Parent":  -1,
           "#":  500,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6395,7 +6157,6 @@
           "Pos.y":  100,
           "Parent":  -1,
           "#":  503,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6409,7 +6170,6 @@
           "Pos.y":  620,
           "Parent":  -1,
           "#":  505,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6423,7 +6183,6 @@
           "Pos.y":  700,
           "Parent":  -1,
           "#":  506,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6437,7 +6196,6 @@
           "Pos.y":  740,
           "Parent":  -1,
           "#":  508,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6451,7 +6209,6 @@
           "Pos.y":  820,
           "Parent":  -1,
           "#":  510,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6465,7 +6222,6 @@
           "Pos.y":  530,
           "Parent":  -1,
           "#":  514,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6479,7 +6235,6 @@
           "Pos.y":  620,
           "Parent":  -1,
           "#":  515,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6493,7 +6248,6 @@
           "Pos.y":  650,
           "Parent":  -1,
           "#":  517,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6507,7 +6261,6 @@
           "Pos.y":  10,
           "Parent":  -1,
           "#":  518,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6521,7 +6274,6 @@
           "Pos.y":  430,
           "Parent":  -1,
           "#":  521,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6535,7 +6287,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  527,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6549,7 +6300,6 @@
           "Pos.y":  200,
           "Parent":  -1,
           "#":  532,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6563,7 +6313,6 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  535,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6577,7 +6326,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  538,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6591,7 +6339,6 @@
           "Pos.y":  670,
           "Parent":  -1,
           "#":  539,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6605,7 +6352,6 @@
           "Pos.y":  370,
           "Parent":  -1,
           "#":  540,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6619,7 +6365,6 @@
           "Pos.y":  410,
           "Parent":  -1,
           "#":  541,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6633,7 +6378,6 @@
           "Pos.y":  -40,
           "Parent":  -1,
           "#":  545,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6647,7 +6391,6 @@
           "Pos.y":  -40,
           "Parent":  -1,
           "#":  546,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6661,7 +6404,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  551,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6675,7 +6417,6 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  552,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6689,7 +6430,6 @@
           "Pos.y":  540,
           "Parent":  -1,
           "#":  553,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6703,7 +6443,6 @@
           "Pos.y":  570,
           "Parent":  -1,
           "#":  556,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6717,7 +6456,6 @@
           "Pos.y":  770,
           "Parent":  -1,
           "#":  558,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6731,7 +6469,6 @@
           "Pos.y":  770,
           "Parent":  -1,
           "#":  560,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6745,7 +6482,6 @@
           "Pos.y":  850,
           "Parent":  -1,
           "#":  563,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6759,7 +6495,6 @@
           "Pos.y":  720,
           "Parent":  -1,
           "#":  565,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6773,7 +6508,6 @@
           "Pos.y":  620,
           "Parent":  -1,
           "#":  566,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6787,7 +6521,6 @@
           "Pos.y":  110,
           "Parent":  -1,
           "#":  568,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6801,7 +6534,6 @@
           "Pos.y":  360,
           "Parent":  -1,
           "#":  570,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6815,7 +6547,6 @@
           "Pos.y":  320,
           "Parent":  -1,
           "#":  571,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [

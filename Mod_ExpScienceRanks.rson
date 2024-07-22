@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -23,
-  "ViewPos.y":  -109,
+  "ViewPos.x":  -68,
+  "ViewPos.y":  -229,
   "ScriptName":  "Mod_ExpScienceRanks",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.txt",
-  "GraphPoint.Count":  206,
-  "GraphLink.Count":  140,
-  "GraphRectText.Count":  6,
-  "Variables.Count":  67,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  10,
-  "DialogMessages.Count":  22,
-  "DialogAnswers.Count":  22,
-  "Operations.Count":  37,
-  "Statements.Count":  43,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -597,7 +579,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  5,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -611,7 +592,6 @@
           "Pos.y":  -70,
           "Parent":  -1,
           "#":  6,
-          "Total.Lines":  52,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -676,7 +656,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  8,
-          "Total.Lines":  324,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -1013,7 +992,6 @@
           "Pos.y":  20,
           "Parent":  68,
           "#":  23,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1050,7 +1028,6 @@
           "Pos.y":  0,
           "Parent":  8,
           "#":  25,
-          "Total.Lines":  54,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1117,7 +1094,6 @@
           "Pos.y":  110,
           "Parent":  44,
           "#":  50,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1132,7 +1108,6 @@
           "Pos.y":  60,
           "Parent":  102,
           "#":  55,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1169,7 +1144,6 @@
           "Pos.y":  20,
           "Parent":  57,
           "#":  59,
-          "Total.Lines":  29,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1211,7 +1185,6 @@
           "Pos.y":  20,
           "Parent":  56,
           "#":  60,
-          "Total.Lines":  63,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1287,7 +1260,6 @@
           "Pos.y":  20,
           "Parent":  83,
           "#":  78,
-          "Total.Lines":  39,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1339,7 +1311,6 @@
           "Pos.y":  20,
           "Parent":  82,
           "#":  79,
-          "Total.Lines":  23,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1375,7 +1346,6 @@
           "Pos.y":  20,
           "Parent":  187,
           "#":  80,
-          "Total.Lines":  25,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1413,7 +1383,6 @@
           "Pos.y":  20,
           "Parent":  170,
           "#":  94,
-          "Total.Lines":  20,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1446,7 +1415,6 @@
           "Pos.y":  20,
           "Parent":  169,
           "#":  95,
-          "Total.Lines":  20,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1479,73 +1447,75 @@
           "Pos.y":  20,
           "Parent":  104,
           "#":  97,
-          "Total.Lines":  63,
           "Code.Type":  "Turn",
           "Code":          
           [
               "//Перебираем предметы на корабле, ищем подходящие для акринации",
-              "for(i = 0; i < ShipItems(Player()); i = i + 1)",
-              "{",
-              "    cur_bh_item = ShipItems(Player(), i);",
-              "    j = ItemType(cur_bh_item);",
+              "//for(j=0;j<3;j=j+1) {",
+              "    for(i = 0; i < ShipItems(Player()); i = i + 1)",
+              "    {",
+              "        cur_bh_item = ShipItems(Player(), i);",
+              "        j = ItemType(cur_bh_item);",
               "",
-              "    //Если предмет является оборудованием или оружием",
-              "    if(j < t_FuelTanks || j > t_CustomWeapon) continue;",
-              "    //Исключение предметов с акрином",
-              "    temp_int_3 = EqSpecial(cur_bh_item);",
-              "    if(~temp_int_3) continue;",
-              "    //Исключение для предметов с ММ, в которых есть параметр \"Запрещено акринировать\" и \"Запрещено акринировать и деакринировать\"",
-              "    if((int(CT('MicroModuls.' + BonusNumInCfg(EqModule(cur_bh_item)) + '.BlockReacryn')) & 2)) continue;",
-              "    //Исключение доминаторских предметов и особых доминаторских пушек",
-              "    //Но только если отключён ShuDomiks и не открыт ни один акрин",
-              "    if(!IsScriptActive('Mod_ShuDomiks'))",
-              "    {",
-              "        if(ItemOwner(cur_bh_item) == Kling) continue;",
-              "        if(j == t_Weapon13 || j == t_Weapon14 || j == t_Weapon15) continue;",
-              "    }",
-              "    else if (GetValueFromScript('Mod_ShuDomiks','EnergizeExp') < 100 && GetValueFromScript('Mod_ShuDomiks','GlueExp') < 100 && GetValueFromScript('Mod_ShuDomiks','StrikeExp') < 100 && GetValueFromScript('Mod_ShuDomiks','RocketExp') < 100 && GetValueFromScript('Mod_ShuDomiks','QuickExp') < 100 && GetValueFromScript('Mod_ShuDomiks','SpeedExp') < 100 && GetValueFromScript('Mod_ShuDomiks','DetrimentExp') < 100)",
-              "    {",
-              "        if(ItemOwner(cur_bh_item) == Kling) continue;",
-              "        if(j == t_Weapon13 || j == t_Weapon14 || j == t_Weapon15) continue;",
-              "    }",
+              "        //Если предмет является оборудованием или оружием",
+              "        if(j < t_FuelTanks || j > t_CustomWeapon) continue;",
+              "        //Исключение предметов с акрином",
+              "        temp_int_3 = EqSpecial(cur_bh_item);",
+              "        if(~temp_int_3) continue;",
+              "        //Исключение для предметов с ММ, в которых есть параметр \"Запрещено акринировать\" и \"Запрещено акринировать и деакринировать\"",
+              "        if((int(CT('MicroModuls.' + BonusNumInCfg(EqModule(cur_bh_item)) + '.BlockReacryn')) & 2)) continue;",
+              "        //Исключение доминаторских предметов и особых доминаторских пушек",
+              "        //Но только если отключён ShuDomiks и не открыт ни один акрин",
+              "        if(!IsScriptActive('Mod_ShuDomiks'))",
+              "        {",
+              "            if(ItemOwner(cur_bh_item) == Kling) continue;",
+              "            if(j == t_Weapon13 || j == t_Weapon14 || j == t_Weapon15) continue;",
+              "        }",
+              "        else if (GetValueFromScript('Mod_ShuDomiks','EnergizeExp') < 100 && GetValueFromScript('Mod_ShuDomiks','GlueExp') < 100 && GetValueFromScript('Mod_ShuDomiks','StrikeExp') < 100 && GetValueFromScript('Mod_ShuDomiks','RocketExp') < 100 && GetValueFromScript('Mod_ShuDomiks','QuickExp') < 100 && GetValueFromScript('Mod_ShuDomiks','SpeedExp') < 100 && GetValueFromScript('Mod_ShuDomiks','DetrimentExp') < 100)",
+              "        {",
+              "            if(ItemOwner(cur_bh_item) == Kling) continue;",
+              "            if(j == t_Weapon13 || j == t_Weapon14 || j == t_Weapon15) continue;",
+              "        }",
               "",
-              "    //Исключение предметов неизвестной расы",
-              "    if(ItemOwner(cur_bh_item) == None) continue;",
-              "    //Исключение предметов с кастомной фракцией",
-              "    if(EqCustomFaction(cur_bh_item) != '') continue;",
-              "    //Исключение скриптовых предметов",
-              "    if(ItemInScript(cur_bh_item) == 1) continue;",
-              "    //Исключение прочих нестандартных пушек",
-              "    if(j == t_CustomWeapon)",
-              "    {",
-              "        temp_str = GetCustomWeaponData(CustomWeaponType(cur_bh_item), 'Availability');",
-              "        if(temp_str == 'NotSold' || temp_str == 'NotSoldAndNodeRepair') continue;",
-              "    }",
-              "    level = ItemLevel(cur_bh_item);",
-              "    if(level <= 1) temp_str = ' A';",
-              "    else if(level == 2) temp_str = ' B';",
-              "    else if(level == 3) temp_str = ' C';",
-              "    else if(level == 4) temp_str = ' D';",
-              "    else if(level == 5) temp_str = ' E';",
-              "    else if(level == 6) temp_str = ' F';",
-              "    else if(level == 7) temp_str = ' G';",
-              "    else temp_str=' H';",
+              "        //Исключение предметов неизвестной расы",
+              "        if(ItemOwner(cur_bh_item) == None) continue;",
+              "        //Исключение предметов с кастомной фракцией",
+              "        if(EqCustomFaction(cur_bh_item) != '') continue;",
+              "        //Исключение скриптовых предметов",
+              "        if(ItemInScript(cur_bh_item) == 1) continue;",
+              "        //Исключение прочих нестандартных пушек",
+              "        if(j == t_CustomWeapon)",
+              "        {",
+              "            temp_str = GetCustomWeaponData(CustomWeaponType(cur_bh_item), 'Availability');",
+              "            if(temp_str == 'NotSold' || temp_str == 'NotSoldAndNodeRepair') continue;",
+              "        }",
+              "        level = ItemLevel(cur_bh_item);",
+              "        if(level <= 1) temp_str = ' A';",
+              "        else if(level == 2) temp_str = ' B';",
+              "        else if(level == 3) temp_str = ' C';",
+              "        else if(level == 4) temp_str = ' D';",
+              "        else if(level == 5) temp_str = ' E';",
+              "        else if(level == 6) temp_str = ' F';",
+              "        else if(level == 7) temp_str = ' G';",
+              "        else temp_str=' H';",
               "",
-              "    //Если предмет является оборудованием",
-              "    if(j <= t_DefGenerator)",
-              "    {",
-              "        tstr1 = DeleteTags('<ItemFullName(cur_bh_item)>');",
-              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
-              "    }",
-              "    //Если предмет является оружием",
-              "    else",
-              "    {",
-              "        tstr1 = DeleteTags('<ItemFullName(cur_bh_item)>' + '<temp_str>');",
-              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
-              "    }",
+              "        //Если предмет является оборудованием",
+              "        if(j <= t_DefGenerator)",
+              "        {",
+              "            tstr1 = DeleteTags('<ItemFullName(cur_bh_item)>');",
+              "            if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
+              "        }",
+              "        //Если предмет является оружием",
+              "        else",
+              "        {",
+              "            tstr1 = DeleteTags('<ItemFullName(cur_bh_item)>' + '<temp_str>');",
+              "            if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
+              "        }",
               "",
-              "    InjectAnswer('acrin_1', tstr1, cur_bh_item);",
-              "}"          
+              "        //AddDialogBlock(tstr1,2);",
+              "        InjectAnswer('acrin_1', tstr1, cur_bh_item);",
+              "    }",
+              "//}"          
           ]        
         },
         {
@@ -1555,7 +1525,6 @@
           "Pos.y":  0,
           "Parent":  52,
           "#":  100,
-          "Total.Lines":  138,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1566,10 +1535,17 @@
               "{",
               "    if(!BonusIsSpecial(i)) continue;",
               "    temp_str_2 = BonusNumInCfg(i);",
+              "    //SFT('0');",
+              "    //SFT(temp_str_2);",
+              "    //Никто не знает, как, но ЭТА МРАЗЬ СЮДА ПРОБИРАЕТСЯ",
+              "    if(temp_str_2 == 'Ref_RentAcryn') continue;",
               "    //Исключение для акринов с тэгом \"Запрещено накладывать\" и \"Запрещено снимать и накладывать\"",
-              "    if((int(CT('MicroModuls.' + temp_str_2 + '.LockedAcryn')) & 2)) continue;",
+              "    if(int(CT('MicroModuls.' + temp_str_2 + '.LockedAcryn')) == 2) continue;",
+              "    if(int(CT('MicroModuls.' + temp_str_2 + '.LockedAcryn')) == 3) continue;",
               "    //Исключение \"биологических\" предметов (например, биогенных дроидов)",
               "    if(CT('MicroModuls.' + temp_str_2 + '.BioEquip')) continue;",
+              "    //SFT('1');",
+              "    //SFT(temp_str_2);",
               "    //Исключение акринов, в которые запрещена установка ММ, если в акринируемом предмете ММ уже установлен",
               "    if(CT('MicroModuls.' + temp_str_2 + '.BlockMM'))",
               "    {",
@@ -1580,30 +1556,48 @@
               "    temp_int = CT('MicroModuls.' + temp_str_2 + '.Priority');",
               "    if(8.0 * (0.01 * temp_int) > GalaxyTechLevel()) continue;",
               "",
-              "    SFT('1');",
-              "    SFT(temp_str_2);",
+              "    //SFT('2');",
+              "    //SFT(temp_str_2);",
               "",
               "    //Блок доминаторских акринов:",
-              "    if(GalaxyTechLevel() > 4) {",
-              "        if(GalaxyDominatorResearchPercent() > 40) {",
-              "            if(GetValueFromScript('Mod_ShuDomiks','EnergizeExp') < 100 && findsubstr(temp_str_2,'Energize')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','GlueExp') < 100 && findsubstr(temp_str_2,'Glue')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','StrikeExp') < 100 && findsubstr(temp_str_2,'Strike')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','SpeedExp') < 100 && findsubstr(temp_str_2,'SpeedDrop')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','RocketExp') < 100 && findsubstr(temp_str_2,'RocketLauncher')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','QuickExp') < 100 && findsubstr(temp_str_2,'Quickshot')) continue;",
-              "            if(GetValueFromScript('Mod_ShuDomiks','DetraimentExp') < 100 && findsubstr(temp_str_2,'Detriment')) continue;",
+              "    if(findsubstr(temp_str_2,'ShuDomiks') == 1) {",
+              "        if(GalaxyDominatorResearchPercent() > 40 && GalaxyTechLevel() > 4) {",
+              "            if(GetValueFromScript('Mod_ShuDomiks','EnergizeExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'Energize') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','GlueExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'Glue') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','StrikeExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'Strike') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','SpeedExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'SpeedDrop') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','RocketExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'RocketLauncher') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','QuickExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'Quickshot') == 1) continue;",
+              "            }",
+              "            if(GetValueFromScript('Mod_ShuDomiks','DetrimentExp') < 100) {",
+              "                if(findsubstr(temp_str_2,'Detriment') == 1) continue;",
+              "            }",
               "        }",
               "    }",
-              "    ",
-              "    SFT('2');",
-              "    SFT(temp_str_2);",
+              "",
+              "    //SFT('3');",
+              "    //SFT(temp_str_2);",
               "",
               "    //Если предмет не произведён неизвестной расой",
               "    if(ItemOwner(cur_item) != None)",
               "    {",
+              "        SFT('4');",
+              "        SFT(temp_str_2);",
               "        if(!MayAddBonusToEq(i, cur_item))",
               "        {",
+              "            //SFT('5');",
+              "            //SFT(temp_str_2);",
               "            //Проверка на соответствие акрина типу данного предмета с учётом замены предмета при акринации",
               "            temp_str_3 = CT('MicroModuls.' + temp_str_2 + '.ImitatedEquipType');",
               "            if(temp_str_3 != '')",
@@ -1627,6 +1621,8 @@
               "    //Если всё-таки произведён неизвестной, то делаем доп. проверки",
               "    else",
               "    {",
+              "        //SFT('6');",
+              "        //SFT(temp_str_2);",
               "        //Если бонус можно наложить на предмет с неизвестной расой, то добавляем ответ как обычно",
               "        //А если нельзя, то меняем расу предмета и снова делаем проверку на применимость бонуса",
               "        //Подразумевается, что к предмету с неизвестной расой подойдёт любой другой расовый бонус в принципе",
@@ -1665,6 +1661,8 @@
               "            else continue;",
               "        }",
               "    }",
+              "    SFT('7');",
+              "    SFT(temp_str_2);",
               "",
               "    //Если акрин оказался совместим с данным предметом",
               "    //Если игрок ещё не провёл достаточное число экспериментов и акринация должна быть случайной",
@@ -1679,7 +1677,37 @@
               "        //Выводим опцию акринации данного акрина в ответы",
               "        //Делаем проверку чтобы узнать, имеются ли уровни у данного акрина",
               "        temp_str = CT('MicroModuls.' + temp_str_2 + '.AcrynSerie');",
-              "        if(temp_str == '') InjectAnswer('acrin_2', DeleteTags(BonusName(i)), i);",
+              "        if(temp_str == '') {",
+              "            //Блок доминаторских акринов:",
+              "            if(findsubstr(temp_str_2,'ShuDomiks') == 1) {",
+              "                if(GalaxyDominatorResearchPercent() > 40 && GalaxyTechLevel() > 4) {",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','EnergizeExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'Energize') == 1) temp_str = 'Энерджайз';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','GlueExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'Glue') == 1) temp_str = 'Глю';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','StrikeExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'Strike') == 1) temp_str = 'Страйк';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','SpeedExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'SpeedDrop') == 1) temp_str = 'Спид-дроп';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','RocketExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'RocketLauncher') == 1) temp_str = 'Рокет-ланчер';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','QuickExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'Quickshot') == 1) temp_str = 'Квикшот';",
+              "                    }",
+              "                    if(GetValueFromScript('Mod_ShuDomiks','DetrimentExp') >= 100) {",
+              "                        if(findsubstr(temp_str_2,'Detriment') == 1) temp_str = 'Дитраймент';",
+              "                    }",
+              "",
+              "                    InjectAnswer('acrin_2', temp_str, i);",
+              "                }",
+              "            }",
+              "            else InjectAnswer('acrin_2', DeleteTags(BonusName(i)), i);",
+              "        }",
               "        else",
               "        {",
               "            InjectAnswer('acrin_2', temp_str, i);",
@@ -1706,7 +1734,6 @@
           "Pos.y":  20,
           "Parent":  101,
           "#":  102,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1720,7 +1747,6 @@
           "Pos.y":  20,
           "Parent":  98,
           "#":  107,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1736,7 +1762,6 @@
           "Pos.y":  20,
           "Parent":  81,
           "#":  108,
-          "Total.Lines":  68,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1817,7 +1842,6 @@
           "Pos.y":  30,
           "Parent":  75,
           "#":  109,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1832,7 +1856,6 @@
           "Pos.y":  40,
           "Parent":  29,
           "#":  111,
-          "Total.Lines":  43,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1888,7 +1911,6 @@
           "Pos.y":  20,
           "Parent":  191,
           "#":  112,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1925,7 +1947,6 @@
           "Pos.y":  20,
           "Parent":  110,
           "#":  113,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1947,7 +1968,6 @@
           "Pos.y":  20,
           "Parent":  115,
           "#":  116,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1969,7 +1989,6 @@
           "Pos.y":  20,
           "Parent":  28,
           "#":  117,
-          "Total.Lines":  34,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2016,7 +2035,6 @@
           "Pos.y":  20,
           "Parent":  113,
           "#":  118,
-          "Total.Lines":  36,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2065,7 +2083,6 @@
           "Pos.y":  20,
           "Parent":  138,
           "#":  122,
-          "Total.Lines":  33,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2111,7 +2128,6 @@
           "Pos.y":  20,
           "Parent":  135,
           "#":  136,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2128,7 +2144,6 @@
           "Pos.y":  20,
           "Parent":  141,
           "#":  143,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2142,7 +2157,6 @@
           "Pos.y":  20,
           "Parent":  146,
           "#":  148,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2161,7 +2175,6 @@
           "Pos.y":  20,
           "Parent":  147,
           "#":  149,
-          "Total.Lines":  31,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2205,7 +2218,6 @@
           "Pos.y":  20,
           "Parent":  144,
           "#":  150,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2220,7 +2232,6 @@
           "Pos.y":  20,
           "Parent":  161,
           "#":  160,
-          "Total.Lines":  8,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2241,7 +2252,6 @@
           "Pos.y":  220,
           "Parent":  -1,
           "#":  175,
-          "Total.Lines":  86,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2340,7 +2350,6 @@
           "Pos.y":  20,
           "Parent":  181,
           "#":  184,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2355,7 +2364,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  200,
-          "Total.Lines":  20,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2388,59 +2396,60 @@
           "Pos.y":  160,
           "Parent":  -1,
           "#":  205,
-          "Total.Lines":  51,
           "Code.Type":  "Turn",
           "Code":          
           [
               "//Костыль, потому что кто-то сломал вывод кнопок формами",
-              "if(HullSpecial(Player()) > 0) temp_str = BonusCustomTag(HullSpecial(Player()));",
-              "if(!Klesh_mon && (InterfaceState('StarMap', 'TickHullModeSwitcher')==1 || InterfaceState('StarMap', 'Klesh_panel')==1)) {",
-              "    Klesh_mon = 0;",
-              "    InterfaceState('StarMap', 'kl_but_y_a', 0);",
-              "    InterfaceState('StarMap', 'kl_but_r_a', 0);",
-              "    InterfaceState('StarMap', 'kl_but_g_a', 0);",
-              "    InterfaceState('StarMap', 'Klesh_panel', 0);",
-              "    InterfaceState('StarMap', 'TickHullModeSwitcher', 0);",
-              "}",
-              "if(Klesh_mon && InterfaceState('StarMap', 'TickHullModeSwitcher') == 0 || InterfaceState('StarMap', 'Klesh_panel') == 0) {",
-              "    InterfaceState('StarMap', 'Klesh_panel', 1);",
-              "    InterfaceState('StarMap', 'TickHullModeSwitcher', 1);",
-              "    if(temp_str == 'ExpScienceRanks_TickAttackMode')",
-              "    {",
-              "        InterfaceState('StarMap', 'kl_but_y_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_r_a', 1);",
-              "        InterfaceState('StarMap', 'kl_but_g_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_g', 1);",
-              "        InterfaceState('StarMap', 'kl_but_r', 0);",
-              "        InterfaceState('StarMap', 'kl_but_y', 1);",
-              "    }",
-              "    else if(temp_str == 'ExpScienceRanks_TickDefenseMode')",
-              "    {",
-              "        InterfaceState('StarMap', 'kl_but_y_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_r_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_g_a', 1);",
-              "        InterfaceState('StarMap', 'kl_but_g', 0);",
-              "        InterfaceState('StarMap', 'kl_but_r', 1);",
-              "        InterfaceState('StarMap', 'kl_but_y', 1);",
-              "    }",
-              "    else if(temp_str == 'ExpScienceRanks_TickSpeedMode')",
-              "    {",
-              "        InterfaceState('StarMap', 'kl_but_y_a', 1);",
-              "        InterfaceState('StarMap', 'kl_but_r_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_g_a', 0);",
-              "        InterfaceState('StarMap', 'kl_but_g', 1);",
-              "        InterfaceState('StarMap', 'kl_but_r', 1);",
-              "        InterfaceState('StarMap', 'kl_but_y', 0);",
-              "    }",
-              "}",
-              "if(temp_str != 'ExpScienceRanks_TickAttackMode' && temp_str != 'ExpScienceRanks_TickDefenseMode' && temp_str != 'ExpScienceRanks_TickSpeedMode') {",
-              "    if(InterfaceState('StarMap', 'TickHullModeSwitcher') == 1 || InterfaceState('StarMap', 'Klesh_panel') == 1) {",
+              "if(ShipEqInSlot(Player(),t_Hull)) {",
+              "    if(HullSpecial(Player()) > 0) temp_str = BonusCustomTag(HullSpecial(Player()));",
+              "    if(!Klesh_mon && (InterfaceState('StarMap', 'TickHullModeSwitcher')==1 || InterfaceState('StarMap', 'Klesh_panel')==1)) {",
               "        Klesh_mon = 0;",
               "        InterfaceState('StarMap', 'kl_but_y_a', 0);",
               "        InterfaceState('StarMap', 'kl_but_r_a', 0);",
               "        InterfaceState('StarMap', 'kl_but_g_a', 0);",
               "        InterfaceState('StarMap', 'Klesh_panel', 0);",
               "        InterfaceState('StarMap', 'TickHullModeSwitcher', 0);",
+              "    }",
+              "    if(Klesh_mon && InterfaceState('StarMap', 'TickHullModeSwitcher') == 0 || InterfaceState('StarMap', 'Klesh_panel') == 0) {",
+              "        InterfaceState('StarMap', 'Klesh_panel', 1);",
+              "        InterfaceState('StarMap', 'TickHullModeSwitcher', 1);",
+              "        if(temp_str == 'ExpScienceRanks_TickAttackMode')",
+              "        {",
+              "            InterfaceState('StarMap', 'kl_but_y_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_r_a', 1);",
+              "            InterfaceState('StarMap', 'kl_but_g_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_g', 1);",
+              "            InterfaceState('StarMap', 'kl_but_r', 0);",
+              "            InterfaceState('StarMap', 'kl_but_y', 1);",
+              "        }",
+              "        else if(temp_str == 'ExpScienceRanks_TickDefenseMode')",
+              "        {",
+              "            InterfaceState('StarMap', 'kl_but_y_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_r_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_g_a', 1);",
+              "            InterfaceState('StarMap', 'kl_but_g', 0);",
+              "            InterfaceState('StarMap', 'kl_but_r', 1);",
+              "            InterfaceState('StarMap', 'kl_but_y', 1);",
+              "        }",
+              "        else if(temp_str == 'ExpScienceRanks_TickSpeedMode')",
+              "        {",
+              "            InterfaceState('StarMap', 'kl_but_y_a', 1);",
+              "            InterfaceState('StarMap', 'kl_but_r_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_g_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_g', 1);",
+              "            InterfaceState('StarMap', 'kl_but_r', 1);",
+              "            InterfaceState('StarMap', 'kl_but_y', 0);",
+              "        }",
+              "    }",
+              "    if(temp_str != 'ExpScienceRanks_TickAttackMode' && temp_str != 'ExpScienceRanks_TickDefenseMode' && temp_str != 'ExpScienceRanks_TickSpeedMode') {",
+              "        if(InterfaceState('StarMap', 'TickHullModeSwitcher') == 1 || InterfaceState('StarMap', 'Klesh_panel') == 1) {",
+              "            Klesh_mon = 0;",
+              "            InterfaceState('StarMap', 'kl_but_y_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_r_a', 0);",
+              "            InterfaceState('StarMap', 'kl_but_g_a', 0);",
+              "            InterfaceState('StarMap', 'Klesh_panel', 0);",
+              "            InterfaceState('StarMap', 'TickHullModeSwitcher', 0);",
+              "        }",
               "    }",
               "}"          
           ]        
@@ -2517,7 +2526,6 @@
           "Pos.y":  20,
           "Parent":  107,
           "#":  52,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2531,7 +2539,6 @@
           "Pos.y":  30,
           "Parent":  55,
           "#":  56,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2545,7 +2552,6 @@
           "Pos.y":  30,
           "Parent":  55,
           "#":  57,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2559,7 +2565,6 @@
           "Pos.y":  20,
           "Parent":  80,
           "#":  82,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2573,7 +2578,6 @@
           "Pos.y":  20,
           "Parent":  80,
           "#":  83,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2587,7 +2591,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  86,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2601,7 +2604,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  87,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2615,7 +2617,6 @@
           "Pos.y":  20,
           "Parent":  107,
           "#":  103,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2629,7 +2630,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  104,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2643,7 +2643,6 @@
           "Pos.y":  20,
           "Parent":  118,
           "#":  119,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2657,7 +2656,6 @@
           "Pos.y":  20,
           "Parent":  118,
           "#":  120,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2671,7 +2669,6 @@
           "Pos.y":  40,
           "Parent":  122,
           "#":  123,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2685,7 +2682,6 @@
           "Pos.y":  40,
           "Parent":  122,
           "#":  124,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2699,7 +2695,6 @@
           "Pos.y":  20,
           "Parent":  34,
           "#":  127,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2713,7 +2708,6 @@
           "Pos.y":  20,
           "Parent":  34,
           "#":  128,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2727,7 +2721,6 @@
           "Pos.y":  20,
           "Parent":  26,
           "#":  132,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2741,7 +2734,6 @@
           "Pos.y":  20,
           "Parent":  85,
           "#":  133,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2755,7 +2747,6 @@
           "Pos.y":  20,
           "Parent":  26,
           "#":  138,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2769,7 +2760,6 @@
           "Pos.y":  20,
           "Parent":  145,
           "#":  151,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2783,7 +2773,6 @@
           "Pos.y":  20,
           "Parent":  145,
           "#":  152,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2797,7 +2786,6 @@
           "Pos.y":  -20,
           "Parent":  25,
           "#":  161,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2811,7 +2799,6 @@
           "Pos.y":  40,
           "Parent":  52,
           "#":  165,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2825,7 +2812,6 @@
           "Pos.y":  40,
           "Parent":  52,
           "#":  166,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2839,7 +2825,6 @@
           "Pos.y":  20,
           "Parent":  168,
           "#":  169,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2853,7 +2838,6 @@
           "Pos.y":  20,
           "Parent":  168,
           "#":  170,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2867,7 +2851,6 @@
           "Pos.y":  0,
           "Parent":  81,
           "#":  176,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2881,7 +2864,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  177,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2895,7 +2877,6 @@
           "Pos.y":  20,
           "Parent":  85,
           "#":  178,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2909,7 +2890,6 @@
           "Pos.y":  20,
           "Parent":  26,
           "#":  179,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2923,7 +2903,6 @@
           "Pos.y":  20,
           "Parent":  85,
           "#":  180,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2937,7 +2916,6 @@
           "Pos.y":  20,
           "Parent":  108,
           "#":  182,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2951,7 +2929,6 @@
           "Pos.y":  0,
           "Parent":  177,
           "#":  183,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2965,7 +2942,6 @@
           "Pos.y":  20,
           "Parent":  114,
           "#":  185,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2979,7 +2955,6 @@
           "Pos.y":  20,
           "Parent":  188,
           "#":  186,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2993,7 +2968,6 @@
           "Pos.y":  20,
           "Parent":  134,
           "#":  189,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3007,7 +2981,6 @@
           "Pos.y":  20,
           "Parent":  134,
           "#":  190,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3021,7 +2994,6 @@
           "Pos.y":  20,
           "Parent":  63,
           "#":  192,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3035,7 +3007,6 @@
           "Pos.y":  20,
           "Parent":  72,
           "#":  193,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3049,7 +3020,6 @@
           "Pos.y":  130,
           "Parent":  103,
           "#":  194,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3063,7 +3033,6 @@
           "Pos.y":  30,
           "Parent":  74,
           "#":  195,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3077,7 +3046,6 @@
           "Pos.y":  0,
           "Parent":  178,
           "#":  196,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3091,7 +3059,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  197,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3105,11 +3072,23 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  204,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
               "PlayerScienceRank['CurrentRank'] < 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  900,
+          "Pos.y":  160,
+          "Parent":  -1,
+          "#":  206,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "CurrentMods('Expansion\\ExpPanel')"          
           ]        
         }      
       ],
@@ -4855,6 +4834,13 @@
       "Type":  "TGraphLink",
       "Begin":  186,
       "End":  50,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  206,
+      "End":  205,
       "Nom":  0,
       "Arrow":  true    
     }  

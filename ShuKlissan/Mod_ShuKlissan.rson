@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1040,
-  "ViewPos.y":  -299,
+  "ViewPos.x":  -425,
+  "ViewPos.y":  -419,
   "ScriptName":  "Mod_ShuKlissan",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
-  "GraphPoint.Count":  415,
-  "GraphLink.Count":  349,
-  "GraphRectText.Count":  3,
-  "Variables.Count":  37,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  19,
-  "Groups.Count":  10,
-  "Places.Count":  3,
-  "Items.Count":  1,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  33,
-  "DialogMessages.Count":  78,
-  "DialogAnswers.Count":  89,
-  "Operations.Count":  91,
-  "Statements.Count":  51,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -2290,7 +2272,6 @@
           "Pos.y":  240,
           "Parent":  -1,
           "#":  2,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -2304,7 +2285,6 @@
           "Pos.y":  0,
           "Parent":  2,
           "#":  17,
-          "Total.Lines":  2112,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -2354,6 +2334,7 @@
               "if(!EvoArmadaInit)",
               "{",
               "    if(BlockExist('Script.Mod_EvoArmada')) EvoArmadaInit = 1;",
+              "    if(BlockExist('Script.Mod_EvoDreadnought')) EvoArmadaInit = 1;",
               "}",
               "",
               "//KlissanInvasion['StartDay'] - хранит в себе номер хода, в который состоится/состоялось первое появление клисан",
@@ -2419,7 +2400,7 @@
               "        ShipAddCustomShipInfo(handler, 'EvoArmada_CapitalShipInfos', 'NoShow', 2);",
               "",
               "        //Повышаем количество HP",
-              "        ItemSize(hull, round(1.0 * ItemSize(hull) * (1.0 + (1.0 * GeneralDiffLevel))));",
+              "        ItemSize(hull, round(1.0 * ItemSize(hull) * (1.4 + (0.3 * GeneralDiffLevel))));",
               "        //И значительно снижаем получаемый от астероидов урон",
               "        ShipSpecialBonuses(handler, bonResistAsteroid, 75);",
               "    }",
@@ -2552,7 +2533,7 @@
               "        ItemSize(hull, round(ItemSize(hull) * (1.0 + (0.45 * GeneralDiffLevel))));",
               "",
               "        //Также увеличиваем число её залпов",
-              "        int bon_attacks = 5;",
+              "        int bon_attacks = 2;",
               "        ShipSpecialBonuses(machpella, bonAttacks, bon_attacks);",
               "        //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
               "        ShipAddCustomShipInfo(machpella, 'EvoArmada_CapitalShipInfos', 'NoShow', bon_attacks);",
@@ -2691,12 +2672,12 @@
               "        tint = round((0.5 * GeneralDiffLevel) + (0.5 * PortionInDiapason(hull_tech_level, 1, 8, 1, 10)));",
               "        ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonHull'), tint);",
               "",
-              "        ShipSpecialBonuses(neurolink, bonAttacks, 2);",
+              "        ShipSpecialBonuses(neurolink, bonAttacks, 1);",
               "        //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
-              "        ShipAddCustomShipInfo(neurolink, 'EvoArmada_CapitalShipInfos', 'NoShow', 2);",
+              "        ShipAddCustomShipInfo(neurolink, 'EvoArmada_CapitalShipInfos', 'NoShow', 1);",
               "",
               "        //Повышаем количество HP",
-              "        ItemSize(hull, round(1.0 * ItemSize(hull) * (1.0 + (1.0 * GeneralDiffLevel))));",
+              "        ItemSize(hull, round(1.0 * ItemSize(hull) * (1.5 + (0.3 * GeneralDiffLevel))));",
               "    }",
               "    HullHP(hull, 'To100');",
               "    SetName(hull, Format(Name(hull), '<KlissanType'+'>', CT('Items.Hull.KlissanType.' + hull_tech_level), ''));",
@@ -2742,10 +2723,12 @@
               "    ShipJoinToScript(neurolink, 'Mod_ShuKlissan.Neurolinks');",
               "    ShipCustomFaction(neurolink, 'Klissan');",
               "",
+              "    ShipAddCustomShipInfo(neurolink,'Neurolink_StarDef','NoShow');",
+              "",
               "    //Выдаём нейролинку споры",
               "    ShipImproveItems(neurolink, PortionInDiapason(klissan_diff, 1, 10, 4, 12)); //Эта строка автоматически вешает подходящие ММ на оборудку нейролинка",
               "",
-              "    if(!KlissanInvasion['MentalCommunicator.WasReceived']) NoScanToShip(machpella, 1);",
+              "    if(!KlissanInvasion['MentalCommunicator.WasReceived']) NoScanToShip(neurolink, 1);",
               "    NoTalkToShip(neurolink, 1);",
               "    NoTargetToShip(neurolink, 2); //Чтобы отключить случайную агрессию со стороны пиратов",
               "    //Повышаем нейролинку пиратское звание до хана, чтоб, сука, уважали его тупые пираты!",
@@ -2867,8 +2850,9 @@
               "    dword hull = ShipItems(ship, 0);",
               "    int hull_tech_level;",
               "    int bonus;",
-              "    if(!EvoArmadaInit) str hull_bon_mod = 'ShuKlissan';",
-              "    else hull_bon_mod = 'EvoArmada';",
+              "    if(!EvoArmadaInit || BlockExist('Script.Mod_EvoDreadnought')) str hull_bon_mod = 'ShuKlissan';",
+              "    else if(!BlockExist('Script.Mod_EvoDreadnought')) hull_bon_mod = 'EvoArmada';",
+              "    else hull_bon_mod = 'ShuKlissan';",
               "    int remains_count = max(RndObject(1, 100, ship) - (klissan_diff_div2 * 5), 1);",
               "    dword mutations_fit_set = 1; //Используем для записи битсета, какая оборудка имеется у клисана, чтобы определить вариативность выдачи подходящих мутаций (акринов), по умолчанию в первом бите записана всегда доступная категория Common",
               "",
@@ -3269,9 +3253,9 @@
               "            //Если подключён мод EvoArmada, добавляем эгемону дополнительные залпы",
               "            if(EvoArmadaInit)",
               "            {",
-              "                ShipSpecialBonuses(ship, bonAttacks, 3);",
+              "                ShipSpecialBonuses(ship, bonAttacks, 1);",
               "                //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
-              "                ShipAddCustomShipInfo(ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 3);",
+              "                ShipAddCustomShipInfo(ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 1);",
               "                //Ограничиваем максимальный уровень навыка атаки (чтобы не так сильно нагибал)",
               "                if(ShipSkill(ship, 'Accuracy') > 2) ShipSkill(ship, 'Accuracy', RndObject(2, 3, ship));",
               "            }",
@@ -3317,9 +3301,9 @@
               "            //Если подключён мод EvoArmada, добавляем дополнительные залпы кораблю в этом же цикле (чтоб два раза не перебирать доминаторов в разных модах)",
               "            if(EvoArmadaInit)",
               "            {",
-              "                ShipSpecialBonuses(ship, bonAttacks, 4);",
+              "                ShipSpecialBonuses(ship, bonAttacks, 2);",
               "                //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
-              "                ShipAddCustomShipInfo(ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 4);",
+              "                ShipAddCustomShipInfo(ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 2);",
               "                //Ограничиваем максимальный уровень навыка атаки (чтобы не так сильно нагибал)",
               "                if(ShipSkill(ship, 'Accuracy') > 1) ShipSkill(ship, 'Accuracy', RndObject(1, 2, ship));",
               "            }",
@@ -3377,6 +3361,7 @@
               "    SetName(hull, Format(Name(hull), '<KlissanType'+'>', CT('Items.Hull.KlissanType.' + hull_tech_level), ''));",
               "    EqCustomFaction(hull, 'Klissan'); //Вешаем на корпус клисанскую фракцию",
               "    Chameleon(ship); //Обновляем скин корпуса после всех проведённых изменений",
+              "    Chameleon(ship); //Повторно на всякий пожарный",
               "",
               "    //Заполняем дроп клисана ошмётками",
               "    int remains_max = CT('Script.Mod_ShuKlissan.KlissanRemainsCount');",
@@ -3415,6 +3400,8 @@
               "    ShipFreeExp(ship, 0);",
               "    SetShipExpByType(ship, GetShipExpByType(ship) - free_exp, 0);",
               "    ShipFace(ship, 0);",
+              "",
+              "    Chameleon(ship); //И ещё разок напоследок",
               "",
               "    if(!KlissanInvasion['MentalCommunicator.WasReceived']) NoScanToShip(ship,1);",
               "",
@@ -4429,7 +4416,6 @@
           "Pos.y":  0,
           "Parent":  300,
           "#":  18,
-          "Total.Lines":  1637,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6079,7 +6065,6 @@
           "Pos.y":  0,
           "Parent":  2,
           "#":  19,
-          "Total.Lines":  232,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -6324,7 +6309,6 @@
           "Pos.y":  20,
           "Parent":  21,
           "#":  64,
-          "Total.Lines":  28,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6365,7 +6349,6 @@
           "Pos.y":  20,
           "Parent":  22,
           "#":  65,
-          "Total.Lines":  44,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6422,7 +6405,6 @@
           "Pos.y":  20,
           "Parent":  23,
           "#":  66,
-          "Total.Lines":  7,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6442,7 +6424,6 @@
           "Pos.y":  20,
           "Parent":  24,
           "#":  67,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6461,7 +6442,6 @@
           "Pos.y":  20,
           "Parent":  26,
           "#":  68,
-          "Total.Lines":  105,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6579,7 +6559,6 @@
           "Pos.y":  20,
           "Parent":  27,
           "#":  69,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6607,7 +6586,6 @@
           "Pos.y":  20,
           "Parent":  28,
           "#":  70,
-          "Total.Lines":  46,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6666,7 +6644,6 @@
           "Pos.y":  20,
           "Parent":  29,
           "#":  71,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6694,7 +6671,6 @@
           "Pos.y":  20,
           "Parent":  30,
           "#":  72,
-          "Total.Lines":  37,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6744,7 +6720,6 @@
           "Pos.y":  20,
           "Parent":  32,
           "#":  231,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6774,7 +6749,6 @@
           "Pos.y":  -110,
           "Parent":  -1,
           "#":  232,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6790,7 +6764,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  233,
-          "Total.Lines":  45,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6848,7 +6821,6 @@
           "Pos.y":  20,
           "Parent":  38,
           "#":  234,
-          "Total.Lines":  24,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6885,7 +6857,6 @@
           "Pos.y":  20,
           "Parent":  40,
           "#":  235,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6910,7 +6881,6 @@
           "Pos.y":  20,
           "Parent":  41,
           "#":  236,
-          "Total.Lines":  59,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -6982,7 +6952,6 @@
           "Pos.y":  20,
           "Parent":  42,
           "#":  237,
-          "Total.Lines":  94,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7089,7 +7058,6 @@
           "Pos.y":  20,
           "Parent":  46,
           "#":  238,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7103,7 +7071,6 @@
           "Pos.y":  20,
           "Parent":  51,
           "#":  239,
-          "Total.Lines":  33,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7149,7 +7116,6 @@
           "Pos.y":  30,
           "Parent":  53,
           "#":  240,
-          "Total.Lines":  50,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7212,7 +7178,6 @@
           "Pos.y":  20,
           "Parent":  58,
           "#":  241,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7231,7 +7196,6 @@
           "Pos.y":  20,
           "Parent":  59,
           "#":  242,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7250,7 +7214,6 @@
           "Pos.y":  20,
           "Parent":  60,
           "#":  243,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7269,7 +7232,6 @@
           "Pos.y":  20,
           "Parent":  61,
           "#":  244,
-          "Total.Lines":  62,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7344,7 +7306,6 @@
           "Pos.y":  20,
           "Parent":  62,
           "#":  245,
-          "Total.Lines":  23,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7380,7 +7341,6 @@
           "Pos.y":  0,
           "Parent":  225,
           "#":  246,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7398,7 +7358,6 @@
           "Pos.y":  20,
           "Parent":  63,
           "#":  247,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7428,7 +7387,6 @@
           "Pos.y":  0,
           "Parent":  105,
           "#":  248,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7457,7 +7415,6 @@
           "Pos.y":  20,
           "Parent":  130,
           "#":  249,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7481,7 +7438,6 @@
           "Pos.y":  40,
           "Parent":  314,
           "#":  250,
-          "Total.Lines":  17,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7511,7 +7467,6 @@
           "Pos.y":  20,
           "Parent":  151,
           "#":  252,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7535,7 +7490,6 @@
           "Pos.y":  30,
           "Parent":  83,
           "#":  253,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7563,7 +7517,6 @@
           "Pos.y":  -10,
           "Parent":  -1,
           "#":  254,
-          "Total.Lines":  64,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7640,7 +7593,6 @@
           "Pos.y":  -10,
           "Parent":  -1,
           "#":  255,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7665,7 +7617,6 @@
           "Pos.y":  110,
           "Parent":  -1,
           "#":  256,
-          "Total.Lines":  47,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7725,7 +7676,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  257,
-          "Total.Lines":  51,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7789,7 +7739,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  258,
-          "Total.Lines":  47,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7849,7 +7798,6 @@
           "Pos.y":  170,
           "Parent":  -1,
           "#":  259,
-          "Total.Lines":  64,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7926,7 +7874,6 @@
           "Pos.y":  20,
           "Parent":  180,
           "#":  260,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7940,7 +7887,6 @@
           "Pos.y":  -380,
           "Parent":  -1,
           "#":  261,
-          "Total.Lines":  45,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7998,7 +7944,6 @@
           "Pos.y":  20,
           "Parent":  187,
           "#":  264,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8013,7 +7958,6 @@
           "Pos.y":  20,
           "Parent":  188,
           "#":  265,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8028,7 +7972,6 @@
           "Pos.y":  20,
           "Parent":  190,
           "#":  268,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8044,7 +7987,6 @@
           "Pos.y":  20,
           "Parent":  191,
           "#":  269,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8059,7 +8001,6 @@
           "Pos.y":  20,
           "Parent":  192,
           "#":  270,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8075,7 +8016,6 @@
           "Pos.y":  20,
           "Parent":  193,
           "#":  271,
-          "Total.Lines":  38,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8126,7 +8066,6 @@
           "Pos.y":  20,
           "Parent":  194,
           "#":  272,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8141,7 +8080,6 @@
           "Pos.y":  20,
           "Parent":  195,
           "#":  273,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8156,7 +8094,6 @@
           "Pos.y":  20,
           "Parent":  197,
           "#":  276,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8171,7 +8108,6 @@
           "Pos.y":  20,
           "Parent":  198,
           "#":  277,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8186,7 +8122,6 @@
           "Pos.y":  20,
           "Parent":  199,
           "#":  278,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8201,7 +8136,6 @@
           "Pos.y":  20,
           "Parent":  200,
           "#":  279,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8216,7 +8150,6 @@
           "Pos.y":  20,
           "Parent":  280,
           "#":  282,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8231,7 +8164,6 @@
           "Pos.y":  20,
           "Parent":  281,
           "#":  283,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8246,7 +8178,6 @@
           "Pos.y":  20,
           "Parent":  203,
           "#":  284,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8261,7 +8192,6 @@
           "Pos.y":  20,
           "Parent":  204,
           "#":  285,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8276,7 +8206,6 @@
           "Pos.y":  20,
           "Parent":  286,
           "#":  288,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8291,7 +8220,6 @@
           "Pos.y":  20,
           "Parent":  287,
           "#":  289,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8306,7 +8234,6 @@
           "Pos.y":  20,
           "Parent":  399,
           "#":  290,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8320,7 +8247,6 @@
           "Pos.y":  20,
           "Parent":  210,
           "#":  291,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8336,7 +8262,6 @@
           "Pos.y":  20,
           "Parent":  212,
           "#":  292,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8352,7 +8277,6 @@
           "Pos.y":  20,
           "Parent":  136,
           "#":  293,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8379,7 +8303,6 @@
           "Pos.y":  20,
           "Parent":  137,
           "#":  294,
-          "Total.Lines":  5,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8397,7 +8320,6 @@
           "Pos.y":  0,
           "Parent":  220,
           "#":  295,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8412,7 +8334,6 @@
           "Pos.y":  20,
           "Parent":  222,
           "#":  296,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8429,7 +8350,6 @@
           "Pos.y":  40,
           "Parent":  224,
           "#":  297,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8448,7 +8368,6 @@
           "Pos.y":  40,
           "Parent":  227,
           "#":  298,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8467,7 +8386,6 @@
           "Pos.y":  20,
           "Parent":  301,
           "#":  300,
-          "Total.Lines":  31,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8478,6 +8396,7 @@
               "if(!EvoArmadaInit)",
               "{",
               "    if(BlockExist('Script.Mod_EvoArmada')) EvoArmadaInit = 1;",
+              "    if(BlockExist('Script.Mod_EvoDreadnought')) EvoArmadaInit = 1;",
               "}",
               "",
               "//Автоматическое обновление характеристик кастомных орудий",
@@ -8511,7 +8430,6 @@
           "Pos.y":  20,
           "Parent":  304,
           "#":  305,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8527,7 +8445,6 @@
           "Pos.y":  20,
           "Parent":  82,
           "#":  308,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8549,7 +8466,6 @@
           "Pos.y":  70,
           "Parent":  307,
           "#":  309,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8563,7 +8479,6 @@
           "Pos.y":  20,
           "Parent":  350,
           "#":  315,
-          "Total.Lines":  20,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8578,7 +8493,7 @@
               "else if(KlissanInvasion['MainResearch.StagesCompleted'] == 2)",
               "{",
               "    KlissanInvasion['MainResearch.ResearchLeft'] = (GalaxyDiffLevels(2) / 50) * 2000;",
-              "    tstr1 = '</color>' + \"Сегодня особенный день, рейнджер! Наш исследовательский отдел сумел пройти ключевой этап в изучении клисан, и мы с радостью сообщаем, что на научной станции <ShortName(GetShipRuins(Player()))> был достигнут новый <clr>прорыв<clrEnd>. <br>Новостью дня, бесспорно, является отчет по изучению функционала оборудования клисан - мы собрали достаточно образцов, чтобы сформировать четкое понимание того, на что их оборудование было, по крайней мере изначально рассчитано. Вот список всего, что нам удалось узнать: <br>- Гвидест (двигатель) обладает усиленной мощностью, и, вследствие, развивает высокую скорость<br>- Ондест (топливный бак) эффективно подает гипертопливо, обеспечивая высокую дальность прыжка<br>- Ксифест (дроид) по своей скорости существенно опережает прочие модели, быстрее латая пробоины<br>- Вахтест (захват) в связи с мощностью потока превосходит другие захваты по скорости притягивания<br>- Джевлест (ГЗП) генерирует дополнительное микрополе, снижающее массу корабля<br>- Гландест (радар) помогает наведению оружия на цель, увеличивая максимальную дальность поражения<br>- Наксест (сканер) выискивает слабые места в обшивке противника, усиливая наносимые повреждения<br><br>Важно, что клисанское оборудование, как и оружие, не состоит целиком из органических частей. Мы не смогли подтвердить некоторые догадки в прошлый раз, и держали эту информацию в секрете, но рейнджер, наш новый враг, судя по всему, использует самую настоящую технику. Пока мы не можем сказать наверняка, является ли это следствием естественной эволюции, или же результатом стороннего вмешательства. Основываясь на том, что предыдущая Махпелла просуществовала далеко не одно столетие и не спешила видоизменяться даже при встрече с коалиционными технологиями, мы можем предположить все что угодно, вплоть до <clr>влияния доминаторов или пиратов<clrEnd>. Возможно, это <clr>стоило бы проверить изнутри<clrEnd>, выйдя на связь с представитлями обеих сторон, но это исключительно на ваше усмотрение - не исключено, что внедрение окажется даже более опасным и трудоемким, нежели прямое исследование.<br><br>Продолжайте работу, рейнджер, перед нами поставлена серьезная загадка, с очень серьезными потенциальными последствиями в том случае, если мы не успеем её разгадать.\";",
+              "    tstr1 = '</color>' + \"Сегодня особенный день, рейнджер! Наш исследовательский отдел сумел пройти ключевой этап в изучении клисан, и мы с радостью сообщаем, что на научной станции <ShortName(GetShipRuins(Player()))> был достигнут новый <clr>прорыв<clrEnd>. <br>Новостью дня, бесспорно, является отчет по изучению функционала оборудования клисан - мы собрали достаточно образцов, чтобы сформировать четкое понимание того, на что их оборудование было, по крайней мере изначально рассчитано. Вот список всего, что нам удалось узнать: <br>- Жабродюзы (аналог двигателя) Просеивают генерируемую из горючего плазму и выталкивают наружу плазму, что, собственно, и является способом передвижения клисан. <br>- Протопузырь (хранилище топлива) состоит из желёз, вырабатывающих горючее, и хранилища выработанного топлива. <br>- Биорегенератор (восстановительный элемент) использует почти безграничные запасы аналогов стволовых клеток у клисан, активно заращивая повреждения внешнего защитного слоя. <br>- Плазмонить (аналог захвата) генерирует область повышенной гравитации, что вызывает притяжение всех объектов к боевой единице<br>- Плазмощит (аналог защитных систем) выпускает упорядоченный поток плазмы на предполагаемом пути полёта снаряда, что мешает его эффективному повреждению цели. <br>- Радиосенсоры (радар) анализируют все входящие сигналы и формируют картину окружающего пространства. <br>- Нейрощуп (сканер) настраивается на сигналы цели и дополнительно высылает серию особых сигналов, на основании которых определяются все основные свойства цели.<br><br>Важно, что клисанское оборудование, как и оружие, не состоит целиком из органических частей. Мы не смогли подтвердить некоторые догадки в прошлый раз, и держали эту информацию в секрете, но рейнджер, наш новый враг, судя по всему, использует самую настоящую технику. Пока мы не можем сказать наверняка, является ли это следствием естественной эволюции, или же результатом стороннего вмешательства. Основываясь на том, что предыдущая Махпелла просуществовала далеко не одно столетие и не спешила видоизменяться даже при встрече с коалиционными технологиями, мы можем предположить все что угодно, вплоть до <clr>влияния доминаторов или пиратов<clrEnd>. Возможно, это <clr>стоило бы проверить изнутри<clrEnd>, выйдя на связь с представитлями обеих сторон, но это исключительно на ваше усмотрение - не исключено, что внедрение окажется даже более опасным и трудоемким, нежели прямое исследование.<br><br>Продолжайте работу, рейнджер, перед нами поставлена серьезная загадка, с очень серьезными потенциальными последствиями в том случае, если мы не успеем её разгадать.\";",
               "}",
               "else if(KlissanInvasion['MainResearch.StagesCompleted'] == 3)",
               "{",
@@ -8596,7 +8511,6 @@
           "Pos.y":  20,
           "Parent":  302,
           "#":  353,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8610,7 +8524,6 @@
           "Pos.y":  20,
           "Parent":  363,
           "#":  364,
-          "Total.Lines":  110,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8733,7 +8646,6 @@
           "Pos.y":  20,
           "Parent":  213,
           "#":  367,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8749,7 +8661,6 @@
           "Pos.y":  20,
           "Parent":  25,
           "#":  368,
-          "Total.Lines":  11,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8773,7 +8684,6 @@
           "Pos.y":  20,
           "Parent":  34,
           "#":  369,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8792,7 +8702,6 @@
           "Pos.y":  20,
           "Parent":  331,
           "#":  375,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8808,7 +8717,6 @@
           "Pos.y":  20,
           "Parent":  56,
           "#":  376,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8825,7 +8733,6 @@
           "Pos.y":  20,
           "Parent":  381,
           "#":  382,
-          "Total.Lines":  105,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -8943,7 +8850,6 @@
           "Pos.y":  20,
           "Parent":  383,
           "#":  384,
-          "Total.Lines":  75,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9031,7 +8937,6 @@
           "Pos.y":  20,
           "Parent":  386,
           "#":  387,
-          "Total.Lines":  62,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9106,7 +9011,6 @@
           "Pos.y":  20,
           "Parent":  388,
           "#":  389,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9131,7 +9035,6 @@
           "Pos.y":  20,
           "Parent":  392,
           "#":  393,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9146,7 +9049,6 @@
           "Pos.y":  20,
           "Parent":  396,
           "#":  397,
-          "Total.Lines":  18,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9177,7 +9079,6 @@
           "Pos.y":  80,
           "Parent":  -1,
           "#":  402,
-          "Total.Lines":  3,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9193,7 +9094,6 @@
           "Pos.y":  20,
           "Parent":  57,
           "#":  403,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9210,7 +9110,6 @@
           "Pos.y":  20,
           "Parent":  404,
           "#":  405,
-          "Total.Lines":  27,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9360,7 +9259,6 @@
           "Pos.y":  20,
           "Parent":  141,
           "#":  251,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9374,7 +9272,6 @@
           "Pos.y":  20,
           "Parent":  186,
           "#":  262,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9388,7 +9285,6 @@
           "Pos.y":  20,
           "Parent":  186,
           "#":  263,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9402,7 +9298,6 @@
           "Pos.y":  20,
           "Parent":  189,
           "#":  266,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9416,7 +9311,6 @@
           "Pos.y":  20,
           "Parent":  189,
           "#":  267,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9430,7 +9324,6 @@
           "Pos.y":  20,
           "Parent":  196,
           "#":  274,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9444,7 +9337,6 @@
           "Pos.y":  20,
           "Parent":  120,
           "#":  275,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9458,7 +9350,6 @@
           "Pos.y":  20,
           "Parent":  202,
           "#":  280,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9472,7 +9363,6 @@
           "Pos.y":  20,
           "Parent":  202,
           "#":  281,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9486,7 +9376,6 @@
           "Pos.y":  20,
           "Parent":  207,
           "#":  286,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9500,7 +9389,6 @@
           "Pos.y":  20,
           "Parent":  207,
           "#":  287,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9514,7 +9402,6 @@
           "Pos.y":  -20,
           "Parent":  2,
           "#":  301,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9528,7 +9415,6 @@
           "Pos.y":  20,
           "Parent":  231,
           "#":  302,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9542,7 +9428,6 @@
           "Pos.y":  20,
           "Parent":  231,
           "#":  303,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9556,7 +9441,6 @@
           "Pos.y":  20,
           "Parent":  353,
           "#":  304,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9570,7 +9454,6 @@
           "Pos.y":  20,
           "Parent":  247,
           "#":  306,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9584,7 +9467,6 @@
           "Pos.y":  20,
           "Parent":  132,
           "#":  310,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9598,7 +9480,6 @@
           "Pos.y":  20,
           "Parent":  132,
           "#":  311,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9612,7 +9493,6 @@
           "Pos.y":  20,
           "Parent":  132,
           "#":  312,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9626,7 +9506,6 @@
           "Pos.y":  20,
           "Parent":  135,
           "#":  313,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9640,7 +9519,6 @@
           "Pos.y":  20,
           "Parent":  135,
           "#":  314,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9654,7 +9532,6 @@
           "Pos.y":  30,
           "Parent":  35,
           "#":  316,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9668,7 +9545,6 @@
           "Pos.y":  30,
           "Parent":  35,
           "#":  317,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9682,7 +9558,6 @@
           "Pos.y":  -70,
           "Parent":  -1,
           "#":  318,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9696,7 +9571,6 @@
           "Pos.y":  -70,
           "Parent":  -1,
           "#":  319,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9710,7 +9584,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  320,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9724,7 +9597,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  321,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9738,7 +9610,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  322,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9752,7 +9623,6 @@
           "Pos.y":  -50,
           "Parent":  -1,
           "#":  323,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9766,7 +9636,6 @@
           "Pos.y":  20,
           "Parent":  49,
           "#":  324,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9780,7 +9649,6 @@
           "Pos.y":  20,
           "Parent":  49,
           "#":  325,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9794,7 +9662,6 @@
           "Pos.y":  20,
           "Parent":  241,
           "#":  326,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9808,7 +9675,6 @@
           "Pos.y":  20,
           "Parent":  241,
           "#":  327,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9822,7 +9688,6 @@
           "Pos.y":  20,
           "Parent":  233,
           "#":  329,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9836,7 +9701,6 @@
           "Pos.y":  20,
           "Parent":  233,
           "#":  330,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9850,7 +9714,6 @@
           "Pos.y":  40,
           "Parent":  104,
           "#":  331,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9864,7 +9727,6 @@
           "Pos.y":  40,
           "Parent":  104,
           "#":  332,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9878,7 +9740,6 @@
           "Pos.y":  40,
           "Parent":  104,
           "#":  333,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9892,7 +9753,6 @@
           "Pos.y":  20,
           "Parent":  353,
           "#":  350,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9906,7 +9766,6 @@
           "Pos.y":  40,
           "Parent":  104,
           "#":  371,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9920,7 +9779,6 @@
           "Pos.y":  40,
           "Parent":  104,
           "#":  374,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9934,7 +9792,6 @@
           "Pos.y":  -160,
           "Parent":  378,
           "#":  377,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9948,7 +9805,6 @@
           "Pos.y":  0,
           "Parent":  209,
           "#":  378,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9962,7 +9818,6 @@
           "Pos.y":  -40,
           "Parent":  250,
           "#":  379,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9976,7 +9831,6 @@
           "Pos.y":  -270,
           "Parent":  -1,
           "#":  390,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -9990,7 +9844,6 @@
           "Pos.y":  120,
           "Parent":  -1,
           "#":  401,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10004,7 +9857,6 @@
           "Pos.y":  20,
           "Parent":  112,
           "#":  408,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10018,7 +9870,6 @@
           "Pos.y":  20,
           "Parent":  112,
           "#":  409,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10032,7 +9883,6 @@
           "Pos.y":  20,
           "Parent":  113,
           "#":  410,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10046,7 +9896,6 @@
           "Pos.y":  20,
           "Parent":  312,
           "#":  412,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -10060,7 +9909,6 @@
           "Pos.y":  20,
           "Parent":  312,
           "#":  413,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -14065,6 +13913,10 @@
       "String":  "Граждане и гражданки Коалиции Разумных Рас!"    
     },
     {
+      "#":  "415",
+      "String":  "Сегодня особенный день, рейнджер! Наш исследовательский отдел сумел пройти ключевой этап в изучении клисан, и мы с радостью сообщаем, что на научной станции <0> был достигнут новый <clr>прорыв<clrEnd>. <br>Новостью дня, бесспорно, является отчет по изучению функционала оборудования клисан - мы собрали достаточно образцов, чтобы сформировать четкое понимание того, на что их оборудование было, по крайней мере изначально рассчитано. Вот список всего, что нам удалось узнать: <br>- Жабродюзы (аналог двигателя) Просеивают генерируемую из горючего плазму и выталкивают наружу плазму, что, собственно, и является способом передвижения клисан. <br>- Протопузырь (хранилище топлива) состоит из желёз, вырабатывающих горючее, и хранилища выработанного топлива. <br>- Биорегенератор (восстановительный элемент) использует почти безграничные запасы аналогов стволовых клеток у клисан, активно заращивая повреждения внешнего защитного слоя. <br>- Плазмонить (аналог захвата) генерирует область повышенной гравитации, что вызывает притяжение всех объектов к боевой единице<br>- Плазмощит (аналог защитных систем) выпускает упорядоченный поток плазмы на предполагаемом пути полёта снаряда, что мешает его эффективному повреждению цели. <br>- Радиосенсоры (радар) анализируют все входящие сигналы и формируют картину окружающего пространства. <br>- Нейрощуп (сканер) настраивается на сигналы цели и дополнительно высылает серию особых сигналов, на основании которых определяются все основные свойства цели.<br><br>Важно, что клисанское оборудование, как и оружие, не состоит целиком из органических частей. Мы не смогли подтвердить некоторые догадки в прошлый раз, и держали эту информацию в секрете, но рейнджер, наш новый враг, судя по всему, использует самую настоящую технику. Пока мы не можем сказать наверняка, является ли это следствием естественной эволюции, или же результатом стороннего вмешательства. Основываясь на том, что предыдущая Махпелла просуществовала далеко не одно столетие и не спешила видоизменяться даже при встрече с коалиционными технологиями, мы можем предположить все что угодно, вплоть до <clr>влияния доминаторов или пиратов<clrEnd>. Возможно, это <clr>стоило бы проверить изнутри<clrEnd>, выйдя на связь с представитлями обеих сторон, но это исключительно на ваше усмотрение - не исключено, что внедрение окажется даже более опасным и трудоемким, нежели прямое исследование.<br><br>Продолжайте работу, рейнджер, перед нами поставлена серьезная загадка, с очень серьезными потенциальными последствиями в том случае, если мы не успеем её разгадать."    
+    },
+    {
       "#":  "61",
       "String":  "Отличные новости, рейнджер! Благодаря усилиям нашего отдела и стабильному притоку исследовательского материала, мы сумели сделать первый значительный <clr>прорыв<clrEnd> в исследовании возвратившейся клисанской угрозы. <br><br>Прежде всего, в точности подтверждены все наши догадки о том, что виток клисанской эволюции, с которым мы имеем дело сегодня - в корне отличается от того, что встретились Коалиции на заре прошлого тысячелетия. <br>Мы не до конца понимаем принцип работы нового формата группирования клисан, но, судя по всему - эта Махпелла, для облегчения управления собственными органами, не использует прямую связь, но прибегает к так называемым <clr>нейролинкам<clrEnd> - промежуточным узлам, выполняющим своеобразную административную роль. Не обманывайтесь сравнительно малым количеством атакующих, <Player> - нейролинки позволяют Махпелле содержать в разы больший потенциальный флот, чем его стандартная вариация, и оперировать им на самых отдаленных участках Галактики без малейшего координационного сбоя. Сталкиваясь с врагом, мы настоятельно рекомендуем атаковать эти узлы в первую очередь, иначе эффективность контратаки может оказаться поставленной под сомнение. <br><br>Основываясь на анализе базового функционала исследованного клисанского материала, а так же сравнения повреждений на корпусах наших кораблей, мы смогли выяснить некоторые принципы работы новой линейки вражеских орудий, вот список того, что наши ученые сумели подтвердить:<br>- число известных на данный момент клисанских орудий колеблется между десятью и пятнадцатью видами;<br>- некоторые клисанские корабли владеют бронебойным вооружением, обходящим защитное поле и защиту корпуса;<br>- большая часть клисанского оружия имеет дополнительные функции, такие как повреждение оборудования, электромагнитное излучение, замедление, часто в различных комбинациях;<br>- у клисан существует только один вид ракетного оружия - болт-матрица, использующийся катаури."    
     },
@@ -14167,10 +14019,6 @@
     {
       "#":  "92",
       "String":  "Так держать, <Player>! Уничтожением секретного объекта вы положили конец жизням множества гнусных предателей, натравивших для нас клисан ради собственных интересов. Безусловно, этот день войдет в историю!<br>Следующая цель - <clr>Махпелла<clrEnd>. Добьем врага до конца!"    
-    },
-    {
-      "#":  "94",
-      "String":  "Сегодня особенный день, рейнджер! Наш исследовательский отдел сумел пройти ключевой этап в изучении клисан, и мы с радостью сообщаем, что на научной станции <0> был достигнут новый <clr>прорыв<clrEnd>. <br>Новостью дня, бесспорно, является отчет по изучению функционала оборудования клисан - мы собрали достаточно образцов, чтобы сформировать четкое понимание того, на что их оборудование было, по крайней мере изначально рассчитано. Вот список всего, что нам удалось узнать: <br>- Гвидест (двигатель) обладает усиленной мощностью, и, вследствие, развивает высокую скорость<br>- Ондест (топливный бак) эффективно подает гипертопливо, обеспечивая высокую дальность прыжка<br>- Ксифест (дроид) по своей скорости существенно опережает прочие модели, быстрее латая пробоины<br>- Вахтест (захват) в связи с мощностью потока превосходит другие захваты по скорости притягивания<br>- Джевлест (ГЗП) генерирует дополнительное микрополе, снижающее массу корабля<br>- Гландест (радар) помогает наведению оружия на цель, увеличивая максимальную дальность поражения<br>- Наксест (сканер) выискивает слабые места в обшивке противника, усиливая наносимые повреждения<br><br>Важно, что клисанское оборудование, как и оружие, не состоит целиком из органических частей. Мы не смогли подтвердить некоторые догадки в прошлый раз, и держали эту информацию в секрете, но рейнджер, наш новый враг, судя по всему, использует самую настоящую технику. Пока мы не можем сказать наверняка, является ли это следствием естественной эволюции, или же результатом стороннего вмешательства. Основываясь на том, что предыдущая Махпелла просуществовала далеко не одно столетие и не спешила видоизменяться даже при встрече с коалиционными технологиями, мы можем предположить все что угодно, вплоть до <clr>влияния доминаторов или пиратов<clrEnd>. Возможно, это <clr>стоило бы проверить изнутри<clrEnd>, выйдя на связь с представитлями обеих сторон, но это исключительно на ваше усмотрение - не исключено, что внедрение окажется даже более опасным и трудоемким, нежели прямое исследование.<br><br>Продолжайте работу, рейнджер, перед нами поставлена серьезная загадка, с очень серьезными потенциальными последствиями в том случае, если мы не успеем её разгадать."    
     },
     {
       "#":  "95",
