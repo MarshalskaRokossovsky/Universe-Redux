@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  38,
-  "ViewPos.y":  -895,
+  "ViewPos.x":  -129,
+  "ViewPos.y":  -535,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -1950,6 +1950,14 @@
           "Pos.y":  -20,
           "Parent":  -1,
           "#":  686        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogMusic",
+          "Pos.x":  680,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  712        
         }      
       ],
       "Groups":      
@@ -9560,6 +9568,7 @@
               "        }",
               "",
               "        AddDialogInject('LunchIt', '', \"Ключ на старт\", -1);",
+              "        AddDialogInject('DialogMusic', '', \"Покрутить проигрыватель\", -1);",
               "        AddDialogInject('LeaveShip', '', \"Покинуть корабль\", -2);",
               "    }",
               "}"          
@@ -9649,7 +9658,9 @@
               "                else if(GalaxyEventData(i,0) == 10) temp_str = \"был уничтожен бизнес-центр\";",
               "                else if(GalaxyEventData(i,0) == 11) temp_str = \"был уничтожен медицинский центр\";",
               "                else if(GalaxyEventData(i,0) == 12) temp_str = \"был уничтожен доминион\";",
-              "                else temp_str = \"станция\";",
+              "                else temp_str = \"была уничтожена станция\";",
+              "                if(GalaxyEventsTextData(i,0) == 'MB') temp_str = \"был уничтожен Центр Наёмников\";",
+              "                else if(GalaxyEventsTextData(i,0) == 'TC') temp_str = \"был уничтожен Технологический Центр\";",
               "                NewsAdd(\"В системе \"+' '+ Name(GalaxyStar(GalaxyEventData(i,2) - 1)) + ' ' +temp_str);",
               "            }",
               "        }",
@@ -9698,6 +9709,21 @@
               "        ShipOut(CurShip);",
               "    }",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  680,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  713,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DAnswer('main');",
+              "Sound('Sound.ButtonInfoEnter');",
+              "StartMusic('StarMap');"          
           ]        
         }      
       ],
@@ -17023,6 +17049,13 @@
       "End":  710,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  712,
+      "End":  713,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -17580,7 +17613,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  379,
+  "BlockPar.EC.Total.Strings":  382,
   "BlockPar.EC":  
   [
     {
@@ -18624,10 +18657,6 @@
       "String":  "Включить уведомление о гибели баз"    
     },
     {
-      "#":  "1569",
-      "String":  "станция"    
-    },
-    {
       "#":  "1570",
       "String":  "был уничтожен доминион"    
     },
@@ -18702,6 +18731,22 @@
     {
       "#":  "1588",
       "String":  "Спонсировать постройку"    
+    },
+    {
+      "#":  "1589",
+      "String":  "был уничтожен Технологический Центр"    
+    },
+    {
+      "#":  "1590",
+      "String":  "был уничтожен Центр Наёмников"    
+    },
+    {
+      "#":  "1591",
+      "String":  "была уничтожена станция"    
+    },
+    {
+      "#":  "1592",
+      "String":  "Покрутить проигрыватель"    
     },
     {
       "#":  "212",

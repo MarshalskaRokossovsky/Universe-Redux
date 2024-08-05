@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -311,
-  "ViewPos.y":  110,
+  "ViewPos.x":  -654,
+  "ViewPos.y":  332,
   "ScriptName":  "Mod_ShuMercs",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -2651,7 +2651,7 @@
               "    {",
               "        HQ = ScriptItemActShip();",
               "",
-              "        if(HullHP(HQ) < ScriptItemActParam()) ScriptItemActParam(HullHP(HQ) - 1); //Чтобы одним залпом не сносили",
+              "        if(HullHP(HQ) < ScriptItemActParam() && HullHP(HQ) > 100) ScriptItemActParam(HullHP(HQ) - 1); //Чтобы одним залпом не сносили",
               "",
               "        if(HullDamage(HQ) > 50) ScriptItemActParam(ScriptItemActParam()/2); //Снижаем входящий урон, чтобы штабу совсем грустно не становилось",
               "",
@@ -7497,7 +7497,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(!ShipInNormalSpace(CurShip)) ShipIsTakeoff(CurShip);",
+              "if(!ShipInNormalSpace(CurShip) || GetShipPlanet(CurShip) || GetShipRuins(CurShip)) ShipIsTakeoff(CurShip);",
               "else {",
               "    //Лидер пошёл воевать",
               "    if(GroupCount(MercCenter)) {",
@@ -7507,7 +7507,7 @@
               "            for(i=0;StarShips(ShipStar(CurShip))>i;i=i+1) {",
               "                if(RelationToShip(CurShip,StarShips(ShipStar(CurShip),i)) < 10) tint1 = tint1 + 1;",
               "            }",
-              "    ",
+              "",
               "            //Лидерам не кайф воевать за то, что их не касается, поэтому, если дело пахнет керосином, драпают",
               "            if(HullDamage(CurShip) > 30 || tint1 > 25) {",
               "                //Чтобы точно не дали прикурить, включаем ребятам форсаж",
@@ -7602,7 +7602,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(!ShipInNormalSpace(CurShip)) ShipIsTakeoff(CurShip);",
+              "if(!ShipInNormalSpace(CurShip) || GetShipPlanet(CurShip) || GetShipRuins(CurShip)) ShipIsTakeoff(CurShip);",
               "else {",
               "    //Лидер либо сядет к себе в штаб, либо на ЦН, либо улетит в неизвестность",
               "    if(ShipGroup(CurShip) == RedAxesLeader && !ShipInStar(CurShip,ShipStar(GroupToShip(RedAxesHQ)))) dword base = GroupToShip(RedAxesHQ);",

@@ -1069,7 +1069,7 @@
         },
         {
           "Type":  "TDialog",
-          "Name":  "DialogNew",
+          "Name":  "Follow",
           "Pos.x":  240,
           "Pos.y":  270,
           "Parent":  -1,
@@ -1687,6 +1687,8 @@
               "    else if(temp_int_5 <= TrancChanceArray[13]) tNumber = round(1.0 * tNumber / 3.0);",
               "    else if(temp_int_5 <= TrancChanceArray[14]) tNumber = 1;",
               "",
+              "    if(!tNumber) exit;",
+              "    ",
               "    //Увеличиваем навык техники корабля, если его недостаточно для владения выпавшим числом транклюкаторов",
               "    if(ShipSkill(ship, 2) < tNumber) ShipSkill(ship, 2, tNumber);",
               "",

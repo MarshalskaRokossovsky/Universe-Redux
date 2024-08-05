@@ -667,6 +667,7 @@
               "  AddItemToShip(Player(), item);",
               "  vStateDom=2;",
               "  MyProbe=1;",
+              "  Unzond = 1;",
               "}"          
           ]        
         },
@@ -1747,6 +1748,19 @@
           [
               "CountIn(PelengSpy)"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  690,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  144,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!Unzond"          
+          ]        
         }      
       ],
       "States":      
@@ -2160,6 +2174,17 @@
           "#":  141,
           "Var.Type":  "Str",
           "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Unzond",
+          "Pos.x":  780,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  143,
+          "Var.Type":  "Int",
+          "Init":  "0",
           "Global":  false        
         }      
       ]    
@@ -2955,13 +2980,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  136,
-      "End":  140,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  138,
       "End":  142,
       "Nom":  0,
@@ -2971,6 +2989,20 @@
       "Type":  "TGraphLink",
       "Begin":  142,
       "End":  139,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  136,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  144,
+      "End":  140,
       "Nom":  0,
       "Arrow":  true    
     }  

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -486,
-  "ViewPos.y":  -32,
+  "ViewPos.x":  -494,
+  "ViewPos.y":  -193,
   "ScriptName":  "Mod_ExpBlackMarket_2",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBlackMarket\\DATA\\Script\\Mod_ExpBlackMarket_2.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBlackMarket\\DATA\\Script\\Mod_ExpBlackMarket_2.txt",
@@ -2511,6 +2511,29 @@
               "str2 = '</color>' + CT('Script.Mod_ExpBlackMarket_2.BMAccessNoWay');",
               "str3 = '</color>' + CT('Script.Mod_ExpBlackMarket_2.BMAccessAsYourWish');"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  400,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  77,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GetShipRuins(Player())) {",
+              "    if(ShipType(GetShipRuins(Player())) == 'BM')",
+              "    {",
+              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
+              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
+              "        InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
+              "    }",
+              "}"          
+          ]        
         }      
       ],
       "Planets":      
@@ -2640,6 +2663,19 @@
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  76,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipIsTakeoff(Player())"          
           ]        
         }      
       ],
@@ -3338,6 +3374,13 @@
       "Type":  "TGraphLink",
       "Begin":  72,
       "End":  60,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  76,
+      "End":  77,
       "Nom":  0,
       "Arrow":  true    
     }  
