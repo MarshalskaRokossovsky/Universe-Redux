@@ -1049,6 +1049,19 @@
           [
               "tstr = Format('Нужно отыскать name и отобрать у него зонд.','name',Name(PelengSpy));"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  720,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  145,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.QuestOk');"          
+          ]        
         }      
       ],
       "Places":      
@@ -2571,13 +2584,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  73,
-      "End":  74,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  74,
       "End":  75,
       "Nom":  0,
@@ -3003,6 +3009,20 @@
       "Type":  "TGraphLink",
       "Begin":  144,
       "End":  140,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  73,
+      "End":  145,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  145,
+      "End":  74,
       "Nom":  0,
       "Arrow":  true    
     }  

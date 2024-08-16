@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -681,
-  "ViewPos.y":  -82,
+  "ViewPos.x":  -584,
+  "ViewPos.y":  -168,
   "ScriptName":  "Mod_ExpPhysGun",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPhysGun\\DATA\\Script\\Mod_ExpPhysGun.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPhysGun\\DATA\\Script\\Mod_ExpPhysGun.txt",
@@ -1186,6 +1186,7 @@
               "",
               "                    //Снимаем защиту системы",
               "                    NoComeKlingToStar(ScriptStar, 0);",
+              "                    EtherDelete('ExpPhysGun_QuestEther');",
               "                    AllShipOut();",
               "                }",
               "            }",

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  755,
-  "ViewPos.y":  468,
+  "ViewPos.x":  -425,
+  "ViewPos.y":  -10,
   "ScriptName":  "Mod_RevElection",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.txt",
@@ -1277,7 +1277,7 @@
           "Pos.x":  2390,
           "Pos.y":  1000,
           "Parent":  -1,
-          "#":  580,
+          "#":  579,
           "Msg":  "Ладно, ладно, я погорячился, прости. Давай вернёмся к диалогу",
           "AMsg.Num":  "126"        
         },
@@ -1287,7 +1287,7 @@
           "Pos.x":  1050,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  585,
+          "#":  584,
           "Msg":  "Хоть кто-то в этом космосе счастлив...",
           "AMsg.Num":  "127"        
         }      
@@ -2260,7 +2260,7 @@
           "Pos.x":  1010,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  584,
+          "#":  583,
           "Msg":  "Новые исследования ждут меня!",
           "DMsg.Num":  "96"        
         }      
@@ -4300,23 +4300,10 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  1520,
-          "Pos.y":  940,
-          "Parent":  -1,
-          "#":  578,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "vShips=vShips+1;"          
-          ]        
-        },
-        {
-          "Type":  "Top",
-          "Name":  "",
           "Pos.x":  1940,
           "Pos.y":  710,
           "Parent":  -1,
-          "#":  579,
+          "#":  578,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4329,7 +4316,7 @@
           "Pos.x":  2380,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  581,
+          "#":  580,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -4346,7 +4333,7 @@
           "Pos.x":  880,
           "Pos.y":  1010,
           "Parent":  -1,
-          "#":  586,
+          "#":  585,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -4363,7 +4350,7 @@
           "Pos.x":  1360,
           "Pos.y":  710,
           "Parent":  -1,
-          "#":  587,
+          "#":  586,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -6621,7 +6608,7 @@
           "Pos.x":  970,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  583,
+          "#":  582,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -7477,7 +7464,7 @@
           "Pos.x":  -290,
           "Pos.y":  810,
           "Parent":  -1,
-          "#":  582,
+          "#":  581,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -12557,28 +12544,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  302,
+      "Begin":  421,
       "End":  578,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  421,
+      "Begin":  230,
       "End":  579,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  230,
-      "End":  580,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  580,
+      "Begin":  579,
       "End":  224,
       "Nom":  0,
       "Arrow":  true    
@@ -12593,6 +12573,13 @@
     {
       "Type":  "TGraphLink",
       "Begin":  83,
+      "End":  582,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  582,
       "End":  583,
       "Nom":  0,
       "Arrow":  true    
@@ -12601,13 +12588,6 @@
       "Type":  "TGraphLink",
       "Begin":  583,
       "End":  584,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  584,
-      "End":  585,
       "Nom":  0,
       "Arrow":  true    
     }  
