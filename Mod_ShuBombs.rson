@@ -6,24 +6,6 @@
   "ScriptName":  "Mod_ShuBombs",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.txt",
-  "GraphPoint.Count":  27,
-  "GraphLink.Count":  11,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  11,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  2,
-  "DialogMessages.Count":  2,
-  "DialogAnswers.Count":  1,
-  "Operations.Count":  6,
-  "Statements.Count":  0,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -123,7 +105,6 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  5,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -137,7 +118,6 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  6,
-          "Total.Lines":  38,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -188,7 +168,6 @@
           "Pos.y":  -120,
           "Parent":  -1,
           "#":  16,
-          "Total.Lines":  13,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -214,7 +193,6 @@
           "Pos.y":  -40,
           "Parent":  -1,
           "#":  18,
-          "Total.Lines":  4,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -231,7 +209,6 @@
           "Pos.y":  -80,
           "Parent":  -1,
           "#":  20,
-          "Total.Lines":  21,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -265,12 +242,28 @@
           "Pos.y":  40,
           "Parent":  -1,
           "#":  23,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
               "ShipDestroy(GetTalkShip(), 1);",
               "ArrayClear(tempArr);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(GetTalkShip()) {",
+              "    if(ShipInNormalSpace(Player())) {",
+              "        if(ShipType(GetTalkShip()) == 'ShuNukes_SelectTargetNova') AddDialogOverride('SelectTarget', 20, 1);",
+              "    }",
+              "}"          
           ]        
         }      
       ],

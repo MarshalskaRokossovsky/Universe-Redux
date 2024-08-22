@@ -1682,25 +1682,25 @@
               "            if(findsubstr(temp_str_2,'ShuDomiks') == 1) {",
               "                if(GalaxyDominatorResearchPercent() > 40 && GalaxyTechLevel() > 4) {",
               "                    if(GetValueFromScript('Mod_ShuDomiks','EnergizeExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'Energize') == 1) temp_str = 'Энерджайз';",
+              "                        if(findsubstr(temp_str_2,'Energize') == 1) temp_str = \"Энерджайз\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','GlueExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'Glue') == 1) temp_str = 'Глю';",
+              "                        if(findsubstr(temp_str_2,'Glue') == 1) temp_str = \"Глю\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','StrikeExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'Strike') == 1) temp_str = 'Страйк';",
+              "                        if(findsubstr(temp_str_2,'Strike') == 1) temp_str = \"Страйк\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','SpeedExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'SpeedDrop') == 1) temp_str = 'Спид-дроп';",
+              "                        if(findsubstr(temp_str_2,'SpeedDrop') == 1) temp_str = \"Спид-дроп\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','RocketExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'RocketLauncher') == 1) temp_str = 'Рокет-ланчер';",
+              "                        if(findsubstr(temp_str_2,'RocketLauncher') == 1) temp_str = \"Рокет-ланчер\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','QuickExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'Quickshot') == 1) temp_str = 'Квикшот';",
+              "                        if(findsubstr(temp_str_2,'Quickshot') == 1) temp_str = \"Квикшот\";",
               "                    }",
               "                    if(GetValueFromScript('Mod_ShuDomiks','DetrimentExp') >= 100) {",
-              "                        if(findsubstr(temp_str_2,'Detriment') == 1) temp_str = 'Дитраймент';",
+              "                        if(findsubstr(temp_str_2,'Detriment') == 1) temp_str = \"Дитраймент\";",
               "                    }",
               "",
               "                    InjectAnswer('acrin_2', temp_str, i);",
@@ -4986,7 +4986,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  53,
+  "BlockPar.EC.Total.Strings":  60,
   "BlockPar.EC":  
   [
     {
@@ -5198,8 +5198,36 @@
       "String":  "Вы исследовали уже <0> Чёрных Дыр и потому представлены к новой учёной степени <1>.<br>Торжественную церемонию и вручение подарка вам организуют на любой научной базе.<br>До тех пор подсчёт исследованных вами Чёрных Дыр приостановлен."    
     },
     {
+      "#":  "394",
+      "String":  "Дитраймент"    
+    },
+    {
+      "#":  "395",
+      "String":  "Квикшот"    
+    },
+    {
+      "#":  "396",
+      "String":  "Рокет-ланчер"    
+    },
+    {
+      "#":  "397",
+      "String":  "Спид-дроп"    
+    },
+    {
+      "#":  "398",
+      "String":  "Страйк"    
+    },
+    {
+      "#":  "399",
+      "String":  "Глю"    
+    },
+    {
       "#":  "40",
       "String":  "Рад служить прогрессу!"    
+    },
+    {
+      "#":  "400",
+      "String":  "Энерджайз"    
     }  
   ]
 }

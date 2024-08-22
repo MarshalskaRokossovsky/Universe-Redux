@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -584,
-  "ViewPos.y":  -168,
+  "ViewPos.x":  -639,
+  "ViewPos.y":  -136,
   "ScriptName":  "Mod_ExpPhysGun",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPhysGun\\DATA\\Script\\Mod_ExpPhysGun.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPhysGun\\DATA\\Script\\Mod_ExpPhysGun.txt",
@@ -1675,7 +1675,13 @@
               "tstr1 = '</color>' + Format(CT('Script.Mod_ExpPhysGun.AtBeginning'),",
               "        '<StarName'+'>', Name(ScriptStar));",
               "tstr2 = '</color>' + CT('Script.Mod_ExpPhysGun.PlayerStartQuest');",
-              "tstr3 = '</color>' + CT('Script.Mod_ExpPhysGun.PlayerSkipQuest');"          
+              "tstr3 = '</color>' + CT('Script.Mod_ExpPhysGun.PlayerSkipQuest');",
+              "SFT('ExpPhysGun logging'+CT('Script.Mod_ExpPhysGun.AtBeginning'));",
+              "SFT('ExpPhysGun logging'+CT('Script.Mod_ExpPhysGun.PlayerStartQuest'));",
+              "SFT('ExpPhysGun logging'+CT('Script.Mod_ExpPhysGun.PlayerSkipQuest'));",
+              "SFT('ExpPhysGun logging'+tstr1);",
+              "SFT('ExpPhysGun logging'+tstr2);",
+              "SFT('ExpPhysGun logging'+tstr3);"          
           ]        
         }      
       ],
