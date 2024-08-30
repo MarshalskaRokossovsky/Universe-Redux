@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1109,
-  "ViewPos.y":  -390,
+  "ViewPos.x":  -929,
+  "ViewPos.y":  -277,
   "ScriptName":  "Mod_ExpTC",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.txt",
@@ -961,7 +961,7 @@
               "                else if(temp_int == 2) temp_str_2 = \"Сегодня открылся новый технологический центр <temp_str> в системе <StarName(temp_dword_4)> сектора <Name(StarToCon(temp_dword_4))>. Настоятельно рекомендуем всем небезразличным пилотам в кратчайшие сроки пройти техосмотр своих звездолетов.\";",
               "                else temp_str_2 = \"Мы рады сообщить вам, что наша сеть технологических центров расширяется! Новая сервисная станция <temp_str> ждет пилотов в системе <StarName(temp_dword_4)> сектора <Name(StarToCon(temp_dword_4))>! Не пролетайте мимо! Только у нас вы найдете лучшие технологические услуги во всей Галактике!\";",
               "                NewsAdd(temp_str_2);",
-              "                AddPlanetNews(temp_str_2);",
+              "                AddPlanetNews(temp_str_2,51);",
               "            }",
               "            break;",
               "        }",
@@ -1814,7 +1814,7 @@
               "        AddDialogInject('hull_imp', '', \"Улучшить корпус\", 20);",
               "        AddDialogInject('choose_unic', '', \"Произвести уникальные улучшения\", 15);",
               "        AddDialogInject('probe_up', '', \"Улучшить зонд\", 10);",
-              "        if(TrancStage == 0) {",
+              "        if(!TrancStage) {",
               "            //Проверяем, нет ли у игрока транков",
               "            TrancFlag = 0;",
               "            if(PlayerTranclucators() > 0) TrancFlag = 1;",
@@ -1837,11 +1837,10 @@
               "                AddDialogInject('TrancCreate',\"Кстати, если у вас нет транклюкатора, то мы можем собрать для вас одного по низкой цене.\",\"Хочу собрать транклюкатора\",50);",
               "                mcost = GalaxyMoney(4,4);",
               "                tcost = 120+GalaxyTechLevel()*80;",
-              "",
               "            }",
               "        }",
               "        if(TrancStage == 2) {",
-              "            AddDialogInject('TranEnded',\"Кстати, ваш заказ на создание транклюкатора был выполнен. Можете забирать\",\"Забрать транклюкатора\",50);",
+              "            AddDialogInject('TrancEnded',\"Кстати, ваш заказ на создание транклюкатора был выполнен. Можете забирать\",\"Забрать транклюкатора\",50);",
               "        }",
               "    }",
               "}"          
@@ -2603,15 +2602,23 @@
           [
               "for(i=0;ShipItems(Player())>i;i=i+1) {",
               "    if(ItemType(ShipItems(Player(),i)) == t_Engine) {",
+              "        if(ready == 1) continue;",
+              "        if(ready == 3) continue;",
+              "        if(ItemIsInUse(ShipItems(Player(),i))) continue;",
               "        if(ItemIsInSet(ShipItems(Player(),i))) continue;",
               "        if(ready == 2) ready = 3;",
               "        else ready = 1;",
               "    }",
               "    if(ItemType(ShipItems(Player(),i)) == t_FuelTanks) {",
+              "        if(ready == 2) continue;",
+              "        if(ready == 3) continue;",
+              "        if(ItemIsInUse(ShipItems(Player(),i))) continue;",
               "        if(ItemIsInSet(ShipItems(Player(),i))) continue;",
               "        if(ready == 1) ready = 3;",
               "        else ready = 2;",
               "    }",
+              "",
+              "    if(ready == 3) break;",
               "}"          
           ]        
         },
@@ -2625,10 +2632,11 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "for(i=0;ShipItems(Player())>i;i=i+1) {",
+              "for(i=ShipItems(Player());0<i;i=i-1) {",
               "    if(ItemType(ShipItems(Player(),i)) == t_Engine) {",
               "        if(ready == 1) continue;",
               "        TrancRace = ItemOwner(ShipItems(Player(),i));",
+              "        if(ItemIsInUse(ShipItems(Player(),i))) continue;",
               "        if(ItemIsInSet(ShipItems(Player(),i))) continue;",
               "        if(ready == 2) ready = 3;",
               "        else ready = 1;",
@@ -2636,6 +2644,7 @@
               "    }",
               "    if(ItemType(ShipItems(Player(),i)) == t_FuelTanks) {",
               "        if(ready == 2) continue;",
+              "        if(ItemIsInUse(ShipItems(Player(),i))) continue;",
               "        if(ItemIsInSet(ShipItems(Player(),i))) continue;",
               "        if(Rnd(1,2) == 2) TrancRace = ItemOwner(ShipItems(Player(),i));",
               "        if(ready == 1) ready = 3;",
@@ -2647,7 +2656,7 @@
               "GoodsAdd(Player(),t_Technics,-tcost);",
               "Sound('Sound.Buy');",
               "TrancDays = 90;",
-              "TrancStage = 1"          
+              "TrancStage = 1;"          
           ]        
         },
         {
@@ -2660,7 +2669,9 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "AddItemToShip(Player(),CreateArt(t_Tranclucator,TrancRace));"          
+              "temp_dword = CreateArt(t_ArtefactTranclucator,ShipPilotRace(Player()));",
+              "AddItemToStorage(GetShipRuins(Player()),temp_dword);",
+              "TrancStage = 3;"          
           ]        
         }      
       ],

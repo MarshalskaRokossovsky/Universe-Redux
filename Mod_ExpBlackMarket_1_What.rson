@@ -492,6 +492,8 @@
               "    ItemDurability(ShipEqInSlot(dwd0, t_Engine), 0);",
               "    ItemDurability(ShipEqInSlot(dwd0, t_RepairRobot), 0);",
               "    ShipType(dwd0, 'Smuggler');",
+              "    SFT('BlackMarket logging: Smuggler is ' + dwd0);",
+              "    SFT('BlackMarket logging: Smuggler is on ' + Name(CoalPlanet));",
               "    ShipJoin(Smuggler, dwd0);",
               "    HullHP(dwd0, round(0.43 * ItemSize(ShipItems(dwd0, 0))));",
               "    Chameleon(dwd0);",
@@ -1091,13 +1093,12 @@
               "//scriptState == 3 - контрабандиста убили?",
               "//scriptState == 4 - ждём, когда игрок подберёт отсек",
               "//scriptState == 5 - игрок подобрал отсек",
-              "//scriptState == 6 - стартовое значение ситуации",
-              "//scriptState == 7 - стартовое значение ситуации",
-              "//scriptState == 8 - стартовое значение ситуации",
-              "//scriptState == 9 - стартовое значение ситуации",
+              "//scriptState == 6 - игрок летит к месту выхода ЧР",
+              "//scriptState == 7 - ",
+              "//scriptState == 8 - ",
+              "//scriptState == 9 - игрок поговорил и торчит на фейковом ЧР",
               "//scriptState == 10 - ситуация провалена по причине гибели кого-то",
-              "//scriptState == 0 - стартовое значение ситуации",
-              "//scriptState == 0 - стартовое значение ситуации"          
+              "//scriptState == 11 - ситуация завершена успешно"          
           ]        
         },
         {

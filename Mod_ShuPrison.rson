@@ -4,26 +4,8 @@
   "ViewPos.x":  -134,
   "ViewPos.y":  -225,
   "ScriptName":  "Mod_ShuPrison",
-  "ScriptFileOut":  "C:\\Users\\Владимир\\Desktop\\Mod_ShuPrison.scr",
-  "ScriptTextOut":  "C:\\Users\\Владимир\\Desktop\\Mod_ShuPrison.txt",
-  "GraphPoint.Count":  21,
-  "GraphLink.Count":  4,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  13,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  0,
-  "DialogMessages.Count":  0,
-  "DialogAnswers.Count":  0,
-  "Operations.Count":  3,
-  "Statements.Count":  0,
-  "Loops.Count":  0,
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPrison\\DATA\\Script\\Mod_ShuPrison.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPrison\\DATA\\Script\\Mod_ShuPrison.txt",
   "Visual.Objects":  
   [
     {
@@ -68,7 +50,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  0,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -82,7 +63,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  9,
-          "Total.Lines":  58,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -136,7 +116,7 @@
               "                if(PlanetOwner(cur_planet) != PirateClan) RelationToRanger(cur_planet, cur_ship, 10);",
               "                else RelationToRanger(PlanetPirateClan(), cur_ship, 10);",
               "            }",
-              "            AddPlanetNews(Format(CT('Script.Mod_ShuPrison.Jailbreak' + RndObject(1, 3, cur_planet)), '<Star'+'>', Name(PlanetToStar(cur_planet)), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(cur_ship)));",
+              "            AddPlanetNews(Format(CT('Script.Mod_ShuPrison.Jailbreak' + RndObject(1, 3, cur_planet)), '<Star'+'>', Name(PlanetToStar(cur_planet)), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(cur_ship)),52);",
               "",
               "            //Вешаем на беглого заключённого временную инфошку, которая выдаст вознаграждение игроку, если он его завалит",
               "            rand = GalaxyMoney(3, 3);",
@@ -153,7 +133,6 @@
           "Pos.y":  400,
           "Parent":  -1,
           "#":  17,
-          "Total.Lines":  173,
           "Code.Type":  "Init",
           "Code":          
           [

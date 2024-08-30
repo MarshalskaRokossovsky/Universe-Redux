@@ -1399,7 +1399,7 @@
               "",
               "    //Выводим галановость о дерзком побеге игрока",
               "    cur_planet = IdToPlanet(ShipCustomShipInfoData(Player(), 'ExpTraitors_RuinsRelationsControl', 2));",
-              "    AddPlanetNews(Format(CT('Script.Mod_ExpTraitors.Jailbreak' + RndObject(1, 3, cur_planet)), '<Star'+'>', Name(PlanetToStar(cur_planet)), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(Player())));",
+              "    AddPlanetNews(Format(CT('Script.Mod_ExpTraitors.Jailbreak' + RndObject(1, 3, cur_planet)), '<Star'+'>', Name(PlanetToStar(cur_planet)), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(Player())),52);",
               "}",
               "",
               "//Перебор галаэвентов и смена отношения со станциями (здесь же автоматически обнуляются все значения, которые выше могли выставить другие скрипты)",

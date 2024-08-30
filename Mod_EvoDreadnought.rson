@@ -1361,7 +1361,7 @@
               "                                                                                    '<Planet'+'>', Name(cur_planet),",
               "                                                                                    '<Star'+'>', Name(cur_star),",
               "                                                                                    '<Dreadnought'+'>', ShipName(dwd0),",
-              "                                                                                    '<Sector'+'>', Name(StarToCon(cur_star))));",
+              "                                                                                    '<Sector'+'>', Name(StarToCon(cur_star))),48);",
               "            ShipJoin(Dreadnought, dwd0);",
               "            //Прокручиваем общий счётчик дредноутов в Галактике",
               "            GDreadnoughtArray[0] = 0 + GDreadnoughtArray[0] + 1;",

@@ -4,26 +4,8 @@
   "ViewPos.x":  -187,
   "ViewPos.y":  267,
   "ScriptName":  "Mod_ShuBK",
-  "ScriptFileOut":  "H:\\Mod_ShuBK.scr",
-  "ScriptTextOut":  "H:\\Mod_ShuBK.txt",
-  "GraphPoint.Count":  23,
-  "GraphLink.Count":  4,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  14,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  0,
-  "DialogMessages.Count":  0,
-  "DialogAnswers.Count":  0,
-  "Operations.Count":  4,
-  "Statements.Count":  0,
-  "Loops.Count":  0,
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBK\\DATA\\Script\\Mod_ShuBK.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuBK\\DATA\\Script\\Mod_ShuBK.txt",
   "Visual.Objects":  
   [
     {
@@ -68,7 +50,6 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  0,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -82,7 +63,6 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  6,
-          "Total.Lines":  74,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -112,15 +92,6 @@
               "        dis_bon_25 = FindBonusByNameInCfg('ShuBK_Discount25');",
               "        dis_bon_50 = FindBonusByNameInCfg('ShuBK_Discount50');",
               "        dis_bon_75 = FindBonusByNameInCfg('ShuBK_Discount75');",
-              "        //Добавляем скидку на товары, потому что почему бы и нет",
-              "        GoodsRuinsForBuy(cur_ruin,t_Food);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Alcohol);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Medicine);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Luxury);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Arms);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Narcotics);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Minerals);",
-              "        GoodsRuinsForBuy(cur_ruin,t_Technics);",
               "        for(j = 0; j < ShopItems(cur_ruin); j = j + 1)",
               "        {",
               "            if(Rnd(0, 2))",
@@ -152,7 +123,7 @@
               "        else if(rand == 3) tstr1 = Format(CT('Script.Mod_ShuBK.GrandBKSale3'), '#0#', Name(cur_star), '#1#', ShipName(cur_ruin));",
               "        else if(rand == 4) tstr1 = Format(CT('Script.Mod_ShuBK.GrandBKSale4'), '#0#', ShipName(cur_ruin), '#1#', Name(cur_star));",
               "        else if(rand == 5) tstr1 = Format(CT('Script.Mod_ShuBK.GrandBKSale5'), '#0#', ShipName(cur_ruin), '#1#', Name(cur_star));",
-              "        AddPlanetNews(tstr1);",
+              "        AddPlanetNews(tstr1,53);",
               "",
               "        //Обновляем таймер до следующей проверки на начало распродажи",
               "        nextSaleDate = CurTurn() + Rnd(53, 105);",
@@ -169,7 +140,6 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  20,
-          "Total.Lines":  3,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -185,7 +155,6 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  21,
-          "Total.Lines":  83,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
