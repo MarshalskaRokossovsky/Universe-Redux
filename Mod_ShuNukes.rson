@@ -4,26 +4,8 @@
   "ViewPos.x":  -9,
   "ViewPos.y":  16,
   "ScriptName":  "Mod_ShuNukes",
-  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuNukes\\DATA\\Script\\Mod_ShuNukes.scr",
-  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuNukes\\DATA\\Script\\Mod_ShuNukes.txt",
-  "GraphPoint.Count":  73,
-  "GraphLink.Count":  47,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  24,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  1,
-  "DialogMessages.Count":  5,
-  "DialogAnswers.Count":  9,
-  "Operations.Count":  12,
-  "Statements.Count":  17,
-  "Loops.Count":  0,
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Downloads\\Mod_ShuNukes.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Downloads\\Mod_ShuNukes.txt",
   "Visual.Objects":  
   [
     {
@@ -225,7 +207,6 @@
           "Pos.y":  0,
           "Parent":  2,
           "#":  3,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -239,7 +220,6 @@
           "Pos.y":  0,
           "Parent":  7,
           "#":  4,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -264,7 +244,6 @@
           "Pos.y":  0,
           "Parent":  8,
           "#":  7,
-          "Total.Lines":  53,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -330,7 +309,6 @@
           "Pos.y":  0,
           "Parent":  3,
           "#":  8,
-          "Total.Lines":  334,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -567,7 +545,7 @@
               "                }",
               "            }",
               "",
-              "            if(nuke_shafts <= 0) throw 'Variable \\\\\\\"nuke_shafts\\\\\\\" in Mod_ShuNukes are 0, ShipTypeN is \\\\\\\"' + ship_type_num + '\\\\\\\" and ShipType is \\\\\\\"' + ship_type + '\\\\\\\"';",
+              "            if(nuke_shafts <= 0) throw 'Variable \\\\\\\"nuke_shafts\\\\\\\" in Mod_ShuNukes are 0, ShipTypeN is \\\\\\\"' + ship_type_num + '\\\\\\\" and ShipType is \\\\\\\"' + ship_type + '\\\\\\\"'+', and his name is'+ Name(cur_ship);",
               "",
               "            if(EvoArmadaInit)",
               "            {",
@@ -677,7 +655,6 @@
           "Pos.y":  20,
           "Parent":  26,
           "#":  27,
-          "Total.Lines":  38,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -728,7 +705,6 @@
           "Pos.y":  20,
           "Parent":  40,
           "#":  42,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -743,7 +719,6 @@
           "Pos.y":  20,
           "Parent":  35,
           "#":  46,
-          "Total.Lines":  112,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -868,7 +843,6 @@
           "Pos.y":  20,
           "Parent":  58,
           "#":  53,
-          "Total.Lines":  2,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -883,7 +857,6 @@
           "Pos.y":  20,
           "Parent":  55,
           "#":  60,
-          "Total.Lines":  12,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -908,7 +881,6 @@
           "Pos.y":  20,
           "Parent":  57,
           "#":  61,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -927,7 +899,6 @@
           "Pos.y":  20,
           "Parent":  56,
           "#":  62,
-          "Total.Lines":  16,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -956,7 +927,6 @@
           "Pos.y":  490,
           "Parent":  -1,
           "#":  71,
-          "Total.Lines":  9,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1043,7 +1013,6 @@
           "Pos.y":  -20,
           "Parent":  4,
           "#":  21,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1057,7 +1026,6 @@
           "Pos.y":  20,
           "Parent":  27,
           "#":  32,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1071,7 +1039,6 @@
           "Pos.y":  20,
           "Parent":  27,
           "#":  34,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1085,7 +1052,6 @@
           "Pos.y":  20,
           "Parent":  32,
           "#":  35,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1099,7 +1065,6 @@
           "Pos.y":  20,
           "Parent":  32,
           "#":  36,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1113,7 +1078,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  38,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1127,7 +1091,6 @@
           "Pos.y":  20,
           "Parent":  37,
           "#":  39,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1141,7 +1104,6 @@
           "Pos.y":  -60,
           "Parent":  42,
           "#":  47,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1155,7 +1117,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  49,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1169,7 +1130,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  50,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1183,7 +1143,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  51,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1197,7 +1156,6 @@
           "Pos.y":  20,
           "Parent":  45,
           "#":  52,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1211,7 +1169,6 @@
           "Pos.y":  30,
           "Parent":  62,
           "#":  63,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1225,7 +1182,6 @@
           "Pos.y":  30,
           "Parent":  62,
           "#":  64,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1239,7 +1195,6 @@
           "Pos.y":  -90,
           "Parent":  66,
           "#":  65,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1253,7 +1208,6 @@
           "Pos.y":  0,
           "Parent":  64,
           "#":  66,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1267,7 +1221,6 @@
           "Pos.y":  460,
           "Parent":  -1,
           "#":  70,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [

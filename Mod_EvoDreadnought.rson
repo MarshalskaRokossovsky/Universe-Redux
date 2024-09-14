@@ -1674,7 +1674,7 @@
               "if(ShipInHyperSpace(CurShip)) exit;",
               "",
               "//Если бой в текущей системе завершился, переводим галеон в патрульный стейт и выставляем маркер о необходимости вернуться на планету",
-              "if(!StarBattle(ShipStar(CurShip)) && !ShipGetBad(CurShip))",
+              "if(!StarBattle(ShipStar(CurShip)) && (!ShipGetBad(CurShip) && ShipInStar(ShipGetBad(CurShip),ShipStar(CurShip))))",
               "{",
               "    SetData(0, 0);",
               "    ChangeState('GalleonOnPatrol');",
