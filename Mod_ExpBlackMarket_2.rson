@@ -2451,7 +2451,8 @@
               "            //InterfaceState('Ship', 'ShipToStorage', 0);",
               "            //InterfaceState('Ship', 'StorageToShip', 0);",
               "            //Также выключаем панель Ассистента",
-              "            InterfaceState('RuinsTalk', 'AstAddRuins', 0);",
+              "            //InterfaceState('RuinsTalk', 'AstAddRuins', 0);",
+              "            InterfaceFlag=1;",
               "            //Добавляем игроку инфошку для изменения стоимости предметов, купленных в магазине оборудования ЧР",
               "            if(ShipFindCustomShipInfoByType(Player(), 'BlackMarket_EquipmentShopBuysInfo') == -1) ShipAddCustomShipInfo(Player(), 'BlackMarket_EquipmentShopBuysInfo', 'NoShow', Id(cur_ruin));",
               "        }",
@@ -2465,6 +2466,31 @@
               "                BMIsOpen = 1;",
               "                BMTurnCount = CurTurn() + RndObject(CT('BlackMarketShopList.BlackMarketTurnDelays.MinOpeningAfterStartEventDays'), CT('BlackMarketShopList.BlackMarketTurnDelays.MaxOpeningAfterStartEventDays'), cur_ruin);",
               "            }",
+              "        }",
+              "    }",
+              "}",
+              "",
+              "if(!IsScriptActive('Mod_ExpBlackMarket_1')) {",
+              "    if(InterfaceFlag) {",
+              "        if(GetShipRuins(Player())) {",
+              "            if(ShipType(cur_ruin) != 'BM') {",
+              "                InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "                InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
+              "                InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "                InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "                InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
+              "                InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
+              "                InterfaceFlag = 0;",
+              "            }",
+              "        }",
+              "        if(GetShipPlanet(Player())) {",
+              "            InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "            InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
+              "            InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "            InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "            InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
+              "            InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
+              "            InterfaceFlag = 0;",
               "        }",
               "    }",
               "}"          
@@ -2510,29 +2536,6 @@
               "str1 = '</color>' + Format(CT('Script.Mod_ExpBlackMarket_2.BMAccessAgreed'), '#0#', int6);",
               "str2 = '</color>' + CT('Script.Mod_ExpBlackMarket_2.BMAccessNoWay');",
               "str3 = '</color>' + CT('Script.Mod_ExpBlackMarket_2.BMAccessAsYourWish');"          
-          ]        
-        },
-        {
-          "Type":  "Top",
-          "Name":  "",
-          "Pos.x":  400,
-          "Pos.y":  290,
-          "Parent":  -1,
-          "#":  77,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "if(GetShipRuins(Player())) {",
-              "    if(ShipType(GetShipRuins(Player())) == 'BM')",
-              "    {",
-              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
-              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
-              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
-              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
-              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
-              "        InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
-              "    }",
-              "}"          
           ]        
         }      
       ],
@@ -2663,19 +2666,6 @@
           "Code":          
           [
               "1"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  370,
-          "Pos.y":  290,
-          "Parent":  -1,
-          "#":  76,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "ShipIsTakeoff(Player())"          
           ]        
         }      
       ],
@@ -3203,6 +3193,17 @@
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "InterfaceFlag",
+          "Pos.x":  270,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  76,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
         }      
       ]    
     }  
@@ -3374,13 +3375,6 @@
       "Type":  "TGraphLink",
       "Begin":  72,
       "End":  60,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  76,
-      "End":  77,
       "Nom":  0,
       "Arrow":  true    
     }  

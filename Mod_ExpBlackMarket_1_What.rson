@@ -797,9 +797,35 @@
               "        //InterfaceState('Ship', 'ShipToStorage', 0);",
               "        //InterfaceState('Ship', 'StorageToShip', 0);",
               "        //Также выключаем панель Ассистента",
-              "        InterfaceState('RuinsTalk', 'AstAddRuins', 0);",
+              "        //InterfaceState('RuinsTalk', 'AstAddRuins', 0);",
+              "        InterfaceFlag=1;",
               "        //Добавляем игроку инфошку для изменения стоимости предметов, купленных в магазине оборудования ЧР",
               "        if(ShipFindCustomShipInfoByType(Player(), 'BlackMarket_EquipmentShopBuysInfo') == -1) ShipAddCustomShipInfo(Player(), 'BlackMarket_EquipmentShopBuysInfo', 'NoShow', Id(GetShipRuins(Player())));",
+              "    }",
+              "}",
+              "",
+              "if(InterfaceFlag) {",
+              "    if(GetShipRuins(Player())) {",
+              "        if(ShipType(cur_ruin) != 'BM') {",
+              "            InterfaceState('RuinsTalk', 'PanelPirateClanBM_Lock', 0);",
+              "            InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "            InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
+              "            InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "            InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "            InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
+              "            InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
+              "            InterfaceFlag = 0;",
+              "        }",
+              "    }",
+              "    if(GetShipPlanet(Player())) {",
+              "        InterfaceState('RuinsTalk', 'PanelPirateClanBM_Lock', 0);",
+              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
+              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
+              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
+              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
+              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
+              "        InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
+              "        InterfaceFlag = 0;",
               "    }",
               "}"          
           ]        
@@ -1099,32 +1125,6 @@
               "//scriptState == 9 - игрок поговорил и торчит на фейковом ЧР",
               "//scriptState == 10 - ситуация провалена по причине гибели кого-то",
               "//scriptState == 11 - ситуация завершена успешно"          
-          ]        
-        },
-        {
-          "Type":  "Top",
-          "Name":  "",
-          "Pos.x":  200,
-          "Pos.y":  330,
-          "Parent":  -1,
-          "#":  114,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "cur_ruin = GetShipRuins(Player());",
-              "if(cur_ruin)",
-              "{",
-              "    if(ShipType(cur_ruin) == 'BM')",
-              "    {",
-              "        InterfaceState('RuinsTalk', 'PanelPirateClanBM_Lock', 0);",
-              "        InterfaceState('RuinsTalk', 'PR_Gov', 1);",
-              "        InterfaceState('RuinsTalk', 'PR_BMGovBlock', 0);",
-              "        InterfaceState('RuinsTalk', 'PanelTalk', 1);",
-              "        InterfaceState('RuinsTalk', 'PM_EndTurn', 1);",
-              "        InterfaceState('RuinsTalk', 'RT_EndTurn_Block', 0);",
-              "        InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
-              "    }",
-              "}"          
           ]        
         }      
       ],
@@ -1641,19 +1641,6 @@
           [
               "!ExpBlackMarketGlobal"          
           ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  170,
-          "Pos.y":  330,
-          "Parent":  -1,
-          "#":  113,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "ShipIsTakeoff(Player())"          
-          ]        
         }      
       ],
       "States":      
@@ -1978,6 +1965,17 @@
           "#":  111,
           "Var.Type":  "Dword",
           "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "InterfaceFlag",
+          "Pos.x":  250,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  113,
+          "Var.Type":  "Int",
+          "Init":  "0",
           "Global":  false        
         }      
       ]    
@@ -2565,13 +2563,6 @@
       "Type":  "TGraphLink",
       "Begin":  108,
       "End":  109,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  113,
-      "End":  114,
       "Nom":  0,
       "Arrow":  true    
     }  

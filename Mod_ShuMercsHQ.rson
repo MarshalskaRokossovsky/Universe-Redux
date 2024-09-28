@@ -1,11 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -761,
-  "ViewPos.y":  -548,
+  "ViewPos.x":  -1013,
+  "ViewPos.y":  -420,
   "ScriptName":  "Mod_ShuMercsHQ",
-  "ScriptFileOut":  "H:\\Mod_ShuMercsHQ.scr",
-  "ScriptTextOut":  "H:\\Mod_ShuMercsHQ.txt",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.txt",
   "Visual.Objects":  
   [
     {
@@ -7717,7 +7717,7 @@
           [
               "cur_star = GAnswerData;",
               "check = 0;",
-              "if(ShipType(cur_ruin) == 'MB') check = 1;",
+              "if(ShipType(cur_ruin) == 'MB' || ShipType(cur_ruin) == 'Manaan') check = 1;",
               "",
               "//Если игрок указал систему уже на ЦН",
               "if(check) tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.MBGovChooseStarDone'), '<Star'+'>', Name(cur_star));",
@@ -7739,6 +7739,7 @@
               "if(check)",
               "{",
               "    cur_item = CreateQuestItem('ShuMercsHQ_ApprovalDocuments', ShipPilotRace(cur_ruin));",
+              "    SFT(cur_item);",
               "    ItemSize(cur_item, 10);",
               "    LinkItemToScript(cur_item, ApprovalDocuments);",
               "    AddItemToShip(Player(), cur_item);",
