@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -538,
-  "ViewPos.y":  -551,
+  "ViewPos.x":  -505,
+  "ViewPos.y":  -431,
   "ScriptName":  "Mod_ExpBeerQuest",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Downloads\\ExpBeerQuest\\DATA\\Script\\Mod_ExpBeerQuest.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Downloads\\ExpBeerQuest\\DATA\\Script\\Mod_ExpBeerQuest.txt",
@@ -293,7 +293,7 @@
         },
         {
           "Type":  "TDialogAnswer",
-          "Name":  "",
+          "Name":  "restart",
           "Pos.x":  600,
           "Pos.y":  -220,
           "Parent":  -1,
@@ -371,7 +371,7 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  38,
-          "Msg":  "От этого будут зависеть условия",
+          "Msg":  "От этого будут зависеть условия вашей предпринимательской деятельности",
           "DMsg.Num":  "4"        
         },
         {
@@ -381,7 +381,7 @@
           "Pos.y":  -90,
           "Parent":  -1,
           "#":  44,
-          "Msg":  "Тут 1",
+          "Msg":  "Тут 10% нолог\r\n60000 cr стоит участок",
           "DMsg.Num":  "5"        
         },
         {
@@ -391,7 +391,7 @@
           "Pos.y":  -130,
           "Parent":  -1,
           "#":  45,
-          "Msg":  "Тут 2",
+          "Msg":  "Тут 25% нолог\r\n55000 cr стоит участок",
           "DMsg.Num":  "6"        
         },
         {
@@ -401,7 +401,7 @@
           "Pos.y":  -170,
           "Parent":  -1,
           "#":  46,
-          "Msg":  "Тут 3",
+          "Msg":  "Тут 20% нолог\r\n50000 cr стоит участок",
           "DMsg.Num":  "7"        
         },
         {
@@ -411,7 +411,7 @@
           "Pos.y":  -210,
           "Parent":  -1,
           "#":  47,
-          "Msg":  "Тут 4",
+          "Msg":  "Тут 25% нолог\r\n45000 cr стоит участок",
           "DMsg.Num":  "8"        
         },
         {
@@ -421,7 +421,7 @@
           "Pos.y":  -250,
           "Parent":  -1,
           "#":  48,
-          "Msg":  "Тут 5",
+          "Msg":  "Тут 15% нолог\r\n40000 cr стоит участок",
           "DMsg.Num":  "9"        
         },
         {
@@ -695,23 +695,33 @@
               "if(BeerStage == 5) { //Игрок прилетел получать награду за квест",
               "    if(GetShipPlanet(Player())) {",
               "        if(GetShipPlanet(Player()) == IdToPlanet(IdStartPlan)) {",
-              "            AddDialogOverride('DialogQuest',99);",
+              "            AddDialogOverride('DialogWin',99);",
               "        }",
               "    }",
               "}",
               "if(BeerStage == 3) {",
               "    if(GetShipPlanet(Player())) {",
               "        if(GetShipPlanet(Player()) == IdToPlanet(IdQuestPlan)) {",
-              "            AddDialogInject('DialogWin','',\"Я с заданием от Шигуль Цака\",99);",
+              "            AddDialogInject('DialogQuest','',\"Я с заданием от Шигуль Цака\",99);",
               "        }",
               "    }",
               "}",
-              "",
               "if(BeerStage == 1) {",
               "    if(GetShipPlanet(Player())) {",
               "        if(GetShipPlanet(Player()) == IdToPlanet(IdStartPlan)) {",
-              "            AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
-              "            InjectAnswer('DialogStart',\"Есть ли для меня спецзадание?..\",1);",
+              "            if(GetRelationPlanet(GetShipPlanet(Player()),Player()) > 59) {",
+              "                AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
+              "                InjectAnswer('DialogStart',\"Есть ли для меня специальное заданьице?..\",1);",
+              "            }",
+              "        }",
+              "    }",
+              "}",
+              "if(BeerStage == 2) {",
+              "    if(GetTalkShip()) {",
+              "        if(!TalkByAI()) {",
+              "            if(GetTalkShip() == GroupToShip(GroupPeleng)) {",
+              "                AddDialogOverride('MainDialog',99);",
+              "            }",
               "        }",
               "    }",
               "}"          
@@ -731,13 +741,14 @@
               "if(BeerStage == 2 || BeerStage == 3) {",
               "    if(Taimer) {",
               "        Taimer = Taimer - 1;",
-              "        if(BeerStage == 2) Ether(3,'Klaxons_Bagodel',\"Отыщите директора Шигуль Цака! У вас есть ещё\"+' '+Taimer+' '+\"дн.\");",
+              "        if(BeerStage == 2) Ether(3,'Klaxons_Bagodel',\"Отыщите директора Шигуль Цака! У вас есть ещё\"+' '+Taimer+' '+\"дн.\",GroupToShip(GroupPeleng));",
               "    }",
               "    else {",
               "        Sound('Sound.QuestCancel');",
               "        BeerStage = 7;",
               "        Ether(5,'Klaxons_Bagodel','');",
               "        NewsAdd(\"Вы провалили задание. Уважение к вам правительства планеты\"+' '+Name(IdToPlanet(IdStartPlan))+' '+\"сильно пошатнулось. Не рассчитывайте более на тёплый приём там\");",
+              "        RelationToRanger(IdToPlanet(IdStartPlan),Player(),RelationToRanger(IdToPlanet(IdStartPlan),Player())-Rnd(40,60));",
               "    }",
               "}",
               "",
@@ -746,21 +757,21 @@
               "    if(!StarOwner(PlanetToStar(IdToPlanet(IdQuestPlan)))) {",
               "        if(StarBattle(PlanetToStar(IdToPlanet(IdQuestPlan)))) {",
               "            if(!FactoryDefenceCD) {",
-              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),300);",
-              "                SetName(ship,ShipName(ship)+' '+Name(Player()));",
-              "                ShipRefit(ship,400);",
-              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),300);",
-              "                SetName(ship,ShipName(ship)+' '+Name(Player()));",
-              "                ShipRefit(ship,400);",
-              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),300);",
-              "                SetName(ship,ShipName(ship)+' '+Name(Player()));",
-              "                ShipRefit(ship,400);",
+              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),600);",
+              "                SetName(ship,ShipName(ship)+' '+ShipName(Player()));",
+              "                ShipRefit(ship,500);",
+              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),600);",
+              "                SetName(ship,ShipName(ship)+' '+ShipName(Player()));",
+              "                ShipRefit(ship,500);",
+              "                ship = BuyWarrior(IdToPlanet(IdQuestPlan),600);",
+              "                SetName(ship,ShipName(ship)+' '+ShipName(Player()));",
+              "                ShipRefit(ship,500);",
               "                FactoryDefenceCD = Rnd(300,400);",
               "            }",
               "        }",
               "    }",
+              "    if(FactoryDefenceCD) FactoryDefenceCD = FactoryDefenceCD - 1;",
               "}",
-              "if(FactoryDefenceCD) FactoryDefenceCD = FactoryDefenceCD - 1;",
               "",
               "//Завод приваривает пива любимому директору",
               "if(BeerStage == 5 || BeerStage == 6) {",
@@ -769,14 +780,14 @@
               "            item = CreateQuestItem('ExpBeerQuest_Cargo');",
               "            AddItemToStorage(IdToPlanet(IdQuestPlan),item);",
               "            AlcCD = 300;",
-              "            NewsAdd(\"Очередной этап варки пива закончился! В благодарность за отличное управление пивоварней отгружаем вам ящичек\");",
+              "            NewsAdd(\"Очередной этап варки пива закончился! В благодарность за отличное управление пивоварней отгружаем вам ящичек\",IdToPlanet(IdQuestPlan));",
               "            Sound('Sound.NewMsg');",
               "        }",
               "        if(StarOwner(PlanetToStar(IdToPlanet(IdQuestPlan))) == 2) {",
               "            item = CreateQuestItem('ExpBeerQuest_Cargo');",
               "            AddItemToStorage(IdToPlanet(IdQuestPlan),item);",
               "            AlcCD = 300;",
-              "            NewsAdd(\"Очередной этап варки пива закончился! В благодарность за отличное управление пивоварней отгружаем вам ящичек\");",
+              "            NewsAdd(\"Очередной этап варки пива закончился! В благодарность за отличное управление пивоварней отгружаем вам ящичек\",IdToPlanet(IdQuestPlan));",
               "            Sound('Sound.NewMsg');",
               "        }",
               "    }",
@@ -814,6 +825,11 @@
               "        j = 4;",
               "    }",
               "",
+              "    if(i < GQuestVarExt_GozeTime) {",
+              "        i = GQuestVarExt_GozeTime;",
+              "        j = 4;",
+              "    }",
+              "",
               "    SpawnBeerStr = 'ExpBeerQuest_Beer'+j;",
               "}",
               "if(GQuestStatus == 3) {",
@@ -821,6 +837,8 @@
               "    Sound('Sound.QuestCancel');",
               "    Ether(5,'Klaxons_Bagodel','');",
               "    NoComeKlingToStar(PlanetToStar(IdToPlanet(IdQuestPlan)),0);",
+              "        NewsAdd(\"Вы провалили задание. Уважение к вам правительства планеты\"+' '+Name(IdToPlanet(IdStartPlan))+' '+\"сильно пошатнулось. Не рассчитывайте более на тёплый приём там\");",
+              "        RelationToRanger(IdToPlanet(IdStartPlan),Player(),RelationToRanger(IdToPlanet(IdStartPlan),Player())-Rnd(40,60));",
               "}",
               "",
               "if(!IdStartPlan) {",
@@ -837,8 +855,12 @@
               "            ship = BuyTransport(plan,2,2000);",
               "            ShipRefit(ship,450);",
               "            ShipJoin(GroupPeleng,ship);",
-              "            if(!ShipEqInSlot(ship,t_DefGenerator)) AddItemToShip(ship,CreateEquipment(t_DefGenerator,max(5,GalaxyTechLevel()),25,Peleng));",
+              "            ShipSpecialBonuses(ship,bonSlotDef,100);",
+              "            if(!ShipEqInSlot(ship,t_DefGenerator)) AddItemToShip(ship,CreateEquipment(t_DefGenerator,max(5,GalaxyTechLevel()),Rnd(22,27),Peleng));",
               "            else ItemLevel(ShipEqInSlot(ship,t_DefGenerator),max(5,GalaxyTechLevel()));",
+              "            ShipSpecialBonuses(ship,bonSlotDroid,100);",
+              "            if(!ShipEqInSlot(ship,t_RepairRobot)) AddItemToShip(ship,CreateEquipment(t_RepairRobot,max(3,Rnd(GalaxyTechLevel(),8)),Rnd(18,23),Peleng));",
+              "            else ItemLevel(ShipEqInSlot(ship,t_RepairRobot),max(3,Rnd(GalaxyTechLevel(),8)));",
               "            ItemLevel(ShipEqInSlot(ship,t_Engine),max(6,GalaxyTechLevel()));",
               "            SetName(ship,\"Шигуль Цак\");",
               "            ArrangeItems(ship);",
@@ -854,13 +876,20 @@
               "    }",
               "}",
               "",
-              "if(BeerStage == 6 || BeerStage == 5) {",
+              "/*if(BeerStage == 6 || BeerStage == 5) {",
               "    //Раздаём случайные юзлесы всем новым кораблям",
               "    if(GalaxyShipId() > lastShipId) {",
               "        AddDropBeerToShips();",
               "        //Обновляем Id последнего рождённого корабля",
               "        lastShipId = GalaxyShipId();",
               "    }",
+              "}*/",
+              "",
+              "if(RelationToShip(GroupToShip(GroupPeleng),Player()) < 10) {",
+              "    BeerStage = 7;",
+              "        Ether(5,'Klaxons_Bagodel','');",
+              "        NewsAdd(\"Вы провалили задание. Уважение к вам правительства планеты\"+' '+Name(IdToPlanet(IdStartPlan))+' '+\"сильно пошатнулось. Не рассчитывайте более на тёплый приём там\");",
+              "        RelationToRanger(IdToPlanet(IdStartPlan),Player(),RelationToRanger(IdToPlanet(IdStartPlan),Player())-Rnd(40,60));",
               "}"          
           ]        
         },
@@ -891,7 +920,7 @@
               "            plan = StarPlanets(star,j);",
               "            if(PlanetOwner(plan) > 4) continue;",
               "",
-              "            if(BeerStage == 1) {",
+              "            if(BeerStage) {",
               "                if(plan == IdToPlanet(IdStartPlan)) continue;",
               "            }",
               "",
@@ -1039,7 +1068,8 @@
           "Code":          
           [
               "raced = 0;",
-              "GQuestVarExt_Taxes = 15;"          
+              "GQuestVarExt_Taxes = 15;",
+              "money = 40000;"          
           ]        
         },
         {
@@ -1053,7 +1083,8 @@
           "Code":          
           [
               "raced = 1;",
-              "GQuestVarExt_Taxes = 25;"          
+              "GQuestVarExt_Taxes = 25;",
+              "money = 45000;"          
           ]        
         },
         {
@@ -1067,7 +1098,8 @@
           "Code":          
           [
               "raced = 2;",
-              "GQuestVarExt_Taxes = 20;"          
+              "GQuestVarExt_Taxes = 20;",
+              "money = 50000;"          
           ]        
         },
         {
@@ -1081,7 +1113,8 @@
           "Code":          
           [
               "raced = 3;",
-              "GQuestVarExt_Taxes = 25;"          
+              "GQuestVarExt_Taxes = 25;",
+              "money = 55000;"          
           ]        
         },
         {
@@ -1095,7 +1128,8 @@
           "Code":          
           [
               "raced = 4;",
-              "GQuestVarExt_Taxes = 10;"          
+              "GQuestVarExt_Taxes = 10;",
+              "money = 60000;"          
           ]        
         },
         {
@@ -1175,7 +1209,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "OrderJump(CurShip,ShipStar(GroupToShip(GroupPeleng)));"          
+              "OrderJump(CurShip,ShipStar(GroupToShip(GroupPeleng)),99);"          
           ]        
         },
         {
@@ -1191,60 +1225,22 @@
               "if(BeerStage==2) {",
               "    if(GetShipPlanet(CurShip)) {",
               "        ShipRefuel(CurShip);",
-              "        HullHP(CurShip,ItemSize(ShipEqInSlot(CurShip,t_Hull)));",
+              "        HullHP(CurShip,'To100');",
               "        OrderTakeOff(CurShip);",
-              "        while(1) {",
-              "            plan = FindPlanetByAdvancement(Rnd(1,100));",
-              "            if(StarEnemyThreatLevel(PlanetToStar(plan))) continue;",
-              "            break;",
-              "        }",
-              "        SetData(Id(plan));",
-              "    } //Процесс тупо полёта между рандомными планетами. А вы как хотели? :D",
+              "        SetData(FindStartPlanet());",
+              "    }",
               "    else {",
+              "        //Процесс тупо полёта между рандомными планетами. А вы как хотели? :D",
               "        if(!ShipInStar(CurShip,PlanetToStar(IdToPlanet(GetData())))) {",
-              "            OrderJump(CurShip,PlanetToStar(IdToPlanet(GetData())));",
+              "            OrderJump(CurShip,PlanetToStar(IdToPlanet(GetData())),99);",
               "        }",
               "        else {",
-              "            OrderLanding(CurShip,PlanetToStar(IdToPlanet(GetData())));",
+              "            OrderLanding(CurShip,IdToPlanet(GetData()),99);",
               "        }",
               "    }",
               "",
               "    //Если вдруг целевую планету отжали",
-              "    if(StarOwner(PlanetToStar(IdToPlanet(GetData())))) {",
-              "        while(1) {",
-              "            plan = FindPlanetByAdvancement(Rnd(1,100));",
-              "            if(StarEnemyThreatLevel(PlanetToStar(plan))) continue;",
-              "            break;",
-              "        }",
-              "        SetData(Id(plan));",
-              "    }",
-              "}",
-              "//Как только игрок берёт задание - отправляем Шигуль Цака домой",
-              "if(BeerStage>2) {",
-              "    if(GetShipPlanet(CurShip)) {",
-              "        ShipOut(CurShip);",
-              "        OrderLock(CurShip,1);",
-              "        OrderNone(CurShip);",
-              "        ShipDestroy(CurShip);",
-              "    }",
-              "    else {",
-              "        if(!ShipInStar(CurShip,PlanetToStar(GetData()))) {",
-              "            OrderJump(CurShip,PlanetToStar(GetData()));",
-              "        }",
-              "        else {",
-              "            OrderLanding(CurShip,PlanetToStar(IdToPlanet(GetData())));",
-              "        }",
-              "    }",
-              "",
-              "    //Если вдруг целевую планету отжали",
-              "    if(StarOwner(PlanetToStar(IdToPlanet(GetData())))) {",
-              "        while(1) {",
-              "            plan = FindPlanetByAdvancement(Rnd(1,100));",
-              "            if(StarEnemyThreatLevel(PlanetToStar(plan))) continue;",
-              "            break;",
-              "        }",
-              "        SetData(Id(plan));",
-              "    }",
+              "    if(StarOwner(PlanetToStar(IdToPlanet(GetData())))) SetData(FindStartPlanet());",
               "}"          
           ]        
         },
@@ -1271,11 +1267,12 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "ShipMoney(Player(),ShipMoney(Player())+1);",
+              "ShipMoney(Player(),ShipMoney(Player())+(GalaxyMoney(4,4)*(ShipSkill(Player(),'CharmCur')+1)*2));",
               "Sound('Sound.QuestOk');",
               "Ether(4,'Klaxons_Bagodel','');",
               "ShipAddCustomShipInfo(Player(),'ExpBeerQuest_NoContra');",
-              "BeerStage=6;"          
+              "BeerStage=6;",
+              "RelationToRanger(IdToPlanet(IdStartPlan),Player(),RelationToRanger(IdToPlanet(IdStartPlan),Player())+Rnd(10,15));"          
           ]        
         },
         {
@@ -1310,7 +1307,7 @@
               "GQuestVarExt_TechnicalCur = ShipSkill(Player(),'TechnicalCur');",
               "GQuestVarExt_TraderCur = ShipSkill(Player(),'TraderCur');",
               "GQuestVarExt_CharmCur = ShipSkill(Player(),'CharmCur');",
-              "GQuestVarExt_PlanetRace = raced;",
+              "GQuestVarExt_PlanetRace = raced + 1;",
               "GQuestVarExt_Government = PlanetGov(GetShipPlanet(Player()));"          
           ]        
         },
@@ -1324,13 +1321,18 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "plan = Name(GetShipPlanet(GroupToShip(GroupPeleng)));",
-              "star = Name(PlanetToStar(GetShipPlanet(GroupToShip(GroupPeleng))));",
-              "IdQuestPlan = Id(GetShipPlanet(GroupToShip(GroupPeleng)));",
+              "if(GetShipPlanet()) {",
+              "    plan = Name(GetShipPlanet(GroupToShip(GroupPeleng)));",
+              "    star = Name(PlanetToStar(GetShipPlanet(GroupToShip(GroupPeleng))));",
+              "}",
+              "else {",
+              "    plan = Name(IdToPlanet(GetData(0,GroupToShip(GroupPeleng))));",
+              "    star = Name(PlanetToStar(IdToPlanet(GetData(0,GroupToShip(GroupPeleng)))));",
+              "}",
               "BeerStage = 2;",
               "Sound('Sound.NewMsg');",
               "Taimer = 120;",
-              "Ether(3,'Klaxons_Bagodel',\"Отыщите директора Шигуль Цака! У вас есть ещё\"+' '+Taimer+' '+\"дн.\");"          
+              "Ether(3,'Klaxons_Bagodel',\"Отыщите директора Шигуль Цака! У вас есть ещё\"+' '+Taimer+' '+\"дн.\",GroupToShip(GroupPeleng));"          
           ]        
         },
         {
@@ -1363,7 +1365,7 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  -160,
+          "Pos.x":  -170,
           "Pos.y":  70,
           "Parent":  -1,
           "#":  117,
@@ -1371,6 +1373,59 @@
           "Code":          
           [
               "ShipRefuel(CurShip);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  131,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "SetData(FindStartPlanet());"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  134,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!ShipInStar(CurShip,PlanetToStar(IdToPlanet(GetData())))) OrderTeleport(CurShip,PlanetToStar(IdToPlanet(GetData())),CoordX(IdToPlanet(GetData())),CoordY(IdToPlanet(GetData())));",
+              "else OrderLanding(IdToPlanet(GetData()));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -420,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  137,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderTeleport(CurShip,PlanetToStar(IdToPlanet(GetData(0,GroupToShip(GroupPeleng)))),CoordX(IdToPlanet(GetData(0,GroupToShip(GroupPeleng)))),CoordY(IdToPlanet(GetData(0,GroupToShip(GroupPeleng)))));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -390,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  139,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderLanding(CurShip,GetShipPlanet(GetData(0,GroupToShip(GroupPeleng))));"          
           ]        
         }      
       ],
@@ -1528,6 +1583,84 @@
           [
               "ShipGetBad(GroupToShip(GroupPeleng))"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  129,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "StarEnemyThreatLevel(ShipStar(CurShip)) > 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -390,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  130,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "StarEnemyThreatLevel(ShipStar(CurShip)) > 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  135,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GetShipPlanet(CurShip)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -420,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  136,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ShipInStar(CurShip,ShipStar(GroupToShip(GroupPeleng)))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -420,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  138,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInStar(CurShip,ShipStar(GroupToShip(GroupPeleng)))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -390,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  140,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GetShipPlanet(CurShip)"          
+          ]        
         }      
       ],
       "States":      
@@ -1536,7 +1669,7 @@
           "Type":  "TState",
           "Name":  "StateNew",
           "Pos.x":  -100,
-          "Pos.y":  40,
+          "Pos.y":  30,
           "Parent":  -1,
           "#":  3,
           "Move":  0,
@@ -1630,6 +1763,24 @@
           "Parent":  -1,
           "#":  113,
           "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "State3",
+          "Pos.x":  10,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  133,
+          "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
           "TakeItem":  -1,
@@ -1971,6 +2122,28 @@
           "#":  127,
           "Var.Type":  "Int",
           "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "GQuestVarExt_GozeTime",
+          "Pos.x":  900,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  128,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money",
+          "Pos.x":  40,
+          "Pos.y":  -320,
+          "Parent":  -1,
+          "#":  132,
+          "Var.Type":  "Int",
+          "Init":  "",
           "Global":  false        
         }      
       ]    
@@ -2733,6 +2906,104 @@
       "End":  66,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  113,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  130,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  129,
+      "End":  131,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  131,
+      "End":  133,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  133,
+      "End":  114,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  133,
+      "End":  134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  134,
+      "End":  135,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  135,
+      "End":  113,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  130,
+      "End":  136,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  136,
+      "End":  137,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  137,
+      "End":  138,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  138,
+      "End":  139,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  139,
+      "End":  140,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  140,
+      "End":  111,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -2817,23 +3088,23 @@
     },
     {
       "#":  "15",
-      "String":  "От этого будут зависеть условия"    
+      "String":  "От этого будут зависеть условия вашей предпринимательской деятельности"    
     },
     {
       "#":  "16",
-      "String":  "Тут 1"    
+      "String":  "Тут 10% нолог<br>60000 cr стоит участок"    
     },
     {
       "#":  "17",
-      "String":  "Тут 2"    
+      "String":  "Тут 25% нолог<br>55000 cr стоит участок"    
     },
     {
       "#":  "18",
-      "String":  "Тут 3"    
+      "String":  "Тут 20% нолог<br>50000 cr стоит участок"    
     },
     {
       "#":  "19",
-      "String":  "Тут 4"    
+      "String":  "Тут 25% нолог<br>45000 cr стоит участок"    
     },
     {
       "#":  "2",
@@ -2841,7 +3112,7 @@
     },
     {
       "#":  "20",
-      "String":  "Тут 5"    
+      "String":  "Тут 15% нолог<br>40000 cr стоит участок"    
     },
     {
       "#":  "21",
@@ -3044,8 +3315,8 @@
       "String":  "Уже вылетаю!"    
     },
     {
-      "#":  "67",
-      "String":  "Есть ли для меня спецзадание?.."    
+      "#":  "68",
+      "String":  "Есть ли для меня специальное заданьице?.."    
     },
     {
       "#":  "8",
