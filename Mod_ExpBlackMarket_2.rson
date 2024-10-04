@@ -2471,7 +2471,7 @@
               "}",
               "",
               "if(!IsScriptActive('Mod_ExpBlackMarket_1')) {",
-              "    if(InterfaceFlag) {",
+              "    //if(InterfaceFlag) {",
               "        if(GetShipRuins(Player())) {",
               "            if(ShipType(cur_ruin) != 'BM') {",
               "                InterfaceState('RuinsTalk', 'PR_Gov', 1);",
@@ -2492,7 +2492,7 @@
               "            InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
               "            InterfaceFlag = 0;",
               "        }",
-              "    }",
+              "    //}",
               "}"          
           ]        
         },

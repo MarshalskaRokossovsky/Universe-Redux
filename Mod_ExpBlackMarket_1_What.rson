@@ -804,7 +804,8 @@
               "    }",
               "}",
               "",
-              "if(InterfaceFlag) {",
+              "",
+              "//if(InterfaceFlag) {",
               "    if(GetShipRuins(Player())) {",
               "        if(ShipType(cur_ruin) != 'BM') {",
               "            InterfaceState('RuinsTalk', 'PanelPirateClanBM_Lock', 0);",
@@ -827,7 +828,7 @@
               "        InterfaceState('RuinsTalk', 'AstAddRuins', 1);",
               "        InterfaceFlag = 0;",
               "    }",
-              "}"          
+              "//}"          
           ]        
         },
         {
