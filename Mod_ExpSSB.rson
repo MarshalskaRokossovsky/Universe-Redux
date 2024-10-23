@@ -1711,6 +1711,7 @@
               "    {",
               "        if(HullSpecial(Player()) != -1)",
               "        {",
+              "            SFT(HullSpecial(Player()));",
               "            if(!findsubstr(BonusNumInCfg(HullSpecial(Player())), 'ExpScienceRanks_Tick'))",
               "            {",
               "                if(ShipInHole(Player()))",
