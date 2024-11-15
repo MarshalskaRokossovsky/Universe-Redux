@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1013,
-  "ViewPos.y":  -420,
+  "ViewPos.x":  -793,
+  "ViewPos.y":  -150,
   "ScriptName":  "Mod_ShuMercsHQ",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.txt",
@@ -29339,7 +29339,9 @@
               "    else tstr1 = '</color>' + CT('Script.Mod_ShuMercs.QuestBeforePlayerOrgDialogs.TrancWhileFlyAway');",
               "}",
               "//Игрок отказался помогать Ципцилоту",
-              "else tstr1 = '</color>' + CT('Script.Mod_ShuMercs.QuestBeforePlayerOrgDialogs.TrancWhileChaseTziptzilot');"          
+              "else tstr1 = '</color>' + CT('Script.Mod_ShuMercs.QuestBeforePlayerOrgDialogs.TrancWhileChaseTziptzilot');",
+              "",
+              "if(!TrancDial) tstr1 = CT('Script.Mod_ShuMercs.QuestBeforePlayerOrgDialogs.TrancWhilePlayerCalling');"          
           ]        
         },
         {
@@ -29383,6 +29385,7 @@
               "                    SetData(1, 2, cur_ship);",
               "                }",
               "",
+              "                TrancDial = 1;",
               "                Dialog(CurShip);",
               "            }",
               "        }",
@@ -40073,6 +40076,17 @@
           "#":  1096,
           "Var.Type":  "Dword",
           "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "TrancDial",
+          "Pos.x":  -270,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  1106,
+          "Var.Type":  "Int",
+          "Init":  "0",
           "Global":  false        
         }      
       ]    

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -368,
-  "ViewPos.y":  164,
+  "ViewPos.x":  -511,
+  "ViewPos.y":  331,
   "ScriptName":  "Mod_ExpBK",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -810,6 +810,186 @@
           "#":  394,
           "Msg":  "Отлично!",
           "AMsg.Num":  "79"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  580,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  398,
+          "Msg":  "Меня интересует страховка на починку оборудования",
+          "AMsg.Num":  "80"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  610,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  403,
+          "Msg":  "Пожалуй, выберу другие услуги",
+          "AMsg.Num":  "81"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  890,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  408,
+          "Msg":  "Меня интересует Полный тариф",
+          "AMsg.Num":  "82"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  890,
+          "Pos.y":  730,
+          "Parent":  -1,
+          "#":  409,
+          "Msg":  "Меня интересует Расширенный тариф",
+          "AMsg.Num":  "83"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  890,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  410,
+          "Msg":  "Меня интересует Базовый тариф",
+          "AMsg.Num":  "84"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  411,
+          "Msg":  "Меня интересует Базовый тариф",
+          "AMsg.Num":  "85"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  412,
+          "Msg":  "Меня интересует Расширенный тариф",
+          "AMsg.Num":  "86"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  413,
+          "Msg":  "Меня интересует Полный тариф",
+          "AMsg.Num":  "87"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  1050,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  419,
+          "Msg":  "К другим услугам",
+          "AMsg.Num":  "88"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  440,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  422,
+          "Msg":  "Да, я уверен",
+          "AMsg.Num":  "89"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  423,
+          "Msg":  "Пожалуй, вы правы, лучше выберу какую-нибудь другую вашу услугу",
+          "AMsg.Num":  "90"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  440,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  425,
+          "Msg":  "Я хочу отменить свою страховку починки!",
+          "AMsg.Num":  "91"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  70,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  429,
+          "Msg":  "Не сейчас",
+          "AMsg.Num":  "92"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  430,
+          "Msg":  "Оформить продление",
+          "AMsg.Num":  "93"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  30,
+          "Pos.y":  730,
+          "Parent":  -1,
+          "#":  437,
+          "Msg":  "К другим услугам",
+          "AMsg.Num":  "94"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  220,
+          "Pos.y":  820,
+          "Parent":  -1,
+          "#":  439,
+          "Msg":  "<tstr2>",
+          "AMsg.Num":  "95"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  447,
+          "Msg":  "Давайте починим что-нибудь ещё!",
+          "AMsg.Num":  "96"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  300,
+          "Pos.y":  860,
+          "Parent":  -1,
+          "#":  448,
+          "Msg":  "Пожалуй, на сегодня хватит",
+          "AMsg.Num":  "97"        
         }      
       ],
       "DialogMessages":      
@@ -1081,7 +1261,7 @@
           "Pos.y":  830,
           "Parent":  -1,
           "#":  218,
-          "Msg":  "Итак, вы как член корпуса Рейнджеров имеете право на получение кредита по льготным условиям.\r\n\r\nКроме того, мы можем провести обслуживание ваших задолженностей (например, произвести часитичную или полную их оплату) или перекредитовать вас по льготным условиям.\r\n\r\nБолее того, из нашего центра вы можете произвести оплату задолженностей перед правительствами различных планет Коалиции.\r\n\r\nИ всё это - по лучшим условиям в Галактике и с минимальной комиссией за операции!",
+          "Msg":  "Итак, вы как член корпуса Рейнджеров имеете право на получение кредита по льготным условиям.\r\nКроме того, мы можем провести обслуживание ваших задолженностей (например, произвести часитичную или полную их оплату) или перекредитовать вас по льготным условиям.\r\nБолее того, из нашего центра вы можете произвести оплату задолженностей перед правительствами различных планет Коалиции.\r\nНу а если вы часто сталкиваетесь с тем, что починка после напряжённого и очень долгого космического боя заставляет вас расстреливать астероиды и подбирать с них минералы, то мы можем предложить вам оформить страховку Экстренной Починки.\r\n\r\nИ всё это - по лучшим условиям в Галактике и с минимальной комиссией за операции!",
           "DMsg.Num":  "26"        
         },
         {
@@ -1423,6 +1603,76 @@
           "#":  393,
           "Msg":  "Браво, рейнджер! Будущие поколения тысячу раз выскажут вам благодарность за развитие экономики их родной планеты и создание сотен тысяч рабочих мест.",
           "DMsg.Num":  "60"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  790,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  399,
+          "Msg":  "О, конечно, конечно!\r\n\r\nСитуация, когда рейнджер остаётся без каких-либо средств, чтобы починить своё оружие и вновь вступить в бой с захватчиками, не могла и не может огорчать Галактический Совет. После обращения нескольких сенаторов к нашему совету директоров была разработана так называемая \"Страховка Экстренной Починки\".\r\n\r\nОна позволит вам, рейнджер, в любое время получить полный ремонт <color=225,20,20>неисправного</color> оборудования на любой <clr>индустриальной<clrEnd> планете, где обычно размещаются партнёрские мастерские и службы ремонта.\r\n\r\nЕсли вас заинтересовало наше предложение, то у нас есть три тарифа на выбор:\r\n-----------------------\r\n\"Базовый тариф\"\r\nСтоимость: <clr><(GalaxyMoney(4,4) * 2)><clrEnd>\r\n\r\nДанный тариф позволит вам в срочном порядке восстановить боеспособность корабля\r\n\r\nВосстанавливаем:\r\n<color=225,20,20>Двигатель</color>\r\n<color=225,20,20>Дроида</color>\r\n<color=225,20,20>Все орудия</color>\r\n-----------------------\r\n\"Расширенный тариф\"\r\nСтоимость: <clr><(GalaxyMoney(4,4) * 3)><clrEnd>\r\n\r\nДанный тариф позволит вам в срочном порядке восстановить все защитные и атакующие системы корабля\r\n\r\nВосстанавливаем:\r\n<color=225,20,20>Двигатель</color>\r\n<color=225,20,20>Дроида</color>\r\n<color=225,20,20>Все орудия</color>\r\n<color=225,20,20>Генератор защитного поля</color>\r\n<color=225,20,20>Топливный бак</color>\r\n-----------------------\r\n\"Полный тариф\"\r\nСтоимость: <clr><(GalaxyMoney(4,4) * 7)><clrEnd>\r\n\r\nДанный тариф позволит вам в срочном порядке полностью восстановить ваш корабль\r\n\r\nВосстанавливаем:\r\n<color=225,20,20>Двигатель</color>\r\n<color=225,20,20>Дроида</color>\r\n<color=225,20,20>Все орудия</color>\r\n<color=225,20,20>Генератор защитного поля</color>\r\n<color=225,20,20>Топливный бак</color>\r\n<color=225,20,20>Захват</color>\r\n<color=225,20,20>Сканер</color>\r\n<color=225,20,20>Радар</color>\r\n<color=225,20,20>Все артефакты</color>\r\n<color=225,20,20>Обшивку вашего корпуса</color>, с устранением всех <color=225,20,20>помех</color>.",
+          "DMsg.Num":  "61"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1010,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  418,
+          "Msg":  "Отличный выбор, рейнджер!\r\n\r\nМы уже оформили на ваше имя страховку \"Экстренная починка\" с выбранным вами пакетом на <clr>два<clrEnd> года.\r\n\r\nБлагодарим за пользование услугами нашей сети!",
+          "DMsg.Num":  "62"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  440,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  421,
+          "Msg":  "Вы уверены, рейнджер? Если вдруг денег на счету у вас окажется слишком мало... Тогда того и гляди - самые задохленькие корсарики вынудят вас, великого героя, отступить, как последнего труса! Подумайте о своей славе и чести!",
+          "DMsg.Num":  "63"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  427,
+          "Msg":  "Стоимость продления страхового полиса на <clr>1<clrEnd> стандартные сутки - <tint1> cr.\r\n\r\nМаксимальный срок продления за одну процедуру - <clr>300<clrEnd> стандартных дней.",
+          "DMsg.Num":  "64"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  436,
+          "Msg":  "Отлично! Мы уже обновили срок действия вашего договора, так что можете спать спокойно!",
+          "DMsg.Num":  "65"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  438,
+          "Msg":  "<tstr1>",
+          "DMsg.Num":  "66"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  820,
+          "Parent":  -1,
+          "#":  446,
+          "Msg":  "Отлично! Техники уже завершили работы. Принимайте! Всё как будто вчера с конвейера сошло.\r\n\r\nХотите ещё раз воспользоваться услугами мастеров?",
+          "DMsg.Num":  "67"        
         }      
       ],
       "Dialogs":      
@@ -1626,6 +1876,46 @@
           "Pos.y":  770,
           "Parent":  -1,
           "#":  391        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Repair",
+          "Pos.x":  220,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  407        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "MedPolicy",
+          "Pos.x":  30,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  426        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "RepairAll",
+          "Pos.x":  340,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  440        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "RepairA",
+          "Pos.x":  260,
+          "Pos.y":  720,
+          "Parent":  -1,
+          "#":  441        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "RepairG",
+          "Pos.x":  300,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  442        
         }      
       ],
       "Groups":      
@@ -1780,7 +2070,7 @@
               "            for(i = PlanetNews() - 1; i > cnt; i = i - 1)",
               "            {",
               "                if(PlanetNewsDate(i) < last_trade_news_upd) continue;",
-              "                if(PlanetNewsType(i) < 6 || PlanetNewsType(i) > 17) continue;",
+              "                if(PlanetNewsType(i) < 6 || PlanetNewsType(i) > 17 || PlanetNewsType(i) != 69 || PlanetNewsType(i) != 70 || PlanetNewsType(i) != 71) continue;",
               "",
               "                temp_int = temp_int + 1;",
               "                temp_str = temp_str + '<clr>' + GameDateTxtByTurn(PlanetNewsDate(i)) + '<clrEnd>' + \"<br>\" + '<clrEnd>' + PlanetNewsText(i) + '<clr>' + \"<br>\" + ' ' + \"<br>\";",
@@ -1951,7 +2241,7 @@
               "                }",
               "                if(PlayerBridge() == 14)",
               "                {",
-              "                    AddDialogInject('', \"Здесь вы можете получить доступ к вашему депозитному счёту, погасить кредитную задолженность или, при наличии действующей торговой лицензии, воспользоваться онлайн-терминалом для удалённой закупки товаров.\", 'BlockThisAnswer', 100);",
+              "                    AddDialogInject('', \"Здесь вы можете получить доступ к вашему депозитному счёту, погасить кредитную задолженность, продлить действие страхового полиса или, при наличии действующей торговой лицензии, воспользоваться онлайн-терминалом для удалённой закупки товаров.\", 'BlockThisAnswer', 100);",
               "                    AddDialogBlock('BlockThisAnswer', 2);",
               "",
               "                    AddDialogInject('Deposit', '', \"Мой депозитный счёт\", 15);",
@@ -1961,6 +2251,8 @@
               "",
               "                    if(!PlayerDebt()) AddDialogBlock(\"Мой кредитный долг\", 1);",
               "                    AddDialogInject('PurchaseTerminalDialog', '', \"Терминал для удалённых закупок\", 5);",
+              "",
+              "                    if(PlayerMedPolicy() < 200) AddDialogInject('MedPolicy', '', \"Продлить страховой полис\", 20);",
               "",
               "                    //Если у игрока нет торговой лицензии",
               "                    if(ShipFindCustomShipInfoByType(Player(),'Trade_license') == -1) AddDialogBlock(\"Терминал для удалённых закупок\", 1);",
@@ -1972,6 +2264,15 @@
               "        }",
               "",
               "        DefSplt = '';",
+              "    }",
+              "}",
+              "//Ремонт по страховке",
+              "cur_ruin = GetShipPlanet(Player());",
+              "if(cur_ruin) {",
+              "    if(ShipFindCustomShipInfoByType(Player(),'ExpBK_License')) {",
+              "        if(PlanetEco(cur_ruin) == 2) {",
+              "            AddDialogInject('Repair',\"Нужна починка оборудования? Поможем вам связаться с мастерскими!\",\"Нужна починка по страховке!\",99);",
+              "        }",
               "    }",
               "}"          
           ]        
@@ -2104,6 +2405,7 @@
               "                if(is_equip_purchase)",
               "                {",
               "                    cur_ruin = GetShipRuins(Player());",
+              "                    if(!cur_ruin) exit;",
               "                    //Чтобы игроку не предлагали заменить свой корпус на новый из магазина, но с доплатой",
               "                    tint2 = NoDropItem(ShipEqInSlot(Player(), t_Hull), 1);",
               "",
@@ -4068,6 +4370,230 @@
               "//Игрок дал по тормозам - наполняем массивчик обратно",
               "copy(EconomicsArr,tarr1);"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  414,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint2 =1;",
+              "ShipMoney(Player(),ShipMoney(Player()) -(GalaxyMoney(4,4) * 2));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  415,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint2 =2;",
+              "ShipMoney(Player(),ShipMoney(Player()) -(GalaxyMoney(4,4) * 3));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  416,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint2 =3;",
+              "ShipMoney(Player(),ShipMoney(Player()) -(GalaxyMoney(4,4) * 7));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1010,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  417,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipAddCustomShipInfo(Player(),'ExpBK_License');",
+              "ShipCustomShipInfoData(Player(),'ExpBK_License',1,730);",
+              "ShipCustomShipInfoData(Player(),'ExpBK_License',2,tint2);",
+              "Sound('Sound.Buy');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  440,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  424,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.Sell');",
+              "ShipDeleteCustomShipInfo(Player(),'ExpBK_License');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  428,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint1 = GalaxyMoney(1,4);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  650,
+          "Parent":  -1,
+          "#":  431,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_dword = CountBox('Bm.Items.2FuelTanks14s',\"Выберите время, на которое хотите увеличить срок действия страховки\",0,300,tint1,1,301,301,ShipMoney(Player()),100);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  432,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint1 = 0;",
+              "for(i=t_Hull;i<t_Weapon3;i=i+1) {",
+              "    if(i < t_Weapon1) {",
+              "        if(ShipEqInSlot(Player(),i)) {",
+              "            temp_dword_2 = Player();",
+              "            temp_dword_3 = ShipEqInSlot(temp_dword_2,i);",
+              "            if(i == t_Hull) {",
+              "                if(ShipCustomShipInfoData(Player(),'ExpBK_License',1) < 3) continue;",
+              "                if(!HullDamage(temp_dword_3) && !ShipStatusEffect(temp_dword_2,0) && !ShipStatusEffect(temp_dword_2,1) && !ShipStatusEffect(temp_dword_2,2) && !ShipStatusEffect(temp_dword_2,3) && !ShipStatusEffect(temp_dword_2,4)) {",
+              "                    continue;",
+              "                }",
+              "            }",
+              "            else {",
+              "                if(!ItemIsBroken(temp_dword_3)) continue;",
+              "                if((i == t_DefGenerator || i == t_FuelTanks) && ShipCustomShipInfoData(Player(),'ExpBK_License',1) == 1) continue;",
+              "",
+              "            }",
+              "            tint1 = tint1 + 1;",
+              "            InjectAnswer('RepairAll',\"Починить\"+' '+Name(temp_dword_3),i);",
+              "        }",
+              "    }",
+              "    else {",
+              "        if(i == t_Weapon2) {",
+              "            if(ShipCustomShipInfoData(Player(),'ExpBK_License',1) < 3) continue;",
+              "            i = t_Artefact;",
+              "            tint2 = 2;",
+              "        }",
+              "        else tint2 = 1;",
+              "        for(j=0;ShipSlots(temp_dword_2,tint2)>j;j=j+1) {",
+              "            temp_dword_3 = ShipEqInSlot(temp_dword_2,i,j);",
+              "            if(!ItemIsBroken(temp_dword_3)) continue;",
+              "            if(tint2 == 1) InjectAnswer('RepairG',\"Починить\"+' '+Name(temp_dword_3),j);",
+              "            else InjectAnswer('RepairA',\"Починить\"+' '+Name(temp_dword_3),j);",
+              "            tint1 = tint1 + 1;",
+              "        }",
+              "    }",
+              "}",
+              "",
+              "if(tint1) {",
+              "    tstr1 = \"Итак, мы вывели весь список оборудования, которое готовы восстановить мастера. Выбирайте - всё абсолютно бесплатно!\";",
+              "    tstr2 = \"Нет, пожалуй, в другой раз\";",
+              "}",
+              "else {",
+              "    tstr1 = \"Увы, рейнджер, мастерам нечего тут чинить!\";",
+              "    tstr2 = \"Жаль\";",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  435,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PlayerMedPolicy(PlayerMedPolicy()+temp_dword);",
+              "Sound('Sound.Buy');",
+              "ShipMoney(Player(),ShipMoney(Player()) - (temp_dword * tint1));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  443,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.Repair');",
+              "if(!ShipEqInSlot(Player(),GAnswerData)) exit;",
+              "if(GAnswerData != t_Hull) {",
+              "    ItemDurability(ShipEqInSlot(Player(),GAnswerData),100);",
+              "}",
+              "else {",
+              "    HullHP(Player(),'To100');",
+              "    for(i=0;i<5;i=i+1) {",
+              "        ShipStatusEffect(Player(),i,-10000);",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  444,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.Repair');",
+              "if(!ShipEqInSlot(Player(),t_Weapon1,GAnswerData)) exit;",
+              "ItemDurability(ShipEqInSlot(Player(),t_Weapon1,GAnswerData),100);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  340,
+          "Pos.y":  800,
+          "Parent":  -1,
+          "#":  445,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.Repair');",
+              "if(!ShipEqInSlot(Player(),t_Artefact,GAnswerData)) exit;",
+              "ItemDurability(ShipEqInSlot(Player(),t_Artefact,GAnswerData),100);"          
+          ]        
         }      
       ],
       "Planets":      
@@ -5081,6 +5607,136 @@
           "Code":          
           [
               "ShipMoney(Player()) < tint3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  397,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipStatus(Player(),2) > 20"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  830,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  400,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 7) <= ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  830,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  401,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 3) <= ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  830,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  402,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 2) <= ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  404,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 7) > ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  730,
+          "Parent":  -1,
+          "#":  405,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 3) > ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  406,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(GalaxyMoney(4,4) * 2) > ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  440,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  420,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipFindCustomShipInfoByType(Player(),'ExpBK_License')"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  433,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_dword < 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  650,
+          "Parent":  -1,
+          "#":  434,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_dword > 0"          
           ]        
         }      
       ],
@@ -8283,6 +8939,398 @@
       "End":  395,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  397,
+      "End":  398,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  218,
+      "End":  397,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  398,
+      "End":  399,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  403,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  403,
+      "End":  218,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  400,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  401,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  402,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  404,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  405,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  399,
+      "End":  406,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  404,
+      "End":  408,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  405,
+      "End":  409,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  406,
+      "End":  410,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  402,
+      "End":  411,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  401,
+      "End":  412,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  400,
+      "End":  413,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  411,
+      "End":  414,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  412,
+      "End":  415,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  413,
+      "End":  416,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  414,
+      "End":  417,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  415,
+      "End":  417,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  416,
+      "End":  417,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  417,
+      "End":  418,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  418,
+      "End":  419,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  421,
+      "End":  423,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  423,
+      "End":  218,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  218,
+      "End":  420,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  421,
+      "End":  422,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  422,
+      "End":  424,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  420,
+      "End":  425,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  425,
+      "End":  421,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  424,
+      "End":  218,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  426,
+      "End":  428,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  428,
+      "End":  427,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  427,
+      "End":  429,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  427,
+      "End":  430,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  430,
+      "End":  431,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  431,
+      "End":  433,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  433,
+      "End":  427,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  431,
+      "End":  434,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  434,
+      "End":  435,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  435,
+      "End":  436,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  436,
+      "End":  437,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  407,
+      "End":  432,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  432,
+      "End":  438,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  438,
+      "End":  439,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  441,
+      "End":  443,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  442,
+      "End":  444,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  440,
+      "End":  445,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  443,
+      "End":  446,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  444,
+      "End":  446,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  445,
+      "End":  446,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  446,
+      "End":  447,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  446,
+      "End":  448,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  447,
+      "End":  432,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -8426,7 +9474,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  161,
+  "BlockPar.EC.Total.Strings":  188,
   "BlockPar.EC":  
   [
     {
@@ -8590,10 +9638,6 @@
       "String":  "<color=255,240,100>Свежие экономические новости:</color>"    
     },
     {
-      "#":  "191",
-      "String":  "Здесь вы можете получить доступ к вашему депозитному счёту, погасить кредитную задолженность или, при наличии действующей торговой лицензии, воспользоваться онлайн-терминалом для удалённой закупки товаров."    
-    },
-    {
       "#":  "192",
       "String":  "Терминал для удалённых закупок"    
     },
@@ -8691,7 +9735,7 @@
     },
     {
       "#":  "217",
-      "String":  "Итак, вы как член корпуса Рейнджеров имеете право на получение кредита по льготным условиям.<br><br>Кроме того, мы можем провести обслуживание ваших задолженностей (например, произвести часитичную или полную их оплату) или перекредитовать вас по льготным условиям.<br><br>Более того, из нашего центра вы можете произвести оплату задолженностей перед правительствами различных планет Коалиции.<br><br>И всё это - по лучшим условиям в Галактике и с минимальной комиссией за операции!"    
+      "String":  "Итак, вы как член корпуса Рейнджеров имеете право на получение кредита по льготным условиям.<br>Кроме того, мы можем провести обслуживание ваших задолженностей (например, произвести часитичную или полную их оплату) или перекредитовать вас по льготным условиям.<br>Более того, из нашего центра вы можете произвести оплату задолженностей перед правительствами различных планет Коалиции.<br>Ну а если вы часто сталкиваетесь с тем, что починка после напряжённого и очень долгого космического боя заставляет вас расстреливать астероиды и подбирать с них минералы, то мы можем предложить вам оформить страховку Экстренной Починки.<br><br>И всё это - по лучшим условиям в Галактике и с минимальной комиссией за операции!"    
     },
     {
       "#":  "218",
@@ -8980,6 +10024,118 @@
     {
       "#":  "287",
       "String":  "Отлично!"    
+    },
+    {
+      "#":  "288",
+      "String":  "Меня интересует страховка на починку оборудования"    
+    },
+    {
+      "#":  "289",
+      "String":  "Нужна починка по страховке!"    
+    },
+    {
+      "#":  "290",
+      "String":  "Нужна починка оборудования? Поможем вам связаться с мастерскими!"    
+    },
+    {
+      "#":  "291",
+      "String":  "Продлить страховой полис"    
+    },
+    {
+      "#":  "292",
+      "String":  "Здесь вы можете получить доступ к вашему депозитному счёту, погасить кредитную задолженность, продлить действие страхового полиса или, при наличии действующей торговой лицензии, воспользоваться онлайн-терминалом для удалённой закупки товаров."    
+    },
+    {
+      "#":  "293",
+      "String":  "Жаль"    
+    },
+    {
+      "#":  "294",
+      "String":  "Увы, рейнджер, мастерам нечего тут чинить!"    
+    },
+    {
+      "#":  "295",
+      "String":  "Нет, пожалуй, в другой раз"    
+    },
+    {
+      "#":  "296",
+      "String":  "Итак, мы вывели весь список оборудования, которое готовы восстановить мастера. Выбирайте - всё абсолютно бесплатно!"    
+    },
+    {
+      "#":  "297",
+      "String":  "Починить"    
+    },
+    {
+      "#":  "298",
+      "String":  "О, конечно, конечно!<br><br>Ситуация, когда рейнджер остаётся без каких-либо средств, чтобы починить своё оружие и вновь вступить в бой с захватчиками, не могла и не может огорчать Галактический Совет. После обращения нескольких сенаторов к нашему совету директоров была разработана так называемая \"Страховка Экстренной Починки\".<br><br>Она позволит вам, рейнджер, в любое время получить полный ремонт <color=225,20,20>неисправного</color> оборудования на любой <clr>индустриальной<clrEnd> планете, где обычно размещаются партнёрские мастерские и службы ремонта.<br><br>Если вас заинтересовало наше предложение, то у нас есть три тарифа на выбор:<br>-----------------------<br>\"Базовый тариф\"<br>Стоимость: <clr><0><clrEnd><br><br>Данный тариф позволит вам в срочном порядке восстановить боеспособность корабля<br><br>Восстанавливаем:<br><color=225,20,20>Двигатель</color><br><color=225,20,20>Дроида</color><br><color=225,20,20>Все орудия</color><br>-----------------------<br>\"Расширенный тариф\"<br>Стоимость: <clr><1><clrEnd><br><br>Данный тариф позволит вам в срочном порядке восстановить все защитные и атакующие системы корабля<br><br>Восстанавливаем:<br><color=225,20,20>Двигатель</color><br><color=225,20,20>Дроида</color><br><color=225,20,20>Все орудия</color><br><color=225,20,20>Генератор защитного поля</color><br><color=225,20,20>Топливный бак</color><br>-----------------------<br>\"Полный тариф\"<br>Стоимость: <clr><2><clrEnd><br><br>Данный тариф позволит вам в срочном порядке полностью восстановить ваш корабль<br><br>Восстанавливаем:<br><color=225,20,20>Двигатель</color><br><color=225,20,20>Дроида</color><br><color=225,20,20>Все орудия</color><br><color=225,20,20>Генератор защитного поля</color><br><color=225,20,20>Топливный бак</color><br><color=225,20,20>Захват</color><br><color=225,20,20>Сканер</color><br><color=225,20,20>Радар</color><br><color=225,20,20>Все артефакты</color><br><color=225,20,20>Обшивку вашего корпуса</color>, с устранением всех <color=225,20,20>помех</color>."    
+    },
+    {
+      "#":  "299",
+      "String":  "Отличный выбор, рейнджер!<br><br>Мы уже оформили на ваше имя страховку \"Экстренная починка\" с выбранным вами пакетом на <clr>два<clrEnd> года.<br><br>Благодарим за пользование услугами нашей сети!"    
+    },
+    {
+      "#":  "300",
+      "String":  "Вы уверены, рейнджер? Если вдруг денег на счету у вас окажется слишком мало... Тогда того и гляди - самые задохленькие корсарики вынудят вас, великого героя, отступить, как последнего труса! Подумайте о своей славе и чести!"    
+    },
+    {
+      "#":  "301",
+      "String":  "Стоимость продления страхового полиса на <clr>1<clrEnd> стандартные сутки - <0> cr.<br><br>Максимальный срок продления за одну процедуру - <clr>300<clrEnd> стандартных дней."    
+    },
+    {
+      "#":  "302",
+      "String":  "Отлично! Мы уже обновили срок действия вашего договора, так что можете спать спокойно!"    
+    },
+    {
+      "#":  "303",
+      "String":  "Отлично! Техники уже завершили работы. Принимайте! Всё как будто вчера с конвейера сошло.<br><br>Хотите ещё раз воспользоваться услугами мастеров?"    
+    },
+    {
+      "#":  "304",
+      "String":  "Пожалуй, выберу другие услуги"    
+    },
+    {
+      "#":  "305",
+      "String":  "Меня интересует Полный тариф"    
+    },
+    {
+      "#":  "306",
+      "String":  "Меня интересует Расширенный тариф"    
+    },
+    {
+      "#":  "307",
+      "String":  "Меня интересует Базовый тариф"    
+    },
+    {
+      "#":  "308",
+      "String":  "К другим услугам"    
+    },
+    {
+      "#":  "309",
+      "String":  "Пожалуй, вы правы, лучше выберу какую-нибудь другую вашу услугу"    
+    },
+    {
+      "#":  "310",
+      "String":  "Я хочу отменить свою страховку починки!"    
+    },
+    {
+      "#":  "311",
+      "String":  "Не сейчас"    
+    },
+    {
+      "#":  "312",
+      "String":  "Оформить продление"    
+    },
+    {
+      "#":  "313",
+      "String":  "Выберите время, на которое хотите увеличить срок действия страховки"    
+    },
+    {
+      "#":  "314",
+      "String":  "Давайте починим что-нибудь ещё!"    
+    },
+    {
+      "#":  "315",
+      "String":  "Пожалуй, на сегодня хватит"    
     },
     {
       "#":  "32",

@@ -343,7 +343,7 @@
           "#":  140,
           "Ether.Type":  4,
           "Unique":  "3B3C9B11-D7FF-4EF8-ABDC-66DC958DCA4D",
-          "Msg":  "<tstr>",
+          "Msg":  "",
           "Ship1":  "",
           "Ship2":  "",
           "Ship3":  ""        
@@ -3185,7 +3185,7 @@
     },
     {
       "#":  "94",
-      "String":  "<0>"    
+      "String":  ""    
     },
     {
       "#":  "95",

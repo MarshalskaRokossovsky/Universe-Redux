@@ -1342,6 +1342,7 @@
               "            {",
               "                k = StarPlanets(cur_star, j);",
               "                if(PlanetOwner(k) == 6) continue;",
+              "                if(PlanetOwner(k) == 7) continue;",
               "                mark2 = PlanetInventionLevel(k, 7);",
               "                if(mark2 > mark)",
               "                {",

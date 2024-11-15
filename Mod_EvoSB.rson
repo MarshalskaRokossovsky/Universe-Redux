@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -156,
-  "ViewPos.y":  199,
+  "ViewPos.x":  -139,
+  "ViewPos.y":  179,
   "ScriptName":  "Mod_EvoSB",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.txt",
@@ -94,7 +94,7 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "",
-          "Pos.x":  540,
+          "Pos.x":  530,
           "Pos.y":  540,
           "Parent":  -1,
           "#":  44,
@@ -1199,7 +1199,7 @@
           "Code":          
           [
               "cur_item = GAnswerData;",
-              "cost = ItemCost(cur_item);",
+              "cost = ItemCost(cur_item) * (10 - scienceRank) / 10;",
               "//Проверка на доминаторское и клисанское оборудование",
               "nod_cost = 0;",
               "if(ItemOwner(cur_item) == Kling)",
@@ -1234,11 +1234,11 @@
               "    nod_sum = nod_cost;",
               "    tflt = cost * 12;",
               "    tflt = tflt / 1000;",
-              "    nod_cost = round(tflt);",
+              "    nod_cost = round(tflt * (20 - scienceRank) / 20);",
               "    nod_cost = max(nod_cost, 3);",
               "}",
               "",
-              "cost = (cost * 12) / 10;"          
+              "cost = (cost * 12) / 10 * (10 - scienceRank) / 10;"          
           ]        
         },
         {
@@ -1257,10 +1257,10 @@
               "    nod_sum = nod_cost;",
               "    tflt = cost * 6;",
               "    tflt = tflt / 1000;",
-              "    nod_cost = round(tflt);",
+              "    nod_cost = round(tflt * (20 - scienceRank) / 20);",
               "    nod_cost = max(nod_cost, 2);",
               "}",
-              "cost = (cost * 6) / 10;"          
+              "cost = (cost * 6) / 10 * (10 - scienceRank) / 10;"          
           ]        
         },
         {
@@ -1279,10 +1279,10 @@
               "    nod_sum = nod_cost;",
               "    tflt = cost * 3;",
               "    tflt = tflt / 1000;",
-              "    nod_cost = round(tflt);",
+              "    nod_cost = round(tflt * (20 - scienceRank) / 20);",
               "    nod_cost = max(nod_cost, 1);",
               "}",
-              "cost = (cost * 3) / 10;"          
+              "cost = (cost * 3) / 10 * (10 - scienceRank) / 10;"          
           ]        
         },
         {
@@ -1468,7 +1468,7 @@
               "        }",
               "        else continue;",
               "    }",
-              "    ",
+              "",
               "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на скриптовые предметы прошла успешно');",
               "",
               "    //Исключаем высокоуровневое нестандартное",
@@ -1488,15 +1488,14 @@
               "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на стандартность оборудки прошла успешно');",
               "",
               "    //Исключаем корпуса, которым изменили восприимчивость на ТЦ",
-              "    if(ItemType(cur_item) == t_Hull)",
+              "    /*if(ItemType(cur_item) == t_Hull)",
               "    {",
               "        j = FindBonusByNameInCfg('ExpTC_HullSpraying');",
               "        if(~j) j = ItemExtraSpecialsCountByType(cur_item, j);",
               "        if(j > 0) continue;",
-              "    }",
+              "    }*/",
               "",
               "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на напыление с ТЦ прошла успешно');",
-              "",
               "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Это была последняя проверка. Если ты видишь эту новость, но корпуса в списке нет, то произшли интересные колдунства');",
               "",
               "    ArrayAdd(items, cur_item);",
@@ -3172,7 +3171,9 @@
               "            else ArrayAdd(ExplArr,Id(tplan));",
               "        }",
               "    }",
-              "}"          
+              "}",
+              "",
+              "if(CurrentMods('Expansion\\ExpScienceRanks')) scienceRank = PlayerScienceRank['CurrentRank']"          
           ]        
         }      
       ],
@@ -4502,6 +4503,17 @@
           "#":  237,
           "Var.Type":  "Int",
           "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "scienceRank",
+          "Pos.x":  220,
+          "Pos.y":  870,
+          "Parent":  -1,
+          "#":  239,
+          "Var.Type":  "Int",
+          "Init":  "0",
           "Global":  false        
         }      
       ]    
