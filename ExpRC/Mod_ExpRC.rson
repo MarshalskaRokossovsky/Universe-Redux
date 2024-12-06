@@ -1575,8 +1575,8 @@
           [
               "dwd0=GetNodesFromShip(Player());",
               "GetNodesFromShip(Player(),dwd0);",
-              "RangerBaseNodes(Player(),RangerBaseNodes(Player()) + (dwd0*5));",
-              "ShipFreeExp(Player(),ShipFreeExp(Player()) + (dwd0*7));",
+              "RangerBaseNodes(Player(),RangerBaseNodes(Player()) + (dwd0*3));",
+              "ShipFreeExp(Player(),ShipFreeExp(Player()) + (dwd0*5));",
               "Sound('Sound.Buy');"          
           ]        
         }      

@@ -982,11 +982,11 @@
               "else {",
               "    if(ControlledSystems(0) > 10) {",
               "        vScst = -1;",
-              "        NewsAdd('Внимание! Мод ExpCaravan начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
+              "        //NewsAdd('Внимание! Мод ExpCaravan начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
               "    }",
               "    else {",
               "        vScst = -2;",
-              "        NewsAdd('Внимание! Мод ExpCaravan не начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
+              "        //NewsAdd('Внимание! Мод ExpCaravan не начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
               "        AllShipOut();",
               "    }",
               "}"          

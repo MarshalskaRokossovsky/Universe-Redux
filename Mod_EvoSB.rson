@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -139,
-  "ViewPos.y":  179,
+  "ViewPos.x":  -232,
+  "ViewPos.y":  204,
   "ScriptName":  "Mod_EvoSB",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.txt",
@@ -688,7 +688,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  0,
-          "Pos.y":  20,
+          "Pos.y":  40,
           "Parent":  208,
           "#":  210,
           "Msg":  "<tstr3>",
@@ -1100,7 +1100,7 @@
               "    FreeItem(cur_item);",
               "",
               "    //Повторяем по второму кругу, потому что два зонда",
-              "    ",
+              "",
               "    //Создаём зонд и записываем его параметры в свежедобавленную инфошку",
               "    if(Rnd(1, 1000) <= (45 * GalaxyTechLevel())) tint = GalaxyTechLevel() - 1;",
               "    else tint = Rnd(1, GalaxyTechLevel()) - 1;",
@@ -1185,6 +1185,26 @@
               "",
               "    int speed_percent = PortionInDiapason(GalaxyDominatorResearchMaterial(serie), 0, 300, 20, 100);",
               "    result = round(max(1.0, (100.0 - GalaxyDominatorResearchPercent(serie)) / PortionInDiapason(speed_percent, 0, 100, 0.00001, max_work_day_mod) * serie_mod));",
+              "}",
+              "",
+              "function PlayerActCode() //t_OnEnteringForm, t_OnLeavingForm, t_OnStep|11",
+              "{",
+              "    if(ScriptItemActionType(t_OnEnteringForm))",
+              "    {",
+              "        if(FormChange() != 'RuinsTalk')",
+              "        {",
+              "            GDomiksProgramms = 0;",
+              "        }",
+              "    }",
+              "    else if(ScriptItemActionType(t_OnLeavingForm))",
+              "    {",
+              "        //Игрок покидает магазин оборудования",
+              "        if(CurrentForm() == 'RuinsTalk')",
+              "        {",
+              "            GDomiksProgramms = 0;",
+              "        }",
+              "    }",
+              "    else if(CurrentForm() != 'RuinsTalk') GDomiksProgramms = 0;",
               "}"          
           ]        
         },
@@ -1451,12 +1471,8 @@
               "    cur_item = ShipItems(cur_ship, i);",
               "    acryn_num = EqSpecial(cur_item);",
               "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Корпус зафиксирован!');",
-              "",
               "    //Исключаем уже улучшенное",
               "    if(ItemImprovement(cur_item)) continue;",
-              "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на наличие улучшения на НБ/ТЦ прошла успешно');",
               "",
               "    //Исключаем скриптовое",
               "    if(ItemInScript(cur_item) == 1)",
@@ -1469,13 +1485,9 @@
               "        else continue;",
               "    }",
               "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на скриптовые предметы прошла успешно');",
-              "",
               "    //Исключаем высокоуровневое нестандартное",
               "    if(!ShipCanRepairEq(Player(), cur_item)) continue;",
               "    if(EqCustomFaction(cur_item) != '' && ItemLevel(cur_item) > GalaxyTechLevel()) continue;",
-              "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на кастомное/временно непочиняемое прошла успешно');",
               "",
               "    //Оставляем только стандартное оборудование и пушки",
               "    if(ItemType(cur_item) < t_Hull || ItemType(cur_item) > t_CustomWeapon) continue;",
@@ -1485,8 +1497,6 @@
               "        if(CT('MicroModuls.' + BonusNumInCfg(acryn_num) + '.BlockImp')) continue;",
               "    }",
               "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на стандартность оборудки прошла успешно');",
-              "",
               "    //Исключаем корпуса, которым изменили восприимчивость на ТЦ",
               "    /*if(ItemType(cur_item) == t_Hull)",
               "    {",
@@ -1494,9 +1504,6 @@
               "        if(~j) j = ItemExtraSpecialsCountByType(cur_item, j);",
               "        if(j > 0) continue;",
               "    }*/",
-              "",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Проверка на напыление с ТЦ прошла успешно');",
-              "    //if(ItemType(cur_item) == t_Hull) NewsAdd('Это была последняя проверка. Если ты видишь эту новость, но корпуса в списке нет, то произшли интересные колдунства');",
               "",
               "    ArrayAdd(items, cur_item);",
               "    variable = variable + 1;",
@@ -2684,7 +2691,11 @@
               "{",
               "    ArrayAdd(tarr1, 0);",
               "    ArrayAdd(tarr2, 0);",
-              "}"          
+              "}",
+              "",
+              "//Глобальная переменная, которая костыль. И которая поможет нам навести порядок в этом ужасном нагромождении",
+              "//диалогов научки",
+              "GDomiksProgramms = 1;"          
           ]        
         },
         {
@@ -2752,7 +2763,10 @@
               "        else tarr2[i] = tarr2[i] + 100;",
               "    }",
               "    ArraySort(tarr2, tarr1);",
-              "}"          
+              "}",
+              "",
+              "//Обнуляем костыль, чтобы диалоги не возникали",
+              "GDomiksProgramms = 0;"          
           ]        
         },
         {
@@ -3153,7 +3167,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  490,
-          "Pos.y":  970,
+          "Pos.y":  980,
           "Parent":  -1,
           "#":  234,
           "Code.Type":  "Turn",
@@ -3174,6 +3188,20 @@
               "}",
               "",
               "if(CurrentMods('Expansion\\ExpScienceRanks')) scienceRank = PlayerScienceRank['CurrentRank']"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  590,
+          "Pos.y":  900,
+          "Parent":  -1,
+          "#":  241,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Обнуляем костыль, чтобы диалоги не возникали",
+              "GDomiksProgramms = 0;"          
           ]        
         }      
       ],
@@ -3881,7 +3909,7 @@
           "TakeItem":  -1,
           "TakeAllItem":  false,
           "OnTalk":  "",
-          "OnActCode":  "",
+          "OnActCode":  "[t_OnEnteringForm,t_OnLeavingForm,t_OnStep|11]\r\nPlayerActCode();",
           "EType":  1,
           "EUnique":  "",
           "EMsg":  ""        
@@ -4515,6 +4543,17 @@
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "GDomiksProgramms",
+          "Pos.x":  590,
+          "Pos.y":  990,
+          "Parent":  -1,
+          "#":  240,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  true        
         }      
       ]    
     }  
@@ -5776,22 +5815,8 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  208,
-      "End":  210,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  211,
       "End":  212,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  209,
-      "End":  208,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5946,6 +5971,27 @@
       "Type":  "TGraphLink",
       "Begin":  238,
       "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  209,
+      "End":  208,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  208,
+      "End":  241,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  241,
+      "End":  210,
       "Nom":  0,
       "Arrow":  true    
     }  

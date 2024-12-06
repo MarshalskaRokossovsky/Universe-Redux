@@ -2737,7 +2737,7 @@
               "            }",
               "            else if(ShipTypeN(cur_ship) == t_Warrior)",
               "            {",
-              "                if(ShipSubType(cur_ship) == 1 || ShipType(cur_ship,'Dreadnought'))",
+              "                if(ShipSubType(cur_ship) == 1 || ShipType(cur_ship) == 'Dreadnought')",
               "                {",
               "                    if(!StarBattle(ShipStar(cur_ship)))",
               "                    {",

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -69,
-  "ViewPos.y":  -61,
+  "ViewPos.x":  -422,
+  "ViewPos.y":  4,
   "ScriptName":  "Mod_RevDominatorSpy",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.txt",
@@ -107,7 +107,7 @@
           "Pos.x":  40,
           "Pos.y":  520,
           "Parent":  -1,
-          "#":  131,
+          "#":  128,
           "Msg":  "Это определённо стоит запомнить! (Вернуться на главную)",
           "AMsg.Num":  "9"        
         },
@@ -117,7 +117,7 @@
           "Pos.x":  980,
           "Pos.y":  510,
           "Parent":  -1,
-          "#":  133,
+          "#":  130,
           "Msg":  "Вот так бы сразу",
           "AMsg.Num":  "10"        
         }      
@@ -210,7 +210,7 @@
           "Pos.x":  890,
           "Pos.y":  620,
           "Parent":  -1,
-          "#":  118,
+          "#":  115,
           "Msg":  "Ни в коем случае! Вы должны будете немного пошпионить за ним. Как? При помощи зонда. Но тут следующая сложность: доминаторам известны практически все известные нам модели зондов. Исключением являются пеленгские. Их конструкция осталась неизменной со времен Клисанской войны, однако, они все еще более чем эффективны.\r\nПерейдем ближе к делу. Для того, чтобы проследить за доминатором, понадобится зонд. К счастью, он у нас есть. Необходимо будет доставить зонд в систему <Name(StarDom)>. По нашим данным транслирующим кораблем является <Name(GroupToShip(BigShip))>. Вам необходимо собрать информации минимум на <(vZondMemory=90)>% памяти зонда и привезти его сюда, на <ShortName(GroupToShip(BSB))>.",
           "DMsg.Num":  "8"        
         },
@@ -220,7 +220,7 @@
           "Pos.x":  40,
           "Pos.y":  480,
           "Parent":  -1,
-          "#":  130,
+          "#":  127,
           "Msg":  "Пеленги постоянно раскидывают свои разведзонды, но, к вашему удивлению, от этого в Галанете больше информации не стало. Проведя несколько часов и начав чувствовать резь в глазах, вы наконец наткнулись на смутное описание правил пользования зондов - на пеленгском же источнике.\r\n\r\nИсходя из этого, зонд не может работать из трюма. Принципе его работы кроется в том, чтобы иметь возможность полностью исследовать цель, чему мешает корабль-носитель. В связи с этим все разведчики <clr>сбрасывают зонд в открытое космическое пространство<clrEnd> и маневрируют неподалёку.",
           "DMsg.Num":  "9"        
         },
@@ -230,7 +230,7 @@
           "Pos.x":  980,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  132,
+          "#":  129,
           "Msg":  "Рейнджер, может, догово... Ай, пакряк с тобой. Выбросил я твой зонд. Только отстань от меня, я ещё жить хочу.",
           "DMsg.Num":  "10"        
         }      
@@ -259,7 +259,7 @@
           "Pos.x":  40,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  129        
+          "#":  126        
         }      
       ],
       "Ethers":      
@@ -267,54 +267,12 @@
         {
           "Type":  "TEther",
           "Name":  "",
-          "Pos.x":  800,
-          "Pos.y":  550,
-          "Parent":  -1,
-          "#":  85,
-          "Ether.Type":  3,
-          "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
-          "Ship1":  "",
-          "Ship2":  "",
-          "Ship3":  ""        
-        },
-        {
-          "Type":  "TEther",
-          "Name":  "",
-          "Pos.x":  870,
-          "Pos.y":  360,
-          "Parent":  -1,
-          "#":  86,
-          "Ether.Type":  4,
-          "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
-          "Ship1":  "",
-          "Ship2":  "",
-          "Ship3":  ""        
-        },
-        {
-          "Type":  "TEther",
-          "Name":  "",
-          "Pos.x":  540,
-          "Pos.y":  680,
-          "Parent":  -1,
-          "#":  90,
-          "Ether.Type":  5,
-          "Unique":  "41DD73A2-7A71-4130-80C8-423E2CC022D0",
-          "Msg":  "В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.",
-          "Ship1":  "",
-          "Ship2":  "",
-          "Ship3":  ""        
-        },
-        {
-          "Type":  "TEther",
-          "Name":  "",
           "Pos.x":  760,
           "Pos.y":  730,
           "Parent":  -1,
-          "#":  126,
+          "#":  123,
           "Ether.Type":  1,
-          "Unique":  "",
+          "Unique":  "17BF4B00-296B-4D1B-A38D-AB51D64DE1EE",
           "Msg":  "Хм. И что делать с этой штуковиной? Может, посмотреть в Галанете?",
           "Ship1":  "",
           "Ship2":  "",
@@ -323,27 +281,13 @@
         {
           "Type":  "TEther",
           "Name":  "",
-          "Pos.x":  800,
-          "Pos.y":  590,
+          "Pos.x":  40,
+          "Pos.y":  570,
           "Parent":  -1,
-          "#":  139,
-          "Ether.Type":  3,
-          "Unique":  "3B3C9B11-D7FF-4EF8-ABDC-66DC958DCA4D",
-          "Msg":  "Нужно отыскать <Name(PelengSpy)> и отобрать у него зонд.",
-          "Ship1":  "",
-          "Ship2":  "",
-          "Ship3":  ""        
-        },
-        {
-          "Type":  "TEther",
-          "Name":  "",
-          "Pos.x":  720,
-          "Pos.y":  770,
-          "Parent":  -1,
-          "#":  140,
+          "#":  135,
           "Ether.Type":  4,
-          "Unique":  "3B3C9B11-D7FF-4EF8-ABDC-66DC958DCA4D",
-          "Msg":  "",
+          "Unique":  "17BF4B00-296B-4D1B-A38D-AB51D64DE1EE",
+          "Msg":  "Хм. И что делать с этой штуковиной? Может, посмотреть в Галанете?",
           "Ship1":  "",
           "Ship2":  "",
           "Ship3":  ""        
@@ -491,7 +435,7 @@
           "Pos.x":  200,
           "Pos.y":  600,
           "Parent":  -1,
-          "#":  109,
+          "#":  106,
           "Class":  5,
           "Item.Type":  0,
           "Size":  10,
@@ -520,8 +464,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  540,
-          "Pos.y":  730,
+          "Pos.x":  200,
+          "Pos.y":  640,
           "Parent":  -1,
           "#":  23,
           "Code.Type":  "Turn",
@@ -593,13 +537,13 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  460,
-          "Pos.y":  500,
+          "Pos.y":  490,
           "Parent":  -1,
           "#":  43,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "Dialog(dDiplomat,PelengSpy)"          
+              "Dialog(dDiplomat,PelengSpy);"          
           ]        
         },
         {
@@ -668,6 +612,10 @@
               "  vStateDom=2;",
               "  MyProbe=1;",
               "  Unzond = 1;",
+              "  Ether(3,'RevDomSpyEther',\"В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.\");",
+              "}",
+              "else {",
+              "  Ether(3,'RevDomSpyEther',\"В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.\");",
               "}"          
           ]        
         },
@@ -705,7 +653,7 @@
           "Pos.x":  870,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  93,
+          "#":  90,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -731,13 +679,14 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  540,
-          "Pos.y":  640,
+          "Pos.y":  660,
           "Parent":  -1,
-          "#":  95,
+          "#":  92,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "vStateDom=128"          
+              "vStateDom=128;",
+              "Ether(5,'RevDomSpyEther','');"          
           ]        
         },
         {
@@ -746,7 +695,7 @@
           "Pos.x":  750,
           "Pos.y":  400,
           "Parent":  -1,
-          "#":  100,
+          "#":  97,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -759,7 +708,7 @@
           "Pos.x":  250,
           "Pos.y":  490,
           "Parent":  -1,
-          "#":  102,
+          "#":  99,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -772,7 +721,7 @@
           "Pos.x":  220,
           "Pos.y":  100,
           "Parent":  -1,
-          "#":  110,
+          "#":  107,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -872,7 +821,7 @@
           "Pos.x":  240,
           "Pos.y":  60,
           "Parent":  -1,
-          "#":  111,
+          "#":  108,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -891,7 +840,7 @@
           "Pos.x":  240,
           "Pos.y":  80,
           "Parent":  -1,
-          "#":  112,
+          "#":  109,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -908,7 +857,7 @@
           "Pos.x":  240,
           "Pos.y":  100,
           "Parent":  -1,
-          "#":  113,
+          "#":  110,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -932,10 +881,10 @@
               "              vMin=Rnd(0,59);",
               "              vSec=Rnd(0,59);",
               "              if(vZondMemory>=96) { //Вывод уведомление о возвращении на базу",
-              "                Ether(2,'008DB316-DEE1-4BE1-A6BF-875942EC3671',\"<GameDateTxtByTurn(CurTurn())><br><vHour>:<vMin>:<vSec><br>Память зонда заполнена! Пора возвращаться на научную базу.\");",
+              "                CustomEther('Scanned',2,'008DB316-DEE1-4BE1-A6BF-875942EC3671',\"<GameDateTxtByTurn(CurTurn())><br><vHour>:<vMin>:<vSec><br>Память зонда заполнена! Пора возвращаться на научную базу.\");",
               "              }",
               "              if(vZondMemory<96) { //Вывод уведомления о прогрессе сбора информации",
-              "                Ether(2,'008DB316-DEE1-4BE1-A6BF-875942EC3671',\"<GameDateTxtByTurn(CurTurn())><br><vHour>:<vMin>:<vSec><br>Зонд записал информации на <vZondMemory>% памяти.<br>Свободно: <(100-vZondMemory)>%\");",
+              "                CustomEther('Scanned',2,'008DB316-DEE1-4BE1-A6BF-875942EC3671',\"<GameDateTxtByTurn(CurTurn())><br><vHour>:<vMin>:<vSec><br>Зонд записал информации на <vZondMemory>% памяти.<br>Свободно: <(100-vZondMemory)>%\");",
               "                vZondDaysPl=vZondDaysPl+1;",
               "                if(vStateDom<4) vZondMemory=vZondMemory+Rnd(3,7);",
               "              }",
@@ -951,7 +900,7 @@
               "}",
               "if(vStateDom==4) { //Отсчет 5 дней до взрыва зонда после сдачи на НБ",
               "  vZondDaysPl=vZondDaysPl+1;",
-              "  if(vStateDom<4)vZondMemory=vZondMemory+3;",
+              "  if(vStateDom<4) vZondMemory=vZondMemory+3;",
               "  if(vZondDaysPl>=5) {",
               "    vStateDom=5;",
               "    ItemDestroy(iOP,2);",
@@ -974,6 +923,7 @@
               "    if(ItemIn(iOP,Player())) { //Игрок подобрал зонд",
               "      vStateDom=2;",
               "      MyProbe=1;",
+              "      Ether(3,'RevDomSpyEther',\"В системе <Name(StarDom)> найти корабль <Name(GroupToShip(BigShip))> и прошпионить за ним. Зонд должен собрать информации как минимум на <90>% своей памяти.\");",
               "      if(playerKillsSpy) ChangeGlobalRelationsPlanets(Player(),0,3,20,2);",
               "    }",
               "  }",
@@ -986,7 +936,7 @@
           "Pos.x":  870,
           "Pos.y":  570,
           "Parent":  -1,
-          "#":  123,
+          "#":  120,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1017,7 +967,7 @@
           "Pos.x":  0,
           "Pos.y":  480,
           "Parent":  -1,
-          "#":  128,
+          "#":  125,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1030,7 +980,7 @@
           "Pos.x":  720,
           "Pos.y":  730,
           "Parent":  -1,
-          "#":  137,
+          "#":  134,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1040,27 +990,29 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  760,
-          "Pos.y":  590,
+          "Pos.x":  720,
+          "Pos.y":  360,
           "Parent":  -1,
-          "#":  142,
+          "#":  138,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tstr = Format('Нужно отыскать name и отобрать у него зонд.','name',Name(PelengSpy));"          
+              "Sound('Sound.QuestOk');",
+              "Ether(4,'RevDomSpyEther','');"          
           ]        
         },
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  720,
-          "Pos.y":  360,
+          "Pos.x":  570,
+          "Pos.y":  550,
           "Parent":  -1,
-          "#":  145,
+          "#":  139,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "Sound('Sound.QuestOk');"          
+              "//Чтобы наверняка не было NameError",
+              "tstr = Format(\"Нужно отыскать name и отобрать у него зонд.\",'name',Name(PelengSpy));"          
           ]        
         }      
       ],
@@ -1128,7 +1080,7 @@
           "Pos.x":  510,
           "Pos.y":  240,
           "Parent":  -1,
-          "#":  97,
+          "#":  94,
           "Place.Type":  4,
           "Angle":  "0",
           "Dist":  "0.5",
@@ -1310,8 +1262,8 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  460,
-          "Pos.y":  730,
+          "Pos.x":  170,
+          "Pos.y":  640,
           "Parent":  -1,
           "#":  22,
           "Code.Type":  "Turn",
@@ -1323,8 +1275,8 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  360,
-          "Pos.y":  730,
+          "Pos.x":  140,
+          "Pos.y":  640,
           "Parent":  -1,
           "#":  27,
           "Code.Type":  "Turn",
@@ -1560,7 +1512,7 @@
           "Pos.x":  420,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  87,
+          "#":  85,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1573,7 +1525,7 @@
           "Pos.x":  500,
           "Pos.y":  580,
           "Parent":  -1,
-          "#":  88,
+          "#":  86,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1586,7 +1538,7 @@
           "Pos.x":  500,
           "Pos.y":  700,
           "Parent":  -1,
-          "#":  89,
+          "#":  87,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1599,7 +1551,7 @@
           "Pos.x":  500,
           "Pos.y":  640,
           "Parent":  -1,
-          "#":  91,
+          "#":  88,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1612,7 +1564,7 @@
           "Pos.x":  460,
           "Pos.y":  670,
           "Parent":  -1,
-          "#":  92,
+          "#":  89,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1625,7 +1577,7 @@
           "Pos.x":  500,
           "Pos.y":  660,
           "Parent":  -1,
-          "#":  96,
+          "#":  93,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1638,7 +1590,7 @@
           "Pos.x":  870,
           "Pos.y":  540,
           "Parent":  -1,
-          "#":  116,
+          "#":  113,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1651,7 +1603,7 @@
           "Pos.x":  890,
           "Pos.y":  540,
           "Parent":  -1,
-          "#":  117,
+          "#":  114,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1664,7 +1616,7 @@
           "Pos.x":  680,
           "Pos.y":  650,
           "Parent":  -1,
-          "#":  119,
+          "#":  116,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1677,7 +1629,7 @@
           "Pos.x":  890,
           "Pos.y":  650,
           "Parent":  -1,
-          "#":  121,
+          "#":  118,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1690,7 +1642,7 @@
           "Pos.x":  870,
           "Pos.y":  600,
           "Parent":  -1,
-          "#":  124,
+          "#":  121,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1703,7 +1655,7 @@
           "Pos.x":  890,
           "Pos.y":  600,
           "Parent":  -1,
-          "#":  125,
+          "#":  122,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1716,7 +1668,7 @@
           "Pos.x":  0,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  127,
+          "#":  124,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1729,7 +1681,7 @@
           "Pos.x":  660,
           "Pos.y":  730,
           "Parent":  -1,
-          "#":  134,
+          "#":  131,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1742,37 +1694,11 @@
           "Pos.x":  690,
           "Pos.y":  730,
           "Parent":  -1,
-          "#":  136,
+          "#":  133,
           "Code.Type":  "Turn",
           "Code":          
           [
               "ItemIn(iOP,Player())"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  730,
-          "Pos.y":  590,
-          "Parent":  -1,
-          "#":  138,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "CountIn(PelengSpy)"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
-          "Pos.x":  690,
-          "Pos.y":  770,
-          "Parent":  -1,
-          "#":  144,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "!Unzond"          
           ]        
         }      
       ],
@@ -1876,7 +1802,7 @@
           "Parent":  -1,
           "#":  29,
           "Move":  1,
-          "MoveObj":  97,
+          "MoveObj":  94,
           "Attack.Count":  0,
           "TakeItem":  9,
           "TakeAllItem":  false,
@@ -2019,7 +1945,7 @@
           "Pos.x":  -10,
           "Pos.y":  70,
           "Parent":  -1,
-          "#":  94,
+          "#":  91,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -2030,7 +1956,7 @@
           "Pos.x":  -10,
           "Pos.y":  50,
           "Parent":  -1,
-          "#":  98,
+          "#":  95,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -2041,7 +1967,7 @@
           "Pos.x":  -10,
           "Pos.y":  250,
           "Parent":  -1,
-          "#":  99,
+          "#":  96,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2052,7 +1978,7 @@
           "Pos.x":  -10,
           "Pos.y":  270,
           "Parent":  -1,
-          "#":  101,
+          "#":  98,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2063,7 +1989,7 @@
           "Pos.x":  -10,
           "Pos.y":  30,
           "Parent":  -1,
-          "#":  103,
+          "#":  100,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2074,7 +2000,7 @@
           "Pos.x":  -140,
           "Pos.y":  30,
           "Parent":  -1,
-          "#":  104,
+          "#":  101,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2085,7 +2011,7 @@
           "Pos.x":  -140,
           "Pos.y":  50,
           "Parent":  -1,
-          "#":  105,
+          "#":  102,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2096,7 +2022,7 @@
           "Pos.x":  -140,
           "Pos.y":  70,
           "Parent":  -1,
-          "#":  106,
+          "#":  103,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2107,7 +2033,7 @@
           "Pos.x":  -140,
           "Pos.y":  90,
           "Parent":  -1,
-          "#":  107,
+          "#":  104,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -2118,7 +2044,7 @@
           "Pos.x":  -140,
           "Pos.y":  110,
           "Parent":  -1,
-          "#":  108,
+          "#":  105,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2129,7 +2055,7 @@
           "Pos.x":  -10,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  114,
+          "#":  111,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2140,7 +2066,7 @@
           "Pos.x":  -10,
           "Pos.y":  310,
           "Parent":  -1,
-          "#":  115,
+          "#":  112,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2151,7 +2077,7 @@
           "Pos.x":  -10,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  120,
+          "#":  117,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2162,7 +2088,7 @@
           "Pos.x":  940,
           "Pos.y":  610,
           "Parent":  -1,
-          "#":  122,
+          "#":  119,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2173,7 +2099,7 @@
           "Pos.x":  680,
           "Pos.y":  690,
           "Parent":  -1,
-          "#":  135,
+          "#":  132,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2184,7 +2110,7 @@
           "Pos.x":  940,
           "Pos.y":  640,
           "Parent":  -1,
-          "#":  141,
+          "#":  136,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -2195,7 +2121,7 @@
           "Pos.x":  780,
           "Pos.y":  690,
           "Parent":  -1,
-          "#":  143,
+          "#":  137,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -2682,42 +2608,35 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  73,
-      "End":  86,
+      "Begin":  86,
+      "End":  88,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  88,
-      "End":  91,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  91,
       "End":  31,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
+      "Begin":  85,
+      "End":  89,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
       "Begin":  87,
-      "End":  92,
+      "End":  89,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  89,
-      "End":  92,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  92,
       "End":  31,
       "Nom":  0,
       "Arrow":  true    
@@ -2725,48 +2644,41 @@
     {
       "Type":  "TGraphLink",
       "Begin":  75,
-      "End":  93,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  87,
-      "End":  20,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  96,
       "End":  90,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  92,
-      "End":  96,
+      "Begin":  85,
+      "End":  20,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  91,
-      "End":  96,
+      "Begin":  89,
+      "End":  93,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  96,
-      "End":  95,
+      "Begin":  88,
+      "End":  93,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  97,
+      "Begin":  93,
+      "End":  92,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  94,
       "End":  0,
       "Nom":  0,
       "Arrow":  true    
@@ -2783,28 +2695,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  76,
-      "End":  85,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  100,
+      "Begin":  97,
       "End":  60,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  100,
+      "Begin":  97,
       "End":  73,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  100,
+      "Begin":  97,
       "End":  68,
       "Nom":  0,
       "Arrow":  true    
@@ -2812,14 +2717,14 @@
     {
       "Type":  "TGraphLink",
       "Begin":  34,
-      "End":  100,
+      "End":  97,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  21,
-      "End":  102,
+      "End":  99,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -2839,28 +2744,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  119,
+      "Begin":  116,
       "End":  65,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
+      "Begin":  115,
+      "End":  118,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
       "Begin":  118,
-      "End":  121,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  121,
-      "End":  119,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  63,
       "End":  116,
       "Nom":  0,
       "Arrow":  true    
@@ -2868,49 +2766,70 @@
     {
       "Type":  "TGraphLink",
       "Begin":  63,
-      "End":  117,
+      "End":  113,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  117,
-      "End":  118,
+      "Begin":  63,
+      "End":  114,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  116,
-      "End":  123,
+      "Begin":  114,
+      "End":  115,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  123,
-      "End":  125,
+      "Begin":  113,
+      "End":  120,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  123,
-      "End":  124,
+      "Begin":  120,
+      "End":  122,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  124,
+      "Begin":  120,
+      "End":  121,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  121,
       "End":  64,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  125,
-      "End":  118,
+      "Begin":  122,
+      "End":  115,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  124,
+      "End":  125,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  126,
+      "End":  127,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -2918,6 +2837,13 @@
       "Type":  "TGraphLink",
       "Begin":  127,
       "End":  128,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
+      "End":  129,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -2931,55 +2857,34 @@
     {
       "Type":  "TGraphLink",
       "Begin":  130,
-      "End":  131,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  47,
-      "End":  132,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  132,
-      "End":  133,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  133,
       "End":  48,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  137,
-      "End":  126,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  136,
-      "End":  137,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  134,
-      "End":  136,
+      "End":  123,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  76,
+      "Begin":  133,
+      "End":  134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  131,
+      "End":  133,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  73,
       "End":  138,
       "Nom":  0,
       "Arrow":  true    
@@ -2987,42 +2892,14 @@
     {
       "Type":  "TGraphLink",
       "Begin":  138,
-      "End":  142,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  142,
-      "End":  139,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  136,
-      "End":  144,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  144,
-      "End":  140,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  73,
-      "End":  145,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  145,
       "End":  74,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  139,
       "Nom":  0,
       "Arrow":  true    
     }  
@@ -3076,7 +2953,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  28,
+  "BlockPar.EC.Total.Strings":  27,
   "BlockPar.EC":  
   [
     {
@@ -3184,12 +3061,8 @@
       "String":  "Вот так бы сразу"    
     },
     {
-      "#":  "94",
-      "String":  ""    
-    },
-    {
-      "#":  "95",
-      "String":  "Нужно отыскать <0> и отобрать у него зонд."    
+      "#":  "96",
+      "String":  "Нужно отыскать name и отобрать у него зонд."    
     }  
   ]
 }

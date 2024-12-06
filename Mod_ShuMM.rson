@@ -6,24 +6,6 @@
   "ScriptName":  "Mod_ShuMM",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMM\\DATA\\Script\\Mod_ShuMM.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMM\\DATA\\Script\\Mod_ShuMM.txt",
-  "GraphPoint.Count":  58,
-  "GraphLink.Count":  28,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  23,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  1,
-  "Groups.Count":  1,
-  "Places.Count":  0,
-  "Items.Count":  1,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  2,
-  "DialogMessages.Count":  5,
-  "DialogAnswers.Count":  7,
-  "Operations.Count":  10,
-  "Statements.Count":  5,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -231,7 +213,6 @@
           "Pos.y":  210,
           "Parent":  -1,
           "#":  0,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -245,7 +226,6 @@
           "Pos.y":  210,
           "Parent":  -1,
           "#":  1,
-          "Total.Lines":  69,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -267,7 +247,7 @@
               "while(TauhitEventStatus <= -1)",
               "{",
               "    //Выбираем случайную (не из скрытого сектора) систему для закапывания диска",
-              "    cur_star = StarNearbyStars(InitStar, Rnd(15, 25));",
+              "    cur_star = StarNearbyStars(InitStar, Rnd(5, 12));",
               "    while(StarToCon(cur_star) == StarToCon(PlanetToStar(PlanetPirateClan()))) cur_star = StarNearbyStars(InitStar, Rnd(10, 20));",
               "    //Маршал: раньше были гораздо бОльшие цифры, то есть корпус спавнился гораздо дальше",
               "    //Во-первых, так далеко мало кто искал",
@@ -327,7 +307,6 @@
           "Pos.y":  210,
           "Parent":  -1,
           "#":  2,
-          "Total.Lines":  215,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -555,7 +534,6 @@
           "Pos.y":  20,
           "Parent":  3,
           "#":  4,
-          "Total.Lines":  6,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -574,7 +552,6 @@
           "Pos.y":  20,
           "Parent":  6,
           "#":  12,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -601,7 +578,6 @@
           "Pos.y":  20,
           "Parent":  7,
           "#":  14,
-          "Total.Lines":  15,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -629,7 +605,6 @@
           "Pos.y":  20,
           "Parent":  16,
           "#":  17,
-          "Total.Lines":  27,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -669,7 +644,6 @@
           "Pos.y":  20,
           "Parent":  9,
           "#":  20,
-          "Total.Lines":  14,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -696,7 +670,6 @@
           "Pos.y":  210,
           "Parent":  -1,
           "#":  33,
-          "Total.Lines":  26,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -735,7 +708,6 @@
           "Pos.y":  120,
           "Parent":  -1,
           "#":  55,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -814,7 +786,6 @@
           "Pos.y":  20,
           "Parent":  18,
           "#":  19,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -828,7 +799,6 @@
           "Pos.y":  190,
           "Parent":  -1,
           "#":  28,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -842,7 +812,6 @@
           "Pos.y":  20,
           "Parent":  18,
           "#":  31,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -856,7 +825,6 @@
           "Pos.y":  20,
           "Parent":  5,
           "#":  37,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -870,7 +838,6 @@
           "Pos.y":  20,
           "Parent":  5,
           "#":  38,
-          "Total.Lines":  1,
           "Code.Type":  "Turn",
           "Code":          
           [

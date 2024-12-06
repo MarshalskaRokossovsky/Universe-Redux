@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -22,
-  "ViewPos.y":  -161,
+  "ViewPos.x":  -556,
+  "ViewPos.y":  212,
   "ScriptName":  "Mod_RevDiplomat",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDiplomat\\DATA\\Script\\Mod_RevDiplomat.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDiplomat\\DATA\\Script\\Mod_RevDiplomat.txt",
@@ -1376,8 +1376,8 @@
         {
           "Type":  "TStarShip",
           "Name":  "",
-          "Pos.x":  600,
-          "Pos.y":  330,
+          "Pos.x":  400,
+          "Pos.y":  200,
           "Parent":  -1,
           "#":  142,
           "Count":  1,
@@ -2077,6 +2077,19 @@
           "Code":          
           [
               "RelationToShip(GetTalkShip(),Player())<10"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  210,
+          "Pos.y":  730,
+          "Parent":  -1,
+          "#":  176,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(iCaps,Player())"          
           ]        
         }      
       ],
@@ -3806,6 +3819,20 @@
       "Type":  "TGraphLink",
       "Begin":  174,
       "End":  171,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  70,
+      "End":  176,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  176,
+      "End":  129,
       "Nom":  0,
       "Arrow":  true    
     }  

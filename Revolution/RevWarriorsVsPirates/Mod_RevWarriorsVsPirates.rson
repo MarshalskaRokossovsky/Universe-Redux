@@ -714,7 +714,7 @@
           "#":  36,
           "Place.Type":  3,
           "Angle":  "0",
-          "Dist":  "-0.899999916553497",
+          "Dist":  "-0.899999856948853",
           "Radius":  200,
           "Obj1":  5,
           "Obj2":  -1        
@@ -1686,13 +1686,6 @@
       "Type":  "TGraphLink",
       "Begin":  66,
       "End":  67,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  27,
-      "End":  62,
       "Nom":  0,
       "Arrow":  true    
     },
