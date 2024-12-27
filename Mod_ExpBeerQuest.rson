@@ -696,10 +696,9 @@
               "    if(GetShipPlanet(Player())) {",
               "        if(GetShipPlanet(Player()) == IdToPlanet(IdStartPlan)) {",
               "            if(GetRelationPlanet(GetShipPlanet(Player()),Player()) > 59) {",
-              "                //AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
-              "                AddDialogInject('DialogStart','',\"Есть ли для меня специальное заданьице?..\",99);",
-              "                AddDialogInject('DialogStart','',CT('FormGov.I_QueryQuest'),99);",
-              "                //AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
+              "                AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
+              "                //В нижней фразе использована латинская 'c'",
+              "                AddDialogInject('DialogStart','',\"Есть ли для меня cпециальное задание?\",100);",
               "            }",
               "        }",
               "    }",
@@ -3127,10 +3126,6 @@
       "String":  "Уже вылетаю!"    
     },
     {
-      "#":  "67",
-      "String":  "Есть ли для меня специальное заданьице?.."    
-    },
-    {
       "#":  "68",
       "String":  "<clrEnd> сильно пошатнулось. Не рассчитывайте более на тёплый приём там"    
     },
@@ -3153,6 +3148,10 @@
     {
       "#":  "73",
       "String":  "Доберитесь до планеты <clr>"    
+    },
+    {
+      "#":  "74",
+      "String":  "Есть ли для меня cпециальное задание?"    
     },
     {
       "#":  "8",

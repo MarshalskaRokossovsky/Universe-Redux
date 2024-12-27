@@ -1,29 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -300,
-  "ViewPos.y":  -348,
+  "ViewPos.x":  -95,
+  "ViewPos.y":  -233,
   "ScriptName":  "Mod_ShuWarriors",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
-  "GraphPoint.Count":  164,
-  "GraphLink.Count":  105,
-  "GraphRectText.Count":  0,
-  "Variables.Count":  52,
-  "Stars.Count":  1,
-  "Planets.Count":  1,
-  "Ships.Count":  1,
-  "States.Count":  6,
-  "Groups.Count":  4,
-  "Places.Count":  0,
-  "Items.Count":  0,
-  "Ethers.Count":  0,
-  "Dialogs.Count":  6,
-  "DialogMessages.Count":  15,
-  "DialogAnswers.Count":  16,
-  "Operations.Count":  32,
-  "Statements.Count":  30,
-  "Loops.Count":  0,
   "Visual.Objects":  
   [
     {
@@ -34,8 +16,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  43,
-          "#":  45,
+          "Parent":  42,
+          "#":  44,
           "Msg":  "<tstr3>",
           "AMsg.Num":  "0"        
         },
@@ -44,8 +26,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  44,
-          "#":  46,
+          "Parent":  43,
+          "#":  45,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "1"        
         },
@@ -54,8 +36,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  52,
-          "#":  56,
+          "Parent":  51,
+          "#":  55,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "2"        
         },
@@ -64,8 +46,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  53,
-          "#":  57,
+          "Parent":  52,
+          "#":  56,
           "Msg":  "<tstr3>",
           "AMsg.Num":  "3"        
         },
@@ -74,8 +56,8 @@
           "Name":  "block",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  55,
-          "#":  58,
+          "Parent":  54,
+          "#":  57,
           "Msg":  "<tstr3>",
           "AMsg.Num":  "4"        
         },
@@ -84,8 +66,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  54,
-          "#":  59,
+          "Parent":  53,
+          "#":  58,
           "Msg":  "<tstr4>",
           "AMsg.Num":  "5"        
         },
@@ -94,8 +76,8 @@
           "Name":  "exit",
           "Pos.x":  -20,
           "Pos.y":  100,
-          "Parent":  89,
-          "#":  88,
+          "Parent":  88,
+          "#":  87,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "6"        
         },
@@ -104,8 +86,8 @@
           "Name":  "restart",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  92,
-          "#":  93,
+          "Parent":  91,
+          "#":  92,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "7"        
         },
@@ -114,8 +96,8 @@
           "Name":  "restart",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  38,
-          "#":  114,
+          "Parent":  37,
+          "#":  113,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "8"        
         },
@@ -124,8 +106,8 @@
           "Name":  "fastexit",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  121,
-          "#":  122,
+          "Parent":  120,
+          "#":  121,
           "Msg":  "<tstr3>",
           "AMsg.Num":  "9"        
         },
@@ -134,8 +116,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  120,
-          "#":  123,
+          "Parent":  119,
+          "#":  122,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "10"        
         },
@@ -144,8 +126,8 @@
           "Name":  "fastexit",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  128,
-          "#":  129,
+          "Parent":  127,
+          "#":  128,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "11"        
         },
@@ -154,8 +136,8 @@
           "Name":  "fastexit",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  135,
-          "#":  134,
+          "Parent":  134,
+          "#":  133,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "12"        
         },
@@ -164,8 +146,8 @@
           "Name":  "exit",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  136,
-          "#":  137,
+          "Parent":  135,
+          "#":  136,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "13"        
         },
@@ -174,8 +156,8 @@
           "Name":  "fastexit",
           "Pos.x":  0,
           "Pos.y":  -20,
-          "Parent":  139,
-          "#":  140,
+          "Parent":  138,
+          "#":  139,
           "Msg":  "<tstr2>",
           "AMsg.Num":  "14"        
         },
@@ -184,10 +166,220 @@
           "Name":  "exit",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  147,
-          "#":  148,
+          "Parent":  146,
+          "#":  147,
           "Msg":  "",
           "AMsg.Num":  "15"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "rerstart",
+          "Pos.x":  700,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  165,
+          "Msg":  "Это большая честь, но не сейчас, извините.",
+          "AMsg.Num":  "16"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  166,
+          "Msg":  "Пожалуй, приму участие, благодарю!",
+          "AMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  168,
+          "Msg":  "Для победы над врагом нужно превосходить его не числом, а умением, в чём преуспели <color=220,100,250>фэяне</color>.",
+          "AMsg.Num":  "18"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  169,
+          "Msg":  "Спокойный и рассудительный <color=50,150,230>человек</color> - мой выбор!",
+          "AMsg.Num":  "19"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  170,
+          "Msg":  "Военная хитрость не менее эффективна, чем сила. Нам нужен <color=130,200,40>лепрасовый</color>.",
+          "AMsg.Num":  "20"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  171,
+          "Msg":  "Не время для слабости - сын <color=255,0,0>Рамгатру</color> сотрёт наших врагов в порошок!",
+          "AMsg.Num":  "21"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  172,
+          "Msg":  "Этому космосу нужна гармония - зовите пилота-<color=250,250,100>гаальца</color>.",
+          "AMsg.Num":  "22"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  186,
+          "Msg":  "Класса J (<tint3> ед. структуры)",
+          "AMsg.Num":  "23"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  187,
+          "Msg":  "Класса L (<tint4> ед. структуры)",
+          "AMsg.Num":  "24"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  188,
+          "Msg":  "Класса S (<tint5> ед. структуры)",
+          "AMsg.Num":  "25"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  189,
+          "Msg":  "Класса N (<tint2> ед. структуры)",
+          "AMsg.Num":  "26"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  190,
+          "Msg":  "Класса M (<tint1> ед. структуры)",
+          "AMsg.Num":  "27"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  910,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  206,
+          "Msg":  "Прервать процесс сборки военного",
+          "AMsg.Num":  "28"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  209,
+          "Msg":  "Подтвердить сборку",
+          "AMsg.Num":  "29"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  950,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  211,
+          "Msg":  "Подтвердить сборку",
+          "AMsg.Num":  "30"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1100,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  223,
+          "Msg":  "Хочу установить орудие в данный слот",
+          "AMsg.Num":  "31"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1150,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  226,
+          "Msg":  "Пожалуй, не стоит",
+          "AMsg.Num":  "32"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  1030,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  229,
+          "Msg":  "Ура!",
+          "AMsg.Num":  "33"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  230,
+          "Msg":  "Хочу собрать ещё одного пилота",
+          "AMsg.Num":  "34"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1250,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  234,
+          "Msg":  "Хочу поменять оборудование в слоте",
+          "AMsg.Num":  "35"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1300,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  235,
+          "Msg":  "Пожалуй, не стоит",
+          "AMsg.Num":  "36"        
         }      
       ],
       "DialogMessages":      
@@ -197,8 +389,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  30,
-          "Parent":  72,
-          "#":  37,
+          "Parent":  71,
+          "#":  36,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "0"        
         },
@@ -207,8 +399,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  36,
-          "#":  38,
+          "Parent":  35,
+          "#":  37,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "1"        
         },
@@ -217,8 +409,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  40,
-          "Parent":  51,
-          "#":  47,
+          "Parent":  50,
+          "#":  46,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "2"        
         },
@@ -227,8 +419,8 @@
           "Name":  "",
           "Pos.x":  -10,
           "Pos.y":  40,
-          "Parent":  49,
-          "#":  50,
+          "Parent":  48,
+          "#":  49,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "3"        
         },
@@ -237,8 +429,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  60,
-          "#":  61,
+          "Parent":  59,
+          "#":  60,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "4"        
         },
@@ -247,8 +439,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  62,
-          "#":  63,
+          "Parent":  61,
+          "#":  62,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "5"        
         },
@@ -257,8 +449,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  64,
-          "#":  65,
+          "Parent":  63,
+          "#":  64,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "6"        
         },
@@ -267,8 +459,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  116,
-          "#":  92,
+          "Parent":  115,
+          "#":  91,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "7"        
         },
@@ -277,8 +469,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  118,
-          "#":  119,
+          "Parent":  117,
+          "#":  118,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "8"        
         },
@@ -287,8 +479,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  127,
-          "#":  128,
+          "Parent":  126,
+          "#":  127,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "9"        
         },
@@ -297,8 +489,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  132,
-          "#":  133,
+          "Parent":  131,
+          "#":  132,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "10"        
         },
@@ -307,8 +499,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  -20,
-          "Parent":  124,
-          "#":  139,
+          "Parent":  123,
+          "#":  138,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "11"        
         },
@@ -317,8 +509,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  144,
-          "#":  146,
+          "Parent":  143,
+          "#":  145,
           "Msg":  "",
           "DMsg.Num":  "12"        
         },
@@ -327,8 +519,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  151,
-          "#":  152,
+          "Parent":  150,
+          "#":  151,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "13"        
         },
@@ -337,10 +529,100 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  155,
-          "#":  156,
+          "Parent":  154,
+          "#":  155,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "14"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  164,
+          "Msg":  "Ну что, освободитель Галактики, решил нам помочь? Похвально, похвально.\r\n\r\nСобственно, должен объясниться. Несмотря на активное финансирование Галактическим Советом, КВСМК испытывает серьёзные проблемы с оснащением необходимого для фронта количества пилотов.\r\n\r\nВы, рейнджер, зарекомендовали себя как отличный пилот, которому можно доверить столь ответственное мероприятие, которым является оснащение наших пилотов.",
+          "DMsg.Num":  "15"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  167,
+          "Msg":  "В нашем резерве всегда находится большое количество пилотов - кто-то потерял свой корпус в жестком бою, но был вынесен в спасательной капсуле с поля боя и спасён рейнджерами, кто-то дотащил разбитый до состояния металлолома корабль до космопорта, а кто-то - просто наш запас, постепенно призываемый по мере гибели пилотов на передовой.\r\n\r\nТак или иначе, мы можем предложить вам, пилота <clr>какой расы<clrEnd> вы будете оснащать.",
+          "DMsg.Num":  "16"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  760,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  179,
+          "Msg":  "Отлично! Теперь подбери размер корпуса пилота согласно нашей размерной шкале корпусов\r\n\r\nЦеновой расклад у нас такой:\r\nКласс M - <cost1> cr.\r\nКласс N - <cost2> cr.\r\nКласс J - <cost3> cr.\r\nКласс L - <cost4> cr.\r\nКласс S - <cost5> cr.",
+          "DMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  910,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  197,
+          "Msg":  "Хорошо! Теперь осталось совсем немного - оснастить корабль оборудованием.\r\nЧтобы у тебя было понимание порядка цифр, выведем тебе сейчас текущую информацию по собираемому кораблю:\r\n==================\r\nПилот: <tstr1>\r\nКорабль: <tstr2> (<size> ед. структуры)\r\n-------Оборудование-------\r\n<tstr4>\r\n==================\r\nС учётом твоего рейтинга воина, ты получаешь скидку в размере <(ShipStatus(Player(),2)/4)>, следовательно, тебе потребуется уплатить <costDisc> cr.",
+          "DMsg.Num":  "18"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  213,
+          "Msg":  "Ну вот и всё, рейнджер!\r\nСобранный вами военный совсем скоро поднимется на орбиту планеты <tstr5>, чтобы начать нести службу в нашей системе. Ну а мы, тем временем, можем заняться другими делами!",
+          "DMsg.Num":  "19"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1100,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  222,
+          "Msg":  "Итак, речь идёт про орудие на корабле, расположенное в слоте номер <tint1>\r\n\r\nИ на данный момент <tstr9>",
+          "DMsg.Num":  "20"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1100,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  224,
+          "Msg":  "На какое орудие меняем?",
+          "DMsg.Num":  "21"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1250,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  233,
+          "Msg":  "Итак, настало время определиться с оборудованием.\r\n\r\nНа данный момент <tstr9>\r\n<tstr8>",
+          "DMsg.Num":  "22"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1250,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  236,
+          "Msg":  "На какое оборудование меняем?",
+          "DMsg.Num":  "23"        
         }      
       ],
       "Dialogs":      
@@ -351,23 +633,23 @@
           "Pos.x":  550,
           "Pos.y":  -40,
           "Parent":  -1,
-          "#":  25        
+          "#":  24        
         },
         {
           "Type":  "TDialog",
           "Name":  "PlanScr",
           "Pos.x":  -20,
           "Pos.y":  -140,
-          "Parent":  66,
-          "#":  67        
+          "Parent":  65,
+          "#":  66        
         },
         {
           "Type":  "TDialog",
           "Name":  "PlanScrChoose",
           "Pos.x":  -40,
           "Pos.y":  20,
-          "Parent":  67,
-          "#":  85        
+          "Parent":  66,
+          "#":  84        
         },
         {
           "Type":  "TDialog",
@@ -375,7 +657,7 @@
           "Pos.x":  100,
           "Pos.y":  -20,
           "Parent":  -1,
-          "#":  117        
+          "#":  116        
         },
         {
           "Type":  "TDialog",
@@ -383,15 +665,63 @@
           "Pos.x":  260,
           "Pos.y":  -10,
           "Parent":  -1,
-          "#":  150        
+          "#":  149        
         },
         {
           "Type":  "TDialog",
           "Name":  "OperationWarriorSetTargetDialog",
           "Pos.x":  20,
           "Pos.y":  30,
-          "Parent":  150,
-          "#":  154        
+          "Parent":  149,
+          "#":  153        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "CreateWarrior",
+          "Pos.x":  670,
+          "Pos.y":  90,
+          "Parent":  -1,
+          "#":  163        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Return",
+          "Pos.x":  950,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  217        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Weapon",
+          "Pos.x":  1100,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  220        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "InstallW",
+          "Pos.x":  1150,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  227        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "EQ",
+          "Pos.x":  1250,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  231        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "InstallEq",
+          "Pos.x":  1300,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  238        
         }      
       ],
       "Groups":      
@@ -431,7 +761,7 @@
           "Pos.x":  0,
           "Pos.y":  -150,
           "Parent":  4,
-          "#":  26,
+          "#":  25,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  0,
@@ -460,7 +790,7 @@
           "Pos.x":  0,
           "Pos.y":  -200,
           "Parent":  4,
-          "#":  28,
+          "#":  27,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  0,
@@ -489,7 +819,7 @@
           "Pos.x":  0,
           "Pos.y":  -100,
           "Parent":  4,
-          "#":  110,
+          "#":  109,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  0,
@@ -522,7 +852,6 @@
           "Pos.y":  0,
           "Parent":  5,
           "#":  0,
-          "Total.Lines":  1,
           "Code.Type":  "Global",
           "Code":          
           [
@@ -536,7 +865,6 @@
           "Pos.y":  0,
           "Parent":  0,
           "#":  8,
-          "Total.Lines":  663,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -1210,9 +1538,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  113,
+          "Parent":  112,
           "#":  9,
-          "Total.Lines":  275,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1490,6 +1817,89 @@
               "        //От двух до трёх лет",
               "        EliteWarriorsSpawnTimer = CurTurn() + Rnd(730, 1095);",
               "    }",
+              "}",
+              "",
+              "//Считаем убийства нормисов игроком",
+              "for(i=GalaxyEvents()-1; i>=0; i=i-1) {",
+              "    if(GalaxyEventDate(i) < CurTurn()) break;",
+              "    if(GalaxyEventType(i)=='PlayerKillsShip' || GalaxyEventType(i)=='PlayerAssistKillsShip') {",
+              "        //игрок убил кого-то",
+              "        tint1 = GalaxyEventData(i,0);",
+              "        tint2 = GalaxyEventData(i,3);",
+              "        if(tint2 == People || tint2 == Gaal || tint2 == Fei || tint2 == Maloc || tint2 == Peleng) {",
+              "            if(tint1 == t_Pirate) continue;",
+              "            if(tint1 == t_Tranclucator) continue;",
+              "            if(tint1 == t_Ranger && GalaxyEventData(i,5) == 1) continue;",
+              "            if(tint1 > t_Tranclucator) {",
+              "                Debuff = Debuff + 5;",
+              "                DebuffCD = 370;",
+              "            }",
+              "            else {",
+              "                Debuff = Debuff + 1;",
+              "                DebuffCD = 370;",
+              "            }",
+              "        }",
+              "    }",
+              "    if(GalaxyEventType(i)=='PlayerTranclucatorAssistKillsShip' || GalaxyEventType(i)=='PlayerTranclucatorKillsShip') {",
+              "        //игрок убил кого-то",
+              "        tint1 = GalaxyEventData(i,0);",
+              "        tint2 = GalaxyEventData(i,3);",
+              "        if(tint2 == People || tint2 == Gaal || tint2 == Fei || tint2 == Maloc || tint2 == Peleng) {",
+              "            if(tint1 == t_Pirate) continue;",
+              "            if(tint1 == t_Tranclucator) continue;",
+              "            if(tint1 == t_Ranger && GalaxyEventData(i,7) == 1) continue;",
+              "            if(tint1 > t_Tranclucator) {",
+              "                Debuff = Debuff + 5;",
+              "                DebuffCD = 370;",
+              "            }",
+              "            else {",
+              "                Debuff = Debuff + 1;",
+              "                DebuffCD = 370;",
+              "            }",
+              "        }",
+              "    }",
+              "    if(GalaxyEventType(i)=='PlayerCompanionAssistKillsShip' || GalaxyEventType(i)=='PlayerCompanionKillsShip') {",
+              "        //игрок убил кого-то",
+              "        tint1 = GalaxyEventData(i,0);",
+              "        tint2 = GalaxyEventData(i,3);",
+              "        if(tint2 == People || tint2 == Gaal || tint2 == Fei || tint2 == Maloc || tint2 == Peleng) {",
+              "            if(tint1 == t_Pirate) continue;",
+              "            if(tint1 == t_Tranclucator) continue;",
+              "            if(tint1 == t_Ranger && GalaxyEventData(i,8) == 1) continue;",
+              "            if(tint1 > t_Tranclucator) {",
+              "                Debuff = Debuff + 4;",
+              "                DebuffCD = 370;",
+              "            }",
+              "            else {",
+              "                Debuff = Debuff + 1;",
+              "                DebuffCD = 370;",
+              "            }",
+              "        }",
+              "    }",
+              "}",
+              "",
+              "if(DebuffCD) DebuffCD = DebuffCD - 1;",
+              "else Debuff = 0;",
+              "",
+              "if(Debuff >= 30) {",
+              "    Sound('Sound.NewMsg');",
+              "    if(RndObject(1,3,Player()) == 3 && ShipRank(Player())) {",
+              "        //Игрока лишают звания за проступки",
+              "        player_rank = ShipRank(Player());",
+              "        if(player_rank >= 7) player_str_rank = lowercase(CT('Rank.Commander.Name'));",
+              "        else if(player_rank == 6) player_str_rank = lowercase(CT('Rank.Ace.Name'));",
+              "        else if(player_rank == 5) player_str_rank = lowercase(CT('Rank.Leader.Name'));",
+              "        else if(player_rank == 4) player_str_rank = lowercase(CT('Rank.Wingman.Name'));",
+              "        else if(player_rank == 3) player_str_rank = lowercase(CT('Rank.Pilot.Name'));",
+              "        else if(player_rank == 2) player_str_rank = lowercase(CT('Rank.Cadet.Name'));",
+              "        else if(player_rank == 1) player_str_rank = lowercase(CT('Rank.Rookie.Name'));",
+              "        ShipRankPoints(Player(),ShipRankPoints(Player())-RndObject(100,200,Player()));",
+              "        NewsAdd(\"Рейнджер <Player>! Ваши \\\"достижения\\\" в области уничтожения кораблей Коалиции не могли не заинтересовать КВСМК. В связи с этим командование приняло решение о <color=220,20,20>понижении</color> вас в звании. Отныне вы -\"+' '+player_str_rank+'!'+CT('FormInfo.br')+\"Без уважения, КВСМК.\");",
+              "    }",
+              "    else {",
+              "        ShipRankPoints(Player(),ShipRankPoints(Player())-100);",
+              "        NewsAdd(\"Рейнджер <Player>! Ваши \\\"достижения\\\" в области уничтожения кораблей Коалиции не могли не заинтересовать КВСМК. В связи с этим командование приняло решение о <color=220,20,20>лишении</color> вас <clr>100<clrEnd> очков воинского звания.\"+CT('FormInfo.br')+\"Без уважения, КВСМК.\");",
+              "    }",
               "}"          
           ]        
         },
@@ -1500,7 +1910,6 @@
           "Pos.y":  0,
           "Parent":  8,
           "#":  10,
-          "Total.Lines":  176,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1522,7 +1931,7 @@
               "    }",
               "    else if(ShipType(cur_ruin) == 'WB')",
               "    {",
-              "        AddDialogBlock(CT('FormRuins.WB.WarOperation.PlayerSend'), 2); //Блокируем ванильный диалог о заказе военной операции (он всё равно говно)",
+              "        AddDialogBlock(CT('FormRuins.WB.WarOperation.PlayerSend'), 2); //Блокируем ванильный диалог о заказе военной операции",
               "",
               "        if(!ShipOnSidePirateClan(Player()))",
               "        {",
@@ -1588,6 +1997,11 @@
               "",
               "                //operation_lvl = 4; //Для отладки",
               "                dialog_path = 'Script.Mod_ShuWarriors.MilitaryOperationWBDialog.OnLevel' + operation_lvl;",
+              "",
+              "                //Диалог на оснащение своего военного",
+              "                if(!ShipInGameEvent(cur_ruin) && ShipInNormalSpace(cur_ruin) && player_rank > 2) {",
+              "                    AddDialogInject('CreateWarrior',\"Если у тебя завалялось много лишнего оборудования, то можешь помочь нам с оснащением пилотов.\",\"Хочу оснастить пилота\",10);",
+              "                }",
               "",
               "                if(!on_prepare)",
               "                {",
@@ -1687,9 +2101,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  0,
-          "Parent":  30,
-          "#":  31,
-          "Total.Lines":  164,
+          "Parent":  29,
+          "#":  30,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1864,9 +2277,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  0,
-          "Parent":  32,
-          "#":  33,
-          "Total.Lines":  132,
+          "Parent":  31,
+          "#":  32,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2009,9 +2421,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  35,
-          "#":  36,
-          "Total.Lines":  107,
+          "Parent":  34,
+          "#":  35,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2129,9 +2540,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  46,
-          "#":  49,
-          "Total.Lines":  190,
+          "Parent":  45,
+          "#":  48,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2332,9 +2742,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  45,
-          "#":  51,
-          "Total.Lines":  4,
+          "Parent":  44,
+          "#":  50,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2349,9 +2758,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  59,
-          "#":  60,
-          "Total.Lines":  4,
+          "Parent":  58,
+          "#":  59,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2366,9 +2774,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  57,
-          "#":  62,
-          "Total.Lines":  137,
+          "Parent":  56,
+          "#":  61,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2516,9 +2923,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  56,
-          "#":  64,
-          "Total.Lines":  106,
+          "Parent":  55,
+          "#":  63,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2635,9 +3041,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  65,
-          "#":  66,
-          "Total.Lines":  59,
+          "Parent":  64,
+          "#":  65,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2707,9 +3112,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  115,
-          "#":  72,
-          "Total.Lines":  75,
+          "Parent":  114,
+          "#":  71,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2783,6 +3187,11 @@
               "    operation_lvl = -1;",
               "}",
               "",
+              "tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperation'),",
+              "                              '<PlayerRank'+'>', player_str_rank,",
+              "                              '<Sector'+'>', '<color=0,50,200>' + Name(StarToCon(ShipStar(cur_ruin))) + '</color>',",
+              "                              '<MilitaryBase'+'>', '<color=0,50,200>' + ShipName(cur_ruin) + '</color>',",
+              "                              '');",
               "tstr2 = '</color>' + CT(dialog_path + '.PlayerConfirmationYes');",
               "tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');",
               "",
@@ -2795,9 +3204,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  40,
-          "Parent":  67,
-          "#":  80,
-          "Total.Lines":  309,
+          "Parent":  66,
+          "#":  79,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3117,9 +3525,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  85,
-          "#":  86,
-          "Total.Lines":  265,
+          "Parent":  84,
+          "#":  85,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3395,9 +3802,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  0,
-          "Parent":  111,
-          "#":  112,
-          "Total.Lines":  6,
+          "Parent":  110,
+          "#":  111,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3414,9 +3820,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  91,
-          "#":  116,
-          "Total.Lines":  6,
+          "Parent":  90,
+          "#":  115,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3433,9 +3838,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  126,
-          "#":  118,
-          "Total.Lines":  20,
+          "Parent":  125,
+          "#":  117,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3466,9 +3870,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  0,
-          "Parent":  123,
-          "#":  124,
-          "Total.Lines":  8,
+          "Parent":  122,
+          "#":  123,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3487,9 +3890,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  125,
-          "#":  127,
-          "Total.Lines":  34,
+          "Parent":  124,
+          "#":  126,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3534,9 +3936,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  131,
-          "#":  132,
-          "Total.Lines":  100,
+          "Parent":  130,
+          "#":  131,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3647,9 +4048,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  137,
-          "#":  138,
-          "Total.Lines":  1,
+          "Parent":  136,
+          "#":  137,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3661,9 +4061,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  141,
-          "#":  142,
-          "Total.Lines":  9,
+          "Parent":  140,
+          "#":  141,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3683,9 +4082,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  143,
-          "#":  145,
-          "Total.Lines":  1,
+          "Parent":  142,
+          "#":  144,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3697,9 +4095,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  146,
-          "#":  147,
-          "Total.Lines":  33,
+          "Parent":  145,
+          "#":  146,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3743,9 +4140,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  0,
-          "Parent":  134,
-          "#":  149,
-          "Total.Lines":  1,
+          "Parent":  133,
+          "#":  148,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3757,9 +4153,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  150,
-          "#":  151,
-          "Total.Lines":  34,
+          "Parent":  149,
+          "#":  150,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3804,9 +4199,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  152,
-          "#":  153,
-          "Total.Lines":  27,
+          "Parent":  151,
+          "#":  152,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3844,9 +4238,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  154,
-          "#":  155,
-          "Total.Lines":  29,
+          "Parent":  153,
+          "#":  154,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3886,9 +4279,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  156,
-          "#":  157,
-          "Total.Lines":  11,
+          "Parent":  155,
+          "#":  156,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -3911,8 +4303,7 @@
           "Pos.x":  260,
           "Pos.y":  70,
           "Parent":  -1,
-          "#":  159,
-          "Total.Lines":  31,
+          "#":  158,
           "Code.Type":  "Init",
           "Code":          
           [
@@ -3947,6 +4338,569 @@
               "        }",
               "    }",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  173,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "race = 4;",
+              "cost1 = GalaxyMoney(3,race);",
+              "cost2 = GalaxyMoney(3,race)*2;",
+              "cost3 = GalaxyMoney(4,race);",
+              "cost4 = GalaxyMoney(4,race)*2;",
+              "cost5 = GalaxyMoney(4,race)*3;",
+              "tstr1 = \"гаалец\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  174,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "race = 3;",
+              "cost1 = GalaxyMoney(3,race);",
+              "cost2 = GalaxyMoney(3,race)*2;",
+              "cost3 = GalaxyMoney(4,race);",
+              "cost4 = GalaxyMoney(4,race)*2;",
+              "cost5 = GalaxyMoney(4,race)*3;",
+              "tstr1 = \"фэянин\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  175,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "race = 2;",
+              "cost1 = GalaxyMoney(3,race);",
+              "cost2 = GalaxyMoney(3,race)*2;",
+              "cost3 = GalaxyMoney(4,race);",
+              "cost4 = GalaxyMoney(4,race)*2;",
+              "cost5 = GalaxyMoney(4,race)*3;",
+              "tstr1 = \"человек\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  176,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "race = 1;",
+              "cost1 = GalaxyMoney(3,race);",
+              "cost2 = GalaxyMoney(3,race)*2;",
+              "cost3 = GalaxyMoney(4,race);",
+              "cost4 = GalaxyMoney(4,race)*2;",
+              "cost5 = GalaxyMoney(4,race)*3;",
+              "tstr1 = \"пеленг\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  177,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "race = 0;",
+              "cost1 = GalaxyMoney(3,race);",
+              "cost2 = GalaxyMoney(3,race)*2;",
+              "cost3 = GalaxyMoney(4,race);",
+              "cost4 = GalaxyMoney(4,race)*2;",
+              "cost5 = GalaxyMoney(4,race)*3;",
+              "tstr1 = \"малок\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  790,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  185,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint1 = 200 + GalaxyTechLevel() * 25; //1 ГТУ - 225   8 ГТУ - 400",
+              "tint2 = 325 + GalaxyTechLevel() * 35; //1 ГТУ - 360   8 ГТУ - 605",
+              "tint3 = 475 + GalaxyTechLevel() * 50; //1 ГТУ - 525   8 ГТУ - 875",
+              "tint4 = 600 + GalaxyTechLevel() * 70; //1 ГТУ - 670   8 ГТУ - 1160",
+              "tint5 = 800 + GalaxyTechLevel() * 95; //1 ГТУ - 895   8 ГТУ - 1560"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  191,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "size = tint5;",
+              "cost = cost5;",
+              "tstr2 = \"класса S\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  192,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "size = tint4;",
+              "cost = cost4;",
+              "tstr2 = \"класса L\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  193,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "size = tint3;",
+              "cost = cost3;",
+              "tstr2 = \"класса J\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  194,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "size = tint2;",
+              "cost = cost2;",
+              "tstr2 = \"класса N\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  195,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "size = tint1;",
+              "cost = cost1;",
+              "tstr2 = \"класса M\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  880,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  204,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Чтобы не напрягать булки, создадим военного заранее",
+              "cur_ship = BuyWarrior(NearCivilPlanet(Player()));",
+              "//На всякий случай обеспечим ему полный набор слотов",
+              "while(ShipSlots(cur_ship,1) < 5) ShipSpecialBonuses(cur_ship,bonSlotWeapon,ShipSpecialBonuses(cur_ship,bonSlotWeapon)+1);",
+              "while(ShipSlots(cur_ship,3) < 1) ShipSpecialBonuses(cur_ship,bonSlotRadar,ShipSpecialBonuses(cur_ship,bonSlotRadar)+1);",
+              "while(ShipSlots(cur_ship,4) < 1) ShipSpecialBonuses(cur_ship,bonSlotScaner,ShipSpecialBonuses(cur_ship,bonSlotScaner)+1);",
+              "while(ShipSlots(cur_ship,5) < 1) ShipSpecialBonuses(cur_ship,bonSlotDroid,ShipSpecialBonuses(cur_ship,bonSlotDroid)+1);",
+              "while(ShipSlots(cur_ship,6) < 1) ShipSpecialBonuses(cur_ship,bonSlotHook,ShipSpecialBonuses(cur_ship,bonSlotHook)+1);",
+              "while(ShipSlots(cur_ship,7) < 1) ShipSpecialBonuses(cur_ship,bonSlotDef,ShipSpecialBonuses(cur_ship,bonSlotDef)+1);",
+              "//Очистим ему шмот, а то мало ли",
+              "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+              "    GetItemFromShip(cur_ship,tdwd);",
+              "    FreeItem(tdwd);",
+              "}",
+              "for(i=0;ShipSlots(cur_ship,1)>i;i=i+1) {",
+              "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+              "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+              "        GetItemFromShip(cur_ship,tdwd);",
+              "        FreeItem(tdwd);",
+              "    }",
+              "}",
+              "//Сформируем диалог-шаблон, на основании которого мы потом внаглую будем собирать итоговый, показывающийся игроку",
+              "tstr3 = \"Двигатель: engine\"+CT('FormInfo.br')+\"Топливный бак: tank\"+CT('FormInfo.br')+\"Радар: radar\"+CT('FormInfo.br')+\"Сканер: scaner\"+CT('FormInfo.br')+\"Генератор поля: def\"+CT('FormInfo.br')+\"Ремонтный дроид: droid\"+CT('FormInfo.br')+\"Захват: hook\"+CT('FormInfo.br')+\"Орудие 1: weap1\"+CT('FormInfo.br')+\"Орудие 2: weap2\"+CT('FormInfo.br')+\"Орудие 3: weap3\"+CT('FormInfo.br')+\"Орудие 4: weap4\"+CT('FormInfo.br')+\"Орудие 5: weap5\";",
+              "tstr4 = tstr3;",
+              "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+              "    Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'engine',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+              "    Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'tank',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+              "    Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
+              "}",
+              "else Format(tstr4,'scaner',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+              "    Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+              "}",
+              "else Format(tstr4,'def',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+              "    Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+              "}",
+              "else Format(tstr4,'droid',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+              "    Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. структуры/сутки)\");",
+              "}",
+              "else Format(tstr4,'hook',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+              "    Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'radar',\"color=220,20,20>отсутствует</color>\");",
+              "for(i=0;ShipSlots(cur_ship,1)>i;i=i+1) {",
+              "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+              "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+              "        Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. ущерба на расстоянии\"+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+              "    }",
+              "    else Format(tstr4,'weap'+i,\"color=220,20,20>отсутствует</color>\");",
+              "}",
+              "",
+              "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  205,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "InjectAnswer('EQ',\"Меня интересует генератор поля\",t_DefGenerator);",
+              "InjectAnswer('EQ',\"Меня интересует ремонтный дроид\",t_RepairRobot);",
+              "InjectAnswer('EQ',\"Меня интересует двигатель\",t_Engine);",
+              "InjectAnswer('EQ',\"Меня интересует топливный бак\",t_FuelTanks);",
+              "InjectAnswer('EQ',\"Меня интересует сканер военного\",t_Scaner);",
+              "InjectAnswer('EQ',\"Меня интересует радар военного\",t_Radar);",
+              "InjectAnswer('EQ',\"Меня интересует захват военного\",t_CargoHook);",
+              "",
+              "//Тут набор на оружие",
+              "InjectAnswer('Weapon',\"Меня интересует орудие в первом (1) слоте\",1);",
+              "InjectAnswer('Weapon',\"Меня интересует орудие в втором (2) слоте\",2);",
+              "InjectAnswer('Weapon',\"Меня интересует орудие в третьем (3) слоте\",3);",
+              "InjectAnswer('Weapon',\"Меня интересует орудие в четвёртом (4) слоте\",4);",
+              "InjectAnswer('Weapon',\"Меня интересует орудие в пятом (5) слоте\",5);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  910,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  207,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ArrayDim(tarr1) > 1) {",
+              "    for(i=1;i<(ArrayDim(tarr1)-1);i=i+1) {",
+              "        AddItemToShip(Player(),GetItemFromShip(cur_ship,tarr1[i]));",
+              "    }",
+              "}",
+              "",
+              "//Уничтожаем невезучего военного",
+              "OrderLock(cur_ship);",
+              "ShipDestroy(cur_ship);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  212,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr5 = Name(NearCivilPlanet(Player()));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1170,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  216,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "InjectAnswer('Return',\"Назад к выбору функций\",1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  950,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  218,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr4 = tstr3;",
+              "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+              "    Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'engine',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+              "    Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'tank',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+              "    Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
+              "}",
+              "else Format(tstr4,'scaner',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+              "    Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+              "}",
+              "else Format(tstr4,'def',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+              "    Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+              "}",
+              "else Format(tstr4,'droid',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+              "    Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. структуры/сутки)\");",
+              "}",
+              "else Format(tstr4,'hook',\"color=220,20,20>отсутствует</color>\");",
+              "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+              "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+              "    Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
+              "}",
+              "else Format(tstr4,'radar',\"color=220,20,20>отсутствует</color>\");",
+              "for(i=0;ShipSlots(cur_ship,1)>i;i=i+1) {",
+              "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+              "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+              "        Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. ущерба на расстоянии\"+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+              "    }",
+              "    else Format(tstr4,'weap'+i,\"color=220,20,20>отсутствует</color>\");",
+              "}",
+              "",
+              "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1100,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  221,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint1 = GAnswerData;",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,t_Weapon1,tint1))) tstr9 = \"слот занимает\"+' '+Name(ShipEqInSlot(cur_ship,t_Weapon1,tint1));",
+              "else tstr9 = \"оружие в слоте отсутствует\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  225,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "for(i=0;ShipItems(Player())>i;i=i+1) {",
+              "    if(ItemType(ShipItems(Player(),i)) < t_Weapon1) continue;",
+              "    if(ItemType(ShipItems(Player(),i)) > t_CustomWeapon) continue;",
+              "    InjectAnswer('InstallW',\"Установить орудие\"+' '+Name(ShipItems(Player(),i)),i);",
+              "}",
+              "",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,t_Weapon1,tint1))) InjectAnswer('InstallW',\"Снять орудие\",-1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1150,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  228,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GAnswerData == -1) {",
+              "    ArrayDelete(tarr1,ArrayFind(tarr1,ShipEqInSlot(cur_ship,t_Weapon1,tint1)));",
+              "    AddItemToShip(Player(),GetItemFromShip(cur_ship,ShipEqInSlot(cur_ship,t_Weapon1,tint1)));",
+              "}",
+              "else {",
+              "    tint2 = GAnswerData;",
+              "    if(ShipEqInSlot(cur_ship,t_Weapon1,tint1)) {",
+              "        ArrayDelete(tarr1,ArrayFind(tarr1,ShipEqInSlot(cur_ship,t_Weapon1,tint1)));",
+              "        AddItemToShip(Player(),GetItemFromShip(cur_ship,ShipEqInSlot(cur_ship,t_Weapon1,tint1)));",
+              "    }",
+              "",
+              "    AddItemToShip(cur_ship,GetItemFromShip(Player(),ShipItems(Player(),tint2)));",
+              "    ArrayAdd(tarr1,ShipItems(Player(),tint2));",
+              "    ArrangeItems(cur_ship);",
+              "}",
+              "",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,t_Weapon1,tint1))) tstr9 = \"слот занимает\"+' '+Name(ShipEqInSlot(cur_ship,t_Weapon1,tint1));",
+              "else tstr9 = \"оружие в слоте отсутствует\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1250,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  232,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint1 = GAnswerData;",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,tint1))) tstr9 = \"слот занимает\"+' '+Name(ShipEqInSlot(cur_ship,tint1));",
+              "else tstr9 = \"оборудование в слоте отсутствует\";",
+              "",
+              "if(GAnswerData == t_DefGenerator || GAnswerData == t_FuelTanks || GAnswerData == t_Engine || GAnswerData == t_RepairRobot) tstr8 = \"<color=220,20,20>Это оборудование критически важно!</color>\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1250,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  237,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "for(i=0;ShipItems(Player())>i;i=i+1) {",
+              "    if(ItemType(ShipItems(Player(),i)) != tint1) continue;",
+              "    InjectAnswer('InstallEq',\"Установить\"+' '+Name(ShipItems(Player(),i)),i);",
+              "}",
+              "",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,tint1))) InjectAnswer('InstallEq',\"Снять оборудование\",-1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1300,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  239,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GAnswerData == -1) {",
+              "    ArrayDelete(tarr1,ArrayFind(tarr1,ShipEqInSlot(cur_ship,tint1)));",
+              "    AddItemToShip(Player(),GetItemFromShip(cur_ship,ShipEqInSlot(cur_ship,tint1)));",
+              "",
+              "    if(tint1 == t_DefGenerator || tint1 == t_FuelTanks || tint1 == t_Engine || tint1 == t_RepairRobot) ready = ready - 1;",
+              "}",
+              "else {",
+              "    tint2 = GAnswerData;",
+              "    if(ShipEqInSlot(cur_ship,tint1)) {",
+              "        ArrayDelete(tarr1,ArrayFind(tarr1,ShipEqInSlot(cur_ship,tint1)));",
+              "        AddItemToShip(Player(),GetItemFromShip(cur_ship,ShipEqInSlot(cur_ship,tint1)));",
+              "        if(tint1 == t_DefGenerator || tint1 == t_FuelTanks || tint1 == t_Engine || tint1 == t_RepairRobot) ready = ready - 1;",
+              "    }",
+              "",
+              "    AddItemToShip(cur_ship,GetItemFromShip(Player(),ShipItems(Player(),tint2)));",
+              "    ArrayAdd(tarr1,ShipItems(Player(),tint2));",
+              "    ArrangeItems(cur_ship);",
+              "    if(tint1 == t_DefGenerator || tint1 == t_FuelTanks || tint1 == t_Engine || tint1 == t_RepairRobot) ready = ready + 1;",
+              "}",
+              "",
+              "if(ShipEqInSlot(ShipEqInSlot(cur_ship,tint1))) tstr9 = \"слот занимает\"+' '+Name(ShipEqInSlot(cur_ship,tint1));",
+              "else tstr9 = \"оборудование в слоте отсутствует\";",
+              "",
+              "if(GAnswerData == t_DefGenerator || GAnswerData == t_FuelTanks || GAnswerData == t_Engine || GAnswerData == t_RepairRobot) tstr8 = \"<color=220,20,20>Это оборудование критически важно!</color>\";"          
           ]        
         }      
       ],
@@ -4019,9 +4973,8 @@
           "Name":  "",
           "Pos.x":  60,
           "Pos.y":  20,
-          "Parent":  25,
-          "#":  35,
-          "Total.Lines":  1,
+          "Parent":  24,
+          "#":  34,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4033,9 +4986,8 @@
           "Name":  "",
           "Pos.x":  30,
           "Pos.y":  20,
-          "Parent":  37,
-          "#":  43,
-          "Total.Lines":  1,
+          "Parent":  36,
+          "#":  42,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4047,9 +4999,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  37,
-          "#":  44,
-          "Total.Lines":  1,
+          "Parent":  36,
+          "#":  43,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4061,9 +5012,8 @@
           "Name":  "",
           "Pos.x":  -40,
           "Pos.y":  20,
-          "Parent":  50,
-          "#":  52,
-          "Total.Lines":  1,
+          "Parent":  49,
+          "#":  51,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4075,9 +5025,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  20,
-          "Parent":  50,
-          "#":  53,
-          "Total.Lines":  1,
+          "Parent":  49,
+          "#":  52,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4089,9 +5038,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  20,
-          "Parent":  50,
-          "#":  54,
-          "Total.Lines":  1,
+          "Parent":  49,
+          "#":  53,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4103,9 +5051,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  50,
-          "#":  55,
-          "Total.Lines":  1,
+          "Parent":  49,
+          "#":  54,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4117,9 +5064,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  80,
-          "#":  68,
-          "Total.Lines":  1,
+          "Parent":  79,
+          "#":  67,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4131,9 +5077,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  40,
-          "Parent":  80,
-          "#":  69,
-          "Total.Lines":  1,
+          "Parent":  79,
+          "#":  68,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4145,9 +5090,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  60,
-          "Parent":  86,
-          "#":  87,
-          "Total.Lines":  1,
+          "Parent":  85,
+          "#":  86,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4159,9 +5103,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  47,
-          "#":  89,
-          "Total.Lines":  1,
+          "Parent":  46,
+          "#":  88,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4173,9 +5116,8 @@
           "Name":  "",
           "Pos.x":  -60,
           "Pos.y":  20,
-          "Parent":  25,
-          "#":  91,
-          "Total.Lines":  1,
+          "Parent":  24,
+          "#":  90,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4187,9 +5129,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  0,
-          "Parent":  86,
-          "#":  97,
-          "Total.Lines":  1,
+          "Parent":  85,
+          "#":  96,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4201,9 +5142,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  100,
-          "Parent":  89,
-          "#":  107,
-          "Total.Lines":  1,
+          "Parent":  88,
+          "#":  106,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4215,9 +5155,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  63,
-          "#":  108,
-          "Total.Lines":  1,
+          "Parent":  62,
+          "#":  107,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4227,11 +5166,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  20,
+          "Pos.x":  30,
           "Pos.y":  0,
           "Parent":  10,
-          "#":  113,
-          "Total.Lines":  1,
+          "#":  112,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4243,9 +5181,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  25,
-          "#":  115,
-          "Total.Lines":  1,
+          "Parent":  24,
+          "#":  114,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4257,9 +5194,8 @@
           "Name":  "",
           "Pos.x":  -10,
           "Pos.y":  20,
-          "Parent":  119,
-          "#":  120,
-          "Total.Lines":  1,
+          "Parent":  118,
+          "#":  119,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4271,9 +5207,8 @@
           "Name":  "",
           "Pos.x":  10,
           "Pos.y":  20,
-          "Parent":  119,
-          "#":  121,
-          "Total.Lines":  1,
+          "Parent":  118,
+          "#":  120,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4285,9 +5220,8 @@
           "Name":  "",
           "Pos.x":  -20,
           "Pos.y":  20,
-          "Parent":  117,
-          "#":  125,
-          "Total.Lines":  1,
+          "Parent":  116,
+          "#":  124,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4299,9 +5233,8 @@
           "Name":  "",
           "Pos.x":  -50,
           "Pos.y":  20,
-          "Parent":  117,
-          "#":  126,
-          "Total.Lines":  1,
+          "Parent":  116,
+          "#":  125,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4313,9 +5246,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  20,
-          "Parent":  117,
-          "#":  131,
-          "Total.Lines":  1,
+          "Parent":  116,
+          "#":  130,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4327,9 +5259,8 @@
           "Name":  "",
           "Pos.x":  -10,
           "Pos.y":  20,
-          "Parent":  133,
-          "#":  135,
-          "Total.Lines":  1,
+          "Parent":  132,
+          "#":  134,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4341,9 +5272,8 @@
           "Name":  "",
           "Pos.x":  10,
           "Pos.y":  20,
-          "Parent":  133,
-          "#":  136,
-          "Total.Lines":  1,
+          "Parent":  132,
+          "#":  135,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4355,9 +5285,8 @@
           "Name":  "",
           "Pos.x":  50,
           "Pos.y":  20,
-          "Parent":  117,
-          "#":  141,
-          "Total.Lines":  1,
+          "Parent":  116,
+          "#":  140,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4369,9 +5298,8 @@
           "Name":  "",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  142,
-          "#":  143,
-          "Total.Lines":  1,
+          "Parent":  141,
+          "#":  142,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4383,9 +5311,8 @@
           "Name":  "",
           "Pos.x":  20,
           "Pos.y":  20,
-          "Parent":  142,
-          "#":  144,
-          "Total.Lines":  1,
+          "Parent":  141,
+          "#":  143,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4398,8 +5325,7 @@
           "Pos.x":  540,
           "Pos.y":  120,
           "Parent":  -1,
-          "#":  160,
-          "Total.Lines":  1,
+          "#":  159,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4412,8 +5338,7 @@
           "Pos.x":  560,
           "Pos.y":  120,
           "Parent":  -1,
-          "#":  161,
-          "Total.Lines":  1,
+          "#":  160,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -4426,12 +5351,37 @@
           "Pos.x":  580,
           "Pos.y":  120,
           "Parent":  -1,
-          "#":  162,
-          "Total.Lines":  1,
+          "#":  161,
           "Code.Type":  "Turn",
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  910,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  208,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= costDisc && ready >=4 && ShipCntWeapon(cur_ship)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  920,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  210,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) < costDisc || ready >= 5 || !ShipCntWeapon(cur_ship)"          
           ]        
         }      
       ],
@@ -4460,15 +5410,15 @@
           "Name":  "WBOnPrepare",
           "Pos.x":  -130,
           "Pos.y":  0,
-          "Parent":  26,
-          "#":  27,
+          "Parent":  25,
+          "#":  26,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  1,
           "Attack.Items":          
           [
             {
-              "Target.0":  110            
+              "Target.0":  109            
             }          
           ],
           "TakeItem":  -1,
@@ -4484,15 +5434,15 @@
           "Name":  "WBOnAttack",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  27,
-          "#":  29,
+          "Parent":  26,
+          "#":  28,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  1,
           "Attack.Items":          
           [
             {
-              "Target.0":  110            
+              "Target.0":  109            
             }          
           ],
           "TakeItem":  -1,
@@ -4508,15 +5458,15 @@
           "Name":  "WarriorsOnPrepare",
           "Pos.x":  -130,
           "Pos.y":  0,
-          "Parent":  28,
-          "#":  30,
+          "Parent":  27,
+          "#":  29,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  1,
           "Attack.Items":          
           [
             {
-              "Target.0":  110            
+              "Target.0":  109            
             }          
           ],
           "TakeItem":  -1,
@@ -4532,15 +5482,15 @@
           "Name":  "WarriorsOnAttack",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  30,
-          "#":  32,
+          "Parent":  29,
+          "#":  31,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  1,
           "Attack.Items":          
           [
             {
-              "Target.0":  110            
+              "Target.0":  109            
             }          
           ],
           "TakeItem":  -1,
@@ -4556,8 +5506,8 @@
           "Name":  "RandomAttackersState",
           "Pos.x":  -130,
           "Pos.y":  0,
-          "Parent":  110,
-          "#":  111,
+          "Parent":  109,
+          "#":  110,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -4621,7 +5571,7 @@
           "Name":  "check",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  22,
+          "Parent":  21,
           "#":  13,
           "Var.Type":  "Int",
           "Init":  "",
@@ -4632,7 +5582,7 @@
           "Name":  "cur_star",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  82,
+          "Parent":  81,
           "#":  14,
           "Var.Type":  "Dword",
           "Init":  "",
@@ -4687,7 +5637,7 @@
           "Name":  "tdwd1",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  158,
+          "Parent":  157,
           "#":  19,
           "Var.Type":  "Dword",
           "Init":  "",
@@ -4706,22 +5656,11 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "tint1",
-          "Pos.x":  0,
-          "Pos.y":  20,
-          "Parent":  1,
-          "#":  21,
-          "Var.Type":  "Int",
-          "Init":  "",
-          "Global":  false        
-        },
-        {
-          "Type":  "TVar",
           "Name":  "rand",
-          "Pos.x":  0,
-          "Pos.y":  20,
-          "Parent":  21,
-          "#":  22,
+          "Pos.x":  570,
+          "Pos.y":  460,
+          "Parent":  -1,
+          "#":  21,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4732,7 +5671,7 @@
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  19,
-          "#":  23,
+          "#":  22,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -4743,7 +5682,7 @@
           "Pos.x":  100,
           "Pos.y":  0,
           "Parent":  1,
-          "#":  24,
+          "#":  23,
           "Var.Type":  "Array",
           "Init":  "",
           "Global":  false        
@@ -4753,8 +5692,8 @@
           "Name":  "operation_lvl",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  73,
-          "#":  34,
+          "Parent":  72,
+          "#":  33,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4764,8 +5703,8 @@
           "Name":  "on_prepare",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  34,
-          "#":  39,
+          "Parent":  33,
+          "#":  38,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4776,7 +5715,7 @@
           "Pos.x":  510,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  40,
+          "#":  39,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4786,8 +5725,8 @@
           "Name":  "player_str_rank",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  42,
-          "#":  41,
+          "Parent":  41,
+          "#":  40,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4798,7 +5737,7 @@
           "Pos.x":  670,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  42,
+          "#":  41,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4809,7 +5748,7 @@
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  18,
-          "#":  48,
+          "#":  47,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4819,8 +5758,8 @@
           "Name":  "split_str",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  94,
-          "#":  70,
+          "Parent":  93,
+          "#":  69,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4830,8 +5769,8 @@
           "Name":  "indent_str",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  70,
-          "#":  71,
+          "Parent":  69,
+          "#":  70,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4842,7 +5781,7 @@
           "Pos.x":  410,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  73,
+          "#":  72,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4853,7 +5792,7 @@
           "Pos.x":  330,
           "Pos.y":  230,
           "Parent":  -1,
-          "#":  74,
+          "#":  73,
           "Var.Type":  "Array",
           "Init":  "1",
           "Global":  true        
@@ -4864,7 +5803,7 @@
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  13,
-          "#":  75,
+          "#":  74,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -4874,8 +5813,8 @@
           "Name":  "tstr5",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  48,
-          "#":  76,
+          "Parent":  47,
+          "#":  75,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4883,6 +5822,17 @@
         {
           "Type":  "TVar",
           "Name":  "tstr6",
+          "Pos.x":  0,
+          "Pos.y":  20,
+          "Parent":  75,
+          "#":  76,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tstr7",
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  76,
@@ -4893,7 +5843,7 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "tstr7",
+          "Name":  "tstr8",
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  77,
@@ -4904,22 +5854,11 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "tstr8",
-          "Pos.x":  0,
-          "Pos.y":  20,
-          "Parent":  78,
-          "#":  79,
-          "Var.Type":  "Str",
-          "Init":  "",
-          "Global":  false        
-        },
-        {
-          "Type":  "TVar",
           "Name":  "ships_available",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  40,
-          "#":  81,
+          "Parent":  39,
+          "#":  80,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4930,7 +5869,7 @@
           "Pos.x":  410,
           "Pos.y":  420,
           "Parent":  -1,
-          "#":  82,
+          "#":  81,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -4940,8 +5879,8 @@
           "Name":  "coals_power_percent",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  81,
-          "#":  83,
+          "Parent":  80,
+          "#":  82,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4951,8 +5890,8 @@
           "Name":  "min_coals_power_percent",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  83,
-          "#":  84,
+          "Parent":  82,
+          "#":  83,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -4962,8 +5901,8 @@
           "Name":  "stars_to_attack_arr",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  24,
-          "#":  90,
+          "Parent":  23,
+          "#":  89,
           "Var.Type":  "Array",
           "Init":  "",
           "Global":  false        
@@ -4973,8 +5912,8 @@
           "Name":  "tstr9",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  79,
-          "#":  94,
+          "Parent":  78,
+          "#":  93,
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
@@ -4984,8 +5923,8 @@
           "Name":  "militaries_arr",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  90,
-          "#":  95,
+          "Parent":  89,
+          "#":  94,
           "Var.Type":  "Array",
           "Init":  "",
           "Global":  false        
@@ -4995,8 +5934,8 @@
           "Name":  "new_operation_arr",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  95,
-          "#":  96,
+          "Parent":  94,
+          "#":  95,
           "Var.Type":  "Array",
           "Init":  "[0]",
           "Global":  false        
@@ -5006,8 +5945,8 @@
           "Name":  "stars_cnt_to_choose",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  41,
-          "#":  98,
+          "Parent":  40,
+          "#":  97,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5018,7 +5957,7 @@
           "Pos.x":  810,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  99,
+          "#":  98,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5028,8 +5967,8 @@
           "Name":  "big_coals_cnt",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  99,
-          "#":  100,
+          "Parent":  98,
+          "#":  99,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5039,8 +5978,8 @@
           "Name":  "coals_power",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  100,
-          "#":  101,
+          "Parent":  99,
+          "#":  100,
           "Var.Type":  "Float",
           "Init":  "",
           "Global":  false        
@@ -5050,8 +5989,8 @@
           "Name":  "enemies_cnt",
           "Pos.x":  0,
           "Pos.y":  30,
-          "Parent":  104,
-          "#":  102,
+          "Parent":  103,
+          "#":  101,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5061,8 +6000,8 @@
           "Name":  "enemies_power",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  102,
-          "#":  103,
+          "Parent":  101,
+          "#":  102,
           "Var.Type":  "Float",
           "Init":  "",
           "Global":  false        
@@ -5072,8 +6011,8 @@
           "Name":  "average_warrior_power",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  101,
-          "#":  104,
+          "Parent":  100,
+          "#":  103,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5083,8 +6022,8 @@
           "Name":  "max_coals_power_percent",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  84,
-          "#":  105,
+          "Parent":  83,
+          "#":  104,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5094,8 +6033,8 @@
           "Name":  "min_warriors_to_add_WB",
           "Pos.x":  0,
           "Pos.y":  20,
-          "Parent":  105,
-          "#":  106,
+          "Parent":  104,
+          "#":  105,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5106,7 +6045,7 @@
           "Pos.x":  30,
           "Pos.y":  0,
           "Parent":  15,
-          "#":  109,
+          "#":  108,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -5117,7 +6056,7 @@
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  7,
-          "#":  130,
+          "#":  129,
           "Var.Type":  "Int",
           "Init":  "-1",
           "Global":  false        
@@ -5128,7 +6067,7 @@
           "Pos.x":  0,
           "Pos.y":  20,
           "Parent":  16,
-          "#":  158,
+          "#":  157,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -5139,8 +6078,195 @@
           "Pos.x":  300,
           "Pos.y":  390,
           "Parent":  -1,
-          "#":  163,
+          "#":  162,
           "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "race",
+          "Pos.x":  970,
+          "Pos.y":  -10,
+          "Parent":  -1,
+          "#":  178,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tint1",
+          "Pos.x":  820,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  180,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tint2",
+          "Pos.x":  820,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  181,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tint3",
+          "Pos.x":  820,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  182,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tint4",
+          "Pos.x":  820,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  183,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tint5",
+          "Pos.x":  820,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  184,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "size",
+          "Pos.x":  970,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  196,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost1",
+          "Pos.x":  890,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  198,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost2",
+          "Pos.x":  890,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  199,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost3",
+          "Pos.x":  890,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  200,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost4",
+          "Pos.x":  890,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  201,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost5",
+          "Pos.x":  890,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  202,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "costDisc",
+          "Pos.x":  970,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  203,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Debuff",
+          "Pos.x":  670,
+          "Pos.y":  520,
+          "Parent":  -1,
+          "#":  214,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "DebuffCD",
+          "Pos.x":  670,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  215,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ready",
+          "Pos.x":  970,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  219,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd",
+          "Pos.x":  810,
+          "Pos.y":  510,
+          "Parent":  -1,
+          "#":  240,
+          "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
         }      
@@ -5179,56 +6305,70 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  26,
+      "Begin":  25,
       "End":  4,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  28,
+      "Begin":  27,
       "End":  4,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  30,
-      "End":  31,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  32,
-      "End":  33,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  28,
+      "Begin":  29,
       "End":  30,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  34,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
       "Begin":  35,
-      "End":  36,
+      "End":  37,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  36,
-      "End":  38,
+      "End":  42,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  37,
+      "Begin":  42,
+      "End":  44,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  36,
       "End":  43,
       "Nom":  0,
       "Arrow":  true    
@@ -5242,56 +6382,49 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  37,
-      "End":  44,
+      "Begin":  45,
+      "End":  48,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  44,
-      "End":  46,
+      "End":  50,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  46,
-      "End":  49,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  45,
+      "Begin":  49,
       "End":  51,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  50,
+      "Begin":  49,
       "End":  52,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  50,
+      "Begin":  49,
       "End":  53,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  50,
+      "Begin":  49,
       "End":  54,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  50,
+      "Begin":  51,
       "End":  55,
       "Nom":  0,
       "Arrow":  true    
@@ -5305,21 +6438,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  53,
+      "Begin":  54,
       "End":  57,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  55,
+      "Begin":  53,
       "End":  58,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  54,
+      "Begin":  58,
       "End":  59,
       "Nom":  0,
       "Arrow":  true    
@@ -5333,28 +6466,28 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  60,
+      "Begin":  56,
       "End":  61,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  57,
+      "Begin":  61,
       "End":  62,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  62,
+      "Begin":  55,
       "End":  63,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  56,
+      "Begin":  63,
       "End":  64,
       "Nom":  0,
       "Arrow":  true    
@@ -5368,43 +6501,43 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  65,
-      "End":  66,
+      "Begin":  67,
+      "End":  49,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  68,
-      "End":  50,
+      "End":  63,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  69,
-      "End":  64,
+      "Begin":  66,
+      "End":  79,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  67,
-      "End":  80,
+      "Begin":  79,
+      "End":  67,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  80,
+      "Begin":  79,
       "End":  68,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  80,
-      "End":  69,
+      "Begin":  84,
+      "End":  85,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5418,55 +6551,62 @@
     {
       "Type":  "TGraphLink",
       "Begin":  86,
+      "End":  63,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  60,
       "End":  87,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  87,
-      "End":  64,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  61,
+      "Begin":  46,
       "End":  88,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  47,
-      "End":  89,
+      "Begin":  91,
+      "End":  92,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  92,
-      "End":  93,
+      "Begin":  85,
+      "End":  96,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  86,
-      "End":  97,
+      "Begin":  96,
+      "End":  79,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  97,
-      "End":  80,
+      "Begin":  88,
+      "End":  106,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  89,
+      "Begin":  106,
+      "End":  87,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  62,
       "End":  107,
       "Nom":  0,
       "Arrow":  true    
@@ -5474,28 +6614,21 @@
     {
       "Type":  "TGraphLink",
       "Begin":  107,
-      "End":  88,
+      "End":  87,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  63,
-      "End":  108,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  108,
-      "End":  88,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  110,
+      "Begin":  109,
       "End":  4,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  109,
+      "End":  110,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5508,49 +6641,56 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  111,
-      "End":  112,
+      "Begin":  25,
+      "End":  26,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  26,
-      "End":  27,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  113,
+      "Begin":  112,
       "End":  9,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  38,
+      "Begin":  37,
+      "End":  113,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  34,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  90,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
       "End":  114,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  25,
-      "End":  35,
+      "Begin":  114,
+      "End":  71,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  25,
-      "End":  91,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  25,
+      "Begin":  90,
       "End":  115,
       "Nom":  0,
       "Arrow":  true    
@@ -5558,28 +6698,21 @@
     {
       "Type":  "TGraphLink",
       "Begin":  115,
-      "End":  72,
+      "End":  91,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  91,
-      "End":  116,
+      "Begin":  71,
+      "End":  36,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  116,
-      "End":  92,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  72,
-      "End":  37,
+      "Begin":  117,
+      "End":  118,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5592,7 +6725,7 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  119,
+      "Begin":  118,
       "End":  120,
       "Nom":  0,
       "Arrow":  true    
@@ -5600,48 +6733,48 @@
     {
       "Type":  "TGraphLink",
       "Begin":  119,
-      "End":  121,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  120,
-      "End":  123,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  121,
       "End":  122,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  117,
-      "End":  126,
+      "Begin":  120,
+      "End":  121,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  117,
+      "Begin":  116,
       "End":  125,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  126,
-      "End":  118,
+      "Begin":  116,
+      "End":  124,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  125,
+      "End":  117,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  124,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  126,
       "End":  127,
       "Nom":  0,
       "Arrow":  true    
@@ -5655,14 +6788,14 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  128,
-      "End":  129,
+      "Begin":  116,
+      "End":  130,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  117,
+      "Begin":  130,
       "End":  131,
       "Nom":  0,
       "Arrow":  true    
@@ -5677,13 +6810,20 @@
     {
       "Type":  "TGraphLink",
       "Begin":  132,
+      "End":  134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  134,
       "End":  133,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  133,
+      "Begin":  132,
       "End":  135,
       "Nom":  0,
       "Arrow":  true    
@@ -5691,13 +6831,6 @@
     {
       "Type":  "TGraphLink",
       "Begin":  135,
-      "End":  134,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  133,
       "End":  136,
       "Nom":  0,
       "Arrow":  true    
@@ -5711,35 +6844,35 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  137,
-      "End":  138,
+      "Begin":  122,
+      "End":  123,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  123,
-      "End":  124,
+      "End":  138,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  124,
+      "Begin":  138,
       "End":  139,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  139,
+      "Begin":  116,
       "End":  140,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  117,
+      "Begin":  140,
       "End":  141,
       "Nom":  0,
       "Arrow":  true    
@@ -5754,21 +6887,21 @@
     {
       "Type":  "TGraphLink",
       "Begin":  142,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  141,
       "End":  143,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  143,
-      "End":  145,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  142,
-      "End":  144,
+      "Begin":  145,
+      "End":  146,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5781,22 +6914,22 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  147,
+      "Begin":  143,
+      "End":  145,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  133,
       "End":  148,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  144,
-      "End":  146,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  134,
-      "End":  149,
+      "Begin":  149,
+      "End":  150,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5809,8 +6942,8 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  151,
-      "End":  152,
+      "Begin":  153,
+      "End":  154,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -5823,6 +6956,13 @@
     },
     {
       "Type":  "TGraphLink",
+      "Begin":  151,
+      "End":  152,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
       "Begin":  155,
       "End":  156,
       "Nom":  0,
@@ -5830,21 +6970,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  152,
-      "End":  153,
+      "Begin":  48,
+      "End":  159,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  156,
-      "End":  157,
+      "Begin":  159,
+      "End":  49,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  49,
+      "Begin":  48,
       "End":  160,
       "Nom":  0,
       "Arrow":  true    
@@ -5852,13 +6992,13 @@
     {
       "Type":  "TGraphLink",
       "Begin":  160,
-      "End":  50,
+      "End":  46,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  49,
+      "Begin":  50,
       "End":  161,
       "Nom":  0,
       "Arrow":  true    
@@ -5866,28 +7006,611 @@
     {
       "Type":  "TGraphLink",
       "Begin":  161,
-      "End":  47,
+      "End":  46,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  51,
-      "End":  162,
+      "Begin":  164,
+      "End":  165,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  162,
-      "End":  47,
+      "Begin":  164,
+      "End":  166,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  166,
+      "End":  167,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  167,
+      "End":  171,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  167,
+      "End":  170,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  167,
+      "End":  169,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  167,
+      "End":  168,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  167,
+      "End":  172,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  171,
+      "End":  177,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  170,
+      "End":  176,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  169,
+      "End":  175,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  168,
+      "End":  174,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  172,
+      "End":  173,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  177,
+      "End":  179,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  176,
+      "End":  179,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  175,
+      "End":  179,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  174,
+      "End":  179,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  173,
+      "End":  179,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  186,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  179,
+      "End":  185,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  189,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  190,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  187,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  188,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  188,
+      "End":  191,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  187,
+      "End":  192,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  186,
+      "End":  193,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  189,
+      "End":  194,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  190,
+      "End":  195,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  163,
+      "End":  164,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  191,
+      "End":  204,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  192,
+      "End":  204,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  193,
+      "End":  204,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  194,
+      "End":  204,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  195,
+      "End":  204,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  204,
+      "End":  197,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  197,
+      "End":  205,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  197,
+      "End":  206,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  206,
+      "End":  207,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  207,
+      "End":  164,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  197,
+      "End":  208,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  197,
+      "End":  210,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  208,
+      "End":  209,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  210,
+      "End":  211,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  209,
+      "End":  212,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  212,
+      "End":  213,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  217,
+      "End":  218,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  218,
+      "End":  197,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  220,
+      "End":  221,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  221,
+      "End":  222,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  222,
+      "End":  216,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  222,
+      "End":  223,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  223,
+      "End":  224,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  224,
+      "End":  226,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  226,
+      "End":  222,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  224,
+      "End":  225,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  227,
+      "End":  228,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  228,
+      "End":  222,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  213,
+      "End":  229,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  213,
+      "End":  230,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  230,
+      "End":  167,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  231,
+      "End":  232,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  232,
+      "End":  233,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  233,
+      "End":  216,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  235,
+      "End":  233,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  238,
+      "End":  239,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  239,
+      "End":  233,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  233,
+      "End":  234,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  234,
+      "End":  236,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  236,
+      "End":  237,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  236,
+      "End":  235,
       "Nom":  0,
       "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  2,
+  "BlockPar.EC.Total.Strings":  84,
   "BlockPar.EC":  
   [
+    {
+      "#":  "100",
+      "String":  "Орудие 2: weap2"    
+    },
+    {
+      "#":  "101",
+      "String":  "Орудие 1: weap1"    
+    },
+    {
+      "#":  "102",
+      "String":  "Захват: hook"    
+    },
+    {
+      "#":  "103",
+      "String":  "Ремонтный дроид: droid"    
+    },
+    {
+      "#":  "104",
+      "String":  "Генератор поля: def"    
+    },
+    {
+      "#":  "105",
+      "String":  "Сканер: scaner"    
+    },
+    {
+      "#":  "106",
+      "String":  "Радар: radar"    
+    },
+    {
+      "#":  "107",
+      "String":  "Топливный бак: tank"    
+    },
+    {
+      "#":  "108",
+      "String":  "Двигатель: engine"    
+    },
+    {
+      "#":  "109",
+      "String":  "класса J"    
+    },
+    {
+      "#":  "110",
+      "String":  "Класса L (<0> ед. структуры)"    
+    },
+    {
+      "#":  "111",
+      "String":  "класса L"    
+    },
+    {
+      "#":  "112",
+      "String":  "Класса S (<0> ед. структуры)"    
+    },
+    {
+      "#":  "113",
+      "String":  "класса S"    
+    },
+    {
+      "#":  "114",
+      "String":  "Класса N (<0> ед. структуры)"    
+    },
+    {
+      "#":  "115",
+      "String":  "класса N"    
+    },
+    {
+      "#":  "116",
+      "String":  "Класса M (<0> ед. структуры)"    
+    },
+    {
+      "#":  "117",
+      "String":  "класса M"    
+    },
+    {
+      "#":  "118",
+      "String":  "Прервать процесс сборки военного"    
+    },
+    {
+      "#":  "119",
+      "String":  "Подтвердить сборку"    
+    },
+    {
+      "#":  "120",
+      "String":  "Хочу установить орудие в данный слот"    
+    },
+    {
+      "#":  "121",
+      "String":  "Пожалуй, не стоит"    
+    },
+    {
+      "#":  "122",
+      "String":  "Ура!"    
+    },
+    {
+      "#":  "123",
+      "String":  "Хочу собрать ещё одного пилота"    
+    },
+    {
+      "#":  "124",
+      "String":  "Хочу поменять оборудование в слоте"    
+    },
     {
       "#":  "41",
       "String":  "<0>"    
@@ -5895,6 +7618,234 @@
     {
       "#":  "42",
       "String":  ""    
+    },
+    {
+      "#":  "43",
+      "String":  "Без уважения, КВСМК."    
+    },
+    {
+      "#":  "44",
+      "String":  "Рейнджер <Player>! Ваши \"достижения\" в области уничтожения кораблей Коалиции не могли не заинтересовать КВСМК. В связи с этим командование приняло решение о <color=220,20,20>лишении</color> вас <clr>100<clrEnd> очков воинского звания."    
+    },
+    {
+      "#":  "45",
+      "String":  "Рейнджер <Player>! Ваши \"достижения\" в области уничтожения кораблей Коалиции не могли не заинтересовать КВСМК. В связи с этим командование приняло решение о <color=220,20,20>понижении</color> вас в звании. Отныне вы -"    
+    },
+    {
+      "#":  "46",
+      "String":  "Хочу оснастить пилота"    
+    },
+    {
+      "#":  "47",
+      "String":  "Если у тебя завалялось много лишнего оборудования, то можешь помочь нам с оснащением пилотов."    
+    },
+    {
+      "#":  "48",
+      "String":  "color=220,20,20>отсутствует</color>"    
+    },
+    {
+      "#":  "49",
+      "String":  "млн км)"    
+    },
+    {
+      "#":  "50",
+      "String":  "ед. ущерба на расстоянии"    
+    },
+    {
+      "#":  "51",
+      "String":  "т. на расстоянии"    
+    },
+    {
+      "#":  "52",
+      "String":  "ед. структуры/сутки)"    
+    },
+    {
+      "#":  "53",
+      "String":  "ед. топлива)"    
+    },
+    {
+      "#":  "54",
+      "String":  "оружие в слоте отсутствует"    
+    },
+    {
+      "#":  "55",
+      "String":  "слот занимает"    
+    },
+    {
+      "#":  "56",
+      "String":  "<color=220,20,20>Это оборудование критически важно!</color>"    
+    },
+    {
+      "#":  "57",
+      "String":  "оборудование в слоте отсутствует"    
+    },
+    {
+      "#":  "58",
+      "String":  "Ну что, освободитель Галактики, решил нам помочь? Похвально, похвально.<br><br>Собственно, должен объясниться. Несмотря на активное финансирование Галактическим Советом, КВСМК испытывает серьёзные проблемы с оснащением необходимого для фронта количества пилотов.<br><br>Вы, рейнджер, зарекомендовали себя как отличный пилот, которому можно доверить столь ответственное мероприятие, которым является оснащение наших пилотов."    
+    },
+    {
+      "#":  "59",
+      "String":  "В нашем резерве всегда находится большое количество пилотов - кто-то потерял свой корпус в жестком бою, но был вынесен в спасательной капсуле с поля боя и спасён рейнджерами, кто-то дотащил разбитый до состояния металлолома корабль до космопорта, а кто-то - просто наш запас, постепенно призываемый по мере гибели пилотов на передовой.<br><br>Так или иначе, мы можем предложить вам, пилота <clr>какой расы<clrEnd> вы будете оснащать."    
+    },
+    {
+      "#":  "60",
+      "String":  "Отлично! Теперь подбери размер корпуса пилота согласно нашей размерной шкале корпусов<br><br>Ценовой расклад у нас такой:<br>Класс M - <0> cr.<br>Класс N - <1> cr.<br>Класс J - <2> cr.<br>Класс L - <3> cr.<br>Класс S - <4> cr."    
+    },
+    {
+      "#":  "61",
+      "String":  "Меня интересует орудие в пятом (5) слоте"    
+    },
+    {
+      "#":  "62",
+      "String":  "Меня интересует орудие в четвёртом (4) слоте"    
+    },
+    {
+      "#":  "63",
+      "String":  "Меня интересует орудие в третьем (3) слоте"    
+    },
+    {
+      "#":  "64",
+      "String":  "Меня интересует орудие в втором (2) слоте"    
+    },
+    {
+      "#":  "65",
+      "String":  "Меня интересует орудие в первом (1) слоте"    
+    },
+    {
+      "#":  "66",
+      "String":  "Меня интересует захват военного"    
+    },
+    {
+      "#":  "67",
+      "String":  "Меня интересует радар военного"    
+    },
+    {
+      "#":  "68",
+      "String":  "Меня интересует сканер военного"    
+    },
+    {
+      "#":  "69",
+      "String":  "Меня интересует топливный бак"    
+    },
+    {
+      "#":  "70",
+      "String":  "Меня интересует двигатель"    
+    },
+    {
+      "#":  "71",
+      "String":  "Меня интересует ремонтный дроид"    
+    },
+    {
+      "#":  "72",
+      "String":  "Меня интересует генератор поля"    
+    },
+    {
+      "#":  "73",
+      "String":  "Хорошо! Теперь осталось совсем немного - оснастить корабль оборудованием.<br>Чтобы у тебя было понимание порядка цифр, выведем тебе сейчас текущую информацию по собираемому кораблю:<br>==================<br>Пилот: <0><br>Корабль: <1> (<2> ед. структуры)<br>-------Оборудование-------<br><3><br>==================<br>С учётом твоего рейтинга воина, ты получаешь скидку в размере <4>, следовательно, тебе потребуется уплатить <5> cr."    
+    },
+    {
+      "#":  "74",
+      "String":  "Ну вот и всё, рейнджер!<br>Собранный вами военный совсем скоро поднимется на орбиту планеты <0>, чтобы начать нести службу в нашей системе. Ну а мы, тем временем, можем заняться другими делами!"    
+    },
+    {
+      "#":  "75",
+      "String":  "Назад к выбору функций"    
+    },
+    {
+      "#":  "76",
+      "String":  "Итак, речь идёт про орудие на корабле, расположенное в слоте номер <0><br><br>И на данный момент <1>"    
+    },
+    {
+      "#":  "77",
+      "String":  "Снять орудие"    
+    },
+    {
+      "#":  "78",
+      "String":  "Установить орудие"    
+    },
+    {
+      "#":  "79",
+      "String":  "На какое орудие меняем?"    
+    },
+    {
+      "#":  "80",
+      "String":  "Итак, настало время определиться с оборудованием.<br><br>На данный момент <0><br><1>"    
+    },
+    {
+      "#":  "81",
+      "String":  "Снять оборудование"    
+    },
+    {
+      "#":  "82",
+      "String":  "Установить"    
+    },
+    {
+      "#":  "83",
+      "String":  "На какое оборудование меняем?"    
+    },
+    {
+      "#":  "84",
+      "String":  "Это большая честь, но не сейчас, извините."    
+    },
+    {
+      "#":  "85",
+      "String":  "Пожалуй, приму участие, благодарю!"    
+    },
+    {
+      "#":  "86",
+      "String":  "Для победы над врагом нужно превосходить его не числом, а умением, в чём преуспели <color=220,100,250>фэяне</color>."    
+    },
+    {
+      "#":  "87",
+      "String":  "фэянин"    
+    },
+    {
+      "#":  "88",
+      "String":  "Спокойный и рассудительный <color=50,150,230>человек</color> - мой выбор!"    
+    },
+    {
+      "#":  "89",
+      "String":  "человек"    
+    },
+    {
+      "#":  "90",
+      "String":  "Военная хитрость не менее эффективна, чем сила. Нам нужен <color=130,200,40>лепрасовый</color>."    
+    },
+    {
+      "#":  "91",
+      "String":  "пеленг"    
+    },
+    {
+      "#":  "92",
+      "String":  "Не время для слабости - сын <color=255,0,0>Рамгатру</color> сотрёт наших врагов в порошок!"    
+    },
+    {
+      "#":  "93",
+      "String":  "малок"    
+    },
+    {
+      "#":  "94",
+      "String":  "Этому космосу нужна гармония - зовите пилота-<color=250,250,100>гаальца</color>."    
+    },
+    {
+      "#":  "95",
+      "String":  "гаалец"    
+    },
+    {
+      "#":  "96",
+      "String":  "Класса J (<0> ед. структуры)"    
+    },
+    {
+      "#":  "97",
+      "String":  "Орудие 5: weap5"    
+    },
+    {
+      "#":  "98",
+      "String":  "Орудие 4: weap4"    
+    },
+    {
+      "#":  "99",
+      "String":  "Орудие 3: weap3"    
     }  
   ]
 }

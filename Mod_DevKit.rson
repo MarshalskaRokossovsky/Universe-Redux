@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -986,
-  "ViewPos.y":  1018,
+  "ViewPos.x":  -1340,
+  "ViewPos.y":  -155,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -4024,6 +4024,11 @@
           "Code":          
           [
               "ItemSize(ShipItems(Player(),0),temp_int);",
+              "",
+              "//Исправляем хп корпуса",
+              "HullHP(Player(),'UpTo100');",
+              "HullHP(Player(),'DownTo100');",
+              "",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -8738,7 +8743,7 @@
           [
               "tdwd=CountBox('Bm.Items.2FuelTanks14s',\"Назначьте бонус\",-1000,1000);",
               "",
-              "ShipSpecialBonuses(ship,tstr,tdwd);"          
+              "ShipSpecialBonuses(ship,int(tstr),tdwd);"          
           ]        
         },
         {
@@ -9835,8 +9840,8 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  -840,
-          "Pos.y":  530,
+          "Pos.x":  -870,
+          "Pos.y":  560,
           "Parent":  -1,
           "#":  596,
           "Code.Type":  "Turn",
@@ -10206,7 +10211,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tstr = ''"          
+              "tstr == ''"          
           ]        
         },
         {
@@ -10665,6 +10670,17 @@
           "Parent":  -1,
           "#":  719,
           "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cost",
+          "Pos.x":  -120,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  754,
+          "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
         }      
@@ -16667,13 +16683,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  702,
-      "End":  209,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  655,
       "End":  703,
       "Nom":  0,
@@ -17222,6 +17231,13 @@
       "Type":  "TGraphLink",
       "Begin":  724,
       "End":  644,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  702,
+      "End":  209,
       "Nom":  0,
       "Arrow":  true    
     }  

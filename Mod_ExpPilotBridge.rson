@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -145,
-  "ViewPos.y":  -290,
+  "ViewPos.x":  -144,
+  "ViewPos.y":  -313,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -9850,8 +9850,8 @@
               "",
               "            temp_str = \"<color=255,240,100>Свежие новости об исследовании чёрных дыр:</color>\" + \"<br>\" + ' ' + \"<br>\";",
               "            temp_int = 0;",
-              "            cnt = PlanetNews() - 7;",
-              "            for(i = PlanetNews() - 1; i > cnt; i = i - 1)",
+              "            temp_int_2 = PlanetNews() - 7;",
+              "            for(i = PlanetNews() - 1; i > temp_int_2; i = i - 1)",
               "            {",
               "                if(PlanetNewsDate(i) < last_trade_news_upd) continue;",
               "                if(PlanetNewsType(i) != 36 && PlanetNewsType(i) != 90 && PlanetNewsType(i) != 89) continue;",
@@ -14399,7 +14399,7 @@
           "Parent":  -1,
           "#":  736,
           "Var.Type":  "Int",
-          "Init":  "",
+          "Init":  "0",
           "Global":  false        
         }      
       ]    

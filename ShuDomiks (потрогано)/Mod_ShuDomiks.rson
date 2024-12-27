@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -189,
-  "ViewPos.y":  -402,
+  "ViewPos.x":  -161,
+  "ViewPos.y":  -405,
   "ScriptName":  "Mod_ShuDomiks",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.txt",
@@ -1490,6 +1490,14 @@
           "Pos.y":  -190,
           "Parent":  -1,
           "#":  475        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "FromEvoSB",
+          "Pos.x":  730,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  498        
         }      
       ],
       "Groups":      
@@ -7901,8 +7909,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "LastTalkAboutDomAcrynsOnSB = 1;",
-              "GDomiksProgramms = 0;"          
+              "LastTalkAboutDomAcrynsOnSB = 1;"          
           ]        
         },
         {
@@ -7917,8 +7924,7 @@
           [
               "if(MinGTLToDomAcrynUnlock - GalaxyTechLevel() == 1) tstr1 = \"Тем не менее, исследования в этом направлении идут полным ходом и в скором времени мы должны совершить прорыв.\";",
               "if(MinGTLToDomAcrynUnlock - GalaxyTechLevel() == 2) tstr1 = \"Мы активно проводим исследования в этом направлении, но, все же, еще далеки от успеха.\";",
-              "if(MinGTLToDomAcrynUnlock - GalaxyTechLevel() >= 3) tstr1 = \"Мы лишь сравнительно недавно мобилизовали персонал для этой задачи и пока не имеем серьезных успехов.\";",
-              "GDomiksProgramms = 0;"          
+              "if(MinGTLToDomAcrynUnlock - GalaxyTechLevel() >= 3) tstr1 = \"Мы лишь сравнительно недавно мобилизовали персонал для этой задачи и пока не имеем серьезных успехов.\";"          
           ]        
         },
         {
@@ -8042,7 +8048,7 @@
               "                if(UnknownDomAcrynsTimer == -1)",
               "                {",
               "                    //Чтобы не появлялось где ни попадя",
-              "                    if(GDomiksProgramms) {",
+              "                    if(!CurrentMods('Evolution\\EvoSB')) {",
               "                        //FindDomModsInStock при вызове заполняет tarr1",
               "                        if(FindDomModsInStock(cur_ruin)) AddDialogInject('DomModUnlockSB', '', \"Мне надо разблокировать доминаторский акрин\", 1);",
               "                    }",
@@ -11133,11 +11139,11 @@
           "Pos.x":  780,
           "Pos.y":  -60,
           "Parent":  -1,
-          "#":  498,
+          "#":  499,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "GDomiksProgramms = 0;"          
+              "FindDomModsInStock(cur_ruin);"          
           ]        
         }      
       ],
@@ -16990,14 +16996,28 @@
     {
       "Type":  "TGraphLink",
       "Begin":  148,
-      "End":  498,
+      "End":  231,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  498,
-      "End":  231,
+      "End":  499,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  499,
+      "End":  146,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  499,
+      "End":  145,
       "Nom":  0,
       "Arrow":  true    
     }  

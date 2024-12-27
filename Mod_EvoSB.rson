@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -232,
-  "ViewPos.y":  204,
+  "ViewPos.x":  -193,
+  "ViewPos.y":  161,
   "ScriptName":  "Mod_EvoSB",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.txt",
@@ -405,7 +405,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "exit",
           "Pos.x":  0,
-          "Pos.y":  20,
+          "Pos.y":  30,
           "Parent":  210,
           "#":  227,
           "Msg":  "",
@@ -688,7 +688,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  0,
-          "Pos.y":  40,
+          "Pos.y":  30,
           "Parent":  208,
           "#":  210,
           "Msg":  "<tstr3>",
@@ -1185,26 +1185,6 @@
               "",
               "    int speed_percent = PortionInDiapason(GalaxyDominatorResearchMaterial(serie), 0, 300, 20, 100);",
               "    result = round(max(1.0, (100.0 - GalaxyDominatorResearchPercent(serie)) / PortionInDiapason(speed_percent, 0, 100, 0.00001, max_work_day_mod) * serie_mod));",
-              "}",
-              "",
-              "function PlayerActCode() //t_OnEnteringForm, t_OnLeavingForm, t_OnStep|11",
-              "{",
-              "    if(ScriptItemActionType(t_OnEnteringForm))",
-              "    {",
-              "        if(FormChange() != 'RuinsTalk')",
-              "        {",
-              "            GDomiksProgramms = 0;",
-              "        }",
-              "    }",
-              "    else if(ScriptItemActionType(t_OnLeavingForm))",
-              "    {",
-              "        //Игрок покидает магазин оборудования",
-              "        if(CurrentForm() == 'RuinsTalk')",
-              "        {",
-              "            GDomiksProgramms = 0;",
-              "        }",
-              "    }",
-              "    else if(CurrentForm() != 'RuinsTalk') GDomiksProgramms = 0;",
               "}"          
           ]        
         },
@@ -2691,11 +2671,7 @@
               "{",
               "    ArrayAdd(tarr1, 0);",
               "    ArrayAdd(tarr2, 0);",
-              "}",
-              "",
-              "//Глобальная переменная, которая костыль. И которая поможет нам навести порядок в этом ужасном нагромождении",
-              "//диалогов научки",
-              "GDomiksProgramms = 1;"          
+              "}"          
           ]        
         },
         {
@@ -2730,7 +2706,28 @@
               "InjectAnswer('HandOverDomiksPartsSection', tstr1, 2);",
               "",
               "tstr2 = '</color>' + CT('FormRuins.SB.Scn.SectionNone');",
-              "tstr3 = '</color>' + CT('FormRuins.SB.Scn.SBAfterSectionNone');"          
+              "tstr3 = '</color>' + CT('FormRuins.SB.Scn.SBAfterSectionNone');",
+              "",
+              "if(CurrentMods('Evolution\\EvoArtDominator')) {",
+              "    if(BlockExist('FormRuins.SB.Scn2')) InjectAnswer('Mod_EvoArtDominator:ArtDominator', \"Хочу сдать ошмётки на комплексное изучение\", 4); //--Получение нового артефакта--}",
+              "    else SFT('Warning Mod_ArtDominator: Не найден раздел ...SB.Scn2, выдача артов невозможна');",
+              "}",
+              "if(CurrentMods('ShusRangers\\ShuDomiks')) {",
+              "    //InjectAnswer('Mod_ShuDomiks:FromEvoSB', '', \"Мне надо разблокировать доминаторский акрин\", 5);",
+              "    if(FindDomModsInStock(GetShipRuins(Player()))) InjectAnswer('Mod_ShuDomiks:FromEvoSB',\"Мне надо разблокировать доминаторский акрин\", 1);",
+              "}",
+              "if(CurrentMods('Kotyanka\\Cat_DomScience')) {",
+              "        if(!DomiksDefeated()) {",
+              "            if(FindModule()) {",
+              "                if(ShipType(GetShipRuins(Player())) == 'SB') {",
+              "                    InjectAnswer('Cat_DomScience:UnlockSB',\"Я нашёл здесь модуль памяти...\",15);",
+              "                }",
+              "                if(ShipType(GetShipRuins(Player())) == 'DD') {",
+              "                    InjectAnswer('Cat_DomScience:UnlockDD',\"Я нашёл здесь модуль памяти...\",15);",
+              "                }",
+              "            }",
+              "        }",
+              "}"          
           ]        
         },
         {
@@ -2763,10 +2760,7 @@
               "        else tarr2[i] = tarr2[i] + 100;",
               "    }",
               "    ArraySort(tarr2, tarr1);",
-              "}",
-              "",
-              "//Обнуляем костыль, чтобы диалоги не возникали",
-              "GDomiksProgramms = 0;"          
+              "}"          
           ]        
         },
         {
@@ -3193,15 +3187,68 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  590,
-          "Pos.y":  900,
+          "Pos.x":  520,
+          "Pos.y":  980,
           "Parent":  -1,
-          "#":  241,
-          "Code.Type":  "Turn",
+          "#":  240,
+          "Code.Type":  "Init",
           "Code":          
           [
-              "//Обнуляем костыль, чтобы диалоги не возникали",
-              "GDomiksProgramms = 0;"          
+              "function FindDomModsInStock(dword place = 0)",
+              "{",
+              "    ArrayClear(tarr3);",
+              "    ArrayDelete(tarr3, 0);",
+              "",
+              "    int some_found_cnt = 0;",
+              "    int cnt = ShipItems(Player());",
+              "    for(int i = 1; i < cnt; i = i + 1)",
+              "    {",
+              "        dword item = ShipItems(Player(), i);",
+              "",
+              "        if(ItemType(item) < t_FuelTanks || ItemType(item) > t_CustomWeapon) continue;",
+              "        if(ItemOwner(item) != Kling) continue;",
+              "        if(EqSpecial(item) == -1) continue;",
+              "        if(findsubstr(BonusNumInCfg(EqSpecial(item)), 'DomModLocked') == -1) continue;",
+              "",
+              "        ArrayAdd(tarr3, item);",
+              "        some_found_cnt = some_found_cnt + 1;",
+              "    }",
+              "",
+              "    if(place)",
+              "    {",
+              "        cnt = StorageItems();",
+              "        for(i = 0; i < cnt; i = i + 1)",
+              "        {",
+              "            if(StorageItemLocation(i) != place) continue;",
+              "            item = StorageItems(i);",
+              "",
+              "            if(ItemType(item) < t_FuelTanks || ItemType(item) > t_CustomWeapon) continue;",
+              "            if(ItemOwner(item) != Kling) continue;",
+              "            if(EqSpecial(item) == -1) continue;",
+              "            if(findsubstr(BonusNumInCfg(EqSpecial(item)), 'DomModLocked') == -1) continue;",
+              "",
+              "            ArrayAdd(tarr3, item);",
+              "            some_found_cnt = some_found_cnt + 1;",
+              "        }",
+              "    }",
+              "",
+              "    if(!some_found_cnt) ArrayAdd(tarr3, 0); //Чтоб не крашил, собака",
+              "    result = some_found_cnt;",
+              "}",
+              "",
+              "function FindModule() {",
+              "    int crist_found = 0;",
+              "    int cnt111 = ShipItems(Player());",
+              "    for(i = 1; i < cnt111; i = i + 1)",
+              "    {",
+              "        item = ShipItems(Player(), i);",
+              "        if(ItemType(item) != t_UselessItem) continue;",
+              "        if(EquipmentImageName(item) != 'Remains_CatMem0' && EquipmentImageName(item) != 'Remains_CatMem1' && EquipmentImageName(item) != 'Remains_CatMem2') continue;",
+              "        crist_found = crist_found + 1;",
+              "    }",
+              "",
+              "    result = crist_found;",
+              "}"          
           ]        
         }      
       ],
@@ -3909,7 +3956,7 @@
           "TakeItem":  -1,
           "TakeAllItem":  false,
           "OnTalk":  "",
-          "OnActCode":  "[t_OnEnteringForm,t_OnLeavingForm,t_OnStep|11]\r\nPlayerActCode();",
+          "OnActCode":  "",
           "EType":  1,
           "EUnique":  "",
           "EMsg":  ""        
@@ -4546,14 +4593,14 @@
         },
         {
           "Type":  "TVar",
-          "Name":  "GDomiksProgramms",
-          "Pos.x":  590,
-          "Pos.y":  990,
+          "Name":  "tarr3",
+          "Pos.x":  220,
+          "Pos.y":  830,
           "Parent":  -1,
-          "#":  240,
-          "Var.Type":  "Int",
-          "Init":  "0",
-          "Global":  true        
+          "#":  241,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
         }      
       ]    
     }  
@@ -5984,13 +6031,6 @@
     {
       "Type":  "TGraphLink",
       "Begin":  208,
-      "End":  241,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  241,
       "End":  210,
       "Nom":  0,
       "Arrow":  true    
@@ -6091,7 +6131,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  94,
+  "BlockPar.EC.Total.Strings":  97,
   "BlockPar.EC":  
   [
     {
@@ -6377,6 +6417,18 @@
     {
       "#":  "244",
       "String":  "Выбрать другое оборудование"    
+    },
+    {
+      "#":  "245",
+      "String":  "Мне надо разблокировать доминаторский акрин"    
+    },
+    {
+      "#":  "246",
+      "String":  "Я нашёл здесь модуль памяти..."    
+    },
+    {
+      "#":  "247",
+      "String":  "Хочу сдать ошмётки на комплексное изучение"    
     },
     {
       "#":  "44",

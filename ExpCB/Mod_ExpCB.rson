@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  58,
-  "ViewPos.y":  184,
+  "ViewPos.x":  -138,
+  "ViewPos.y":  199,
   "ScriptName":  "Mod_ExpCB",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.txt",
@@ -315,7 +315,7 @@
           "Type":  "TDialog",
           "Name":  "coalship_count",
           "Pos.x":  910,
-          "Pos.y":  540,
+          "Pos.y":  530,
           "Parent":  -1,
           "#":  42        
         },
@@ -470,6 +470,10 @@
               "    if(StarRuins(cur_star, 'SB')) TotalSBCount = TotalSBCount + 1;",
               "    else if(StarRuins(cur_star, 'WB')) TotalWBCount = TotalWBCount + 1;",
               "    else if(StarRuins(cur_star, 'CB')) TotalCBCount = TotalCBCount + 1;",
+              "",
+              "    /*for(j=0;StarShips(cur_star)>j;j=j+1) {",
+              "        if(ShipType(cur_star,j) == 'CB') ",
+              "    }*/",
               "}"          
           ]        
         },
