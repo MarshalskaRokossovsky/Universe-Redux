@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -327,
-  "ViewPos.y":  -228,
+  "ViewPos.x":  -623,
+  "ViewPos.y":  -247,
   "ScriptName":  "Mod_ExpRC",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRC\\DATA\\Script\\Mod_ExpRC.txt",
@@ -310,6 +310,56 @@
           "#":  151,
           "Msg":  "",
           "AMsg.Num":  "29"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -20,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  154,
+          "Msg":  "В другой раз",
+          "AMsg.Num":  "30"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  161,
+          "Msg":  "<str4>",
+          "AMsg.Num":  "31"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -60,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  164,
+          "Msg":  "",
+          "AMsg.Num":  "32"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -150,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  174,
+          "Msg":  "На сегодня с покупками всё!",
+          "AMsg.Num":  "33"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -120,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  175,
+          "Msg":  "Что же, я бы не отказался от ещё одного микромодуля!",
+          "AMsg.Num":  "34"        
         }      
       ],
       "DialogMessages":      
@@ -553,6 +603,46 @@
           "#":  150,
           "Msg":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <RangerBaseNodes(Player())> нодов.\r\nКроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов.",
           "DMsg.Num":  "23"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  153,
+          "Msg":  "Что, хочешь забрать свои кровные модули из лап фараонов?\r\n\r\nПохвальное желание. Но, уж извини, дружок, за это надо платить.\r\n\r\nЗа один модуль мы спишем с твоего счёта <GalaxyMoney(2)> cr. За эти деньги будут оснащены новые рейды на Центры Рейнджеров - а ты думал, откуда мы берём столько микромодулей?",
+          "DMsg.Num":  "24"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -90,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  160,
+          "Msg":  "<str0>",
+          "DMsg.Num":  "25"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  163,
+          "Msg":  "<str0>",
+          "DMsg.Num":  "26"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -150,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  173,
+          "Msg":  "<str0>",
+          "DMsg.Num":  "27"        
         }      
       ],
       "Dialogs":      
@@ -628,6 +718,38 @@
           "Pos.y":  330,
           "Parent":  -1,
           "#":  148        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "MM_storage2",
+          "Pos.x":  -60,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  152        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "take_mm2",
+          "Pos.x":  -100,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  156        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "BuyNewMMAlt",
+          "Pos.x":  -90,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  158        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "RecieveMM",
+          "Pos.x":  -150,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  165        
         }      
       ],
       "Groups":      
@@ -636,7 +758,7 @@
           "Type":  "TGroup",
           "Name":  "PlayerGroup",
           "Pos.x":  50,
-          "Pos.y":  150,
+          "Pos.y":  40,
           "Parent":  -1,
           "#":  3,
           "Owner":  62,
@@ -695,6 +817,7 @@
               "BonMMRand1 = -1;",
               "BonMMRand1 = -1;",
               "if(CT('ExpRC.ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;  //Флаг выдачи ММ без повторов",
+              "if(CT('ExpRC.ExpRCAltMMShop')) ExpRCAltMMShopInit = 1;  //Флаг на пул в 9 ММ",
               "//Раздаём доминаторам неизвестные ММ, а также вешаем спец. инфошки на ЦР на старте скрипта",
               "//Ищем все корабли в Галактике, после чего начинаем их подробный перебор",
               "int2 = BuildListOfNewShips(array0, lastShipId, 1, 32, 1, '');",
@@ -952,6 +1075,13 @@
               "{",
               "    if(CT('ExpRC.ExpRCRebootMMChain')) ExpRCRebootMMChainInit = 1;",
               "}",
+              "if(!ExpRCAltMMShopInit) //Флаг на пул из 9 ММ",
+              "{",
+              "    if(CT('ExpRC.ExpRCAltMMShop')) ExpRCAltMMShopInit = 1;",
+              "}",
+              "else {",
+              "    if(!CT('ExpRC.ExpRCAltMMShop')) ExpRCAltMMShopInit = 0;",
+              "}",
               "//Проверяем, что текущий тёрн не сработал второй раз за ход",
               "if(CurTurn() != lastRun)",
               "{",
@@ -1086,6 +1216,11 @@
               "            AddDialogBlock(CT('FormRuins.RC.TakeNod.PlayerSend'), 2);",
               "            AddDialogInject('BuyNewMM', '', CT('FormRuins.RC.TakeNod.PlayerSendMod'), 0);",
               "        }",
+              "        if(ExpRCAltMMShopInit) {",
+              "            //Так сказал Маршалтустра",
+              "            AddDialogBlock(CT('FormRuins.RC.TakeNod.PlayerSend'), 2);",
+              "            AddDialogInject('BuyNewMMAlt', '', CT('FormRuins.RC.TakeNod.PlayerSendMod'), 0);",
+              "        }",
               "",
               "        AddDialogBlock(CT('FormRuins.RC.GiveNod.PlayerSend'), 2);",
               "        AddDialogInject('SellMM', '', CT('FormRuins.RC.GiveNod.PlayerSendMod'), 0);",
@@ -1094,6 +1229,10 @@
               "            AddDialogBlock(CT('FormRuins.RC.SaleNod.PlayerSend'), 2);",
               "            AddDialogInject('SellNodes', '', Format(CT('FormRuins.RC.SaleNod.PlayerSendMod'),'Count',GetNodesFromShip(Player())), 0);",
               "        }",
+              "    }",
+              "    if(ShipType(cur_ruin) == 'CB')",
+              "    {",
+              "        if(ArrayDim(mm_storage) > 1) AddDialogInject('MM_storage2', '', \"Я хотел бы забрать модули из своего хранилища на Центре Рейнджеров\", 1);",
               "    }",
               "}"          
           ]        
@@ -1579,6 +1718,183 @@
               "ShipFreeExp(Player(),ShipFreeExp(Player()) + (dwd0*5));",
               "Sound('Sound.Buy');"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  155,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipMoney(Player()) >= GalaxyMoney(2)) {",
+              "    for(i = 1; i < ArrayDim(mm_storage); i = i + 1) InjectAnswer('take_mm2', '</color>' + mm_storage_name[i], i);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  157,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "dwd0 = GetItemFromVault(mm_storage[GAnswerData]);",
+              "int3 = EqModule(dwd0);",
+              "str4 = ItemFullName(dwd0);",
+              "ShipMoney(Player(),ShipMoney(Player()) - GalaxyMoney(2));",
+              "",
+              "str0 = '</color>' + str4;",
+              "AddItemToShip(Player(), dwd0);",
+              "ArrayDelete(mm_storage, GAnswerData);",
+              "ArrayDelete(mm_storage_name, GAnswerData);",
+              "MMStorageEther();",
+              "if(ArrayDim(mm_storage) < 2)",
+              "{",
+              "    EtherDelete('WJ5TB-BJSZJ-TFB6W-JTJJJ-3Z3CB-0');",
+              "}",
+              "Sound('Sound.DelMsg');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -90,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  159,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Делаем перебор цепочки ММ для всех трёх уровней",
+              "//Формируем текст для подстановки в реплику собеседника, а также рассчитываем цены ММ",
+              "//1 - ММ первого уровня",
+              "//2 - ММ второго уровня",
+              "//3 - ММ третьего уровня",
+              "str0 = '';",
+              "ArrayClear(array0);",
+              "for(i = 1; i <= 9; i = i + 1)",
+              "{",
+              "    if(i < 3) int0 = 2;",
+              "    else if(i < 6) int0 = 1;",
+              "    else int0 = 0;",
+              "",
+              "    //Если ещё не наступил день выдачи ММ из альтернативной цепочки",
+              "    if(CurTurn() % 33) int0 = RuinsMicromoduleChain(cur_ruin, int0, i - int0*3);",
+              "    //Если сегодня как раз такой день",
+              "    else int0 = RuinsMicromoduleChain(cur_ruin, int0, i - int0*3, 1);",
+              "",
+              "    ArrayAdd(array0, int0);",
+              "",
+              "    //Рассчитываем стоимость очередного ММ (по умолчанию как для первого уровня) в нодах (использованы оригинальные формулы)",
+              "    k = round(PortionInDiapason(BonusPriority(int0), 100, 0, 100, 2000));",
+              "    k = Rnd(round(0.8 * k), round(1.2 * k), k + Id(cur_ruin));",
+              "",
+              "    //Выполняем необходимые округления",
+              "    if(i < 3) k = RoundTo(1.0 * k / 1.5, 100, -1);",
+              "    else k = RoundTo(1.0 * k / 1.5, 10, -1);",
+              "",
+              "    //Записываем все полученные стоимости в соответствующие переменные и определяем снижение цены для микромодулей предыдущих уровней",
+              "    if(i == 1) int1 = k;",
+              "    else if(i == 2) int2 = k;",
+              "    else if(i == 3) int3 = k;",
+              "    //Стоимость ММ второго и третьего уровня не должна превышать половину стоимости ММ предыдущего уровня",
+              "    else if(i == 4)",
+              "    {",
+              "        if(k > int1 / 2) k = int1 / 2;",
+              "        int4 = k;",
+              "    }",
+              "    else if(i == 5)",
+              "    {",
+              "        if(k > int1 / 2) k = int1 / 2;",
+              "        int5 = k;",
+              "    }",
+              "    else if(i == 6)",
+              "    {",
+              "        if(k > int1 / 2) k = int1 / 2;",
+              "        int6 = k;",
+              "    }",
+              "    else if(i == 7)",
+              "    {",
+              "        if(k > int2 / 2) k = int2 / 2;",
+              "        int7 = k;",
+              "    }",
+              "    else if(i == 8)",
+              "    {",
+              "        if(k > int2 / 2) k = int2 / 2;",
+              "        int8 = k;",
+              "    }",
+              "    else",
+              "    {",
+              "        if(k > int2 / 2) k = int2 / 2;",
+              "        int9 = k;",
+              "    }",
+              "",
+              "    //Добавляем в текст название, описанием и стоимость в нодах очередного ММ",
+              "    str0 = str0 + Format('<br>') + DefSplt;",
+              "    str0 = str0 + Format('<br>') + i + Format(CT('FormRuins.RC.TakeNod.RCAnswerMM'), '<Name'+'>', BonusName(int0)) + Format('<br>') + BonusText(int0);",
+              "    str0 = str0 + Format('<br>') + Format('<clr><clrEnd><br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerMMCost'), '<Count'+'>', k);",
+              "",
+              "",
+              "    //Собираем текст ответа игрока для выбора приобретаемого ММ",
+              "    str1 = '</color>' + Format(CT('FormRuins.RC.TakeNod.PlayerOk'), '<Count'+'>', k, '<Name'+'>', BonusName(int0));",
+              "",
+              "    //InjectAnswer('RecieveMM',str1,i);",
+              "",
+              "    if(RangerBaseNodes(Player()) > k && RangerBaseNodes(Player()) > 1) InjectAnswer('RecieveMM',str1,i);",
+              "}",
+              "",
+              "//Собираем строчки для подстановки",
+              "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAnswerStart'), '<Text'+'>', str0, '') + Format('<br>') + DefSplt + Format('<br>') + Format(CT('FormRuins.RC.TakeNod.RCAnswerEnd'), '<BaseNod'+'>', RangerBaseNodes(Player()));",
+              "str4 = '</color>' + CT('FormRuins.RC.TakeNod.PlayerNo');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  162,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "str0 = '</color>' + CT('FormRuins.RC.TakeNod.RCAfterPlayerNo');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -150,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  172,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "i = GAnswerData;",
+              "//Добавляем приобретённый ММ в трюм игрока",
+              "AddItemToShip(Player(), CreateMM(array0[i]));",
+              "//Вычитаем ноды со счёта игрока и выводим сообщение об успешной покупке",
+              "if(i == 1) j = int1;",
+              "if(i == 2) j = int2;",
+              "if(i == 3) j = int3;",
+              "if(i == 4) j = int4;",
+              "if(i == 5) j = int5;",
+              "if(i == 6) j = int6;",
+              "if(i == 7) j = int7;",
+              "if(i == 8) j = int8;",
+              "if(i == 9) j = int9;",
+              "RangerBaseNodes(Player(), RangerBaseNodes(Player()) - j);",
+              "Sound('Sound.Sell');",
+              "",
+              "str0 = '</color>' + Format(CT('FormRuins.RC.TakeNod.RCAfterPlayerOk'), '<NodCnt' + '>', j, '<Name' + '>', BonusName(array0[i]));"          
+          ]        
         }      
       ],
       "Planets":      
@@ -1587,7 +1903,7 @@
           "Type":  "TPlanet",
           "Name":  "PlanetNew",
           "Pos.x":  50,
-          "Pos.y":  130,
+          "Pos.y":  20,
           "Parent":  -1,
           "#":  2,
           "Race":  62,
@@ -1605,7 +1921,7 @@
           "Type":  "TStarShip",
           "Name":  "",
           "Pos.x":  50,
-          "Pos.y":  90,
+          "Pos.y":  -20,
           "Parent":  -1,
           "#":  0,
           "Count":  1,
@@ -1634,7 +1950,7 @@
           "Type":  "TStar",
           "Name":  "StarNew",
           "Pos.x":  50,
-          "Pos.y":  110,
+          "Pos.y":  0,
           "Parent":  -1,
           "#":  1,
           "Constellation":  0,
@@ -1912,7 +2228,7 @@
           "Type":  "TState",
           "Name":  "PlayerState",
           "Pos.x":  50,
-          "Pos.y":  170,
+          "Pos.y":  60,
           "Parent":  -1,
           "#":  4,
           "Move":  0,
@@ -2343,6 +2659,83 @@
           "Pos.y":  60,
           "Parent":  -1,
           "#":  147,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int4",
+          "Pos.x":  670,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  166,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int5",
+          "Pos.x":  670,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  167,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int6",
+          "Pos.x":  670,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  168,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int7",
+          "Pos.x":  670,
+          "Pos.y":  460,
+          "Parent":  -1,
+          "#":  169,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int8",
+          "Pos.x":  670,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  170,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "int9",
+          "Pos.x":  670,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  171,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ExpRCAltMMShopInit",
+          "Pos.x":  670,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  176,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -3149,6 +3542,118 @@
       "End":  151,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  152,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  153,
+      "End":  154,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  153,
+      "End":  155,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  156,
+      "End":  157,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  157,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  158,
+      "End":  159,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  159,
+      "End":  160,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  160,
+      "End":  161,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  161,
+      "End":  162,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  162,
+      "End":  163,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  163,
+      "End":  164,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  173,
+      "End":  175,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  173,
+      "End":  174,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  175,
+      "End":  159,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  165,
+      "End":  172,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  172,
+      "End":  173,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -3223,7 +3728,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  45,
+  "BlockPar.EC.Total.Strings":  50,
   "BlockPar.EC":  
   [
     {
@@ -3405,6 +3910,26 @@
     {
       "#":  "93",
       "String":  "Отличная работа, <Player>, мы забираем ноды и увеличиваем ваш личный нод-счет. Величина счета <0> нодов.<br>Кроме того, вы выросли в нашем рейтинге. Продолжайте и впредь пополнять наши запасы нодов."    
+    },
+    {
+      "#":  "94",
+      "String":  "Я хотел бы забрать модули из своего хранилища на Центре Рейнджеров"    
+    },
+    {
+      "#":  "95",
+      "String":  "Что, хочешь забрать свои кровные модули из лап фараонов?<br><br>Похвальное желание. Но, уж извини, дружок, за это надо платить.<br><br>За один модуль мы спишем с твоего счёта <0> cr. За эти деньги будут оснащены новые рейды на Центры Рейнджеров - а ты думал, откуда мы берём столько микромодулей?"    
+    },
+    {
+      "#":  "96",
+      "String":  "В другой раз"    
+    },
+    {
+      "#":  "97",
+      "String":  "На сегодня с покупками всё!"    
+    },
+    {
+      "#":  "98",
+      "String":  "Что же, я бы не отказался от ещё одного микромодуля!"    
     }  
   ]
 }

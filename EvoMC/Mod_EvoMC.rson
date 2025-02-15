@@ -1973,6 +1973,7 @@
               "            }",
               "        }",
               "",
+              "        if(stims_array[tint1, 'Designation'] == 'ExpImplants_Meldonit') GlobalImplantsEnduranceBonus = GlobalImplantsEnduranceBonus + 10;",
               "        ShipAddCustomShipInfo(Player(), stims_array[tint1, 'Designation'], stims_array[tint1, 'Text'], CurTurn() + duration, 0, 0, bons_str);",
               "    }",
               "",

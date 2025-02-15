@@ -237,7 +237,10 @@
               "if(CurTurn() > 1030)",
               "{",
               "    //Событие будет повторяться не чаще, чем раз в три года",
-              "    if(CurTurn() - GLastTurnRun(GScriptName) > 912) GRun();",
+              "    if(CurTurn() - GLastTurnRun(GScriptName) > 912) {",
+              "        GRun();",
+              "        //NewsAdd('Внимание! Мод ExpCaravan начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram');",
+              "    }",
               "}"          
           ]        
         },
@@ -977,19 +980,20 @@
               "groups_ID = newarray(1);",
               "pirates_ID = newarray(1);",
               "",
-              "//Имеется 50% вероятность, что скрипт не будет повторно запущен, даже при соблюдении всех условий",
-              "if(GCntRun('Mod_ExpCaravan') && Rnd(1, 100) <= 50) vScst = -1;",
+              "//Имеется 50% вероятность, что скрипт не будет повторно запущен, даже при соблюдении всех условий (запрещаю)",
+              "/*if(GCntRun('Mod_ExpCaravan') && Rnd(1, 100) <= 50) vScst = -1;",
               "else {",
               "    if(ControlledSystems(0) > 10) {",
               "        vScst = -1;",
-              "        //NewsAdd('Внимание! Мод ExpCaravan начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
+              "        NewsAdd('Внимание! Мод ExpCaravan начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
               "    }",
               "    else {",
               "        vScst = -2;",
-              "        //NewsAdd('Внимание! Мод ExpCaravan не начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
+              "        NewsAdd('Внимание! Мод ExpCaravan не начал свою работу. Сообщите Marshalska Rokossovsky на сервере Discord или Telegram - vScst = '+vScst);",
               "        AllShipOut();",
               "    }",
-              "}"          
+              "}*/",
+              "vScst = -1;"          
           ]        
         },
         {

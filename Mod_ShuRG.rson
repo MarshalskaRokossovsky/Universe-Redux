@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  138,
-  "ViewPos.y":  -164,
+  "ViewPos.x":  625,
+  "ViewPos.y":  -22,
   "ScriptName":  "Mod_ShuRG",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRG\\DATA\\Script\\Mod_ShuRG.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRG\\DATA\\Script\\Mod_ShuRG.txt",
@@ -1634,6 +1634,28 @@
               "",
               "    if(Rnd(1,2) == 1) GoodsAdd(PlanetPirateClan(),t_Technics,500);",
               "    else GoodsAdd(PlanetPirateClan(),t_Arms,200);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1400,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  192,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(CurrentMods('Kotyanka\\Cat_Excalibur')) {",
+              "    if(GetValueFromScript('Cat_Excalibur','state') == 1) {",
+              "        InjectAnswer('Cat_Excalibur:GetHull',\"Я тут хотел спросить...\",1);",
+              "    }",
+              "}",
+              "if(CurrentMods('Reflection\\RefReturnNPCWin')) {",
+              "    if(GetValueFromScript('Mod_RefReturnNPCWin','TerronProg') == 1 || GetValueFromScript('Mod_RefReturnNPCWin','KellerProg') == 1 || GetValueFromScript('Mod_RefReturnNPCWin','BlazerProg') == 1) {",
+              "        AddDialogInject('ProgrammsDial', \"Кстати, наши спецы смогли раздобыть кой-какие программки Коалиции перед тем, как она совсем рассыпалась. Если интересует...\",\"Что за программы?\",1);",
+              "    }",
               "}"          
           ]        
         }      
@@ -3948,6 +3970,13 @@
       "End":  189,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  192,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -3999,7 +4028,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  55,
+  "BlockPar.EC.Total.Strings":  58,
   "BlockPar.EC":  
   [
     {
@@ -4213,6 +4242,18 @@
     {
       "#":  "71",
       "String":  "Назад"    
+    },
+    {
+      "#":  "72",
+      "String":  "Я тут хотел спросить..."    
+    },
+    {
+      "#":  "73",
+      "String":  "Что за программы?"    
+    },
+    {
+      "#":  "75",
+      "String":  "Кстати, наши спецы смогли раздобыть кой-какие программки Коалиции перед тем, как она совсем рассыпалась. Если интересует..."    
     },
     {
       "#":  "8",

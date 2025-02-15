@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -496,
-  "ViewPos.y":  -475,
+  "ViewPos.x":  -639,
+  "ViewPos.y":  -441,
   "ScriptName":  "Mod_ExpTC",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.txt",
@@ -1139,7 +1139,6 @@
           "Code":          
           [
               "type = 2;",
-              "temp_str = \"</color>увеличивается\";",
               "temp_dword_2 = 0;",
               "",
               "//Если мы уже что-то демонтировали - цена растёт. Если ставили - уменьшается",
@@ -1161,6 +1160,7 @@
               "    }",
               "}",
               "",
+              "temp_str = \"</color>увеличивается\";",
               "cost = (ItemCost(temp_dword) * max(10+temp_dword_2,1)) / 100 + GalaxyMoney(0);"          
           ]        
         },
@@ -1175,7 +1175,6 @@
           "Code":          
           [
               "type = 1;",
-              "temp_str = \"</color>уменьшается\";",
               "",
               "//Если мы уже что-то демонтировали - цена ниже. Если ставили - увеличивается",
               "for(i=1;i<9;i=i+1) {",
@@ -1196,6 +1195,7 @@
               "    }",
               "}",
               "",
+              "temp_str = \"</color>уменьшается\";",
               "cost = (ItemCost(temp_dword) * 50) / 100 + GalaxyMoney(0);"          
           ]        
         },
@@ -2717,8 +2717,12 @@
               "temp_dword_3 = ArtTranclucatorToShip(temp_dword);",
               "if(ShipEqInSlot(temp_dword_3,t_Engine)) FreeItem(GetItemFromShip(temp_dword_3,ShipEqInSlot(temp_dword_3,t_Engine)));",
               "if(ShipEqInSlot(temp_dword_3,t_FuelTanks)) FreeItem(GetItemFromShip(temp_dword_3,ShipEqInSlot(temp_dword_3,t_FuelTanks)));",
-              "AddItemToShip(temp_dword_3,GetItemFromVault('ExpTC_TrancEngine'));",
-              "AddItemToShip(temp_dword_3,GetItemFromVault('ExpTC_TrancFuelTanks'));",
+              "temp_dword = GetItemFromVault('ExpTC_TrancEngine');",
+              "AddItemToShip(temp_dword_3,temp_dword);",
+              "ItemIsInUse(temp_dword,temp_dword_3,1);",
+              "temp_dword = GetItemFromVault('ExpTC_TrancFuelTanks');",
+              "AddItemToShip(temp_dword_3,temp_dword);",
+              "ItemIsInUse(temp_dword,temp_dword_3,1);",
               "ArrangeItems(temp_dword_3);"          
           ]        
         },
@@ -3881,8 +3885,8 @@
         {
           "Type":  "TVar",
           "Name":  "tstr2",
-          "Pos.x":  120,
-          "Pos.y":  210,
+          "Pos.x":  0,
+          "Pos.y":  290,
           "Parent":  -1,
           "#":  230,
           "Var.Type":  "Str",
@@ -3892,8 +3896,8 @@
         {
           "Type":  "TVar",
           "Name":  "tstr3",
-          "Pos.x":  120,
-          "Pos.y":  230,
+          "Pos.x":  0,
+          "Pos.y":  310,
           "Parent":  -1,
           "#":  231,
           "Var.Type":  "Str",

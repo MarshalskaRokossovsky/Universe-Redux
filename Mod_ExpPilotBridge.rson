@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -144,
-  "ViewPos.y":  -313,
+  "ViewPos.x":  -453,
+  "ViewPos.y":  -537,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -834,7 +834,7 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "",
-          "Pos.x":  680,
+          "Pos.x":  640,
           "Pos.y":  210,
           "Parent":  -1,
           "#":  719,
@@ -855,7 +855,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  680,
-          "Pos.y":  290,
+          "Pos.y":  210,
           "Parent":  -1,
           "#":  724,
           "Msg":  "Назад",
@@ -1547,8 +1547,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  680,
-          "Pos.y":  330,
+          "Pos.x":  640,
+          "Pos.y":  290,
           "Parent":  -1,
           "#":  722,
           "Msg":  "Здесь приведены все предметы, которые вы можете запретить продавать или переносить из трюма корабля.",
@@ -1557,8 +1557,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  720,
-          "Pos.y":  330,
+          "Pos.x":  680,
+          "Pos.y":  290,
           "Parent":  -1,
           "#":  723,
           "Msg":  "Здесь приведены все предметы, которым вы запретили перенос из трюма корабля и продажу.",
@@ -2061,7 +2061,7 @@
           "Type":  "TDialog",
           "Name":  "ReturnAdd",
           "Pos.x":  640,
-          "Pos.y":  360,
+          "Pos.y":  370,
           "Parent":  -1,
           "#":  725        
         },
@@ -3619,7 +3619,7 @@
               "            G_TCStat = G_TCStat + 1;",
               "        }",
               "        //Центр наёмников (ShuMercs)",
-              "        else if(str_type == 'MB' || str_type == 'Manaan' || str_type == 'PlayerMB')",
+              "        else if(str_type == 'MB' || str_type == 'Manaan' || str_type == 'PlayerMB' || str_type == 'MercHQ' || str_type == 'PlayerMercHQ')",
               "        {",
               "            G_MercCStat = G_MercCStat + 1;",
               "        }",
@@ -5365,6 +5365,11 @@
               "            }",
               "        }",
               "    }",
+              "}",
+              "//Выбор системы для постройки ТЦ, определение стоимости",
+              "if(InitExpTC) {",
+              "    if(!GlobalVarTcCount && !bld_system_Id_TC) bld_system_Id_TC=SelectSystemTC();",
+              "//    if(bld_system_Id_TC) bld_cost_TC=GTL*GalaxyDiffLevels()*800+Rnd(GalaxyMoney(2,2),GalaxyMoney(4,4));",
               "}"          
           ]        
         },
@@ -5646,6 +5651,10 @@
               "    bld_planet_chsn_2 = 0;",
               "    credits_now_2 = 0;",
               "    wait_day_2 = CurTurn() + Rnd(5, 20);",
+              "}",
+              "",
+              "if(!InitExpTC) {",
+              "    if(IsScriptActive('Mod_ExpTC')) InitExpTC=1;",
               "}",
               "",
               "//Создаем проект ТЦ",
@@ -9016,11 +9025,6 @@
               "if(CurTurn() == 301) {",
               "    Tips(19);",
               "    Tips(20);",
-              "}",
-              "//Выбор системы для постройки ТЦ, определение стоимости",
-              "if(InitExpTC) {",
-              "    if(!GlobalVarTcCount && !bld_system_Id_TC) bld_system_Id_TC=SelectSystemTC();",
-              "//    if(bld_system_Id_TC) bld_cost_TC=GTL*GalaxyDiffLevels()*800+Rnd(GalaxyMoney(2,2),GalaxyMoney(4,4));",
               "}"          
           ]        
         },
@@ -9926,7 +9930,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  640,
-          "Pos.y":  250,
+          "Pos.y":  330,
           "Parent":  -1,
           "#":  727,
           "Code.Type":  "Turn",
@@ -9934,6 +9938,7 @@
           [
               "Sound('Sound.SlotPut');",
               "LinkItemToScript(GAnswerData);",
+              "CanSellItem(GAnswerData,0);",
               "ArrayAdd(SavedIt,Id(GAnswerData));"          
           ]        
         },
@@ -9948,6 +9953,7 @@
           "Code":          
           [
               "Sound('Sound.SlotGet');",
+              "CanSellItem(IdToItem(SavedIt[i]),1);",
               "ReleaseItemFromScript(IdToItem(SavedIt[i]));",
               "ArrayDelete(SavedIt,GAnswerData);"          
           ]        
@@ -9955,8 +9961,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  680,
-          "Pos.y":  250,
+          "Pos.x":  600,
+          "Pos.y":  290,
           "Parent":  -1,
           "#":  729,
           "Code.Type":  "Turn",
@@ -9966,6 +9972,7 @@
               "    temp_dword_4 = ShipItems(Player(),i);",
               "    if(ItemType(temp_dword_4) == t_Hull) continue;",
               "    if(ItemInScript(temp_dword_4)) continue;",
+              "    if(EquipmentImageName(temp_dword_4) == 'ShuNukes_NukesWeight') continue;",
               "    InjectAnswer('ReturnAdd',Name(temp_dword_4),temp_dword_4);",
               "}",
               "for(i=0;ShipArts(Player())>i;i=i+1) {",
@@ -17531,13 +17538,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  719,
-      "End":  729,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  721,
       "End":  730,
       "Nom":  0,
@@ -17554,13 +17554,6 @@
       "Type":  "TGraphLink",
       "Begin":  728,
       "End":  730,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  727,
-      "End":  729,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -17596,6 +17589,27 @@
       "Type":  "TGraphLink",
       "Begin":  739,
       "End":  740,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  719,
+      "End":  722,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  722,
+      "End":  729,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  727,
+      "End":  722,
       "Nom":  0,
       "Arrow":  true    
     }  

@@ -170,6 +170,46 @@
           "#":  115,
           "Msg":  "",
           "AMsg.Num":  "15"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  600,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  118,
+          "Msg":  "Не, не сегодня, отбой",
+          "AMsg.Num":  "16"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  119,
+          "Msg":  "Ну, давай-ка поищем среди рейнджеров кого-нибудь...",
+          "AMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  740,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  125,
+          "Msg":  "",
+          "AMsg.Num":  "18"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  520,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  128,
+          "Msg":  "Ну, давай-ка поищем среди рейнджеров кого-нибудь...",
+          "AMsg.Num":  "19"        
         }      
       ],
       "DialogMessages":      
@@ -283,6 +323,36 @@
           "#":  114,
           "Msg":  "<tstr3>",
           "DMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  117,
+          "Msg":  "О, что, кто-то насыпал тебе перцу? Ну, ничего, мы тут можем подсобить.\r\n\r\nИтак, наши ребята могут прорваться в базы Коалиции и \"подправить\" информацию касательно некоторых персон в <clr>Рейнджерском Корпусе<clrEnd>.\r\n\r\nНо, конечно, не забывай, что тебе придётся расщедриться на рюмочку втыкиллы парням - примерно так <GalaxyMoney(3)> cr.",
+          "DMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  120,
+          "Msg":  "Итак, перед тобой - весь список участников Корпуса рейнджеров.\r\nВыбирай!",
+          "DMsg.Num":  "12"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  124,
+          "Msg":  "Отлично! Наши молодчики в кратчайшие сроки подредактируют информацию об этом индивидууме.\r\n\r\nНу а пока можешь выпить немного янвелба в нашем баре.",
+          "DMsg.Num":  "13"        
         }      
       ],
       "Dialogs":      
@@ -358,6 +428,22 @@
           "Pos.y":  560,
           "Parent":  -1,
           "#":  107        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Betrayal",
+          "Pos.x":  560,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  116        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Quarrel",
+          "Pos.x":  700,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  122        
         }      
       ],
       "Groups":      
@@ -470,9 +556,10 @@
               "    if(StarRuins(cur_star, 'SB')) TotalSBCount = TotalSBCount + 1;",
               "    else if(StarRuins(cur_star, 'WB')) TotalWBCount = TotalWBCount + 1;",
               "    else if(StarRuins(cur_star, 'CB')) TotalCBCount = TotalCBCount + 1;",
+              "    else if(StarRuins(cur_star, 'PB')) ShipAddCustomShipInfo(StarRuins(cur_star, 'PB'),'PBRaiseRank','NoShow');",
               "",
               "    /*for(j=0;StarShips(cur_star)>j;j=j+1) {",
-              "        if(ShipType(cur_star,j) == 'CB') ",
+              "        if(ShipType(StarShips(cur_star,j)) == 'CB') ShipType(StarShips(cur_star,j),'CB_licensed');",
               "    }*/",
               "}"          
           ]        
@@ -497,6 +584,7 @@
               "            AddDialogInject('coalship_count', '', \"Предоставьте мне полную информацию о численности коалиционного флота\", 1);",
               "            AddDialogInject('BuyNewMM', CT('FormRuins.CB.TakeNod.CBOffer'), CT('FormRuins.CB.TakeNod.PlayerRequest'), 1);",
               "            AddDialogInject('SellMM', \"Ну а если у тебя трюм полнится от микромодулей, то мы готовы обменять их на пригоршню нодов\", \"Обменять микромодули на ноды\", 1);",
+              "            AddDialogInject('Betrayal',\"И если кто-то тебе изрядно насолил, то мы можем помочь насолить ему.\",\"Я бы хотел подпортить кому-нибудь жизнь...\",1);",
               "",
               "            //Делаем проверку, остались ли ещё в Галактике ЦР для проведения DDoS атаки",
               "            temp_int = 0;",
@@ -1138,7 +1226,8 @@
               "    if(GalaxyEventDate(i) < CurTurn()) break;",
               "    temp_str = GalaxyEventType(i);",
               "",
-              "    //Была построена/уничтожена ВБ, либо доминион, обновляем счётчики",
+              "    //Была построена/уничтожена ВБ, либо доминион, либо НБ - обновляем счётчики",
+              "    //На ПБ вешаем инфошку для фикса",
               "    if(temp_str == 'RuinsCreated')",
               "    {",
               "        if(GalaxyEventData(i, 0) == t_SB)",
@@ -1152,6 +1241,13 @@
               "        else if(GalaxyEventData(i, 0) == t_CB)",
               "        {",
               "            if(GalaxyEventsTextData(i, 1) == '') TotalCBCount = TotalCBCount + 1;",
+              "            /*ShipType(StarShips(cur_star,j),'CB_licensed');*/",
+              "        }",
+              "        else if(GalaxyEventData(i, 0) == t_PB)",
+              "        {",
+              "            SFT(GalaxyEventsTextData(i,0));",
+              "            SFT(GalaxyEventData(i,1));",
+              "            ShipAddCustomShipInfo(IdToShip(GalaxyEventData(i,1)),'PBRaiseRank','NoShow');",
               "        }",
               "    }",
               "    else if(temp_str == 'RuinsDestroyed')",
@@ -1404,6 +1500,43 @@
               "}",
               "else ArrayAdd(tarr1, 0);"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  640,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  121,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "for(i=0;GalaxyStars()>i;i=i+1) {",
+              "    for(j=0;StarShips(GalaxyStar(i))>j;j=j+1) {",
+              "        temp_dword = StarShips(GalaxyStar(i),j);",
+              "        if(!ShipOnSidePirateClan(temp_dword)) continue;",
+              "        if(ShipType(temp_dword) != 'FemRanger' && ShipType(temp_dword) != 'Ranger' && ShipType(temp_dword) != 'RangerExplorer') continue;",
+              "        InjectAnswer('Quarrel',Name(temp_dword),temp_dword);",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  700,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  123,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player(),ShipMoney(Player())-GalaxyMoney(3));",
+              "Sound('Sound.Buy');",
+              "",
+              "ChangeGlobalRelationsPlanets(GAnswerData,0,0,0,159);",
+              "ChangeGlobalRelationsShips(GAnswerData,0,0,0,1+2+4+8+16+32,159);"          
+          ]        
         }      
       ],
       "Planets":      
@@ -1598,6 +1731,32 @@
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  520,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  126,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) < GalaxyMoney(3)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  127,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= GalaxyMoney(3)"          
           ]        
         }      
       ],
@@ -2564,9 +2723,93 @@
       "End":  115,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  116,
+      "End":  117,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  117,
+      "End":  118,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  119,
+      "End":  120,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  120,
+      "End":  118,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  120,
+      "End":  121,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  122,
+      "End":  123,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  123,
+      "End":  124,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  124,
+      "End":  125,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  117,
+      "End":  127,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  127,
+      "End":  119,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  117,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  126,
+      "End":  128,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  46,
+  "BlockPar.EC.Total.Strings":  53,
   "BlockPar.EC":  
   [
     {
@@ -2752,6 +2995,34 @@
     {
       "#":  "258",
       "String":  ""    
+    },
+    {
+      "#":  "259",
+      "String":  "Я бы хотел подпортить кому-нибудь жизнь..."    
+    },
+    {
+      "#":  "260",
+      "String":  "И если кто-то тебе изрядно насолил, то мы можем помочь насолить ему."    
+    },
+    {
+      "#":  "261",
+      "String":  "О, что, кто-то насыпал тебе перцу? Ну, ничего, мы тут можем подсобить.<br><br>Итак, наши ребята могут прорваться в базы Коалиции и \"подправить\" информацию касательно некоторых персон в <clr>Рейнджерском Корпусе<clrEnd>.<br><br>Но, конечно, не забывай, что тебе придётся расщедриться на рюмочку втыкиллы парням - примерно так <0> cr."    
+    },
+    {
+      "#":  "262",
+      "String":  "Итак, перед тобой - весь список участников Корпуса рейнджеров.<br>Выбирай!"    
+    },
+    {
+      "#":  "263",
+      "String":  "Отлично! Наши молодчики в кратчайшие сроки подредактируют информацию об этом индивидууме.<br><br>Ну а пока можешь выпить немного янвелба в нашем баре."    
+    },
+    {
+      "#":  "264",
+      "String":  "Не, не сегодня, отбой"    
+    },
+    {
+      "#":  "265",
+      "String":  "Ну, давай-ка поищем среди рейнджеров кого-нибудь..."    
     }  
   ]
 }

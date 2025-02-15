@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  277,
-  "ViewPos.y":  399,
+  "ViewPos.x":  -176,
+  "ViewPos.y":  436,
   "ScriptName":  "Mod_ExpBK",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -980,6 +980,16 @@
           "#":  445,
           "Msg":  "Пожалуй, на сегодня хватит",
           "AMsg.Num":  "96"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -180,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  457,
+          "Msg":  "Ну, ладно",
+          "AMsg.Num":  "97"        
         }      
       ],
       "DialogMessages":      
@@ -1663,6 +1673,36 @@
           "#":  443,
           "Msg":  "Отлично! Техники уже завершили работы. Принимайте! Всё как будто вчера с конвейера сошло.\r\n\r\nХотите ещё раз воспользоваться услугами мастеров?",
           "DMsg.Num":  "67"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  456,
+          "Msg":  "<tstr1>",
+          "DMsg.Num":  "68"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -90,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  458,
+          "Msg":  "",
+          "DMsg.Num":  "69"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -260,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  459,
+          "Msg":  "",
+          "DMsg.Num":  "70"        
         }      
       ],
       "Dialogs":      
@@ -1906,6 +1946,22 @@
           "Pos.y":  740,
           "Parent":  -1,
           "#":  439        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "FromDeposit",
+          "Pos.x":  -90,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  446        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "ToDeposit",
+          "Pos.x":  -240,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  447        
         }      
       ],
       "Groups":      
@@ -2060,7 +2116,8 @@
               "            for(i = PlanetNews() - 1; i > cnt; i = i - 1)",
               "            {",
               "                if(PlanetNewsDate(i) < last_trade_news_upd) continue;",
-              "                if(PlanetNewsType(i) < 6 && PlanetNewsType(i) > 17 && PlanetNewsType(i) != 53 && PlanetNewsType(i) != 69 && PlanetNewsType(i) != 70) continue;",
+              "                if(PlanetNewsType(i) < 6) continue;",
+              "                if(PlanetNewsType(i) > 17 && PlanetNewsType(i) != 53 && PlanetNewsType(i) != 69 && PlanetNewsType(i) != 70) continue;",
               "",
               "                temp_int = temp_int + 1;",
               "                temp_str = temp_str + '<clr>' + GameDateTxtByTurn(PlanetNewsDate(i)) + '<clrEnd>' + \"<br>\" + '<clrEnd>' + PlanetNewsText(i) + '<clr>' + \"<br>\" + ' ' + \"<br>\";",
@@ -2160,10 +2217,16 @@
               "            AddDialogBlock('Я желаю поучаствовать в развитии вашей базы',1); //Ибо доверия к такому чуваку ноль, а то ещё продаст шмот базы для оплаты кредита",
               "        }",
               "        AddDialogInject('CreditsInfo', '', \"К другим услугам\", 5);",
-              "        //Так как разделять новые и старые инвестиции - плохо...",
-              "        //AddDialogBlock(CT('FormRuins.BK.Investment.PlayerSend'),2);",
-              "        //AddDialogInject('Investitions','',CT('FormRuins.BK.Investment.PlayerSend'),0);",
-              "        //А потом я понял, что я устал я мухожук",
+              "",
+              "        //Переработка депозита",
+              "        /*if(!PlayerDeposit()) {",
+              "            AddDialogBlock(CT('FormRuins.BK.Deposit.PlayerSend'),2);",
+              "            AddDialogInject('ToDeposit', '', CT('FormRuins.BK.Deposit.PlayerSendMod'), 6);",
+              "        }",
+              "        else {",
+              "            AddDialogBlock(CT('FormRuins.BK.RetDeposit.PlayerSend'),2);",
+              "            AddDialogInject('ToDeposit', '', Format(CT('FormRuins.BK.RetDeposit.PlayerSendMod'),'<Money>',g_DepositPercentCalc()+PlayerDeposit()), 6);",
+              "        }*/",
               "",
               "        //temp_int_3  == -1 - у игрока есть действующая, ещё не истекающая торговая лицензия",
               "        //temp_int_3  ==  1 - торговая лицензия истечёт через три месяца",
@@ -2913,6 +2976,8 @@
               "else if(GetGameOptions('FontDialog') == '2') tstr1 = Format('<td=156'+'>') + tstr1 + Format('<td=267'+'>') + tstr2 + Format('<br>');",
               "else /*if(GetGameOptions('FontDialog') == '3')*/ tstr1 = Format('<td=156'+'>') + tstr1 + Format('<td=269'+'>') + tstr2 + Format('<br>');",
               "",
+              "cur_ruin = GetShipRuins(Player());",
+              "",
               "for(i = 0; i <= t_Narcotics; i = i + 1)",
               "{",
               "    temp_int = GoodsAdd(cur_store, i, 0);",
@@ -3017,6 +3082,7 @@
           "Code":          
           [
               "type = GAnswerData;",
+              "cur_ruin = GetShipRuins(Player());",
               "",
               "buy_count = GoodsAdd(cur_store, type - 1, 0) + 1;",
               "buy_count = min(GoodsAdd(cur_store, type - 1, 0), buy_count);",
@@ -3495,6 +3561,7 @@
           [
               "if(buy_count)",
               "{",
+              "    cur_ruin = GetShipRuins(Player());",
               "    if(ShipType(cur_ruin) == 'BK') buy_day_equip = CurTurn() + 3;",
               "    else buy_day_equip = CurTurn() + 5;",
               "",
@@ -3638,12 +3705,11 @@
           [
               "temp_dword = NumberBox('Bm.Items.2Minerals',\"Выберите сумму выплаты\",1,PlayerDebt(),ShipMoney(Player()));",
               "if(temp_dword > 0) {",
+              "    ShipMoney(Player(),ShipMoney(Player()) - temp_dword);",
               "    PlayerDebt(PlayerDebt() - temp_dword);",
-              "    if(round(PlayerDebt() / temp_dword) > 1) PlayerDebtDate(PlayerDebtDate() + round(PlayerDebt() / temp_dword) * 3);",
-              "    AddDialogInject('CreditsInfo',\"Отлично, выплата произведена! В соответствии с размером выпплаты произведён перерасчёт крайнего срока выплаты кредита\",\"На главную\",0);",
+              "    MessageBox(\"Отлично, выплата произведена! В соответствии с размером выпплаты произведён перерасчёт крайнего срока выплаты кредита\");",
               "    if(temp_dword > GalaxyMoney(1)) PlayerDebtCnt(0);",
-              "}",
-              "else AddDialogInject('CreditsInfo','',\"На главную\",0);"          
+              "}"          
           ]        
         },
         {
@@ -3900,7 +3966,7 @@
               "temp_dword = NumberBox('Bm.Items.2Minerals','Выберите сумму для внесения на счёт',1,temp_int_4);",
               "if(temp_dword > 0) {",
               "    ShipMoney(Player(),ShipMoney(Player()) - temp_dword);",
-              "    UselessItemData(IdToItem(CardID),1,UselessItemData(IdToItem(CardID),1) + temp_dword);",
+              "    UselessItemData(IdToItem(CardID),1,UselessItemData(IdToItem(CardID),1) - temp_dword);",
               "    temp_int_4 = temp_int_4 - temp_dword;",
               "    Sound('Sound.Buy');",
               "}"          
@@ -4115,7 +4181,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(ArrayDim(PlanetsArr) < 2) {",
+              "//if(ArrayDim(PlanetsArr) < 2) {",
               "    ArrayClear(PlanetsArr);",
               "    ArrayDelete(PlanetsArr,0);",
               "    for(i=0;GalaxyStars()>i;i=i+1) {",
@@ -4127,7 +4193,7 @@
               "            ArrayAdd(PlanetsArr,Id(StarPlanets(tdwd3,j)));",
               "        }",
               "    }",
-              "}",
+              "//}",
               "",
               "if(ArrayDim(PlanetsArr) > 1) {",
               "    if(ArrayDim(PlanetsArr) >= 5) {",
@@ -4322,7 +4388,7 @@
               "        for(i=0;5>i;i=i+1) {",
               "            ArrayRandomize(50,EconomicsArr);",
               "            tdwd3 = IdToPlanet(EconomicsArr[i]);",
-              "            if(GalaxyMoney(4,4)*10 <= ShipMoney(Player())) InjectAnswer('PlanetChoosed',Format(\"Вложиться в экономику планеты plan\",'plan',Name(tdwd3)),tdwd3);",
+              "            if(GalaxyMoney(4,4)*10 <= ShipMoney(Player())) InjectAnswer('Invest',Format(\"Вложиться в экономику планеты plan\",'plan',Name(tdwd3)),tdwd3);",
               "            //else InjectAnswer('PlanetChoosed',Format(\"Вложиться в экономику планеты plan\",'plan',Name(IdToPlanet(EconomicsArr[i-1]))),EconomicsArr[i-1],'block');",
               "        }",
               "    }",
@@ -4330,7 +4396,8 @@
               "        tint1 = ArrayDim(EconomicsArr) - 1;",
               "        for(i=0;tint1>i;i=i+1) {",
               "            ArrayRandomize(150,EconomicsArr);",
-              "            if(GalaxyMoney(4,4)*10 <= ShipMoney(Player())) InjectAnswer('PlanetChoosed',Format(\"Вложиться в экономику планеты plan\",'plan',Name(tdwd3)),tdwd3);",
+              "            tdwd3 = IdToPlanet(EconomicsArr[i]);",
+              "            if(GalaxyMoney(4,4)*10 <= ShipMoney(Player())) InjectAnswer('Invest',Format(\"Вложиться в экономику планеты plan\",'plan',Name(tdwd3)),tdwd3);",
               "            //else InjectAnswer('PlanetChoosed',Format(\"Вложиться в экономику планеты plan\",'plan',Name(IdToPlanet(EconomicsArr[i-1]))),EconomicsArr[i-1],'block');",
               "        }",
               "    }",
@@ -4350,7 +4417,7 @@
               "Sound('Sound.Buy');",
               "ShipMoney(Player(),ShipMoney(Player())-(GalaxyMoney(4,4)*30));",
               "PlanetEco(GAnswerData,PlanetEco(GAnswerData)+1);",
-              "AddPlanetNews(Format(\"Новый виток индустриализации охватил планету plan. Внешние инвестиции позволили местному правительству возвести несколько новых промышленных комплексов и перевести экономику на новый лад.\",'plan',Name(IdToPlanet(GAnswerData))),94);",
+              "AddPlanetNews(Format(\"Новый виток индустриализации охватил планету plan. Внешние инвестиции позволили местному правительству возвести несколько новых промышленных комплексов и перевести экономику на новый лад.\",'plan',Name(GAnswerData)),94);",
               "ArrayClear(EconomicsArr);",
               "EconomicsCD = Rnd(100,150);"          
           ]        
@@ -4437,7 +4504,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tint1 = GalaxyMoney(1,4);"          
+              "tint1 = GalaxyMoney(1,0);"          
           ]        
         },
         {
@@ -4450,7 +4517,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "temp_dword = CountBox('Bm.Items.2FuelTanks14s',\"Выберите время, на которое хотите увеличить срок действия страховки\",0,300,tint1,1,301,301,ShipMoney(Player()),100);"          
+              "temp_dword = CountBox('Bm.Items.2FuelTanks14s',\"Выберите время увеличения срока страховки\",0,300,tint1,1,301,301,ShipMoney(Player()),100);"          
           ]        
         },
         {
@@ -4579,6 +4646,32 @@
               "Sound('Sound.Repair');",
               "if(!ShipEqInSlot(Player(),t_Artefact,GAnswerData)) exit;",
               "ItemDurability(ShipEqInSlot(Player(),t_Artefact,GAnswerData),100);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -210,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  451,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr1 = CT('FormRuins.BK.DebtNoAccess');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -150,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  455,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr1 = CT('FormRuins.BK.RetDeposit.War');"          
           ]        
         }      
       ],
@@ -5723,6 +5816,84 @@
           "Code":          
           [
               "temp_dword > 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -260,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  448,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!PlayerDebtCnt()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -210,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  449,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PlayerDebtCnt()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -90,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  450,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!PlayerDebtCnt()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -150,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  452,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "StarBattle(GetShipRuins(Player()))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -260,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  453,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!StarBattle(GetShipRuins(Player()))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -90,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  454,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!StarBattle(GetShipRuins(Player()))"          
           ]        
         }      
       ],
@@ -9303,6 +9474,118 @@
       "End":  442,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  449,
+      "End":  451,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  450,
+      "End":  454,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  450,
+      "End":  452,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  448,
+      "End":  452,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  448,
+      "End":  453,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  452,
+      "End":  455,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  451,
+      "End":  456,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  455,
+      "End":  456,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  456,
+      "End":  457,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  446,
+      "End":  450,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  446,
+      "End":  449,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  447,
+      "End":  449,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  447,
+      "End":  448,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  454,
+      "End":  458,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  453,
+      "End":  459,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  229,
+      "End":  222,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -10074,10 +10357,6 @@
       "String":  "Оформить продление"    
     },
     {
-      "#":  "313",
-      "String":  "Выберите время, на которое хотите увеличить срок действия страховки"    
-    },
-    {
       "#":  "314",
       "String":  "Давайте починим что-нибудь ещё!"    
     },
@@ -10146,10 +10425,6 @@
       "String":  "Малоки"    
     },
     {
-      "#":  "330",
-      "String":  "На главную"    
-    },
-    {
       "#":  "331",
       "String":  "Отлично, выплата произведена! В соответствии с размером выпплаты произведён перерасчёт крайнего срока выплаты кредита"    
     },
@@ -10188,6 +10463,14 @@
     {
       "#":  "340",
       "String":  "Отлично! Ура!"    
+    },
+    {
+      "#":  "341",
+      "String":  "Выберите время увеличения срока страховки"    
+    },
+    {
+      "#":  "342",
+      "String":  "Ну, ладно"    
     },
     {
       "#":  "44",

@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1340,
-  "ViewPos.y":  -155,
+  "ViewPos.x":  -355,
+  "ViewPos.y":  240,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -2495,7 +2495,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  190,
-          "Pos.y":  1460,
+          "Pos.y":  1540,
           "Parent":  -1,
           "#":  704,
           "Msg":  "Ввести имя корабля",
@@ -2505,7 +2505,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  230,
-          "Pos.y":  1420,
+          "Pos.y":  1500,
           "Parent":  -1,
           "#":  705,
           "Msg":  "Найти конкретный корабль",
@@ -2515,7 +2515,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  270,
-          "Pos.y":  1460,
+          "Pos.y":  1540,
           "Parent":  -1,
           "#":  707,
           "Msg":  "В текущей",
@@ -2525,7 +2525,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "",
           "Pos.x":  310,
-          "Pos.y":  1420,
+          "Pos.y":  1500,
           "Parent":  -1,
           "#":  708,
           "Msg":  "В другой",
@@ -2535,7 +2535,7 @@
           "Type":  "TDialogAnswer",
           "Name":  "restart",
           "Pos.x":  310,
-          "Pos.y":  1460,
+          "Pos.y":  1540,
           "Parent":  -1,
           "#":  711,
           "Msg":  "Вернуться на главную",
@@ -2630,6 +2630,106 @@
           "#":  750,
           "Msg":  "Ввести имя корабля",
           "AMsg.Num":  "261"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  1260,
+          "Parent":  -1,
+          "#":  757,
+          "Msg":  "Выбрать корабль",
+          "AMsg.Num":  "262"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  230,
+          "Pos.y":  1220,
+          "Parent":  -1,
+          "#":  761,
+          "Msg":  "Вернуться на главную",
+          "AMsg.Num":  "263"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  1300,
+          "Parent":  -1,
+          "#":  764,
+          "Msg":  "Пока ничего",
+          "AMsg.Num":  "264"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  1380,
+          "Parent":  -1,
+          "#":  765,
+          "Msg":  "Переместить в координаты игрока",
+          "AMsg.Num":  "265"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  1420,
+          "Parent":  -1,
+          "#":  766,
+          "Msg":  "Переместить в какую-то систему",
+          "AMsg.Num":  "266"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  1340,
+          "Parent":  -1,
+          "#":  767,
+          "Msg":  "Переместить в координаты игрока со смещением",
+          "AMsg.Num":  "267"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  860,
+          "Parent":  -1,
+          "#":  776,
+          "Msg":  "Получить камуфляжи всех серий",
+          "AMsg.Num":  "268"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  860,
+          "Parent":  -1,
+          "#":  780,
+          "Msg":  "Медали",
+          "AMsg.Num":  "269"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  940,
+          "Parent":  -1,
+          "#":  782,
+          "Msg":  "Конкретную (номер)",
+          "AMsg.Num":  "270"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  940,
+          "Parent":  -1,
+          "#":  783,
+          "Msg":  "Случайную (деление по причине награждения)",
+          "AMsg.Num":  "271"        
         }      
       ],
       "DialogMessages":      
@@ -3088,7 +3188,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  190,
-          "Pos.y":  1420,
+          "Pos.y":  1500,
           "Parent":  -1,
           "#":  703,
           "Msg":  "Для уничтожения корабля можете ввести его имя или выбрать корабль, находящийся в этой системе\r\n\r\nЕсли корабль уже собирается \"отдать концы\", то он не будет присутствовать в данном списке\r\n\r\nВы можете попытаться таким же образом уничтожить боссов и скриптовых персонажей. За последствия такого уничтожения автор модификации ответственности <color=220,20,20>НЕ НЕСЁТ</color> и сломанные скрипты чинить <color=220,20,20>не будет</color> (потому что моды не рассчитаны под такое топорное вмешательство)",
@@ -3098,7 +3198,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  270,
-          "Pos.y":  1420,
+          "Pos.y":  1500,
           "Parent":  -1,
           "#":  706,
           "Msg":  "В какой системе будем искать?",
@@ -3108,7 +3208,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  270,
-          "Pos.y":  1500,
+          "Pos.y":  1580,
           "Parent":  -1,
           "#":  710,
           "Msg":  "Выберите корабль",
@@ -3117,8 +3217,8 @@
         {
           "Type":  "TDialogMsg",
           "Name":  "",
-          "Pos.x":  350,
-          "Pos.y":  1420,
+          "Pos.x":  390,
+          "Pos.y":  1500,
           "Parent":  -1,
           "#":  712,
           "Msg":  "Выберите систему",
@@ -3128,7 +3228,7 @@
           "Type":  "TDialogMsg",
           "Name":  "",
           "Pos.x":  270,
-          "Pos.y":  1580,
+          "Pos.y":  1660,
           "Parent":  -1,
           "#":  720,
           "Msg":  "Выберите корабль",
@@ -3163,6 +3263,56 @@
           "#":  741,
           "Msg":  "Итак, какой корабль назначить?",
           "DMsg.Num":  "52"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  1220,
+          "Parent":  -1,
+          "#":  756,
+          "Msg":  "Для того, чтобы перенести корабль, введите его имя",
+          "DMsg.Num":  "53"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  1380,
+          "Parent":  -1,
+          "#":  762,
+          "Msg":  "Корабль обнаружен\r\n\r\nЧто с ним нужно сделать?",
+          "DMsg.Num":  "54"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  1260,
+          "Parent":  -1,
+          "#":  763,
+          "Msg":  "К сожалению, корабль с таким именем не был найден",
+          "DMsg.Num":  "55"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  1420,
+          "Parent":  -1,
+          "#":  768,
+          "Msg":  "Выберите систему",
+          "DMsg.Num":  "56"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  900,
+          "Parent":  -1,
+          "#":  781,
+          "Msg":  "Какую именно?",
+          "DMsg.Num":  "57"        
         }      
       ],
       "Dialogs":      
@@ -3275,7 +3425,7 @@
           "Type":  "TDialog",
           "Name":  "DialogKill",
           "Pos.x":  190,
-          "Pos.y":  1380,
+          "Pos.y":  1460,
           "Parent":  -1,
           "#":  655        
         },
@@ -3299,7 +3449,7 @@
           "Type":  "TDialog",
           "Name":  "ChooseStarForKill",
           "Pos.x":  310,
-          "Pos.y":  1580,
+          "Pos.y":  1660,
           "Parent":  -1,
           "#":  716        
         },
@@ -3318,6 +3468,22 @@
           "Pos.y":  990,
           "Parent":  -1,
           "#":  723        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogTeleport",
+          "Pos.x":  190,
+          "Pos.y":  1180,
+          "Parent":  -1,
+          "#":  755        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "ChooseStarForTeleport",
+          "Pos.x":  150,
+          "Pos.y":  1140,
+          "Parent":  -1,
+          "#":  774        
         }      
       ],
       "Groups":      
@@ -3670,7 +3836,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "for(temp_int=t_ArtefactHull;temp_int<=t_Hull;temp_int=temp_int+1) {",
               "    temp_gift=CreateArt(temp_int,tint3);",
               "    AddItemToShip(Player(),temp_gift);",
@@ -3789,7 +3955,7 @@
           [
               "temp_size=CountBox('Bm.Items.2FuelTanks14s',\"Размер\",5,500);",
               "tint2 = CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8);",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");"          
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");"          
           ]        
         },
         {
@@ -3833,7 +3999,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('Mabokit',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);"          
           ]        
@@ -4043,7 +4209,7 @@
           "Code":          
           [
               "ShipRepairEq(Player());",
-              "Sound('Sound.Buy');"          
+              "Sound('Sound.Repair');"          
           ]        
         },
         {
@@ -4057,6 +4223,7 @@
           "Code":          
           [
               "InjectAnswer('DialogKill', \"Создание кораблей\" + ' ' + \"(раздел запросов)\", 50);",
+              "InjectAnswer('DialogTeleport', \"Перенос кораблей\" + ' ' + \"(раздел запросов)\", 89);",
               "InjectAnswer('DialogEquip', \"Манипуляции с оборудованием на борту игрока\" + ' ' + \"(раздел запросов)\", 90);",
               "InjectAnswer('DialogNPC', \"Создание кораблей\" + ' ' + \"(раздел запросов)\", 91);",
               "InjectAnswer('DialogGelio', \"Изменение гелиополитической обстановки\" + ' ' + \"(раздел запросов)\", 92);",
@@ -4081,7 +4248,7 @@
           "Code":          
           [
               "hull_name=FindBonusByCustomTag('ExpScienceRanks_TickSpeedMode');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "tint2 = CountBox('Bm.Items.2FuelTanks14s',\"Размер\",1,5000);",
               "tint = CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8);",
               "temp_gift=CreateHull(9,tint2,tint,tint3);",
@@ -4122,7 +4289,7 @@
               "",
               "//Создаём и настраиваем физган как предмет",
               "weapon = CreateCustomWeapon('PhysGun', 1, 1, 0);",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "ItemOwner(weapon, tint3);",
               "ItemSize(weapon, 84 - Rnd(5, 8) * GalaxyTechLevel());",
               "ItemLevel(weapon, GalaxyTechLevel());",
@@ -4172,7 +4339,7 @@
           [
               "hull_name=FindBonusByName(CT('MicroModuls.490.Name'));",
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "tint2 = CountBox('Bm.Items.2FuelTanks14s',\"Размер\",1,5000);",
               "tint = CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8);",
               "temp_gift=CreateHull(9,tint2,tint,tint3);",
@@ -4248,7 +4415,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_dword=CreateCustomArt('galo',Rnd(5,10),Rnd(2000,8000)*GalaxyTechLevel(),tint3);",
               "CustomArtData(temp_dword,1,Rnd(20,90));",
               "AddItemToShip(Player(),temp_dword);"          
@@ -4264,7 +4431,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "temp_dword=CreateCustomArt('blinker',Rnd(5,10),Rnd(2000,8000)*GalaxyTechLevel(),tunt3);",
+              "temp_dword=CreateCustomArt('blinker',Rnd(5,10),Rnd(2000,8000)*GalaxyTechLevel(),tint3);",
               "CustomArtData(temp_dword,1,Rnd(20,90));",
               "AddItemToShip(Player(),temp_dword);"          
           ]        
@@ -4634,22 +4801,37 @@
               "//Выдаём прочую крутую оборудку",
               "if(ShipWeapon(Player(),1))FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),ShipWeapon(Player(),1))));",
               "temp_gift=CreateEquipment(t_Weapon14,1,8,Gaal);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,0)+50000,0);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,1)+10000,1);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,2)+1000,2);",
               "AddItemToShip(Player(),temp_gift);",
               "ItemIsInUse(temp_gift,Player(),1,1);",
               "if(ShipWeapon(Player(),2))FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),ShipWeapon(Player(),2))));",
               "temp_gift=CreateEquipment(t_Weapon14,1,8,Gaal);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,0)+50000,0);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,1)+10000,1);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,2)+1000,2);",
               "AddItemToShip(Player(),temp_gift);",
               "ItemIsInUse(temp_gift,Player(),1,2);",
               "if(ShipWeapon(Player(),3))FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),ShipWeapon(Player(),3))));",
               "temp_gift=CreateEquipment(t_Weapon14,1,8,Gaal);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,0)+50000,0);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,1)+10000,1);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,2)+1000,2);",
               "AddItemToShip(Player(),temp_gift);",
               "ItemIsInUse(temp_gift,Player(),1,3);",
               "if(ShipWeapon(Player(),4))FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),ShipWeapon(Player(),4))));",
               "temp_gift=CreateEquipment(t_Weapon14,1,8,Gaal);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,0)+50000,0);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,1)+10000,1);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,2)+1000,2);",
               "AddItemToShip(Player(),temp_gift);",
               "ItemIsInUse(temp_gift,Player(),1,4);",
               "if(ShipWeapon(Player(),5))FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),ShipWeapon(Player(),5))));",
               "temp_gift=CreateEquipment(t_Weapon14,1,8,Gaal);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,0)+50000,0);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,1)+10000,1);",
+              "SetEquipmentStats(temp_gift,GetEquipmentStats(temp_gift,2)+1000,2);",
               "AddItemToShip(Player(),temp_gift);",
               "ItemIsInUse(temp_gift,Player(),1,5);",
               "temp_gift=CreateEquipment(t_RepairRobot,1,8,Gaal);",
@@ -4680,8 +4862,8 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
-              "str=CT('Artefacts.CustomArtefacts.Booster.Size');",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tstr=CT('Artefacts.CustomArtefacts.Booster.Size');",
               "tint=tstr;",
               "tint=tint+Rnd(-4,4);",
               "tdwd=CreateCustomArt('Booster',tint,1000,tint3);",
@@ -4867,23 +5049,23 @@
               "if(tint == 6) {",
               "    for(i=0;i<7;i=i+1){",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+0+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+1+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+2+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+3+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+4+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+5+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        AddTrionAcryn(temp_dword);",
               "    }",
               "}",
               "else if (~tint) {",
               "    for(i=0;i<7;i=i+1){",
-              "        temp_dword = AddItemToShip(Player(),CreateEquipmentWithSpecial(FindBonusByCustomTag('Fakrin_'+tint+'_'+i),temp_size,tint2));",
-              "        ItemLevel(temp_dword,tint2);",
+              "        temp_dword = AddItemToShip(Player(),CreateEquipment(t_DefGenerator+i,temp_size,tint2,tint));",
+              "        AddTrionAcryn(temp_dword);",
               "    }",
               "}",
               "Sound('Sound.Buy');"          
@@ -5138,7 +5320,7 @@
               "if(weap5) {",
               "    if(GetEquipmentStats(weap5,3) == 2) WeaponAmmunition(weap5,WeaponMaxAmmunition(weap5));",
               "}",
-              "Sound('Sound.Buy');"          
+              "Sound('Sound.Repair');"          
           ]        
         },
         {
@@ -5498,14 +5680,24 @@
           "Code":          
           [
               "dword module, bonus;",
-              "bonus=FindBonusByName(temp_str);",
-              "if (bonus!=-1) {",
+              "bonus=FindBonusByNameInCfg(temp_str);",
+              "if (~bonus) {",
               "    module=CreateMM(bonus);",
               "    AddItemToShip(Player(),module);",
               "    Sound('Sound.Buy');",
               "}",
-              "else MessageBox(\"Микромодуль не найден. Проверьте правильность написания названия микромодуля и то, подключён ли мод с таким микромодулем\");",
-              "Sound('Sound.UserMsgAdd');"          
+              "else {",
+              "    bonus=FindBonusByName(temp_str);",
+              "    if (~bonus) {",
+              "        module=CreateMM(bonus);",
+              "        AddItemToShip(Player(),module);",
+              "        Sound('Sound.Buy');",
+              "    }",
+              "    else {",
+              "        MessageBox(\"Микромодуль не найден. Проверьте правильность написания названия микромодуля и то, подключён ли мод с таким микромодулем\");",
+              "        Sound('Sound.UserMsgAdd');",
+              "    }",
+              "}"          
           ]        
         },
         {
@@ -5522,8 +5714,10 @@
               "    HullSeries(ShipItems(Player(),0),FindSeriesByName(temp_str));",
               "    Sound('Sound.Buy');",
               "}",
-              "else MessageBox(\"Серия не найдена. Проверьте правильность написания названия серии и то, подключён ли мод с такой серией\");",
-              "Sound('Sound.UserMsgAdd');"          
+              "else {",
+              "    MessageBox(\"Серия не найдена. Проверьте правильность написания названия серии и то, подключён ли мод с такой серией\");",
+              "    Sound('Sound.UserMsgAdd');",
+              "}"          
           ]        
         },
         {
@@ -5536,14 +5730,24 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "dword bonus=FindBonusByName(temp_str);",
+              "dword bonus=FindBonusByNameInCfg(temp_str);",
               "if(~bonus) {",
               "    SpecialToEquipment(bonus,ShipEqInSlot(Player(),t_Hull));",
               "    Chameleon(Player());",
               "    Sound('Sound.Buy');",
               "}",
-              "else MessageBox(\"Акрин не найден. Проверьте правильность написания названия акрина и то, подключён ли мод с таким акрином\");",
-              "Sound('Sound.UserMsgAdd');"          
+              "else {",
+              "    bonus=FindBonusByName(temp_str);",
+              "    if(~bonus) {",
+              "        SpecialToEquipment(bonus,ShipEqInSlot(Player(),t_Hull));",
+              "        Chameleon(Player());",
+              "        Sound('Sound.Buy');",
+              "    }",
+              "    else {",
+              "        MessageBox(\"Акрин не найден. Проверьте правильность написания названия акрина и то, подключён ли мод с таким акрином\");",
+              "        Sound('Sound.UserMsgAdd');",
+              "    }",
+              "}"          
           ]        
         },
         {
@@ -5571,7 +5775,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('PlasmaGun',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);"          
           ]        
@@ -5615,7 +5819,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('frag_gun',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);",
               "temp_gift=CreateCustomWeapon('gaal_vision',temp_size,tint,tint3);",
@@ -5659,7 +5863,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('GluonEmitter',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);",
               "temp_gift=CreateCustomWeapon('GluonTormentor',temp_size,tint,tint3);",
@@ -5698,7 +5902,7 @@
               "SetCustomWeaponDamageData(cur_item,CT('Items.Weapon.CustomWeapon.BBG_6174.MinDamage'),CT('Items.Weapon.CustomWeapon.BBG_6174.MaxDamage'),CT('Items.Weapon.CustomWeapon.BBG_6174.DamageSet'));",
               "SetCustomWeaponPrimaryData(cur_item,CT('Items.Weapon.CustomWeapon.BBG_6174.TechLevel'),t_Weapon12,t_Weapon16);",
               "SetCustomWeaponSizeAndCost(cur_item,CT('Items.Weapon.CustomWeapon.BBG_6174.kCost'),CT('Items.Weapon.CustomWeapon.BBG_6174.AverageSize'));",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "dword bbg = CreateCustomWeapon('BBG_6174',Rnd(1500,2000),8,tint3);",
               "ItemSize(bbg,temp_size);",
               "AddItemToShip(Player(),bbg);",
@@ -5744,7 +5948,7 @@
           "Code":          
           [
               "HullHP(Player(),'UpTo100');",
-              "Sound('Sound.Buy');"          
+              "Sound('Sound.Repair');"          
           ]        
         },
         {
@@ -5883,7 +6087,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('MeonPlasmathrower',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);"          
           ]        
@@ -6722,8 +6926,8 @@
               "temp_size=CountBox('Bm.Items.2FuelTanks14s',\"Размер\",5,500);",
               "tint = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите тип создаваемого орудия\",t_Weapon1,t_Weapon18,t_Weapon18,'',t_Weapon5,\"Промышленный лазер\",\"Осколочное орудие\",\"Лезка\",\"Ракетомёт\",\"Третон\",\"Волновой фазер\",\"Потоковый бластер\",\"Электронный резак\",\"Мультирезонатор\",\"Атомный визион\",\"Дезинтегратор\",\"Турбогравир\",\"ИМХО-9000\",\"Вертикс\",\"Торпедный аппарат\",\"Эсодафер\",\"Кафаситор\",\"Лирекрон\");",
               "tint2 = CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8);",
-              "u = NumberBox('Bm.Items.2FuelTanks14s',\"Количество\",1,20);",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "u = CountBox('Bm.Items.2FuelTanks14s',\"Количество\",1,20);",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "Sound('Sound.Buy');",
               "for(i=0;i<u;i=i+1) {",
               "    temp_gift=CreateEquipment(tint,temp_size,tint2,tint3);",
@@ -7043,7 +7247,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('ExzoShocker',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);",
               "temp_gift=CreateCustomWeapon('Multiplet',temp_size,tint,tint3);",
@@ -7087,7 +7291,7 @@
           "Code":          
           [
               "Sound('Sound.Buy');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "temp_gift=CreateCustomWeapon('palach',temp_size,tint,tint3);",
               "AddItemToShip(Player(),temp_gift);",
               "temp_gift=CreateCustomWeapon('tornado',temp_size,tint,tint3);",
@@ -7745,7 +7949,7 @@
           "Code":          
           [
               "hull_name=FindBonusByNameInCfg('ShuMM_TauhitHull');",
-              "tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
               "tint2 = CountBox('Bm.Items.2FuelTanks14s',\"Размер\",1,5000);",
               "tint = CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8);",
               "temp_gift=CreateHull(0,tint2,tint,tint3);",
@@ -7952,8 +8156,8 @@
               "    }",
               "}",
               "else if(tint == t_Weapon1) {",
-              "    tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Слот оружия\",1,8);",
-              "    if(!ShipEqInSlot(Player(),tint)) MessageBox(\"В слоте отсутствует оборудование, улучшение невозможно!\");",
+              "    tint3 = CountBox('Bm.Items.2FuelTanks14s',\"Слот оружия\",1,ShipSlots(Player()));",
+              "    if(!ShipEqInSlot(Player(),tint,tint3)) MessageBox(\"В слоте отсутствует оборудование, улучшение невозможно!\");",
               "    else {",
               "        ItemImprovement(ShipEqInSlot(Player(),tint,tint3),tint2);",
               "        Sound('Sound.Buy');",
@@ -7961,7 +8165,7 @@
               "",
               "}",
               "else {",
-              "    u = tint; //Я ленивец, минусы?",
+              "    u = tint2; //Я ленивец, минусы?",
               "    if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) ItemImprovement(ShipEqInSlot(Player(),t_Weapon1,1),u);",
               "    if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) ItemImprovement(ShipEqInSlot(Player(),t_Weapon1,2),u);",
               "    if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) ItemImprovement(ShipEqInSlot(Player(),t_Weapon1,3),u);",
@@ -8283,6 +8487,12 @@
               "tint=tint+Rnd(-4,4);",
               "tdwd=CreateCustomArt('Stimulyakr_Art',tint,1000,tint3);",
               "AddItemToShip(Player(),tdwd);",
+              "Sound('Sound.Buy');",
+              "tstr=CT('Artefacts.CustomArtefacts.Detsell_Art.Size');",
+              "tint=tstr;",
+              "tint=tint+Rnd(-4,4);",
+              "tdwd=CreateCustomArt('Detsell_Art',tint,1000,tint3);",
+              "AddItemToShip(Player(),tdwd);",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -8399,7 +8609,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  190,
-          "Pos.y":  1500,
+          "Pos.y":  1660,
           "Parent":  -1,
           "#":  709,
           "Code.Type":  "Turn",
@@ -8432,7 +8642,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  310,
-          "Pos.y":  1500,
+          "Pos.y":  1580,
           "Parent":  -1,
           "#":  713,
           "Code.Type":  "Turn",
@@ -8444,8 +8654,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  350,
-          "Pos.y":  1460,
+          "Pos.x":  390,
+          "Pos.y":  1540,
           "Parent":  -1,
           "#":  714,
           "Code.Type":  "Turn",
@@ -8461,7 +8671,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  270,
-          "Pos.y":  1540,
+          "Pos.y":  1620,
           "Parent":  -1,
           "#":  717,
           "Code.Type":  "Turn",
@@ -8474,7 +8684,7 @@
           "Type":  "Top",
           "Name":  "",
           "Pos.x":  310,
-          "Pos.y":  1540,
+          "Pos.y":  1620,
           "Parent":  -1,
           "#":  718,
           "Code.Type":  "Turn",
@@ -8743,7 +8953,44 @@
           [
               "tdwd=CountBox('Bm.Items.2FuelTanks14s',\"Назначьте бонус\",-1000,1000);",
               "",
-              "ShipSpecialBonuses(ship,int(tstr),tdwd);"          
+              "if(tstr == 'bonHull') tint = 0;",
+              "if(tstr == 'bonSpeed') tint = 2;",
+              "if(tstr == 'bonJump') tint = 3;",
+              "if(tstr == 'bonRadar') tint = 4;",
+              "if(tstr == 'bonScan') tint = 5;",
+              "if(tstr == 'bonDroid') tint = 6;",
+              "if(tstr == 'bonHook') tint = 7;",
+              "if(tstr == 'bonDef') tint = 8;",
+              "if(tstr == 'bonWEnergy') tint = 9;",
+              "if(tstr == 'bonWSplinter') tint = 10;",
+              "if(tstr == 'bonWMissile') tint = 11;",
+              "if(tstr == 'bonWRadius') tint = 12;",
+              "if(tstr == 'bonSlotRadar') tint = 13;",
+              "if(tstr == 'bonSlotScaner') tint = 14;",
+              "if(tstr == 'bonSlotDroid') tint = 15;",
+              "if(tstr == 'bonSlotHook') tint = 16;",
+              "if(tstr == 'bonSlotDef') tint = 17;",
+              "if(tstr == 'bonSlotWeapon') tint = 18;",
+              "if(tstr == 'bonSlotArt') tint = 19;",
+              "if(tstr == 'bonSlotForsage') tint = 20;",
+              "if(tstr == 'bonHookRadius') tint = 21;",
+              "if(tstr == 'bonSkill1') tint = 22;",
+              "if(tstr == 'bonSkill2') tint = 23;",
+              "if(tstr == 'bonSkill3') tint = 24;",
+              "if(tstr == 'bonSkill4') tint = 25;",
+              "if(tstr == 'bonSkill5') tint = 26;",
+              "if(tstr == 'bonSkill6') tint = 27;",
+              "if(tstr == 'bonMass') tint = 28;",
+              "if(tstr == 'bonMissileSpeed') tint = 33;",
+              "if(tstr == 'bonShotSpeed') tint = 34;",
+              "if(tstr == 'bonHookMaxSpeed') tint = 35;",
+              "if(tstr == 'bonHookMinSpeed') tint = 36;",
+              "if(tstr == 'bonStimCapacity') tint = 37;",
+              "if(tstr == 'bonZonds') tint = 38;",
+              "if(tstr == 'bonAttacks') tint = 39;",
+              "if(tstr == 'bonResistAsteroid') tint = 40;",
+              "",
+              "ShipSpecialBonuses(ship,tint,tdwd);"          
           ]        
         },
         {
@@ -8777,6 +9024,238 @@
               "    ShipName = Name(temp_dword);",
               "}",
               "else MessageBox(\"Корабль с указанным именем не найден. Повторите поиск ещё раз\");"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  1300,
+          "Parent":  -1,
+          "#":  758,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_str = TextBox(\"Введите имя корабля на перенос (можно как полное, так и сокращённое)\");",
+              "tint = 0;",
+              "if(temp_str != '') {",
+              "    for(i=0;GalaxyStar()>i;i=i+1) {",
+              "        temp_dword = GalaxyStar(i);",
+              "        for(j=0;StarShips(temp_dword)>j;j=j+1) {",
+              "            temp_dword2 = StarShips(temp_dword,j);",
+              "            if(Name(temp_dword2) == temp_str || ShortName(temp_dword2) == temp_str) {",
+              "                tint = 1;",
+              "                break;",
+              "            }",
+              "        }",
+              "        if(tint) break;",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  1420,
+          "Parent":  -1,
+          "#":  769,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "for(i=0;GalaxyStars()>i;i=i+1) {",
+              "    tdwd = GalaxyStar(i);",
+              "    InjectAnswer('ChooseStarForTeleport',Name(tdwd),tdwd);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  1380,
+          "Parent":  -1,
+          "#":  770,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipTypeN(temp_dword2) <= t_Tranclucator) {",
+              "    TransferShip(temp_dword2,ShipStar(Player()));",
+              "    CoordX(temp_dword2,CoordX(Player()));",
+              "    CoordY(temp_dword2,CoordY(Player()));",
+              "}",
+              "else {",
+              "    OrderTeleport(temp_dword2,ShipStar(Player()),CoordX(Player()),CoordY(Player()));",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  1340,
+          "Parent":  -1,
+          "#":  771,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tdwd=CountBox('Bm.Items.2FuelTanks14s',\"Укажите смещение по оси x\",-2000,2000);",
+              "tdwd2=CountBox('Bm.Items.2FuelTanks14s',\"Укажите смещение по оси y\",-2000,2000);",
+              "",
+              "if(ShipTypeN(temp_dword2) <= t_Tranclucator) {",
+              "    TransferShip(temp_dword2,ShipStar(Player()));",
+              "    CoordX(temp_dword2,CoordX(Player())+tdwd);",
+              "    CoordY(temp_dword2,CoordY(Player())+tdwd2);",
+              "}",
+              "else {",
+              "    OrderTeleport(temp_dword2,ShipStar(Player()),CoordX(Player())+tdwd,CoordY(Player())+tdwd2);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  1180,
+          "Parent":  -1,
+          "#":  775,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_dword = GAnswerData;",
+              "",
+              "if(ShipTypeN(temp_dword2) <= t_Tranclucator) {",
+              "    TransferShip(temp_dword2,temp_dword);",
+              "}",
+              "else {",
+              "    OrderTeleport(temp_dword2,temp_dword,CoordX(temp_dword2),CoordY(temp_dword2));",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  900,
+          "Parent":  -1,
+          "#":  777,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PlayerChameleonCharges(0,100);",
+              "PlayerChameleonCharges(1,100);",
+              "PlayerChameleonCharges(2,100);",
+              "Sound('Sound.Buy');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -30,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  779,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "function AddTrionAcryn(dword tdwd) {",
+              "    int j = ItemOwner(tdwd);",
+              "",
+              "    //Накидываем графический акрин",
+              "    if(ItemType(tdwd) == t_DefGenerator) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_DefGenGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Scaner) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_ScanerGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Radar) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_RadarGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_CargoHook) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_HookGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_RepairRobot) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_DroidGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Engine) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_EngineGraph1'));",
+              "    }",
+              "    else {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_FuelTanksGraph1'));",
+              "    }",
+              "    //Дополнительный бонус, если ГТУ достаточный",
+              "    if(GalaxyTechLevel() > 5) {",
+              "        EqSpecial(tdwd,FindBonusByNameInCfg(Format(BonusNumInCfg(EqSpecial(tdwd)),'1','2')));",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusUpgrade'));",
+              "    }",
+              "    //Теперь бонус от владельца",
+              "    if(j == Maloc) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusMaloc'));",
+              "    else if(j == Peleng) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusPeleng'));",
+              "    else if(j == People) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusPeople'));",
+              "    else if(j == Fei) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusFei'));",
+              "    else if(j == Gaal) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusGaal'));",
+              "    //Теперь бонус от оборудки",
+              "    if(ItemType(tdwd) == t_DefGenerator) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusDef'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Scaner) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusScaner'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Radar) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusRadar'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_CargoHook) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusHook'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_RepairRobot) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusDroid'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Engine) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusEngine'));",
+              "    }",
+              "    else {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusFuelTanks'));",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  980,
+          "Parent":  -1,
+          "#":  784,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_str = TextBox(\"Введите номер медали из ланга (0-47 в SR2HD)\");",
+              "",
+              "if(CT('Reward.'+temp_str+'.Name') != '') {",
+              "    GiveRewardByNom(Player(),int(temp_str));",
+              "    Sound('Sound.Buy');",
+              "}",
+              "else {",
+              "    MessageBox(\"Медаль не найдена. Проверьте правильность написания номера медали и то, подключён ли мод с такой медалью\");",
+              "    Sound('Sound.UserMsgAdd');",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  980,
+          "Parent":  -1,
+          "#":  785,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,4,4,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\");",
+              "tint2 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите причину награждения\",0,5,5,'',3,\"Освобождение системы\",\"Выполнение задания\",\"Провал задания\",\"Позорная метка\",\"Победа в планетарке\");",
+              "",
+              "GiveReward(Player(),tint3,tint2);",
+              "Sound('Sound.Buy');"          
           ]        
         }      
       ],
@@ -10252,6 +10731,71 @@
           [
               "1"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  1300,
+          "Parent":  -1,
+          "#":  759,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!tint"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  1340,
+          "Parent":  -1,
+          "#":  760,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  1420,
+          "Parent":  -1,
+          "#":  773,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  940,
+          "Parent":  -1,
+          "#":  778,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  1020,
+          "Parent":  -1,
+          "#":  786,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
         }      
       ],
       "States":      
@@ -10681,6 +11225,17 @@
           "Parent":  -1,
           "#":  754,
           "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd2",
+          "Pos.x":  -230,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  772,
+          "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
         }      
@@ -15948,13 +16503,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  260,
-      "End":  622,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  621,
       "End":  53,
       "Nom":  0,
@@ -17240,6 +17788,279 @@
       "End":  209,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  755,
+      "End":  756,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  756,
+      "End":  757,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  757,
+      "End":  758,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  758,
+      "End":  760,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  758,
+      "End":  759,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  756,
+      "End":  761,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  760,
+      "End":  762,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  759,
+      "End":  763,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  763,
+      "End":  761,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  763,
+      "End":  757,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  762,
+      "End":  764,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  764,
+      "End":  756,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  762,
+      "End":  765,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  762,
+      "End":  766,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  762,
+      "End":  767,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  766,
+      "End":  768,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  768,
+      "End":  769,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  767,
+      "End":  771,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  765,
+      "End":  770,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  768,
+      "End":  711,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  771,
+      "End":  773,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  770,
+      "End":  773,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  773,
+      "End":  209,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  774,
+      "End":  775,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  775,
+      "End":  756,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  620,
+      "End":  776,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  776,
+      "End":  777,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  777,
+      "End":  778,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  778,
+      "End":  622,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  620,
+      "End":  780,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  780,
+      "End":  781,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  260,
+      "End":  778,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  781,
+      "End":  782,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  781,
+      "End":  783,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  783,
+      "End":  785,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  782,
+      "End":  784,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  785,
+      "End":  786,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  784,
+      "End":  786,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  786,
+      "End":  778,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -17429,7 +18250,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  447,
+  "BlockPar.EC.Total.Strings":  472,
   "BlockPar.EC":  
   [
     {
@@ -19157,8 +19978,108 @@
       "String":  "Введите имя корабля (можно как полное, так и сокращённое)"    
     },
     {
+      "#":  "533",
+      "String":  "Перенос кораблей"    
+    },
+    {
+      "#":  "534",
+      "String":  "Для того, чтобы перенести корабль, введите его имя"    
+    },
+    {
+      "#":  "535",
+      "String":  "Корабль обнаружен<br><br>Что с ним нужно сделать?"    
+    },
+    {
+      "#":  "536",
+      "String":  "К сожалению, корабль с таким именем не был найден"    
+    },
+    {
+      "#":  "537",
+      "String":  "Выбрать корабль"    
+    },
+    {
+      "#":  "538",
+      "String":  "Введите имя корабля на перенос (можно как полное, так и сокращённое)"    
+    },
+    {
+      "#":  "539",
+      "String":  "Пока ничего"    
+    },
+    {
       "#":  "54",
       "String":  "Повысить звание"    
+    },
+    {
+      "#":  "540",
+      "String":  "Переместить в координаты игрока"    
+    },
+    {
+      "#":  "541",
+      "String":  "Переместить в какую-то систему"    
+    },
+    {
+      "#":  "542",
+      "String":  "Переместить в координаты игрока со смещением"    
+    },
+    {
+      "#":  "543",
+      "String":  "Укажите смещение по оси y"    
+    },
+    {
+      "#":  "544",
+      "String":  "Укажите смещение по оси x"    
+    },
+    {
+      "#":  "545",
+      "String":  "Получить камуфляжи всех серий"    
+    },
+    {
+      "#":  "546",
+      "String":  "Какую именно?"    
+    },
+    {
+      "#":  "547",
+      "String":  "Медали"    
+    },
+    {
+      "#":  "548",
+      "String":  "Конкретную (номер)"    
+    },
+    {
+      "#":  "549",
+      "String":  "Медаль не найдена. Проверьте правильность написания номера медали и то, подключён ли мод с такой медалью"    
+    },
+    {
+      "#":  "550",
+      "String":  "Введите номер медали из ланга (0-47 в SR2HD)"    
+    },
+    {
+      "#":  "551",
+      "String":  "Случайную (деление по причине награждения)"    
+    },
+    {
+      "#":  "552",
+      "String":  "Победа в планетарке"    
+    },
+    {
+      "#":  "553",
+      "String":  "Позорная метка"    
+    },
+    {
+      "#":  "554",
+      "String":  "Провал задания"    
+    },
+    {
+      "#":  "555",
+      "String":  "Выполнение задания"    
+    },
+    {
+      "#":  "556",
+      "String":  "Освобождение системы"    
+    },
+    {
+      "#":  "557",
+      "String":  "Выберите причину награждения"    
     },
     {
       "#":  "57",

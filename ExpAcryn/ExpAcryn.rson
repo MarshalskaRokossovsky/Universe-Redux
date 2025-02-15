@@ -650,6 +650,46 @@
           "#":  356,
           "Msg":  "Да, конечно! Это же будет величайшее открытие со времён изобретения технологии по созданию гиперпространственных пузырей!",
           "AMsg.Num":  "63"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  940,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  376,
+          "Msg":  "Не сегодня",
+          "AMsg.Num":  "64"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  1090,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  380,
+          "Msg":  "Я уже принял решение - улучшайте!",
+          "AMsg.Num":  "65"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  381,
+          "Msg":  "Нет, пожалуй, подумаю ещё",
+          "AMsg.Num":  "66"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  1130,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  384,
+          "Msg":  "Выбрать услуги других специалистов",
+          "AMsg.Num":  "67"        
         }      
       ],
       "DialogMessages":      
@@ -1323,6 +1363,36 @@
           "#":  358,
           "Msg":  "<tstr>",
           "DMsg.Num":  "66"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  900,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  374,
+          "Msg":  "Итак, трионное оборудование!\r\n\r\nАмбициозный проект Коалиции Разумных Рас, к сожалению, тоже подвержен устареванию. Впрочем, полученные нами чертежи позволили сейчас предлагать всем желающим улучшить своё трионное оборудование по низким ценам!\r\n\r\nЧто мы предлагаем?\r\n- Мы доведём возможности <clr>оборудования-носителя<clrEnd> до текущего <clr>технического максимума<clrEnd>\r\n- Мы улучшим трионный акрин своими новейшими разработками, что сделает его <clr>ещё полезнее<clrEnd> для пилота!",
+          "DMsg.Num":  "67"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1090,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  379,
+          "Msg":  "Итак, вы выбрали для улучшения <Name(tdwd)>.\r\n\r\nСтоимость улучшения этого оборудования составит <tint> cr.\r\nСогласны на наши условия, или хотите подумать ещё?",
+          "DMsg.Num":  "68"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1130,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  383,
+          "Msg":  "Отлично! Деньги уже списаны с вашего счёта, а наши техники уже выполнили всю поставленную перед ними работу.\r\n\r\nБыстро они, а? Заслуживают внеочередной премии, что думаете, <Player>?",
+          "DMsg.Num":  "69"        
         }      
       ],
       "Dialogs":      
@@ -1470,6 +1540,22 @@
           "Pos.y":  20,
           "Parent":  233,
           "#":  236        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "UpgradeEquip",
+          "Pos.x":  900,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  372        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Upg2",
+          "Pos.x":  1090,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  377        
         }      
       ],
       "Groups":      
@@ -1802,7 +1888,7 @@
               "    else /*if(owner == PirateClan)*/ tdwd2 = CreateEquipment(fl_array[owner, tint], 20, GalaxyTechLevel(), 7);",
               "",
               "    //Ищем корректный тип бонуса для данного типа оборудки",
-              "    for(i = 0; i < 7; i = i + 1)",
+              "    /*for(i = 0; i < 7; i = i + 1)",
               "    {",
               "        if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_' + owner + '_' + i), tdwd2)) continue;",
               "        if(fl_array[owner, tint] != t_DefGenerator) EqSpecial(tdwd2, FindBonusByCustomTag('Fakrin_' + owner + '_' + i));",
@@ -1813,7 +1899,8 @@
               "            else EqSpecial(tdwd2, FindBonusByCustomTag('Fakrin_' + owner + '_' + i + '_2'));",
               "        }",
               "        break;",
-              "    }",
+              "    }*/",
+              "    AddTrionAcryn(tdwd2);",
               "",
               "    //Переносим готовую трионку на корабль игрока и прокручиваем счётчики",
               "    AddItemToShip(Player(), tdwd2);",
@@ -1841,6 +1928,66 @@
               "        if(owner < 5) ItemOwner(tdwd3, owner);",
               "        else ItemOwner(tdwd3, 7);",
               "        AddItemToShip(Player(), tdwd3);",
+              "    }",
+              "}",
+              "",
+              "function AddTrionAcryn(dword tdwd) {",
+              "    int j = ItemOwner(tdwd);",
+              "",
+              "    //Накидываем графический акрин",
+              "    if(ItemType(tdwd) == t_DefGenerator) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_DefGenGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Scaner) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_ScanerGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Radar) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_RadarGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_CargoHook) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_HookGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_RepairRobot) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_DroidGraph1'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Engine) {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_EngineGraph1'));",
+              "    }",
+              "    else {",
+              "        EqSpecial(tdwd, FindBonusByNameInCfg('ExpAcryn_FuelTanksGraph1'));",
+              "    }",
+              "    //Дополнительный бонус, если ГТУ достаточный",
+              "    if(GalaxyTechLevel() > 5) {",
+              "        EqSpecial(tdwd,FindBonusByNameInCfg(Format(BonusNumInCfg(EqSpecial(tdwd)),'1','2')));",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusUpgrade'));",
+              "    }",
+              "    //Теперь бонус от владельца",
+              "    if(j == Maloc) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusMaloc'));",
+              "    else if(j == Peleng) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusPeleng'));",
+              "    else if(j == People) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusPeople'));",
+              "    else if(j == Fei) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusFei'));",
+              "    else if(j == Gaal) ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusGaal'));",
+              "    //Теперь бонус от оборудки",
+              "    if(ItemType(tdwd) == t_DefGenerator) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusDef'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Scaner) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusScaner'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Radar) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusRadar'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_CargoHook) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusHook'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_RepairRobot) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusDroid'));",
+              "    }",
+              "    else if(ItemType(tdwd) == t_Engine) {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusEngine'));",
+              "    }",
+              "    else {",
+              "        ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusFuelTanks'));",
               "    }",
               "}"          
           ]        
@@ -2305,25 +2452,15 @@
               "                        tint = 1;",
               "                        EqSpecial(tdwd3, -1);",
               "                        NoDropItem(tdwd3, 1);",
-              "                        for(k = 0; k < 7; k = k + 1)",
-              "                        {",
-              "                            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_5_' + k), tdwd3)) continue;",
-              "                            if(ItemType(tdwd3) != t_DefGenerator) SpecialToEquipment(FindBonusByCustomTag('Fakrin_5_' + k), tdwd3);",
-              "                            else",
-              "                            {",
-              "                                if(RndObject(0, 1, tdwd2)) SpecialToEquipment(FindBonusByCustomTag('Fakrin_5_' + k), tdwd3);",
-              "                                else SpecialToEquipment(FindBonusByCustomTag('Fakrin_5_' + k + '_2'), tdwd3);",
-              "                            }",
-              "                            break;",
-              "                        }",
+              "                        AddTrionAcryn(tdwd3);",
               "                    }",
               "                }",
               "            }",
               "            //Раздача трионки флагманам (если игрок уже выполнил задания соответствующей расы)",
               "            else",
               "            {",
-              "                //Отсекаем не флагманы",
-              "                if(ShipSubType(tdwd2) != 1) continue;",
+              "                //Отсекаем не флагманы и не дредноуты",
+              "                if(ShipSubType(tdwd2) != 1 && ShipType != 'Dreadnought') continue;",
               "",
               "                if(ExpAcrynQuestStatus == 10) continue;",
               "                j = ShipOwner(tdwd2);",
@@ -2341,17 +2478,7 @@
               "                    {",
               "                        if(ItemOwner(tdwd)!=j) ItemOwner(tdwd,j);",
               "                        NoDropItem(tdwd,1);",
-              "                        for(k=0; k<7; k=k+1)",
-              "                        {",
-              "                            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+j+'_'+k),tdwd))continue;",
-              "                            if(fl_array[j,7]!=t_DefGenerator) EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+j+'_'+k));",
-              "                            else",
-              "                            {",
-              "                                if(RndObject(0, 1, tdwd2)) EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+j+'_'+k));",
-              "                                else EqSpecial(tdwd, FindBonusByCustomTag('Fakrin_'+j+'_'+k+'_2'));",
-              "                            }",
-              "                            break;",
-              "                        }",
+              "                        AddTrionAcryn(tdwd);",
               "                    }",
               "",
               "                    tdwd = 0;",
@@ -2366,17 +2493,7 @@
               "                    {",
               "                        if(ItemOwner(tdwd)!=j) ItemOwner(tdwd,j);",
               "                        NoDropItem(tdwd,1);",
-              "                        for(k=0; k<7; k=k+1)",
-              "                        {",
-              "                            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+j+'_'+k),tdwd))continue;",
-              "                            if(fl_array[j, 8] != t_DefGenerator) EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+j+'_'+k));",
-              "                            else",
-              "                            {",
-              "                                if(RndObject(0, 1, tdwd2)) EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+j+'_'+k));",
-              "                                else EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+j+'_'+k+'_2'));",
-              "                            }",
-              "                            break;",
-              "                        }",
+              "                        AddTrionAcryn(tdwd);",
               "                    }",
               "                }",
               "            }",
@@ -3813,18 +3930,7 @@
               "    if(tdwd)",
               "    {",
               "        NoDropItem(tdwd, 1);",
-              "        for(i=0; i<7; i=i+1)",
-              "        {",
-              "            if(~EqSpecial(tdwd)) SpecialToEquipment(-1, tdwd);//Сперва снимаем имеющийся акрин, если он есть",
-              "            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_' + owner + '_' + i), tdwd)) continue;",
-              "            if(fl_array[owner,8] != t_DefGenerator) EqSpecial(tdwd, FindBonusByCustomTag('Fakrin_' + owner + '_' + i));",
-              "            else",
-              "            {",
-              "                if(RndObject(0, 1, Player())) EqSpecial(tdwd, FindBonusByCustomTag('Fakrin_' + owner + '_' + i));",
-              "                else EqSpecial(tdwd, FindBonusByCustomTag('Fakrin_' + owner + '_' + i + '_2'));",
-              "            }",
-              "            break;",
-              "        }",
+              "        AddTrionAcryn(tdwd);",
               "    }",
               "}",
               "",
@@ -3903,18 +4009,7 @@
               "    if(tdwd)",
               "    {",
               "        NoDropItem(tdwd,1);",
-              "        for(i=0;i<7;i=i+1)",
-              "        {",
-              "            if(EqSpecial(tdwd)>-1)SpecialToEquipment(-1,tdwd);//Сперва снимаем имеющийся акрин, если он есть",
-              "            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+owner+'_'+i),tdwd))continue;",
-              "            if(fl_array[owner,8]!=t_DefGenerator)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "            if(fl_array[owner,8]==t_DefGenerator)",
-              "            {",
-              "                if(Rnd(0,100)<=50)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "                else EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i+'_2'));",
-              "            }",
-              "            break;",
-              "        }",
+              "        AddTrionAcryn(tdwd);",
               "    }",
               "}",
               "//Повышаем репутацию игрока на всех малокских планетах",
@@ -4023,18 +4118,7 @@
               "    if(tdwd)",
               "    {",
               "        NoDropItem(tdwd,1);",
-              "        for(i=0;i<7;i=i+1)",
-              "        {",
-              "            if(EqSpecial(tdwd)>-1)SpecialToEquipment(-1,tdwd);//Сперва снимаем имеющийся акрин, если он есть",
-              "            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+owner+'_'+i),tdwd))continue;",
-              "            if(fl_array[owner,8]!=t_DefGenerator)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "            if(fl_array[owner,8]==t_DefGenerator)",
-              "            {",
-              "                if(Rnd(0,100)<=50)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "                else EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i+'_2'));",
-              "            }",
-              "            break;",
-              "        }",
+              "        AddTrionAcryn(tdwd);",
               "    }",
               "}",
               "//Повышаем репутацию игрока на всех гаальских планетах",
@@ -4066,7 +4150,7 @@
           [
               "if(HomeGiveCaseCheck == 1)",
               "{",
-              "    if(ExpAcrynQuestStatus != 11)",
+              "    if(ExpAcrynQuestStatus == 10)",
               "    {",
               "        if(ShipOwner(Player()) >= 0 && ShipOwner(Player()) <= 4)",
               "        {",
@@ -4463,18 +4547,7 @@
               "    if(tdwd)",
               "    {",
               "        NoDropItem(tdwd,1);",
-              "        for(i=0;i<7;i=i+1)",
-              "        {",
-              "            if(EqSpecial(tdwd)>-1)SpecialToEquipment(-1,tdwd);//Сперва снимаем имеющийся акрин, если он есть",
-              "            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+owner+'_'+i),tdwd))continue;",
-              "            if(fl_array[owner,8]!=t_DefGenerator)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "            if(fl_array[owner,8]==t_DefGenerator)",
-              "            {",
-              "                if(Rnd(0,100)<=50)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "                else EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i+'_2'));",
-              "            }",
-              "            break;",
-              "        }",
+              "        AddTrionAcryn(tdwd);",
               "    }",
               "}",
               "//Повышаем репутацию игрока на всех пеленгских планетах",
@@ -4713,18 +4786,7 @@
               "    if(tdwd)",
               "    {",
               "        NoDropItem(tdwd,1);",
-              "        for(i=0;i<7;i=i+1)",
-              "        {",
-              "            if(EqSpecial(tdwd)>-1)SpecialToEquipment(-1,tdwd);//Сперва снимаем имеющийся акрин, если он есть",
-              "            if(!MayAddBonusToEq(FindBonusByCustomTag('Fakrin_'+owner+'_'+i),tdwd))continue;",
-              "            if(fl_array[owner,8]!=t_DefGenerator)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "            if(fl_array[owner,8]==t_DefGenerator)",
-              "            {",
-              "                if(Rnd(0,100)<=50)EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i));",
-              "                else EqSpecial(tdwd,FindBonusByCustomTag('Fakrin_'+owner+'_'+i+'_2'));",
-              "            }",
-              "            break;",
-              "        }",
+              "        AddTrionAcryn(tdwd);",
               "    }",
               "}",
               "//Повышаем репутацию игрока на всех человеческих или вообще на всех коалиционных планетах",
@@ -5151,6 +5213,81 @@
           "Code":          
           [
               "tstr1 = '</color>' + Format(CT('Script.Mod_ExpAcryn.MalocQuestDialog.FirstQuestExplain'), '<AddIntro'+'>', tstr, '');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  373,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(GetShipRuins(Player())) {",
+              "    if(ShipType(GetShipRuins(Player())) == 'TC') {",
+              "        if(GalaxyTechLevel() > 5) {",
+              "            AddDialogInject('UpgradeEquip',\"А если у вас есть устаревшее трионное оборудование, то мы с радостью поможем вам его обновить!\",\"Хочу обновить трионное оборудование\",10);",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  900,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  375,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "for(i=0;ShipItems(Player())>i;i=i+1) {",
+              "    tdwd = ShipItems(Player(),i);",
+              "    if(~EqSpecial(tdwd)) {",
+              "        if(~findsubstr(tdwd,'ExpAcryn')) {",
+              "            if(~findsubstr(tdwd,'1')) {",
+              "                InjectAnswer('Upg2',\"Хочу улучшить\"+' '+Name(tdwd),tdwd);",
+              "            }",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1090,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  378,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tdwd = GAnswerData;",
+              "tint = ItemCost(tdwd) / 5;",
+              "tint = tint + GalaxyMoney(3);",
+              "tint = tint * Rnd(90,105) / 100;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1090,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  382,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Sound('Sound.Repair');",
+              "ShipMoney(Player(),ShipMoney(Player()) - tint);",
+              "EqSpecial(tdwd,FindBonusByNameInCfg(Format(BonusNumInCfg(EqSpecial(tdwd)),'1','2')));",
+              "ItemExtraSpecialsAddByType(tdwd, FindBonusByNameInCfg('ExpAcryn_BonusUpgrade'));",
+              "",
+              "if(ItemLevel(tdwd) < GalaxyTechLevel()) ItemLevel(tdwd,GalaxyTechLevel());"          
           ]        
         }      
       ],
@@ -6295,6 +6432,19 @@
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1050,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  385,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= tint"          
           ]        
         }      
       ],
@@ -9074,6 +9224,90 @@
       "End":  14,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  372,
+      "End":  374,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  374,
+      "End":  376,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  374,
+      "End":  375,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  377,
+      "End":  378,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  378,
+      "End":  379,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  379,
+      "End":  381,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  381,
+      "End":  374,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  380,
+      "End":  382,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  382,
+      "End":  383,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  383,
+      "End":  384,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  379,
+      "End":  385,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  385,
+      "End":  380,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -9240,7 +9474,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  232,
+  "BlockPar.EC.Total.Strings":  242,
   "BlockPar.EC":  
   [
     {
@@ -10166,6 +10400,46 @@
     {
       "#":  "858",
       "String":  "Данный исход был предрешён самой <clr>Вселенной<clrEnd>. <clr>Вселенная<clrEnd> даёт нам шанс на победу над противоестественным врагом, и этот шанс мы уже не упустим. Данные, которые ты для нас добыл, помогут нам создать новое оборудование, не уступающее по силе доминаторским образцам.<br>И кстати, кое-что мы смогли воссоздать, основываясь на данных из блока памяти, обнаруженного нами ранее. Так прими же в дар этот <0>,"    
+    },
+    {
+      "#":  "859",
+      "String":  "Хочу обновить трионное оборудование"    
+    },
+    {
+      "#":  "860",
+      "String":  "А если у вас есть устаревшее трионное оборудование, то мы с радостью поможем вам его обновить!"    
+    },
+    {
+      "#":  "861",
+      "String":  "Хочу улучшить"    
+    },
+    {
+      "#":  "862",
+      "String":  "Итак, трионное оборудование!<br><br>Амбициозный проект Коалиции Разумных Рас, к сожалению, тоже подвержен устареванию. Впрочем, полученные нами чертежи позволили сейчас предлагать всем желающим улучшить своё трионное оборудование по низким ценам!<br><br>Что мы предлагаем?<br>- Мы доведём возможности <clr>оборудования-носителя<clrEnd> до текущего <clr>технического максимума<clrEnd><br>- Мы улучшим трионный акрин своими новейшими разработками, что сделает его <clr>ещё полезнее<clrEnd> для пилота!"    
+    },
+    {
+      "#":  "863",
+      "String":  "Итак, вы выбрали для улучшения <0>.<br><br>Стоимость улучшения этого оборудования составит <1> cr.<br>Согласны на наши условия, или хотите подумать ещё?"    
+    },
+    {
+      "#":  "864",
+      "String":  "Отлично! Деньги уже списаны с вашего счёта, а наши техники уже выполнили всю поставленную перед ними работу.<br><br>Быстро они, а? Заслуживают внеочередной премии, что думаете, <Player>?"    
+    },
+    {
+      "#":  "865",
+      "String":  "Не сегодня"    
+    },
+    {
+      "#":  "866",
+      "String":  "Я уже принял решение - улучшайте!"    
+    },
+    {
+      "#":  "867",
+      "String":  "Нет, пожалуй, подумаю ещё"    
+    },
+    {
+      "#":  "868",
+      "String":  "Выбрать услуги других специалистов"    
     },
     {
       "#":  "90",

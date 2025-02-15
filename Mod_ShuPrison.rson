@@ -120,7 +120,7 @@
               "",
               "            //Вешаем на беглого заключённого временную инфошку, которая выдаст вознаграждение игроку, если он его завалит",
               "            rand = GalaxyMoney(3, 3);",
-              "            ShipAddCustomShipInfo(cur_ship, 'ShuPrison_EscapedPrisonerBounty', 'NoShow', CurTurn() + 180, Id(cur_planet), rand, Format(CT('Script.Mod_ShuPrison.KillEscapedCriminalBounty'), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(cur_ship), '<Bounty'+'>', rand));",
+              "            ShipAddCustomShipInfo(cur_ship, 'ShuPrison_EscapedPrisonerBounty', 'NoShow', CurTurn() + 1030, Id(cur_planet), rand, Format(CT('Script.Mod_ShuPrison.KillEscapedCriminalBounty'), '<Planet'+'>', Name(cur_planet), '<Ship'+'>', Name(cur_ship), '<Bounty'+'>', rand));",
               "        }",
               "    }",
               "}"          

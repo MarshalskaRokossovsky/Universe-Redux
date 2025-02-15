@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -315,
-  "ViewPos.y":  -504,
+  "ViewPos.x":  -312,
+  "ViewPos.y":  -45,
   "ScriptName":  "Mod_EvoTranc",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.txt",
@@ -400,6 +400,36 @@
           "#":  340,
           "Msg":  "<TextCorr2>",
           "AMsg.Num":  "38"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  490,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  347,
+          "Msg":  "Пожалуй, в другой раз",
+          "AMsg.Num":  "39"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  450,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  348,
+          "Msg":  "Ну, что же, звучит интересно. Давайте начнём!",
+          "AMsg.Num":  "40"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  490,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  351,
+          "Msg":  "Ну, что же, звучит интересно. Давайте начнём!",
+          "AMsg.Num":  "41"        
         }      
       ],
       "DialogMessages":      
@@ -783,6 +813,26 @@
           "#":  335,
           "Msg":  "",
           "DMsg.Num":  "37"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  345,
+          "Msg":  "О, конечно!\r\n\r\nДумаю, вы и так без нас прекрасно знаете, сталкиваясь не раз с ситуацией, что в базовой комплектации любого транклюкатора нет полного набора поведенческих программ.\r\n\r\nВозмутительно, не правда ли?\r\n\r\nИменно поэтому наша сеть предлагает для приобретения набор боевых программ, которые позволят вашему \"малышу\" увереннее вести себя в бою: это <clr>полный набор<clrEnd> программ по эффективной эксплуатации оборудования, а также общий набор тактических - наши специалисты оценивают итоговые возможности роботов после их установки как <clr>три<clrEnd> из шести по обобщённой шкале.\r\n\r\nСтоить это всё вам будет <temp_int> cr.\r\nНу что, по рукам?",
+          "DMsg.Num":  "38"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  352,
+          "Msg":  "Ну, вот и всё. Все необходимые программы уже установлены в бортовой компьютер транклюкатора. Пользуйтесь на здоровье!",
+          "DMsg.Num":  "39"        
         }      
       ],
       "Dialogs":      
@@ -1074,6 +1124,14 @@
           "Pos.y":  270,
           "Parent":  -1,
           "#":  334        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Skills",
+          "Pos.x":  450,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  344        
         }      
       ],
       "Groups":      
@@ -1354,6 +1412,7 @@
               "MusashiRangeArray[6] = 280;",
               "MusashiRangeArray[7] = 350;",
               "MusashiRangeArray[8] = 450;",
+              "//А это типа вакидзаси Мусаси Миямото? Но ведь пушек пять...",
               "",
               "//Проверка на подключение EvoTrancNPC",
               "if(GetMainData('Data.NPCTrancOwners.Enabled') == 'True') NPCTrancOwnersPermission = 1;",
@@ -1688,7 +1747,7 @@
               "    else if(temp_int_5 <= TrancChanceArray[14]) tNumber = 1;",
               "",
               "    if(!tNumber) exit;",
-              "    ",
+              "",
               "    //Увеличиваем навык техники корабля, если его недостаточно для владения выпавшим числом транклюкаторов",
               "    if(ShipSkill(ship, 2) < tNumber) ShipSkill(ship, 2, tNumber);",
               "",
@@ -2581,6 +2640,7 @@
               "if(NavCompCheck)InjectAnswer('NavComputer',\"Навигационный компьютер\",0);",
               "InjectAnswer('ChangeEquip',\"Уменьшение оборудования\",0);",
               "InjectAnswer('Recolor',\"Перекраска\",0);",
+              "InjectAnswer('Skills',\"Комплект навыков\",0);",
               "if(tNumber>1)InjectAnswer('Select',\"Выбрать другого транклюкатора\",0);",
               "InjectAnswer('Exit',\"Пожалуй, пока что хватит\",2);"          
           ]        
@@ -5583,6 +5643,37 @@
               "    OrderFollowShip(tempDwd, Player());",
               "}"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  460,
+          "Parent":  -1,
+          "#":  346,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_int = GalaxyMoney(4);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  353,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player(),ShipMoney(Player())-temp_int);",
+              "if(ShipSkill(cur_Tranc,0) < 3) ShipSkill(cur_Tranc,0,3);",
+              "if(ShipSkill(cur_Tranc,1) < 3) ShipSkill(cur_Tranc,1,3);",
+              "if(ShipSkill(cur_Tranc,2) < 6) ShipSkill(cur_Tranc,2,6);",
+              "",
+              "Sound('Sound.Buy');"          
+          ]        
         }      
       ],
       "Planets":      
@@ -6388,6 +6479,32 @@
           "Code":          
           [
               "ArrayDim(tempArr) > 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  490,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  349,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_int < ShipMoney(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  350,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "temp_int <= ShipMoney(Player())"          
           ]        
         }      
       ],
@@ -9035,6 +9152,69 @@
       "End":  335,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  344,
+      "End":  346,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  346,
+      "End":  345,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  345,
+      "End":  347,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  345,
+      "End":  350,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  345,
+      "End":  349,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  349,
+      "End":  351,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  350,
+      "End":  348,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  348,
+      "End":  353,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  353,
+      "End":  352,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -9201,7 +9381,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  274,
+  "BlockPar.EC.Total.Strings":  279,
   "BlockPar.EC":  
   [
     {
@@ -10299,6 +10479,26 @@
     {
       "#":  "933",
       "String":  "Пожалуй, не до этого сейчас"    
+    },
+    {
+      "#":  "934",
+      "String":  "Комплект навыков"    
+    },
+    {
+      "#":  "935",
+      "String":  "О, конечно!<br><br>Думаю, вы и так без нас прекрасно знаете, сталкиваясь не раз с ситуацией, что в базовой комплектации любого транклюкатора нет полного набора поведенческих программ.<br><br>Возмутительно, не правда ли?<br><br>Именно поэтому наша сеть предлагает для приобретения набор боевых программ, которые позволят вашему \"малышу\" увереннее вести себя в бою: это <clr>полный набор<clrEnd> программ по эффективной эксплуатации оборудования, а также общий набор тактических - наши специалисты оценивают итоговые возможности роботов после их установки как <clr>три<clrEnd> из шести по обобщённой шкале.<br><br>Стоить это всё вам будет <0> cr.<br>Ну что, по рукам?"    
+    },
+    {
+      "#":  "936",
+      "String":  "Ну, вот и всё. Все необходимые программы уже установлены в бортовой компьютер транклюкатора. Пользуйтесь на здоровье!"    
+    },
+    {
+      "#":  "937",
+      "String":  "Пожалуй, в другой раз"    
+    },
+    {
+      "#":  "938",
+      "String":  "Ну, что же, звучит интересно. Давайте начнём!"    
     }  
   ]
 }

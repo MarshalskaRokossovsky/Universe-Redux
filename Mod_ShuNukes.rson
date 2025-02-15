@@ -445,6 +445,8 @@
               "            int nuke_max = 3;",
               "            int nuke_shafts = 0;",
               "",
+              "            if(ship_type == 'AbandonedShip') continue;",
+              "",
               "            if(ship_type_num == t_Pirate)",
               "            {",
               "                if(ship_type == 'Pirate' || ship_type == 'Khan' || ship_type == 'Thug')",

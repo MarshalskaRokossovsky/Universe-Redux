@@ -1,11 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -197,
-  "ViewPos.y":  46,
+  "ViewPos.x":  -385,
+  "ViewPos.y":  -289,
   "ScriptName":  "Mod_ShuMercs",
-  "ScriptFileOut":  "H:\\Mod_ShuMercs.scr",
-  "ScriptTextOut":  "H:\\Mod_ShuMercs.txt",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
   "Visual.Objects":  
   [
     {
@@ -710,6 +710,36 @@
           "#":  466,
           "Msg":  "Ну, хорошо...",
           "AMsg.Num":  "69"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  550,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  472,
+          "Msg":  "<tstr6>",
+          "AMsg.Num":  "70"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  690,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  475,
+          "Msg":  "<tstr2>",
+          "AMsg.Num":  "71"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  730,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  478,
+          "Msg":  "<tstr2>",
+          "AMsg.Num":  "72"        
         }      
       ],
       "DialogMessages":      
@@ -1091,7 +1121,7 @@
           "Pos.y":  60,
           "Parent":  394,
           "#":  69,
-          "Msg":  "Для наших клиентов мы предлагаем множество тренажеров, начиная от пилотных симуляторов и заканчивая логическими головоломками. Используя все это разнообразие методов, вы можете увеличить любой навык ваших партнеров. Стоит учитывать, что эффективность тренировок прямо зависит от ваших лидерских качеств: количество сеансов, которое можно провести без ущерба для развиваемых навыков, равно навыку лидерства тренера. То есть, с максимальным лидерством каждого напарника можно будет натренировать <clr>6<clrEnd. раз. Ах да, чуть не забыл: для наших наемников тренировки стоят вдвое дешевле.<br><br>Теперь выберите пилота, которого хотите тренировать.",
+          "Msg":  "Для наших клиентов мы предлагаем множество тренажеров, начиная от пилотных симуляторов и заканчивая логическими головоломками. Используя все это разнообразие методов, вы можете увеличить любой навык ваших партнеров. Стоит учитывать, что эффективность тренировок прямо зависит от ваших лидерских качеств: количество сеансов, которое можно провести без ущерба для развиваемых навыков, равно навыку лидерства тренера. То есть, с максимальным лидерством каждого напарника можно будет натренировать <clr>6<clrEnd> раз. Ах да, чуть не забыл: для наших наемников тренировки стоят вдвое дешевле.<br><br>Теперь выберите пилота, которого хотите тренировать.",
           "DMsg.Num":  "37"        
         },
         {
@@ -1353,6 +1383,26 @@
           "#":  465,
           "Msg":  "Кто здесь? Рейнджер?! Не мешай, я занят!",
           "DMsg.Num":  "63"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  620,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  474,
+          "Msg":  "<tstr1>",
+          "DMsg.Num":  "64"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  477,
+          "Msg":  "<tstr1>",
+          "DMsg.Num":  "65"        
         }      
       ],
       "Dialogs":      
@@ -2370,7 +2420,7 @@
               "    ShipCustomFaction(ship, '');",
               "    ShipOwner(ship, ShipPilotRace(ship));",
               "    ShipOut(ship);",
-              "    ShipJoinToScript(ship, 'Mod_ShuMercs.FreeMercs'); //Данная функция не вызовет срабатывания стейт-кода при добавлении",
+              "    ShipJoin(FreeMercs,ship);",
               "    //ShipCustomFaction(ship, 'SubFactionFixedStanding');",
               "    ShipCustomFaction(ship, 'SubFactionFreelancersFixedStanding');",
               "    ShipStanding(ship, 5); //Выставляем фрилансеру полный нейтралитет в конфликте Коалиции и пиратов",
@@ -2786,7 +2836,7 @@
               "                else TransferShip(leader, StarPlanets(GalaxyStar(People), 0)); //На Меркурий",
               "            }",
               "        }*/",
-              "        int kyi",
+              "        int kyi;",
               "    }",
               "    else //if(ScriptItemActionType(t_OnDeath))",
               "    {",
@@ -3126,7 +3176,10 @@
               "    ArrayClear(HeadBountyList['TargetsId']);",
               "    ArrayClear(HeadBountyList['TargetsBounty']);",
               "    HeadBountyList['TargetsCount'] = 0;",
-              "}"          
+              "}",
+              "",
+              "//Для обновления отношений",
+              "CurrentPlayerRace = ShipPilotRace(Player());"          
           ]        
         },
         {
@@ -4097,6 +4150,25 @@
               "        }",
               "    }",
               "    else ShipDeleteCustomShipInfo(Player(),'ShuMercs_PlayerTalked');",
+              "}",
+              "//И, заодно, проверяем расу игрока, чтобы на отношения с наёмниками нормально влияло",
+              "if(ShipPilotRace(Player()) != CurrentPlayerRace) {",
+              "    CurrentPlayerRace = ShipPilotRace(Player());",
+              "",
+              "    //Я ленивая падла и скопипастил из инит-кода, минусы?",
+              "    tint1 = CurrentPlayerRace;",
+              "    ",
+              "    MercOrganisationsData['RedAxes', 'RelationToPlayer'] = PortionInDiapason(tint1, Maloc, Gaal, 60, 25) + PortionInDiapason(ShipStatus(Player(), 1), 0, 100, 0, 40);",
+              "    ",
+              "    if(tint1 == People || tint1 == Peleng) tint2 = 60;",
+              "    else if(tint1 >= Fei) tint2 = 40;",
+              "    else /*if(tint1 == Maloc)*/ tint2 = 25;",
+              "    MercOrganisationsData['Atlant', 'RelationToPlayer'] = tint2 + PortionInDiapason(ShipStatus(Player(), 0), 0, 100, 0, 40);",
+              "    ",
+              "    if(tint1 == Fei) tint2 = 60;",
+              "    else if(tint1 == Gaal) tint2 = 50;",
+              "    else tint2 = PortionInDiapason(tint1, Maloc, People, 25, 40);",
+              "    MercOrganisationsData['Faeyangelion', 'RelationToPlayer'] = tint2 + PortionInDiapason(ShipStatus(Player(), 2), 0, 100, 0, 40);",
               "}"          
           ]        
         },
@@ -5108,6 +5180,11 @@
               "        ChangeState('LeaderMeeting');",
               "        exit;",
               "    }",
+              "}",
+              "",
+              "//Какого лешего ты посреди космоса очутился, чудило?",
+              "if(ShipInNormalSpace(CurShip)) {",
+              "    ChangeState('LeaderReturning');",
               "}"          
           ]        
         },
@@ -7224,6 +7301,16 @@
               "                    if(target) ShipSetPartner(CurShip, 0, 0);",
               "                }",
               "            }",
+              "            else if(ShipTypeN(target) == t_Warrior) {",
+              "                if(ShipStatistic(target,10) == ShipStar(HQ)) {",
+              "                    no_tar = NoTargetToShip(target);",
+              "                    //Вся эта херобория помогает избежать ситуации, когда наемник пытается поочередно напасть сразу на две цели рядом, в результате зацикливая логику",
+              "                    NoTargetToShip(target, 4);",
+              "                    TruceBetweenShips(CurShip, target);",
+              "                    NoTargetToShip(target, no_tar);",
+              "                    //Чтобы наёмники не пытались воевать, едрить их в корень, с правительством системы, в которой ИХ ШТАБ, они ж не совсем идиоты, свою крышу воевать",
+              "                }",
+              "            }",
               "        }",
               "",
               "        //Если с момента последнего выполненного кораблём задания прошло не менее N дней",
@@ -7502,7 +7589,12 @@
               "ShipFreeFlight(CurShip, 1);",
               "",
               "//Если срок охраны корабля подошёл к концу",
-              "dword cur_ship = IdToShip(GetData(1));",
+              "if(GetData(1) < 1) {",
+              "    //Ты как тут оказался?",
+              "    cur_ship = 0;",
+              "    ChangeState('MercNormal');",
+              "}",
+              "else dword cur_ship = IdToShip(GetData(1));",
               "if(GetData(0) <= CurTurn())",
               "{",
               "    //Если задание по охране выполнено успешно",
@@ -7909,6 +8001,7 @@
           "Code":          
           [
               "tstr1 = '';",
+              "tint4 = 0;",
               "for(int i = HeadBountyList['TargetsCount'] - 1; i >= 0; i = i - 1)",
               "{",
               "    if(HeadBountyList['TargetsId', i] > 0)",
@@ -7930,13 +8023,15 @@
               "        bounty_type = GetParFromString(bounty_type, ',', 3, 0);",
               "    }",
               "",
+              "    if(name = Name(Player())) tint4 = 1;",
               "    tstr1 = tstr1 + Format('<br>') + Format(CT('Script.Mod_ShuMercs.HeadHunting.NameAndBounty' + bounty_type), '<Name'+'>', name, '<BountyAlive'+'>', '<color=0,132,15>' + round(HeadBountyList['AliveMultiplier'] * HeadBountyList['TargetsBounty', i]) + '</color>', '<BountyDead'+'>', HeadBountyList['TargetsBounty', i]);",
               "}",
               "",
               "if(HeadBountyList['TargetsCount']) tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.HeadHunting.BountyListBridge'), '<List'+'>', tstr1, '');",
               "else tstr1 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.BountyListBridgeNoTargets');",
               "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.SetHeadBounty');",
-              "tstr3 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.BackToGalanet');"          
+              "tstr3 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.BackToGalanet');",
+              "tstr6 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.MomImInInternet');"          
           ]        
         },
         {
@@ -8127,6 +8222,7 @@
           "Code":          
           [
               "tstr1 = '';",
+              "tint4 = 0;",
               "for(i = HeadBountyList['TargetsCount'] - 1; i >= 0; i = i - 1)",
               "{",
               "    if(HeadBountyList['TargetsId', i] > 0)",
@@ -8148,6 +8244,7 @@
               "        bounty_type2 = GetParFromString(bounty_type2, ',', 3, 0);",
               "    }",
               "",
+              "    if(name = Name(Player())) tint4 = 1;",
               "    tstr1 = tstr1 + Format('<br>') + Format(CT('Script.Mod_ShuMercs.HeadHunting.NameAndBounty' + bounty_type2), '<Name'+'>', name2, '<BountyAlive'+'>', '<color=0,132,15>' + round(HeadBountyList['AliveMultiplier'] * HeadBountyList['TargetsBounty', i]) + '</color>', '<BountyDead'+'>', HeadBountyList['TargetsBounty', i]);",
               "}",
               "",
@@ -8400,7 +8497,7 @@
               "    else if(ShipGroup(CurShip) == FaeyangelionLeader && !ShipInStar(CurShip,ShipStar(GroupToShip(FaeyangelionHQ)))) base = GroupToShip(FaeyangelionHQ);",
               "    if(!base && !ShipInStar(CurShip,ShipStar(GroupToShip(MercCenter)))) base = GroupToShip(MercCenter);",
               "",
-              "    if(HullDamage(base) > 80) base = 0;",
+              "    if(HullDamage(base) > 50) base = 0;",
               "",
               "    if(base)",
               "    {",
@@ -8452,6 +8549,38 @@
               "        exit;",
               "    }",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  590,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  473,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.MomImInInternet2');",
+              "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.MomImInInternet3');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  730,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  476,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.MomImInInternet4');",
+              "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.HeadHunting.MomImInInternet5');",
+              "",
+              "Sound('Sound.Buy');",
+              "ShipMoney(Player(),ShipMoney(Player())-(ShipCustomShipInfoData(Player(), 'ShuMercs_HeadBountyInfo', 1)/2));",
+              "RemoveFromHeadBountyList(Id(Player()));"          
           ]        
         }      
       ],
@@ -9920,6 +10049,45 @@
           [
               "!PlayerBridge()"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  550,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  471,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!PlayerBridge()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  650,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  479,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= (ShipCustomShipInfoData(Player(), 'ShuMercs_HeadBountyInfo', 1)/2)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  550,
+          "Pos.y":  720,
+          "Parent":  -1,
+          "#":  481,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tint4"          
+          ]        
         }      
       ],
       "States":      
@@ -10431,7 +10599,7 @@
         {
           "Type":  "TState",
           "Name":  "LeaderDefending",
-          "Pos.x":  110,
+          "Pos.x":  100,
           "Pos.y":  970,
           "Parent":  -1,
           "#":  469,
@@ -10449,7 +10617,7 @@
         {
           "Type":  "TState",
           "Name":  "LeaderRetreat",
-          "Pos.x":  110,
+          "Pos.x":  100,
           "Pos.y":  1000,
           "Parent":  -1,
           "#":  470,
@@ -10922,7 +11090,7 @@
           "Type":  "TVar",
           "Name":  "tarr1",
           "Pos.x":  460,
-          "Pos.y":  790,
+          "Pos.y":  820,
           "Parent":  -1,
           "#":  378,
           "Var.Type":  "Array",
@@ -11021,7 +11189,7 @@
           "Type":  "TVar",
           "Name":  "tarr2",
           "Pos.x":  460,
-          "Pos.y":  810,
+          "Pos.y":  840,
           "Parent":  -1,
           "#":  388,
           "Var.Type":  "Array",
@@ -11087,7 +11255,7 @@
           "Type":  "TVar",
           "Name":  "cur_ruin_type",
           "Pos.x":  460,
-          "Pos.y":  740,
+          "Pos.y":  780,
           "Parent":  -1,
           "#":  420,
           "Var.Type":  "Str",
@@ -11104,6 +11272,17 @@
           "Var.Type":  "Array",
           "Init":  "",
           "Global":  true        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "CurrentPlayerRace",
+          "Pos.x":  460,
+          "Pos.y":  880,
+          "Parent":  -1,
+          "#":  480,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
         }      
       ]    
     }  
@@ -14196,6 +14375,83 @@
       "End":  466,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  439,
+      "End":  471,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  474,
+      "End":  440,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  472,
+      "End":  473,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  473,
+      "End":  474,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  476,
+      "End":  477,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  477,
+      "End":  478,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  475,
+      "End":  476,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  474,
+      "End":  479,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  479,
+      "End":  475,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  471,
+      "End":  481,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  481,
+      "End":  472,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -14247,7 +14503,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  135,
+  "BlockPar.EC.Total.Strings":  139,
   "BlockPar.EC":  
   [
     {
@@ -14559,6 +14815,22 @@
       "String":  "Введите имя цели"    
     },
     {
+      "#":  "192",
+      "String":  "Кто здесь? Не мешай, рейнджер! Я занят... тактической перегруппировкой! Вот!"    
+    },
+    {
+      "#":  "193",
+      "String":  "Кто здесь? Рейнджер?! Не мешай, я занят!"    
+    },
+    {
+      "#":  "194",
+      "String":  "Ну, ладно"    
+    },
+    {
+      "#":  "195",
+      "String":  "Ну, хорошо..."    
+    },
+    {
       "#":  "25",
       "String":  "<0> погиб, выполняя контракт на убийство корабля <1>. <br> - <clr>Центр наемников Обмен<clrEnd>"    
     },
@@ -14724,7 +14996,7 @@
     },
     {
       "#":  "83",
-      "String":  "Для наших клиентов мы предлагаем множество тренажеров, начиная от пилотных симуляторов и заканчивая логическими головоломками. Используя все это разнообразие методов, вы можете увеличить любой навык ваших партнеров. Стоит учитывать, что эффективность тренировок прямо зависит от ваших лидерских качеств: количество сеансов, которое можно провести без ущерба для развиваемых навыков, равно навыку лидерства тренера. То есть, с максимальным лидерством каждого напарника можно будет натренировать <clr>6<0><br>Теперь выберите пилота, которого хотите тренировать."    
+      "String":  "Для наших клиентов мы предлагаем множество тренажеров, начиная от пилотных симуляторов и заканчивая логическими головоломками. Используя все это разнообразие методов, вы можете увеличить любой навык ваших партнеров. Стоит учитывать, что эффективность тренировок прямо зависит от ваших лидерских качеств: количество сеансов, которое можно провести без ущерба для развиваемых навыков, равно навыку лидерства тренера. То есть, с максимальным лидерством каждого напарника можно будет натренировать <clr>6<clrEnd> раз. Ах да, чуть не забыл: для наших наемников тренировки стоят вдвое дешевле.<br><br>Теперь выберите пилота, которого хотите тренировать."    
     },
     {
       "#":  "84",

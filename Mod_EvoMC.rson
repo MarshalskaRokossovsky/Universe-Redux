@@ -1,11 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -1158,
-  "ViewPos.y":  -78,
+  "ViewPos.x":  -1007,
+  "ViewPos.y":  -130,
   "ScriptName":  "Mod_EvoMC",
-  "ScriptFileOut":  "H:\\Mod_EvoMC.scr",
-  "ScriptTextOut":  "H:\\Mod_EvoMC.txt",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoMC\\DATA\\Script\\Mod_EvoMC.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoMC\\DATA\\Script\\Mod_EvoMC.txt",
   "Visual.Objects":  
   [
     {
@@ -190,6 +190,16 @@
           "#":  147,
           "Msg":  "",
           "AMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "fastexit",
+          "Pos.x":  0,
+          "Pos.y":  640,
+          "Parent":  -1,
+          "#":  153,
+          "Msg":  "Покайся во грехах!",
+          "AMsg.Num":  "18"        
         }      
       ],
       "DialogMessages":      
@@ -393,6 +403,16 @@
           "#":  146,
           "Msg":  "<tstr1>",
           "DMsg.Num":  "19"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  152,
+          "Msg":  "Что? А-а-а-а! Что со мной?! Мне плохо!.. А-а-а-а!",
+          "DMsg.Num":  "20"        
         }      
       ],
       "Dialogs":      
@@ -484,6 +504,14 @@
           "Pos.y":  50,
           "Parent":  121,
           "#":  144        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "Psionic",
+          "Pos.x":  0,
+          "Pos.y":  550,
+          "Parent":  -1,
+          "#":  151        
         }      
       ],
       "Groups":      
@@ -576,6 +604,21 @@
               "            if(~ShipFindCustomShipInfoByType(cur_ship, 'EvoMC_YellowShroud'))",
               "            {",
               "                AddDialogOverride('YellowShroudDialog', 2552160);",
+              "            }",
+              "        }",
+              "        else {",
+              "            if(~ShipFindCustomShipInfoByType(Player(), 'EvoMC_Psionic')) {",
+              "                if(!PsionicCD) {",
+              "                    if(ShipOwner(cur_ship) != Kling && ShipOwner(cur_ship) != None) {",
+              "                        AddDialogInject('Psionic','',\"Силой Богов, да снизойдёт на тебя их кара!\",100);",
+              "                    }",
+              "                }",
+              "                else {",
+              "                    if(ShipOwner(cur_ship) != Kling && ShipOwner(cur_ship) != None) {",
+              "                        AddDialogInject('Psionic','',\"Силой Богов, да снизойдёт на тебя их кара!\",100);",
+              "                        AddDialogBlock(\"Силой Богов, да снизойдёт на тебя их кара!\",1);",
+              "                    }",
+              "                }",
               "            }",
               "        }",
               "    }",
@@ -705,7 +748,9 @@
               "        cur_cost2 = max(min_cost, cur_cost1 - round(coef_percent * cur_cost1));",
               "        result = Rnd(cur_cost2, cur_cost1, seed);",
               "    }",
-              "}"          
+              "}",
+              "",
+              "CurrentPlayerRace = ShipPilotRace(Player());"          
           ]        
         },
         {
@@ -794,7 +839,95 @@
               "}",
               "",
               "//Обнуляем счётчик купленных медикаментов",
-              "if(!findsubstr(GameDateTxtByTurn(CurTurn()), CT('CalendarDateTexts.January1'))) CurMed = 0;"          
+              "if(!findsubstr(GameDateTxtByTurn(CurTurn()), CT('CalendarDateTexts.January1'))) CurMed = 0;",
+              "",
+              "//Сбрасываем прививки при смене расы",
+              "if(~ShipFindCustomShipInfoByType(Player(), 'EvoMC_Vaccination')) {",
+              "    if(ShipPilotRace(Player()) != CurrentPlayerRace)",
+              "    {",
+              "        CurrentPlayerRace = ShipPilotRace(Player());",
+              "        ShipDeleteCustomShipInfo(Player(),'EvoMC_Vaccination');",
+              "",
+              "        unknown temp_stims_array;",
+              "        CT('Illness.Stimulant', temp_stims_array);",
+              "        ArrayClear(tarr1);",
+              "        ArrayDelete(tarr1, 0);",
+              "        //Перебирать от начала менее удобно, но всё равно перебираем так, чтобы стимуляторы в списке на удаление выстроились по их общему порядку из Lang",
+              "        for(i = 0; i < ArrayDim(temp_stims_array); i = i + 1)",
+              "        {",
+              "            //Удаляем из составленного массива все лишние элементы",
+              "            if(GetVariableType(temp_stims_array[i]) != 9)",
+              "            {",
+              "                ArrayDelete(temp_stims_array, i);",
+              "                i = i - 1;",
+              "                continue;",
+              "            }",
+              "",
+              "            for(j = ArrayDim(temp_stims_array[i]) - 1; j >= 0; j = j - 1)",
+              "            {",
+              "                if(GetVariableName(temp_stims_array[i, j]) == 'Designation')",
+              "                {",
+              "                    tstr1 = temp_stims_array[i, j];",
+              "                    break;",
+              "                }",
+              "",
+              "                if(!j)",
+              "                {",
+              "                    tstr1 = '';",
+              "                    ArrayDelete(temp_stims_array, i);",
+              "                    i = i - 1;",
+              "                    continue;",
+              "                }",
+              "            }",
+              "            if(tstr1 == '') continue;",
+              "",
+              "            //Ванильный стимулятор",
+              "            if(tstr1 == 'Original')",
+              "            {",
+              "                int stim_num = 13 + GetVariableName(temp_stims_array[i]); //Сдвиг нумерации стимуляторов относительно болезней в общем списке",
+              "                if(ShipHealthFactor(Player(), stim_num))",
+              "                {",
+              "                    temp_stims_array[i, 'Designation'] = temp_stims_array[i, 'Designation'] + stim_num;",
+              "                }",
+              "                else",
+              "                {",
+              "                    ArrayDelete(temp_stims_array, i);",
+              "                    i = i - 1;",
+              "                    continue;",
+              "                }",
+              "            }",
+              "            //Стимулятор из модов",
+              "            else",
+              "            {",
+              "                if(ShipFindCustomShipInfoByType(Player(), tstr1) == -1)",
+              "                {",
+              "                    ArrayDelete(temp_stims_array, i);",
+              "                    i = i - 1;",
+              "                    continue;",
+              "                }",
+              "            }",
+              "        }",
+              "",
+              "        for(i = 0; i < ArrayDim(tarr1); i = i + 1)",
+              "        {",
+              "            //Ванильный стимулятор",
+              "            if(!findsubstr(tarr1[i, 'Designation'], 'Original')) ShipHealthFactor(Player(), int(tarr1[i, 'Designation']), 0);",
+              "            //Стимулятор из модов",
+              "            else",
+              "            {",
+              "                //Вызываем принудительное завершение кастомного стимулятора (поскольку неизвестно какие конкретно он наложил дебаффы)",
+              "                ShipCustomShipInfoData(Player(), tarr1[i, 'Designation'], 1, 0);",
+              "                CreateActCodeEvent(t_OnStep, tarr1[i, 'Designation'], Player(), 1, 0, 11);",
+              "            }",
+              "        }",
+              "        ArrayClear(tarr1);",
+              "    }",
+              "}",
+              "",
+              "if(~ShipFindCustomShipInfoByType(Player(), 'EvoMC_Psionic')) {",
+              "    if(PsionicCD) PsionicCD = PsionicCD - 1;",
+              "}",
+              "else PsionicCD = 0;"          
           ]        
         },
         {
@@ -917,10 +1050,17 @@
               "    tstr1 = '';",
               "    ArrayClear(tarr1);",
               "    int num_count = 0;",
-              "    for(i = 1; i <= 11; i = i + 1) //Разделы болезней в Lang идут с дебильным смещением в -1 относительно их номеров в коде, поэтому приходится его постоянно учитывать",
+              "    for(i = 1; i <= 11; i = i + 1) //Разделы болезней в Lang идут со смещением в -1 относительно их номеров в коде, поэтому приходится его постоянно учитывать",
               "    {",
               "        if(i >= 5 && i <= 7) continue; //Нельзя привиться от лучевой болезни, ослепления, наркозависимости, вихревой контузии и мышечного растяжения",
               "        if(i == illness1 || i == illness2 || i == illness3) continue; //Пропускаем болезни, от которых игрок уже сделал прививки",
+              "        //Убираем болезни, которыми игрок не может никогда заразиться",
+              "        if(i == 2 && ShipPilotRace(Player()) == Maloc) continue;",
+              "        if(i == 3 && (ShipPilotRace(Player()) == Fei || ShipPilotRace(Player()) == Gaal)) continue;",
+              "        if(i == 8 && ShipPilotRace(Player()) != Maloc) continue;",
+              "        if(i == 9 && ShipPilotRace(Player()) != Peleng) continue;",
+              "        if(i == 10 && ShipPilotRace(Player()) != Fei) continue;",
+              "        if(i == 11 && ShipPilotRace(Player()) != Gaal) continue;",
               "",
               "        cost = GalaxyMoney(4);",
               "        cost = cost + (cost * i * 3) / 100;",
@@ -979,6 +1119,13 @@
               "{",
               "    if(i >= 5 && i <= 7) continue; //Нельзя привиться от лучевой болезни, ослепления, наркозависимости, вихревой контузии и мышечного растяжения",
               "    if(i == illness1 || i == illness2 || i == illness3) continue; //Пропускаем болезни, от которых игрок уже сделал прививки",
+              "        //Убираем болезни, которыми игрок не может никогда заразиться",
+              "        if(i == 2 && ShipPilotRace(Player()) == Maloc) continue;",
+              "        if(i == 3 && (ShipPilotRace(Player()) == Fei || ShipPilotRace(Player()) == Gaal)) continue;",
+              "        if(i == 8 && ShipPilotRace(Player()) != Maloc) continue;",
+              "        if(i == 9 && ShipPilotRace(Player()) != Peleng) continue;",
+              "        if(i == 10 && ShipPilotRace(Player()) != Fei) continue;",
+              "        if(i == 11 && ShipPilotRace(Player()) != Gaal) continue;",
               "",
               "    cost = tarr1['' + i];",
               "    tstr1 = CT('Illness.Illness.' + i + '.Name');",
@@ -1945,11 +2092,20 @@
               "",
               "        tstr1 = Format(CT('FormRuins.MC.Illnes.PlayerIll'), '<IllName'+'>', tarr1[i, 'Name'], '<Cost'+'>', tarr1[i, 'TreatmentCost']);",
               "        InjectAnswer('IllnessRemoveDialog', 'snap~' + tstr1, i);",
+              "        //Цену проверять мамка будет",
+              "        if(cost > ShipMoney(Player())) {",
+              "            AddDialogBlock('snap~' + tstr1,1);",
+              "            AddDialogBlock(tstr1,1);",
+              "        }",
               "    }",
               "",
               "    //Не забываем также предложить игроку хлебнуть урины",
               "    tstr1 = Format(CT('FormRuins.MC.Illnes.PlayerIllAll'), '<Cost'+'>', cost);",
+              "    //Цену проверять мамка будет",
               "    InjectAnswer('IllnessRemoveDialog', tstr1, -1);",
+              "    if(cost < ShipMoney(Player())) {",
+              "        AddDialogBlock(tstr1,1);",
+              "    }",
               "    //Ну и отказаться от лечения он тоже может, разумеется",
               "    tstr1 = CT('FormRuins.MC.Illnes.PlayerNo');",
               "    InjectAnswer('IllnessRemoveDialog', tstr1, -2);",
@@ -2078,6 +2234,33 @@
               "",
               "    check = 0;",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  154,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "cur_ship = GetTalkShip();",
+              "//Безаппеляционно портим отношения",
+              "RelationToRanger(cur_ship,Player(),0);",
+              "ShipGetBad(cur_ship,Player());",
+              "",
+              "//Вешаем на корабль пачку болячек",
+              "if(Rnd(0,2)) ShipHealthFactor(cur_ship,1,-1);",
+              "if(Rnd(0,2)) ShipHealthFactor(cur_ship,4,-1);",
+              "if(Rnd(0,2)) ShipHealthFactor(cur_ship,3,-1);",
+              "if(!Rnd(0,2)) ShipHealthFactor(cur_ship,6,-1);",
+              "if(!Rnd(0,2)) ShipHealthFactor(cur_ship,7,-1);",
+              "if(!Rnd(0,2)) ShipHealthFactor(cur_ship,8,-1);",
+              "",
+              "//Ставим перезарядку",
+              "PsionicCD = Rnd(2,5);"          
           ]        
         }      
       ],
@@ -2999,6 +3182,28 @@
           "Var.Type":  "Str",
           "Init":  "",
           "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "CurrentPlayerRace",
+          "Pos.x":  -100,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  150,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "PsionicCD",
+          "Pos.x":  120,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  155,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
         }      
       ]    
     }  
@@ -3837,6 +4042,27 @@
       "End":  104,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  151,
+      "End":  154,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  154,
+      "End":  152,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  152,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
   "Rect.Text":  
@@ -3957,7 +4183,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  11,
+  "BlockPar.EC.Total.Strings":  14,
   "BlockPar.EC":  
   [
     {
@@ -4003,6 +4229,18 @@
     {
       "#":  "140",
       "String":  "Ну хоть пробничек дайте! Что... не положено... Ну тогда пока"    
+    },
+    {
+      "#":  "141",
+      "String":  "Силой Богов, да снизойдёт на тебя их кара!"    
+    },
+    {
+      "#":  "142",
+      "String":  "Что? А-а-а-а! Что со мной?! Мне плохо!.. А-а-а-а!"    
+    },
+    {
+      "#":  "143",
+      "String":  "Покайся во грехах!"    
     }  
   ]
 }
