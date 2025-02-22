@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -400,
-  "ViewPos.y":  -455,
+  "ViewPos.x":  -1536,
+  "ViewPos.y":  -360,
   "ScriptName":  "Mod_ShuMercsHQ",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.txt",
@@ -7585,6 +7585,10 @@
               "    tstr2 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.MBPlayerAgainConditionNo');",
               "    tstr3 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.MBPlayerAgainConditionNoReAsk');",
               "    tint1 = 0;",
+              "}",
+              "",
+              "if(ShipType(GetShipRuins(Player())) != 'MB') {",
+              "    ManaanFlag = 1;",
               "}"          
           ]        
         },
@@ -7603,6 +7607,7 @@
               "}",
               "else {",
               "    tstr1 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.ManaanGovAnswer2');",
+              "    ManaanFlag = 1;",
               "}",
               "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.MBPlayerAsk3');"          
           ]        
@@ -7622,6 +7627,7 @@
               "}",
               "else {",
               "    tstr1 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.ManaanGovAnswer3');",
+              "    ManaanFlag = 1;",
               "}",
               "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.CreatingPlayerOrgDialogs.MBPlayerAsk4');"          
           ]        
@@ -9655,6 +9661,9 @@
               "    PlayerHQMainArray['Main', 'HQId'] = Id(cur_ruin);",
               "    //HullSpecial(cur_ruin, FindBonusByNameInCfg('ShuMercsHQ_PlayerMercHQLevel1'));",
               "    //HullType(cur_ruin, 9); //Меняем тип корпуса на акриновый",
+              "",
+              "    NewsAdd('Marshal says: governor is ' + Governor);",
+              "    NewsAdd('Marshal says: conditions are ' + BuildOwnBase_Condition);",
               "",
               "    if(Governor == 1) ItemOwner(ShipItems(cur_ruin, 0), Maloc);",
               "    else if(BuildOwnBase_Condition == 6) ItemOwner(ShipItems(cur_ruin, 0), Peleng);",
@@ -40563,7 +40572,7 @@
           "Parent":  -1,
           "#":  1105,
           "Var.Type":  "Int",
-          "Init":  "",
+          "Init":  "0",
           "Global":  false        
         },
         {

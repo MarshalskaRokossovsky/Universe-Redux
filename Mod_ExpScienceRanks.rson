@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -249,
-  "ViewPos.y":  -47,
+  "ViewPos.x":  -149,
+  "ViewPos.y":  -61,
   "ScriptName":  "Mod_ExpScienceRanks",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.txt",
@@ -576,6 +576,14 @@
           "Pos.y":  0,
           "Parent":  110,
           "#":  191        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "acrin_nahuy",
+          "Pos.x":  640,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  214        
         }      
       ],
       "Groups":      
@@ -1584,8 +1592,10 @@
               "        }",
               "",
               "        //AddDialogBlock(tstr1,2);",
-              "        InjectAnswer('acrin_1', tstr1, cur_bh_item);",
-              "        if(f) AddDialogBlock(tstr1,1);",
+              "        if(f) {",
+              "            InjectAnswer('acrin_nahuy', tstr1, cur_bh_item);",
+              "        }",
+              "        else InjectAnswer('acrin_1', tstr1, cur_bh_item);",
               "    }",
               "//}"          
           ]        
@@ -1763,8 +1773,8 @@
               "                        if(findsubstr(temp_str_2,'Detriment') == 1) temp_str = \"Дитраймент\";",
               "                    }",
               "",
-              "                    SFT('ExpScienceRanks logging '+temp_str_2);",
-              "                    SFT('ExpScienceRanks logging-2 '+temp_str);",
+              "                    //SFT('ExpScienceRanks logging '+temp_str_2);",
+              "                    //SFT('ExpScienceRanks logging-2 '+temp_str);",
               "                    InjectAnswer('acrin_2', temp_str, i);",
               "                }",
               "            }",
@@ -1884,13 +1894,13 @@
               "    if(j <= t_DefGenerator)",
               "    {",
               "        tstr1 = DeleteTags('<ItemFullName(cur_bh_item)>');",
-              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
+              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=20,150,20>(экипировано)</color>';",
               "    }",
               "    //Если предмет является оружием",
               "    else",
               "    {",
               "        tstr1 = DeleteTags('<ItemFullName(cur_bh_item) >' + ' ' + BonusName(EqSpecial(cur_bh_item)) + temp_str);",
-              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=255,0,0>(экипировано)</color>';",
+              "        if(ItemIsInUse(cur_bh_item)) tstr1 = tstr1 + ' <color=20,150,20>(экипировано)</color>';",
               "    }",
               "",
               "    InjectAnswer('deacrin', tstr1, cur_bh_item);",
@@ -5017,6 +5027,13 @@
       "Type":  "TGraphLink",
       "Begin":  213,
       "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  214,
+      "End":  45,
       "Nom":  0,
       "Arrow":  true    
     }  

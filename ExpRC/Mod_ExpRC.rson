@@ -3623,13 +3623,6 @@
     {
       "Type":  "TGraphLink",
       "Begin":  173,
-      "End":  175,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  173,
       "End":  174,
       "Nom":  0,
       "Arrow":  true    

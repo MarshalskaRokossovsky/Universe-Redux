@@ -2590,7 +2590,7 @@
           "Code.Type":  "Global",
           "Code":          
           [
-              "GCntRun(GScriptName) < round(CurTurn()/2500)+1"          
+              "GLastTurnRun(GScriptName) + 4000 < CurTurn()"          
           ]        
         },
         {

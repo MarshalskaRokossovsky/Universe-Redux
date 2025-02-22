@@ -1,3 +1,0 @@
-Script ^{
-    mod_spacejunk=Mods\AnotherMods\AMod_Spacejunk\DATA\Script\mod_spacejunk.scr
-}

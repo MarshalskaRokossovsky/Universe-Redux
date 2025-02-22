@@ -1,3 +1,0 @@
-ShuDomiks ^{
-    ShuDomiksKamikaze=1
-}

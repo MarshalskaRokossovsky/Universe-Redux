@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -355,
-  "ViewPos.y":  240,
+  "ViewPos.x":  -1019,
+  "ViewPos.y":  620,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -8535,11 +8535,11 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(KillFlag) tstr1 = \"<color=20,220,20>активен</color>\";",
-              "else tstr1 = \"<color=220,20,20>отключён</color>\";",
+              "if(KillFlag) tstr2 = \"<color=20,220,20>активен</color>\";",
+              "else tstr2 = \"<color=220,20,20>отключён</color>\";",
               "",
-              "if(DevFlag) tstr2 = \"<color=20,220,20>активен</color>\";",
-              "else tstr2 = \"<color=220,20,20>отключён</color>\";"          
+              "if(DevFlag) tstr1 = \"<color=20,220,20>активен</color>\";",
+              "else tstr1 = \"<color=220,20,20>отключён</color>\";"          
           ]        
         },
         {

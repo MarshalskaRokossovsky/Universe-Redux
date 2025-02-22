@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  183,
-  "ViewPos.y":  -335,
+  "ViewPos.x":  -452,
+  "ViewPos.y":  -167,
   "ScriptName":  "Mod_ShuMercs",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -2286,6 +2286,7 @@
               "    else ShipImproveItems(ship, RndObject(1, 3, ship));",
               "",
               "    ArrangeItems(ship);",
+              "    if(ShipMoney(ship) > GalaxyMoney(4)) ShipMoney(ship,GalaxyMoney(4));",
               "    //FreeAllHoldEquipment(ship);",
               "",
               "    result = ship;",
