@@ -1,0 +1,1443 @@
+{
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -56,
+  "ViewPos.y":  -158,
+  "ScriptName":  "PC_pla20",
+  "ScriptFileOut":  "c:\\PC_pla20.scr",
+  "ScriptTextOut":  "c:\\PC_pla20.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "planet",
+          "Pos.x":  360,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  9,
+          "Msg":  "Я согласен.",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "planet",
+          "Pos.x":  360,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  10,
+          "Msg":  "Я отказываюсь.",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "planet",
+          "Pos.x":  410,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  16,
+          "Msg":  "Рад был помочь.",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "planet",
+          "Pos.x":  680,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  32,
+          "Msg":  "Понятно...",
+          "AMsg.Num":  "3"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  8,
+          "Msg":  "<ShipName(Player())>, у меня горе! Мой любимый дядюшка, известный миллиардер, оказался на планете в системе, которую захватили доминаторы. Самое обидное в том, что это я уговорил его поехать на тамошние курорты, чтобы поправить пошатнувшееся здоровье... Откуда я мог знать, что он не успел закончить оформление завещания на меня, так как нотариус внезапно слег в больницу с острым приступом долбаранопатии.\r\n<ShipName(Player())>, мой, а теперь и ваш долг - помочь несчастному выбраться из той безвыходной ситуации, в которую он по своей врожденной тупости вляпался. Для этого я с помощью финансовой поддержки нашего бюджета подготовил спасательную операцию, главную роль в которой хочу поручить вам.\r\nНеобходимо отправиться в систему <Name(GalaxyStar(quest_star-1))>, захваченную доминаторами, и совершить посадку на планету <Name(IdToPlanet(quest_planet))>. На месте вас уже будет ждать робот, на котором нужно будет прорваться на территорию элитной клиники, где вы заберете моего дядю и вернетесь с ним к своему кораблю. Далее стартуете и возвращаетесь ко мне за вознаграждением.\r\nИтак, ваше решение?",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  15,
+          "Msg":  "БРАВО, <ShipName(Player())>! Ваш рейд вглубь территории противника стал новостью номер один. Отдельное спасибо за то, что смогли захватить уцелевших сотрудников санатория. Благодаря им  наша операция выглядит не как экстренная помощь миллиардеру за казенный счет, а как подвиг отважного рейнджера, которому надоела тупость военных и спецслужб. \r\nЗа проявленную смелость я награждаю вас особой наградой! Можете быть свободны, но далеко не уходите. Представители средств массовой информации уже ждут вас на пресс-конференции. Советую подумать о ПРАВИЛЬНЫХ ответах на неудобные вопросы.\r\nДа, за дядю - этого скрягу, отдельное спасибо.",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  630,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  31,
+          "Msg":  "Слушайте, <ShipName(Player())>, сейчас у нас все тихо и спокойно, хоть с коррупцией начинай бороться. Но это подорвет основы государственного строя, поэтому, для отвлечения внимания и создания дополнительного информационного повода было бы здорово, если бы поблизости от нас, в соседних системах, обосновались доминаторы. Пока их нет - у нас с вами ничего провернуть не получиться.",
+          "DMsg.Num":  "2"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogPlanet",
+          "Pos.x":  190,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  7        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogPlanetCancel",
+          "Pos.x":  560,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  33        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogReplace",
+          "Pos.x":  460,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  61        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogPlanetComplete",
+          "Pos.x":  190,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  63        
+        }      
+      ],
+      "Ethers":      
+      [
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  460,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  36,
+          "Ether.Type":  3,
+          "Unique":  "1264A558-3760-486E-8683-4020423D1DD0",
+          "Msg":  "Особое задание правителя планеты <Name(PlanetNew)> системы <Name(StarNew)>\r\n\r\nВызволить дядю заказчика с незаселенной планету <Name(IdToPlanet(quest_planet))> системы <Name(PlanetToStar(IdToPlanet(quest_planet)))>.\r\n\r\nКрайний срок - <GameDateTxtByTurn(CurTurn()+max_days)>.",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  710,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  43,
+          "Ether.Type":  5,
+          "Unique":  "1264A558-3760-486E-8683-4020423D1DD0",
+          "Msg":  "Задание провалено. Теперь на поддержку правителя планеты <Name(PlanetNew)> можно не рассчитывать.",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  620,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  45,
+          "Ether.Type":  5,
+          "Unique":  "1264A558-3760-486E-8683-4020423D1DD0",
+          "Msg":  "Время вышло, задание провалено. Теперь на поддержку правителя планеты <Name(PlanetNew)> можно не рассчитывать.",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  590,
+          "Parent":  -1,
+          "#":  47,
+          "Ether.Type":  4,
+          "Unique":  "1264A558-3760-486E-8683-4020423D1DD0",
+          "Msg":  "Задание выполнено, поддержка правителя планеты <Name(PlanetNew)> получена!",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  680,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  60,
+          "Ether.Type":  0,
+          "Unique":  "044BC606-48F3-46B5-B01F-7368FC24859F",
+          "Msg":  "Задание выполнено, можно возвращаться к заказчику на планету <Name(PlanetNew)> системы <Name(StarNew)>.",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  260,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  2,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  460,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "quest_planet=Id(FindPlanet(quest_star,'NotMaloc,NotPeleng,NotPeople,NotFei,NotGaal,NotKling,NotPirateClan',0,100));",
+              "quest_star=Id(quest_star);",
+              "AddDialogOverride('DialogPlanet',10)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  610,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  14,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PB_status=GRobotStatus;",
+              "GRobotStatus=0"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  540,
+          "Parent":  -1,
+          "#":  19,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "array_quest_statuses[script_num]=2;",
+              "khan_counter=khan_counter+1;",
+              "ShipOut(Player());",
+              "PB_status=4;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  390,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  20,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "AddDialogOverride('DialogPlanetComplete',10)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  21,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "counter=1;",
+              "while (counter<ArrayDim(array_script_names)){",
+              "if (array_chosen_planets[counter]==Id(PlanetNew)){script_num=counter;}",
+              "counter=counter+1;}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  360,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "request_dialog=0;",
+              "counter=1;",
+              "quest_star=0;",
+              "while (counter<GalaxyStars()){",
+              "if (StarOwner(StarNearbyStars(StarNew,counter))==1){",
+              "if (!StarBattle(StarNearbyStars(StarNew,counter))){",
+              "if (StarShips(StarNearbyStars(StarNew,counter))>8){",
+              "if (SectorVisible(StarToCon(StarNearbyStars(StarNew,counter)))){",
+              "if (!Terron()){quest_star=StarNearbyStars(StarNew,counter);counter=GalaxyStars();}",
+              "if (Terron()){",
+              "if (StarNearbyStars(StarNew,counter)!=ShipStar(Terron())){",
+              "quest_star=StarNearbyStars(StarNew,counter);counter=GalaxyStars();}}",
+              "}}}}",
+              "counter=counter+1;}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  28,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "AddDialogOverride('DialogPlanetCancel',10)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  34,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "quest_started=CurTurn();",
+              "array_quest_statuses[script_num]=1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  710,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  40,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "pb_params='62';//race and no bonuses",
+              "pb_params=pb_params+1;//diff",
+              "robots_location=\"Планета \"+Name(IdToPlanet(quest_planet))+\", система \"+Name(PlanetToStar(IdToPlanet(quest_planet)));",
+              "StartRobots('Sanatory.cmap',pb_start_text,pb_win_text,pb_lose_text,robots_location,pb_params);",
+              "PB_status=1"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  680,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  42,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "array_quest_statuses[script_num]=3;",
+              "ShipOut(Player());",
+              "ExtremalTakeOff()"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  44,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "array_quest_statuses[script_num]=3;",
+              "ShipOut(Player());"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  460,
+          "Pos.y":  90,
+          "Parent":  -1,
+          "#":  52,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//replace",
+              "AddDialogOverride('DialogReplace',10)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  660,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  58,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "pb_start_text=\"Центр информации курорта <Name(IdToPlanet(quest_planet))> приветствует Вас! Я - компьютерная личность, специально разработанная для помощи отдыхающим. <br>К сожалению, сейчас все санатории закрыты по причине нападения доминаторов. Если у вас есть возможность - улетайте, если нет - то примите мои искренние сочувствия, но не волнуйтесь. Долго страдать не придется. Скоро придут роботы доминаторов и прекратят ваши мучения. <br>Если вам скучно ждать одному, то рекомендую продвинуться к главному корпусу центрального санатория. По уточненным данным там еще остались выжившие.<br>Приятного вам дня!\";",
+              "pb_win_text=\"Зафиксировано резкое падение активности доминаторов. Вероятность успешного старта с планеты превышает 80%. Всем уцелевшим рекомендуется срочная эвакуация, если конечно есть, на чем покинуть это опасное для разумной жизни место.<br>Всего хорошего!\";",
+              "pb_lose_text=\"Поступила уточненная информация. Выживших на планете нет. <br>Всем спасибо за внимание!\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  62,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOut(Player());",
+              "request_dialog=1;",
+              "script_replace=1;",
+              "ScriptRun(StarNew,PlanetNew,'PC_pla01');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  64,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "locations=newarray(1)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  65,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if (!quest_started && ShipIsTakeoff(Player())){",
+              "ShipOut(Player());}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  710,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  71,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PB_status=1;",
+              "GRobotStatus=3"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  260,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  200,
+          "Parent":  -1,
+          "#":  4,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  260,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  290,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "GetShipPlanet(Player())==PlanetNew"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  580,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  13,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(PB_status==1) && (GRobotStatus>1)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  320,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  17,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "request_dialog && !script_replace"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  18,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PB_status==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  380,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  29,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!quest_star"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  30,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "quest_star"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  580,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  37,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GetShipPlanet(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  610,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  38,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Id(GetShipPlanet(Player()))==quest_planet"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  630,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  39,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!PB_status && !quest_failed && !GRobotStatus"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  650,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  41,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PB_status==3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  580,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  46,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "quest_started && !quest_failed && !PB_status && ((CurTurn()-quest_started)>max_days)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  400,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  48,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!DomiksDefeated()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  380,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  49,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DomiksDefeated()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  50,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ControlledSystems(1)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  380,
+          "Pos.y":  90,
+          "Parent":  -1,
+          "#":  51,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ControlledSystems(1)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  380,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  53,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "RobotSupport()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  360,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  54,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!RobotSupport()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  650,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  59,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "PB_status==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  680,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  69,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "RobotSupport()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  680,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  70,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!RobotSupport()"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  260,
+          "Pos.y":  320,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "counter",
+          "Pos.x":  360,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  11,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "PB_status",
+          "Pos.x":  360,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  12,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "script_num",
+          "Pos.x":  360,
+          "Pos.y":  320,
+          "Parent":  -1,
+          "#":  22,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "max_days",
+          "Pos.x":  360,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  23,
+          "Var.Type":  "Int",
+          "Init":  "90",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "locations",
+          "Pos.x":  300,
+          "Pos.y":  160,
+          "Parent":  -1,
+          "#":  24,
+          "Var.Type":  "Unknown",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "quest_star",
+          "Pos.x":  450,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "quest_planet",
+          "Pos.x":  450,
+          "Pos.y":  320,
+          "Parent":  -1,
+          "#":  26,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "quest_started",
+          "Pos.x":  450,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  35,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "pb_start_text",
+          "Pos.x":  750,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  55,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "pb_win_text",
+          "Pos.x":  750,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  56,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "pb_lose_text",
+          "Pos.x":  750,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  57,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "script_replace",
+          "Pos.x":  470,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  66,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "robots_location",
+          "Pos.x":  640,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  67,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "pb_params",
+          "Pos.x":  750,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  68,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "quest_failed",
+          "Pos.x":  580,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  72,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  10,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  5,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  5,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  31,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  34,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  34,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  41,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  42,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  42,
+      "End":  43,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  44,
+      "End":  45,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  47,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  49,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  48,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  50,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  51,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  50,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  51,
+      "End":  52,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  54,
+      "End":  52,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  59,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  59,
+      "End":  60,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  61,
+      "End":  62,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  54,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  53,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  53,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  53,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  30,
+      "End":  6,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  8,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  63,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  58,
+      "End":  69,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  69,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  58,
+      "End":  70,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  70,
+      "End":  71,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  46,
+      "End":  44,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  58,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "Rect.Text":  
+  [
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  438,
+      "Rect.Top":  77,
+      "Rect.Right":  472,
+      "Rect.Bottom":  112,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  17,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "73",
+      "String":  "Я согласен."    
+    },
+    {
+      "#":  "83",
+      "String":  "<0>, у меня горе! Мой любимый дядюшка, известный миллиардер, оказался на планете в системе, которую захватили доминаторы. Самое обидное в том, что это я уговорил его поехать на тамошние курорты, чтобы поправить пошатнувшееся здоровье... Откуда я мог знать, что он не успел закончить оформление завещания на меня, так как нотариус внезапно слег в больницу с острым приступом долбаранопатии.<br><1>, мой, а теперь и ваш долг - помочь несчастному выбраться из той безвыходной ситуации, в которую он по своей врожденной тупости вляпался. Для этого я с помощью финансовой поддержки нашего бюджета подготовил спасательную операцию, главную роль в которой хочу поручить вам.<br>Необходимо отправиться в систему <2>, захваченную доминаторами, и совершить посадку на планету <3>. На месте вас уже будет ждать робот, на котором нужно будет прорваться на территорию элитной клиники, где вы заберете моего дядю и вернетесь с ним к своему кораблю. Далее стартуете и возвращаетесь ко мне за вознаграждением.<br>Итак, ваше решение?"    
+    },
+    {
+      "#":  "84",
+      "String":  "БРАВО, <0>! Ваш рейд вглубь территории противника стал новостью номер один. Отдельное спасибо за то, что смогли захватить уцелевших сотрудников санатория. Благодаря им  наша операция выглядит не как экстренная помощь миллиардеру за казенный счет, а как подвиг отважного рейнджера, которому надоела тупость военных и спецслужб. <br>За проявленную смелость я награждаю вас особой наградой! Можете быть свободны, но далеко не уходите. Представители средств массовой информации уже ждут вас на пресс-конференции. Советую подумать о ПРАВИЛЬНЫХ ответах на неудобные вопросы.<br>Да, за дядю - этого скрягу, отдельное спасибо."    
+    },
+    {
+      "#":  "86",
+      "String":  "Я отказываюсь."    
+    },
+    {
+      "#":  "87",
+      "String":  "Рад был помочь."    
+    },
+    {
+      "#":  "88",
+      "String":  "Поступила уточненная информация. Выживших на планете нет. <br>Всем спасибо за внимание!"    
+    },
+    {
+      "#":  "89",
+      "String":  "Зафиксировано резкое падение активности доминаторов. Вероятность успешного старта с планеты превышает 80%. Всем уцелевшим рекомендуется срочная эвакуация, если конечно есть, на чем покинуть это опасное для разумной жизни место.<br>Всего хорошего!"    
+    },
+    {
+      "#":  "90",
+      "String":  "Центр информации курорта <0> приветствует Вас! Я - компьютерная личность, специально разработанная для помощи отдыхающим. <br>К сожалению, сейчас все санатории закрыты по причине нападения доминаторов. Если у вас есть возможность - улетайте, если нет - то примите мои искренние сочувствия, но не волнуйтесь. Долго страдать не придется. Скоро придут роботы доминаторов и прекратят ваши мучения. <br>Если вам скучно ждать одному, то рекомендую продвинуться к главному корпусу центрального санатория. По уточненным данным там еще остались выжившие.<br>Приятного вам дня!"    
+    },
+    {
+      "#":  "91",
+      "String":  "Время вышло, задание провалено. Теперь на поддержку правителя планеты <0> можно не рассчитывать."    
+    },
+    {
+      "#":  "92",
+      "String":  "Задание выполнено, можно возвращаться к заказчику на планету <0> системы <1>."    
+    },
+    {
+      "#":  "93",
+      "String":  "Задание провалено. Теперь на поддержку правителя планеты <0> можно не рассчитывать."    
+    },
+    {
+      "#":  "94",
+      "String":  ", система "    
+    },
+    {
+      "#":  "95",
+      "String":  "Планета "    
+    },
+    {
+      "#":  "96",
+      "String":  "Задание выполнено, поддержка правителя планеты <0> получена!"    
+    },
+    {
+      "#":  "97",
+      "String":  "Особое задание правителя планеты <0> системы <1><br><br>Вызволить дядю заказчика с незаселенной планету <2> системы <3>.<br><br>Крайний срок - <4>."    
+    },
+    {
+      "#":  "98",
+      "String":  "Понятно..."    
+    },
+    {
+      "#":  "99",
+      "String":  "Слушайте, <0>, сейчас у нас все тихо и спокойно, хоть с коррупцией начинай бороться. Но это подорвет основы государственного строя, поэтому, для отвлечения внимания и создания дополнительного информационного повода было бы здорово, если бы поблизости от нас, в соседних системах, обосновались доминаторы. Пока их нет - у нас с вами ничего провернуть не получиться."    
+    }  
+  ]
+}

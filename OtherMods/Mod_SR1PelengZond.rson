@@ -1,0 +1,3595 @@
+{
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -505,
+  "ViewPos.y":  -232,
+  "ScriptName":  "Mod_SR1PelengZond",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\OtherMods\\SR1PelengZond\\DATA\\Script\\Mod_SR1PelengZond.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\OtherMods\\SR1PelengZond\\DATA\\Script\\Mod_SR1PelengZond.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  810,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  12,
+          "Msg":  "Конечно, мне не нужны лишние проблемы.",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  13,
+          "Msg":  "Вот еще! Что упало, то пропало.",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Ладно, забирай свои пожитки.",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Не отдам, отстань от меня.",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  930,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  20,
+          "Msg":  "",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  53,
+          "Msg":  "Взрывной механизм? О чем это вы? Мне зонд кажется вполне безобидным.",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  55,
+          "Msg":  "И что мне теперь делать с этим зондом?",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  860,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  58,
+          "Msg":  "",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  940,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  104,
+          "Msg":  "",
+          "AMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  1000,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  105,
+          "Msg":  "",
+          "AMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  1080,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  150,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  1140,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  152,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "11"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  810,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  11,
+          "Msg":  "На связи представитель пеленгского правительства суперлайнер \"<ShortName(GroupToShip(Peleng))>\". Немедленно верните на место зонд, который только что подобрали, иначе мы будем вынуждены применить силу.",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  16,
+          "Msg":  "Ты не понимаешь, во что ввязываешься. Для твоей же пользы, верни зонд на место, иначе сильно пожалеешь.",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  810,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Так-то лучше",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  200,
+          "Parent":  -1,
+          "#":  30,
+          "Msg":  "Ты не понимаешь, во что ввязываешься! Выброси зонд, пока не пострадал!",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  960,
+          "Pos.y":  200,
+          "Parent":  -1,
+          "#":  31,
+          "Msg":  "Ты покушаешься на собственность пеленгского правительства, которое не терпит такого отношения. Если ты не прекратишь свои попытки, будешь уничтожен на месте.",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  990,
+          "Pos.y":  200,
+          "Parent":  -1,
+          "#":  32,
+          "Msg":  "Ты, похоже, совсем плохо соображаешь. Выброси зонд. И если еще раз возьмешь, то я открою огонь.",
+          "DMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1020,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  36,
+          "Msg":  "Я выполняю спецзадание и не заинтересован в диалоге. И не смей трогать мой зонд!",
+          "DMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  41,
+          "Msg":  "Ну, держись..",
+          "DMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  52,
+          "Msg":  "На связи научная база \"<ShortName(CurShip)>\", мы наблюдали за вашими действиями и выражаем вам благодарность за нейтрализацию пеленгского агента Шпика, который вел в нашей системе шпионскую деятельность. Мы не решались ликвидировать его сами, так как опасались, что он подорвет взрывной механизм зонда, а это угрожает безопасности нашей системы и базы.",
+          "DMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  720,
+          "Parent":  -1,
+          "#":  54,
+          "Msg":  "Управляемый разведзонд, который вы подобрали, начинен мощной взрывчаткой. При малейшей опасности агент должен был взорвать зонд. Странно, что он это не сделал - вероятно, недооценил угрозу с вашей стороны. ",
+          "DMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  56,
+          "Msg":  "Без Шпика у зонда скоро сработает взрывной механизм. Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество.",
+          "DMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  74,
+          "Msg":  "Наши поздравления! За ликвидацию вражеского шпиона и безопасную нейтрализацию разведзонда фэянским правительством вам вручается <GalaxyMoney(2,3)> cr.",
+          "DMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  82,
+          "Msg":  "Подверг нас опасности! Нехороший человек...",
+          "DMsg.Num":  "12"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1080,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  149,
+          "Msg":  "Кто здесь? А, это ты, <Player>! Ну ничего, сейчас мы и тобой займёмся!",
+          "DMsg.Num":  "13"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  1140,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  151,
+          "Msg":  "Рейнджер, не мешайте нам, у нас важное правительственное задание.",
+          "DMsg.Num":  "14"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "dPelengTalk",
+          "Pos.x":  850,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  10        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "dBaseTalk",
+          "Pos.x":  860,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  49        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "dWarriorsTalk",
+          "Pos.x":  1080,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  146        
+        }      
+      ],
+      "Ethers":      
+      [
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  91,
+          "Ether.Type":  3,
+          "Unique":  "CA27AECF-033D-47F8-ACAE-C7F7BF607914",
+          "Msg":  "Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество.",
+          "Ship1":  "GroupToShip(Base)",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  92,
+          "Ether.Type":  4,
+          "Unique":  "CA27AECF-033D-47F8-ACAE-C7F7BF607914",
+          "Msg":  "Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество.",
+          "Ship1":  "GroupToShip(Base)",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  93,
+          "Ether.Type":  5,
+          "Unique":  "CA27AECF-033D-47F8-ACAE-C7F7BF607914",
+          "Msg":  "Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество.",
+          "Ship1":  "GroupToShip(Base)",
+          "Ship2":  "",
+          "Ship3":  ""        
+        },
+        {
+          "Type":  "TEther",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  780,
+          "Parent":  -1,
+          "#":  97,
+          "Ether.Type":  5,
+          "Unique":  "CA27AECF-033D-47F8-ACAE-C7F7BF607914",
+          "Msg":  "Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество.",
+          "Ship1":  "",
+          "Ship2":  "",
+          "Ship3":  ""        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "Base",
+          "Pos.x":  280,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  3,
+          "Owner":  17,
+          "Group.Type":  1,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  "SB"        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "PlayerGroup",
+          "Pos.x":  120,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "Peleng",
+          "Pos.x":  450,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  5,
+          "Owner":  5,
+          "Group.Type":  33,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  1,
+          "CargoHook":  7,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "2.5",
+          "StrengthMax":  "3",
+          "Ruins":  ""        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "Defenders",
+          "Pos.x":  450,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  137,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  0,
+          "CntShipMax":  0,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Items":      
+      [
+        {
+          "Type":  "TItem",
+          "Name":  "Zond",
+          "Pos.x":  450,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  9,
+          "Class":  4,
+          "Item.Type":  0,
+          "Size":  10,
+          "Level":  1,
+          "Radius":  150,
+          "Owner":  6,
+          "Useless":  "OperatedProbe"        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  21,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DropScriptItem(Player(),Zond);",
+              "vPelengTalkState=1;",
+              "vBeginTurn=CurTurn();",
+              "vScript02Activated=1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  23,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkPelengTimesCnt=vTalkPelengTimesCnt+1"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  28,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkRnd=Rnd(0,1000)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  980,
+          "Pos.y":  360,
+          "Parent":  -1,
+          "#":  40,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState=2"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  490,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  43,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dialog(dPelengTalk,Peleng)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  45,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOut(Player());",
+              "ShipOut(GroupToShip(Peleng));",
+              "ShipOut(GroupToShip(Base));",
+              "Exit;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  520,
+          "Parent":  -1,
+          "#":  48,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dialog(dBaseTalk,Base)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  900,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  57,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState=2;",
+              "vBeginTurn=CurTurn();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  61,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemDestroy(Zond,2)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  390,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  69,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DropScriptItem(CurShip,Zond)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  70,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBeginTurn=CurTurn()"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  1040,
+          "Pos.y":  700,
+          "Parent":  -1,
+          "#":  75,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player(),ShipMoney(Player())+GalaxyMoney(2,3));",
+              "ChangeGlobalRelationsShips(Player(),CurShip,2,50,12415,31);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  83,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemDestroy(Zond,2)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -190,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  89,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(GRunFrom==3) {",
+              "    if(GalaxyTechLevel() > 2) {",
+              "        if((CurTurn()-GLastTurnRun(GScriptName,0))>1030) {",
+              "            GRun();",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  98,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState=3"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  810,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  101,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "script02_Run=script02_Run+1"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  109,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ChangeGlobalRelationsShips(Player(),GroupToShip(Peleng),0,0,ffffh,ffffh);",
+              "ShipSetBad(GroupToShip(Peleng),Player());"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  490,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  119,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBeginTurn=CurTurn()"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  121,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dialog(dPelengTalk,Peleng)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  660,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  125,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ChangeGlobalRelationsShips(Player(),GroupToShip(Peleng),0,0,ffffh,ffffh)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  128,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemDestroy(Zond,1)"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -250,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  130,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "function PelengActcode() {",
+              "    if(ScriptItemActionType(t_OnStep)) exit;",
+              "    PelengWasAttackedFlag = 1;",
+              "    ShipSetBad(ScriptItemActShip(),ScriptItemActObject1());",
+              "}",
+              "",
+              "SetName(GroupToShip(Peleng),\"Шпик\");",
+              "vBeginTurn=CurTurn();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  720,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  133,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "AllShipOut();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -130,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  136,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(CurTurn() - vBeginTurn == 30) {",
+              "    if(GroupCount(Peleng) && GroupCount(Base)) {",
+              "        for(i=0;i<3;i=i+1) {",
+              "            tdwd = BuyWarrior(NearCivilPlanet(GroupToShip(Base)));",
+              "            ShipJoin(Defenders,tdwd);",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  155,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!GetShipPlanet(CurShip)) {",
+              "    OrderLanding(CurShip,NearCivilPlanet(CurShip));",
+              "}",
+              "else {",
+              "    OrderLock(CurShip,1);",
+              "    ShipDestroy(CurShip);",
+              "}"          
+          ]        
+        }      
+      ],
+      "Places":      
+      [
+        {
+          "Type":  "TPlace",
+          "Name":  "ZondPlace",
+          "Pos.x":  280,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  86,
+          "Place.Type":  4,
+          "Angle":  "0",
+          "Dist":  "0.5",
+          "Radius":  50,
+          "Obj1":  9,
+          "Obj2":  -1        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "Planet1",
+          "Pos.x":  280,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  2,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  120,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  1,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        },
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  120,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  99,
+          "Count":  1,
+          "Owner":  17,
+          "Ship.Type":  1,
+          "Player":  false,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  "SB"        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "Star1",
+          "Pos.x":  280,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  true,
+          "NoComeKling":  true        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  15,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkPelengTimesCnt==0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  850,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  24,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  890,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  25,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkPelengTimesCnt>0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1020,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  26,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1020,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!(ItemIn(Zond,Player()))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  930,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  33,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkRnd<330"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  960,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  34,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(vTalkRnd>=330) && (vTalkRnd<660)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  990,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  35,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vTalkRnd>=660"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  37,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  39,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  410,
+          "Parent":  -1,
+          "#":  42,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  47,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!CountIn(Peleng)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  860,
+          "Pos.y":  630,
+          "Parent":  -1,
+          "#":  50,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  59,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  60,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(CurTurn()-vBeginTurn)>5"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  430,
+          "Parent":  -1,
+          "#":  62,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  63,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vScript02Activated==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  170,
+          "Pos.y":  470,
+          "Parent":  -1,
+          "#":  64,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  170,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  65,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ShipInStar(Player(),Star1)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  170,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  66,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  390,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  67,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,CurShip)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  390,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  68,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dist(GroupToShip(Base),CurShip)<150"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  470,
+          "Parent":  -1,
+          "#":  71,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  970,
+          "Pos.y":  630,
+          "Parent":  -1,
+          "#":  72,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  73,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!Hit(GroupToShip(Base))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  76,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Hit(CurShip)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  77,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemExist(Zond)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  78,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!Hit(CurShip)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  79,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "(CurTurn()-vBeginTurn)>10"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  80,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  660,
+          "Parent":  -1,
+          "#":  81,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Hit(GroupToShip(Base))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  85,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,GroupToShip(Peleng))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  87,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  480,
+          "Parent":  -1,
+          "#":  88,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  820,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  90,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  94,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!CountIn(Base)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  170,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  95,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemExist(Zond)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  96,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vBaseTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  102,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dialog(dBaseTalk,Base)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  330,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  103,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Dialog(dBaseTalk,Base)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1000,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  106,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  940,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  107,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  290,
+          "Pos.y":  750,
+          "Parent":  -1,
+          "#":  108,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemExist(Zond)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  290,
+          "Pos.y":  790,
+          "Parent":  -1,
+          "#":  110,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "CountIn(Peleng)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  560,
+          "Parent":  -1,
+          "#":  113,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,GroupToShip(Peleng))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  720,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  115,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  116,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  570,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  117,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "vPelengTalkState==2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  118,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  490,
+          "Pos.y":  620,
+          "Parent":  -1,
+          "#":  120,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  720,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  122,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Hit()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  123,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Hit()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  490,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  124,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Hit()"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  170,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  126,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  127,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ShipInStar(Player(),Star1)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  129,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EtherState('CA27AECF-033D-47F8-ACAE-C7F7BF607914')==3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  540,
+          "Pos.y":  410,
+          "Parent":  -1,
+          "#":  131,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!Hit(CurShip) && PelengWasAttackedFlag"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  600,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  132,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!Hit(CurShip) && PelengWasAttackedFlag"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  720,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  135,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!PelengWasAttackedFlag"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  141,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!GroupCount(Peleng)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  143,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemExist(Zond)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  590,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  144,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1080,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  147,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "RelationToShip(GetTalkShip(),Player()) < 10"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  1140,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  148,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "RelationToShip(GetTalkShip(),Player()) > 9"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  153,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ItemIn(Zond,Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  154,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ItemIn(Zond,GroupShip(Defenders,0)) || ItemIn(Zond,GroupShip(Defenders,1)) || ItemIn(Zond,GroupShip(Defenders,2))"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "PlayerState",
+          "Pos.x":  120,
+          "Pos.y":  370,
+          "Parent":  -1,
+          "#":  6,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "BaseState",
+          "Pos.x":  280,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  7,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "PelengState",
+          "Pos.x":  450,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  8,
+          "Move":  2,
+          "MoveObj":  3,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "dPelengTalk",
+          "OnActCode":  "[t_OnTakingDamageEn,t_OnTakingDamageMi,t_OnTakingDamageSp,t_OnStep|0]\r\nPelengActcode();",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "AttackPlayer",
+          "Pos.x":  600,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  38,
+          "Move":  2,
+          "MoveObj":  4,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  4            
+            }          
+          ],
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "dPelengTalk",
+          "OnActCode":  "dPelengTalk",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "TakeZond",
+          "Pos.x":  600,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  84,
+          "Move":  1,
+          "MoveObj":  86,
+          "Attack.Count":  0,
+          "TakeItem":  9,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "PelengState2",
+          "Pos.x":  490,
+          "Pos.y":  580,
+          "Parent":  -1,
+          "#":  111,
+          "Move":  2,
+          "MoveObj":  3,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  4            
+            }          
+          ],
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "dPelengTalk",
+          "OnActCode":  "dPelengTalk",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "TakeZond2",
+          "Pos.x":  720,
+          "Pos.y":  560,
+          "Parent":  -1,
+          "#":  112,
+          "Move":  1,
+          "MoveObj":  86,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  4            
+            }          
+          ],
+          "TakeItem":  9,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "AttackPlayer2",
+          "Pos.x":  600,
+          "Pos.y":  670,
+          "Parent":  -1,
+          "#":  114,
+          "Move":  2,
+          "MoveObj":  4,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  4            
+            }          
+          ],
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "dPelengTalk",
+          "OnActCode":  "dPelengTalk",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "DefendRuin",
+          "Pos.x":  560,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  138,
+          "Move":  2,
+          "MoveObj":  5,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  5            
+            }          
+          ],
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "Return",
+          "Pos.x":  560,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  142,
+          "Move":  5,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "TakeZond3",
+          "Pos.x":  670,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  145,
+          "Move":  1,
+          "MoveObj":  86,
+          "Attack.Count":  0,
+          "TakeItem":  9,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "vPelengTalkState",
+          "Pos.x":  -360,
+          "Pos.y":  560,
+          "Parent":  -1,
+          "#":  14,
+          "Var.Type":  "Int",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "vTalkPelengTimesCnt",
+          "Pos.x":  -360,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  22,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "vTalkRnd",
+          "Pos.x":  -360,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  29,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "vBeginTurn",
+          "Pos.x":  -360,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  44,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "vScript02Activated",
+          "Pos.x":  -360,
+          "Pos.y":  390,
+          "Parent":  -1,
+          "#":  46,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "vBaseTalkState",
+          "Pos.x":  -360,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  51,
+          "Var.Type":  "Int",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "script02_Run",
+          "Pos.x":  -190,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  100,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  true        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "PelengWasAttackedFlag",
+          "Pos.x":  -190,
+          "Pos.y":  440,
+          "Parent":  -1,
+          "#":  134,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd",
+          "Pos.x":  -190,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  139,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "i",
+          "Pos.x":  -110,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  140,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  3,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  5,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  6,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  3,
+      "End":  7,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  5,
+      "End":  8,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  11,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  24,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  33,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  34,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  34,
+      "End":  31,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  32,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  30,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  30,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  32,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  36,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  41,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  42,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  50,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  50,
+      "End":  52,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  52,
+      "End":  53,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  53,
+      "End":  54,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  54,
+      "End":  55,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  55,
+      "End":  56,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  55,
+      "End":  57,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  56,
+      "End":  58,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  59,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  62,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  62,
+      "End":  47,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  37,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  64,
+      "End":  65,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  65,
+      "End":  66,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  66,
+      "End":  61,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  5,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  67,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  67,
+      "End":  68,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  68,
+      "End":  69,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  71,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  72,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  72,
+      "End":  73,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  73,
+      "End":  74,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  59,
+      "End":  77,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  77,
+      "End":  78,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  63,
+      "End":  79,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  80,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  80,
+      "End":  63,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  72,
+      "End":  81,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  81,
+      "End":  82,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  77,
+      "End":  76,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  60,
+      "End":  83,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  43,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  70,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  25,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  42,
+      "End":  84,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  84,
+      "End":  85,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  85,
+      "End":  8,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  86,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  71,
+      "End":  87,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  87,
+      "End":  70,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  59,
+      "End":  88,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  88,
+      "End":  60,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  55,
+      "End":  90,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  90,
+      "End":  91,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  94,
+      "End":  96,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  96,
+      "End":  95,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  99,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  101,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  78,
+      "End":  102,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  76,
+      "End":  103,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  82,
+      "End":  104,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  74,
+      "End":  105,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  105,
+      "End":  75,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  105,
+      "End":  106,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  106,
+      "End":  92,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  104,
+      "End":  98,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  105,
+      "End":  98,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  104,
+      "End":  107,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  107,
+      "End":  93,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  103,
+      "End":  102,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  108,
+      "End":  109,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  110,
+      "End":  108,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  112,
+      "End":  113,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  113,
+      "End":  111,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  114,
+      "End":  115,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  115,
+      "End":  112,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  116,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  116,
+      "End":  114,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  114,
+      "End":  117,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  117,
+      "End":  118,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  118,
+      "End":  119,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  120,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  120,
+      "End":  119,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  120,
+      "End":  121,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  80,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  67,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  122,
+      "End":  112,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  123,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  123,
+      "End":  114,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  124,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  124,
+      "End":  111,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  124,
+      "End":  125,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  123,
+      "End":  125,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  122,
+      "End":  125,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  66,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  126,
+      "End":  45,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  127,
+      "End":  128,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  127,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  108,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  79,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  102,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  66,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  95,
+      "End":  129,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  129,
+      "End":  97,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  95,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  108,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  102,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  79,
+      "End":  126,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  131,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  131,
+      "End":  84,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  84,
+      "End":  132,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  132,
+      "End":  133,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  84,
+      "End":  135,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  135,
+      "End":  122,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  137,
+      "End":  2,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  137,
+      "End":  138,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  138,
+      "End":  141,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  138,
+      "End":  143,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  143,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  138,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  144,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  146,
+      "End":  147,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  146,
+      "End":  148,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  147,
+      "End":  149,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  149,
+      "End":  150,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  151,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  151,
+      "End":  152,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  141,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  153,
+      "End":  145,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  141,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  145,
+      "End":  154,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  154,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  145,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  145,
+      "End":  143,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  142,
+      "End":  155,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "Rect.Text":  
+  [
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  -375,
+      "Rect.Top":  115,
+      "Rect.Right":  -146,
+      "Rect.Bottom":  176,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Код инициализации переменных",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  -376,
+      "Rect.Top":  487,
+      "Rect.Right":  -146,
+      "Rect.Bottom":  540,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Переменная состояния разговора\r\nс пеленгом",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  -377,
+      "Rect.Top":  613,
+      "Rect.Right":  -143,
+      "Rect.Bottom":  665,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Сколько раз поговорили с пеленгом\r\n",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  -25,
+      "Rect.Top":  13,
+      "Rect.Right":  525,
+      "Rect.Bottom":  92,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Игрок влетает в систему Star1 и это служит началом сценария.",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  24,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "0",
+      "String":  "Шпик"    
+    },
+    {
+      "#":  "10",
+      "String":  "Ну, держись.."    
+    },
+    {
+      "#":  "11",
+      "String":  "На связи научная база \"<0>\", мы наблюдали за вашими действиями и выражаем вам благодарность за нейтрализацию пеленгского агента Шпика, который вел в нашей системе шпионскую деятельность. Мы не решались ликвидировать его сами, так как опасались, что он подорвет взрывной механизм зонда, а это угрожает безопасности нашей системы и базы."    
+    },
+    {
+      "#":  "12",
+      "String":  "Управляемый разведзонд, который вы подобрали, начинен мощной взрывчаткой. При малейшей опасности агент должен был взорвать зонд. Странно, что он это не сделал - вероятно, недооценил угрозу с вашей стороны. "    
+    },
+    {
+      "#":  "13",
+      "String":  "Без Шпика у зонда скоро сработает взрывной механизм. Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество."    
+    },
+    {
+      "#":  "14",
+      "String":  "Наши поздравления! За ликвидацию вражеского шпиона и безопасную нейтрализацию разведзонда фэянским правительством вам вручается <0> cr."    
+    },
+    {
+      "#":  "15",
+      "String":  "Подверг нас опасности! Нехороший человек..."    
+    },
+    {
+      "#":  "16",
+      "String":  "Конечно, мне не нужны лишние проблемы."    
+    },
+    {
+      "#":  "17",
+      "String":  "Вот еще! Что упало, то пропало."    
+    },
+    {
+      "#":  "18",
+      "String":  "Ладно, забирай свои пожитки."    
+    },
+    {
+      "#":  "19",
+      "String":  "Не отдам, отстань от меня."    
+    },
+    {
+      "#":  "2",
+      "String":  "Вам следует отвезти зонд подальше от базы и проследить, чтобы она не пострадала от взрыва. Мы будем очень благодарны вам за подобное сотрудничество."    
+    },
+    {
+      "#":  "20",
+      "String":  "Взрывной механизм? О чем это вы? Мне зонд кажется вполне безобидным."    
+    },
+    {
+      "#":  "21",
+      "String":  "И что мне теперь делать с этим зондом?"    
+    },
+    {
+      "#":  "22",
+      "String":  "Кто здесь? А, это ты, <Player>! Ну ничего, сейчас мы и тобой займёмся!"    
+    },
+    {
+      "#":  "23",
+      "String":  "Рейнджер, не мешайте нам, у нас важное правительственное задание."    
+    },
+    {
+      "#":  "24",
+      "String":  "Конец связи"    
+    },
+    {
+      "#":  "3",
+      "String":  "На связи представитель пеленгского правительства суперлайнер \"<0>\". Немедленно верните на место зонд, который только что подобрали, иначе мы будем вынуждены применить силу."    
+    },
+    {
+      "#":  "4",
+      "String":  "Ты не понимаешь, во что ввязываешься. Для твоей же пользы, верни зонд на место, иначе сильно пожалеешь."    
+    },
+    {
+      "#":  "5",
+      "String":  "Так-то лучше"    
+    },
+    {
+      "#":  "6",
+      "String":  "Ты не понимаешь, во что ввязываешься! Выброси зонд, пока не пострадал!"    
+    },
+    {
+      "#":  "7",
+      "String":  "Ты покушаешься на собственность пеленгского правительства, которое не терпит такого отношения. Если ты не прекратишь свои попытки, будешь уничтожен на месте."    
+    },
+    {
+      "#":  "8",
+      "String":  "Ты, похоже, совсем плохо соображаешь. Выброси зонд. И если еще раз возьмешь, то я открою огонь."    
+    },
+    {
+      "#":  "9",
+      "String":  "Я выполняю спецзадание и не заинтересован в диалоге. И не смей трогать мой зонд!"    
+    }  
+  ]
+}
