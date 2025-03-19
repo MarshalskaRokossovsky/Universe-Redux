@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  283,
-  "ViewPos.y":  409,
+  "ViewPos.x":  -587,
+  "ViewPos.y":  270,
   "ScriptName":  "Mod_RevElection",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevElection\\DATA\\Script\\Mod_RevElection.txt",
@@ -3831,6 +3831,8 @@
           [
               "if(!ItemIn(iCapsule,Player()) && !vCapsule) {",
               "    AddPlanetNews(\"На планете <Name(PlanetS)> сегодня подвели итоги выборов президента планеты. Больше всего голосов набрал <vName>, однако скептики считают, что результаты подтасованы.\");",
+              "    PlanetGov(PlanetS,1);",
+              "    PlanetEco(PlanetS,max(PlanetEco(PlanetS)-1,0));",
               "}",
               "else {",
               "    AddPlanetNews(\"На планете <Name(PlanetS)> сегодня подвели итоги выборов президента планеты. Больше всего голосов набрал <vName>, однако скептики считают, что результаты подтасованы. Впрочем, это уже неважно, ведь самого кандидата так и не смогли найти. Правительство планеты приняло решение о подготовке перевыборов ввиду неявки победителя выборов.\");",

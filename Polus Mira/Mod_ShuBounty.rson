@@ -1993,6 +1993,15 @@
               "    if(!Rnd(0,6)) ArrayAdd(tarr1,  -1, 'Plasm');",
               "    if(!Rnd(0,8)) ArrayAdd(tarr1,  -1, 'Plasm');",
               "}",
+              "if(SR1GovGuestsInit) {",
+              "    ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    if(!Rnd(0,2)) ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    if(!Rnd(0,6)) ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    if(!Rnd(0,8)) ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "    if(!Rnd(0,12)) ArrayAdd(tarr1,  -1, 'Usl_91');",
+              "}",
               "tint1 = 7; //Стартовый шанс на дроп очередного уникального предмета на незаселёнку",
               "",
               "if(CurrentMods('Expansion\\ExpTC')) check = 1;",
@@ -4275,7 +4284,7 @@
           "Code":          
           [
               "if(cur_ruin_type == 'BK') tstr1 = \"удвоенной\";",
-              "else \"полуторной\";"          
+              "else tstr1 = \"полуторной\";"          
           ]        
         }      
       ],

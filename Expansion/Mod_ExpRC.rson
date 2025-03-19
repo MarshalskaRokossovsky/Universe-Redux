@@ -323,7 +323,7 @@
         },
         {
           "Type":  "TDialogAnswer",
-          "Name":  "",
+          "Name":  "restart",
           "Pos.x":  -60,
           "Pos.y":  360,
           "Parent":  -1,
@@ -334,22 +334,12 @@
         {
           "Type":  "TDialogAnswer",
           "Name":  "restart",
-          "Pos.x":  -60,
-          "Pos.y":  450,
-          "Parent":  -1,
-          "#":  164,
-          "Msg":  "",
-          "AMsg.Num":  "32"        
-        },
-        {
-          "Type":  "TDialogAnswer",
-          "Name":  "restart",
           "Pos.x":  -150,
           "Pos.y":  360,
           "Parent":  -1,
-          "#":  174,
+          "#":  173,
           "Msg":  "На сегодня с покупками всё!",
-          "AMsg.Num":  "33"        
+          "AMsg.Num":  "32"        
         },
         {
           "Type":  "TDialogAnswer",
@@ -357,9 +347,9 @@
           "Pos.x":  -120,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  175,
+          "#":  174,
           "Msg":  "Что же, я бы не отказался от ещё одного микромодуля!",
-          "AMsg.Num":  "34"        
+          "AMsg.Num":  "33"        
         }      
       ],
       "DialogMessages":      
@@ -640,7 +630,7 @@
           "Pos.x":  -150,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  173,
+          "#":  172,
           "Msg":  "<str0>",
           "DMsg.Num":  "27"        
         }      
@@ -749,7 +739,7 @@
           "Pos.x":  -150,
           "Pos.y":  270,
           "Parent":  -1,
-          "#":  165        
+          "#":  164        
         }      
       ],
       "Groups":      
@@ -1846,7 +1836,7 @@
               "",
               "    //InjectAnswer('RecieveMM',str1,i);",
               "",
-              "    if(RangerBaseNodes(Player()) > k && RangerBaseNodes(Player()) > 1) InjectAnswer('RecieveMM',str1,i);",
+              "    if(RangerBaseNodes(Player()) >= k && RangerBaseNodes(Player()) > 1) InjectAnswer('RecieveMM',str1,i);",
               "}",
               "",
               "//Собираем строчки для подстановки",
@@ -1873,7 +1863,7 @@
           "Pos.x":  -150,
           "Pos.y":  300,
           "Parent":  -1,
-          "#":  172,
+          "#":  171,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2669,7 +2659,7 @@
           "Pos.x":  670,
           "Pos.y":  400,
           "Parent":  -1,
-          "#":  166,
+          "#":  165,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2680,7 +2670,7 @@
           "Pos.x":  670,
           "Pos.y":  420,
           "Parent":  -1,
-          "#":  167,
+          "#":  166,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2691,7 +2681,7 @@
           "Pos.x":  670,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  168,
+          "#":  167,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2702,7 +2692,7 @@
           "Pos.x":  670,
           "Pos.y":  460,
           "Parent":  -1,
-          "#":  169,
+          "#":  168,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2713,7 +2703,7 @@
           "Pos.x":  670,
           "Pos.y":  480,
           "Parent":  -1,
-          "#":  170,
+          "#":  169,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2724,7 +2714,7 @@
           "Pos.x":  670,
           "Pos.y":  500,
           "Parent":  -1,
-          "#":  171,
+          "#":  170,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2735,7 +2725,7 @@
           "Pos.x":  670,
           "Pos.y":  40,
           "Parent":  -1,
-          "#":  176,
+          "#":  175,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -3615,36 +3605,29 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  163,
-      "End":  164,
+      "Begin":  172,
+      "End":  173,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  173,
-      "End":  174,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  175,
+      "Begin":  174,
       "End":  159,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  165,
-      "End":  172,
+      "Begin":  164,
+      "End":  171,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  172,
-      "End":  173,
+      "Begin":  171,
+      "End":  172,
       "Nom":  0,
       "Arrow":  true    
     }  

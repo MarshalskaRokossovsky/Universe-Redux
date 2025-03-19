@@ -6491,7 +6491,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "temp_int < ShipMoney(Player())"          
+              "temp_int > ShipMoney(Player())"          
           ]        
         },
         {

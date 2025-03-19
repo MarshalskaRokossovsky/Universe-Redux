@@ -2198,6 +2198,12 @@
               "            }",
               "        }",
               "",
+              "        //А ещё удаляем прививки",
+              "        if(~ShipFindCustomShipInfoByType(Player(), 'EvoMC_Vaccination'))",
+              "        {",
+              "            ShipDeleteCustomShipInfo(Player(), 'EvoMC_Vaccination');",
+              "        }",
+              "",
               "        CurrentPlayerRace_Global = ShipPilotRace(Player());",
               "    }",
               "}"          

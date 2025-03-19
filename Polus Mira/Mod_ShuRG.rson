@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  625,
-  "ViewPos.y":  -22,
+  "ViewPos.x":  597,
+  "ViewPos.y":  193,
   "ScriptName":  "Mod_ShuRG",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRG\\DATA\\Script\\Mod_ShuRG.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRG\\DATA\\Script\\Mod_ShuRG.txt",
@@ -1655,6 +1655,17 @@
               "if(CurrentMods('Reflection\\RefReturnNPCWin')) {",
               "    if(GetValueFromScript('Mod_RefReturnNPCWin','TerronProg') == 1 || GetValueFromScript('Mod_RefReturnNPCWin','KellerProg') == 1 || GetValueFromScript('Mod_RefReturnNPCWin','BlazerProg') == 1) {",
               "        AddDialogInject('ProgrammsDial', \"Кстати, наши спецы смогли раздобыть кой-какие программки Коалиции перед тем, как она совсем рассыпалась. Если интересует...\",\"Что за программы?\",1);",
+              "    }",
+              "}",
+              "if(CurrentMods('Kotyanka\\Cat_ZelPirates')) {",
+              "    if(ShipOnSidePirateClan(Player())) {",
+              "        if(GetValueFromScript('Cat_ZelPirates','accepted')) {",
+              "            if(GetShipPirateRank(Player()) == 7) {",
+              "                InjectAnswer('Cat_ZelPirates:Baron',\"И ещё асательно наших пиратиков...\",1);",
+              "            }",
+              "            AddDialogInject('Cat_ZelPirates:Verbovka2', '', \"Мне нужен доступ к вашей таблице в Гаалакселе\", 5);",
+              "        }",
+              "        else AddDialogInject('Cat_ZelPirates:Begin', '', \"Дела в баре сейчас совсем кислые, не с кем выпить, где все наши бравые бродяги?\", 5);",
               "    }",
               "}"          
           ]        
@@ -4028,7 +4039,7 @@
       "fsUnderline":  false    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  58,
+  "BlockPar.EC.Total.Strings":  61,
   "BlockPar.EC":  
   [
     {
@@ -4254,6 +4265,18 @@
     {
       "#":  "75",
       "String":  "Кстати, наши спецы смогли раздобыть кой-какие программки Коалиции перед тем, как она совсем рассыпалась. Если интересует..."    
+    },
+    {
+      "#":  "76",
+      "String":  "Дела в баре сейчас совсем кислые, не с кем выпить, где все наши бравые бродяги?"    
+    },
+    {
+      "#":  "77",
+      "String":  "Мне нужен доступ к вашей таблице в Гаалакселе"    
+    },
+    {
+      "#":  "78",
+      "String":  "И ещё асательно наших пиратиков..."    
     },
     {
       "#":  "8",

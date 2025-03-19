@@ -1530,7 +1530,7 @@
               "    cur_bh_item=ShipArts(Player(),i);",
               "    if(ItemType(cur_bh_item)==t_ArtefactTranclucator)continue;",
               "    if(ItemType(cur_bh_item)==t_ArtefactBomb)continue;",
-              "    if(ItemType(cur_bh_item)<t_ArtefactHull)continue;",
+              "    if(ItemType(cur_bh_item)==t_Artefact2)continue;",
               "    if(ItemType(cur_bh_item)==t_ArtefactTransmitter)continue;",
               "    if(ItemType(cur_bh_item)==t_ArtBlackHole)continue;",
               "    if(ItemType(cur_bh_item)==t_ArtDefToArms1)continue;",

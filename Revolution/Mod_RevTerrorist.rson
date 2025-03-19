@@ -17,7 +17,7 @@
           "Pos.x":  1150,
           "Pos.y":  390,
           "Parent":  -1,
-          "#":  43,
+          "#":  42,
           "Msg":  "<tStr2>",
           "AMsg.Num":  "0"        
         },
@@ -27,7 +27,7 @@
           "Pos.x":  1170,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  44,
+          "#":  43,
           "Msg":  "<tStr3>",
           "AMsg.Num":  "1"        
         },
@@ -37,7 +37,7 @@
           "Pos.x":  1150,
           "Pos.y":  450,
           "Parent":  -1,
-          "#":  52,
+          "#":  51,
           "Msg":  "<tStr2>",
           "AMsg.Num":  "2"        
         },
@@ -47,7 +47,7 @@
           "Pos.x":  1130,
           "Pos.y":  450,
           "Parent":  -1,
-          "#":  53,
+          "#":  52,
           "Msg":  "<tStr1>",
           "AMsg.Num":  "3"        
         },
@@ -57,7 +57,7 @@
           "Pos.x":  1170,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  54,
+          "#":  53,
           "Msg":  "<tStr3>",
           "AMsg.Num":  "4"        
         },
@@ -67,7 +67,7 @@
           "Pos.x":  1150,
           "Pos.y":  490,
           "Parent":  -1,
-          "#":  58,
+          "#":  57,
           "Msg":  "<tStr2>",
           "AMsg.Num":  "5"        
         },
@@ -77,7 +77,7 @@
           "Pos.x":  1270,
           "Pos.y":  390,
           "Parent":  -1,
-          "#":  65,
+          "#":  64,
           "Msg":  "<tStr3>",
           "AMsg.Num":  "6"        
         },
@@ -87,7 +87,7 @@
           "Pos.x":  1380,
           "Pos.y":  390,
           "Parent":  -1,
-          "#":  81,
+          "#":  80,
           "Msg":  "<tStr2>",
           "AMsg.Num":  "7"        
         },
@@ -97,7 +97,7 @@
           "Pos.x":  1500,
           "Pos.y":  380,
           "Parent":  -1,
-          "#":  85,
+          "#":  84,
           "Msg":  "Отлично",
           "AMsg.Num":  "8"        
         },
@@ -107,7 +107,7 @@
           "Pos.x":  1270,
           "Pos.y":  590,
           "Parent":  -1,
-          "#":  92,
+          "#":  91,
           "Msg":  "Вас понял!",
           "AMsg.Num":  "9"        
         },
@@ -117,7 +117,7 @@
           "Pos.x":  1320,
           "Pos.y":  560,
           "Parent":  -1,
-          "#":  96,
+          "#":  95,
           "Msg":  "Ладно",
           "AMsg.Num":  "10"        
         }      
@@ -130,7 +130,7 @@
           "Pos.x":  1150,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  42,
+          "#":  41,
           "Msg":  "<tStr1>",
           "DMsg.Num":  "0"        
         },
@@ -140,7 +140,7 @@
           "Pos.x":  1130,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  45,
+          "#":  44,
           "Msg":  "<tStr1>",
           "DMsg.Num":  "1"        
         },
@@ -150,7 +150,7 @@
           "Pos.x":  1150,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  57,
+          "#":  56,
           "Msg":  "<tStr1>",
           "DMsg.Num":  "2"        
         },
@@ -160,7 +160,7 @@
           "Pos.x":  1290,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  66,
+          "#":  65,
           "Msg":  "<tStr2>",
           "DMsg.Num":  "3"        
         },
@@ -170,7 +170,7 @@
           "Pos.x":  1380,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  78,
+          "#":  77,
           "Msg":  "<tStr1>",
           "DMsg.Num":  "4"        
         },
@@ -180,7 +180,7 @@
           "Pos.x":  1500,
           "Pos.y":  350,
           "Parent":  -1,
-          "#":  84,
+          "#":  83,
           "Msg":  "Начальство сообщило, что этот корабль нужно сбить любой ценой, так что я уже начинаю манёвры!",
           "DMsg.Num":  "5"        
         },
@@ -190,7 +190,7 @@
           "Pos.x":  1270,
           "Pos.y":  560,
           "Parent":  -1,
-          "#":  91,
+          "#":  90,
           "Msg":  "Рейнджер, отключитесь с линии связи. Этот патрульный корабль задействован в важнейшей операции по ликвидации опасного преступника <tStr1>. Кажется, он собирается уничтожить местный бизнес-центр.",
           "DMsg.Num":  "6"        
         },
@@ -200,7 +200,7 @@
           "Pos.x":  1320,
           "Pos.y":  530,
           "Parent":  -1,
-          "#":  95,
+          "#":  94,
           "Msg":  "Пожалуйста, отключитесь, рейнджер. Этот патрульный корабль возвращается на базу. Разговоры запрещены.",
           "DMsg.Num":  "7"        
         }      
@@ -221,7 +221,7 @@
           "Pos.x":  1270,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  64        
+          "#":  63        
         },
         {
           "Type":  "TDialog",
@@ -229,7 +229,7 @@
           "Pos.x":  1380,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  77        
+          "#":  76        
         },
         {
           "Type":  "TDialog",
@@ -237,7 +237,7 @@
           "Pos.x":  1500,
           "Pos.y":  290,
           "Parent":  -1,
-          "#":  83        
+          "#":  82        
         },
         {
           "Type":  "TDialog",
@@ -245,7 +245,7 @@
           "Pos.x":  1270,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  89        
+          "#":  88        
         }      
       ],
       "Groups":      
@@ -274,7 +274,7 @@
           "StatusPirateMin":  0,
           "StatusPirateMax":  100,
           "DistSearch":  10000,
-          "Dialog":  89,
+          "Dialog":  88,
           "StrengthMin":  "0",
           "StrengthMax":  "0",
           "Ruins":  ""        
@@ -343,7 +343,7 @@
           "Pos.x":  850,
           "Pos.y":  450,
           "Parent":  -1,
-          "#":  62,
+          "#":  61,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  1,
@@ -748,7 +748,7 @@
           "Pos.x":  1130,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  48,
+          "#":  47,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -764,7 +764,7 @@
           "Pos.x":  1130,
           "Pos.y":  390,
           "Parent":  -1,
-          "#":  50,
+          "#":  49,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -777,7 +777,7 @@
           "Pos.x":  1150,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  51,
+          "#":  50,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -792,7 +792,7 @@
           "Pos.x":  1130,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  56,
+          "#":  55,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -813,7 +813,7 @@
           "Pos.x":  940,
           "Pos.y":  550,
           "Parent":  -1,
-          "#":  59,
+          "#":  58,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -827,7 +827,7 @@
           "Pos.x":  1290,
           "Pos.y":  350,
           "Parent":  -1,
-          "#":  67,
+          "#":  66,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -847,7 +847,7 @@
           "Pos.x":  580,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  69,
+          "#":  68,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -860,7 +860,7 @@
           "Pos.x":  1270,
           "Pos.y":  370,
           "Parent":  -1,
-          "#":  73,
+          "#":  72,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -885,7 +885,7 @@
           "Pos.x":  1380,
           "Pos.y":  350,
           "Parent":  -1,
-          "#":  79,
+          "#":  78,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -900,7 +900,7 @@
           "Pos.x":  1150,
           "Pos.y":  520,
           "Parent":  -1,
-          "#":  82,
+          "#":  81,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -917,7 +917,7 @@
           "Pos.x":  1500,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  86,
+          "#":  85,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -931,7 +931,7 @@
           "Pos.x":  550,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  87,
+          "#":  86,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -956,7 +956,7 @@
           "Pos.x":  1270,
           "Pos.y":  530,
           "Parent":  -1,
-          "#":  90,
+          "#":  89,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1136,23 +1136,10 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  1130,
-          "Pos.y":  350,
-          "Parent":  -1,
-          "#":  41,
-          "Code.Type":  "Turn",
-          "Code":          
-          [
-              "sst!=2"          
-          ]        
-        },
-        {
-          "Type":  "Tif",
-          "Name":  "",
           "Pos.x":  1150,
           "Pos.y":  430,
           "Parent":  -1,
-          "#":  46,
+          "#":  45,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1165,7 +1152,7 @@
           "Pos.x":  1130,
           "Pos.y":  430,
           "Parent":  -1,
-          "#":  55,
+          "#":  54,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1178,7 +1165,7 @@
           "Pos.x":  690,
           "Pos.y":  500,
           "Parent":  -1,
-          "#":  63,
+          "#":  62,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1191,7 +1178,7 @@
           "Pos.x":  580,
           "Pos.y":  280,
           "Parent":  -1,
-          "#":  68,
+          "#":  67,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1204,7 +1191,7 @@
           "Pos.x":  580,
           "Pos.y":  300,
           "Parent":  -1,
-          "#":  70,
+          "#":  69,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -1217,7 +1204,7 @@
           "Pos.x":  1270,
           "Pos.y":  350,
           "Parent":  -1,
-          "#":  72,
+          "#":  71,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1230,7 +1217,7 @@
           "Pos.x":  1270,
           "Pos.y":  500,
           "Parent":  -1,
-          "#":  93,
+          "#":  92,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1243,7 +1230,7 @@
           "Pos.x":  1320,
           "Pos.y":  500,
           "Parent":  -1,
-          "#":  94,
+          "#":  93,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -1349,7 +1336,7 @@
           "Pos.x":  850,
           "Pos.y":  480,
           "Parent":  -1,
-          "#":  61,
+          "#":  60,
           "Move":  0,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -1469,7 +1456,7 @@
           "Pos.x":  570,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  47,
+          "#":  46,
           "Var.Type":  "Str",
           "Init":  "0",
           "Global":  false        
@@ -1480,7 +1467,7 @@
           "Pos.x":  630,
           "Pos.y":  420,
           "Parent":  -1,
-          "#":  49,
+          "#":  48,
           "Var.Type":  "Str",
           "Init":  "0",
           "Global":  false        
@@ -1491,7 +1478,7 @@
           "Pos.x":  630,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  60,
+          "#":  59,
           "Var.Type":  "Str",
           "Init":  "0",
           "Global":  false        
@@ -1502,7 +1489,7 @@
           "Pos.x":  510,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  71,
+          "#":  70,
           "Var.Type":  "Array",
           "Init":  "",
           "Global":  false        
@@ -1513,7 +1500,7 @@
           "Pos.x":  430,
           "Pos.y":  400,
           "Parent":  -1,
-          "#":  74,
+          "#":  73,
           "Var.Type":  "Dword",
           "Init":  "0",
           "Global":  false        
@@ -1524,7 +1511,7 @@
           "Pos.x":  430,
           "Pos.y":  420,
           "Parent":  -1,
-          "#":  75,
+          "#":  74,
           "Var.Type":  "Dword",
           "Init":  "0",
           "Global":  false        
@@ -1535,7 +1522,7 @@
           "Pos.x":  430,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  76,
+          "#":  75,
           "Var.Type":  "Dword",
           "Init":  "0",
           "Global":  false        
@@ -1546,7 +1533,7 @@
           "Pos.x":  370,
           "Pos.y":  420,
           "Parent":  -1,
-          "#":  80,
+          "#":  79,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -1557,7 +1544,7 @@
           "Pos.x":  510,
           "Pos.y":  380,
           "Parent":  -1,
-          "#":  88,
+          "#":  87,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -1716,28 +1703,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  25,
+      "Begin":  41,
+      "End":  43,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
       "End":  41,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  42,
-      "End":  44,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  41,
-      "End":  48,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  48,
       "End":  42,
       "Nom":  0,
       "Arrow":  true    
@@ -1745,13 +1725,20 @@
     {
       "Type":  "TGraphLink",
       "Begin":  42,
-      "End":  43,
+      "End":  49,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  43,
+      "Begin":  49,
+      "End":  44,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  44,
       "End":  50,
       "Nom":  0,
       "Arrow":  true    
@@ -1765,6 +1752,13 @@
     },
     {
       "Type":  "TGraphLink",
+      "Begin":  50,
+      "End":  54,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
       "Begin":  45,
       "End":  51,
       "Nom":  0,
@@ -1772,42 +1766,28 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  51,
-      "End":  46,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  51,
-      "End":  55,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  46,
+      "Begin":  54,
       "End":  52,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  55,
+      "Begin":  50,
       "End":  53,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  51,
-      "End":  54,
+      "Begin":  52,
+      "End":  55,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  53,
+      "Begin":  55,
       "End":  56,
       "Nom":  0,
       "Arrow":  true    
@@ -1821,91 +1801,77 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  57,
+      "Begin":  38,
       "End":  58,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  38,
-      "End":  59,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  32,
-      "End":  59,
+      "End":  58,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  59,
+      "Begin":  58,
       "End":  30,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  62,
+      "Begin":  61,
       "End":  3,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  62,
-      "End":  61,
+      "Begin":  61,
+      "End":  60,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  10,
-      "End":  63,
+      "End":  62,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  63,
+      "Begin":  62,
       "End":  34,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  68,
-      "End":  70,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  70,
+      "Begin":  67,
       "End":  69,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  64,
-      "End":  72,
+      "Begin":  69,
+      "End":  68,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  72,
-      "End":  67,
+      "Begin":  63,
+      "End":  71,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  67,
+      "Begin":  71,
       "End":  66,
       "Nom":  0,
       "Arrow":  true    
@@ -1913,27 +1879,27 @@
     {
       "Type":  "TGraphLink",
       "Begin":  66,
-      "End":  73,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  73,
       "End":  65,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  77,
-      "End":  79,
+      "Begin":  65,
+      "End":  72,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  79,
+      "Begin":  72,
+      "End":  64,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  76,
       "End":  78,
       "Nom":  0,
       "Arrow":  true    
@@ -1941,35 +1907,49 @@
     {
       "Type":  "TGraphLink",
       "Begin":  78,
+      "End":  77,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  77,
+      "End":  80,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  57,
       "End":  81,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  58,
-      "End":  82,
+      "Begin":  83,
+      "End":  84,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  84,
+      "Begin":  82,
       "End":  85,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  83,
-      "End":  86,
+      "Begin":  85,
+      "End":  83,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  86,
-      "End":  84,
+      "Begin":  89,
+      "End":  90,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -1982,14 +1962,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  91,
+      "Begin":  88,
       "End":  92,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  89,
+      "Begin":  92,
+      "End":  89,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  88,
       "End":  93,
       "Nom":  0,
       "Arrow":  true    
@@ -1997,13 +1984,6 @@
     {
       "Type":  "TGraphLink",
       "Begin":  93,
-      "End":  90,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  89,
       "End":  94,
       "Nom":  0,
       "Arrow":  true    
@@ -2017,8 +1997,8 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  95,
-      "End":  96,
+      "Begin":  25,
+      "End":  47,
       "Nom":  0,
       "Arrow":  true    
     }  

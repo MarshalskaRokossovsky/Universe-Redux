@@ -4973,7 +4973,7 @@
               "        {",
               "            if(ShipCustomShipInfoData(target, 'ShuDomiks_RattorsTargetInfo', 2) < CurTurn())",
               "            {",
-              "                if(RndObject(1, 100, rattor) <= RattorGroupsDataArray['DeadChanceWinterGewitter'])",
+              "                if(RndObject(1, 100, rattor) <= RattorGroupsDataArray['DeadChanceWintergewitter'])",
               "                {",
               "                    ItemExtraSpecialsDeleteByType(item, bon_num, 1);",
               "                    ShipCustomShipInfoData(target, 'ShuDomiks_RattorsTargetInfo', 2, CurTurn()); //Маркер об уничтожении раттора фумигатором на текущем ходу (потому что нехер уничтожить более за раз 1)",

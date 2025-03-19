@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -453,
-  "ViewPos.y":  -537,
+  "ViewPos.x":  -301,
+  "ViewPos.y":  -529,
   "ScriptName":  "Mod_ExpPilotBridge",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -5729,7 +5729,7 @@
               "//Спавним ТЦ или выдаём сообщение о нехватке денег (если игрок вносил платеж)",
               "if(bld_day_TC<=CurTurn() && bld_system_Id_TC) {",
               "    if(credits_now_TC>=bld_cost_TC) {",
-              "        BuyTC(GalaxyStar(bld_system_Id_TC-1));",
+              "        g_BuyTC(GalaxyStar(bld_system_Id_TC-1));",
               "    }",
               "    if(credits_now_TC<bld_cost_TC && repay_TC>=100) {",
               "        temp_int=round(0.90*repay_TC);",
@@ -9942,7 +9942,9 @@
               "        if(OrderLock(CurShip)) OrderLock(CurShip,0);",
               "        ShipOut(CurShip);",
               "    }",
-              "}"          
+              "}",
+              "",
+              "if(!IsPlayer(CurShip)) ShipOut(CurShip);"          
           ]        
         },
         {
