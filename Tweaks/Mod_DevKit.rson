@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -736,
-  "ViewPos.y":  641,
+  "ViewPos.x":  -1487,
+  "ViewPos.y":  264,
   "ScriptName":  "Mod_DevKit",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -6570,6 +6570,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,5);",
+              "        EqCustomFaction(tdwd,'');",
               "    ItemSubrace(tdwd,1);",
               "    Sound('Sound.Buy');",
               "}"          
@@ -6587,6 +6588,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,5);",
+              "        EqCustomFaction(tdwd,'');",
               "    ItemSubrace(tdwd,2);",
               "    Sound('Sound.Buy');",
               "}"          
@@ -6605,6 +6607,7 @@
               "if(tdwd != 0) {",
               "    if(ShipEqInSlot(Player(),t_Hull) != tdwd) {",
               "        ItemOwner(tdwd,6);",
+              "        EqCustomFaction(tdwd,'');",
               "        Sound('Sound.Buy');",
               "    }",
               "    else MessageBox('Пока такое нельзя');",
@@ -6623,6 +6626,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,0);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6639,6 +6643,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,1);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6655,6 +6660,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,2);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6671,6 +6677,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,3);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6687,6 +6694,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,4);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6703,6 +6711,7 @@
           [
               "if(tdwd != 0) {",
               "    ItemOwner(tdwd,7);",
+              "        EqCustomFaction(tdwd,'');",
               "    Sound('Sound.Buy');",
               "}"          
           ]        
@@ -6902,6 +6911,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),0);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),0);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),0);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -6930,6 +6954,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),1);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),1);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),1);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -6958,6 +6997,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),2);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),2);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),2);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -6986,6 +7040,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),3);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),3);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),3);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -7014,6 +7083,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),4);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),4);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),4);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
@@ -7042,6 +7126,21 @@
               "if(ShipEqInSlot(Player(),t_Scaner) != 0) ItemOwner(ShipEqInSlot(Player(),t_Scaner),6);",
               "if(ShipEqInSlot(Player(),t_Radar) != 0) ItemOwner(ShipEqInSlot(Player(),t_Radar),6);",
               "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) ItemOwner(ShipEqInSlot(Player(),t_DefGenerator),6);",
+              "if(ShipEqInSlot(Player(),t_Weapon1,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Weapon1,5) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,4) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,3) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,2) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Artefact,1) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Engine) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_FuelTanks) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Scaner) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_Radar) != 0) EqCustomFaction(tdwd,'');",
+              "if(ShipEqInSlot(Player(),t_DefGenerator) != 0) EqCustomFaction(tdwd,'');",
               "Sound('Sound.Buy');"          
           ]        
         },
