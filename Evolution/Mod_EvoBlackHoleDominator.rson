@@ -455,6 +455,7 @@
               "      curSystem=GalaxyStar(i);",
               "      if(StarBattle(curSystem)) continue;",
               "      if(NoComeKlingToStar(curSystem)) continue;",
+              "      if(StarRuins(curSystem,'Inhibitor')) continue;",
               "      if(!StarOwner(curSystem)) { //Коалиция",
               "        for(j=0; j<2; j=j+1) ArrayAdd(tempArr, curSystem);",
               "      }",

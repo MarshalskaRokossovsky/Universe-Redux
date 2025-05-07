@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  18,
-  "ViewPos.y":  621,
+  "ViewPos.x":  -201,
+  "ViewPos.y":  539,
   "ScriptName":  "Mod_ShuRebellion",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRebellion\\DATA\\Script\\Mod_ShuRebellion.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRebellion\\DATA\\Script\\Mod_ShuRebellion.txt",
@@ -746,18 +746,6 @@
               "// has_arm - кол-во оружия, уже собранного правительством",
               "// rev_luxury - запасы роскоши у повстанцев",
               "",
-              "//Выставляем новое время до атаки, если была получена концовка",
-              "if(!GotEnding) {",
-              "    if(PirateWin()) {",
-              "        GotEnding = 1;",
-              "        //Изменяем время до следующего восстания, если была получена какая-то концовка в пользу пиратов (иначе просто не запустится больше скрипт)",
-              "        if(PirateWin() == 1) girs = girs - 300;",
-              "        if(PirateWin() == 2) girs = girs - 200;",
-              "        if(PirateWin() == 4) girs = girs + 600;",
-              "    }",
-              "}",
-              "",
-              "",
               "if(PirateWin() != 3 && PirateWin() != 5) {",
               "    if(rev_date+girs<=CurTurn()) {",
               "        StarForRevolt = 0;",
@@ -780,7 +768,7 @@
               "                    //Считаем количество планет, чтобы ХОТЯ БЫ БЫЛО ЧТО ДЕЛИТЬ",
               "                    int schet = 0;",
               "                    for(y=0;StarPlanets(dwd)>y;y=y+1) {",
-              "                        if(PlanetOwner(StarPlanets(dwd,y)) == 6) schet = schet + 1;",
+              "                        if(PlanetOwner(StarPlanets(dwd,y)) != 6) schet = schet + 1;",
               "                    }",
               "                    if(schet < 2) continue;",
               "                    //Подбираем наиболее близкую к Роджерии систему",
@@ -802,6 +790,12 @@
               "        else {",
               "            //Чтобы игра не страдала каждый ход проверять это всё",
               "            rev_date = CurTurn() - 250;",
+              "        }",
+              "    }",
+              "    else if(rev_date+girs==CurTurn()+20) {",
+              "        if(ArtefactTypeInUse(Player(),t_ArtefactAnalyzer)) {",
+              "            Sound('Sound.NewMsg');",
+              "            NewsAdd(\"Вероятностный анализатор выявил нарастающую напряжённость в Галактике. Вскоре может произойти очередное антиправительственное восстание.\");",
               "        }",
               "    }",
               "}"          
@@ -1089,8 +1083,21 @@
           "Code.Type":  "Init",
           "Code":          
           [
+              "//Выставляем новое время до атаки, если была получена концовка",
+              "if(!GotEnding) {",
+              "    if(PirateWin()) {",
+              "        GotEnding = 1;",
+              "        //Изменяем время до следующего восстания, если была получена какая-то концовка в пользу пиратов (иначе просто не запустится больше скрипт)",
+              "        if(PirateWin() == 1) girs = girs - 300;",
+              "        if(PirateWin() == 2) girs = girs - 200;",
+              "        if(PirateWin() == 4) girs = girs + 600;",
+              "    }",
+              "}",
+              "",
               "//Запоминаем звезду, чтобы приколов не было",
               "GLastStar = StarForRevolt;",
+              "//SFT('PolRebellion: StarForRevolt is '+StarForRevolt);",
+              "//SFT('PolRebellion: name is '+Name(GalaxyStar(StarForRevolt-1)));",
               "//Обнуляем счётчики убиенных и прочего",
               "has_arm = 0;",
               "rev_money = 0;",
@@ -1177,11 +1184,13 @@
               "    //ShipJoin(Army, tdwd);",
               "}",
               "",
-              "if(!StarOwner(GalaxyStar(StarForRevolt-1))) tstr = \"Тревожные новости из системы\"+' '+Name(GalaxyStar(StarForRevolt-1))+' - '+\"там на одной из планет подняли восстание штурмовики из так называемого \\\"Анархистского Интернационала\\\", на деле являющегося спонсируемой пиратским Кланом струтурой, лишь формально наполненной анархистами в правлении. Так или иначе, ударные группы этих преступников смогли взять контроль над планетой и, видимо, готовятся взять власть над всей системой. Все наличные силы Коалиции подняты по тревоге.\";",
-              "else tstr = \"Радостные вести из системы\"+' '+Name(GalaxyStar(StarForRevolt-1))+' - '+\"там на одной из планет подняли восстание сторонники законно избранного правительства. Прямо сейчас они готовятся к сражению за свою свободу, и мы просим всех свободных рейнджеров присоединиться к этим храбрым борцам.\";",
-              "AddPlanetNews(tstr,63);",
-              "NewsAdd(tstr);",
-              "Sound('Sound.NewMsg');"          
+              "if(!StarOwner(GalaxyStar(StarForRevolt-1))) tstr = '</color>' + Format(CT('Script.Mod_ShuRebellion.RiotInCoalition'),'star',Name(GalaxyStar(StarForRevolt-1)));",
+              "else tstr = '</color>' + Format(CT('Script.Mod_ShuRebellion.RiotInClan'),'star',Name(GalaxyStar(StarForRevolt-1)));",
+              "if(SectorVisible(StarToCon(GalaxyStar(StarForRevolt-1)))) {",
+              "    AddPlanetNews(tstr,63);",
+              "    NewsAdd(tstr);",
+              "    Sound('Sound.NewMsg');",
+              "}"          
           ]        
         },
         {
@@ -1203,6 +1212,7 @@
               "    if((GroupCount(Army) + GroupCount(ArmyLanding)) < (GroupCount(Rebels) + GroupCount(RebelsLanding) + 20)) {",
               "        //Дредноуты стратегически важны. Несмотря ни на что, командование не оставит их в этой системе",
               "        if(ShipType(tdwd) == 'Dreadnought') continue;",
+              "        if(ShipType(tdwd) == 'DefPlatform') continue;",
               "        if(ShipTypeN(tdwd) > t_Tranclucator) continue;",
               "        if(ShipTypeN(tdwd) == t_Warrior) {",
               "             if(!ShipInScript(tdwd)) {",
@@ -1237,6 +1247,13 @@
               "        AddPlanetNews(tstr,63);",
               "        NewsAdd(tstr);",
               "        Sound('Sound.NewMsg');",
+              "        for(i=(StarRuins(GalaxyStar(StarForRevolt-1))-1);i>=0;i=i-1) {",
+              "            if(ShipStanding(StarRuins(GalaxyStar(StarForRevolt-1),i)) == 7 || ShipStanding(StarRuins(GalaxyStar(StarForRevolt-1),i)) == 8) {",
+              "                tdwd = StarRuins(GalaxyStar(StarForRevolt-1),i);",
+              "                OrderLock(tdwd,1);",
+              "                ShipDestroy(tdwd,1);",
+              "            }",
+              "        }",
               "",
               "        NoComeKlingToStar(star, 0);",
               "",
@@ -1259,6 +1276,13 @@
               "        AddPlanetNews(tstr,63);",
               "        NewsAdd(tstr);",
               "        Sound('Sound.NewMsg');",
+              "        for(i=(StarRuins(GalaxyStar(StarForRevolt-1))-1);i>=0;i=i-1) {",
+              "            if(ShipStanding(StarRuins(GalaxyStar(StarForRevolt-1),i)) == 2 || ShipStanding(StarRuins(GalaxyStar(StarForRevolt-1),i)) == 3) {",
+              "                tdwd = StarRuins(GalaxyStar(StarForRevolt-1),i);",
+              "                OrderLock(tdwd,1);",
+              "                ShipDestroy(tdwd,1);",
+              "            }",
+              "        }",
               "",
               "        NoComeKlingToStar(star, 0);",
               "",
@@ -1282,7 +1306,7 @@
               "        tdwd2 = FindPlanet(tdwd3,'NotMaloc,NotPeleng,NotPeople,NotFei,NotGaal,NotNone');",
               "        if(tdwd2 > 0) {",
               "            if(!GroupCount(Army) && !GroupCount(ArmyLanding) && ((GroupCount(Army) + GroupCount(ArmyLanding)) < 60) && (GroupCount(Army) + GroupCount(ArmyLanding)) < (GroupCount(Rebels) + GroupCount(RebelsLanding) + 20)) {",
-              "                j=RndObject(1+tint2,1+tint2*2,PlanetPirateClan());",
+              "                j=Rnd(1+tint2,1+tint2*2);",
               "                for(i=0;i<j;i=i+1) {",
               "                    tdwd = BuyWarrior(tdwd2, 300);",
               "                    ShipRefit(tdwd);",
@@ -1300,7 +1324,7 @@
               "        if(tdwd2 > 0) {",
               "            tdwd2 = FindPlanet(tdwd3,'NotPirateClan,NotNone');",
               "            if(!GroupCount(Rebels) && !GroupCount(RebelsLanding) && ((GroupCount(Rebels) + GroupCount(RebelsLanding)) < 60) && (GroupCount(Army) + GroupCount(ArmyLanding)) + 20 > (GroupCount(Rebels) + GroupCount(RebelsLanding))) {",
-              "                j=RndObject(1+tint,2+tint*2,PlanetPirateClan());",
+              "                j=Rnd(1+tint,2+tint*2);",
               "                for(i=0;i<j;i=i+1) {",
               "                    tdwd = BuyWarrior(tdwd2, 300);",
               "                    ShipRefit(tdwd);",
@@ -1424,33 +1448,29 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  240,
-          "Pos.y":  930,
+          "Pos.x":  280,
+          "Pos.y":  970,
           "Parent":  -1,
           "#":  150,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(GroupCount(RebelsLanding) < 5) {",
-              "    ShipJoin(RebelsLanding,CurShip);",
-              "    ChangeState('Main1',CurShip);",
-              "}"          
+              "ShipJoin(RebelsLanding,CurShip);",
+              "ChangeState('Main1',CurShip);"          
           ]        
         },
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  630,
-          "Pos.y":  930,
+          "Pos.x":  670,
+          "Pos.y":  970,
           "Parent":  -1,
           "#":  151,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "if(GroupCount(ArmyLanding) < 5) {",
-              "    ShipJoin(ArmyLanding,CurShip);",
-              "    ChangeState('Main2',CurShip);",
-              "}"          
+              "ShipJoin(ArmyLanding,CurShip);",
+              "ChangeState('Main2',CurShip);"          
           ]        
         },
         {
@@ -1470,7 +1490,12 @@
               "    }",
               "}",
               "else {",
-              "    OrderLanding(CurShip,IdToPlanet(GetData()));",
+              "    if(PlanetOwner(IdToPlanet(GetData())) != 2) {",
+              "        OrderLanding(CurShip,IdToPlanet(GetData()));",
+              "    }",
+              "    else {",
+              "        SetData(0);",
+              "    }",
               "}",
               "",
               "//Если как-то оказались не там, где надо",
@@ -1487,7 +1512,9 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "OrderNone(CurShip);"          
+              "if(!GetData(1)) {",
+              "    OrderNone(CurShip);",
+              "}"          
           ]        
         },
         {
@@ -1507,7 +1534,12 @@
               "    }",
               "}",
               "else {",
-              "    OrderLanding(CurShip,IdToPlanet(GetData()));",
+              "    if(PlanetOwner(IdToPlanet(GetData())) != 0) {",
+              "        OrderLanding(CurShip,IdToPlanet(GetData()));",
+              "    }",
+              "    else {",
+              "        SetData(0);",
+              "    }",
               "}",
               "",
               "//Если как-то оказались не там, где надо",
@@ -1524,7 +1556,9 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "OrderNone(CurShip);"          
+              "if(!GetData(1)) {",
+              "    OrderNone(CurShip);",
+              "}"          
           ]        
         },
         {
@@ -1552,20 +1586,23 @@
               "        else tint = 6;",
               "        tint = GroupCount(RebelsLanding) * tint / 2 + GroupCount(Rebels) * tint / 4;",
               "        tint2 = Rnd(1, 100);",
-              "        tdwd = GetShipPlanet(GroupShip(RebelsLanding,i));",
+              "        tdwd = GetShipPlanet(GroupToShip(RebelsLanding));",
               "        if(tint2 <= tint)",
               "        {",
               "            PlanetOwner(tdwd, PirateClan);",
               "            PlanetGov(tdwd,0);",
-              "            tstr = \"Коалиция в опасности!<br>Сегодня отряду анархистов из числа высадившихся на поверхность планеты <Name(tdwd)> (система <Name(GalaxyStar(StarForRevolt-1))>) удалось вломиться в штаб правительственных сил и полностью уничтожить командование, что повлекло к коллапсу сопротивления пиратам. Теперь эта планета подконтрольна пиратскому синдикату.\";",
-              "            AddPlanetNews(tstr,63);",
-              "            NewsAdd(tstr);",
-              "            Sound('Sound.NewMsg');",
+              "            if(SectorVisible(StarToCon(GalaxyStar(StarForRevolt-1)))) {",
+              "                tstr = \"Коалиция в опасности!<br>Сегодня отряду анархистов из числа высадившихся на поверхность планеты <Name(tdwd)> (система <Name(GalaxyStar(StarForRevolt-1))>) удалось вломиться в штаб правительственных сил и полностью уничтожить командование, что повлекло к коллапсу сопротивления пиратам. Теперь эта планета подконтрольна пиратскому синдикату.\";",
+              "                AddPlanetNews(tstr,63);",
+              "                NewsAdd(tstr);",
+              "                Sound('Sound.NewMsg');",
+              "            }",
               "",
-              "            for(i=GroupCount(RebelsLanding);i>0;i=i-1) {",
-              "                ShipJoin(Rebels,GroupShip(RebelsLanding,i));",
-              "                ChangeState('MainState1',GroupShip(RebelsLanding,i));",
+              "            for(i=(GroupCount(RebelsLanding)-1);i>=0;i=i-1) {",
+              "                SetData(1,1,GroupShip(RebelsLanding,i));",
               "                OrderTakeOff(GroupShip(RebelsLanding,i));",
+              "                //ShipJoin(Rebels,GroupShip(RebelsLanding,i));",
+              "                //ChangeState('MainState1',GroupShip(RebelsLanding,i));",
               "            }",
               "        }",
               "        if (tint2 > tint)",
@@ -1575,10 +1612,12 @@
               "                ShipDestroy(GroupShip(RebelsLanding, i));",
               "            }",
               "",
-              "            tstr = \"Экстренная новость из системы <Name(GalaxyStar(StarForRevolt-1))>!<br>В ожесточённом сражении пропиратским повстанцам удалось взять верх над правительственными силами, но последовавшая за этим попытка высадки десанта на планету <Name(tdwd)> полностью провалилась!<br>Просим всех свободных пилотов присоединиться к силам защитников свободы!\";",
-              "            AddPlanetNews(tstr,63);",
-              "            NewsAdd(tstr);",
-              "            Sound('Sound.NewMsg');",
+              "            if(SectorVisible(StarToCon(GalaxyStar(StarForRevolt-1)))) {",
+              "                tstr = \"Экстренная новость из системы <Name(GalaxyStar(StarForRevolt-1))>!<br>В ожесточённом сражении пропиратским повстанцам удалось взять верх над правительственными силами, но последовавшая за этим попытка высадки десанта на планету <Name(tdwd)> полностью провалилась!<br>Просим всех свободных пилотов присоединиться к силам защитников свободы!\";",
+              "                AddPlanetNews(tstr,63);",
+              "                NewsAdd(tstr);",
+              "                Sound('Sound.NewMsg');",
+              "            }",
               "        }",
               "    }",
               "}"          
@@ -1612,20 +1651,23 @@
               "        //Устанавливаем силу",
               "        tint = GroupCount(ArmyLanding) * tint / 2 + GroupCount(Army) * tint / 4;",
               "        tint2 = Rnd(1, 100);",
-              "        tdwd = GetShipPlanet(GroupShip(ArmyLanding,i));",
+              "        tdwd = GetShipPlanet(GroupToShip(ArmyLanding));",
               "        if (tint2 <= tint)",
               "        {",
               "            PlanetOwner(tdwd, PlanetRace(tdwd));",
               "            PlanetGov(tdwd,Rnd(3,4));",
-              "            tstr = \"Сегодня в системе <Name(GalaxyStar(StarForRevolt-1))> флот Коалиции одержал сокрушительную победу над мятежниками. Десант в тяжелом наземном сражении разбил оппозиционеров, захвативших власть на планете <Name(tdwd)>\";",
-              "            AddPlanetNews(tstr,63);",
-              "            NewsAdd(tstr);",
-              "            Sound('Sound.NewMsg');",
+              "            if(SectorVisible(StarToCon(GalaxyStar(StarForRevolt-1)))) {",
+              "                tstr = \"Сегодня в системе <Name(GalaxyStar(StarForRevolt-1))> флот Коалиции одержал сокрушительную победу над мятежниками. Десант в тяжелом наземном сражении разбил оппозиционеров, захвативших власть на планете <Name(tdwd)>\";",
+              "                AddPlanetNews(tstr,63);",
+              "                NewsAdd(tstr);",
+              "                Sound('Sound.NewMsg');",
+              "            }",
               "",
-              "            for(i=GroupCount(ArmyLanding);i>0;i=i-1) {",
-              "                ShipJoin(Army,GroupShip(ArmyLanding,i));",
-              "                ChangeState('MainState2',GroupShip(ArmyLanding,i));",
+              "            for(i=(GroupCount(ArmyLanding)-1);i>=0;i=i-1) {",
+              "                SetData(1,1,GroupShip(ArmyLanding,i));",
               "                OrderTakeOff(GroupShip(ArmyLanding,i));",
+              "                //ShipJoin(Army,GroupShip(ArmyLanding,i));",
+              "                //ChangeState('MainState2',GroupShip(ArmyLanding,i));",
               "            }",
               "        }",
               "        if (tint2 > tint)",
@@ -1635,10 +1677,12 @@
               "                ShipDestroy(GroupShip(ArmyLanding, i));",
               "            }",
               "",
-              "            tstr = \"Срочные новости из звездной системы <Name(GalaxyStar(StarForRevolt-1))>!<br>К сожалению, попытка высадки военных в убежище оппозиционеров на планете <Name(tdwd)> обернулась катастрофой. Повстанцы заманили солдат в ловушку и перебили весь ударный кулак сил Коалиции. Просим всех свободных пилотов оказать поддержку и прибыть в систему для борьбы с бандитами.\";",
-              "            AddPlanetNews(tstr,63);",
-              "            NewsAdd(tstr);",
-              "            Sound('Sound.NewMsg');",
+              "            if(SectorVisible(StarToCon(GalaxyStar(StarForRevolt-1)))) {",
+              "                tstr = \"Срочные новости из звездной системы <Name(GalaxyStar(StarForRevolt-1))>!<br>К сожалению, попытка высадки военных в убежище оппозиционеров на планете <Name(tdwd)> обернулась катастрофой. Повстанцы заманили солдат в ловушку и перебили весь ударный кулак сил Коалиции. Просим всех свободных пилотов оказать поддержку и прибыть в систему для борьбы с бандитами.\";",
+              "                AddPlanetNews(tstr,63);",
+              "                NewsAdd(tstr);",
+              "                Sound('Sound.NewMsg');",
+              "            }",
               "        }",
               "    }",
               "}"          
@@ -1660,8 +1704,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  360,
-          "Pos.y":  890,
+          "Pos.x":  400,
+          "Pos.y":  850,
           "Parent":  -1,
           "#":  177,
           "Code.Type":  "Turn",
@@ -1686,8 +1730,8 @@
         {
           "Type":  "Top",
           "Name":  "",
-          "Pos.x":  750,
-          "Pos.y":  890,
+          "Pos.x":  790,
+          "Pos.y":  850,
           "Parent":  -1,
           "#":  179,
           "Code.Type":  "Turn",
@@ -2265,7 +2309,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "!GroupCount(Army)"          
+              "!GroupCount(Army) && !GroupCount(ArmyLanding)"          
           ]        
         },
         {
@@ -2278,7 +2322,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "!GroupCount(Rebels)"          
+              "!GroupCount(Rebels) && !GroupCount(RebelsLanding)"          
           ]        
         },
         {
@@ -2462,6 +2506,84 @@
           [
               "!ShipInStar(CurShip,GalaxyStar(StarForRevolt-1))"          
           ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  360,
+          "Pos.y":  890,
+          "Parent":  -1,
+          "#":  180,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(ArmyLanding) && !GroupCount(Army)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  750,
+          "Pos.y":  890,
+          "Parent":  -1,
+          "#":  182,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(RebelsLanding) && !GroupCount(Rebels)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  184,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(RebelsLanding) >= 5"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  185,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(RebelsLanding) < 5"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  630,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  186,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(ArmyLanding) >= 5"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  670,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  187,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GroupCount(ArmyLanding) < 5"          
+          ]        
         }      
       ],
       "States":      
@@ -2632,6 +2754,54 @@
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "StateAttackLanders1",
+          "Pos.x":  360,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  181,
+          "Move":  2,
+          "MoveObj":  152,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  152            
+            }          
+          ],
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "StateAttackLanders2",
+          "Pos.x":  750,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  183,
+          "Move":  2,
+          "MoveObj":  153,
+          "Attack.Count":  1,
+          "Attack.Items":          
+          [
+            {
+              "Target.0":  153            
+            }          
+          ],
           "TakeItem":  -1,
           "TakeAllItem":  false,
           "OnTalk":  "",
@@ -3892,34 +4062,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  147,
-      "End":  151,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  148,
-      "End":  150,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  150,
-      "End":  155,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  151,
-      "End":  154,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  152,
       "End":  159,
       "Nom":  0,
@@ -4141,9 +4283,135 @@
       "End":  179,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  181,
+      "End":  145,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  172,
+      "End":  180,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  180,
+      "End":  181,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  170,
+      "End":  182,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  182,
+      "End":  183,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  183,
+      "End":  146,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  143,
+      "End":  180,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  181,
+      "End":  141,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  144,
+      "End":  182,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  183,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  184,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  184,
+      "End":  155,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  185,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  185,
+      "End":  150,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  147,
+      "End":  186,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  186,
+      "End":  154,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  147,
+      "End":  187,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  187,
+      "End":  151,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  65,
+  "BlockPar.EC.Total.Strings":  62,
   "BlockPar.EC":  
   [
     {
@@ -4153,6 +4421,10 @@
     {
       "#":  "101",
       "String":  "Ладно, ладно, уже ухожу"    
+    },
+    {
+      "#":  "102",
+      "String":  "Вероятностный анализатор выявил нарастающую напряжённость в Галактике. Вскоре может произойти очередное антиправительственное восстание."    
     },
     {
       "#":  "12",
@@ -4301,22 +4573,6 @@
     {
       "#":  "72",
       "String":  "Сколько тонн оружия вы готовы обменять на роскошь?"    
-    },
-    {
-      "#":  "74",
-      "String":  "там на одной из планет подняли восстание сторонники законно избранного правительства. Прямо сейчас они готовятся к сражению за свою свободу, и мы просим всех свободных рейнджеров присоединиться к этим храбрым борцам."    
-    },
-    {
-      "#":  "75",
-      "String":  "Радостные вести из системы"    
-    },
-    {
-      "#":  "76",
-      "String":  "там на одной из планет подняли восстание штурмовики из так называемого \"Анархистского Интернационала\", на деле являющегося спонсируемой пиратским Кланом струтурой, лишь формально наполненной анархистами в правлении. Так или иначе, ударные группы этих преступников смогли взять контроль над планетой и, видимо, готовятся взять власть над всей системой. Все наличные силы Коалиции подняты по тревоге."    
-    },
-    {
-      "#":  "77",
-      "String":  "Тревожные новости из системы"    
     },
     {
       "#":  "78",

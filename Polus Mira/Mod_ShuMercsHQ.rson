@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -652,
-  "ViewPos.y":  -509,
+  "ViewPos.x":  -1220,
+  "ViewPos.y":  86,
   "ScriptName":  "Mod_ShuMercsHQ",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.txt",
@@ -2170,6 +2170,16 @@
           "#":  1121,
           "Msg":  "<tstr5>",
           "AMsg.Num":  "215"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -1360,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  1134,
+          "Msg":  "<tstr8>",
+          "AMsg.Num":  "216"        
         }      
       ],
       "DialogMessages":      
@@ -4158,6 +4168,35 @@
           "StrengthMin":  "0",
           "StrengthMax":  "0",
           "Ruins":  ""        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "MercsAttackers",
+          "Pos.x":  -470,
+          "Pos.y":  680,
+          "Parent":  -1,
+          "#":  1129,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  0,
+          "CntShipMax":  0,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
         }      
       ],
       "Items":      
@@ -5185,7 +5224,7 @@
               "        }",
               "        Chameleon(ship);",
               "",
-              "        SetName(ship, PlayerHQMainArray['Main', 'OrganisationName'] + ' ' + ShipName(ship));",
+              "        SetName(ship, NameStr + ' ' + ShipName(ship));",
               "        for(i = 1; i <= 5; i = i + 1) ShipRefit(ship);",
               "",
               "        //Обновляем переменную корпуса на случай, если наёмник сменил его при рефите",
@@ -5932,6 +5971,40 @@
               "        {",
               "            cur_star = GalaxyStar(PlayerHQMainArray['Main', 'HQStar']);",
               "",
+              "            //Если с какой-то из организаций плохие отношения, то капает счётчик до следующей атаки",
+              "            if(!MercOrganisationsData['AllMercLeadersDead']) {",
+              "                if(!GroupCount(MercsAttackers)) {",
+              "                    if(MercOrganisationsData['RedAxes', 'RelationToPlayer'] < 20 && ~IdToShip(MercOrganisationsData['RedAxes','HQId'])) AttackCD = AttackCD + 1;",
+              "                    if(MercOrganisationsData['Atlant', 'RelationToPlayer'] < 20 && ~IdToShip(MercOrganisationsData['Atlant','HQId'])) AttackCD = AttackCD + 1;",
+              "                    if(MercOrganisationsData['Faeyangelion', 'RelationToPlayer'] < 20 && ~IdToShip(MercOrganisationsData['Faeyangelion','HQId'])) AttackCD = AttackCD + 1;",
+              "",
+              "                    if(AttackCD > 450) {",
+              "                        if(MercOrganisationsData['RedAxes', 'RelationToPlayer'] < 20) {",
+              "                            for(i=0;i<15;i=i+1) {",
+              "                                cur_ship = RunFunctionFromScript('Mod_ShuMercs','SpawnMerc',NearCivilPlanet(cur_ruin),NearCivilPlanet(cur_ruin),1);",
+              "                                ShipJoin(MercsAttackers,cur_ship);",
+              "                                MakeShipEnterStar(cur_ship,ShipStar(cur_ruin),StarNearbyStars(ShipStar(cur_ruin),Rnd(1,20)),2);",
+              "                            }",
+              "                        }",
+              "                        if(MercOrganisationsData['Atlant', 'RelationToPlayer'] < 20) {",
+              "                            for(i=0;i<12;i=i+1) {",
+              "                                cur_ship = RunFunctionFromScript('Mod_ShuMercs','SpawnMerc',NearCivilPlanet(cur_ruin),NearCivilPlanet(cur_ruin),2);",
+              "                                ShipJoin(MercsAttackers,cur_ship);",
+              "                                MakeShipEnterStar(cur_ship,ShipStar(cur_ruin),StarNearbyStars(ShipStar(cur_ruin),Rnd(1,20)),2);",
+              "                            }",
+              "                        }",
+              "                        if(MercOrganisationsData['Faeyangelion', 'RelationToPlayer'] < 20) {",
+              "                            for(i=0;i<10;i=i+1) {",
+              "                                cur_ship = RunFunctionFromScript('Mod_ShuMercs','SpawnMerc',NearCivilPlanet(cur_ruin),NearCivilPlanet(cur_ruin),3);",
+              "                                ShipJoin(MercsAttackers,cur_ship);",
+              "                                MakeShipEnterStar(cur_ship,ShipStar(cur_ruin),StarNearbyStars(ShipStar(cur_ruin),Rnd(1,20)),2);",
+              "                            }",
+              "                        }",
+              "                        AttackCD = 0;",
+              "                    }",
+              "                }",
+              "            }",
+              "",
               "            //Если был запущен квест по передислокации штаба в другую систему",
               "            if(ItemExist(ApprovalDocuments))",
               "            {",
@@ -6603,6 +6676,10 @@
               "                                ShipSkill(cur_ship, 'Accuracy', min(ShipSkill(cur_ship, 0)+2, 6));",
               "                                ShipSkill(cur_ship, 'Mobility', min(ShipSkill(cur_ship, 1)+2, 6));",
               "                                ShipSpecialBonuses(cur_ship, bonWRadius, ShipSpecialBonuses(cur_ship, bonWRadius) +20);",
+              "                            }",
+              "                            else if(Governor == 4) {",
+              "                                //И Элайма тожи!",
+              "                                ShipSkill(cur_ship, 'Technical', min(ShipSkill(cur_ship, 2)+2, 6));",
               "                            }",
               "                            //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
               "                            ShipAddCustomShipInfo(cur_ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 2);",
@@ -9622,6 +9699,7 @@
               "",
               "if(PlayerHQMainArray['Main', 'OrganisationName'] != '')",
               "{",
+              "    NameStr = PlayerHQMainArray['Main', 'OrganisationName'];",
               "    cur_star = GalaxyStar(ScriptItemTextData(ApprovalDocuments, 1));",
               "    //Игрок строит штаб в первый раз",
               "    if(BuildOwnBase_InProcess < 5)",
@@ -25879,6 +25957,7 @@
               "tstr5 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQMercsDialog.PlayerAskChangeMaxAtReady');",
               "tstr6 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQMercsDialog.PlayerAskChangeMaxReserve');",
               "tstr7 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQMercsDialog.PlayerOut');",
+              "tstr8 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQMercsDialog.PlayerAskChangeMercsName');",
               "",
               "tint1 = 1;",
               "tint2 = 0;"          
@@ -26833,7 +26912,8 @@
           "Code":          
           [
               "cur_item = GAnswerData;",
-              "cost = round(1.25 * (ItemCost(cur_item) / 2));",
+              "if(Governor != 4) cost = round(1.25 * (ItemCost(cur_item) / 2));",
+              "else cost = round(1.20 * (ItemCost(cur_item) / 2));",
               "",
               "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.ReliabilityImproveCost'),",
               "'<EqName'+'>', DeleteTags(ItemFullName(cur_item)),",
@@ -34525,7 +34605,7 @@
               "int feis = 0;",
               "int gaals = 0;",
               "",
-              "if(check)",
+              "if(1)",
               "{",
               "",
               "    tstr1 = CountReward(Player());",
@@ -34768,6 +34848,7 @@
               "else if(PlayerHQMainArray['Science', 'PortalGenerator'] == -2) tstr7 = 'Twice';",
               "",
               "cost = RoundTo(max(2000000, GalaxyMoney(4, 4) * 40), 1000, 0);",
+              "if(Governor == 4) cost = round(cost * 85 / 100);",
               "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.PortalGenerator' + tstr7), '<Cost'+'>', cost, '<CurrentBalance'+'>', int(PlayerHQMainArray['Finance', 'CurrentBalance']));"          
           ]        
         },
@@ -34812,6 +34893,57 @@
               "",
               "tstr5 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.PlayerPortalGeneratorNo' + tstr7);",
               "InjectAnswer('PortalGeneratorBuild', tstr5, 2);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -470,
+          "Pos.y":  740,
+          "Parent":  -1,
+          "#":  1131,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!ShipInNormalSpace(CurShip)) {",
+              "    if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) OrderTakeOff(CurShip);",
+              "}",
+              "else {",
+              "    cur_ruin = GroupToShip(PlayerHQ);",
+              "    if(cur_ruin) {",
+              "        if(ShipInStar(cur_ruin,ShipStar(CurShip))) {",
+              "            ShipSetBad(CurShip,cur_ruin);",
+              "            OrderFollowShip(CurShip,cur_ruin,1);",
+              "        }",
+              "        else {",
+              "            if(ShipCustomFaction(CurShip)=='SubFactionRedAxesFixedStanding') ShipJoinToScript(CurShip, 'Mod_ShuMercs.RedAxesMercs');",
+              "            else if(ShipCustomFaction(CurShip)=='SubFactionAtlantFixedStanding') ShipJoinToScript(CurShip, 'Mod_ShuMercs.RedAxesAtlantMercs');",
+              "            else ShipJoinToScript(CurShip, 'Mod_ShuMercs.FaeyangelionMercs');",
+              "        }",
+              "    }",
+              "    else {",
+              "        if(ShipCustomFaction(CurShip)=='SubFactionRedAxesFixedStanding') ShipJoinToScript(CurShip, 'Mod_ShuMercs.RedAxesMercs');",
+              "        else if(ShipCustomFaction(CurShip)=='SubFactionAtlantFixedStanding') ShipJoinToScript(CurShip, 'Mod_ShuMercs.RedAxesAtlantMercs');",
+              "        else ShipJoinToScript(CurShip, 'Mod_ShuMercs.FaeyangelionMercs');",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -1360,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  1135,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "tstr1 = TextBox(CT('Script.Mod_ShuMercs.PlayerHQMercsDialog.AnswerChangeMercsName'));",
+              "if(tstr1 != '') {",
+              "    NameStr = tstr1;",
+              "    Sound('Sound.Repair');",
+              "}"          
           ]        
         }      
       ],
@@ -39877,6 +40009,24 @@
           "EType":  1,
           "EUnique":  "",
           "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "StateHostileMercs",
+          "Pos.x":  -470,
+          "Pos.y":  710,
+          "Parent":  -1,
+          "#":  1130,
+          "Move":  5,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
         }      
       ],
       "Variables":      
@@ -40660,6 +40810,39 @@
           "#":  1107,
           "Var.Type":  "Int",
           "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "AttackCD",
+          "Pos.x":  -920,
+          "Pos.y":  1050,
+          "Parent":  -1,
+          "#":  1132,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tstr8",
+          "Pos.x":  -350,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  1133,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "NameStr",
+          "Pos.x":  -350,
+          "Pos.y":  470,
+          "Parent":  -1,
+          "#":  1136,
+          "Var.Type":  "Str",
+          "Init":  "",
           "Global":  false        
         }      
       ]    
@@ -47979,6 +48162,48 @@
       "Type":  "TGraphLink",
       "Begin":  1110,
       "End":  217,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1129,
+      "End":  228,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1129,
+      "End":  1130,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1130,
+      "End":  1131,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  502,
+      "End":  1134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1134,
+      "End":  1135,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1135,
+      "End":  501,
       "Nom":  0,
       "Arrow":  true    
     }  

@@ -360,7 +360,7 @@
               "            }",
               "        }",
               "",
-              "        if(control_ruins_arr[0])",
+              "        if(ArrayDim(control_ruins_arr) > 1)",
               "        {",
               "            tint1 = ArrayDim(control_ruins_arr);",
               "            for(i = 0; i < tint1; i = i + 1)",

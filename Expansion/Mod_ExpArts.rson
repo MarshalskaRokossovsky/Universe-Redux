@@ -9,6 +9,43 @@
   "Visual.Objects":  
   [
     {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "fastexit",
+          "Pos.x":  470,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  27,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "0"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  26,
+          "Msg":  "Эй, ты что там делаешь?! Ну держись!",
+          "DMsg.Num":  "0"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogHasker",
+          "Pos.x":  470,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  24        
+        }      
+      ],
       "Groups":      
       [
         {
@@ -148,7 +185,7 @@
               "        if(tin5 > 150) break;",
               "",
               "        tin = RndObject(t_FuelTanks,t_Weapon5,ship);",
-              "        if(tin = t_FuelTanks) {",
+              "        if(tin == t_FuelTanks) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(~EqSpecial(item)) {",
               "                bon_num = BonusNumInCfg(EqSpecial(item));",
@@ -174,7 +211,7 @@
               "",
               "            ShipRefuel(ship);",
               "        }",
-              "        else if(tin = t_RepairRobot) {",
+              "        else if(tin == t_RepairRobot) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -202,7 +239,7 @@
               "                continue;",
               "            }",
               "        }",
-              "        else if(tin = t_Engine) {",
+              "        else if(tin == t_Engine) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -226,7 +263,7 @@
               "                continue;",
               "            }",
               "        }",
-              "        else if(tin = t_DefGenerator) {",
+              "        else if(tin == t_DefGenerator) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -251,7 +288,7 @@
               "                continue;",
               "            }",
               "        }",
-              "        else if(tin = t_CargoHook) {",
+              "        else if(tin == t_CargoHook) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -275,7 +312,7 @@
               "                continue;",
               "            }",
               "        }",
-              "        else if(tin = t_Radar) {",
+              "        else if(tin == t_Radar) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -300,7 +337,7 @@
               "                continue;",
               "            }",
               "        }",
-              "        else if(tin = t_Scaner) {",
+              "        else if(tin == t_Scaner) {",
               "            item = ShipEqInSlot(ship,tin);",
               "            if(!item) continue;",
               "            if(~EqSpecial(item)) {",
@@ -832,6 +869,61 @@
               "    }",
               "}"          
           ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  23,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "dword ship = GetTalkShip();",
+              "if(ship) {",
+              "    if(ArtefactTypeInUse(Player(),'Hasker_PROx64')) {",
+              "        if(RelationToShip(GetTalkShip(),Player()) > 9 && ShipTypeN(ship) != t_Tranclucator && ShipType(ship) != 'BlasterTziptzilot' && !ShipInGameEvent(ship) && ShipType(ship) != 'PlayerMercCruiser' && ShipType(ship) != 'PlayerMerc' && ShipType(ship) != 'MercLeader' && ShipCustomFaction(GetTalkShip()) != 'Nisper' && ShipCustomFaction(GetTalkShip()) != 'KlissanAlly') {",
+              "            AddDialogInject('DialogHasker','',\"Активировать программу сброса оборудования\",99);",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  25,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "cur_ship = GetTalkShip();",
+              "RelationToRanger(cur_ship,Player(),0);",
+              "ShipSetBad(cur_ship,Player());",
+              "",
+              "int check = 0;",
+              "int turns = 0;",
+              "",
+              "while(!check) {",
+              "    int type = Rnd(t_FuelTanks,t_DefGenerator);",
+              "    if(turns >= 50) break;",
+              "    if(ItemInScript(ShipEqInSlot(cur_ship,type))) {",
+              "        turns = turns + 1;",
+              "        continue;",
+              "    }",
+              "",
+              "    if(ShipType(ship) == 'DefPlatform' && ShipType(ship) == 'Crusader' && ShipType(ship) == 'CrusaderLeader' && ShipType(ship) == 'Captain' && ShipType(ship) == 'EliteWarrior' && ShipType(ship) == 'PirateGalleon' && ShipType(ship) == 'PirateFrigate' && ShipType(ship) == 'PirateCorvette' && ShipType(ship) == 'Dreadnought' && ShipTypeN(ship) == t_Warrior && (ShipTypeN(ship) == t_Warrior && ShipSubType(ship))) {",
+              "        if(type == t_Engine) continue;",
+              "        if(type == t_FuelTanks) continue;",
+              "    }",
+              "",
+              "    DropItemInSystem(cur_ship,type,1);",
+              "    check = 1;",
+              "}"          
+          ]        
         }      
       ],
       "Planets":      
@@ -1128,11 +1220,43 @@
       "End":  15,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  25,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  0,
+  "BlockPar.EC.Total.Strings":  3,
   "BlockPar.EC":  
   [
-  
+    {
+      "#":  "0",
+      "String":  "Активировать программу сброса оборудования"    
+    },
+    {
+      "#":  "1",
+      "String":  "Эй, ты что там делаешь?! Ну держись!"    
+    },
+    {
+      "#":  "2",
+      "String":  "Конец связи"    
+    }  
   ]
 }

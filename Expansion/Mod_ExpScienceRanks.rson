@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -149,
-  "ViewPos.y":  -61,
+  "ViewPos.x":  -158,
+  "ViewPos.y":  -125,
   "ScriptName":  "Mod_ExpScienceRanks",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpScienceRanks\\DATA\\Script\\Mod_ExpScienceRanks.txt",
@@ -1500,6 +1500,8 @@
           [
               "//Перебираем предметы на корабле, ищем подходящие для акринации",
               "//for(j=0;j<3;j=j+1) {",
+              "",
+              "SFT('ExpScienceRanks logging: 0');",
               "    for(i = 0; i < ShipItems(Player()); i = i + 1)",
               "    {",
               "        int f = 0;",
@@ -1612,6 +1614,7 @@
           [
               "//Перебираем акрины, подходящие для выбранного предмета, и собираем их в массив для целевой, либо случайной акринации",
               "ArrayClear(akrin_num_array);",
+              "str temp_str_7 = '';",
               "",
               "for(i = 0; i < BonusCount(); i = i + 1)",
               "{",
@@ -1779,6 +1782,7 @@
               "                }",
               "            }",
               "            else InjectAnswer('acrin_2', DeleteTags(BonusName(i)), i);",
+              "            //temp_str_7 = temp_str_7 + Format('<br>')+'ExpSceinceRanks logging: deploying '+temp_str_2+' named '+BonusName(i);",
               "        }",
               "        else",
               "        {",
@@ -1796,7 +1800,9 @@
               "{",
               "    if(ArrayDim(akrin_num_array) > 1) chosen_akrin = akrin_num_array[Rnd(1, ArrayDim(akrin_num_array) - 1)];",
               "    else chosen_akrin = -1;",
-              "}"          
+              "}",
+              "//NewsAdd(temp_str_7);",
+              "//Sound('Sound.NewMsg');"          
           ]        
         },
         {
@@ -5391,36 +5397,8 @@
       "String":  "Вы исследовали уже <0> Чёрных Дыр и потому представлены к новой учёной степени <1>.<br>Торжественную церемонию и вручение подарка вам организуют на любой научной базе.<br>До тех пор подсчёт исследованных вами Чёрных Дыр приостановлен."    
     },
     {
-      "#":  "394",
-      "String":  "Дитраймент"    
-    },
-    {
-      "#":  "395",
-      "String":  "Квикшот"    
-    },
-    {
-      "#":  "396",
-      "String":  "Рокет-ланчер"    
-    },
-    {
-      "#":  "397",
-      "String":  "Спид-дроп"    
-    },
-    {
-      "#":  "398",
-      "String":  "Страйк"    
-    },
-    {
-      "#":  "399",
-      "String":  "Глю"    
-    },
-    {
       "#":  "40",
       "String":  "Рад служить прогрессу!"    
-    },
-    {
-      "#":  "400",
-      "String":  "Энерджайз"    
     },
     {
       "#":  "401",
@@ -5437,10 +5415,6 @@
     {
       "#":  "404",
       "String":  "(Нельзя акринировать оборудование неизвестного производства)"    
-    },
-    {
-      "#":  "405",
-      "String":  "(Нельзя акринировать доминаторское оружие)"    
     },
     {
       "#":  "406",
@@ -5461,6 +5435,38 @@
     {
       "#":  "410",
       "String":  "Занимательно. Спасибо за рассказ."    
+    },
+    {
+      "#":  "411",
+      "String":  "Дитраймент"    
+    },
+    {
+      "#":  "412",
+      "String":  "Квикшот"    
+    },
+    {
+      "#":  "413",
+      "String":  "Рокет-ланчер"    
+    },
+    {
+      "#":  "414",
+      "String":  "Спид-дроп"    
+    },
+    {
+      "#":  "415",
+      "String":  "Страйк"    
+    },
+    {
+      "#":  "416",
+      "String":  "Глю"    
+    },
+    {
+      "#":  "417",
+      "String":  "Энерджайз"    
+    },
+    {
+      "#":  "418",
+      "String":  "(Нельзя акринировать доминаторское оружие)"    
     }  
   ]
 }

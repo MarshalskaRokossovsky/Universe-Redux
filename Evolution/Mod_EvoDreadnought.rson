@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -308,
-  "ViewPos.y":  36,
+  "ViewPos.x":  -376,
+  "ViewPos.y":  101,
   "ScriptName":  "Mod_EvoDreadnought",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoDreadnought\\DATA\\Script\\Mod_EvoDreadnought.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoDreadnought\\DATA\\Script\\Mod_EvoDreadnought.txt",
@@ -46,7 +46,7 @@
           "Pos.x":  420,
           "Pos.y":  540,
           "Parent":  -1,
-          "#":  47,
+          "#":  46,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  1,
@@ -75,7 +75,7 @@
           "Pos.x":  420,
           "Pos.y":  240,
           "Parent":  -1,
-          "#":  56,
+          "#":  55,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  0,
@@ -104,7 +104,36 @@
           "Pos.x":  420,
           "Pos.y":  380,
           "Parent":  -1,
-          "#":  67,
+          "#":  66,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  0,
+          "CntShipMax":  0,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  false,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        },
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupFollow",
+          "Pos.x":  470,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  76,
           "Owner":  62,
           "Group.Type":  126,
           "CntShipMin":  0,
@@ -310,13 +339,18 @@
               "    dword item = ShipItems(ship, 0);",
               "    int item_level = ItemLevel(item);",
               "",
+              "",
+              "",
               "    if(own == 0)",
               "    {",
               "        SpecialToEquipment(FindBonusByNameInCfg('EvoArmada_DreadnoughtMaloc'), item);",
               "        //Малокам даём дополнительную броню, мощность осколочных пушек и плюс к точности",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_ExtraSpecialsLineBreak'));",
-              "        tint = round((2.5 * GeneralDiffLevel) + (2.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
+              "        tint = round((2.0 * GeneralDiffLevel) + (2.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWSplinter'), tint);",
+              "        tint = round((1.5 * GeneralDiffLevel) + (1.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
+              "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWEnergy'), tint);",
+              "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWMissile'), tint);",
               "        tint = round((2.0 * GeneralDiffLevel) + (2.0 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonHull'), tint);",
               "        ShipSkill(ship, 'Accuracy', ShipSkill(ship, 'Accuracy') + 1);",
@@ -352,9 +386,12 @@
               "        SpecialToEquipment(FindBonusByNameInCfg('EvoArmada_DreadnoughtFei'), item);",
               "        //Фэянам даём дополнительный урон для энергетических орудий, дальности и плюс к технике",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_ExtraSpecialsLineBreak'));",
-              "        tint = round((2.5 * GeneralDiffLevel) + (2.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
+              "        tint = round((2.0 * GeneralDiffLevel) + (2.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWEnergy'), tint);",
               "        tint = (10 * GeneralDiffLevel) + (10 * PortionInDiapason(item_level, 1, 8, 1, 10));",
+              "        tint = round((1.5 * GeneralDiffLevel) + (1.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
+              "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWSplinter'), tint);",
+              "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWMissile'), tint);",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonWRadius'), tint);",
               "        tint = round((1.5 * GeneralDiffLevel) + (1.5 * PortionInDiapason(item_level, 1, 8, 1, 10)));",
               "        ItemExtraSpecialsAddByType(item, FindBonusByNameInCfg('EvoArmada_bonHull'), tint);",
@@ -402,8 +439,16 @@
               "    //Добавляем артиллерию",
               "    if(Rnd(1,2) == 1) ShipAddCustomShipInfo(ship,'Artillery');",
               "    //Добавляем ангары с истребителями",
-              "    if(Rnd(1,6) == 6) ShipAddCustomShipInfo(ship,'Astroship');",
-              "    else if(Rnd(0,1)) ShipAddCustomShipInfo(ship,'Shields');",
+              "    if(Rnd(1,6) == 6) {",
+              "        ShipAddCustomShipInfo(ship,'Astroship');",
+              "        if(CurTurn() > 301) int u = g_CreateFollowGroup(planet,ship,1);",
+              "        if(CurTurn() > 301) ShipAddCustomShipInfo(ship,'DefendedByGroup','NoShow',u,u);",
+              "    }",
+              "    else {",
+              "        if(CurTurn() > 301) u = g_CreateFollowGroup(planet,ship,1);",
+              "        if(CurTurn() > 301) ShipAddCustomShipInfo(ship,'DefendedByGroup','NoShow',u,u);",
+              "        if(Rnd(0,1)) ShipAddCustomShipInfo(ship,'Shields');",
+              "    }",
               "",
               "    ShipSpecialBonuses(ship,bonSlotArt,20);",
               "",
@@ -424,8 +469,30 @@
               "        //Набиваем полную боеукладку Эйкахэвну",
               "        CustomArtData(item,1,45);",
               "        NoDropItem(item,1);",
+              "        if(CurrentMods('Tweaks\\ExtraArtsSlots')) {",
+              "            item = CreateCustomArt('Fa_Aeron_Art',110,3000, own);",
+              "            AddItemToShip(ship, item);",
+              "            ItemIsInUse(item, ship, 1);",
+              "            NoDropItem(item,1);",
+              "            item = CreateCustomArt('Length_Art',110,3000, own);",
+              "            AddItemToShip(ship, item);",
+              "            ItemIsInUse(item, ship, 1);",
+              "            NoDropItem(item,1);",
+              "            item = CreateCustomArt('HealingAura_Art',110,3000, own);",
+              "            AddItemToShip(ship, item);",
+              "            ItemIsInUse(item, ship, 1);",
+              "            NoDropItem(item,1);",
+              "            item = CreateCustomArt('Detsell_Art',110,3000, own);",
+              "            AddItemToShip(ship, item);",
+              "            ItemIsInUse(item, ship, 1);",
+              "            NoDropItem(item,1);",
+              "            item = CreateCustomArt('Destabilizator_Art',110,3000, own);",
+              "            AddItemToShip(ship, item);",
+              "            ItemIsInUse(item, ship, 1);",
+              "            NoDropItem(item,1);",
+              "        }",
               "    }",
-              "    if(CurrentMods('Tweaks\\ExtraArtsSlots')) {",
+              "    if(CurrentMods('Tweaks\\ExtraArtsSlots') || !CurrentMods('Reflection\\RefArts')) {",
               "        //Выдаём радиолокационные системы",
               "        item = CreateArt(t_ArtefactRadar, own);",
               "        AddItemToShip(ship, item);",
@@ -444,6 +511,17 @@
               "    //Гарантированно выдаём дредноуту сборочного дроида и ГЗП",
               "    if(!ShipEqInSlot(ship, t_RepairRobot))",
               "    {",
+              "        if(CurrentMods('Revolution\\RevAcryn')) {",
+              "            SpawnDroid(ship,GTL,own);",
+              "        }",
+              "        else {",
+              "            item = CreateEquipment(t_RepairRobot, Rnd(50, 120), GTL, own);",
+              "        }",
+              "        AddItemToShip(ship, item);",
+              "        ItemIsInUse(item, ship, 1);",
+              "    }",
+              "    else {",
+              "        FreeItem(GetItemFromShip(ship,ShipEqInSlot(ship, t_RepairRobot)));",
               "        if(CurrentMods('Revolution\\RevAcryn')) {",
               "            SpawnDroid(ship,GTL,own);",
               "        }",
@@ -775,6 +853,12 @@
               "    dword item;",
               "    int bon;",
               "",
+              "    if(ShipType(ship) == 'DefPlatform') {",
+              "        ShipSpecialBonuses(ship, bonAttacks, 1);",
+              "        //Вешаем инфошку для пересчёта числа доп. залпов при стрельбе крупных кораблей по более мелким судам",
+              "        ShipAddCustomShipInfo(ship, 'EvoArmada_CapitalShipInfos', 'NoShow', 1);",
+              "    }",
+              "",
               "    //Перебираем коалиционные корабли",
               "    if(own < 5)",
               "    {//Всем коалиционным станциям вешаем дополнительные залпы, а конкретно ВБ ещё выдаём дополнительную броню и дальность стрельбы",
@@ -903,10 +987,26 @@
               "                //Значительно снижаем получаемый от астероидов урон",
               "                ShipSpecialBonuses(ship, bonResistAsteroid, 50);",
               "",
-              "                //Гарантированно выдаём линкору дроида и ГЗП",
+              "                //Гарантированно выдаём линкору сборочного дроида и ГЗП",
               "                if(!ShipEqInSlot(ship, t_RepairRobot))",
               "                {",
-              "                    item = CreateEquipment(t_RepairRobot, Rnd(50, 120), GTL, own);",
+              "                    if(CurrentMods('Revolution\\RevAcryn')) {",
+              "                        SpawnDroid(ship,GTL,own);",
+              "                    }",
+              "                    else {",
+              "                        item = CreateEquipment(t_RepairRobot, Rnd(50, 120), GTL, own);",
+              "                    }",
+              "                    AddItemToShip(ship, item);",
+              "                    ItemIsInUse(item, ship, 1);",
+              "                }",
+              "                else {",
+              "                    FreeItem(GetItemFromShip(ship,ShipEqInSlot(ship, t_RepairRobot)));",
+              "                    if(CurrentMods('Revolution\\RevAcryn')) {",
+              "                        SpawnDroid(ship,GTL,own);",
+              "                    }",
+              "                    else {",
+              "                        item = CreateEquipment(t_RepairRobot, Rnd(50, 120), GTL, own);",
+              "                    }",
               "                    AddItemToShip(ship, item);",
               "                    ItemIsInUse(item, ship, 1);",
               "                }",
@@ -924,7 +1024,9 @@
               "                    //Малокам даём дополнительную броню, мощность осколочных пушек и плюс к точности (ну и на всякий пожарный один доп залп)",
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_ExtraSpecialsLineBreak'));",
               "                    tint = round((1.5 * GeneralDiffLevel) + (1.5 * PortionInDiapason(hull_level, 1, 8, 1, 10)));",
+              "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWEnergy'), tint);",
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWSplinter'), tint);",
+              "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWMissile'), tint);",
               "                    tint = round((2 * GeneralDiffLevel) + (2 * PortionInDiapason(hull_level, 1, 8, 1, 10)));",
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonHull'), tint);",
               "                    ShipSkill(ship, 'Accuracy', ShipSkill(ship, 'Accuracy') + 1);",
@@ -974,6 +1076,8 @@
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_ExtraSpecialsLineBreak'));",
               "                    tint = round((1.5 * GeneralDiffLevel) + (1.5 * PortionInDiapason(hull_level, 1, 8, 1, 10)));",
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWEnergy'), tint);",
+              "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWSplinter'), tint);",
+              "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWMissile'), tint);",
               "                    tint = (6 * GeneralDiffLevel) + (6 * PortionInDiapason(hull_level, 1, 8, 1, 10));",
               "                    ItemExtraSpecialsAddByType(hull, FindBonusByNameInCfg('EvoArmada_bonWRadius'), tint);",
               "                    tint = round((0.8 * GeneralDiffLevel) + (0.8 * PortionInDiapason(hull_level, 1, 8, 1, 10)));",
@@ -1705,6 +1809,86 @@
               "            }",
               "        }",
               "    }",
+              "}",
+              "",
+              "//Узнаём, надо ли вообще рейнджеру чиниться",
+              "function FindArtsForRepair(dword cur_ship) {",
+              "    int i;",
+              "    int cnt = 0;",
+              "",
+              "    for(i=0;i<ShipArts(cur_ship);i=i+1) {",
+              "        dword cur_item = ShipArts(cur_ship,i);",
+              "        if(ItemIsBroken(cur_item)) cnt = cnt + 1;",
+              "    }",
+              "",
+              "    result = cnt;",
+              "}",
+              "//Чтобы узнать, а есть ли куда лететь рейнджеру чиниться",
+              "function FindPlaceToRepairArts(dword cur_star) {",
+              "    dword star;",
+              "    int i;",
+              "",
+              "    result = -1;",
+              "    for(i=0;GalaxyStars()>i;i=i+1) {",
+              "        star = StarNearbyStars(cur_star,i);",
+              "        if(StarRuins(star,'SB')) {",
+              "            result = StarRuins(star,'SB');",
+              "            break;",
+              "        }",
+              "        else if(StarRuins(star,'PB')) {",
+              "            result = StarRuins(star,'PB');",
+              "            break;",
+              "        }",
+              "    }",
+              "}",
+              "",
+              "//Создаём группу сопровождения дредноута",
+              "function g_CreateCaptainFollow(dword cur_planet, dreadnought) {",
+              "    dword cur_ship;",
+              "",
+              "    cur_ship = BuyWarrior(cur_planet,500);",
+              "    ShipRefit(cur_ship,450);",
+              "    ShipRefit(cur_ship);",
+              "    HullSpecial(cur_ship,FindBonusByNameInCfg('351'));",
+              "    Chameleon(cur_ship);",
+              "    ShipRaiseRank(cur_ship,3);",
+              "",
+              "    ShipAddCustomShipInfo(cur_ship,'FollowGroup','NoShow',Id(dreadnought));",
+              "    ShipCustomShipInfoData(dreadnought,'DefendedByGroup',2,ShipCustomShipInfoData(dreadnought,'DefendedByGroup',2)+1);",
+              "",
+              "    ShipJoin(GroupFollow,cur_ship);",
+              "    SetData(Id(dreadnought),0,cur_ship);",
+              "}",
+              "function g_CreateWarriorFollow(dword cur_planet, dreadnought) {",
+              "    dword cur_ship;",
+              "",
+              "    cur_ship = BuyWarrior(cur_planet,500);",
+              "    ShipRefit(cur_ship,250);",
+              "    ShipRefit(cur_ship);",
+              "    Chameleon(cur_ship);",
+              "    ShipRaiseRank(cur_ship,3);",
+              "",
+              "    ShipAddCustomShipInfo(cur_ship,'FollowGroup','NoShow',Id(dreadnought));",
+              "    ShipCustomShipInfoData(dreadnought,'DefendedByGroup',2,ShipCustomShipInfoData(dreadnought,'DefendedByGroup',2)+1);",
+              "",
+              "    ShipJoin(GroupFollow,cur_ship);",
+              "    SetData(Id(dreadnought),0,cur_ship);",
+              "}",
+              "function g_CreateFollowGroup(dword cur_planet, dreadnought, int haveAstroship = 0) {",
+              "    int j;",
+              "    //Считаем количество простых сопровождающих",
+              "    int i = Rnd(7,10);",
+              "    if(haveAstroship) i = i + 5;",
+              "",
+              "    //Создаём саму группу",
+              "    for(j=i;j>0;j=j-1) {",
+              "        g_CreateWarriorFollow(cur_planet, dreadnought);",
+              "    }",
+              "    g_CreateCaptainFollow(cur_planet, dreadnought);",
+              "",
+              "    //Учитываем капитана",
+              "    i = i + 1;",
+              "    result = i;",
               "}"          
           ]        
         },
@@ -1873,6 +2057,88 @@
               "    }",
               "",
               "    lastShipId = GalaxyShipId();",
+              "}",
+              "",
+              "if(CurTurn() > 300) {",
+              "    //Рейнджеры валят чинить артефакты",
+              "    if(CurTurn() % 183 == 0) {",
+              "        for(i=0;GalaxyRangers()>i;i=i+1) {",
+              "            cur_ship = GalaxyRangers(i);",
+              "            if(cur_ship == Player()) continue;",
+              "            cur_star = ShipStar(cur_ship);",
+              "",
+              "            //Из тюрьмы не начинишься",
+              "            if(ShipInPrison(cur_ship)) continue;",
+              "            //Во враждебных системах рейнджеры не про это будут думать. Да и в бою тоже",
+              "            if(StarOwner(cur_star)) continue;",
+              "            if(StarCustomFaction(cur_star) != '') continue;",
+              "            if(StarBattle(cur_star)) continue;",
+              "            //Перед завершением какого-то действия -- тоже",
+              "            if(ShipTurnBeforeEndOrder(cur_ship) < 3) continue;",
+              "            //Так, а есть ли что чинить-то?",
+              "            if(FindArtsForRepair(cur_ship) < 2) continue;",
+              "",
+              "            if(ShipFindCustomShipInfoByType(cur_ship,'EvoDreadnought_RepairArts') == -1) {",
+              "                if(~FindPlaceToRepairArts(cur_star)) {",
+              "                    ShipAddCustomShipInfo(cur_ship,'EvoDreadnought_RepairArts','NoShow',Id(FindPlaceToRepairArts(cur_star)));",
+              "                }",
+              "            }",
+              "        }",
+              "    }",
+              "}",
+              "",
+              "//Выдаём малокам их расовый бонус -- мощную военку",
+              "//Ну а так как оказалось, что скрипты загаживают PlanetWarriors, то обработаем все планеты",
+              "",
+              "//Сделаем запас с учётом количества планет. Чтобы и Коалиции больше давалось, если она совсем офигела",
+              "if(ControlledSystems(0) <= 5) k = 60;",
+              "else if(ControlledSystems(0) <= 12) k = 90;",
+              "else if(ControlledSystems(0) <= 35) k = 120;",
+              "else if(ControlledSystems(0) <= 60) k = 150;",
+              "else if(ControlledSystems(0) <= 90) k = 180;",
+              "",
+              "if(CurTurn() % k == 0) {",
+              "    for(i=0;GalaxyStars()>i;i=i+1) {",
+              "        cur_star = GalaxyStar(i);",
+              "        if(StarOwner(cur_star)) continue;",
+              "        if(StarCustomFaction(cur_star) != '') continue;",
+              "",
+              "        for(j=0;StarPlanets(cur_star)>j;j=j+1) {",
+              "            cur_planet = StarPlanets(cur_star,j);",
+              "",
+              "            //Посчитаем, сколько должно быть военных у этой планеты",
+              "",
+              "            if(!PlanetOwner(cur_planet)) tint = 10;",
+              "            else if(PlanetOwner(cur_planet) == 2) tint = 4;",
+              "            else tint = 2;",
+              "            tint = tint + PlanetEco(cur_planet);",
+              "            if(PlanetGov(cur_planet) == 4) tint = tint + 3;",
+              "            tint = tint + round(PlanetPopulation(cur_planet)/1000000);",
+              "            if(PlanetPirateClan() == cur_planet) tint = 15;",
+              "            if(i < 5) tint = tint + 1;",
+              "            if(StarRuins(cur_star,'WB')) tint = tint + 1;",
+              "            if(StarRuins(cur_star,'PB')) tint = tint + 1;",
+              "",
+              "            //Теперь надо посчитать, что там тех военных",
+              "            int u = 0;",
+              "            for(int y=PlanetWarriors(cur_planet);y>0;y=y-1) {",
+              "                cur_ship = PlanetWarriors(cur_planet,y);",
+              "                if(cur_ship < 1) continue;",
+              "                if(!ShipInScript(cur_ship,0)) u = u + 1;",
+              "            }",
+              "",
+              "            if(PlanetWarriors(cur_planet) > tint) continue;",
+              "            else {",
+              "                //Но создаём не больше 3 штук за раз",
+              "                for(tint = min(tint - PlanetWarriors(cur_planet),3);tint>0;tint = tint -1) {",
+              "                    cur_ship = BuyWarrior(cur_planet,300);",
+              "                    ShipRefit(cur_ship,500+GalaxyTechLevel()*50);",
+              "                    ShipRefit(cur_ship);",
+              "                    ShipImproveItems(cur_ship,GalaxyTechLevel());",
+              "                }",
+              "            }",
+              "        }",
+              "    }",
               "}"          
           ]        
         },
@@ -2055,7 +2321,7 @@
           "Pos.x":  400,
           "Pos.y":  270,
           "Parent":  -1,
-          "#":  61,
+          "#":  60,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2103,7 +2369,7 @@
           "Pos.x":  400,
           "Pos.y":  300,
           "Parent":  -1,
-          "#":  62,
+          "#":  61,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2134,7 +2400,7 @@
           "Pos.x":  400,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  63,
+          "#":  62,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2154,7 +2420,7 @@
           "Pos.x":  400,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  71,
+          "#":  70,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2201,7 +2467,7 @@
           "Pos.x":  400,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  72,
+          "#":  71,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2232,7 +2498,7 @@
           "Pos.x":  400,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  73,
+          "#":  72,
           "Code.Type":  "Turn",
           "Code":          
           [
@@ -2252,7 +2518,7 @@
           "Pos.x":  620,
           "Pos.y":  340,
           "Parent":  -1,
-          "#":  75,
+          "#":  74,
           "Code.Type":  "DialogBegin",
           "Code":          
           [
@@ -2276,6 +2542,104 @@
               "        }",
               "    }",
               "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  690,
+          "Parent":  -1,
+          "#":  78,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GetData() > 0) {",
+              "    //Проверяем, не сел ли куда военный",
+              "    if(!ShipInNormalSpace(CurShip)) {",
+              "        if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) {",
+              "            ShipMoney(CurShip,ShipMoney(CurShip)+GalaxyMoney(2)); //Зарплатка!",
+              "            ShipRefuel(CurShip);",
+              "            ShipRepairEq(CurShip); //На всякий случай в ручном режиме чинимся, заправляемся и обновляемся",
+              "            ShipRefit(CurShip);",
+              "            HullHP(CurShip,'To100');",
+              "",
+              "            OrderTakeOff(CurShip);",
+              "            exit;",
+              "        }",
+              "    }",
+              "",
+              "",
+              "    //Дипломат",
+              "    def_ship = IdToShip(GetData());",
+              "}",
+              "else exit;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  81,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOut(CurShip);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  850,
+          "Parent":  -1,
+          "#":  84,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderLanding(CurShip,ShipOrderObj(def_ship));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  970,
+          "Parent":  -1,
+          "#":  90,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderJump(CurShip,ShipOrderObj(def_ship));"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  970,
+          "Parent":  -1,
+          "#":  93,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "OrderFollowShip(CurShip,def_ship);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  550,
+          "Pos.y":  970,
+          "Parent":  -1,
+          "#":  94,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipOrder(def_ship) == 3) OrderJump(CurShip,ShipOrderObj(def_ship));",
+              "else if(ShipInNormalSpace(def_ship)) OrderJump(CurShip,ShipStar(def_ship));"          
           ]        
         }      
       ],
@@ -2301,7 +2665,7 @@
           "Pos.x":  290,
           "Pos.y":  300,
           "Parent":  -1,
-          "#":  57,
+          "#":  56,
           "Place.Type":  0,
           "Angle":  "0",
           "Dist":  "0.5",
@@ -2315,7 +2679,7 @@
           "Pos.x":  290,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  74,
+          "#":  73,
           "Place.Type":  0,
           "Angle":  "0",
           "Dist":  "0.5",
@@ -2535,7 +2899,7 @@
           "Type":  "Tif",
           "Name":  "",
           "Pos.x":  10,
-          "Pos.y":  610,
+          "Pos.y":  710,
           "Parent":  -1,
           "#":  44,
           "Code.Type":  "Turn",
@@ -2547,14 +2911,144 @@
         {
           "Type":  "Tif",
           "Name":  "",
-          "Pos.x":  10,
-          "Pos.y":  710,
+          "Pos.x":  470,
+          "Pos.y":  730,
           "Parent":  -1,
-          "#":  45,
+          "#":  79,
           "Code.Type":  "Turn",
           "Code":          
           [
-              "1"          
+              "def_ship < 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  730,
+          "Parent":  -1,
+          "#":  80,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "def_ship > 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  770,
+          "Parent":  -1,
+          "#":  82,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInNormalSpace(CurShip)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  810,
+          "Parent":  -1,
+          "#":  83,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOrder(def_ship) == 2 && ShipTurnBeforeEndOrder(def_ship) <= 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  850,
+          "Parent":  -1,
+          "#":  85,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOrder(def_ship) != 2 || ShipTurnBeforeEndOrder(def_ship) > 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  890,
+          "Parent":  -1,
+          "#":  86,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOrder(def_ship) == 3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  890,
+          "Parent":  -1,
+          "#":  87,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipOrder(def_ship) != 3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  88,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipTurnBeforeEndOrder(def_ship) > 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  89,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipTurnBeforeEndOrder(def_ship) <= 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  510,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  91,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipInStar(def_ship,ShipStar(CurShip))"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  550,
+          "Pos.y":  930,
+          "Parent":  -1,
+          "#":  92,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ShipInStar(def_ship,ShipStar(CurShip))"          
           ]        
         }      
       ],
@@ -2638,7 +3132,7 @@
           "Pos.x":  420,
           "Pos.y":  570,
           "Parent":  -1,
-          "#":  46,
+          "#":  45,
           "Move":  0,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -2656,7 +3150,7 @@
           "Pos.x":  420,
           "Pos.y":  270,
           "Parent":  -1,
-          "#":  58,
+          "#":  57,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -2674,7 +3168,7 @@
           "Pos.x":  420,
           "Pos.y":  330,
           "Parent":  -1,
-          "#":  59,
+          "#":  58,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -2692,9 +3186,9 @@
           "Pos.x":  420,
           "Pos.y":  300,
           "Parent":  -1,
-          "#":  60,
+          "#":  59,
           "Move":  1,
-          "MoveObj":  57,
+          "MoveObj":  56,
           "Attack.Count":  0,
           "TakeItem":  -1,
           "TakeAllItem":  false,
@@ -2710,7 +3204,7 @@
           "Pos.x":  420,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  68,
+          "#":  67,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -2728,9 +3222,9 @@
           "Pos.x":  420,
           "Pos.y":  440,
           "Parent":  -1,
-          "#":  69,
+          "#":  68,
           "Move":  1,
-          "MoveObj":  74,
+          "MoveObj":  73,
           "Attack.Count":  0,
           "TakeItem":  -1,
           "TakeAllItem":  false,
@@ -2746,7 +3240,25 @@
           "Pos.x":  420,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  70,
+          "#":  69,
+          "Move":  5,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        },
+        {
+          "Type":  "TState",
+          "Name":  "StateFollowDreadnought",
+          "Pos.x":  470,
+          "Pos.y":  650,
+          "Parent":  -1,
+          "#":  77,
           "Move":  5,
           "MoveObj":  -1,
           "Attack.Count":  0,
@@ -2976,7 +3488,7 @@
           "Pos.x":  580,
           "Pos.y":  510,
           "Parent":  -1,
-          "#":  48,
+          "#":  47,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -2987,7 +3499,7 @@
           "Pos.x":  640,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  49,
+          "#":  48,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -2998,7 +3510,7 @@
           "Pos.x":  580,
           "Pos.y":  620,
           "Parent":  -1,
-          "#":  50,
+          "#":  49,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -3009,7 +3521,7 @@
           "Pos.x":  580,
           "Pos.y":  640,
           "Parent":  -1,
-          "#":  51,
+          "#":  50,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -3020,7 +3532,7 @@
           "Pos.x":  700,
           "Pos.y":  410,
           "Parent":  -1,
-          "#":  52,
+          "#":  51,
           "Var.Type":  "Dword",
           "Init":  "",
           "Global":  false        
@@ -3031,7 +3543,7 @@
           "Pos.x":  580,
           "Pos.y":  670,
           "Parent":  -1,
-          "#":  53,
+          "#":  52,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -3042,7 +3554,7 @@
           "Pos.x":  580,
           "Pos.y":  690,
           "Parent":  -1,
-          "#":  54,
+          "#":  53,
           "Var.Type":  "Dword",
           "Init":  "0",
           "Global":  false        
@@ -3053,7 +3565,7 @@
           "Pos.x":  580,
           "Pos.y":  470,
           "Parent":  -1,
-          "#":  55,
+          "#":  54,
           "Var.Type":  "Int",
           "Init":  "",
           "Global":  false        
@@ -3064,7 +3576,7 @@
           "Pos.x":  580,
           "Pos.y":  550,
           "Parent":  -1,
-          "#":  64,
+          "#":  63,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -3075,7 +3587,7 @@
           "Pos.x":  610,
           "Pos.y":  320,
           "Parent":  -1,
-          "#":  65,
+          "#":  64,
           "Var.Type":  "Array",
           "Init":  "5",
           "Global":  true        
@@ -3086,7 +3598,7 @@
           "Pos.x":  580,
           "Pos.y":  570,
           "Parent":  -1,
-          "#":  66,
+          "#":  65,
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
@@ -3097,9 +3609,20 @@
           "Pos.x":  830,
           "Pos.y":  450,
           "Parent":  -1,
-          "#":  76,
+          "#":  75,
           "Var.Type":  "Int",
           "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "def_ship",
+          "Pos.x":  580,
+          "Pos.y":  760,
+          "Parent":  -1,
+          "#":  95,
+          "Var.Type":  "Dword",
+          "Init":  "",
           "Global":  false        
         }      
       ]    
@@ -3235,13 +3758,6 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  44,
-      "End":  42,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
       "Begin":  43,
       "End":  13,
       "Nom":  0,
@@ -3263,28 +3779,21 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  45,
+      "Begin":  44,
       "End":  43,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  47,
+      "Begin":  46,
       "End":  1,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  47,
-      "End":  46,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  40,
+      "Begin":  46,
       "End":  45,
       "Nom":  0,
       "Arrow":  true    
@@ -3298,64 +3807,71 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  56,
+      "Begin":  55,
       "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  56,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  55,
+      "End":  57,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  57,
-      "End":  0,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  56,
-      "End":  58,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  58,
-      "End":  61,
-      "Nom":  0,
-      "Arrow":  true    
-    },
-    {
-      "Type":  "TGraphLink",
-      "Begin":  60,
-      "End":  62,
+      "End":  60,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
       "Begin":  59,
-      "End":  63,
+      "End":  61,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  67,
+      "Begin":  58,
+      "End":  62,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  66,
       "End":  1,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  67,
-      "End":  68,
+      "Begin":  66,
+      "End":  67,
       "Nom":  0,
       "Arrow":  true    
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  74,
+      "Begin":  73,
       "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  67,
+      "End":  70,
       "Nom":  0,
       "Arrow":  true    
     },
@@ -3375,8 +3891,148 @@
     },
     {
       "Type":  "TGraphLink",
-      "Begin":  70,
-      "End":  73,
+      "Begin":  76,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  76,
+      "End":  77,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  77,
+      "End":  78,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  78,
+      "End":  79,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  79,
+      "End":  81,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  78,
+      "End":  80,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  80,
+      "End":  82,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  82,
+      "End":  83,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  83,
+      "End":  84,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  82,
+      "End":  85,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  85,
+      "End":  87,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  87,
+      "End":  91,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  87,
+      "End":  92,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  92,
+      "End":  94,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  91,
+      "End":  93,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  85,
+      "End":  86,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  86,
+      "End":  88,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  88,
+      "End":  93,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  86,
+      "End":  89,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  89,
+      "End":  90,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  42,
       "Nom":  0,
       "Arrow":  true    
     }  

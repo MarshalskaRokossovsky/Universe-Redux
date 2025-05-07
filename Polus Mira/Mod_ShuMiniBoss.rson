@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -531,
-  "ViewPos.y":  -188,
+  "ViewPos.x":  -223,
+  "ViewPos.y":  -190,
   "ScriptName":  "Mod_ShuMiniBoss",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMiniBoss\\DATA\\Script\\Mod_ShuMiniBoss.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMiniBoss\\DATA\\Script\\Mod_ShuMiniBoss.txt",
@@ -500,6 +500,46 @@
           "#":  211,
           "Msg":  "<tstr3>",
           "AMsg.Num":  "48"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  221,
+          "Msg":  "Так, кажется, у меня есть способы борьбы с <clr>доминаторской<clrEnd> логикой. Компьютер, активировать clr>Системное отключение<clrEnd>!",
+          "AMsg.Num":  "49"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  560,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  223,
+          "Msg":  "Так, кажется, у меня есть способы борьбы с <clr>доминаторской<clrEnd> логикой. Компьютер, активировать clr>Системное отключение<clrEnd>!",
+          "AMsg.Num":  "50"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  320,
+          "Parent":  -1,
+          "#":  225,
+          "Msg":  "Бортовой компьютер, загрузи стандартный набор программ транклюкатора и инициализируй их на этом роботе. Естественно, с полным доступом прав.",
+          "AMsg.Num":  "51"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  530,
+          "Pos.y":  410,
+          "Parent":  -1,
+          "#":  228,
+          "Msg":  "Отлично. С остальным разберусь сам. Конец связи.",
+          "AMsg.Num":  "52"        
         }      
       ],
       "DialogMessages":      
@@ -803,6 +843,26 @@
           "#":  210,
           "Msg":  "<tstr2>",
           "DMsg.Num":  "29"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  224,
+          "Msg":  "Отсутствует доступная логическая прошивка. Требуются внешние инструкции.\r\n\r\nФункции устройства ограничены.",
+          "DMsg.Num":  "30"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  226,
+          "Msg":  "[Через несколько минут индикация бортового компьютера отчиталась о выполнении задачи]\r\n\r\nПроизводится перезапуск системы со стандартным набором данных...\r\n\r\n- Приветствую вас, <Player>! Вас приветствует <Name(GetTalkShip())>. Какие будут указания?",
+          "DMsg.Num":  "31"        
         }      
       ],
       "Dialogs":      
@@ -1829,7 +1889,7 @@
               "if (!trancSdTimer) {",
               "  check = scenarioCheck();",
               "  if (!check) {",
-              "    if (CurTurn() >= 4275) {",
+              "    if (CurTurn() >= 3675) {",
               "      tPlanet = GetShipHomePlanet(Player());",
               "      if (PlanetOwner(tPlanet) < Kling) {",
               "        BuyMadTranc(tPlanet, trancType);",
@@ -1990,7 +2050,8 @@
               "    ItemDurability(tdw,0);",
               "    if(Rnd(1,3)==3) ShipAddDropItem(GroupToShip(TrancGroup),tdw);",
               "}",
-              "trancDstate=2;"          
+              "trancDstate=2;",
+              "trancSdTimer = trancSdTimer + 365;"          
           ]        
         },
         {
@@ -2005,7 +2066,10 @@
           [
               "for (i=1; i<ShipItems(Player()); i=i+1) {",
               "    tdw=ShipItems(Player(),i);",
-              "    if (ItemType(tdw)==t_UselessItem && Name(tdw)==\"Кристаллы\"){ tdw2=i; break; }",
+              "    if(ItemType(tdw)==t_UselessItem && EquipmentImageName(cur_item) == 'ShuBounty_Crystals'){",
+              "        tdw2=i;",
+              "        break;",
+              "    }",
               "    else tdw2=0;",
               "}"          
           ]        
@@ -2021,7 +2085,8 @@
           "Code":          
           [
               "trancDstate=1;",
-              "FreeItem(GetItemFromShip(Player(),tdw2));"          
+              "FreeItem(GetItemFromShip(Player(),tdw2));",
+              "trancSdTimer = trancSdTimer + 365;"          
           ]        
         },
         {
@@ -2402,38 +2467,40 @@
           "Code":          
           [
               "if(GetTalkShip()) {",
-              "    if(ShipGroup(GetTalkShip()) == GroupNeviket) {",
-              "        tdw = ShipStatistic(GetTalkShip(),10);",
-              "        i = GetRelationPlanet(tdw,Player());",
+              "    if(!TalkByAI()) {",
+              "        if(ShipGroup(GetTalkShip()) == GroupNeviket) {",
+              "            tdw = ShipStatistic(GetTalkShip(),10);",
+              "            i = GetRelationPlanet(tdw,Player());",
               "",
-              "        if(i > 79) {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Best.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Best.Count')));",
-              "        }",
-              "        else if(i > 59) {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Good.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Good.Count')));",
-              "        }",
-              "        else if(i > 29) {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Neutral.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Neutral.Count')));",
-              "        }",
-              "        else if(i > 9) {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Bad.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Bad.Count')));",
-              "        }",
-              "        else {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.War.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.War.Count')));",
-              "        }",
+              "            if(i > 79) {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Best.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Best.Count')));",
+              "            }",
+              "            else if(i > 59) {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Good.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Good.Count')));",
+              "            }",
+              "            else if(i > 29) {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Neutral.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Neutral.Count')));",
+              "            }",
+              "            else if(i > 9) {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Bad.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Bad.Count')));",
+              "            }",
+              "            else {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.War.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.War.Count')));",
+              "            }",
               "",
-              "        if(~PlayerChameleonCurType()) {",
-              "            tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Chameleon.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Chameleon.Count')));",
-              "        }",
+              "            if(~PlayerChameleonCurType()) {",
+              "                tStr = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Chameleon.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Chameleon.Count')));",
+              "            }",
               "",
-              "        Format(tStr,'HomePlanet',Name(tdw));",
+              "            tStr = Format(tStr,'HomePlanet',Name(tdw));",
               "",
-              "        DText(tStr);",
+              "            DText(tStr);",
               "",
-              "        if(PlayerChameleonCurType() == -1) {",
-              "            if(!ShipOnSidePirateClan(Player())) {",
-              "                if(i > 79) {",
-              "                    AddDialogInject('DialogAgency','',CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyAsk'),25);",
+              "            if(PlayerChameleonCurType() == -1) {",
+              "                if(!ShipOnSidePirateClan(Player())) {",
+              "                    if(i > 79) {",
+              "                        AddDialogInject('DialogAgency','',CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyAsk'),25);",
+              "                    }",
               "                }",
               "            }",
               "        }",
@@ -2451,13 +2518,12 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "tstr1 = tstr1+Format('<br>')+Format('<clr>')+Format('<clrEnd>')+Format('<br>');",
-              "tstr1 = tstr1+'</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBegin');",
-              "tstr2 ='</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Agency.Count')));",
-              "tstr3 ='</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyThanks');",
+              "tstr1 = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBegin');",
               "tint1 = 0; //Маркер",
               "tint2 = 0; //Количество \"наших\"",
               "tint3 = 0; //Количество \"чертил\"",
+              "",
+              "dword pirate_sector = StarToCon(PlanetToStar(PlanetPirateClan()));",
               "",
               "//Системы, атакованные врагами",
               "tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlock1');",
@@ -2467,6 +2533,8 @@
               "    if(StarCustomFaction(tdw) != '') continue;",
               "    if(!StarBattle(tdw)) continue;",
               "    tint1 = 1;",
+              "    tint2 = 0;",
+              "    tint3 = 0;",
               "",
               "    for(j=0;StarShips(tdw)>j;j=j+1) {",
               "        tdw2 = StarShips(tdw,j);",
@@ -2480,14 +2548,13 @@
               "            tint3 = tint3 + 1;",
               "        }",
               "    }",
-              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfo'),'coal',tint2,'enem',tint3);",
+              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfo'),'name',Name(tdw),'coal',tint2,'enem',tint3);",
               "}",
               "if(!tint1) {",
               "    tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockNo');",
               "}",
               "tint1 = 0;",
-              "tint2 = 0;",
-              "tint3 = 0;",
+              "tstr1 = tstr1 + Format('<br>');",
               "",
               "//Системы, которые скоро подвергнутся атакам",
               "tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlock2');",
@@ -2496,8 +2563,10 @@
               "    if(StarOwner(tdw)) continue;",
               "    if(StarCustomFaction(tdw) != '') continue;",
               "    if(!StarBattle(tdw)) continue;",
-              "    if(!StarEnemyThreatLevel(1,1)) continue;",
+              "    if(!StarEnemyThreatLevel(tdw,1)) continue;",
               "    tint1 = 1;",
+              "    tint2 = 0;",
+              "    tint3 = 0;",
               "",
               "    for(j=0;StarShips(tdw)>j;j=j+1) {",
               "        tdw2 = StarShips(tdw,j);",
@@ -2511,14 +2580,13 @@
               "            tint3 = tint3 + 1;",
               "        }",
               "    }",
-              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfo'),'coal',tint2,'enem',tint3);",
+              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfo'),'name',Name(tdw),'coal',tint2,'enem',tint3);",
               "}",
               "if(!tint1) {",
               "    tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockNo');",
               "}",
               "tint1 = 0;",
-              "tint2 = 0;",
-              "tint3 = 0;",
+              "tstr1 = tstr1 + Format('<br>');",
               "",
               "//Системы, захваченные врагом, но обороняемые крайне незначительными силами (меньше 10 болванок)",
               "tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlock3');",
@@ -2526,36 +2594,52 @@
               "    tdw = GalaxyStar(i);",
               "    if(!StarOwner(tdw)) continue;",
               "    if(StarBattle(tdw)) continue;",
+              "    if(!PirateWin()) {",
+              "        if(pirate_sector == StarToCon(tdw)) continue;",
+              "    }",
+              "    tint2 = 0;",
+              "    tint3 = 0;",
               "",
               "    for(j=0;StarShips(tdw)>j;j=j+1) {",
               "        tdw2 = StarShips(tdw,j);",
-              "        if(StarCustomFaction(tdw) == '') {",
-              "            if(StarOwner(tdw) == 1) {",
-              "                if(ShipTypeN(tdw2) == t_Kling) tint2 = tint2 + 1;",
-              "                if(ShipTypeN(tdw2) == t_Tranclucator && ShipOwner(tdw2) == Kling) tint2 = tint2 + 1;",
-              "            }",
-              "            if(StarOwner(tdw) == 2) {",
-              "                if(ShipTypeN(tdw2) == t_Kling) tint2 = tint2 + 1;",
-              "                if(ShipTypeN(tdw2) == t_Tranclucator && ShipOwner(tdw2) == Kling) tint2 = tint2 + 1;",
-              "            }",
+              "        if(StarOwner(tdw) == 1) {",
+              "            if(ShipTypeN(tdw2) == t_Kling) tint2 = tint2 + 1;",
+              "            if(ShipTypeN(tdw2) == t_Tranclucator && ShipOwner(tdw2) == Kling) tint2 = tint2 + 1;",
               "        }",
-              "        else {",
-              "            if(ShipCustomFaction(tdw2) == StarCustomFaction(tdw)) tint2 = tint2 + 1;",
+              "        if(StarOwner(tdw) == 2) {",
+              "            if(ShipTypeN(tdw2) == t_Kling) tint2 = tint2 + 1;",
+              "            if(ShipTypeN(tdw2) == t_Tranclucator && ShipOwner(tdw2) == Kling) tint2 = tint2 + 1;",
               "        }",
+              "        if(ShipCustomFaction(tdw2) == StarCustomFaction(tdw)) tint2 = tint2 + 1;",
               "    }",
               "",
               "    if(tint2 > 10) continue;",
               "    tint1 = 1;",
-              "    tstr3 = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyThanks');",
-              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfoWeak'),'enem',tint3);",
+              "    tstr1 = tstr1+'</color>' + Format('<br>') + Format(CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockSystemInfoWeak'),'name',Name(tdw),'enem',tint3);",
               "}",
               "if(!tint1) {",
               "    tstr1 = tstr1+'</color>' + Format('<br>') + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyBlockNo');",
-              "    tstr3 = '</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyThanksNo');",
               "}",
               "",
               "//Заменяем информацией о системах",
-              "Format(tstr2,'info',tstr1);"          
+              "tstr2 = Format('</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.'+Rnd(1,CT('Script.Mod_ShuMiniBoss.Nevi.Agency.Count'))),'info',tstr1);",
+              "tstr3 ='</color>' + CT('Script.Mod_ShuMiniBoss.Nevi.Agency.AgencyThanks');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  227,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipSetBad(GetTalkShip(),0);",
+              "TranclucatorData(GetTalkShip(),'Proprietor',Player());",
+              "Sound('Sound.Repair');",
+              "ShipOut(GetTalkShip());"          
           ]        
         }      
       ],
@@ -3154,6 +3238,32 @@
           "Code":          
           [
               "1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  530,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  220,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "GetProgramm(11) && GetProgramm(5)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  560,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  222,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!GetProgramm(11) || !GetProgramm(5)"          
           ]        
         }      
       ],
@@ -5217,9 +5327,72 @@
       "End":  210,
       "Nom":  0,
       "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  220,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  220,
+      "End":  221,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  222,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  222,
+      "End":  223,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  221,
+      "End":  224,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  224,
+      "End":  225,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  225,
+      "End":  227,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  227,
+      "End":  226,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  226,
+      "End":  228,
+      "Nom":  0,
+      "Arrow":  true    
     }  
   ],
-  "BlockPar.EC.Total.Strings":  72,
+  "BlockPar.EC.Total.Strings":  76,
   "BlockPar.EC":  
   [
     {
@@ -5363,6 +5536,26 @@
       "String":  "Давайте взглянем на вашу находку. Поразительно! <Player>, вы оказали нам большую услугу. В знак признательности, позвольте вручить вам небольшое денежное вознаграждение размером <0> cr.<br>Это ещё не всё. Мы загрузили в ваш бортовой компьютер следующие программы:<br>Интерком. Количество копий: <clr>5<clrEnd> шт.<br>Аварийный сигнал. Количество копий: <clr>3<clrEnd> шт.<br><clr>"    
     },
     {
+      "#":  "154",
+      "String":  "Отсутствует доступная логическая прошивка. Требуются внешние инструкции.<br><br>Функции устройства ограничены."    
+    },
+    {
+      "#":  "155",
+      "String":  "[Через несколько минут индикация бортового компьютера отчиталась о выполнении задачи]<br><br>Производится перезапуск системы со стандартным набором данных...<br><br>- Приветствую вас, <Player>! Вас приветствует <0>. Какие будут указания?"    
+    },
+    {
+      "#":  "156",
+      "String":  "Так, кажется, у меня есть способы борьбы с <clr>доминаторской<clrEnd> логикой. Компьютер, активировать clr>Системное отключение<clrEnd>!"    
+    },
+    {
+      "#":  "157",
+      "String":  "Бортовой компьютер, загрузи стандартный набор программ транклюкатора и инициализируй их на этом роботе. Естественно, с полным доступом прав."    
+    },
+    {
+      "#":  "158",
+      "String":  "Отлично. С остальным разберусь сам. Конец связи."    
+    },
+    {
       "#":  "17",
       "String":  "Ошибка связующей нейросети.<br>Возможная причина: неисправность канала директивного управления автономной боевой единицы <0>.<br>Предшествующая неисправности директива: уничтожение <1>.<br>Сервис поиска неисправностей недоступен, возможная причина: повреждение личностной матрицы <2>.<br>Логическая перезапись: выполнение предшетвующей неисправности директивы с последующим самоуничтожением автономной боевой единицы."    
     },
@@ -5377,10 +5570,6 @@
     {
       "#":  "20",
       "String":  "<0>"    
-    },
-    {
-      "#":  "22",
-      "String":  "Кристаллы"    
     },
     {
       "#":  "23",

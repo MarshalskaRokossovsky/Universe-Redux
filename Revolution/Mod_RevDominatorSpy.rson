@@ -1,8 +1,8 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -422,
-  "ViewPos.y":  4,
+  "ViewPos.x":  -506,
+  "ViewPos.y":  -49,
   "ScriptName":  "Mod_RevDominatorSpy",
   "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.scr",
   "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevDominatorSpy\\DATA\\Script\\Mod_RevDominatorSpy.txt",
@@ -530,7 +530,8 @@
               "  NoTargetToShip(GroupToShip(PelengSpy),0);",
               "  ShipOut(GroupToShip(PelengSpy));",
               "}",
-              "AllShipOut();"          
+              "AllShipOut();",
+              "Run = 0;"          
           ]        
         },
         {
@@ -672,7 +673,8 @@
               "//LinkItemToScript(i,SB_scaner);",
               "AddItemToShip(Player(),i);",
               "if(GroupToShip(BSB))ShipOut(GroupToShip(BSB));",
-              "if(GroupToShip(PelengSpy))ShipOut(GroupToShip(PelengSpy));"          
+              "if(GroupToShip(PelengSpy))ShipOut(GroupToShip(PelengSpy));",
+              "Run = 0;"          
           ]        
         },
         {
@@ -825,10 +827,13 @@
           "Code.Type":  "Global",
           "Code":          
           [
-              "if(GLastTurnRun(GScriptName)==0) {",
-              "    if(GRunFrom==3) {",
-              "        if(CurTurn()>1342) {",
-              "            GRun();",
+              "if(!Run) {",
+              "    if(GLastTurnRun(GScriptName) == 0 || GLastTurnRun(GScriptName) + 2000 < CurTurn()) {",
+              "        if(GRunFrom==3) {",
+              "            if(CurTurn()>1342) {",
+              "                GRun();",
+              "                Run = 1;",
+              "            }",
               "        }",
               "    }",
               "}"          
@@ -2125,6 +2130,17 @@
           "Var.Type":  "Int",
           "Init":  "0",
           "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Run",
+          "Pos.x":  -140,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  140,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  true        
         }      
       ]    
     }  

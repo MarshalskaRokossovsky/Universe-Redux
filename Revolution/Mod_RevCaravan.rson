@@ -1,11 +1,11 @@
 {
   "FileID":  573785173,
   "FileVersion":  8,
-  "ViewPos.x":  -296,
-  "ViewPos.y":  95,
+  "ViewPos.x":  -299,
+  "ViewPos.y":  -41,
   "ScriptName":  "Mod_RevCaravan",
-  "ScriptFileOut":  "H:\\Mod_RevCaravan.scr",
-  "ScriptTextOut":  "H:\\Mod_RevCaravan.txt",
+  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevCaravan\\DATA\\Script\\Mod_RevCaravan.scr",
+  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevCaravan\\DATA\\Script\\Mod_RevCaravan.txt",
   "Visual.Objects":  
   [
     {
@@ -105,7 +105,9 @@
               "//Отбираем все наркотики у покупающей планеты (покупающей планетой может быть любая, кроме пеленгской)",
               "PlanetSetGoods(PlanetSell, 7, 0);",
               "//Начинаем дефицит наркотиков на покупающей планете",
-              "DecayGoods(PlanetSell, 7);"          
+              "DecayGoods(PlanetSell, 7);",
+              "",
+              "AddPlanetNews(Format(CT('Script.Mod_RevCaravan.News'+Rnd(1,CT('Script.Mod_RevCaravan.NewsCount'))),'plan',Name(PlanetBuy),'star',Name(PlanetToStar(PlanetBuy))),98);"          
           ]        
         },
         {

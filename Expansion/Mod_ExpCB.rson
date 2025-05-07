@@ -1243,12 +1243,12 @@
               "            if(GalaxyEventsTextData(i, 1) == '') TotalCBCount = TotalCBCount + 1;",
               "            /*ShipType(StarShips(cur_star,j),'CB_licensed');*/",
               "        }",
-              "        else if(GalaxyEventData(i, 0) == t_PB)",
+              "        /*else if(GalaxyEventData(i, 0) == t_PB)",
               "        {",
-              "            SFT(GalaxyEventsTextData(i,0));",
-              "            SFT(GalaxyEventData(i,1));",
-              "            ShipAddCustomShipInfo(IdToShip(GalaxyEventData(i,1)),'PBRaiseRank','NoShow');",
-              "        }",
+              "            //SFT('ExpCB logging: name is '+GalaxyEventsTextData(i,0));",
+              "            //SFT('ExpCB logging: id is '+GalaxyEventData(i,1));",
+              "            if(ShipFindCustomShipInfoByType(IdToShip(GalaxyEventData(i,1)),'PBRaiseRank') == -1) ShipAddCustomShipInfo(IdToShip(GalaxyEventData(i,1)),'PBRaiseRank','NoShow');",
+              "        }*/",
               "    }",
               "    else if(temp_str == 'RuinsDestroyed')",
               "    {",
@@ -1757,6 +1757,19 @@
           "Code":          
           [
               "ShipMoney(Player()) >= GalaxyMoney(3)"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  450,
+          "Pos.y":  590,
+          "Parent":  -1,
+          "#":  129,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "!ShipIsTakeoff(Player())"          
           ]        
         }      
       ],
@@ -2805,6 +2818,13 @@
       "Type":  "TGraphLink",
       "Begin":  126,
       "End":  128,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  129,
+      "End":  61,
       "Nom":  0,
       "Arrow":  true    
     }  
