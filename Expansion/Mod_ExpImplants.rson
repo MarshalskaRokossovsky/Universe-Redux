@@ -5030,6 +5030,7 @@
           [
               "//Задаём время кулдауна до следующей активации \"Господаря\"",
               "add_dialog_cd[3] = CurTurn() + 50;",
+              "temp_dword_2 = GetTalkShip();",
               "temp_int_2 = 0;",
               "temp_int_3 = ShipFindCustomShipInfoByType(temp_dword_2, 'bioMM_GS');",
               "",
