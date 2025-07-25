@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 11,
-    "ViewPos.y": 398,
+    "ViewPos.x": -73,
+    "ViewPos.y": 376,
     "ScriptName": "Mod_ExpBK",
     "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -3957,7 +3958,7 @@
                         "ItemSize(temp_dword_2,1);",
                         "UselessItemData(temp_dword_2, 1, 0); //текущая нехватка на карте",
                         "UselessItemData(temp_dword_2, 2, temp_int_5); //суммарный боланс",
-                        "UselessItemData(temp_dword_2, 3, Rnd(100000000000,999999999999)); //номер карточки",
+                        "UselessItemData(temp_dword_2, 3, Rnd(100000000,999999999)); //номер карточки",
                         "NoDropItem(temp_dword_2,1);",
                         "CardID = Id(temp_dword_2);",
                         "CardFlag = 1;",
@@ -4505,9 +4506,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipAddCustomShipInfo(Player(),'ExpBK_License');",
-                        "ShipCustomShipInfoData(Player(),'ExpBK_License',1,730);",
-                        "ShipCustomShipInfoData(Player(),'ExpBK_License',2,tint2);",
+                        "ShipAddCustomShipInfo(Player(),'ExpBK_License','',730,tint2);",
                         "Sound('Sound.Buy');"
                     ]
                 },
@@ -5729,7 +5728,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipStatus(Player(),2) > 20"
+                        "ShipStatus(Player(),2) > 20 && ShipFindCustomShipInfoByType(Player(),'ExpBK_License') == -1"
                     ]
                 },
                 {

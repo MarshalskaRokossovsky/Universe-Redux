@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -1057,
-    "ViewPos.y": -315,
+    "ViewPos.x": -812,
+    "ViewPos.y": -472,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -42,7 +43,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "restart",
                     "Pos.x": 0,
-                    "Pos.y": 20,
+                    "Pos.y": 60,
                     "Parent": 68,
                     "#": 134,
                     "Msg": "<tstr2>",
@@ -7147,8 +7148,10 @@
                         "            //Стандартные диалоги в ЦР, связанные с клисанским вторжением",
                         "            if(!KlissanInvasion['EndingSequenceIsStarted'])",
                         "            {",
-                        "                //Информационный диалог на ЦР в ключе, \"Как я могу помочь Коалиции в борьбе с клиcанами?\"",
-                        "                AddDialogInject('KlissanInfoRC', '', CT('Script.Mod_ShuKlissan.KlissanInfoRC.PlayerAsk'), 1);",
+                        "                if(!CurrentMods('Expansion\\ExpRC')) {",
+                        "                    //Информационный диалог на ЦР в ключе, \"Как я могу помочь Коалиции в борьбе с клиcанами?\"",
+                        "                    AddDialogInject('KlissanInfoRC', '', CT('Script.Mod_ShuKlissan.KlissanInfoRC.PlayerAsk'), 1);",
+                        "                }",
                         "",
                         "                tint1 = 0;",
                         "                tint2 = 0;",
@@ -11119,7 +11122,30 @@
                         "else if(cur_sec == 2) tstr2 = \"Отдел исследований Ментального коммуникатора\";",
                         "else if(cur_sec == 3) tstr2 = \"Отдел исследований Z-трансмиттера\";",
                         "",
-                        "tstr1 = '</color>' + Format(CT('FormRuins.SB.Scn.SBSection1'),'<SectionName'+'>', tstr2,'<SplitLine'+'>', DefSplt,'');"
+                        "tstr3 = '';",
+                        "",
+                        "for(i = 0; i < ShipItems(Player()); i = i + 1)",
+                        "{",
+                        "    cur_item = ShipItems(Player(), i);",
+                        "    if(ItemIsInUse(cur_item)) continue;",
+                        "    if(ItemOwner(cur_item) != None) continue;",
+                        "    if(EqCustomFaction(cur_item) != 'Klissan') continue;",
+                        "    //Исключаем протоплазму",
+                        "    if(ItemType(cur_item) == t_UselessCountableItem) continue;",
+                        "    //Исключаем корпуса с ЧР",
+                        "    if(ItemType(cur_item) == t_Hull) continue;",
+                        "",
+                        "    //Если сдаются ошмётки",
+                        "    if(ItemType(cur_item) == t_UselessItem) {",
+                        "        tstr3 = tstr3 + Format('<br>') + (i+1) + ') <color=0,50,200>' + DeleteTags(Name(cur_item)) + '</color>' + '  <color=0,150,20>(<ItemCost(cur_item)> cr.) x2</color>';",
+                        "    }",
+                        "    //Если сдаётся оборудка",
+                        "    else {",
+                        "        tstr3 = tstr3 + Format('<br>') + (i+1) + ') <color=0,50,200>' + DeleteTags(Name(cur_item)) + '</color>' + '  (<ItemCost(cur_item)> cr.)';",
+                        "    }",
+                        "}",
+                        "",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.SB.Scn.SBSection1'),'<SectionName'+'>', tstr2,'<Items'+'>', tstr3,'<SplitLine'+'>', DefSplt,'');"
                     ]
                 },
                 {
@@ -11148,7 +11174,7 @@
                         "",
                         "    //Если сдаются ошмётки",
                         "    if(ItemType(cur_item) == t_UselessItem) {",
-                        "        InjectAnswer('Sold', '<color=0,50,200>' + DeleteTags(Name(cur_item)) + '</color>' + '  (<ItemCost(cur_item)> cr.) <color=0,50,200>x2</color>', i);",
+                        "        InjectAnswer('Sold', '<color=0,50,200>' + DeleteTags(Name(cur_item)) + '</color>' + '  <color=0,150,20>(<ItemCost(cur_item)> cr.) x2</color>', i);",
                         "        tint1 = 1;",
                         "    }",
                         "    //Если сдаётся оборудка",
@@ -12477,6 +12503,19 @@
                         "",
                         "KlissanInvasion['AllyMachpellaStage'] = 7;"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -40,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 530,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "AddDialogInject('Mod_ExpRC:Info','',tstr2,1);"
+                    ]
                 }
             ],
             "Places": 
@@ -13263,6 +13302,32 @@
                     "Code": 
                     [
                         "KlissanInvasion['AllyMachpellaStage'] == 7"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 528,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!CurrentMods('Expansion\\ExpRC')"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -40,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 529,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "CurrentMods('Expansion\\ExpRC')"
                     ]
                 }
             ],
@@ -14632,13 +14697,6 @@
             "Type": "TGraphLink",
             "Begin": 67,
             "End": 133,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 68,
-            "End": 134,
             "Nom": 0,
             "Arrow": true
         },
@@ -17474,6 +17532,34 @@
             "Type": "TGraphLink",
             "Begin": 527,
             "End": 519,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 68,
+            "End": 528,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 528,
+            "End": 134,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 68,
+            "End": 529,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 529,
+            "End": 530,
             "Nom": 0,
             "Arrow": true
         }

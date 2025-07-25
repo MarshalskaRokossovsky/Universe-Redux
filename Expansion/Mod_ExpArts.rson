@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -917,6 +918,7 @@
                         "while(!check) {",
                         "    int type = Rnd(t_FuelTanks,t_DefGenerator);",
                         "    if(turns >= 50) break;",
+                        "    if(!ShipEqInSlot(cur_ship,type)) continue;",
                         "    if(ItemInScript(ShipEqInSlot(cur_ship,type))) {",
                         "        turns = turns + 1;",
                         "        continue;",
@@ -927,7 +929,7 @@
                         "        if(type == t_FuelTanks) continue;",
                         "    }",
                         "",
-                        "    DropItem(cur_ship,type);",
+                        "    DropItem(cur_ship,ShipEqInSlot(cur_ship,type));",
                         "    check = 1;",
                         "}"
                     ]

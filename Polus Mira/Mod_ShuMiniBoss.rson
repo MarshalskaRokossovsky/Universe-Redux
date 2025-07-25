@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -2648,7 +2649,8 @@
                         "ShipSetBad(GetTalkShip(),0);",
                         "TranclucatorData(GetTalkShip(),'Proprietor',Player());",
                         "Sound('Sound.Repair');",
-                        "ShipOut(GetTalkShip());"
+                        "ShipOut(GetTalkShip());",
+                        "SetProgramm(11,GetProgramm(11)-1);"
                     ]
                 }
             ],

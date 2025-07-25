@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -1848,7 +1849,7 @@
                         "            if(~findsubstr(EquipmentImageName(temp_dword), 'NuggetAsteroid')) temp_int = temp_int + ItemCost(temp_dword);",
                         "        }",
                         "        //Добавление диалогов в главное меню станции",
-                        "        AddDialogInject('choose_up', Format(CT('FormInfo.TC.Greeting'),'station',ShipName(GetShipRuins(Player()))), \"Прошивка оборудования\", 50, 1);",
+                        "        AddDialogInject('choose_up', Format(CT('FormRuins.TC.Greeting'),'station',ShipName(GetShipRuins(Player()))), \"Прошивка оборудования\", 50, 1);",
                         "        AddDialogInject('choose_down', '', \"Откатить улучшение\", 45);",
                         "        if(temp_int) AddDialogInject('TB_smrd', \"А если вы любите сбивать астероиды или исследовать планеты, то у нас хорошие новости - наша сеть скупает по отличным ценам редкие минералы.\", \"Сдать редкие минералы\", 35);",
                         "        temp_dword = ShipItems(Player(), 0);",
