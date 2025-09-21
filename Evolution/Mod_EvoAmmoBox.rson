@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -329,
-    "ViewPos.y": -197,
+    "ViewPos.x": -364,
+    "ViewPos.y": -52,
     "ScriptName": "Mod_EvoAmmoBox",
     "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoAmmoBox\\DATA\\Script\\Mod_EvoAmmoBox.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoAmmoBox\\DATA\\Script\\Mod_EvoAmmoBox.txt",
@@ -188,8 +188,8 @@
                 {
                     "Type": "TDialog",
                     "Name": "AmmoBox",
-                    "Pos.x": 140,
-                    "Pos.y": 440,
+                    "Pos.x": 180,
+                    "Pos.y": 420,
                     "Parent": -1,
                     "#": 7
                 },
@@ -286,7 +286,7 @@
                         "AddItemToShip(Player(),tdw);",
                         "ShipMoney(Player(),ShipMoney(Player())-cost1);",
                         "Sound('Sound.Buy');",
-                        "count1=count1+1;"
+                        "cur_count1=cur_count1-1;"
                     ]
                 },
                 {
@@ -307,7 +307,7 @@
                         "AddItemToShip(Player(),tdw);",
                         "ShipMoney(Player(),ShipMoney(Player())-cost2);",
                         "Sound('Sound.Buy');",
-                        "count2=count2+1;"
+                        "cur_count2=cur_count2-1;"
                     ]
                 },
                 {
@@ -328,7 +328,7 @@
                         "AddItemToShip(Player(),tdw);",
                         "ShipMoney(Player(),ShipMoney(Player())-cost3);",
                         "Sound('Sound.Buy');",
-                        "count3=count3+1;"
+                        "cur_count3=cur_count3-1;"
                     ]
                 },
                 {
@@ -349,7 +349,7 @@
                         "AddItemToShip(Player(),tdw);",
                         "ShipMoney(Player(),ShipMoney(Player())-cost4);",
                         "Sound('Sound.Buy');",
-                        "count4=count4+1;"
+                        "cur_count4=cur_count4-1;"
                     ]
                 },
                 {
@@ -463,6 +463,22 @@
                         "    cur_count4=ShipRank(Player());",
                         "}"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 59,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "cost1=1.05*GalaxyMoney(2,ShipOwner(GetShipRuins(Player())));",
+                        "cost2=1.2*GalaxyMoney(2,ShipOwner(GetShipRuins(Player())));",
+                        "cost3=1.12*GalaxyMoney(2,ShipOwner(GetShipRuins(Player())));",
+                        "cost4=1.3*GalaxyMoney(2,ShipOwner(GetShipRuins(Player())));"
+                    ]
                 }
             ],
             "Planets": 
@@ -539,7 +555,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost1>=ShipMoney(Player()) && cur_count1"
+                        "cost1<=ShipMoney(Player()) && cur_count1"
                     ]
                 },
                 {
@@ -552,7 +568,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost2>=ShipMoney(Player()) && cur_count2"
+                        "cost2<=ShipMoney(Player()) && cur_count2"
                     ]
                 },
                 {
@@ -565,7 +581,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost3>=ShipMoney(Player()) && cur_count3"
+                        "cost3<=ShipMoney(Player()) && cur_count3"
                     ]
                 },
                 {
@@ -578,7 +594,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost4>=ShipMoney(Player()) && cur_count4"
+                        "cost4<=ShipMoney(Player()) && cur_count4"
                     ]
                 },
                 {
@@ -591,7 +607,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost1<ShipMoney(Player()) || !cur_count1"
+                        "cost1>ShipMoney(Player()) || !cur_count1"
                     ]
                 },
                 {
@@ -604,7 +620,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost2<ShipMoney(Player()) || !cur_count2"
+                        "cost2>ShipMoney(Player()) || !cur_count2"
                     ]
                 },
                 {
@@ -617,7 +633,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost3<ShipMoney(Player()) || !cur_count3"
+                        "cost3>ShipMoney(Player()) || !cur_count3"
                     ]
                 },
                 {
@@ -630,7 +646,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "cost4<ShipMoney(Player()) || !cur_count4"
+                        "cost4>ShipMoney(Player()) || !cur_count4"
                     ]
                 },
                 {
@@ -722,7 +738,7 @@
                     "Parent": -1,
                     "#": 24,
                     "Var.Type": "Int",
-                    "Init": "",
+                    "Init": "3",
                     "Global": false
                 },
                 {
@@ -733,7 +749,7 @@
                     "Parent": -1,
                     "#": 25,
                     "Var.Type": "Int",
-                    "Init": "",
+                    "Init": "2",
                     "Global": false
                 },
                 {
@@ -744,7 +760,7 @@
                     "Parent": -1,
                     "#": 26,
                     "Var.Type": "Int",
-                    "Init": "",
+                    "Init": "1",
                     "Global": false
                 },
                 {
@@ -972,13 +988,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 7,
-            "End": 8,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 19,
             "End": 16,
             "Nom": 0,
@@ -1198,6 +1207,20 @@
             "Type": "TGraphLink",
             "Begin": 12,
             "End": 32,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 59,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 59,
+            "End": 8,
             "Nom": 0,
             "Arrow": true
         }

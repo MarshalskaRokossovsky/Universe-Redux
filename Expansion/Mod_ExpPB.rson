@@ -3,7 +3,7 @@
     "FileVersion": 8,
     "ViewPos.x": -688,
     "ViewPos.y": -643,
-    "ScriptName": "Mod_Name",
+    "ScriptName": "Mod_ExpPB",
     "ScriptFileOut": "C:\\Mod_Name.scr",
     "ScriptTextOut": "C:\\Mod_Name.txt",
     "LangDatIn": "",
@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -84,7 +85,7 @@
                     "Code.Type": "DialogBegin",
                     "Code": 
                     [
-                        ""
+                      
                     ]
                 },
                 {
@@ -97,7 +98,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        ""
+                      
                     ]
                 },
                 {
@@ -110,7 +111,7 @@
                     "Code.Type": "Init",
                     "Code": 
                     [
-                        ""
+                      
                     ]
                 }
             ],
@@ -195,119 +196,6 @@
                     "EType": 1,
                     "EUnique": "",
                     "EMsg": ""
-                }
-            ],
-            "Variables": 
-            [
-                {
-                    "Type": "TVar",
-                    "Name": "MS_Begin_GoSB",
-                    "Pos.x": -130,
-                    "Pos.y": -210,
-                    "Parent": -1,
-                    "#": 10,
-                    "Var.Type": "Int",
-                    "Init": "",
-                    "Global": true
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "MS_Begin_FirstOk",
-                    "Pos.x": -130,
-                    "Pos.y": -230,
-                    "Parent": -1,
-                    "#": 11,
-                    "Var.Type": "Int",
-                    "Init": "",
-                    "Global": true
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "vSBId",
-                    "Pos.x": 20,
-                    "Pos.y": -210,
-                    "Parent": -1,
-                    "#": 12,
-                    "Var.Type": "Dword",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 120,
-                    "Pos.y": -420,
-                    "Parent": -1,
-                    "#": 13,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 120,
-                    "Pos.y": -380,
-                    "Parent": -1,
-                    "#": 14,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 130,
-                    "Pos.y": -340,
-                    "Parent": -1,
-                    "#": 15,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 240,
-                    "Pos.y": -390,
-                    "Parent": -1,
-                    "#": 16,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 290,
-                    "Pos.y": -300,
-                    "Parent": -1,
-                    "#": 17,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 260,
-                    "Pos.y": -320,
-                    "Parent": -1,
-                    "#": 18,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "VarNew",
-                    "Pos.x": 300,
-                    "Pos.y": -370,
-                    "Parent": -1,
-                    "#": 19,
-                    "Var.Type": "Unknown",
-                    "Init": "",
-                    "Global": false
                 }
             ]
         }

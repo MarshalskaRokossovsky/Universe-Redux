@@ -1,0 +1,628 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -548,
+    "ViewPos.y": -282,
+    "ScriptName": "PC_pla05",
+    "ScriptFileOut": "D:\\PC_pla05.scr",
+    "ScriptTextOut": "D:\\PC_pla05.txt",
+    "LangDatIn": "",
+    "LangDatOut": "",
+    "MainDatIn": "",
+    "MainDatOut": "",
+    "CacheDatIn": "",
+    "CacheDatOut": "",
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "planet",
+                    "Pos.x": -40,
+                    "Pos.y": 40,
+                    "Parent": 21,
+                    "#": 24,
+                    "Msg": "Я согласен.",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "planet",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 22,
+                    "#": 25,
+                    "Msg": "Рад был помочь.",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "planet",
+                    "Pos.x": 40,
+                    "Pos.y": 40,
+                    "Parent": 21,
+                    "#": 26,
+                    "Msg": "Я отказываюсь.",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "planet",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 23,
+                    "#": 27,
+                    "Msg": "Понятно...",
+                    "AMsg.Num": "3"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 28,
+                    "#": 21,
+                    "Msg": "Кошелек или жи... А, это вы, <PlayerFull>, отвлекли меня во время репетиции. Вхожу в роль паха... ээ, то есть, стража порядка в нашей системе. Вы никогда не задумывались, что любая услуга стоит денег? И почему некоторые весьма специфичные услуги многие считают за само собой разумеющееся и принадлежащее им бесплатно? Вот гражданские суда бороздят просторы этой системы, и ведь никто даже не заикнется, о том что я обеспечиваю им навигацию, защиту от доминаторов и вашего брата-пирата. От них даже спасибо лишний раз не услышишь! И как я при таких затратах должен себе пятнадцатый этаж во дворце достроить, спрашивается? Решено, <PlayerFull>, мы с вами исправим эту вопиющую несправедливость! Сам я, конечно, не могу позволить себе засветиться, а вот вы вполне подойдете на роль крышева... в смысле, сборщика новых налогов. Соберите дань с <req_num> мирных кораблей, пролетающих через нашу систему. Неважно, в какой форме - можете в кредитах, можете брать груз. Главное, чтобы они все поняли правильно! И поторопитесь - нужно успеть до <GameDateTxtByTurn(quest_deadline)>, иначе я не смогу выставить свою усадьбу на конкурс \"Самый роскошный загородный дом\".",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 29,
+                    "#": 22,
+                    "Msg": "Да, да на оффшорный счет переводите... Ой, это вы, <ShipName(Player())>. Отличная работа, теперь безопасность перелетов в нашей системе вышла на новый уровень! К тому же, мой домик выиграл гран-при конкурса. Впрочем, это уже не тот масштаб, к следующему году я надеюсь выйти на галактический этап. Все благодаря вашим методам убеждения. Отличная работа!",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 20,
+                    "#": 23,
+                    "Msg": "<ShipName(Player())>, понимаете, я бы рад подкинуть вам интересное дельце, но сейчас, когда за мной наблюдают пираты и в мой бок регулярно тычется ствол бла... Впрочем, о чем это я. У нас все прекрасно, и наши покровители - милейшие создания! А вы, <ShipName(Player())>, ни в коим случае не пытайтесь освободить нашу систему от пиратов, тогда я вам никаких поручений не дам! Рачеханом клянусь!",
+                    "DMsg.Num": "2"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogPlanet",
+                    "Pos.x": 330,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 18
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogComplete",
+                    "Pos.x": 500,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 19
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogCancelPirate",
+                    "Pos.x": 160,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 20
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": 0,
+                    "Pos.y": 180,
+                    "Parent": -1,
+                    "#": 13,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 14,
+                    "Code.Type": "Init",
+                    "Code": 
+                    [
+                        "counter=1;",
+                        "while (counter<ArrayDim(array_script_names)){",
+                        "if (array_chosen_planets[counter]==Id(PlanetNew)){script_num=counter;}",
+                        "counter=counter+1;}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 15,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if (!quest_started && ShipIsTakeoff(Player())){",
+                        "ShipOut(Player());}",
+                        "//Ether(0,'F9161F84-6D26-4D38-8710-56985FCA4505','<count_extorted>');",
+                        "if(quest_started && !quest_failed) {",
+                        "  if(ShipStar(Player())==StarNew) {",
+                        "    if(last_check<CurTurn()) {",
+                        "      last_check=CurTurn();",
+                        "      counter=GalaxyEvents()-1;",
+                        "      while (counter>=0){",
+                        "      if (GalaxyEventDate(counter)==CurTurn()){",
+                        "      extort_flag=0;",
+                        "      if (GalaxyEventType(counter)=='PlayerExtortsMoney'){extort_flag=1;}",
+                        "      if (GalaxyEventType(counter)=='PlayerExtortsGoods'){extort_flag=1;}",
+                        "      if (GalaxyEventType(counter)=='PlayerAcceptsMoneyForTruce'){extort_flag=1;}",
+                        "      if (extort_flag){",
+                        "      if (GalaxyEventData(counter,1)==t_Transport){",
+                        "      if (GalaxyEventData(counter,2)==Id(StarNew)){",
+                        "      count_extorted=count_extorted+1;}}}",
+                        "      }",
+                        "      if (GalaxyEventDate(counter)<CurTurn()){counter=0;}",
+                        "      counter=counter-1;}",
+                        "    }",
+                        "  }",
+                        "  if(count_extorted>=req_num) {",
+                        "    Ether(0,'01B6434B-7847-48FD-88D1-E35E99932F4E',\"Задание выполнено, можно возвращаться к заказчику на планету <Name(PlanetNew)> системы <Name(StarNew)>.\");",
+                        "  }",
+                        "  if(count_extorted<req_num) {",
+                        "    if(CurTurn()>quest_deadline) {",
+                        "      array_quest_statuses[script_num]=3;",
+                        "      ShipOut(Player());",
+                        "      quest_failed=1;",
+                        "      NoComeKlingToStar(StarNew,0);",
+                        "      Ether(5,'D1F2377F-C4D4-4DB6-97C7-DAC36CB5B3F8',\"Задание провалено. Теперь на поддержку правителя планеты <Name(PlanetNew)> можно не рассчитывать.\");",
+                        "    }",
+                        "  }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 16,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(GetShipPlanet(Player())==PlanetNew) {",
+                        "  if(!quest_started) {",
+                        "    if(request_dialog) {",
+                        "      if(PlanetOwner(PlanetNew)>=5) {",
+                        "        request_dialog=0;",
+                        "        AddDialogOverride('DialogCancelPirate',10);",
+                        "      }",
+                        "      if(PlanetOwner(PlanetNew)<5) {",
+                        "        request_dialog=0;",
+                        "        AddDialogOverride('DialogPlanet',10);",
+                        "      }",
+                        "    }",
+                        "  }",
+                        "  if(quest_started && (count_extorted>=req_num) && !quest_complete) {",
+                        "    AddDialogOverride('DialogComplete',10);",
+                        "  }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 18,
+                    "#": 28,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "quest_deadline=CurTurn()+90;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 19,
+                    "#": 29,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "array_quest_statuses[script_num]=2;",
+                        "quest_complete=1;",
+                        "khan_counter=khan_counter+1;",
+                        "ShipOut(Player());",
+                        "NoComeKlingToStar(StarNew,0);",
+                        "Ether(4,'D1F2377F-C4D4-4DB6-97C7-DAC36CB5B3F8',\"Задание выполнено, поддержка правителя планеты <Name(PlanetNew)> получена!\");"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 24,
+                    "#": 30,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "array_quest_statuses[script_num]=1;",
+                        "quest_started=1;",
+                        "NoComeKlingToStar(StarNew,1);",
+                        "Ether(3,'D1F2377F-C4D4-4DB6-97C7-DAC36CB5B3F8',\"Особое задание правителя планеты <Name(PlanetNew)> системы <Name(StarNew)><br><br>Собрать дань с <req_num> мирных кораблей в системе <Name(StarNew)>.<br><br>Крайний срок - <GameDateTxtByTurn(quest_deadline)>.\");"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": 0,
+                    "Pos.y": 135,
+                    "Parent": -1,
+                    "#": 12,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 45,
+                    "Parent": -1,
+                    "#": 11,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": 0,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 10,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": 0,
+                    "Pos.y": 205,
+                    "Parent": -1,
+                    "#": 17,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 0,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "counter",
+                    "Pos.x": 0,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 0,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "quest_deadline",
+                    "Pos.x": 120,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 1,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "quest_started",
+                    "Pos.x": 330,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 2,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "script_num",
+                    "Pos.x": 510,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 3,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "count_extorted",
+                    "Pos.x": 690,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "last_check",
+                    "Pos.x": 900,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 5,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "extort_flag",
+                    "Pos.x": 1050,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 6,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "quest_complete",
+                    "Pos.x": 1230,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 7,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "req_num",
+                    "Pos.x": 1440,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 8,
+                    "Var.Type": "Int",
+                    "Init": "6",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "quest_failed",
+                    "Pos.x": 1560,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 9,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 22,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 23,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "Rect.Text": 
+    [
+        {
+            "Type": "TGraphRectText",
+            "Rect.Left": 632,
+            "Rect.Top": -268,
+            "Rect.Right": 1339,
+            "Rect.Bottom": -80,
+            "FStyle": 0,
+            "FColor": 10710818,
+            "BStyle": 0,
+            "BColor": 14474460,
+            "BSize": 1,
+            "BCoef": "0.300000011920929",
+            "AlignX": 0,
+            "AlignY": 0,
+            "AlignRect": false,
+            "Text": "SCR Decompiling PC_pla05\r\n\r\nChangeState(...) -> Link to StateName\r\nDChange(...) -> Link to DMsg.Num\r\nDAdd(...) -> Link to AMsg.Num",
+            "Color": 16777215,
+            "Font": "Segoe UI",
+            "FontSize": 10,
+            "fsBold": true,
+            "fsItalic": false,
+            "fsUnderline": false
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 0,
+    "BlockPar.EC": 
+    [
+      
+    ]
+}

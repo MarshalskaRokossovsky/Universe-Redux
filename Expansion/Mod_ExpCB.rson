@@ -1,18 +1,19 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -138,
-    "ViewPos.y": 199,
+    "ViewPos.x": -51,
+    "ViewPos.y": 146,
     "ScriptName": "Mod_ExpCB",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.txt",
+    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.scr",
+    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.txt",
     "LangDatIn": "",
     "LangDatOut": "",
     "MainDatIn": "",
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -217,6 +218,246 @@
                     "#": 128,
                     "Msg": "Ну, давай-ка поищем среди рейнджеров кого-нибудь...",
                     "AMsg.Num": "19"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1400,
+                    "Pos.y": 570,
+                    "Parent": -1,
+                    "#": 132,
+                    "Msg": "Нет, пожалуй, в другой раз",
+                    "AMsg.Num": "20"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1160,
+                    "Pos.y": 470,
+                    "Parent": -1,
+                    "#": 144,
+                    "Msg": "Ясно...",
+                    "AMsg.Num": "21"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1390,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 148,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "22"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 1390,
+                    "Pos.y": 460,
+                    "Parent": -1,
+                    "#": 152,
+                    "Msg": "",
+                    "AMsg.Num": "23"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1270,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 156,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "24"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 1210,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 158,
+                    "Msg": "",
+                    "AMsg.Num": "25"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 1300,
+                    "Pos.y": 460,
+                    "Parent": -1,
+                    "#": 165,
+                    "Msg": "",
+                    "AMsg.Num": "26"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1410,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 178,
+                    "Msg": "Пожалуй, я выберу что-нибудь ещё",
+                    "AMsg.Num": "27"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1420,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 179,
+                    "Msg": "Отказываюсь платить по таким грабительским расценкам!",
+                    "AMsg.Num": "28"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1450,
+                    "Pos.y": 430,
+                    "Parent": -1,
+                    "#": 182,
+                    "Msg": "Я согласен, валяйте",
+                    "AMsg.Num": "29"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1480,
+                    "Pos.y": 430,
+                    "Parent": -1,
+                    "#": 183,
+                    "Msg": "Я согласен, валяйте",
+                    "AMsg.Num": "30"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1550,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 184,
+                    "Msg": "Я согласен, валяйте",
+                    "AMsg.Num": "31"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1550,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 185,
+                    "Msg": "Я согласен, валяйте",
+                    "AMsg.Num": "32"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 1670,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 195,
+                    "Msg": "",
+                    "AMsg.Num": "33"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 196,
+                    "Msg": "Да, конечно",
+                    "AMsg.Num": "34"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 460,
+                    "Parent": -1,
+                    "#": 197,
+                    "Msg": "Нет уж, хватит с меня",
+                    "AMsg.Num": "35"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1320,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 200,
+                    "Msg": "Дело-то хорошее, чего бы и не помочь?",
+                    "AMsg.Num": "36"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1350,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 201,
+                    "Msg": "В другой раз",
+                    "AMsg.Num": "37"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1350,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 204,
+                    "Msg": "Давай в другой раз, ладно?",
+                    "AMsg.Num": "38"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 209,
+                    "Msg": "Прекращайте сборку!",
+                    "AMsg.Num": "39"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 1430,
+                    "Pos.y": 940,
+                    "Parent": -1,
+                    "#": 217,
+                    "Msg": "",
+                    "AMsg.Num": "40"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1490,
+                    "Pos.y": 880,
+                    "Parent": -1,
+                    "#": 219,
+                    "Msg": "",
+                    "AMsg.Num": "41"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1490,
+                    "Pos.y": 970,
+                    "Parent": -1,
+                    "#": 222,
+                    "Msg": "Отлично",
+                    "AMsg.Num": "42"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 970,
+                    "Parent": -1,
+                    "#": 223,
+                    "Msg": "Я хотел бы подготовить ещё одного пилота",
+                    "AMsg.Num": "43"
                 }
             ],
             "DialogMessages": 
@@ -360,6 +601,176 @@
                     "#": 124,
                     "Msg": "Отлично! Наши молодчики в кратчайшие сроки подредактируют информацию об этом индивидууме.\r\n\r\nНу а пока можешь выпить немного янвелба в нашем баре.",
                     "DMsg.Num": "13"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1370,
+                    "Pos.y": 570,
+                    "Parent": -1,
+                    "#": 131,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "14"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1510,
+                    "Pos.y": 570,
+                    "Parent": -1,
+                    "#": 137,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "15"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1160,
+                    "Pos.y": 410,
+                    "Parent": -1,
+                    "#": 142,
+                    "Msg": "Помиловали?\r\n\r\nНе сказать, чтобы за ними кто-то гонялся. Умники, они ведь такие: им неважно, кто над душой стоит, лишь бы возиться со своими штуками можно было. А борьбу с доминаторами, да и прочие разные изыскания бывают очень интересны и полезны. Вот и пригрелись у нас.\r\n\r\nТак что, если тебе оно надо, то можешь залетать к нам: эти ребята тебе окажут полное содействие.",
+                    "DMsg.Num": "16"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 147,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "17"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1390,
+                    "Pos.y": 430,
+                    "Parent": -1,
+                    "#": 151,
+                    "Msg": "<tstr3>",
+                    "DMsg.Num": "18"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1240,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 157,
+                    "Msg": "<tstr4>",
+                    "DMsg.Num": "19"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 430,
+                    "Parent": -1,
+                    "#": 164,
+                    "Msg": "Сейчас составим списочек оборудования...\r\n...\r\nВыходит, запросик был, но <tstr1> вещей, подходящих для улучшения. Извиняй.",
+                    "DMsg.Num": "20"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1330,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 166,
+                    "Msg": "Сейчас составим списочек оборудования, подходящего для улучшения:\r\n<DefSplt>\r\n<input><DefSplt>\r\nНу и что из этого списка будем улучшать?",
+                    "DMsg.Num": "21"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1450,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 175,
+                    "Msg": "Мы можем задействовать в эксперименте над вашим оборудованием наших лучших специалистов, но их услуги обойдутся недёшево. Если ваши финансы их не потянут, то работать будут обычные специалисты. Ну а за малую сумму возьмутся улучшать только зелёные стажёры.\r\nИсходя из стоимости такой вещи как <DeleteTags(Name(cur_item))> и процентных ставок наших специалистов, получается следующее:\r\n<DefSplt>\r\nЛучшие специалисты - <(cost*12)/10> cr.\r\nОбычные специалисты - <(cost*6)/10> cr.\r\nСтажёры - <(cost*3)/10> cr.\r\n<DefSplt>\r\nКому доверите работу, <Player>?",
+                    "DMsg.Num": "22"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1480,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 176,
+                    "Msg": "Мы можем задействовать в эксперименте над вашим оборудованием наших лучших специалистов, но их услуги обойдутся недёшево. <TextCorr2> Если ваши финансы их не потянут, то работать будут обычные специалисты. Ну а за малую сумму возьмутся улучшать только зелёные стажёры.\r\nИсходя из стоимости такой вещи как <DeleteTags(Name(cur_item))> и процентных ставок наших специалистов, получается следующее:\r\n<DefSplt>\r\nЛучшие специалисты - <(cost*12)/10> cr. и <round((cost*12)/1000)> <TextCorr3>\r\nОбычные специалисты - <(cost*6)/10> cr. и <round((cost*6)/1000)> <TextCorr3>\r\nСтажёры - <(cost*3)/10> cr. и <round((cost*3)/1000)> <TextCorr3>\r\n<DefSplt>\r\n<TextCorr4>Кому доверите работу, <Player>?",
+                    "DMsg.Num": "23"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 192,
+                    "Msg": "<input>",
+                    "DMsg.Num": "24"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1550,
+                    "Pos.y": 460,
+                    "Parent": -1,
+                    "#": 198,
+                    "Msg": "<tstr2>",
+                    "DMsg.Num": "25"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1320,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 199,
+                    "Msg": "Ого, похвально! Знаешь, сколько моих корешей слоняется по нашей станции без дела? Дать бы им плазмошашку, да корабль, да на линию огня... Ух! В два счёта бы всех победили.\r\n\r\nНо вот со всем, кроме линии огня, у нас туго. Так что если ты возьмёшь на себя материальную часть, всё остальное мы сами предоставим.",
+                    "DMsg.Num": "26"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1320,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 203,
+                    "Msg": "Итак, первым делом выбери <clr>корпус<clrEnd>, на котором будет летать будущий сокол. Учти - кандидатов у нас масса, и чтобы не создавать неразбериху, мы просто подберём пилота под <clr>производителя<clrEnd> выбранного тобой корпуса, лады?",
+                    "DMsg.Num": "27"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 208,
+                    "Msg": "Хорошо! Теперь осталось совсем немного - оснастить корабль оборудованием.\r\nЧтобы у тебя было понимание порядка цифр, выведем тебе сейчас текущую информацию по оснащаемому кораблю:\r\n==================\r\nКорабль: <tstr2> (<j> ед. структуры)\r\n-------Оборудование-------\r\n<tstr4>\r\n==================\r\nЧто будем делать?",
+                    "DMsg.Num": "28"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 910,
+                    "Parent": -1,
+                    "#": 216,
+                    "Msg": "Ну, как знаешь, дружок. Но если надумаешь - заглядывай, наши ребята куда решительнее тебя.",
+                    "DMsg.Num": "29"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1490,
+                    "Pos.y": 940,
+                    "Parent": -1,
+                    "#": 221,
+                    "Msg": "",
+                    "DMsg.Num": "30"
                 }
             ],
             "Dialogs": 
@@ -451,6 +862,78 @@
                     "Pos.y": 360,
                     "Parent": -1,
                     "#": 122
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogRC",
+                    "Pos.x": 1370,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 130
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogSB",
+                    "Pos.x": 1510,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 135
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogBuild",
+                    "Pos.x": 1320,
+                    "Pos.y": 730,
+                    "Parent": -1,
+                    "#": 139
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "FirstSB",
+                    "Pos.x": 1160,
+                    "Pos.y": 380,
+                    "Parent": -1,
+                    "#": 141
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Upgrade",
+                    "Pos.x": 1300,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 145
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Upgrade2",
+                    "Pos.x": 1330,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 153
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Upgrade3",
+                    "Pos.x": 1450,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 154
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogBuild2",
+                    "Pos.x": 1430,
+                    "Pos.y": 730,
+                    "Parent": -1,
+                    "#": 205
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "All",
+                    "Pos.x": 1540,
+                    "Pos.y": 730,
+                    "Parent": -1,
+                    "#": 212
                 }
             ],
             "Groups": 
@@ -472,6 +955,64 @@
                     "CargoHook": 0,
                     "EmptySpace": 0,
                     "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                },
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": 280,
+                    "Pos.y": 650,
+                    "Parent": -1,
+                    "#": 227,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 0,
+                    "CntShipMax": 0,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": false,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                },
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupForCB",
+                    "Pos.x": 130,
+                    "Pos.y": 650,
+                    "Parent": -1,
+                    "#": 230,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 0,
+                    "CntShipMax": 0,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": false,
                     "StatusTraderMin": 0,
                     "StatusTraderMax": 100,
                     "StatusWarriorMin": 0,
@@ -589,24 +1130,17 @@
                         "        if(ShipType(cur_ruin) == 'CB')",
                         "        {",
                         "            AddDialogInject('coalship_count', '', \"Предоставьте мне полную информацию о численности коалиционного флота\", 1);",
-                        "            AddDialogInject('BuyNewMM', CT('FormRuins.CB.TakeNod.CBOffer'), CT('FormRuins.CB.TakeNod.PlayerRequest'), 1);",
-                        "            AddDialogInject('SellMM', \"Ну а если у тебя трюм полнится от микромодулей, то мы готовы обменять их на пригоршню нодов\", \"Обменять микромодули на ноды\", 1);",
                         "            AddDialogInject('Betrayal',\"И если кто-то тебе изрядно насолил, то мы можем помочь насолить ему.\",\"Я бы хотел подпортить кому-нибудь жизнь...\",1);",
                         "",
-                        "            //Делаем проверку, остались ли ещё в Галактике ЦР для проведения DDoS атаки",
-                        "            temp_int = 0;",
-                        "            for(i = 0; i < GalaxyStars() - 2; i = i + 1)",
-                        "            {",
-                        "                temp_dword = GalaxyStar(i);",
-                        "                if(StarOwner(temp_dword) != 0) continue;",
-                        "                if(!StarRuins(temp_dword, 'RC')) continue;",
-                        "                temp_int = temp_int + 1;",
-                        "            }",
-                        "            if(temp_int) AddDialogInject('DDoS', '', \"Хочу заказать DDoS атаку сети центров рейнджеров\", 1);",
-                        "            else",
-                        "            {",
-                        "                AddDialogBlock(\"Хочу заказать DDoS атаку сети центров рейнджеров\", 2);",
-                        "                AddDialogInject('DDoS', '', \"Хочу заказать DDoS атаку сети центров рейнджеров\", 1);",
+                        "            AddDialogInject('DialogRC', '', CT('FormRuins.CB.DialogRCAsk'), 1);",
+                        "            AddDialogInject('DialogSB', '', CT('FormRuins.CB.DialogSBAsk'), 1);",
+                        "",
+                        "            AddDialogBlock(CT('FormRuins.CB.Improvement.PlayerSend'),2);",
+                        "            AddDialogBlock(CT('FormRuins.CB.ConstructPirate.PlayerSend'),2);",
+                        "            AddDialogBlock(\"Хочу получить улучшенные артефакты\",2);",
+                        "",
+                        "            if(ShipInCurScript(cur_ruin)) {",
+                        "                AddDialogBlock(CT('FormRuins.CB.WarPlans.PlayerAsk'),2);",
                         "            }",
                         "        }",
                         "    }",
@@ -1272,6 +1806,112 @@
                         "            if(GalaxyEventsTextData(i, 1) == '') TotalCBCount = max(TotalCBCount - 1, 0);",
                         "        }",
                         "    }",
+                        "}",
+                        "",
+                        "//Блок действий доминионов",
+                        "//Здесь умения доминионов, а то чё только игрок умеет пользоваться",
+                        "//Чтобы игрок не охреневал, одновременно бывает только одна операция",
+                        "if(TotalCBCount && ControlledSystems(2) > 5 && ControlledSystems(2) != GalaxyStars()) {",
+                        "    if(!OperationsCD) {",
+                        "        int y = 0;",
+                        "            while(!OperationStage) {",
+                        "                if(OperationStage) break;",
+                        "                y = y + 1;",
+                        "                if(y > 99) break;",
+                        "",
+                        "                i = Rnd(0,1);",
+                        "                if(TotalCBCount < 2) i = 0;",
+                        "",
+                        "                if(i) {",
+                        "                    if(!CBAttackCD) {",
+                        "                        for(i=0;GalaxyStars()>i;i=i+1) {",
+                        "                            cur_star = GalaxyStar(i);",
+                        "                            if(!StarRuins(cur_star,'CB')) continue;",
+                        "                            if(StarBattle(cur_star)) continue;",
+                        "                            else {",
+                        "                                cur_ship = StarRuins(cur_star,'CB');",
+                        "                                temp_int = Rnd(20,35);",
+                        "",
+                        "                                for(j=1;GalaxyStars()>j;j=j+1) {",
+                        "                                    ruin = StarNearbyStars(cur_star,j);",
+                        "                                    if(ruin < 1) continue;",
+                        "                                    if(StarOwner(ruin) == 2) continue;",
+                        "                                    //else if(StarCustomFaction(ruin) != '') continue;",
+                        "                                    else {",
+                        "                                        //SFT('ExpCB logging: 1');",
+                        "                                        break;",
+                        "                                    }",
+                        "                                }",
+                        "                                //SFT('ExpCB logging: 2');",
+                        "                                ShipJoin(GroupNew,cur_ship,'',1,temp_int,Id(ruin));",
+                        "                                OperationStage = 1;",
+                        "                                if(!CoalitionDefeated()) tstr2 = '</color>' + Format(CT('FormRuins.CB.CBAttackCoalition'),'star',Name(ruin),'days',temp_int);",
+                        "                                else tstr2 = '</color>' + Format(CT('FormRuins.CB.CBAttackNoCoalition'),'star',Name(ruin),'days',temp_int);",
+                        "                                Sound('Sound.NewMsg');",
+                        "                                NewsAdd(tstr2);",
+                        "                                AddPlanetNews(tstr2,101);",
+                        "                            }",
+                        "                        }",
+                        "                        break;",
+                        "                    }",
+                        "                }",
+                        "                else {",
+                        "                    if(!LongAttackCD) {",
+                        "                        for(i=0;GalaxyStars()>i;i=i+1) {",
+                        "                            cur_star = GalaxyStar(i);",
+                        "                            if(!StarRuins(cur_star,'CB')) continue;",
+                        "                            if(StarBattle(cur_star)) continue;",
+                        "                            else {",
+                        "                                cur_ship = StarRuins(cur_star,'CB');",
+                        "                                temp_int = Rnd(50,70);",
+                        "",
+                        "                                for(j=GalaxyStars();j>0;j=j-1) {",
+                        "                                    ruin = StarNearbyStars(cur_star,j);",
+                        "                                    if(ruin < 1) continue;",
+                        "                                    if(StarOwner(ruin) == 2) continue;",
+                        "                                    //else if(StarCustomFaction(ruin) != '') continue;",
+                        "                                    else {",
+                        "                                        //SFT('ExpCB logging: 3');",
+                        "                                        break;",
+                        "                                    }",
+                        "                                }",
+                        "                                //SFT('ExpCB logging: 4');",
+                        "                                ShipJoin(GroupNew,cur_ship,'',2,temp_int,Id(ruin));",
+                        "                                OperationStage = 1;",
+                        "                                if(!CoalitionDefeated()) tstr2 = '</color>' + Format(CT('FormRuins.CB.LongAttackCoalition'),'star',Name(ruin),'days',temp_int);",
+                        "                                else tstr2 = '</color>' + Format(CT('FormRuins.CB.LongAttackNoCoalition'),'star',Name(ruin),'days',temp_int);",
+                        "                                Sound('Sound.NewMsg');",
+                        "                                NewsAdd(tstr2);",
+                        "                                AddPlanetNews(tstr2,101);",
+                        "                            }",
+                        "                        }",
+                        "                        break;",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "    }",
+                        "    else OperationsCD = OperationsCD - 1;",
+                        "",
+                        "    //Тикает счётчик",
+                        "    if(CBAttackCD) CBAttackCD = CBAttackCD - 1;",
+                        "    if(LongAttackCD) LongAttackCD = LongAttackCD - 1;",
+                        "}",
+                        "",
+                        "//Если игрок в системе с доминионом, то ему крутят пропаганду",
+                        "if(ShipInNormalSpace(Player())) {",
+                        "    if(StarRuins(ShipStar(Player()),'CB')) {",
+                        "        //Если в системе бой, то пропаганду крутят чаще",
+                        "        if(StarBattle(ShipStar(Player()))) {",
+                        "            if(CurTurn() % 10 == 0) {",
+                        "                CustomEther('Pirate_Propaganda',10,'',CT('FormRuins.CB.Propaganda.News'+Rnd(1,CT('FormRuins.CB.Propaganda.Count'))));",
+                        "            }",
+                        "        }",
+                        "        else {",
+                        "            if(CurTurn() % 25 == 0) {",
+                        "                CustomEther('Pirate_Propaganda',10,'',CT('FormRuins.CB.Propaganda.News'+Rnd(1,CT('FormRuins.CB.Propaganda.Count'))));",
+                        "            }",
+                        "        }",
+                        "    }",
                         "}"
                     ]
                 },
@@ -1544,6 +2184,835 @@
                         "ChangeGlobalRelationsPlanets(GAnswerData,0,0,0,159);",
                         "ChangeGlobalRelationsShips(GAnswerData,0,0,0,1+2+4+8+16+32,159);"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1370,
+                    "Pos.y": 600,
+                    "Parent": -1,
+                    "#": 133,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "InjectAnswer('BuyNewMM', CT('FormRuins.CB.TakeNod.PlayerRequest'), 1);",
+                        "InjectAnswer('SellMM', \"Обменять микромодули на ноды\", 1);",
+                        "",
+                        "//Делаем проверку, остались ли ещё в Галактике ЦР для проведения DDoS атаки",
+                        "temp_int = 0;",
+                        "for(i = 0; i < GalaxyStars() - 2; i = i + 1)",
+                        "{",
+                        "    temp_dword = GalaxyStar(i);",
+                        "    if(StarOwner(temp_dword) != 0) continue;",
+                        "    if(!StarRuins(temp_dword, 'RC')) continue;",
+                        "    temp_int = temp_int + 1;",
+                        "}",
+                        "",
+                        "if(temp_int) InjectAnswer('DDoS', \"Хочу заказать DDoS атаку сети центров рейнджеров\", 1);",
+                        "",
+                        "if(CurrentMods('Expansion\\ExpRC')) {",
+                        "    if(GetVariableType(GetValueFromScript('Mod_ExpRC','mm_storage')) == 9) {",
+                        "        if(ArrayDim(GetValueFromScript('Mod_ExpRC','mm_storage')) > 1) AddDialogInject('Mod_ExpRC:MM_storage2', '', \"Я хотел бы забрать модули из своего хранилища на Центре Рейнджеров\", 1);",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1370,
+                    "Pos.y": 540,
+                    "Parent": -1,
+                    "#": 134,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = '</color>' + CT('FormRuins.CB.DialogRCAnswer');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1510,
+                    "Pos.y": 540,
+                    "Parent": -1,
+                    "#": 136,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = '</color>' + CT('FormRuins.CB.DialogSBAnswer');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1510,
+                    "Pos.y": 600,
+                    "Parent": -1,
+                    "#": 138,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(CurrentMods('Advanced\\AdvancedArts')) {",
+                        "    InjectAnswer('AdvancedArts:ask_for_arts', \"Я хочу улучшить свои артефакты\", 1);",
+                        "}",
+                        "",
+                        "if(ScientistsTalk) {",
+                        "    if(CurrentMods('Evolution\\EvoSB')) {",
+                        "        InjectAnswer('Mod_EvoSB:HandOverDomiksParts',CT('FormRuins.SB.Scn.PlayerAskHandOver'),1);",
+                        "    }",
+                        "}",
+                        "else {",
+                        "    if(CoalitionDefeated()) {",
+                        "        InjectAnswer('FirstSB',\"Ба, да ведь... Это всамделишные учёные Коалиции? А что, уже помиловали?\",1);",
+                        "    }",
+                        "}",
+                        "",
+                        "InjectAnswer('Upgrade',CT('FormRuins.CB.Improvement.PlayerSendMod'),1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1160,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 143,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ScientistsTalk = 1;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 146,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = '</color>' + CT('FormRuins.CB.Improvement.CBAnswer');",
+                        "tstr2 = '</color>' + CT('FormRuins.CB.Improvement.PlayerAsk');",
+                        "tstr3 = '</color>' + CT('FormRuins.CB.Improvement.PlayerNoAsk');",
+                        "tstr4 = '</color>' + CT('FormRuins.CB.Improvement.PlayerNoAskAnswer');",
+                        "",
+                        "ArrayClear(ship);",
+                        "ArrayAdd(ship, Player());",
+                        "//Цикл, пока не закончатся все напарники рейнджеры",
+                        "for(i = 0; i < ShipPartners(Player()); i = i + 1)",
+                        "{",
+                        "    cur_ship = ShipPartners(Player(), i);",
+                        "    if(GetShipRuins(cur_ship) == GetShipRuins(Player())) ArrayAdd(ship, cur_ship);",
+                        "}",
+                        "//Цикл, пока не закончатся все напарники пираты",
+                        "for(i = 0; i < PlayerPirates(Player()); i = i + 1)",
+                        "{",
+                        "    cur_ship = PlayerPirates(Player(), i);",
+                        "    if(GetShipRuins(cur_ship) == GetShipRuins(Player())) ArrayAdd(ship, cur_ship);",
+                        "}",
+                        "//Цикл, пока не закончатся все активные транки",
+                        "for(i = 0; i < PlayerTranclucators(); i = i + 1)",
+                        "{",
+                        "    cur_ship = PlayerTranclucators(i);",
+                        "    if(GetShipRuins(cur_ship) == GetShipRuins(Player())) ArrayAdd(ship, cur_ship);",
+                        "}",
+                        "",
+                        "//Цикл, пока не закончатся все артефакты в трюме",
+                        "for(i = 0; i < ShipArts(Player()); i = i + 1)",
+                        "{",
+                        "    cur_item = ShipArts(Player(), i);",
+                        "    if(ItemType(cur_item) == t_ArtefactTranclucator) ArrayAdd(ship, ArtTranclucatorToShip(cur_item));",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1330,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 150,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "cur_ship = GAnswerData;",
+                        "if(GetGameOptions('FontDialog') == '0') DefSplt = '</color>-------------------------------------------------------------';",
+                        "else if(GetGameOptions('FontDialog') == '1') DefSplt = '</color>------------------------------------------';",
+                        "else if(GetGameOptions('FontDialog') == '2') DefSplt = '</color>-----------------------------------------';",
+                        "else DefSplt = '</color>-------------------------------------';",
+                        "",
+                        "variable = 0;",
+                        "ArrayClear(items);",
+                        "input = '';",
+                        "for(i = 0; i < ShipItems(cur_ship); i = i + 1)",
+                        "{",
+                        "    cur_item = ShipItems(cur_ship, i);",
+                        "    dword acryn_num = EqSpecial(cur_item);",
+                        "",
+                        "    //Исключаем уже улучшенное",
+                        "    if(ItemImprovement(cur_item)) continue;",
+                        "",
+                        "    //Исключаем скриптовое",
+                        "    if(ItemInScript(cur_item) == 1)",
+                        "    {",
+                        "        //Но добавляем в список предметы с особым параметром в акрине",
+                        "        if(~acryn_num)",
+                        "        {",
+                        "            if(!CT('MicroModuls.' + BonusNumInCfg(acryn_num) + '.ScriptItemIgnore')) continue;",
+                        "        }",
+                        "        else continue;",
+                        "    }",
+                        "",
+                        "    //Исключаем высокоуровневое нестандартное",
+                        "    if(!ShipCanRepairEq(Player(), cur_item)) continue;",
+                        "    if(EqCustomFaction(cur_item) != '' && ItemLevel(cur_item) > GalaxyTechLevel()) continue;",
+                        "",
+                        "    //Оставляем только стандартное оборудование и пушки",
+                        "    if(ItemType(cur_item) < t_Hull || ItemType(cur_item) > t_CustomWeapon) continue;",
+                        "    if(~acryn_num)",
+                        "    {",
+                        "        //Исключаем акриновые предметы с пометкой \"Не улучшаемый\"",
+                        "        if(CT('MicroModuls.' + BonusNumInCfg(acryn_num) + '.BlockImp')) continue;",
+                        "    }",
+                        "",
+                        "    //Исключаем корпуса, которым изменили восприимчивость на ТЦ",
+                        "    /*if(ItemType(cur_item) == t_Hull)",
+                        "    {",
+                        "        j = FindBonusByNameInCfg('ExpTC_HullSpraying');",
+                        "        if(~j) j = ItemExtraSpecialsCountByType(cur_item, j);",
+                        "        if(j > 0) continue;",
+                        "    }*/",
+                        "",
+                        "    ArrayAdd(items, cur_item);",
+                        "    variable = variable + 1;",
+                        "    input = input + '<clrEnd>' + variable + ') ' + DeleteTags(ItemFullName(cur_item)) + ' ' + \"за\" + ' <clr>' + ItemCost(cur_item) + '<clrEnd> cr.' + \"<br>\";",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 155,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//На станции находится только один игрок",
+                        "if(ArrayDim(ship) <= 2) InjectAnswer('Upgrade2', CT('FormRuins.CB.Improvement.PlayerAsk'), Player());",
+                        "//У игрока на станции имеется напарник или транклюкатор",
+                        "else",
+                        "{",
+                        "    for(i = 1; i < ArrayDim(ship); i = i + 1)",
+                        "    {",
+                        "        cur_ship = ship[i];",
+                        "",
+                        "        if(ShipTypeN(cur_ship) == t_Tranclucator) InjectAnswer('Upgrade2', \"Улучшить оборудование <ShipName(cur_ship)>\", cur_ship);",
+                        "        else if(ShipTypeN(cur_ship) == t_Ranger)",
+                        "        {",
+                        "            if(ShipType(cur_ship) == 'Merc' || ShipType(cur_ship) == 'PlayerMerc' || ShipType(cur_ship) == 'Freelancer') InjectAnswer('Upgrade2', \"Улучшить оборудование наёмника <ShipName(cur_ship)>\", cur_ship);",
+                        "            else if(ShipType(cur_ship) == 'RangerPirate') InjectAnswer('Upgrade2', \"Улучшить оборудование братана <ShipName(cur_ship)>\", cur_ship);",
+                        "            else if(ShipType(cur_ship) == 'FemRanger') InjectAnswer('Upgrade2', \"Улучшить оборудование спецагента <ShipName(cur_ship)>\", cur_ship);",
+                        "            else InjectAnswer('Upgrade2', \"Улучшить оборудование рейнджера <ShipName(cur_ship)>\", cur_ship);",
+                        "        }",
+                        "        else if(ShipTypeN(cur_ship) == t_Pirate)",
+                        "        {",
+                        "            if(ShipType(cur_ship) == 'Rebel') InjectAnswer('Upgrade2', \"Улучшить оборудование повстанца <ShipName(cur_ship)>\", cur_ship);",
+                        "            else if(ShipType(cur_ship) == 'Merc' || ShipType(cur_ship) == 'Freelancer') InjectAnswer('Upgrade2', \"Улучшить оборудование наёмника <ShipName(cur_ship)>\", cur_ship);",
+                        "            else InjectAnswer('Upgrade2', \"Улучшить оборудование братана <ShipName(cur_ship)>\", cur_ship);",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 163,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(cur_ship == Player()) tstr1 = '</color>' + \"мы не нашли у тебя на корабле\";",
+                        "else if(ShipTypeN(cur_ship) == t_Tranclucator) tstr1 = '</color>' + \"в твоём транклюкаторе мы не нашли\";",
+                        "else if(ShipTypeN(cur_ship) == t_Ranger)",
+                        "{",
+                        "    if(ShipType(cur_ship) == 'Merc' || ShipType(cur_ship) == 'Freelancer') tstr1 = '</color>' + \"на корабле наёмника мы не нашли\";",
+                        "    else if(ShipType(cur_ship) == 'RangerPirate') tstr1 = '</color>' + \"на корабле твоего напарника мы не нашли\";",
+                        "    else if(ShipType(cur_ship) == 'FemRanger') tstr1 = '</color>' + \"на корабле спецагента мы не нашли\";",
+                        "    else tstr1 = '</color>' + \"на корабле твоего напарника мы не нашли\";",
+                        "}",
+                        "else if(ShipTypeN(cur_ship) == t_Pirate)",
+                        "{",
+                        "    if(ShipType(cur_ship) == 'Rebel') tstr1 = '</color>' + \"на корабле повстанца мы не нашли\";",
+                        "    else if(ShipType(cur_ship) == 'Merc' || ShipType(cur_ship) == 'Freelancer') tstr1 = '</color>' + \"на корабле наёмника мы не нашли\";",
+                        "    else tstr1 = '</color>' + \"на корабле твоего напарника мы не нашли\";",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1330,
+                    "Pos.y": 430,
+                    "Parent": -1,
+                    "#": 169,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Добавляем ответы игрока",
+                        "for(i = 1; i < ArrayDim(items); i = i + 1)",
+                        "{",
+                        "    cur_item = items[i];",
+                        "    InjectAnswer('Upgrade3', DeleteTags(ItemFullName(cur_item)), cur_item);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1360,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 170,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr2 = '</color>' + CT('FormRuins.CB.Improvement.PlayerNothing');",
+                        "tstr3 = '</color>' + CT('FormRuins.CB.Improvement.CBAnswerNothing');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1450,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 171,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "cur_item = GAnswerData;",
+                        "cost = ItemCost(cur_item) * 5 * (100 - min(80,ShipStatus(Player(),1))) / 100;",
+                        "//Проверка на доминаторское и клисанское оборудование",
+                        "nod_cost = 0;",
+                        "if(ItemOwner(cur_item) == Kling)",
+                        "{",
+                        "    tstr2 = '</color>' + \"К тому же, им потребуются ноды.\";",
+                        "    tstr3 = '</color>' + \"нд.\";",
+                        "    tstr4 = '</color>' + \"Имейте в виду, что для проведения работ нам необходимы <clr>ноды<clrEnd> прямо здесь. Мы можем взять их из трюма вашего корабля или со склада, но никак не с вашего нод-счёта.\" + \"<br>\";",
+                        "    nod_cost = 1;",
+                        "}",
+                        "if(EqCustomFaction(cur_item) == 'Klissan')",
+                        "{",
+                        "    tstr2 = '</color>' + \"К тому же, им потребуется <clr>протоплазма<clrEnd>.\";",
+                        "    tstr3 = '</color>' + \"пп.\";",
+                        "    tstr4 = '';",
+                        "    nod_cost = 2;",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1480,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 188,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Ищем общее число доступных нодов",
+                        "if(nod_cost == 1) nod_sum = GetNodesFromShip(Player());",
+                        "//Ищем общее число доступной протоплазмы",
+                        "else if(nod_cost == 2)",
+                        "{",
+                        "    nod_sum = 0;",
+                        "    for(i = 0; i < ShipItems(Player()); i = i + 1)",
+                        "    {",
+                        "        temp_dword = ShipItems(Player(), i);",
+                        "        if(ItemType(temp_dword) == t_UselessCountableItem)",
+                        "        {",
+                        "            if(EquipmentImageName(temp_dword) == 'KlissanProtoplasm') nod_sum = nod_sum + ItemSize(temp_dword);",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1580,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 190,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Применяем улучшение",
+                        "ItemImprovement(cur_item, 3);",
+                        "",
+                        "//Если улучшаемая вещь оказалась доминаторской или клисанской",
+                        "if(nod_cost > 0)",
+                        "{",
+                        "    nod_sum = cost/1000;",
+                        "    //Списываем ноды",
+                        "    if(nod_cost == 1)",
+                        "    {",
+                        "        GetNodesFromShip(Player(), nod_sum);",
+                        "    }",
+                        "    //Списываем протоплазму",
+                        "    else if(nod_cost == 2)",
+                        "    {",
+                        "        for(i = ShipItems(Player()) - 1; i >= 1; i = i - 1)",
+                        "        {",
+                        "            temp_dword = ShipItems(Player(), i);",
+                        "            if(ItemType(temp_dword) == t_UselessCountableItem)",
+                        "            {",
+                        "                if(EquipmentImageName(temp_dword) == 'KlissanProtoplasm')",
+                        "                {",
+                        "                    if(ItemSize(temp_dword) > nod_sum)",
+                        "                    {",
+                        "                        ItemSize(temp_dword, ItemSize(temp_dword) - nod_sum);",
+                        "                        nod_sum = 0;",
+                        "                    }",
+                        "                    else",
+                        "                    {",
+                        "                        nod_sum = nod_sum - ItemSize(temp_dword);",
+                        "                        FreeItem(GetItemFromShip(Player(), temp_dword));",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "",
+                        "            if(nod_sum <= 0) break;",
+                        "        }",
+                        "    }",
+                        "}",
+                        "",
+                        "//Списываем деньги",
+                        "ShipMoney(Player(), ShipMoney(Player()) - cost);",
+                        "Sound('Sound.Sell');",
+                        "",
+                        "//Готовим к выводу сообщение",
+                        "if(ItemType(cur_item) < t_Weapon1) tstr1 = '</color>' + lowercase(substr(ShortName(cur_item), 0, 1)) + substr(ShortName(cur_item), 1);",
+                        "else tstr1 = DeleteTags(ShortName(cur_item));",
+                        "input = '</color>';",
+                        "",
+                        "tstr2 = input + CT('FormRuins.CB.Improvement.CBAfterRepeatNo');",
+                        "",
+                        "if(ArrayDim(items) > 2) input = input + \"Отлично, наши матерые спецы закончили работу, теперь твое оборудование - <tstr1> - стало еще круче. Может, есть желание еще что-то подкрутить, пока рука легкая?\";",
+                        "else input = input + \"Отлично, наши матерые спецы закончили работу, теперь твое оборудование - <tstr1> - стало еще круче.\";"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1320,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 202,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "cur_ruin = GetShipRuins(Player());",
+                        "for(i=0;StorageItems() > i; i = i + 1) {",
+                        "    cur_item = StorageItems(i);",
+                        "    if(StorageItemLocation(i) != cur_ruin) continue;",
+                        "",
+                        "    tstr1 = '</color>' + CT('FormRuins.CB.ConstructPirate.StatsHull');",
+                        "    tstr2 = DeleteTags(ShortName(cur_item));",
+                        "    tstr1 = Format(tstr1,'<HitProtect>',GetEquipmentStats(cur_item,0),'<FragilityE>',GetEquipmentStats(cur_item,'<FragilityE>'),'<FragilityM>',GetEquipmentStats(cur_item,'<FragilityM>'),'<FragilityS>',GetEquipmentStats(cur_item,'<FragilityS>'));",
+                        "",
+                        "    InjectAnswer('DialogBuild',tstr2 +', '+tstr1,cur_item);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 206,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Я запрещаю покидать правительство",
+                        "DuringConstruction = 1;",
+                        "GotoGov(2);",
+                        "",
+                        "//Корпус",
+                        "cur_item = GAnswerData;",
+                        "tstr2 = DeleteTags(ShortName(cur_item));",
+                        "j = ItemSize(cur_item);",
+                        "race = ItemOwner(cur_item);",
+                        "if(race > 4) race = Rnd(0,4);",
+                        "",
+                        "tint1 = PlanetRace(NearCivilPlanet(Player()));",
+                        "PlanetRace(NearCivilPlanet(Player()),race);",
+                        "",
+                        "//Чтобы не напрягать булки, создадим военного заранее",
+                        "cur_ship = BuyPirate(NearCivilPlanet(Player()));",
+                        "WarriorId = Id(cur_ship);",
+                        "OrderLock(cur_ship,1);",
+                        "//Очистим ему шмот, а то мало ли",
+                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+                        "    GetItemFromShip(cur_ship,tdwd);",
+                        "    FreeItem(tdwd);",
+                        "}",
+                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
+                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+                        "        GetItemFromShip(cur_ship,tdwd);",
+                        "        FreeItem(tdwd);",
+                        "    }",
+                        "}",
+                        "//Сформируем диалог-шаблон, на основании которого мы потом внаглую будем собирать итоговый, показывающийся игроку",
+                        "tstr4 = '</color>' + CT('FormRuins.CB.ConstructPirate.MainDialog');",
+                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+                        "    tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+                        "    tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+                        "    tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+                        "    tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "}",
+                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+                        "    tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "}",
+                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+                        "    tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+                        "    tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
+                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
+                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+                        "        tstr4 = Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. урона на расстоянии\"+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
+                        "}",
+                        "",
+                        "HullHP(cur_ship,'To100');",
+                        "",
+                        "//Возвращаем планете её расу",
+                        "PlanetRace(NearCivilPlanet(Player()),tint1);",
+                        "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1460,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 211,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "InjectAnswer('All',\"Перейти к изменению оборудования пилота\",1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1540,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 213,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.Scan');",
+                        "FormChange('Ship',cur_ship);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1540,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 214,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Сформируем диалог-шаблон, на основании которого мы потом внаглую будем собирать итоговый, показывающийся игроку",
+                        "tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
+                        "cur_ship = IdToShip(WarriorId);",
+                        "",
+                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_Radar);",
+                        "    tstr4 = Format(tstr4,'radar',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_Engine);",
+                        "    tstr4 = Format(tstr4,'engine',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_FuelTanks);",
+                        "    tstr4 = Format(tstr4,'tank',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+\"ед. топлива)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_Scaner);",
+                        "    tstr4 = Format(tstr4,'scaner',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+'%)');",
+                        "}",
+                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_DefGenerator);",
+                        "    tstr4 = Format(tstr4,'def',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+'%)');",
+                        "}",
+                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_RepairRobot);",
+                        "    tstr4 = Format(tstr4,'droid',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+\"ед. урона\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
+                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+                        "    temp_dword = ShipEqInSlot(cur_ship,t_CargoHook);",
+                        "    tstr4 = Format(tstr4,'hook',Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(temp_dword,1)+' '+\"млн км)\");",
+                        "}",
+                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
+                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
+                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+                        "        temp_dword = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+                        "        tstr4 = Format(tstr4,'weap'+i,Name(temp_dword)+' ('+GetEquipmentStats(temp_dword,1)+' - '+GetEquipmentStats(temp_dword,0)+' '+\"ед. урона на расстоянии\"+GetEquipmentStats(temp_dword,2)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
+                        "}",
+                        "",
+                        "j = ItemSize(ShipEqInSlot(cur_ship,t_Hull));"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1430,
+                    "Pos.y": 880,
+                    "Parent": -1,
+                    "#": 215,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Уничтожаем невезучего военного",
+                        "OrderLock(cur_ship);",
+                        "ShipDestroy(cur_ship);",
+                        "WarriorId = 0;",
+                        "",
+                        "DuringConstruction = 0;",
+                        "GotoGov(0);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1490,
+                    "Pos.y": 910,
+                    "Parent": -1,
+                    "#": 220,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "WarriorId = 0;",
+                        "OrderLock(cur_ship,0);",
+                        "Chameleon(cur_ship);",
+                        "HullHP(cur_ship,'To100');",
+                        "TransferShip(cur_ship,GetShipRuins(Player()));",
+                        "",
+                        "DuringConstruction = 0;",
+                        "GotoGov(0);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 280,
+                    "Pos.y": 710,
+                    "Parent": -1,
+                    "#": 232,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//0",
+                        "//  1 -- Полноценная атака Доминиона",
+                        "//  2 -- Доминион высылает пиратов",
+                        "//1 - Время до начала атаки",
+                        "//2 - система для атаки",
+                        "",
+                        "if(CurTurn() % 3 == 0) {",
+                        "    if(GroupCount(GroupForCB) < 30) {",
+                        "        for(i=0;GalaxyStars()>i;i=i+1) {",
+                        "            cur_star = GalaxyStar(i);",
+                        "            if(StarBattle(cur_star)) continue;",
+                        "            if(StarOwner(cur_star) == 1) continue;",
+                        "            if(StarCustomFaction(cur_star) != '') continue;",
+                        "",
+                        "            for(j=0;StarShips(cur_star)>j;j=j+1) {",
+                        "                dword cur_ship1 = StarShips(cur_star,j);",
+                        "                if(ShipTypeN(cur_ship1) != t_Pirate) continue;",
+                        "                if(!PirateType(cur_ship1)) continue;",
+                        "                if(ShipInScript(cur_ship1)) continue;",
+                        "                if(ShipTypeN(cur_ship1) > t_Tranclucator) continue;",
+                        "                if(ShipType(cur_ship1) == 'Frigate') continue;",
+                        "                if(ShipType(cur_ship1) == 'Galleon') continue;",
+                        "",
+                        "                //SFT('ExpCB logging: trying to add '+Name(cur_ship));",
+                        "                ShipJoin(GroupForCB,cur_ship1,'',Id(CurShip));",
+                        "                SFT('ExpCB logging: added '+Name(cur_ship1));",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}",
+                        "",
+                        "if(ShipStar(CurShip) != GalaxyStar(GetData(2)-1)) {",
+                        "    if(GetData(1)) SetData(GetData(1)-1,1);",
+                        "    else {",
+                        "        if(GetData(0) == 1) {",
+                        "            if(GetShipRuins(Player())) {",
+                        "                if(GetShipRuins(Player()) == CurShip) {",
+                        "                    OrderTakeOff(Player());",
+                        "                }",
+                        "            }",
+                        "            OrderTeleport(CurShip,GalaxyStar(GetData(2)-1),CoordX(CurShip),CoordY(CurShip));",
+                        "            CBAttackCD = 100 + Rnd(100,200);",
+                        "        }",
+                        "        else {",
+                        "            for(i=0;GroupCount(GroupForCB)>i;i=i+1) {",
+                        "                cur_ship = GroupShip(GroupForCB,i);",
+                        "                OrderTakeOff(cur_ship);",
+                        "                ShipDestination(cur_ship,GalaxyStar(GetData(2)-1));",
+                        "                LongAttackCD = 200 + Rnd(200,250);",
+                        "            }",
+                        "",
+                        "            ShipOut(CurShip);",
+                        "        }",
+                        "",
+                        "        OperationStage = 0;",
+                        "        OperationsCD = max(100,Rnd(340,360) - TotalCBCount * 10);",
+                        "    }",
+                        "}",
+                        "else {",
+                        "    if(StarBattle(ShipStar(CurShip))) {",
+                        "        if(HullDamage(CurShip) > 65) {",
+                        "            for(i=1;GalaxyStars()>i;i=i+1) {",
+                        "                cur_star = StarNearbyStars(ShipStar(CurShip),i);",
+                        "                if(StarOwner(cur_star) != PirateClan || StarCustomFaction(cur_star) != '') continue;",
+                        "                else {",
+                        "                    OrderNone(CurShip);",
+                        "                    if(GetShipRuins(Player())) {",
+                        "                        if(GetShipRuins(Player()) == CurShip) {",
+                        "                            OrderTakeOff(Player());",
+                        "                        }",
+                        "                    }",
+                        "                    OrderTeleport(CurShip,cur_star);",
+                        "                    ShipOut(CurShip);",
+                        "                    break;",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "    else {",
+                        "        if(StarOwner(ShipStar(CurShip)) == PirateClan || StarCustomFaction(ShipStar(CurShip)) == '') {",
+                        "            ShipOut(CurShip);",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 130,
+                    "Pos.y": 710,
+                    "Parent": -1,
+                    "#": 233,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//0 - Id доминиона",
+                        "",
+                        "if(GetData(0) < 1) exit;",
+                        "",
+                        "cur_ship = IdToShip(GetData(0));",
+                        "",
+                        "if(cur_ship > 0) {",
+                        "    if(!ShipInStar(cur_ship,ShipStar(CurShip))) {",
+                        "        if(ShipInNormalSpace(CurShip)) {",
+                        "            OrderJump(CurShip,ShipStar(cur_ship));",
+                        "        }",
+                        "        else if(!GetShipRuins(CurShip)) {",
+                        "            OrderTakeOff(CurShip);",
+                        "        }",
+                        "    }",
+                        "    else {",
+                        "        if(ShipInNormalSpace(CurShip)) {",
+                        "            if(ShipInNormalSpace(cur_ship)) {",
+                        "                OrderLanding(CurShip,cur_ship);",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}",
+                        "else ShipOut(CurShip);"
+                    ]
                 }
             ],
             "Planets": 
@@ -1778,6 +3247,162 @@
                     [
                         "!ShipIsTakeoff(Player())"
                     ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1300,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 161,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ArrayDim(items) <= 1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1330,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 162,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ArrayDim(items) > 1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1450,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 173,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!nod_cost"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1480,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 174,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "nod_cost"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1450,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 177,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ArrayDim(items) > 2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1450,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 180,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < cost"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1480,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 181,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player())<cost || nod_sum<cost/1000"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1520,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 186,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player())>=cost"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1520,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 187,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player())>=cost && nod_sum<cost/1000"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 193,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ArrayDim(items) == 2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 194,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ArrayDim(items) > 2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1490,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 218,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ready >=4 && ShipCntWeapon(cur_ship) && ShipEqInSlot(cur_ship,t_Engine) && ShipFreeSpace(cur_ship) > 0 && ShipEqInSlot(cur_ship,t_FuelTanks)"
+                    ]
                 }
             ],
             "States": 
@@ -1786,10 +3411,46 @@
                     "Type": "TState",
                     "Name": "PlayerState",
                     "Pos.x": 390,
-                    "Pos.y": 670,
+                    "Pos.y": 680,
                     "Parent": -1,
                     "#": 3,
                     "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                },
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": 280,
+                    "Pos.y": 680,
+                    "Parent": -1,
+                    "#": 228,
+                    "Move": 5,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                },
+                {
+                    "Type": "TState",
+                    "Name": "StateMain",
+                    "Pos.x": 130,
+                    "Pos.y": 680,
+                    "Parent": -1,
+                    "#": 231,
+                    "Move": 5,
                     "MoveObj": -1,
                     "Attack.Count": 0,
                     "TakeItem": -1,
@@ -2235,8 +3896,8 @@
                 {
                     "Type": "TVar",
                     "Name": "tstr1",
-                    "Pos.x": 710,
-                    "Pos.y": 950,
+                    "Pos.x": 980,
+                    "Pos.y": 790,
                     "Parent": -1,
                     "#": 99,
                     "Var.Type": "Str",
@@ -2295,6 +3956,182 @@
                     "Parent": -1,
                     "#": 109,
                     "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ScientistsTalk",
+                    "Pos.x": 980,
+                    "Pos.y": 1020,
+                    "Parent": -1,
+                    "#": 140,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr4",
+                    "Pos.x": 980,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 149,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ship",
+                    "Pos.x": 710,
+                    "Pos.y": 960,
+                    "Parent": -1,
+                    "#": 159,
+                    "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "items",
+                    "Pos.x": 710,
+                    "Pos.y": 980,
+                    "Parent": -1,
+                    "#": 160,
+                    "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "input",
+                    "Pos.x": 980,
+                    "Pos.y": 880,
+                    "Parent": -1,
+                    "#": 167,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "variable",
+                    "Pos.x": 710,
+                    "Pos.y": 1000,
+                    "Parent": -1,
+                    "#": 168,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "nod_cost",
+                    "Pos.x": 830,
+                    "Pos.y": 960,
+                    "Parent": -1,
+                    "#": 172,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "nod_sum",
+                    "Pos.x": 830,
+                    "Pos.y": 940,
+                    "Parent": -1,
+                    "#": 189,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "cur_item",
+                    "Pos.x": 830,
+                    "Pos.y": 1000,
+                    "Parent": -1,
+                    "#": 191,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "DuringConstruction",
+                    "Pos.x": 980,
+                    "Pos.y": 1000,
+                    "Parent": -1,
+                    "#": 207,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "WarriorId",
+                    "Pos.x": 830,
+                    "Pos.y": 1020,
+                    "Parent": -1,
+                    "#": 210,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "OperationsCD",
+                    "Pos.x": 1080,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 224,
+                    "Var.Type": "Int",
+                    "Init": "300",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "CBAttackCD",
+                    "Pos.x": 1080,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 225,
+                    "Var.Type": "Int",
+                    "Init": "150",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "LongAttackCD",
+                    "Pos.x": 1080,
+                    "Pos.y": 810,
+                    "Parent": -1,
+                    "#": 226,
+                    "Var.Type": "Int",
+                    "Init": "200",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "OperationStage",
+                    "Pos.x": 1080,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 229,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "cur_ship",
+                    "Pos.x": 830,
+                    "Pos.y": 980,
+                    "Parent": -1,
+                    "#": 234,
+                    "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
                 }
@@ -2834,9 +4671,639 @@
             "End": 61,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 131,
+            "End": 132,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 131,
+            "End": 133,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 130,
+            "End": 134,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 134,
+            "End": 131,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 137,
+            "End": 132,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 135,
+            "End": 136,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 136,
+            "End": 137,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 137,
+            "End": 138,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 141,
+            "End": 142,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 142,
+            "End": 143,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 143,
+            "End": 144,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 145,
+            "End": 146,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 146,
+            "End": 147,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 151,
+            "End": 152,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 147,
+            "End": 155,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 147,
+            "End": 156,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 156,
+            "End": 157,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 157,
+            "End": 158,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 150,
+            "End": 161,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 150,
+            "End": 162,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 161,
+            "End": 163,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 163,
+            "End": 164,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 164,
+            "End": 165,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 162,
+            "End": 166,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 153,
+            "End": 150,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 166,
+            "End": 169,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 166,
+            "End": 170,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 170,
+            "End": 148,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 148,
+            "End": 151,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 154,
+            "End": 171,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 171,
+            "End": 174,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 171,
+            "End": 173,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 173,
+            "End": 175,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 174,
+            "End": 176,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 175,
+            "End": 177,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 176,
+            "End": 177,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 177,
+            "End": 178,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 178,
+            "End": 150,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 175,
+            "End": 179,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 176,
+            "End": 179,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 179,
+            "End": 151,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 175,
+            "End": 180,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 180,
+            "End": 182,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 181,
+            "End": 183,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 175,
+            "End": 186,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 187,
+            "End": 185,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 186,
+            "End": 184,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 176,
+            "End": 188,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 188,
+            "End": 187,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 188,
+            "End": 181,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 185,
+            "End": 190,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 184,
+            "End": 190,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 190,
+            "End": 192,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 192,
+            "End": 194,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 192,
+            "End": 193,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 193,
+            "End": 195,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 194,
+            "End": 197,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 198,
+            "End": 152,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 197,
+            "End": 198,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 194,
+            "End": 196,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 196,
+            "End": 150,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 205,
+            "End": 206,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 139,
+            "End": 199,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 199,
+            "End": 201,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 199,
+            "End": 200,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 200,
+            "End": 203,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 203,
+            "End": 204,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 203,
+            "End": 202,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 206,
+            "End": 208,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 208,
+            "End": 209,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 208,
+            "End": 211,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 212,
+            "End": 213,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 213,
+            "End": 214,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 214,
+            "End": 208,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 209,
+            "End": 215,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 215,
+            "End": 216,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 216,
+            "End": 217,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 208,
+            "End": 218,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 218,
+            "End": 219,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 219,
+            "End": 220,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 220,
+            "End": 221,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 221,
+            "End": 223,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 221,
+            "End": 222,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 223,
+            "End": 203,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 227,
+            "End": 228,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 227,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 230,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 230,
+            "End": 231,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 228,
+            "End": 232,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 231,
+            "End": 233,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
-    "BlockPar.EC.Total.Strings": 52,
+    "BlockPar.EC.Total.Strings": 105,
     "BlockPar.EC": 
     [
         {
@@ -2865,7 +5332,7 @@
         },
         {
             "#": "143",
-            "String": "<0>"
+            "String": "Хорошо! Теперь осталось совсем немного - оснастить корабль оборудованием.<br>Чтобы у тебя было понимание порядка цифр, выведем тебе сейчас текущую информацию по оснащаемому кораблю:<br>==================<br>Корабль: <0> (<1> ед. структуры)<br>-------Оборудование-------<br><2><br>==================<br>Что будем делать?"
         },
         {
             "#": "144",
@@ -3016,10 +5483,6 @@
             "String": "Обменять микромодули на ноды"
         },
         {
-            "#": "257",
-            "String": "Ну а если у тебя трюм полнится от микромодулей, то мы готовы обменять их на пригоршню нодов"
-        },
-        {
             "#": "259",
             "String": "Я бы хотел подпортить кому-нибудь жизнь..."
         },
@@ -3046,6 +5509,222 @@
         {
             "#": "265",
             "String": "Ну, давай-ка поищем среди рейнджеров кого-нибудь..."
+        },
+        {
+            "#": "266",
+            "String": "на корабле твоего напарника мы не нашли"
+        },
+        {
+            "#": "267",
+            "String": "на корабле наёмника мы не нашли"
+        },
+        {
+            "#": "268",
+            "String": "на корабле повстанца мы не нашли"
+        },
+        {
+            "#": "269",
+            "String": "на корабле спецагента мы не нашли"
+        },
+        {
+            "#": "270",
+            "String": "в твоём транклюкаторе мы не нашли"
+        },
+        {
+            "#": "271",
+            "String": "мы не нашли у тебя на корабле"
+        },
+        {
+            "#": "272",
+            "String": "за"
+        },
+        {
+            "#": "273",
+            "String": "пп."
+        },
+        {
+            "#": "274",
+            "String": "К тому же, им потребуется <clr>протоплазма<clrEnd>."
+        },
+        {
+            "#": "275",
+            "String": "Имейте в виду, что для проведения работ нам необходимы <clr>ноды<clrEnd> прямо здесь. Мы можем взять их из трюма вашего корабля или со склада, но никак не с вашего нод-счёта."
+        },
+        {
+            "#": "276",
+            "String": "нд."
+        },
+        {
+            "#": "277",
+            "String": "К тому же, им потребуются ноды."
+        },
+        {
+            "#": "278",
+            "String": "<color=220,20,20>отсутствует</color>"
+        },
+        {
+            "#": "279",
+            "String": "млн км)"
+        },
+        {
+            "#": "280",
+            "String": "ед. урона на расстоянии"
+        },
+        {
+            "#": "281",
+            "String": "т. на расстоянии"
+        },
+        {
+            "#": "282",
+            "String": "ед. урона"
+        },
+        {
+            "#": "283",
+            "String": "ед. топлива)"
+        },
+        {
+            "#": "284",
+            "String": "<0>"
+        },
+        {
+            "#": "285",
+            "String": "Я хотел бы забрать модули из своего хранилища на Центре Рейнджеров"
+        },
+        {
+            "#": "286",
+            "String": "Ба, да ведь... Это всамделишные учёные Коалиции? А что, уже помиловали?"
+        },
+        {
+            "#": "287",
+            "String": "Помиловали?<br><br>Не сказать, чтобы за ними кто-то гонялся. Умники, они ведь такие: им неважно, кто над душой стоит, лишь бы возиться со своими штуками можно было. А борьбу с доминаторами, да и прочие разные изыскания бывают очень интересны и полезны. Вот и пригрелись у нас.<br><br>Так что, если тебе оно надо, то можешь залетать к нам: эти ребята тебе окажут полное содействие."
+        },
+        {
+            "#": "288",
+            "String": "Улучшить оборудование братана <0>"
+        },
+        {
+            "#": "289",
+            "String": "Улучшить оборудование наёмника <0>"
+        },
+        {
+            "#": "290",
+            "String": "Улучшить оборудование повстанца <0>"
+        },
+        {
+            "#": "291",
+            "String": "Улучшить оборудование рейнджера <0>"
+        },
+        {
+            "#": "292",
+            "String": "Улучшить оборудование спецагента <0>"
+        },
+        {
+            "#": "293",
+            "String": "Улучшить оборудование <0>"
+        },
+        {
+            "#": "294",
+            "String": "Сейчас составим списочек оборудования...<br>...<br>Выходит, запросик был, но <0> вещей, подходящих для улучшения. Извиняй."
+        },
+        {
+            "#": "295",
+            "String": "Сейчас составим списочек оборудования, подходящего для улучшения:<br><0><br><1><2><br>Ну и что из этого списка будем улучшать?"
+        },
+        {
+            "#": "296",
+            "String": "Мы можем задействовать в эксперименте над вашим оборудованием наших лучших специалистов, но их услуги обойдутся недёшево. Если ваши финансы их не потянут, то работать будут обычные специалисты. Ну а за малую сумму возьмутся улучшать только зелёные стажёры.<br>Исходя из стоимости такой вещи как <0> и процентных ставок наших специалистов, получается следующее:<br><1><br>Лучшие специалисты - <2> cr.<br>Обычные специалисты - <3> cr.<br>Стажёры - <4> cr.<br><5><br>Кому доверите работу, <Player>?"
+        },
+        {
+            "#": "297",
+            "String": "Мы можем задействовать в эксперименте над вашим оборудованием наших лучших специалистов, но их услуги обойдутся недёшево. <0> Если ваши финансы их не потянут, то работать будут обычные специалисты. Ну а за малую сумму возьмутся улучшать только зелёные стажёры.<br>Исходя из стоимости такой вещи как <1> и процентных ставок наших специалистов, получается следующее:<br><2><br>Лучшие специалисты - <3> cr. и <4> <5><br>Обычные специалисты - <6> cr. и <7> <8><br>Стажёры - <9> cr. и <10> <11><br><12><br><13>Кому доверите работу, <Player>?"
+        },
+        {
+            "#": "298",
+            "String": "Ого, похвально! Знаешь, сколько моих корешей слоняется по нашей станции без дела? Дать бы им плазмошашку, да корабль, да на линию огня... Ух! В два счёта бы всех победили.<br><br>Но вот со всем, кроме линии огня, у нас туго. Так что если ты возьмёшь на себя материальную часть, всё остальное мы сами предоставим."
+        },
+        {
+            "#": "299",
+            "String": "Итак, первым делом выбери <clr>корпус<clrEnd>, на котором будет летать будущий сокол. Учти - кандидатов у нас масса, и чтобы не создавать неразбериху, мы просто подберём пилота под <clr>производителя<clrEnd> выбранного тобой корпуса, лады?"
+        },
+        {
+            "#": "300",
+            "String": "Перейти к изменению оборудования пилота"
+        },
+        {
+            "#": "301",
+            "String": "Ну, как знаешь, дружок. Но если надумаешь - заглядывай, наши ребята куда решительнее тебя."
+        },
+        {
+            "#": "302",
+            "String": ""
+        },
+        {
+            "#": "303",
+            "String": "Нет, пожалуй, в другой раз"
+        },
+        {
+            "#": "304",
+            "String": "Ясно..."
+        },
+        {
+            "#": "305",
+            "String": "Пожалуй, я выберу что-нибудь ещё"
+        },
+        {
+            "#": "306",
+            "String": "Отказываюсь платить по таким грабительским расценкам!"
+        },
+        {
+            "#": "307",
+            "String": "Я согласен, валяйте"
+        },
+        {
+            "#": "308",
+            "String": "Отлично, наши матерые спецы закончили работу, теперь твое оборудование - <0> - стало еще круче."
+        },
+        {
+            "#": "309",
+            "String": "Отлично, наши матерые спецы закончили работу, теперь твое оборудование - <0> - стало еще круче. Может, есть желание еще что-то подкрутить, пока рука легкая?"
+        },
+        {
+            "#": "310",
+            "String": "Да, конечно"
+        },
+        {
+            "#": "311",
+            "String": "Нет уж, хватит с меня"
+        },
+        {
+            "#": "312",
+            "String": "Дело-то хорошее, чего бы и не помочь?"
+        },
+        {
+            "#": "313",
+            "String": "В другой раз"
+        },
+        {
+            "#": "314",
+            "String": "Давай в другой раз, ладно?"
+        },
+        {
+            "#": "315",
+            "String": "Прекращайте сборку!"
+        },
+        {
+            "#": "316",
+            "String": "Отлично"
+        },
+        {
+            "#": "317",
+            "String": "Я хотел бы подготовить ещё одного пилота"
+        },
+        {
+            "#": "318",
+            "String": "Хочу получить улучшенные артефакты"
+        },
+        {
+            "#": "319",
+            "String": "Я хочу улучшить свои артефакты"
         }
     ]
 }

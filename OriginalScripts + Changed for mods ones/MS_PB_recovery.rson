@@ -1,0 +1,675 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -152,
+    "ViewPos.y": -118,
+    "ScriptName": "MS_PB",
+    "ScriptFileOut": "D:\\MS_PB.scr",
+    "ScriptTextOut": "D:\\MS_PB.txt",
+    "LangDatIn": "",
+    "LangDatOut": "",
+    "MainDatIn": "",
+    "MainDatOut": "",
+    "CacheDatIn": "",
+    "CacheDatOut": "",
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 11,
+                    "#": 18,
+                    "Msg": "Откуда на нашу голову взялись доминаторы?",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 28,
+                    "#": 19,
+                    "Msg": "Хорошо, рассказывай, плачу <info_cost> cr",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 14,
+                    "#": 20,
+                    "Msg": "И это весь рассказ? Кто ими руководит, как они думают, возможно ли построить свою армию доминаторов?",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 16,
+                    "#": 21,
+                    "Msg": "И роботы у них вышли из-под контроля?!!",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 15,
+                    "#": 22,
+                    "Msg": "Понятно...",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 29,
+                    "#": 23,
+                    "Msg": "У меня есть только <ShipMoney(Player())> cr, не сделаешь скидочку?",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 30,
+                    "#": 24,
+                    "Msg": "Извини, я вообще на нуле сейчас...",
+                    "AMsg.Num": "6"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 10,
+                    "#": 11,
+                    "Msg": "Здорово, <Player>! Садись, выпьем. Будешь \"Особый ядерный\"? Ну и что, что серная кислота? Подумаешь, всего-то 18%... как раз вместо лимона... Ладно, не хочешь, как хочешь. Так что ты хотел узнать?",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 18,
+                    "#": 12,
+                    "Msg": "Так ты ж рейнджер, пойди, спроси у своего начальства! Что, не говорят? То-то же. Политиканы, засоси их пиявки. Будут цепляться за свои секреты даже у пенчекряка в пасти... Ладно, нет такой тайны, которую нельзя узнать за деньги. Например, за <info_cost> кредитов...",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 25,
+                    "#": 13,
+                    "Msg": "Так вот, во всем виноваты эти придурки малоки. Вояки недоделанные... Короче, давно, еще до клисанской войны, мы тут - ну, расы, которые сейчас в Коалицию вошли - вовсю между собой грызлись. И изобрели тогда крутых роботов, которые сами друг друга строили, сами чинили, сами усовершенствовали и все такое. \"Гибкая микромодульная архитектура\", во как это по-научному... Ну вот, изобрели, а потом сами испугались - не слишком ли они крутые. Вроде на какой-то планете они так развернулись, что покрошили в мелкий винегрет и чужих, и своих... Короче, запретили их от греха. Все пять рас договорились, что не то что самих роботов, а даже и чертежи их уничтожат. Ну вот, а малоки решили, что они, типа, самые умные. И припрятали своих роботов на далекой планете, про которую другие не знали.",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 21,
+                    "#": 14,
+                    "Msg": "Да ты что, <Player>?!! Из ума выжил? У малоков из-под контроля никто и никогда не выходит. Не перебивай, слушай...\r\nТак вот, потом на эту планету клисаны пожаловали, в самом начале той войны. Ну и была там крутая мочиловка, малоки, конечно, огребли по полной, но прежде, чем удрать, планету ядерным оружием таки обработали. Чтобы, значит, клисанам ничего не досталось... Потом, уже после войны, малоки туда корабль посылали, посмотреть, как и что. Только садиться-то они побрезговали, уж больно радиация припекала, а с орбиты ничего не заметили, ну и улетели. Я ж говорю - придурки... Роботы-то были - из независимых микромодулей, способных к ремонту и сборке себе подобных. Некоторые из этих модулей уцелели, а заодно и клисанские куски себе приспособили... В общем, из всех этих обломков доминаторы и вылупились. Там, на Гралгаре. Ученые вот гадают, чего они на нас бросаются. А ты бы не бросался, если б тебя сначала бомбами в куски покрошили, а потом сотни лет радиацией пекли? Ясно, что крыша у них у всех совсем съехавшая... а все ж таки ума хватило наших вояк провести. Когда пеленги у малоков их тайну выкрали, к Гралгару весь флот ломанулся, две трети его там и осталось... а доминаторы-то успели своих главных вывезти и через пару месяцев снова полезли. Да-а... на самом деле, хреново это все...",
+                    "DMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": 20,
+                    "#": 15,
+                    "Msg": "А ты думал, за 500 кредитов я тебе расскажу, где бабки зарыты? Нет уж, <Player>. Рассказано лишь то, за что заплачено. Как этих доминаторов штамповать, никто не знает.",
+                    "DMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 26,
+                    "#": 16,
+                    "Msg": "На что же ты так потратился, что даже <info_cost> наскрести не можешь? Ну да ладно, давай, сколько есть. Я сегодня добрый.\r\nТак вот, во всем виноваты эти придурки малоки. Вояки недоделанные... Короче, давно, еще до клисанской войны, мы тут - ну, расы, которые сейчас в Коалицию вошли - вовсю между собой грызлись. И изобрели тогда крутых роботов, которые сами друг друга строили, сами чинили, сами усовершенствовали и все такое. \"Гибкая микромодульная архитектура\", во как это по-научному... Ну вот, изобрели, а потом сами испугались - не слишком ли они крутые. Вроде на какой-то планете они так развернулись, что покрошили в мелкий винегрет и чужих, и своих... Короче, запретили их от греха. Все пять рас договорились, что не то что самих роботов, а даже и чертежи их уничтожат. Ну вот, а малоки решили, что они, типа, самые умные. И припрятали своих роботов на далекой планете, про которую другие не знали.",
+                    "DMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 27,
+                    "#": 17,
+                    "Msg": "Ну и лошара же ты, <ShipName(Player())>. Или жмотяра?.. Впрочем, ладно, все равно рассказать охота, так что слушай.\r\nНа самом деле, во всем виноваты эти придурки малоки. Вояки недоделанные... Короче, давно, еще до клисанской войны, мы тут - ну, расы, которые сейчас в Коалицию вошли - вовсю между собой грызлись. И изобрели тогда крутых роботов, которые сами друг друга строили, сами чинили, сами усовершенствовали и все такое. \"Гибкая микромодульная архитектура\", во как это по-научному... Ну вот, изобрели, а потом сами испугались - не слишком ли они крутые. Вроде на какой-то планете они так развернулись, что покрошили в мелкий винегрет и чужих, и своих... Короче, запретили их от греха. Все пять рас договорились, что не то что самих роботов, а даже и чертежи их уничтожат. Ну вот, а малоки решили, что они, типа, самые умные. И припрятали своих роботов на далекой планете, про которую другие не знали.",
+                    "DMsg.Num": "6"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "dPB",
+                    "Pos.x": 180,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 10
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": 0,
+                    "Pos.y": 180,
+                    "Parent": -1,
+                    "#": 5,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(MS_SB1_DialogOk && !MS_PB_DialogOk && !DomiksDefeated()) {",
+                        "  GRun();",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 7,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(MS_PB_DialogOk || DomiksDefeated()) {",
+                        "  ShipOut(Player());",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 8,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(GetShipRuins(Player())>0) {",
+                        "  if(ShipType(GetShipRuins(Player()))=='PB') {",
+                        "    if(!MS_PB_DialogOk && !DomiksDefeated()) {",
+                        "      AddDialogOverride('dPB',150);",
+                        "    }",
+                        "  }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 19,
+                    "#": 25,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player(),ShipMoney(Player())-info_cost);",
+                        "Sound('Sound.Buy');",
+                        "MS_PB_DialogOk=1;",
+                        "ShipOut(Player());"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 23,
+                    "#": 26,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player(),0);",
+                        "Sound('Sound.Buy');",
+                        "MS_PB_DialogOk=1;",
+                        "ShipOut(Player());"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 40,
+                    "Parent": 24,
+                    "#": 27,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "MS_PB_DialogOk=1;",
+                        "ShipOut(Player());"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "playerPlanet",
+                    "Pos.x": 0,
+                    "Pos.y": 135,
+                    "Parent": -1,
+                    "#": 4,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 45,
+                    "Parent": -1,
+                    "#": 3,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "playerStar",
+                    "Pos.x": 0,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": 50,
+                    "Parent": 12,
+                    "#": 28,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player())>=info_cost"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 50,
+                    "Parent": 12,
+                    "#": 29,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "(ShipMoney(Player())<info_cost) && ShipMoney(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": 50,
+                    "Parent": 12,
+                    "#": 30,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!ShipMoney(Player())"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": 0,
+                    "Pos.y": 205,
+                    "Parent": -1,
+                    "#": 9,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 0,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "MS_PB_DialogOk",
+                    "Pos.x": 0,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 0,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": true
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "info_cost",
+                    "Pos.x": 210,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 1,
+                    "Var.Type": "Int",
+                    "Init": "500",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 3,
+            "End": 2,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 2,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 5,
+            "End": 4,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 5,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 10,
+            "End": 11,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 23,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 30,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 27,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 22,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 25,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "Rect.Text": 
+    [
+        {
+            "Type": "TGraphRectText",
+            "Rect.Left": 632,
+            "Rect.Top": -268,
+            "Rect.Right": 1339,
+            "Rect.Bottom": -80,
+            "FStyle": 0,
+            "FColor": 10710818,
+            "BStyle": 0,
+            "BColor": 14474460,
+            "BSize": 1,
+            "BCoef": "0.300000011920929",
+            "AlignX": 0,
+            "AlignY": 0,
+            "AlignRect": false,
+            "Text": "SCR Decompiling MS_PB\r\n\r\nChangeState(...) -> Link to StateName\r\nDChange(...) -> Link to DMsg.Num\r\nDAdd(...) -> Link to AMsg.Num",
+            "Color": 16777215,
+            "Font": "Segoe UI",
+            "FontSize": 10,
+            "fsBold": true,
+            "fsItalic": false,
+            "fsUnderline": false
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 0,
+    "BlockPar.EC": 
+    [
+      
+    ]
+}

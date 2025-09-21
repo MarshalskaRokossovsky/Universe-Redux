@@ -4,15 +4,16 @@
     "ViewPos.x": 279,
     "ViewPos.y": -13,
     "ScriptName": "Mod_RevTerrorist",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevTerrorist\\DATA\\Script\\Mod_RevTerrorist.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevTerrorist\\DATA\\Script\\Mod_RevTerrorist.txt",
+    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevTerrorist\\DATA\\Script\\Mod_RevTerrorist.scr",
+    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevTerrorist\\DATA\\Script\\Mod_RevTerrorist.txt",
     "LangDatIn": "",
     "LangDatOut": "",
     "MainDatIn": "",
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -880,6 +881,7 @@
                         "//Фиксируем в переменной факт получения награды",
                         "sst=5;",
                         "//Вручную удаляем неубираемую заметку о награде",
+                        "EtherIdDelete('CC90A689-F0E6-406E-91A6-FE4BD9F90203');",
                         "EtherDelete('CC90A689-F0E6-406E-91A6-FE4BD9F90203');",
                         "//И заменяем на заметку о выполнении задания, заодно воспроизводится нужный нам звук",
                         "Ether(4,'',Format(CT('Script.Mod_RevTerrorist.RewardEther'),'#0#',ShortName(Player()),'#1#',bkName));",

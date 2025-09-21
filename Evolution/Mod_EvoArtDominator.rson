@@ -1,18 +1,19 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 508,
-    "ViewPos.y": -345,
+    "ViewPos.x": 402,
+    "ViewPos.y": -358,
     "ScriptName": "Mod_EvoArtDominator",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoArtDominator\\DATA\\Script\\Mod_EvoArtDominator.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoArtDominator\\DATA\\Script\\Mod_EvoArtDominator.txt",
+    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoArtDominator\\DATA\\Script\\Mod_EvoArtDominator.scr",
+    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoArtDominator\\DATA\\Script\\Mod_EvoArtDominator.txt",
     "LangDatIn": "",
     "LangDatOut": "",
     "MainDatIn": "",
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -882,7 +883,7 @@
                         "//создание массива ошметков для сдачи",
                         "ArrayClear(items);",
                         "input = '<clrEnd>' + CT('FormRuins.SB.Scn2.SBSeeItems'); //...вот список того, что нам не помешало бы иметь:",
-                        "for(i = 0; i < ShipItems(Player()); i = i + 1)",
+                        "for(i = 1; i < ShipItems(Player()); i = i + 1)",
                         "{",
                         "    cur_item = ShipItems(Player(), i);",
                         "    if(ItemType(cur_item) == t_UselessItem && ItemOwner(cur_item) == Kling)",
@@ -905,8 +906,9 @@
                         "{",
                         "    cur_item = items[i];",
                         "    variable = variable + 1; //для вывода пронумерованного списка",
-                        "    input = input + variable + ') ' + '</color>' + CT('FormRuins.SB.Scn.SectionColor'+ItemSubrace(cur_item)) + DeleteTags(ItemFullName(cur_item)) + '</color>' + ' (<color=255,240,100>' + ItemSize(cur_item) + '</color>, <clr>' + (ItemCost(cur_item)*2) + '<clrEnd> cr.)' + \"<br>\";",
+                        "    input = input + variable + ') ' + '</color>' + CT('FormRuins.SB.Scn.SectionColor'+ItemSubrace(cur_item)) + DeleteTags(ItemFullName(cur_item)) + '</color>' + ' (<color=255,240,100>' + ItemSize(cur_item) + '</color> т., <clr>' + (ItemCost(cur_item)*2) + '<clrEnd> cr.)' + \"<br>\";",
                         "    //может тут серию и вес выводить?",
+                        "    //может!",
                         "}",
                         "if((ArrayDim(items) - 1)) input = input + CT('FormRuins.SB.Scn2.SBSeeItemsHaveItems'); //Какие из этих предметов вы намерены безвозмездно (за двойную цену, подлецы!) передать нашему отделу?",
                         "else input = input + CT('FormRuins.SB.Scn2.SBSeeItemsNotHaveItems'); //Извините, но мы не нашли никаких доминаторских модулей, которые можно было бы исследовать.;"
@@ -2073,13 +2075,6 @@
             "Type": "TGraphLink",
             "Begin": 79,
             "End": 80,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 61,
-            "End": 26,
             "Nom": 0,
             "Arrow": true
         },

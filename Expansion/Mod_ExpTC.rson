@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -784,
-    "ViewPos.y": -530,
+    "ViewPos.x": -726,
+    "ViewPos.y": -291,
     "ScriptName": "Mod_ExpTC",
     "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.txt",
@@ -255,7 +255,7 @@
                     "Pos.x": -470,
                     "Pos.y": 70,
                     "Parent": -1,
-                    "#": 217,
+                    "#": 216,
                     "Msg": "Воспользуюсь услугами других специалистов",
                     "AMsg.Num": "23"
                 },
@@ -265,7 +265,7 @@
                     "Pos.x": -500,
                     "Pos.y": 130,
                     "Parent": -1,
-                    "#": 221,
+                    "#": 220,
                     "Msg": "А давайте!",
                     "AMsg.Num": "24"
                 },
@@ -275,7 +275,7 @@
                     "Pos.x": -500,
                     "Pos.y": 220,
                     "Parent": -1,
-                    "#": 224,
+                    "#": 223,
                     "Msg": "Ура!",
                     "AMsg.Num": "25"
                 },
@@ -285,7 +285,7 @@
                     "Pos.x": -430,
                     "Pos.y": 240,
                     "Parent": -1,
-                    "#": 229,
+                    "#": 228,
                     "Msg": "Благодарю",
                     "AMsg.Num": "26"
                 }
@@ -608,7 +608,7 @@
                     "Pos.x": -500,
                     "Pos.y": 70,
                     "Parent": -1,
-                    "#": 211,
+                    "#": 210,
                     "Msg": "Мы можем собрать для вас транклюкатора, если хотите. Для этого нам потребуется <mcost> cr., <tcost> т. техники, а также <clr>двигатель<clrEnd> и <clr>топливный бак<clrEnd>. ",
                     "DMsg.Num": "31"
                 },
@@ -618,7 +618,7 @@
                     "Pos.x": -500,
                     "Pos.y": 190,
                     "Parent": -1,
-                    "#": 222,
+                    "#": 221,
                     "Msg": "Отлично! Заказ получен, возвращайтесь через <clr>90<clrEnd> дней!",
                     "DMsg.Num": "32"
                 },
@@ -628,7 +628,7 @@
                     "Pos.x": -430,
                     "Pos.y": 210,
                     "Parent": -1,
-                    "#": 228,
+                    "#": 227,
                     "Msg": "Ваш новенький транклюкатор уже вас заждался!\r\n\r\nМы перенесли его в трюм вашего корабля. Пользуйтесь на здоровье.",
                     "DMsg.Num": "33"
                 }
@@ -761,7 +761,7 @@
                     "Pos.x": -500,
                     "Pos.y": 10,
                     "Parent": -1,
-                    "#": 210
+                    "#": 209
                 },
                 {
                     "Type": "TDialog",
@@ -769,7 +769,7 @@
                     "Pos.x": -430,
                     "Pos.y": 150,
                     "Parent": -1,
-                    "#": 226
+                    "#": 225
                 }
             ],
             "Groups": 
@@ -897,8 +897,8 @@
                         "            temp_int_3 = temp_int_3 + 1; //Считаем каждую подходящую систему",
                         "            temp_int = temp_int + StarRuins(temp_dword_2);",
                         "        }",
-                        "        //Если число баз в данном секторе меньше 5 или числа систем и все системы сектора пригодны для постройки - добавляем сектор в массив постройки",
-                        "        if(temp_int < max(5,ConStars(temp_dword)) && temp_int_3 == ConStars(temp_dword))",
+                        "        //Если число баз в данном секторе меньше 5 или числа систем + 1 и все системы сектора пригодны для постройки - добавляем сектор в массив постройки",
+                        "        if(temp_int < max(5,ConStars(temp_dword)+1) && temp_int_3 == ConStars(temp_dword))",
                         "        {",
                         "            changed_owner[4] = CurTurn() + Rnd(5, 10);",
                         "",
@@ -959,7 +959,7 @@
                         "                else if(temp_int == 2) temp_str_2 = \"Сегодня открылся новый технологический центр <temp_str> в системе <StarName(temp_dword_4)> сектора <Name(StarToCon(temp_dword_4))>. Настоятельно рекомендуем всем небезразличным пилотам в кратчайшие сроки пройти техосмотр своих звездолетов.\";",
                         "                else temp_str_2 = \"Мы рады сообщить вам, что наша сеть технологических центров расширяется! Новая сервисная станция <temp_str> ждет пилотов в системе <StarName(temp_dword_4)> сектора <Name(StarToCon(temp_dword_4))>! Не пролетайте мимо! Только у нас вы найдете лучшие технологические услуги во всей Галактике!\";",
                         "                NewsAdd(temp_str_2);",
-                        "                AddPlanetNews(temp_str_2,51);",
+                        "                AddPlanetNews(temp_str_2,41);",
                         "            }",
                         "            break;",
                         "        }",
@@ -1846,7 +1846,7 @@
                         "        {",
                         "            temp_dword = ShipItems(Player(), i);",
                         "            if(ItemType(temp_dword) != t_UselessItem && ItemType(temp_dword) != t_UselessCountableItem) continue;",
-                        "            if(~findsubstr(EquipmentImageName(temp_dword), 'NuggetAsteroid')) temp_int = temp_int + ItemCost(temp_dword);",
+                        "            if(~findsubstr(EquipmentImageName(temp_dword), 'NuggetAsteroid')) temp_int = temp_int + ItemCost(temp_dword) * 2;",
                         "        }",
                         "        //Добавление диалогов в главное меню станции",
                         "        AddDialogInject('choose_up', Format(CT('FormRuins.TC.Greeting'),'station',ShipName(GetShipRuins(Player()))), \"Прошивка оборудования\", 50, 1);",
@@ -2074,7 +2074,10 @@
                         "{",
                         "    temp_dword = ShipItems(Player(), i);",
                         "    if(ItemType(temp_dword) != t_UselessItem && ItemType(temp_dword) != t_UselessCountableItem) continue;",
-                        "    if(~findsubstr(EquipmentImageName(temp_dword), 'NuggetAsteroid')) FreeItem(GetItemFromShip(Player(), i));",
+                        "    if(~findsubstr(EquipmentImageName(temp_dword), 'NuggetAsteroid')) {",
+                        "        GoodsAdd(GetShipRuins(Player()),t_Technics,ItemSize(temp_dword)*Rnd(110,185)/100);",
+                        "        FreeItem(GetItemFromShip(Player(), i));",
+                        "    }",
                         "}",
                         "ShipMoney(Player(), ShipMoney(Player()) + temp_int);",
                         "Sound('Sound.Sell');"
@@ -2626,7 +2629,7 @@
                     "Pos.x": -100,
                     "Pos.y": 210,
                     "Parent": -1,
-                    "#": 209,
+                    "#": 208,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -2655,7 +2658,7 @@
                     "Pos.x": -500,
                     "Pos.y": 40,
                     "Parent": -1,
-                    "#": 218,
+                    "#": 217,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -2687,7 +2690,7 @@
                     "Pos.x": -500,
                     "Pos.y": 160,
                     "Parent": -1,
-                    "#": 223,
+                    "#": 222,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -2724,7 +2727,7 @@
                     "Pos.x": -430,
                     "Pos.y": 180,
                     "Parent": -1,
-                    "#": 227,
+                    "#": 226,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -2750,7 +2753,7 @@
                     "Pos.x": 390,
                     "Pos.y": 0,
                     "Parent": -1,
-                    "#": 232,
+                    "#": 231,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -3231,7 +3234,7 @@
                     "Pos.x": -500,
                     "Pos.y": 100,
                     "Parent": -1,
-                    "#": 219,
+                    "#": 218,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -3818,7 +3821,7 @@
                     "Pos.x": -30,
                     "Pos.y": 220,
                     "Parent": -1,
-                    "#": 212,
+                    "#": 211,
                     "Var.Type": "Int",
                     "Init": "0",
                     "Global": false
@@ -3829,7 +3832,7 @@
                     "Pos.x": -400,
                     "Pos.y": 80,
                     "Parent": -1,
-                    "#": 213,
+                    "#": 212,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -3840,7 +3843,7 @@
                     "Pos.x": -400,
                     "Pos.y": 100,
                     "Parent": -1,
-                    "#": 214,
+                    "#": 213,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -3851,7 +3854,7 @@
                     "Pos.x": -400,
                     "Pos.y": 60,
                     "Parent": -1,
-                    "#": 215,
+                    "#": 214,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -3862,7 +3865,7 @@
                     "Pos.x": -400,
                     "Pos.y": 40,
                     "Parent": -1,
-                    "#": 216,
+                    "#": 215,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -3873,7 +3876,7 @@
                     "Pos.x": -300,
                     "Pos.y": 40,
                     "Parent": -1,
-                    "#": 220,
+                    "#": 219,
                     "Var.Type": "Int",
                     "Init": "0",
                     "Global": false
@@ -3884,7 +3887,7 @@
                     "Pos.x": -300,
                     "Pos.y": 90,
                     "Parent": -1,
-                    "#": 225,
+                    "#": 224,
                     "Var.Type": "Int",
                     "Init": "0",
                     "Global": false
@@ -3895,7 +3898,7 @@
                     "Pos.x": 0,
                     "Pos.y": 290,
                     "Parent": -1,
-                    "#": 230,
+                    "#": 229,
                     "Var.Type": "Str",
                     "Init": "",
                     "Global": false
@@ -3906,7 +3909,7 @@
                     "Pos.x": 0,
                     "Pos.y": 310,
                     "Parent": -1,
-                    "#": 231,
+                    "#": 230,
                     "Var.Type": "Str",
                     "Init": "",
                     "Global": false

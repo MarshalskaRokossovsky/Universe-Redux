@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -188,
-    "ViewPos.y": -794,
+    "ViewPos.x": -132,
+    "ViewPos.y": -304,
     "ScriptName": "Mod_ExpPilotBridge",
     "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -10019,7 +10019,7 @@
                     [
                         "Sound('Sound.SlotGet');",
                         "CanSellItem(IdToItem(SavedIt[i]),1);",
-                        "ReleaseItemFromScript(IdToItem(SavedIt[i]));",
+                        "//ReleaseItemFromScript(IdToItem(SavedIt[i]));",
                         "ArrayDelete(SavedIt,GAnswerData);"
                     ]
                 },
