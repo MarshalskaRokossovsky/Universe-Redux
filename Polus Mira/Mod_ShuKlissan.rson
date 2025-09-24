@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -1012,
-    "ViewPos.y": -108,
+    "ViewPos.x": -1029,
+    "ViewPos.y": -388,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -5313,6 +5313,7 @@
                         "//на спавн тех или иных подтипов клисанских кораблей",
                         "function DeclareKlissanInvasionArray()",
                         "{",
+                        "    ArrayDelete(KlisanInvestment, 0);",
                         "    ArrayDelete(KlissanInvasion, 0);",
                         "",
                         "    ArrayAdd(KlissanInvasion, 0, 'StartDay'); //Ход начала клисанского вторжения, задаётся на старте скрипта в ините",
