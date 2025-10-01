@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -529,
-    "ViewPos.y": 42,
+    "ViewPos.x": -492,
+    "ViewPos.y": -238,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -3578,6 +3578,16 @@
                     "#": 1017,
                     "Msg": "Быстрое оборудования для тестинга",
                     "AMsg.Num": "355"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": -720,
+                    "Pos.y": 470,
+                    "Parent": -1,
+                    "#": 1019,
+                    "Msg": "Начать вторжение клисан",
+                    "AMsg.Num": "356"
                 }
             ],
             "DialogMessages": 
@@ -8561,6 +8571,7 @@
                     [
                         "tint = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,4,4,'',2,\"Малоки\",\"Пеленги\",\"Люди\",\"Фэяне\",\"Гаальцы\");",
                         "ShipPilotRace(Player(),tint);",
+                        "ShipFace(Player(),'New');",
                         "Sound('Sound.Buy');"
                     ]
                 },
@@ -12679,12 +12690,14 @@
                         "temp_int=GetEquipmentStats(tdwd2,0)*20;",
                         "SetEquipmentStats(tdwd2,temp_int,0);",
                         "SetEquipmentStats(tdwd2,125,1);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "//Выдаём чит-радар",
                         "tdwd2=CreateEquipment(t_Radar,0,8,Gaal);",
                         "ItemCost(tdwd2,(ItemCost(tdwd2)/2));",
                         "SetEquipmentStats(tdwd2,32000,0);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "ShipFuel(Player(),50000);",
@@ -12700,6 +12713,7 @@
                         "//Выдаём чит-сканер",
                         "tdwd2=CreateEquipment(t_Scaner,1,8,Gaal);",
                         "SetEquipmentStats(tdwd2,125,0);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "//Выдаём прочую крутую оборудку и чистим старую",
@@ -12711,16 +12725,20 @@
                         "    SetEquipmentStats(tdwd2,GetEquipmentStats(tdwd2,0)+50000,0);",
                         "    SetEquipmentStats(tdwd2,GetEquipmentStats(tdwd2,1)+10000,1);",
                         "    SetEquipmentStats(tdwd2,GetEquipmentStats(tdwd2,2)+1000,2);",
+                        "    ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "    AddItemToShip(Player(),tdwd2);",
                         "    ItemIsInUse(tdwd2,Player(),1,i);",
                         "}",
                         "tdwd2=CreateEquipment(t_RepairRobot,1,8,Gaal);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "tdwd2=CreateEquipment(t_DefGenerator,1,8,Gaal);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "tdwd2=CreateEquipment(t_CargoHook,1,8,Gaal);",
+                        "ItemExtraSpecialsAddByType(tdwd2,FindBonusByNameInCfg('ExtraFragility'),400);",
                         "AddItemToShip(Player(),tdwd2);",
                         "ItemIsInUse(tdwd2,Player(),1);",
                         "SetEquipmentStats(tdwd2,100000,0);",
@@ -12744,6 +12762,20 @@
                         "ItemSize(tdwd2, 1);",
                         "AddItemToShip(Player(), tdwd2);",
                         "",
+                        "Sound('Sound.Buy');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -720,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 1020,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "KlissanInvasion['StartDay'] = CurTurn();",
                         "Sound('Sound.Buy');"
                     ]
                 }
@@ -14660,6 +14692,32 @@
                     "Code": 
                     [
                         "1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -720,
+                    "Pos.y": 400,
+                    "Parent": -1,
+                    "#": 1021,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "CurrentMods('ShusRangers\\ShuKlissan')"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -720,
+                    "Pos.y": 440,
+                    "Parent": -1,
+                    "#": 1022,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "CurTurn() < KlissanInvasion['StartDay']"
                     ]
                 }
             ],
@@ -24029,6 +24087,41 @@
             "End": 1018,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 551,
+            "End": 1021,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1019,
+            "End": 1020,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1020,
+            "End": 470,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1021,
+            "End": 1022,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1022,
+            "End": 1019,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
     "Rect.Text": 
@@ -24218,7 +24311,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 578,
+    "BlockPar.EC.Total.Strings": 579,
     "BlockPar.EC": 
     [
         {
@@ -26492,6 +26585,10 @@
         {
             "#": "678",
             "String": "Время до выхода пиратов из гипера"
+        },
+        {
+            "#": "679",
+            "String": "Начать вторжение клисан"
         },
         {
             "#": "74",

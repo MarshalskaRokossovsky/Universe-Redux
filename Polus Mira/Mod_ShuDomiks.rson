@@ -9477,7 +9477,7 @@
                         "    }",
                         "",
                         "    if(GetEquipmentStats(ShipEqInSlot(ship,t_Hull),0) > 30) {",
-                        "        NewsAdd('PolDomiks logging: Detected too much armor for '+Name(ship)+', reducing to 30');",
+                        "        //NewsAdd('PolDomiks logging: Detected too much armor for '+Name(ship)+', reducing to 30');",
                         "        SetEquipmentStats(ShipEqInSlot(ship,t_Hull),30,0);",
                         "    }",
                         "",
