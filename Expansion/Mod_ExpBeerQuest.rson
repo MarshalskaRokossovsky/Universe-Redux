@@ -817,7 +817,6 @@
                         "}",
                         "",
                         "//SFT(BeerStage);",
-                        "if(!GetMainData('UR')) throw 'Non-Redux detected, PurMurTail is theif of mods :)';",
                         "",
                         "if(BeerStage < 4 && BeerStage > 1) {",
                         "    if(RelationToShip(GroupToShip(GroupPeleng),Player()) < 10 || RelationToShip(GroupToShip(GroupWarrior),Player()) < 10) {",
