@@ -5176,7 +5176,7 @@
                         "",
                         "    //По просьбе Кота докидываем им Ниргенда за щеку",
                         "    if(CurrentMods('Kotyanka\\Cat_DesignDepartment')) {",
-                        "        ShipAddDropItem(ship,CreateCustomCountableItem('DesignDepartment_NirgendAzur', Rnd(1,15) + round(HullHP(ship)\\20)));",
+                        "        ShipAddDropItem(ship,CreateCustomCountableItem('DesignDepartment_NirgendAzur', Rnd(1,15) + round(HullHP(ship)/20)));",
                         "    }",
                         "",
                         "    ShipOwner(ship, None);",
