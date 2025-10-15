@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -338,
-    "ViewPos.y": -37,
+    "ViewPos.x": -303,
+    "ViewPos.y": -282,
     "ScriptName": "Mod_ShuMercs",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -6488,8 +6488,8 @@
                     [
                         "coef = 85;",
                         "cost = GalaxyMoney(3) * coef / 100 + 500 * GalaxyTechLevel();",
-                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.AtlantAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(atlant_call + 1));",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.ReadyForDiplomacy');"
+                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.MercCenterDialogs.AtlantAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(atlant_call + 1));",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.ReadyForDiplomacy');"
                     ]
                 },
                 {
@@ -6504,9 +6504,8 @@
                     [
                         "coef = 100;",
                         "cost = GalaxyMoney(3) * coef / 100 + 500 * GalaxyTechLevel();",
-                        "",
-                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.AxesAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(red_call + 1));",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.ReadyForDiplomacy');"
+                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.MercCenterDialogs.AxesAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(red_call + 1));",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.ReadyForDiplomacy');"
                     ]
                 },
                 {
@@ -6521,8 +6520,8 @@
                     [
                         "coef = 110;",
                         "cost = GalaxyMoney(3) * coef / 100 + 500 * GalaxyTechLevel();",
-                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.FeiAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(fei_call + 1));",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.ReadyForDiplomacy');"
+                        "tstr1 = '</color>' + Format(CT('Script.Mod_ShuMercs.MercCenterDialogs.FeiAskDiplomacy'),'cost',cost,'date',GameDateTxtByTurn(fei_call + 1));",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.ReadyForDiplomacy');"
                     ]
                 },
                 {
