@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -486,
-    "ViewPos.y": -199,
+    "ViewPos.x": -502,
+    "ViewPos.y": -382,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -6311,6 +6311,8 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
+                        "if(ShipOnSidePirateClan(Player())) ShipOwner(Player(),ShipPilotRace(Player()));",
+                        "",
                         "for(i=0;i<GalaxyStars();i=i+1)",
                         "    {",
                         "    temp_dword=GalaxyStar(i);",
@@ -9118,6 +9120,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
+                        "ShipOwner(Player(),PirateClan);",
                         "for(i=0;i<GalaxyStars();i=i+1) {",
                         "    temp_dword=GalaxyStar(i);",
                         "    if(StarOwner(temp_dword)!=0)continue;",
@@ -10449,11 +10452,6 @@
                         "    star = NearCivilPlanet(Player());",
                         "}",
                         "",
-                        "//Пометка самому себе",
-                        "//Друг, Кулак Брогга, Зион и Торнадо не крашат",
-                        "//Разберись, какой именно кладёт эту команду",
-                        "",
-                        "",
                         "cur_item = CreateHull(6, CT('Script.Mod_ArtiUniqueShipsPack.FriendParamsList.HullSize'), 8, GetValueFromScript('', CT('Script.Mod_ArtiUniqueShipsPack.FriendParamsList.HullRace')), -1, CT('Script.Mod_ArtiUniqueShipsPack.FriendParamsList.PirateClanAssembly'));",
                         "//Выставляем корпусу значение брони из Lang",
                         "SetEquipmentStats(cur_item, CT('Script.Mod_ArtiUniqueShipsPack.FriendParamsList.HullArmor'), 0);",
@@ -10491,20 +10489,6 @@
                         "ItemOnUseCode(cur_item, GenerateCodeStringFromBlock('UseCodeBlocksList.ArtiUniqueShipsPack_FistOfBroggHullUseCode'));",
                         "CanSellItem(cur_item, 1);",
                         "AddItemToStorage(star,cur_item);",
-                        "/*cur_item = CreateHull(6, CT('Script.Mod_ArtiUniqueShipsPack.SaberParamsList.HullSize'), 8, GetValueFromScript('', CT('Script.Mod_ArtiUniqueShipsPack.SaberParamsList.HullRace')), -1, CT('Script.Mod_ArtiUniqueShipsPack.SaberParamsList.PirateClanAssembly'));",
-                        "//Выставляем корпусу значение брони из Lang",
-                        "SetEquipmentStats(cur_item, CT('Script.Mod_ArtiUniqueShipsPack.SaberParamsList.HullArmor'), 0);",
-                        "SpecialToEquipment(FindBonusByNameInCfg('ArtiUniqueShipsPack_SaberHull'), cur_item);",
-                        "//Добавляем первый базовый спецакрин улучшения (первый улучшением не считается)",
-                        "ItemExtraSpecialsAddByType(cur_item, FindBonusByNameInCfg('ArtiUniqueShipsPack_SaberHullUpgrade'));",
-                        "//На всякий случай выставляем пересозданному корпусу уже подсчитанную ранее цену",
-                        "ItemCost(cur_item, cost);",
-                        "//Заносим корпус в скрипт и вешаем на него необходимые обработчики",
-                        "LinkItemToScript(cur_item, ArtiHulls);",
-                        "ItemOnActCode(cur_item, GenerateCodeStringFromBlock('ActCodeBlocksList.ArtiUniqueShipsPack_SaberHullActCode'));",
-                        "ItemOnUseCode(cur_item, GenerateCodeStringFromBlock('UseCodeBlocksList.ArtiUniqueShipsPack_SaberHullUseCode'));",
-                        "CanSellItem(cur_item, 1);",
-                        "AddItemToStorage(star,cur_item);",
                         "cur_item = CreateHull(6, CT('Script.Mod_ArtiUniqueShipsPack.AscalonParamsList.HullSize'), 8, GetValueFromScript('', CT('Script.Mod_ArtiUniqueShipsPack.AscalonParamsList.HullRace')), -1, CT('Script.Mod_ArtiUniqueShipsPack.AscalonParamsList.PirateClanAssembly'));",
                         "//Выставляем корпусу значение брони из Lang",
                         "SetEquipmentStats(cur_item, CT('Script.Mod_ArtiUniqueShipsPack.AscalonParamsList.HullArmor'), 0);",
@@ -10516,7 +10500,7 @@
                         "ItemOnActCode(cur_item, GenerateCodeStringFromBlock('ActCodeBlocksList.ArtiUniqueShipsPack_AscalonHullActCode'));",
                         "ItemOnUseCode(cur_item, GenerateCodeStringFromBlock('UseCodeBlocksList.ArtiUniqueShipsPack_AscalonHullUseCode'));",
                         "CanSellItem(cur_item, 1);",
-                        "AddItemToStorage(star,cur_item);*/",
+                        "AddItemToStorage(star,cur_item);",
                         "cur_item = CreateHull(6, CT('Script.Mod_ArtiUniqueShipsPack.ZionParamsList.HullSize'), 8, GetValueFromScript('', CT('Script.Mod_ArtiUniqueShipsPack.ZionParamsList.HullRace')), -1, CT('Script.Mod_ArtiUniqueShipsPack.ZionParamsList.PirateClanAssembly'));",
                         "//Выставляем корпусу значение брони из Lang",
                         "SetEquipmentStats(cur_item, CT('Script.Mod_ArtiUniqueShipsPack.ZionParamsList.HullArmor'), 0);",
@@ -10530,19 +10514,6 @@
                         "ItemOnActCode(cur_item, GenerateCodeStringFromBlock('ActCodeBlocksList.ArtiUniqueShipsPack_ZionHullActCode'));",
                         "ItemOnUseCode(cur_item, GenerateCodeStringFromBlock('UseCodeBlocksList.ArtiUniqueShipsPack_ZionHullUseCode'));",
                         "CanSellItem(cur_item, 1);",
-                        "/*AddItemToStorage(star,cur_item);",
-                        "cur_item = CreateHull(6, CT('Script.Mod_ArtiUniqueShipsPack.IgniruvParamsList.HullSize'), 8, GetValueFromScript('', CT('Script.Mod_ArtiUniqueShipsPack.IgniruvParamsList.HullRace')), -1, CT('Script.Mod_ArtiUniqueShipsPack.IgniruvParamsList.PirateClanAssembly'));",
-                        "//Выставляем корпусу значение брони из Lang",
-                        "SetEquipmentStats(cur_item, CT('Script.Mod_ArtiUniqueShipsPack.IgniruvParamsList.HullArmor'), 0);",
-                        "SpecialToEquipment(FindBonusByNameInCfg('ArtiUniqueShipsPack_IgniruvHull'), cur_item);",
-                        "ItemExtraSpecialsAddByType(cur_item, FindBonusByNameInCfg('ArtiUniqueShipsPack_IgniruvHullInactive'));",
-                        "//На всякий случай выставляем пересозданному корпусу уже подсчитанную ранее цену",
-                        "ItemCost(cur_item, cost);",
-                        "//Заносим корпус в скрипт и вешаем на него необходимые обработчики",
-                        "LinkItemToScript(cur_item, ArtiHulls);",
-                        "ItemOnActCode(cur_item, GenerateCodeStringFromBlock('ActCodeBlocksList.ArtiUniqueShipsPack_IgniruvHullActCode'));",
-                        "ItemOnUseCode(cur_item, GenerateCodeStringFromBlock('UseCodeBlocksList.ArtiUniqueShipsPack_IgniruvHullUseCode'));",
-                        "CanSellItem(cur_item, 1);*/",
                         "AddItemToStorage(star,cur_item);"
                     ]
                 },
@@ -14724,6 +14695,19 @@
                     "Code": 
                     [
                         "CurTurn() < KlissanInvasion['StartDay']"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -300,
+                    "Pos.y": 1490,
+                    "Parent": -1,
+                    "#": 1023,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!ShipOnSidePirateClan(Player())"
                     ]
                 }
             ],
@@ -21128,13 +21112,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 487,
-            "End": 348,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 349,
             "End": 495,
             "Nom": 0,
@@ -24126,6 +24103,20 @@
             "Type": "TGraphLink",
             "Begin": 7,
             "End": 1017,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 487,
+            "End": 1023,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1023,
+            "End": 348,
             "Nom": 0,
             "Arrow": true
         }
