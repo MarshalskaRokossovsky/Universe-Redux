@@ -1,18 +1,19 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -686,
-    "ViewPos.y": -632,
+    "ViewPos.x": -827,
+    "ViewPos.y": -671,
     "ScriptName": "Mod_ExpRepair",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRepair\\DATA\\Script\\Mod_ExpRepair.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRepair\\DATA\\Script\\Mod_ExpRepair.txt",
+    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRepair\\DATA\\Script\\Mod_ExpRepair.scr",
+    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpRepair\\DATA\\Script\\Mod_ExpRepair.txt",
     "LangDatIn": "",
     "LangDatOut": "",
     "MainDatIn": "",
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -2343,7 +2344,7 @@
                         "    }",
                         "    Sound('Sound.Repair');",
                         "",
-                        "    RepairDoneAllPartnerststr1 = '</color>' + CT('Script.Mod_ExpRepair.RepairDoneAllPartners');",
+                        "    tstr1 = '</color>' + CT('Script.Mod_ExpRepair.RepairDoneAllPartners');",
                         "}"
                     ]
                 }
