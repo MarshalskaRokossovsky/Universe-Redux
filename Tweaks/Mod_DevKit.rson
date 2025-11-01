@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -502,
-    "ViewPos.y": -382,
+    "ViewPos.x": -317,
+    "ViewPos.y": -627,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -683,7 +683,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 290,
-                    "Pos.y": -360,
+                    "Pos.y": -420,
                     "Parent": -1,
                     "#": 177,
                     "Msg": "Телепортация в другую систему",
@@ -693,7 +693,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "exit",
                     "Pos.x": 400,
-                    "Pos.y": -360,
+                    "Pos.y": -420,
                     "Parent": -1,
                     "#": 181,
                     "Msg": "",
@@ -1016,7 +1016,7 @@
                     "Pos.y": -170,
                     "Parent": -1,
                     "#": 290,
-                    "Msg": "(ShuEmitter)",
+                    "Msg": "(PolEmitter)",
                     "AMsg.Num": "99"
                 },
                 {
@@ -3433,7 +3433,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 290,
-                    "Pos.y": -440,
+                    "Pos.y": -490,
                     "Parent": -1,
                     "#": 981,
                     "Msg": "Общая информация о текущем состоянии партии",
@@ -3443,7 +3443,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 370,
-                    "Pos.y": -440,
+                    "Pos.y": -490,
                     "Parent": -1,
                     "#": 983,
                     "Msg": "На главную",
@@ -3588,6 +3588,26 @@
                     "#": 1019,
                     "Msg": "Начать вторжение клисан",
                     "AMsg.Num": "356"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 360,
+                    "Pos.y": -350,
+                    "Parent": -1,
+                    "#": 1025,
+                    "Msg": "Клисанские пушки",
+                    "AMsg.Num": "357"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 360,
+                    "Pos.y": -380,
+                    "Parent": -1,
+                    "#": 1029,
+                    "Msg": "Доминаторские пушки (PolDomiksPlus)",
+                    "AMsg.Num": "358"
                 }
             ],
             "DialogMessages": 
@@ -3696,7 +3716,7 @@
                     "Type": "TDialogMsg",
                     "Name": "",
                     "Pos.x": 370,
-                    "Pos.y": -360,
+                    "Pos.y": -420,
                     "Parent": -1,
                     "#": 179,
                     "Msg": "Готово",
@@ -4266,7 +4286,7 @@
                     "Type": "TDialogMsg",
                     "Name": "",
                     "Pos.x": 330,
-                    "Pos.y": -440,
+                    "Pos.y": -490,
                     "Parent": -1,
                     "#": 982,
                     "Msg": "<clr>--Общая информация--<clrEnd>\r\nТекущий ГТУ: <GalaxyTechLevel()>\r\nТекущие координаты игрока: X=<CoordX(Player())> Y=<CoordY(Player())>\r\nИгрок находится в системе: <Name(ShipStar(Player()))>\r\nId системы: <Id(ShipStar(Player()))>\r\nСектор системы: <ConName(StarToCon(ShipStar(Player())))>\r\nБлижайшая обитаемая планета к игроку: <Name(NearCivilPlanet(Player()))>\r\nРодная система игрока: <Name(PlanetToStar(GetShipHomePlanet(Player())))>\r\nРодная планета игрока: <Name(GetShipHomePlanet(Player()))>\r\nКол-во наёмников-рейнджеров у игрока: <ShipPartners(Player())>\r\nКол-во наёмников-пиратов у игрока: <PlayerPirates()>\r\n\r\n<clr>--Статус игрока--<clrEnd>\r\nТорговец: <ShipStatus(Player(),0)>\r\nПират: <ShipStatus(Player(),1)>\r\nВоин: <ShipStatus(Player(),2)>\r\n\r\n<clr>--Прочая информация--<clrEnd>\r\nОбщее кол-во рейнджеров в Галактике: <GalaxyRangers()>\r\nОбщее кол-во загруженных ММ и акринов: <BonusCount()>\r\nОбщее кол-во секторов в Галактике: <GalaxySectors()>\r\nКол-во планет в этой системе: <StarPlanets(ShipStar(Player()))>\r\nКол-во кораблей в этой системе: <StarShips(ShipStar(Player()))>\r\nКол-во предметов в этой системе: <StarItems(ShipStar(Player()))>\r\nКол-во астероидов в этой системе: <StarAsteroids(ShipStar(Player()))>\r\nКол-во ракет в этой системе: <StarMissiles(ShipStar(Player()))>\r\nКол-во предметов на всех складах: <StorageItems()>\r\nКол-во предметов на корабле: <ShipItems(Player())-1>\r\nКол-во артефактов на корабле: <ShipArts(Player())>\r\nКол-во зондов у игрока: <ExistingZonds()>\r\n\r\n<clr>--Камуфляж--<clrEnd>\r\nДоступные активации камуфляжа серий:\r\nБлазер: <PlayerChameleonCharges(0)>\r\nКеллер: <PlayerChameleonCharges(1)>\r\nТеррон: <PlayerChameleonCharges(2)>\r\n\r\n<clr>--Сложность игры--<clrEnd>\r\nОбщая сложность: <GalaxyDiffLevels()>%\r\nСложность пиратов: <GalaxyDiffLevels(0)>%\r\nРазброс цен: <GalaxyDiffLevels(1)>%\r\nУчёные: <GalaxyDiffLevels(2)>%\r\nПоломки: <GalaxyDiffLevels(3)>%\r\nОборудование: <GalaxyDiffLevels(4)>%\r\nСложность заданий: <GalaxyDiffLevels(5)>%\r\nСложность чёрных дыр: <GalaxyDiffLevels(6)>%\r\nУдача: <GalaxyDiffLevels(7)>%",
@@ -4317,7 +4337,7 @@
                     "Type": "TDialog",
                     "Name": "TP_star",
                     "Pos.x": 330,
-                    "Pos.y": -400,
+                    "Pos.y": -450,
                     "Parent": -1,
                     "#": 178
                 },
@@ -5532,7 +5552,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 200,
-                    "Pos.y": -360,
+                    "Pos.y": -420,
                     "Parent": -1,
                     "#": 86,
                     "Code.Type": "Turn",
@@ -6271,7 +6291,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 330,
-                    "Pos.y": -360,
+                    "Pos.y": -420,
                     "Parent": -1,
                     "#": 180,
                     "Code.Type": "Turn",
@@ -7238,36 +7258,16 @@
                     [
                         "Sound('Sound.Buy');",
                         "for(i=0;i<u;i=i+1) {",
-                        "    temp_gift=CreateCustomWeapon('frag_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('gaal_vision',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('grav_beam',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('laser_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('maloc_laser',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('maloc_laser2',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('photon_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('photon_gun2',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('photon_gun3',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('pulse_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('pulse_gun2',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('slow_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('sphere_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('splash_faser',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('sub_gun',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.ShuEmitter.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.ShuEmitter.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
                         "}"
                     ]
                 },
@@ -7283,12 +7283,16 @@
                     [
                         "Sound('Sound.Buy');",
                         "for(i=0;i<u;i=i+1) {",
-                        "    temp_gift=CreateCustomWeapon('GluonEmitter',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('GluonTormentor',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('GluonTorpedoLauncher',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.ShuMercsHQ.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.ShuMercsHQ.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
                         "}"
                     ]
                 },
@@ -8958,22 +8962,16 @@
                     [
                         "Sound('Sound.Buy');",
                         "for(i=0;i<u;i=i+1) {",
-                        "temp_gift=CreateCustomWeapon('ExzoShocker',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('Multiplet',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('Mauler',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('FusionQuasar',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('Atomizer',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('CryoProjector',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('Torpedomet',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
-                        "temp_gift=CreateCustomWeapon('Torpednik',temp_size,tint,tint3);",
-                        "AddItemToShip(Player(),temp_gift);",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.MolderNewGuns.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.MolderNewGuns.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
                         "}"
                     ]
                 },
@@ -9005,12 +9003,16 @@
                     [
                         "Sound('Sound.Buy');",
                         "for(i=0;i<u;i=i+1) {",
-                        "    temp_gift=CreateCustomWeapon('palach',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('tornado',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
-                        "    temp_gift=CreateCustomWeapon('plazma',temp_size,tint,tint3);",
-                        "    AddItemToShip(Player(),temp_gift);",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.Cat_Guns.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.Cat_Guns.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
                         "}"
                     ]
                 },
@@ -12755,6 +12757,86 @@
                         "KlissanInvasion['StartDay'] = CurTurn();",
                         "Sound('Sound.Buy');"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 400,
+                    "Pos.y": -350,
+                    "Parent": -1,
+                    "#": 1026,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_size = CountBox('Bm.Items.2FuelTanks14s', \"Размер\", 5,1000);",
+                        "tint = NumberBox('Bm.ItemsUseless.2Usl_Elus_s',\"Выберите ТУ оборудования\",1,8);",
+                        "u = CountBox('Bm.Items.2FuelTanks14s',\"Количество\",1,20);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 640,
+                    "Pos.y": -350,
+                    "Parent": -1,
+                    "#": 1027,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.Buy');",
+                        "for(i=0;i<u;i=i+1) {",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.ShuEmitter.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.ShuEmitter.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 400,
+                    "Pos.y": -380,
+                    "Parent": -1,
+                    "#": 1030,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_size = CountBox('Bm.Items.2FuelTanks14s', \"Размер\", 5,1000);",
+                        "tint = NumberBox('Bm.ItemsUseless.2Usl_Elus_s',\"Выберите ТУ оборудования\",1,8);",
+                        "u = CountBox('Bm.Items.2FuelTanks14s',\"Количество\",1,20);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 640,
+                    "Pos.y": -380,
+                    "Parent": -1,
+                    "#": 1031,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.Buy');",
+                        "for(i=0;i<u;i=i+1) {",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.ShuDomiksPlus.Count');",
+                        "    for(i = 1; i <= cnt; i = i + 1)",
+                        "    {",
+                        "        //По очереди выбираем системное название каждой новой пушки из Lang",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.ShuDomiksPlus.' + i);",
+                        "",
+                        "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
+                        "        EqCustomFaction(item,'Klissan');",
+                        "        AddItemToShip(Player(),item);",
+                        "    }",
+                        "}"
+                    ]
                 }
             ],
             "Planets": 
@@ -14708,6 +14790,32 @@
                     "Code": 
                     [
                         "!ShipOnSidePirateClan(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 320,
+                    "Pos.y": -350,
+                    "Parent": -1,
+                    "#": 1024,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "GetMainData('Data.Script.ShuKlissan')"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 320,
+                    "Pos.y": -380,
+                    "Parent": -1,
+                    "#": 1028,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "GetMainData('Data.Script.ShuDomiksPlus')"
                     ]
                 }
             ],
@@ -24119,6 +24227,76 @@
             "End": 348,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 64,
+            "End": 1024,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1024,
+            "End": 1025,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1025,
+            "End": 1026,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1026,
+            "End": 1027,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1027,
+            "End": 208,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1031,
+            "End": 208,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 64,
+            "End": 1028,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1028,
+            "End": 1029,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1029,
+            "End": 1030,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1030,
+            "End": 1031,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
     "Rect.Text": 
@@ -24172,7 +24350,7 @@
         {
             "Type": "TGraphRectText",
             "Rect.Left": 253,
-            "Rect.Top": -331,
+            "Rect.Top": -387,
             "Rect.Right": 716,
             "Rect.Bottom": -50,
             "FStyle": 1,
@@ -24195,9 +24373,9 @@
         {
             "Type": "TGraphRectText",
             "Rect.Left": 251,
-            "Rect.Top": -414,
+            "Rect.Top": -473,
             "Rect.Right": 713,
-            "Rect.Bottom": -334,
+            "Rect.Bottom": -393,
             "FStyle": 1,
             "FColor": 10710818,
             "BStyle": 0,
@@ -24308,7 +24486,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 579,
+    "BlockPar.EC.Total.Strings": 581,
     "BlockPar.EC": 
     [
         {
@@ -24597,7 +24775,7 @@
         },
         {
             "#": "187",
-            "String": "(ShuEmitter)"
+            "String": "(PolEmitter)"
         },
         {
             "#": "188",
@@ -26586,6 +26764,14 @@
         {
             "#": "679",
             "String": "Начать вторжение клисан"
+        },
+        {
+            "#": "680",
+            "String": "Клисанские пушки"
+        },
+        {
+            "#": "681",
+            "String": "Доминаторские пушки (PolDomiksPlus)"
         },
         {
             "#": "74",
