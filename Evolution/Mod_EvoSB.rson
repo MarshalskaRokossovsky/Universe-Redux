@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -193,
-    "ViewPos.y": 161,
+    "ViewPos.x": -265,
+    "ViewPos.y": 247,
     "ScriptName": "Mod_EvoSB",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.txt",
@@ -3028,6 +3028,11 @@
                         "                }",
                         "            }",
                         "        }",
+                        "}",
+                        "if(CurrentMods('Reflection\\RefUniqueSmersh')) {",
+                        "    if(GetValueFromScript('Mod_RefUniqueSmersh','Bought') > 0) {",
+                        "        InjectAnswer('Mod_RefUniqueSmersh:SmershBuy',\"К результатам доминаторологических исследований\",17);",
+                        "    }",
                         "}"
                     ]
                 },
@@ -6442,7 +6447,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 105,
+    "BlockPar.EC.Total.Strings": 106,
     "BlockPar.EC": 
     [
         {
@@ -6772,6 +6777,10 @@
         {
             "#": "255",
             "String": "Неизвестна"
+        },
+        {
+            "#": "256",
+            "String": "К результатам доминаторологических исследований"
         },
         {
             "#": "44",

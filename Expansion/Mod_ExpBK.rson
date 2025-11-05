@@ -4243,7 +4243,9 @@
                         "            tstr6 = tstr6 + \"Планета\" + ' ' + Name(tdwd3) + Format('<br>') + \"Система\" + ' ' + Name(PlanetToStar(tdwd3));",
                         "        }",
                         "    }",
-                        "}"
+                        "}",
+                        "",
+                        "tstr1 = tstr6;"
                     ]
                 },
                 {
