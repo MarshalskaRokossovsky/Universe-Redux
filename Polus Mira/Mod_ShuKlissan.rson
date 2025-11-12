@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -645,
-    "ViewPos.y": -497,
+    "ViewPos.x": -371,
+    "ViewPos.y": -348,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -2059,7 +2059,7 @@
                     "Pos.y": 70,
                     "Parent": -1,
                     "#": 388,
-                    "Msg": "<tstr1>",
+                    "Msg": "<tstr1>\r\n<tstr2>",
                     "DMsg.Num": "74"
                 },
                 {
@@ -10314,7 +10314,7 @@
                         "else /*if(GetGameOptions('FontDialog') == '3')*/ DefSplt = '</color>-------------------------------------';",
                         "",
                         "tstr1 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInvestSB.KlissanMainPageFirstTime');",
-                        "tstr1 = tstr1 + Format('<br>') + Format(CT('Script.Mod_ShuKlissan.KlissanInvestSB.SBAnswer'), '<SBSectionInfo'+'>', ComposeResearchDepartmentsText(), '');"
+                        "tstr2 = Format(CT('Script.Mod_ShuKlissan.KlissanInvestSB.SBAnswer'), '<SBSectionInfo'+'>', ComposeResearchDepartmentsText(), '');"
                     ]
                 },
                 {
@@ -11064,7 +11064,7 @@
                     "Code": 
                     [
                         "tstr1 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInvestSB.KlissanMainPage');",
-                        "tstr1 = tstr1 + Format('<br>') + Format(CT('Script.Mod_ShuKlissan.KlissanInvestSB.SBAnswer'), '<SBSectionInfo'+'>', ComposeResearchDepartmentsText(), '');"
+                        "tstr2 = Format(CT('Script.Mod_ShuKlissan.KlissanInvestSB.SBAnswer'), '<SBSectionInfo'+'>', ComposeResearchDepartmentsText(), '');"
                     ]
                 },
                 {
@@ -16550,13 +16550,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 399,
-            "End": 388,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 398,
             "End": 399,
             "Nom": 0,
@@ -17583,6 +17576,13 @@
             "End": 530,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 399,
+            "End": 391,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
     "Rect.Text": 
@@ -17680,7 +17680,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 250,
+    "BlockPar.EC.Total.Strings": 251,
     "BlockPar.EC": 
     [
         {
@@ -17737,7 +17737,7 @@
         },
         {
             "#": "127",
-            "String": "<0>"
+            "String": "<0><br><1>"
         },
         {
             "#": "128",
@@ -18598,6 +18598,10 @@
         {
             "#": "514",
             "String": "Делаей то, что надо. Я своё слово сказал, и, будь уверен, моё слово - слово Совета Коалиции, или не быть мне рейнджером! А сейчас меня ждут дела на орбите. Пока."
+        },
+        {
+            "#": "515",
+            "String": "<0>"
         },
         {
             "#": "71",

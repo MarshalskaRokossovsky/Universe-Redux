@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 33,
-    "ViewPos.y": -616,
+    "ViewPos.x": 58,
+    "ViewPos.y": -522,
     "ScriptName": "Mod_ShuMercs",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -7076,7 +7076,7 @@
                         "",
                         "    if(tint3 < cost*i)                           AddDialogBlock(tstr1, 1);",
                         "    else if(ShipSkill(cur_ship, rand) > (6-i))   AddDialogBlock(tstr1, 1);",
-                        "    else if(tint2 > (6-i))                       AddDialogBlock(tstr1, 1);",
+                        "    //else if(tint2 > (6-i))                     AddDialogBlock(tstr1, 1);",
                         "",
                         "    InjectAnswer('TrainMBAct', tstr1, i);",
                         "}"
@@ -9170,7 +9170,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.TrainingAsk');"
+                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.TrainingAsk');"
                     ]
                 }
             ],
