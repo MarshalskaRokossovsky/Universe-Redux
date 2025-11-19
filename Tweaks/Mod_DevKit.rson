@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 194,
-    "ViewPos.y": -101,
+    "ViewPos.x": -283,
+    "ViewPos.y": 673,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -5893,7 +5893,7 @@
                         "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Размер корпуса\", 1, 1000);",
                         "}",
                         "else if(tdwd == 2) {",
-                        "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Размер корпуса\", 10000, 10000);",
+                        "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Размер корпуса\", 1000, 10000);",
                         "}",
                         "else if(tdwd == 3) {",
                         "    tint = CountBox('Bm.Items.2FuelTanks14s', \"Размер корпуса\", 10000, 1000000);",
@@ -24306,6 +24306,13 @@
             "Type": "TGraphLink",
             "Begin": 1030,
             "End": 1031,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 894,
+            "End": 698,
             "Nom": 0,
             "Arrow": true
         }
