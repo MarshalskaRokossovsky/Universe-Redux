@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -283,
-    "ViewPos.y": 673,
+    "ViewPos.x": -1707,
+    "ViewPos.y": -309,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -9604,7 +9604,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "if(StarOwner(ShipStar(Player())) || StarCustomFaction(ShipStar(Player())) != '') MessageBox(\"Для создания транспортников требуется коалиционная система!\");",
+                        "if(StarOwner(ShipStar(Player())) || StarCustomFaction(ShipStar(Player())) != '') MessageBox(\"Для создания линкоров требуется коалиционная система!\");",
                         "else {",
                         "    tint2 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу пилота создаваемых линкоров\",0,4,4,'',3,\"Малок\",\"Пеленг\",\"Человек\",\"Фэянин\",\"Гаалец\");",
                         "    temp_size=NumberBox('Bm.Items.2FuelTanks14s',\"Количество\",1,1000);",
@@ -24504,7 +24504,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 581,
+    "BlockPar.EC.Total.Strings": 582,
     "BlockPar.EC": 
     [
         {
@@ -26790,6 +26790,10 @@
         {
             "#": "681",
             "String": "Доминаторские пушки (PolDomiksPlus)"
+        },
+        {
+            "#": "682",
+            "String": "Для создания линкоров требуется коалиционная система!"
         },
         {
             "#": "74",

@@ -3033,6 +3033,16 @@
                         "    if(GetValueFromScript('Mod_RefUniqueSmersh','Bought') > 0) {",
                         "        InjectAnswer('Mod_RefUniqueSmersh:SmershBuy',\"К результатам доминаторологических исследований\",17);",
                         "    }",
+                        "}",
+                        "if(CurrentMods('Reflection\\RefNisper')) {",
+                        "    if (GetValueFromScript('Mod_RefNews','bonusGlobal') == -1 && GetValueFromScript('Mod_RefNews','NewsFlag')) {",
+                        "        if(GetValueFromScript('Mod_RefNews','shipRuins')) {",
+                        "            if(!ShipOnSidePirateClan(Player())) {",
+                        "                if(GetValueFromScript('Mod_RefNews','SBDialog')) AddDialogInject('dSB', '', \"Я хочу сдать вам ошметки доминаторов для разработок новой серии\", 0);",
+                        "                else AddDialogInject('dSBStart', '', \"Ходят слухи про некий Проект, который перевернёт все представления о ведении боевых действий с доминаторами...\", 100);",
+                        "            }",
+                        "        }",
+                        "    }",
                         "}"
                     ]
                 },
@@ -6447,7 +6457,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 106,
+    "BlockPar.EC.Total.Strings": 108,
     "BlockPar.EC": 
     [
         {
@@ -6781,6 +6791,14 @@
         {
             "#": "256",
             "String": "К результатам доминаторологических исследований"
+        },
+        {
+            "#": "257",
+            "String": "Ходят слухи про некий Проект, который перевернёт все представления о ведении боевых действий с доминаторами..."
+        },
+        {
+            "#": "258",
+            "String": "Я хочу сдать вам ошметки доминаторов для разработок новой серии"
         },
         {
             "#": "44",
