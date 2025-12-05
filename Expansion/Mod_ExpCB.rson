@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -51,
-    "ViewPos.y": 146,
+    "ViewPos.x": 786,
+    "ViewPos.y": 350,
     "ScriptName": "Mod_ExpCB",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.txt",
@@ -458,6 +458,46 @@
                     "#": 223,
                     "Msg": "Я хотел бы подготовить ещё одного пилота",
                     "AMsg.Num": "43"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1730,
+                    "Pos.y": 630,
+                    "Parent": -1,
+                    "#": 237,
+                    "Msg": "Пожалуй, просто поточил, спасибо",
+                    "AMsg.Num": "44"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 660,
+                    "Parent": -1,
+                    "#": 238,
+                    "Msg": "Ну давай посмотрим, что там у вас умельцев...",
+                    "AMsg.Num": "45"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1770,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 243,
+                    "Msg": "Начнём рекомбинировать!",
+                    "AMsg.Num": "46"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1770,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 244,
+                    "Msg": "Начнём рекомбинировать!",
+                    "AMsg.Num": "47"
                 }
             ],
             "DialogMessages": 
@@ -771,6 +811,26 @@
                     "#": 221,
                     "Msg": "",
                     "DMsg.Num": "30"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 630,
+                    "Parent": -1,
+                    "#": 236,
+                    "Msg": "Недавно наши молодцы баловались с микромодулями. Собирали, разбирали, по всей станции раскидывали и снова собирали. Потом в кучу всё свалили и что-то из этого собирали. Ну, по крайней мере, это то, что я видел, они божатся, что не выходили из своей лаборатории, но мой зоркий глаз, подмасленный 49-процентным \"Ядер-Коком\"... Так, что-то я не про то всё.\r\n\r\nВ общем, суть такова: если дашь ребятам два микромодуля, они обещают тебе дать совсем другой. Чем более крутой даёшь, тем выше шанс, что получится что-то хорошее. Правда, <clr>уникальные<clrEnd> экземпляры они почему-то не хотят брать, хотя я им говорил, мол, там ж совсем хорошее выйдет, а они мне что-то про нестабильность начали свербеть, так что я их не дослушал и попросил уже помолчать...\r\n\r\nКороче, будешь пользовать услугу, или ты так, лясы со мной точить собрался?",
+                    "DMsg.Num": "31"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 240,
+                    "Msg": "Итак, текущее положение дел в отделе рекомбинаторики:\r\n=================\r\nМикромодуль 1: <tstr1>\r\nМикромодуль 2: <tstr1>\r\n\r\nШанс получить микромодуль:\r\n3 уровня: <i>%\r\n2 уровня: <i>%\r\n1 уровня: <i>%\r\n=================\r\nСтоимость услуги: <temp_int> cr.\r\n=================",
+                    "DMsg.Num": "32"
                 }
             ],
             "Dialogs": 
@@ -934,6 +994,14 @@
                     "Pos.y": 730,
                     "Parent": -1,
                     "#": 212
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Combination",
+                    "Pos.x": 1700,
+                    "Pos.y": 600,
+                    "Parent": -1,
+                    "#": 235
                 }
             ],
             "Groups": 
@@ -2214,7 +2282,9 @@
                         "    if(GetVariableType(GetValueFromScript('Mod_ExpRC','mm_storage')) == 9) {",
                         "        if(ArrayDim(GetValueFromScript('Mod_ExpRC','mm_storage')) > 1) AddDialogInject('Mod_ExpRC:MM_storage2', '', \"Я хотел бы забрать модули из своего хранилища на Центре Рейнджеров\", 1);",
                         "    }",
-                        "}"
+                        "}",
+                        "",
+                        "InjectAnswer('Combination', \"Рекомбинаторика\", 1);"
                     ]
                 },
                 {
@@ -3013,6 +3083,39 @@
                         "}",
                         "else ShipOut(CurShip);"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 690,
+                    "Parent": -1,
+                    "#": 239,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = \"Не выбран\";",
+                        "tstr2 = \"Не выбран\";",
+                        "temp_dword = 0;",
+                        "temp_dword_2 = 0;",
+                        "temp_int = 0;",
+                        "i = 0;",
+                        "j = 0;",
+                        "l = 0;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 249,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "InjectAnswer('DialogRC', \"Отменяйте! Я в этом не участвую!\", 1);"
+                    ]
                 }
             ],
             "Planets": 
@@ -3402,6 +3505,84 @@
                     "Code": 
                     [
                         "ready >=4 && ShipCntWeapon(cur_ship) && ShipEqInSlot(cur_ship,t_Engine) && ShipFreeSpace(cur_ship) > 0 && ShipEqInSlot(cur_ship,t_FuelTanks)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1740,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 241,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_dword && temp_dword_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1740,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 242,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!temp_dword || !temp_dword_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 245,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_dword_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1670,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 246,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!temp_dword_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 247,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_dword"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 760,
+                    "Parent": -1,
+                    "#": 248,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!temp_dword"
                     ]
                 }
             ],
@@ -5299,6 +5480,104 @@
             "Type": "TGraphLink",
             "Begin": 231,
             "End": 233,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 235,
+            "End": 236,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 236,
+            "End": 237,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 236,
+            "End": 238,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 238,
+            "End": 239,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 239,
+            "End": 240,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 241,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 241,
+            "End": 243,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 242,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 242,
+            "End": 244,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 245,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 246,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 247,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 248,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 240,
+            "End": 249,
             "Nom": 0,
             "Arrow": true
         }
