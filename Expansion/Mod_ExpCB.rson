@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 786,
-    "ViewPos.y": 350,
+    "ViewPos.x": 946,
+    "ViewPos.y": 239,
     "ScriptName": "Mod_ExpCB",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpCB\\DATA\\Script\\Mod_ExpCB.txt",
@@ -498,6 +498,66 @@
                     "#": 244,
                     "Msg": "Начнём рекомбинировать!",
                     "AMsg.Num": "47"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1670,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 250,
+                    "Msg": "Назначить второй микромодуль",
+                    "AMsg.Num": "48"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 251,
+                    "Msg": "Сбросить второй микромодуль",
+                    "AMsg.Num": "49"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 252,
+                    "Msg": "Сбросить первый микромодуль",
+                    "AMsg.Num": "50"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 790,
+                    "Parent": -1,
+                    "#": 253,
+                    "Msg": "Назначить первый микромодуль",
+                    "AMsg.Num": "51"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1840,
+                    "Pos.y": 690,
+                    "Parent": -1,
+                    "#": 268,
+                    "Msg": "Ну давай ещё по одной... Ой, то есть ещё по одному микромодулю совместим.",
+                    "AMsg.Num": "52"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1870,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 269,
+                    "Msg": "Не, я пока всё",
+                    "AMsg.Num": "53"
                 }
             ],
             "DialogMessages": 
@@ -829,8 +889,38 @@
                     "Pos.y": 720,
                     "Parent": -1,
                     "#": 240,
-                    "Msg": "Итак, текущее положение дел в отделе рекомбинаторики:\r\n=================\r\nМикромодуль 1: <tstr1>\r\nМикромодуль 2: <tstr1>\r\n\r\nШанс получить микромодуль:\r\n3 уровня: <i>%\r\n2 уровня: <i>%\r\n1 уровня: <i>%\r\n=================\r\nСтоимость услуги: <temp_int> cr.\r\n=================",
+                    "Msg": "Итак, текущее положение дел в отделе рекомбинаторики:\r\n=================\r\nМикромодуль 1: <tstr1>\r\nМикромодуль 2: <tstr2>\r\n\r\nШанс получить микромодуль:\r\n3 уровня: <i>%\r\n2 уровня: <j>%\r\n1 уровня: <l>%\r\n=================\r\nСтоимость услуги: <temp_int> cr.\r\n=================",
                     "DMsg.Num": "32"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 259,
+                    "Msg": "Выбирай микромодуль, который хочешь \"замешать\"!",
+                    "DMsg.Num": "33"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1670,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 260,
+                    "Msg": "Выбирай микромодуль, который хочешь \"замешать\"!",
+                    "DMsg.Num": "34"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1840,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 267,
+                    "Msg": "Ну, вот, кажется, и закончили. Поздравляем тебя как счастливого обладателя ну-совсем-прям-новенького <tstr1>!\r\n\r\nЕсли понравился наш сервис, то заходи ещё, наши мастера будут рады заработать себе на лишнюю стопку втыкиллы.",
+                    "DMsg.Num": "35"
                 }
             ],
             "Dialogs": 
@@ -1002,6 +1092,22 @@
                     "Pos.y": 600,
                     "Parent": -1,
                     "#": 235
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "put_mm_2",
+                    "Pos.x": 1610,
+                    "Pos.y": 590,
+                    "Parent": -1,
+                    "#": 261
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "put_mm_1",
+                    "Pos.x": 1610,
+                    "Pos.y": 690,
+                    "Parent": -1,
+                    "#": 262
                 }
             ],
             "Groups": 
@@ -3116,6 +3222,272 @@
                     [
                         "InjectAnswer('DialogRC', \"Отменяйте! Я в этом не участвую!\", 1);"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1640,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 254,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = \"Не выбран\";",
+                        "temp_dword = 0;",
+                        "i = 0;",
+                        "j = 0;",
+                        "l = 0;",
+                        "",
+                        "temp_int = (100 - BonusPriority(EqModule(temp_dword_2))) * GalaxyMoney(1,4) + ItemCost(EqModule(temp_dword_2));"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1700,
+                    "Pos.y": 820,
+                    "Parent": -1,
+                    "#": 255,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr2 = \"Не выбран\";",
+                        "temp_dword_2 = 0;",
+                        "i = 0;",
+                        "j = 0;",
+                        "l = 0;",
+                        "",
+                        "temp_int = (100 - BonusPriority(EqModule(temp_dword))) * GalaxyMoney(1,4) + ItemCost(EqModule(temp_dword));"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 880,
+                    "Parent": -1,
+                    "#": 257,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "InjectAnswer('DialogRC', \"Отменяйте! Я в этом не участвую!\", 1);",
+                        "",
+                        "unknown array0 = newarray(1);",
+                        "unknown array1 = newarray(1);",
+                        "ArrayClear(array0);",
+                        "ArrayClear(array1);",
+                        "for(i = 1; i < ShipItems(Player()); i = i + 1)",
+                        "{",
+                        "    temp_dword_3 = ShipItems(Player(), i);",
+                        "    if(ItemType(temp_dword_3) != t_MicroModule) continue;",
+                        "",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(EqModule(temp_dword_3))+'.UniqueMM')) continue;",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(EqModule(temp_dword_3))+'.Special')) continue;",
+                        "",
+                        "    ArrayAdd(array0, i);",
+                        "    ArrayAdd(array1, ShipItems(Player(), i));",
+                        "}",
+                        "",
+                        "for(i = 1; i < ArrayDim(array0); i = i + 1)",
+                        "{",
+                        "    tstr4 = ItemFullName(array1[i]);",
+                        "",
+                        "    InjectAnswer('put_mm_1', tstr4, array0[i]);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1670,
+                    "Pos.y": 880,
+                    "Parent": -1,
+                    "#": 258,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "InjectAnswer('DialogRC', \"Отменяйте! Я в этом не участвую!\", 1);",
+                        "",
+                        "unknown array0 = newarray(1);",
+                        "unknown array1 = newarray(1);",
+                        "ArrayClear(array0);",
+                        "ArrayClear(array1);",
+                        "for(i = 1; i < ShipItems(Player()); i = i + 1)",
+                        "{",
+                        "    temp_dword_3 = ShipItems(Player(), i);",
+                        "    if(ItemType(temp_dword_3) != t_MicroModule) continue;",
+                        "",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(EqModule(temp_dword_3))+'.UniqueMM')) continue;",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(EqModule(temp_dword_3))+'.Special')) continue;",
+                        "",
+                        "    ArrayAdd(array0, i);",
+                        "    ArrayAdd(array1, ShipItems(Player(), i));",
+                        "}",
+                        "",
+                        "for(i = 1; i < ArrayDim(array0); i = i + 1)",
+                        "{",
+                        "    tstr4 = ItemFullName(array1[i]);",
+                        "",
+                        "    InjectAnswer('put_mm_2', tstr4, array0[i]);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 660,
+                    "Parent": -1,
+                    "#": 263,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_dword = GAnswerData;",
+                        "",
+                        "tstr1 = ItemFullName(temp_dword);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1610,
+                    "Pos.y": 620,
+                    "Parent": -1,
+                    "#": 264,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_dword_2 = GAnswerData;",
+                        "",
+                        "tstr1 = ItemFullName(temp_dword_2);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1650,
+                    "Pos.y": 660,
+                    "Parent": -1,
+                    "#": 265,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(temp_dword && temp_dword_2) {",
+                        "    //Вычисляем шанс генерации ММки определённого уровня",
+                        "    if(BonusPriority(temp_dword) > 69) {",
+                        "        if(BonusPriority(temp_dword_2) > 69) {",
+                        "            i = 100;",
+                        "            j = 0;",
+                        "            l = 0;",
+                        "        }",
+                        "        else if(BonusPriority(temp_dword_2) > 30) {",
+                        "            i = 100 - (BonusPriority(temp_dword_2) / 2);",
+                        "            j = 100 - i;",
+                        "            l = 0;",
+                        "        }",
+                        "        else /*if(BonusPriority(temp_dword_2) < 31)*/ {",
+                        "            i = 100 - ((100 - BonusPriority(temp_dword)) / 3) - (BonusPriority(temp_dword_2) / 4);",
+                        "            j = (100 - i) / 4 * 3;",
+                        "            l = 100 - j - i;",
+                        "        }",
+                        "    }",
+                        "    else if(BonusPriority(temp_dword) > 30) {",
+                        "        if(BonusPriority(temp_dword_2) > 69) {",
+                        "            i = 100 - (BonusPriority(temp_dword) / 2);",
+                        "            j = 100 - i;",
+                        "            l = 0;",
+                        "        }",
+                        "        else if(BonusPriority(temp_dword_2) > 30) {",
+                        "            i = 0;",
+                        "            j = 100;",
+                        "            l = 0;",
+                        "        }",
+                        "        else /*if(BonusPriority(temp_dword_2) < 31)*/ {",
+                        "            i = 0;",
+                        "            j = 100 - BonusPriority(temp_dword_2) - ((69 - BonusPriority(temp_dword)) / 4);",
+                        "            l = 100 - j;",
+                        "        }",
+                        "    }",
+                        "    else /*if(BonusPriority(temp_dword) < 31)*/ {",
+                        "        if(BonusPriority(temp_dword_2) > 69) {",
+                        "            i = 100 - ((100 - BonusPriority(temp_dword_2)) / 3) - (BonusPriority(temp_dword) / 4);",
+                        "            j = (100 - i) / 4 * 3;",
+                        "            l = 100 - j - i;",
+                        "        }",
+                        "        else if(BonusPriority(temp_dword_2) > 30) {",
+                        "            i = 0;",
+                        "            j = 100 - BonusPriority(temp_dword) - ((69 - BonusPriority(temp_dword_2)) / 4);",
+                        "            l = 100 - j;",
+                        "        }",
+                        "        else /*if(BonusPriority(temp_dword_2) < 31)*/ {",
+                        "            i = 0;",
+                        "            j = 0;",
+                        "            l = 100;",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1810,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 266,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Составим массив подходящих нам микромодулей",
+                        "//Чтобы лишний раз не париться, сначала определим, ММ какого уровня нам нужен",
+                        "k = RndObject(1,100,Player());",
+                        "if(i) {",
+                        "    if(l) {",
+                        "        if(k > l) {",
+                        "            if(k > (l + j)) k = 3;",
+                        "            else k = 2;",
+                        "        }",
+                        "        else k = 1;",
+                        "    }",
+                        "    else {",
+                        "        if(k > j) k = 3;",
+                        "        else k = 2;",
+                        "    }",
+                        "}",
+                        "else if(j) {",
+                        "    if(k > l) k = 1;",
+                        "    else k = 2;",
+                        "}",
+                        "else {",
+                        "    k = 1;",
+                        "}",
+                        "//Определив уровень, собираем подходящие нам ММ",
+                        "unknown array0 = newarray(1);",
+                        "ArrayClear(array0);",
+                        "for(i = 0; BonusCount() > i; i = i + 1) {",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(i)+'.UniqueMM')) continue;",
+                        "    if(CT('MicroModuls.'+BonusNumInCfg(i)+'.Special')) continue;",
+                        "    if(k == 1 && BonusPriority(i) > 31) continue;",
+                        "    if(k == 2 && (BonusPriority(i) < 30 || BonusPriority(i) > 69)) continue;",
+                        "    if(k == 3 && BonusPriority(i) < 70) continue;",
+                        "    if(EqModule(temp_dword) == i) continue;",
+                        "    if(EqModule(temp_dword_2) == i) continue;",
+                        "",
+                        "    ArrayAdd(array0,i);",
+                        "}",
+                        "",
+                        "//Проводим оплату",
+                        "FreeItem(GetItemFromShip(Player(),temp_dword));",
+                        "FreeItem(GetItemFromShip(Player(),temp_dword));",
+                        "ShipMoney(Player(),ShipMoney(Player()) - temp_int);",
+                        "Sound('Sound.Buy');",
+                        "",
+                        "k = Rnd(1,ArrayDim(array0)-1);",
+                        "temp_dword = CreateMM(array0[k]);",
+                        "AddItemToShip(Player(),temp_dword);",
+                        "tstr1 = ItemFullName(temp_dword);"
+                    ]
                 }
             ],
             "Planets": 
@@ -3583,6 +3955,19 @@
                     "Code": 
                     [
                         "!temp_dword"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1740,
+                    "Pos.y": 850,
+                    "Parent": -1,
+                    "#": 256,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "1"
                     ]
                 }
             ],
@@ -5580,9 +5965,170 @@
             "End": 249,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 248,
+            "End": 253,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 247,
+            "End": 252,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 246,
+            "End": 250,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 245,
+            "End": 251,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 256,
+            "End": 240,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 255,
+            "End": 256,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 254,
+            "End": 256,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 251,
+            "End": 255,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 252,
+            "End": 254,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 253,
+            "End": 259,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 250,
+            "End": 260,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 260,
+            "End": 258,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 259,
+            "End": 257,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 261,
+            "End": 264,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 262,
+            "End": 263,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 264,
+            "End": 265,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 263,
+            "End": 265,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 265,
+            "End": 240,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 243,
+            "End": 266,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 266,
+            "End": 267,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 267,
+            "End": 268,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 267,
+            "End": 269,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 268,
+            "End": 239,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
-    "BlockPar.EC.Total.Strings": 105,
+    "BlockPar.EC.Total.Strings": 121,
     "BlockPar.EC": 
     [
         {
@@ -6004,6 +6550,70 @@
         {
             "#": "319",
             "String": "Я хочу улучшить свои артефакты"
+        },
+        {
+            "#": "320",
+            "String": "Рекомбинаторика"
+        },
+        {
+            "#": "321",
+            "String": "Недавно наши молодцы баловались с микромодулями. Собирали, разбирали, по всей станции раскидывали и снова собирали. Потом в кучу всё свалили и что-то из этого собирали. Ну, по крайней мере, это то, что я видел, они божатся, что не выходили из своей лаборатории, но мой зоркий глаз, подмасленный 49-процентным \"Ядер-Коком\"... Так, что-то я не про то всё.<br><br>В общем, суть такова: если дашь ребятам два микромодуля, они обещают тебе дать совсем другой. Чем более крутой даёшь, тем выше шанс, что получится что-то хорошее. Правда, <clr>уникальные<clrEnd> экземпляры они почему-то не хотят брать, хотя я им говорил, мол, там ж совсем хорошее выйдет, а они мне что-то про нестабильность начали свербеть, так что я их не дослушал и попросил уже помолчать...<br><br>Короче, будешь пользовать услугу, или ты так, лясы со мной точить собрался?"
+        },
+        {
+            "#": "322",
+            "String": "Отменяйте! Я в этом не участвую!"
+        },
+        {
+            "#": "323",
+            "String": "Итак, текущее положение дел в отделе рекомбинаторики:<br>=================<br>Микромодуль 1: <0><br>Микромодуль 2: <1><br><br>Шанс получить микромодуль:<br>3 уровня: <2>%<br>2 уровня: <3>%<br>1 уровня: <4>%<br>=================<br>Стоимость услуги: <5> cr.<br>================="
+        },
+        {
+            "#": "324",
+            "String": "Выбирай микромодуль, который хочешь \"замешать\"!"
+        },
+        {
+            "#": "325",
+            "String": "Ну, вот, кажется, и закончили. Поздравляем тебя как счастливого обладателя ну-совсем-прям-новенького <0>!<br><br>Если понравился наш сервис, то заходи ещё, наши мастера будут рады заработать себе на лишнюю стопку втыкиллы."
+        },
+        {
+            "#": "326",
+            "String": "Пожалуй, просто поточил, спасибо"
+        },
+        {
+            "#": "327",
+            "String": "Ну давай посмотрим, что там у вас умельцев..."
+        },
+        {
+            "#": "328",
+            "String": "Не выбран"
+        },
+        {
+            "#": "329",
+            "String": "Начнём рекомбинировать!"
+        },
+        {
+            "#": "330",
+            "String": "Назначить второй микромодуль"
+        },
+        {
+            "#": "331",
+            "String": "Сбросить второй микромодуль"
+        },
+        {
+            "#": "332",
+            "String": "Сбросить первый микромодуль"
+        },
+        {
+            "#": "333",
+            "String": "Назначить первый микромодуль"
+        },
+        {
+            "#": "334",
+            "String": "Ну давай ещё по одной... Ой, то есть ещё по одному микромодулю совместим."
+        },
+        {
+            "#": "335",
+            "String": "Не, я пока всё"
         }
     ]
 }
