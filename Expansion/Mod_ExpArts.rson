@@ -943,7 +943,7 @@
                         "        continue;",
                         "    }",
                         "",
-                        "    if(ShipType(cur_ship) == 'DefPlatform' && ShipType(cur_ship) == 'Crusader' && ShipType(cur_ship) == 'CrusaderLeader' && ShipType(cur_ship) == 'Captain' && ShipType(cur_ship) == 'EliteWarrior' && ShipType(cur_ship) == 'PirateGalleon' && ShipType(cur_ship) == 'PirateFrigate' && ShipType(cur_ship) == 'PirateCorvette' && ShipType(cur_ship) == 'Dreadnought' && ShipTypeN(cur_ship) == t_Warrior && (ShipTypeN(cur_ship) == t_Warrior && ShipSubType(cur_ship))) {",
+                        "    if(ShipType(cur_ship) == 'DefPlatform' || ShipType(cur_ship) == 'Crusader' || ShipType(cur_ship) == 'CrusaderLeader' || ShipType(cur_ship) == 'Captain' || ShipType(cur_ship) == 'EliteWarrior' || ShipType(cur_ship) == 'PirateGalleon' || ShipType(cur_ship) == 'PirateFrigate' || ShipType(cur_ship) == 'PirateCorvette' || ShipType(cur_ship) == 'Dreadnought' || ShipTypeN(cur_ship) == t_Warrior || ShipTypeN(cur_ship) == t_Transport || ShipTypeN(cur_ship) == t_Ranger || (ShipTypeN(cur_ship) == t_Warrior && ShipSubType(cur_ship))) {",
                         "        if(type == t_Engine) continue;",
                         "        if(type == t_FuelTanks) continue;",
                         "    }",
