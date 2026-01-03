@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 42,
-    "ViewPos.y": -405,
+    "ViewPos.x": 176,
+    "ViewPos.y": -448,
     "ScriptName": "Mod_ExpHullsBases",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpHullsBases\\DATA\\Script\\Mod_ExpHullsBases.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpHullsBases\\DATA\\Script\\Mod_ExpHullsBases.txt",
@@ -2749,8 +2749,15 @@
                         "if(GetGameOptions('FontDialog') < 1) TextCorr4 = '</color>' + \"Максимальная дальность скачка:\";",
                         "else TextCorr4 = '</color>' + \"Макс. дальность скачка:\";",
                         "",
+                        "if(ruin_str_type == 'PlayerMercHQ') {",
+                        "    if(!PlayerHQMainArray['Science', 'PortalGenerator'])",
+                        "    {",
+                        "        PlayerHQMainArray['Science', 'PortalGenerator'] = -1;",
+                        "    }",
+                        "}",
+                        "",
                         "//Собираем итоговую строку",
-                        "tstr1 = '</color>' + Format(CT('Script.Mod_ExpHullsBases.Dialog'+ruin_str_type+'.PortalInstall'),'TextCorr4',TextCorr4,'DefSplt',DefSplt,'upgrade_cost_portalGen',upgrade_cost_portalGen);"
+                        "tstr1 = '</color>' + Format(CT('Script.Mod_ExpHullsBases.Dialogs'+ruin_str_type+'.PortalInstall'),'TextCorr4',TextCorr4,'DefSplt',DefSplt,'upgrade_cost_portalGen',upgrade_cost_portalGen);"
                     ]
                 },
                 {

@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -555,
-    "ViewPos.y": -150,
+    "ViewPos.x": -228,
+    "ViewPos.y": -634,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -3056,7 +3056,7 @@
                     "Pos.y": 660,
                     "Parent": -1,
                     "#": 863,
-                    "Msg": "",
+                    "Msg": "Выдать кастомное оружие",
                     "AMsg.Num": "303"
                 },
                 {
@@ -7265,7 +7265,6 @@
                         "        str type_name = CT('Items.Weapon.CustomWeapon.ShuEmitter.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -7290,7 +7289,6 @@
                         "        str type_name = CT('Items.Weapon.CustomWeapon.ShuMercsHQ.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -8969,7 +8967,6 @@
                         "        str type_name = CT('Items.Weapon.CustomWeapon.MolderNewGuns.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -9003,14 +9000,13 @@
                     [
                         "Sound('Sound.Buy');",
                         "for(i=0;i<u;i=i+1) {",
-                        "    int cnt = CT('Items.Weapon.CustomWeapon.Cat_Guns.Count');",
+                        "    int cnt = CT('Items.Weapon.CustomWeapon.Guns.Count');",
                         "    for(i = 1; i <= cnt; i = i + 1)",
                         "    {",
                         "        //По очереди выбираем системное название каждой новой пушки из Lang",
-                        "        str type_name = CT('Items.Weapon.CustomWeapon.Cat_Guns.' + i);",
+                        "        str type_name = CT('Items.Weapon.CustomWeapon.Guns.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -11584,7 +11580,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "tstr2='Items.Weapon.CustomWeapon.'+temp_str;",
+                        "tstr2='Items.Weapon.CustomWeapon.'+temp_str+'.BaseGun';",
                         "if(tstr2 != '') {",
                         "    AddItemToShip(Player(),CreateCustomWeapon(temp_str,CountBox('Bm.Items.2FuelTanks14s',\"Размер\",5,500),CountBox('Bm.Items.2FuelTanks14s',\"ГТУ\",1,8),NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\")));",
                         "    Sound('Sound.Buy');",
@@ -12794,7 +12790,6 @@
                         "        str type_name = CT('Items.Weapon.CustomWeapon.ShuEmitter.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -12834,7 +12829,6 @@
                         "        str type_name = CT('Items.Weapon.CustomWeapon.ShuDomiksPlus.' + i);",
                         "",
                         "        dword item = CreateCustomWeapon(type_name,temp_size,tint,None);",
-                        "        EqCustomFaction(item,'Klissan');",
                         "        AddItemToShip(Player(),item);",
                         "    }",
                         "}"
@@ -24506,7 +24500,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 582,
+    "BlockPar.EC.Total.Strings": 583,
     "BlockPar.EC": 
     [
         {
@@ -26796,6 +26790,10 @@
         {
             "#": "682",
             "String": "Для создания линкоров требуется коалиционная система!"
+        },
+        {
+            "#": "683",
+            "String": "Выдать кастомное оружие"
         },
         {
             "#": "74",

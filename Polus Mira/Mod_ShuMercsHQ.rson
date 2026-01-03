@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -1071,
-    "ViewPos.y": -400,
+    "ViewPos.x": -2796,
+    "ViewPos.y": -375,
     "ScriptName": "Mod_ShuMercsHQ",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercsHQ\\DATA\\Script\\Mod_ShuMercsHQ.txt",
@@ -26630,7 +26630,7 @@
                         "if(!PlayerHQMainArray['Main', 'HQScienceDialog'])",
                         "{",
                         "    tstr1 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.GreetingIntro');",
-                        "    tstr5 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.PlayerIntroOut');",
+                        "    tstr6 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.PlayerIntroOut');",
                         "",
                         "    PlayerHQMainArray['Main', 'HQScienceDialog'] = 1;",
                         "    tint1 = 0;",
@@ -26675,6 +26675,13 @@
                         "    tstr6 = '</color>' + CT('Script.Mod_ShuMercs.PlayerHQScienceDialog.PlayerOut');",
                         "",
                         "    tint1 = 1;",
+                        "",
+                        "    /*SFT('tstr1 is '+tstr1);",
+                        "    SFT('tstr2 is '+tstr2);",
+                        "    SFT('tstr3 is '+tstr3);",
+                        "    SFT('tstr4 is '+tstr4);",
+                        "    SFT('tstr5 is '+tstr5);",
+                        "    SFT('tstr6 is '+tstr6);*/",
                         "}"
                     ]
                 },
