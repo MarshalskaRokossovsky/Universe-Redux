@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -1017,
-    "ViewPos.y": -328,
+    "ViewPos.x": -426,
+    "ViewPos.y": -555,
     "ScriptName": "Mod_ShuDomiks",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.txt",
@@ -1563,7 +1563,7 @@
                     "StatusPirateMin": 0,
                     "StatusPirateMax": 100,
                     "DistSearch": 10000,
-                    "Dialog": -1,
+                    "Dialog": 125,
                     "StrengthMin": "0",
                     "StrengthMax": "0",
                     "Ruins": ""
@@ -2775,7 +2775,7 @@
                         "                            ShipSubType(cur_ship, 0); //Делаем из клона почти полноценного босса (но новым Келлером это его всё равно не сделает, просто станет лучше стрелять)",
                         "                            OrderLock(cur_ship, 1); //Необходимо, чтобы была возможность выдавать ему свои приказы из стейтов (самих стейтов босс не слушается)",
                         "",
-                        "                            NoTalkToShip(cur_ship, 1);",
+                        "                            //NoTalkToShip(cur_ship, 1);",
                         "                            //Копируем параметры корпуса Келлера на корпус клона Келлера",
                         "                            ItemSize(ShipItems(cur_ship, 0), ItemSize(ShipItems(cur_ruin, 0)));",
                         "                            ItemCost(ShipItems(cur_ship, 0), ItemCost(ShipItems(cur_ruin, 0)));",
@@ -6095,7 +6095,7 @@
                         "        some_found_cnt = some_found_cnt + 1;",
                         "    }",
                         "",
-                        "    if(place)",
+                        "    /*if(place)",
                         "    {",
                         "        cnt = StorageItems();",
                         "        for(i = 0; i < cnt; i = i + 1)",
@@ -6111,7 +6111,7 @@
                         "            ArrayAdd(tarr1, item);",
                         "            some_found_cnt = some_found_cnt + 1;",
                         "        }",
-                        "    }",
+                        "    }*/",
                         "",
                         "    if(!some_found_cnt) ArrayAdd(tarr1, 0); //Чтоб не крашил, собака",
                         "    result = some_found_cnt;",
@@ -8137,7 +8137,8 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "Ether(4, 'KellerCloneTask', Format(CT('Script.Mod_ShuDomiks.KellerCloneTask'), '<Star'+'>', Name(ShipStar(GetTalkShip())), '255,240,100'));"
+                        "Ether(4, 'KellerCloneTask', Format(CT('Script.Mod_ShuDomiks.KellerCloneTask'), '<Star'+'>', Name(ShipStar(GetTalkShip())), '255,240,100'));",
+                        "NoTalkToShip(GetTalkShip(),1);"
                     ]
                 },
                 {
@@ -8152,7 +8153,8 @@
                     [
                         "Ether(4, 'KellerCloneTask', Format(CT('Script.Mod_ShuDomiks.KellerCloneTask'), '<Star'+'>', Name(ShipStar(GetTalkShip())), '255,240,100'));",
                         "",
-                        "WasKellerCloneSpawned = 2;"
+                        "WasKellerCloneSpawned = 2;",
+                        "NoTalkToShip(GetTalkShip(),1);"
                     ]
                 },
                 {

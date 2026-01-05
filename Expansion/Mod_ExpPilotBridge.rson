@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -148,
-    "ViewPos.y": -410,
+    "ViewPos.x": -314,
+    "ViewPos.y": -714,
     "ScriptName": "Mod_ExpPilotBridge",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpPilotBridge\\DATA\\Script\\Mod_ExpPilotBridge.txt",
@@ -1589,7 +1589,7 @@
                     "Type": "TDialog",
                     "Name": "ClearSpace2",
                     "Pos.x": 400,
-                    "Pos.y": -300,
+                    "Pos.y": -280,
                     "Parent": -1,
                     "#": 130
                 },
@@ -1668,7 +1668,7 @@
                 {
                     "Type": "TDialog",
                     "Name": "Comm_OFF",
-                    "Pos.x": 410,
+                    "Pos.x": 420,
                     "Pos.y": -240,
                     "Parent": -1,
                     "#": 173
@@ -1716,7 +1716,7 @@
                 {
                     "Type": "TDialog",
                     "Name": "Comm_ON",
-                    "Pos.x": 320,
+                    "Pos.x": 310,
                     "Pos.y": -240,
                     "Parent": -1,
                     "#": 202
@@ -4589,7 +4589,7 @@
                         "    L_OtherStStat = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.TotalStatsKillOtherStations'), '<KillOtherStations'+'>', temp_str + (G_DomBStat + G_KBStat + G_MercCStat));",
                         "}",
                         "",
-                        "contra = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.ContrabandCnt'),'mon',ShipCustomShipInfoData(Player(),'PlayerBridge_ContrabandWin',1));",
+                        "contra = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.ContrabandCnt'),'<ContraSellTotal'+'>',ShipCustomShipInfoData(Player(),'PlayerBridge_ContrabandWin',1));",
                         "",
                         "//Сборка готового текста в диалоговом окне",
                         "tstr1 = '</color>' + Format(CT('Script.Mod_ExpPilotBridge.PersonalStatistic.TotalStats'),",
@@ -5805,7 +5805,7 @@
                 {
                     "Type": "Top",
                     "Name": "",
-                    "Pos.x": 410,
+                    "Pos.x": 420,
                     "Pos.y": -210,
                     "Parent": -1,
                     "#": 121,
@@ -6801,7 +6801,7 @@
                 {
                     "Type": "Top",
                     "Name": "",
-                    "Pos.x": 320,
+                    "Pos.x": 310,
                     "Pos.y": -210,
                     "Parent": -1,
                     "#": 203,
@@ -17847,7 +17847,7 @@
             "Type": "TGraphRectText",
             "Rect.Left": 285,
             "Rect.Top": -263,
-            "Rect.Right": 497,
+            "Rect.Right": 552,
             "Rect.Bottom": -182,
             "FStyle": 1,
             "FColor": 10710818,

@@ -1223,7 +1223,7 @@
                         "        {",
                         "            if(illness1 != 'KlissanLeprosy' && illness2 != 'KlissanLeprosy' && illness3 != 'KlissanLeprosy')",
                         "            {",
-                        "                if(~ShipFindCustomShipInfoByType(Player(), 'ShuKlissan_KlissanLeprosy')) //Нельзя привиться от уже идущей болезни",
+                        "                if(ShipFindCustomShipInfoByType(Player(), 'ShuKlissan_KlissanLeprosy') == -1) //Нельзя привиться от уже идущей болезни",
                         "                {",
                         "                    cost = GalaxyMoney(4);",
                         "                    cost = cost + (cost * 16 * 3) / 100;",

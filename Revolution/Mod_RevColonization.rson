@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 79,
-    "ViewPos.y": -83,
+    "ViewPos.x": 199,
+    "ViewPos.y": -31,
     "ScriptName": "Mod_RevColonization",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevColonization\\DATA\\Script\\Mod_RevColonization.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevColonization\\DATA\\Script\\Mod_RevColonization.txt",
@@ -1057,7 +1057,7 @@
                     "Type": "TDialog",
                     "Name": "DialogColony",
                     "Pos.x": 1440,
-                    "Pos.y": 180,
+                    "Pos.y": 160,
                     "Parent": -1,
                     "#": 76
                 },
@@ -1133,7 +1133,7 @@
                     "StatusPirateMin": 0,
                     "StatusPirateMax": 100,
                     "DistSearch": 10000,
-                    "Dialog": -1,
+                    "Dialog": 76,
                     "StrengthMin": "0",
                     "StrengthMax": "0",
                     "Ruins": ""
@@ -1556,15 +1556,13 @@
                         "function g_CallStation() {",
                         "    if(!StateIs(GroupToShip(GroupMC),'ColonizationState')) exit;",
                         "",
-                        "    if(Dist(Player(),GetShipPlanet(GroupToShip(GroupMC)) <= 150)) {",
+                        "    if(Dist(Player(),IdToPlanet(planetColonyId)) <= 250) {",
                         "        //Если кто-то напихает много МЦшек сюда, то он 1) гейний 2) поставит здесь перебор кораблей группы",
-                        "        Dialog(DialogColony,GroupToShip(GroupMC));",
-                        "    ",
-                        "        if(scrStatus==100) {",
-                        "            ChangeState('MCOut',GroupToShip(GroupMC));",
-                        "        }",
+                        "        Sound('Sound.ProbeSignal6');",
+                        "        Dialoggy = 2;",
                         "    }",
                         "    else MessageBox(CT('Script.Mod_RevColonization.SatteliteNo'));",
+                        "    //MessageBox(GroupToShip(GetValueFromScript('Mod_RevColonisation','GroupMC')));",
                         "}"
                     ]
                 },
@@ -2451,8 +2449,8 @@
                 {
                     "Type": "Top",
                     "Name": "",
-                    "Pos.x": 640,
-                    "Pos.y": 560,
+                    "Pos.x": 720,
+                    "Pos.y": 680,
                     "Parent": -1,
                     "#": 244,
                     "Code.Type": "Turn",
@@ -2517,6 +2515,47 @@
                     [
                         "sum=GalaxyMoney(2)*(100-foodDiscount-medicineDiscount-donationsDiscount);",
                         "serviceCost=1.5*GalaxyMoney(2);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 750,
+                    "Pos.y": 600,
+                    "Parent": -1,
+                    "#": 262,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(Dialoggy == 2) {",
+                        "    Dialog(DialogColony,CurShip);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1440,
+                    "Pos.y": 310,
+                    "Parent": -1,
+                    "#": 263,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "wasDialog = 1;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1440,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 265,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Dialoggy = 1;"
                     ]
                 }
             ],
@@ -3168,6 +3207,19 @@
                     [
                         "rewardStatus!=2"
                     ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 720,
+                    "Pos.y": 600,
+                    "Parent": -1,
+                    "#": 261,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "scrStatus==100"
+                    ]
                 }
             ],
             "States": 
@@ -3220,8 +3272,8 @@
                     "Attack.Count": 0,
                     "TakeItem": -1,
                     "TakeAllItem": false,
-                    "OnTalk": "DialogColony",
-                    "OnActCode": "DialogColony",
+                    "OnTalk": "",
+                    "OnActCode": "",
                     "EType": 1,
                     "EUnique": "",
                     "EMsg": ""
@@ -3247,8 +3299,8 @@
                 {
                     "Type": "TState",
                     "Name": "MCOut",
-                    "Pos.x": 640,
-                    "Pos.y": 520,
+                    "Pos.x": 720,
+                    "Pos.y": 640,
                     "Parent": -1,
                     "#": 243,
                     "Move": 5,
@@ -3755,6 +3807,17 @@
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Dialoggy",
+                    "Pos.x": 490,
+                    "Pos.y": 660,
+                    "Parent": -1,
+                    "#": 264,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
                 }
             ]
         }
@@ -4178,13 +4241,6 @@
             "Type": "TGraphLink",
             "Begin": 22,
             "End": 75,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 76,
-            "End": 77,
             "Nom": 0,
             "Arrow": true
         },
@@ -5403,6 +5459,48 @@
             "Type": "TGraphLink",
             "Begin": 260,
             "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 84,
+            "End": 261,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 261,
+            "End": 243,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 84,
+            "End": 262,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 126,
+            "End": 263,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 76,
+            "End": 265,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 265,
+            "End": 77,
             "Nom": 0,
             "Arrow": true
         }

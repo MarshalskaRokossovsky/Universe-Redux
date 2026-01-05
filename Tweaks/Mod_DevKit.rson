@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -228,
-    "ViewPos.y": -634,
+    "ViewPos.x": -604,
+    "ViewPos.y": -64,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -6915,16 +6915,13 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "str name;",
-                        "str name2;",
-                        "dword item;",
                         "name='ArtDominator-';",
                         "for(int i=9; i<=23; i=i+1) {",
                         "    name2=name+i;",
-                        "    item=CreateCustomArt(name2,10,10000,5);",
-                        "    if (i<9) ItemSubrace(item,1);",
-                        "    if (i>13) ItemSubrace(item,2);",
-                        "    AddItemToShip(Player(), item);",
+                        "    cur_item=CreateCustomArt(name2,10,10000,5);",
+                        "    if (i<9) ItemSubrace(cur_item,1);",
+                        "    if (i>13) ItemSubrace(cur_item,2);",
+                        "    AddItemToShip(Player(), cur_item);",
                         "}",
                         "Sound('Sound.Buy');"
                     ]
@@ -6939,8 +6936,6 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "str name;",
-                        "str name2;",
                         "name='ArtDominator-';",
                         "for(i=0; i<=23; i=i+1) {",
                         "    name2=name+i;",
@@ -12484,9 +12479,9 @@
                         "for(j=0;j<3;j=j+1) {",
                         "    for(i=0; i<=8; i=i+1) {",
                         "        name2=name+i;",
-                        "        item=CreateCustomArt(name2,10,10000,5);",
-                        "        ItemSubrace(item,j);",
-                        "        AddItemToShip(Player(), item);",
+                        "        cur_item=CreateCustomArt(name2,10,10000,5);",
+                        "        ItemSubrace(cur_item,j);",
+                        "        AddItemToShip(Player(), cur_item);",
                         "    }",
                         "}",
                         "Sound('Sound.Buy');"
@@ -15421,6 +15416,28 @@
                     "Parent": -1,
                     "#": 1032,
                     "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "name2",
+                    "Pos.x": -420,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 1033,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "name",
+                    "Pos.x": -420,
+                    "Pos.y": 230,
+                    "Parent": -1,
+                    "#": 1034,
+                    "Var.Type": "Str",
                     "Init": "",
                     "Global": false
                 }

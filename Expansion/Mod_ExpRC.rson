@@ -1442,7 +1442,7 @@
                         "else if(PirateWin()) int0 = 1;",
                         "else int0 = 1;",
                         "",
-                        "AddDialogInject('Info','',\"Спасибо, я узнал всё, что мне нужно\",-1,'',0,GotoGov(1));",
+                        "InjectAnswer('Info',\"Спасибо, я узнал всё, что мне нужно\",0,GotoGov(1));",
                         "",
                         "i=0;",
                         "tstr1 = '</color>' + CT('FormRuins.RC.History.PlayerOk');",
