@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -604,
-    "ViewPos.y": -64,
+    "ViewPos.x": -962,
+    "ViewPos.y": 1040,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -8570,7 +8570,7 @@
                     [
                         "tint = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,4,4,'',2,\"Малоки\",\"Пеленги\",\"Люди\",\"Фэяне\",\"Гаальцы\");",
                         "ShipPilotRace(Player(),tint);",
-                        "ShipFace(Player(),'New');",
+                        "ShipFace(Player(),1);",
                         "Sound('Sound.Buy');"
                     ]
                 },
