@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 199,
-    "ViewPos.y": -31,
+    "ViewPos.x": 27,
+    "ViewPos.y": -60,
     "ScriptName": "Mod_RevColonization",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevColonization\\DATA\\Script\\Mod_RevColonization.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevColonization\\DATA\\Script\\Mod_RevColonization.txt",
@@ -1133,7 +1133,7 @@
                     "StatusPirateMin": 0,
                     "StatusPirateMax": 100,
                     "DistSearch": 10000,
-                    "Dialog": 76,
+                    "Dialog": -1,
                     "StrengthMin": "0",
                     "StrengthMax": "0",
                     "Ruins": ""
@@ -1925,6 +1925,7 @@
                         "if(!OrderLock(CurShip)) OrderLock(CurShip,1);",
                         "if(!GetShipPlanet(CurShip)) {    //Столько условий именно для того, чтобы станция приземлилась 1 раз",
                         "    if(!ShipIsTakeoff(CurShip)) OrderLanding(CurShip,IdToPlanet(planetColonyId));",
+                        "    NoLanding(CurShip,1);",
                         "}"
                     ]
                 },
@@ -2468,6 +2469,7 @@
                         "if(GetShipPlanet(CurShip)) OrderTakeOff(CurShip);",
                         "else if(ShipInNormalSpace(CurShip)) {",
                         "    if(OrderLock(CurShip)) OrderLock(CurShip,0);",
+                        "    NoLanding(CurShip,0);",
                         "    ShipOut(CurShip);",
                         "}"
                     ]

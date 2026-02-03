@@ -448,13 +448,13 @@
                         "",
                         "        //DialogStatus & 1 - игрок впервые поговорил о ядерках на ВБ",
                         "        //DialogStatus & 2 - игрок впервые поговорил о ядерках на ВБ, имея при этом соответствующее звание",
-                        "        if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 1))",
+                        "        if(!g_NukeParams[nuke_type, 'DialogStatus'])",
                         "        {",
                         "            AddDialogInject('NukeDialog', '', CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTime'), 0);",
                         "        }",
                         "        else if(ShipRank(Player()) >= 4) //Звание не ниже \"Истребитель\"",
                         "        {",
-                        "            if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 2)) AddDialogInject('NukeDialog', '', Format(CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTimeTwice'), '<Rank'+'>', CT('Script.Mod_ShuNukes.MilitaryRankName.' + 4)), 0);",
+                        "            if(g_NukeParams[nuke_type, 'DialogStatus'] == 1) AddDialogInject('NukeDialog', '', Format(CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTimeTwice'), '<Rank'+'>', CT('Script.Mod_ShuNukes.MilitaryRankName.' + 4)), 0);",
                         "            else AddDialogInject('NukeDialog', '', CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNuke'), 0);",
                         "        }",
                         "    }",
@@ -466,7 +466,7 @@
                         "            nuke_type = 'DirtyNukeTorpedo';",
                         "",
                         "            //DialogStatus & 1 - игрок впервые поговорил о ядерках на ПБ",
-                        "            if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 1))",
+                        "            if(!g_NukeParams[nuke_type, 'DialogStatus'])",
                         "            {",
                         "                AddDialogInject('NukeDialog', '', CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTime'), 0);",
                         "            }",
@@ -483,7 +483,7 @@
                         "            //DialogStatus & 2 - игрок впервые поговорил о ядерках на доминионе, имея при этом соответствующее звание",
                         "            if(GetShipPirateRank(Player()) >= 4) //Звание не ниже \"Головорез\"",
                         "            {",
-                        "                if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 2)) AddDialogInject('NukeDialog', '', Format(CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTimeTwice'), '<Rank'+'>', CT('Script.Mod_ShuNukes.PirateRankName.' + 4)), 0);",
+                        "                if(g_NukeParams[nuke_type, 'DialogStatus'] == 1) AddDialogInject('NukeDialog', '', Format(CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNukeFirstTimeTwice'), '<Rank'+'>', CT('Script.Mod_ShuNukes.PirateRankName.' + 4)), 0);",
                         "                else AddDialogInject('NukeDialog', '', CT('Script.Mod_ShuNukes.' + path + '.PlayerAskNuke'), 0);",
                         "            }",
                         "        }",
@@ -1042,16 +1042,15 @@
                     "Code": 
                     [
                         "//Игрок ранее задавал вопрос о ядерках не имея подходящего звания, а теперь впервые переспрашивает, но это самое звание получив (второе вступление)",
-                        "if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 2))",
+                        "if(g_NukeParams[nuke_type, 'DialogStatus'] == 1)",
                         "{",
                         "    tstr1 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.AnswerNukeFirstTimeTwice') + Format('<br>') + Format(CT('Script.Mod_ShuNukes.' + path + '.AnswerNukeFirstTime'), '<NukesMax'+'>', g_NukeParams[nuke_type, 'NukesPerYear']);",
                         "    tstr2 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.PlayerNukeFirstTimeYes');",
                         "    tstr3 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.PlayerNukeFirstTimeNo');",
                         "    tstr4 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.AnswerNukeFirstTimeNo');",
-                        "    check = 1;",
                         "}",
                         "//Игрок задаёт вопрос про ядерки на ВБ, ПБ или доминионе впервые, либо уже имея подходящее звание, либо нет (первое вступление)",
-                        "else if(!(g_NukeParams[nuke_type, 'DialogStatus'] & 1))",
+                        "else if(!g_NukeParams[nuke_type, 'DialogStatus'])",
                         "{",
                         "    if((cur_ruin_type == 'WB' && ShipRank(Player()) <= 4) || (cur_ruin_type != 'WB' && GetShipPirateRank(Player()) <= 4))",
                         "    {",
@@ -1061,6 +1060,8 @@
                         "        tstr1 = '</color>' + Format(CT('Script.Mod_ShuNukes.' + path + '.AnswerNukeFirstTimeNoRank'), '<Rank'+'>', rank);",
                         "        tstr2 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.PlayerNukeFirstTimeNoRank');",
                         "        check = 0;",
+                        "",
+                        "        g_NukeParams[nuke_type, 'DialogStatus'] = 1;",
                         "    }",
                         "    else",
                         "    {",
@@ -1070,8 +1071,6 @@
                         "        tstr4 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.AnswerNukeFirstTimeNo');",
                         "        check = 1;",
                         "    }",
-                        "",
-                        "    g_NukeParams[nuke_type, 'DialogStatus'] = g_NukeParams[nuke_type, 'DialogStatus'] | 1;",
                         "}",
                         "//Игрок ранее уже спрашивал о ядерках, имеючи подходящее звание (стандартный вариант)",
                         "else",
@@ -1092,7 +1091,7 @@
                     "Code": 
                     [
                         "tstr1 = '</color>' + CT('Script.Mod_ShuNukes.' + path + '.AnswerNuke');",
-                        "g_NukeParams[nuke_type, 'DialogStatus'] = g_NukeParams[nuke_type, 'DialogStatus'] | 2;"
+                        "g_NukeParams[nuke_type, 'DialogStatus'] = 2;"
                     ]
                 },
                 {
@@ -1774,7 +1773,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "(g_NukeParams[nuke_type, 'DialogStatus'] & 2)"
+                        "g_NukeParams[nuke_type, 'DialogStatus'] == 2"
                     ]
                 },
                 {
@@ -1787,7 +1786,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "!(g_NukeParams[nuke_type, 'DialogStatus'] & 2)"
+                        "g_NukeParams[nuke_type, 'DialogStatus'] != 2"
                     ]
                 },
                 {

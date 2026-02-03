@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -962,
-    "ViewPos.y": 1040,
+    "ViewPos.x": -563,
+    "ViewPos.y": 511,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -3442,7 +3442,7 @@
                 {
                     "Type": "TDialogAnswer",
                     "Name": "",
-                    "Pos.x": 370,
+                    "Pos.x": 400,
                     "Pos.y": -490,
                     "Parent": -1,
                     "#": 983,
@@ -4285,7 +4285,7 @@
                 {
                     "Type": "TDialogMsg",
                     "Name": "",
-                    "Pos.x": 330,
+                    "Pos.x": 370,
                     "Pos.y": -490,
                     "Parent": -1,
                     "#": 982,
@@ -12828,6 +12828,19 @@
                         "    }",
                         "}"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 330,
+                    "Pos.y": -490,
+                    "Parent": -1,
+                    "#": 1036,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.NewMsg');"
+                    ]
                 }
             ],
             "Planets": 
@@ -14807,6 +14820,19 @@
                     "Code": 
                     [
                         "GetMainData('Data.Script.ShuDomiksPlus')"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 640,
+                    "Pos.y": -490,
+                    "Parent": -1,
+                    "#": 1035,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "1"
                     ]
                 }
             ],
@@ -17592,13 +17618,6 @@
             "Type": "TGraphLink",
             "Begin": 322,
             "End": 316,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 319,
-            "End": 322,
             "Nom": 0,
             "Arrow": true
         },
@@ -23799,13 +23818,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 981,
-            "End": 982,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 86,
             "End": 981,
             "Nom": 0,
@@ -23815,13 +23827,6 @@
             "Type": "TGraphLink",
             "Begin": 982,
             "End": 983,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 983,
-            "End": 890,
             "Nom": 0,
             "Arrow": true
         },
@@ -24326,6 +24331,41 @@
             "Type": "TGraphLink",
             "Begin": 894,
             "End": 698,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 319,
+            "End": 851,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 983,
+            "End": 1035,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1035,
+            "End": 208,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 981,
+            "End": 1036,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1036,
+            "End": 982,
             "Nom": 0,
             "Arrow": true
         }
@@ -26721,10 +26761,6 @@
             "String": "Создать изменника"
         },
         {
-            "#": "661",
-            "String": "Операции с разными объектами-NPC"
-        },
-        {
             "#": "662",
             "String": "<clr>--Общая информация--<clrEnd><br>Текущий ГТУ: <0><br>Текущие координаты игрока: X=<1> Y=<2><br>Игрок находится в системе: <3><br>Id системы: <4><br>Сектор системы: <5><br>Ближайшая обитаемая планета к игроку: <6><br>Родная система игрока: <7><br>Родная планета игрока: <8><br>Кол-во наёмников-рейнджеров у игрока: <9><br>Кол-во наёмников-пиратов у игрока: <10><br><br><clr>--Статус игрока--<clrEnd><br>Торговец: <11><br>Пират: <12><br>Воин: <13><br><br><clr>--Прочая информация--<clrEnd><br>Общее кол-во рейнджеров в Галактике: <14><br>Общее кол-во загруженных ММ и акринов: <15><br>Общее кол-во секторов в Галактике: <16><br>Кол-во планет в этой системе: <17><br>Кол-во кораблей в этой системе: <18><br>Кол-во предметов в этой системе: <19><br>Кол-во астероидов в этой системе: <20><br>Кол-во ракет в этой системе: <21><br>Кол-во предметов на всех складах: <22><br>Кол-во предметов на корабле: <23><br>Кол-во артефактов на корабле: <24><br>Кол-во зондов у игрока: <25><br><br><clr>--Камуфляж--<clrEnd><br>Доступные активации камуфляжа серий:<br>Блазер: <26><br>Келлер: <27><br>Террон: <28><br><br><clr>--Сложность игры--<clrEnd><br>Общая сложность: <29>%<br>Сложность пиратов: <30>%<br>Разброс цен: <31>%<br>Учёные: <32>%<br>Поломки: <33>%<br>Оборудование: <34>%<br>Сложность заданий: <35>%<br>Сложность чёрных дыр: <36>%<br>Удача: <37>%"
         },
@@ -26811,6 +26847,10 @@
         {
             "#": "683",
             "String": "Выдать кастомное оружие"
+        },
+        {
+            "#": "684",
+            "String": "Операции с разными объектами-NPC"
         },
         {
             "#": "74",

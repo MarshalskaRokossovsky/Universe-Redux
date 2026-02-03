@@ -982,7 +982,6 @@
                         "                        else {",
                         "                            item = CreateQuestItem('ExpBeerQuest_Cargo',ship_owner);",
                         "                            ShipAddDropItem(ship,item);",
-                        "                            ShipAddDropItem(Player(),CreateQuestItem('ExpBeerQuest_Cargo',People));",
                         "                        }",
                         "                    }",
                         "                    else {",

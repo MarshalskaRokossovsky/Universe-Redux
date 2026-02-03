@@ -681,6 +681,16 @@
                     "#": 188,
                     "Msg": "Итак, что именно вам нужно?",
                     "DMsg.Num": "28"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 520,
+                    "Pos.y": 20,
+                    "Parent": -1,
+                    "#": 195,
+                    "Msg": "",
+                    "DMsg.Num": "29"
                 }
             ],
             "Dialogs": 
@@ -796,6 +806,14 @@
                     "Pos.y": 480,
                     "Parent": -1,
                     "#": 187
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Exit",
+                    "Pos.x": 520,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 194
                 }
             ],
             "Groups": 
@@ -1442,7 +1460,7 @@
                         "else if(PirateWin()) int0 = 1;",
                         "else int0 = 1;",
                         "",
-                        "InjectAnswer('Info',\"Спасибо, я узнал всё, что мне нужно\",0,GotoGov(1));",
+                        "InjectAnswer('Info',\"Спасибо, я узнал всё, что мне нужно\",0);",
                         "",
                         "i=0;",
                         "tstr1 = '</color>' + CT('FormRuins.RC.History.PlayerOk');",
@@ -2199,6 +2217,19 @@
                         "if(GetNodesFromShip(Player())) {",
                         "    InjectAnswer('SellNodes', Format(CT('FormRuins.RC.SaleNod.PlayerSendMod'),'Count',GetNodesFromShip(Player())), 0);",
                         "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 520,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 196,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "GotoGov(1)"
                     ]
                 }
             ],
@@ -4131,6 +4162,20 @@
             "End": 190,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 194,
+            "End": 195,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 195,
+            "End": 196,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
     "Rect.Text": 
@@ -4205,12 +4250,16 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 33,
+    "BlockPar.EC.Total.Strings": 34,
     "BlockPar.EC": 
     [
         {
             "#": "1",
             "String": "<0> перемещён с вашего корабля в хранилище. Забрать его вы сможете в любое удобное для вас время на любом Центре Рейнджеров."
+        },
+        {
+            "#": "100",
+            "String": ""
         },
         {
             "#": "12",

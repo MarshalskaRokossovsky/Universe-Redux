@@ -12,7 +12,8 @@
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -24,7 +25,7 @@
                     "Pos.x": 290,
                     "Pos.y": 250,
                     "Parent": -1,
-                    "#": 10,
+                    "#": 9,
                     "Msg": "<tstr2>",
                     "AMsg.Num": "0"
                 }
@@ -58,7 +59,7 @@
                     "Pos.x": 290,
                     "Pos.y": 130,
                     "Parent": -1,
-                    "#": 47
+                    "#": 17
                 }
             ],
             "Groups": 
@@ -131,7 +132,7 @@
                     "Pos.x": 250,
                     "Pos.y": 210,
                     "Parent": -1,
-                    "#": 20,
+                    "#": 10,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -182,7 +183,7 @@
                     "Pos.x": 330,
                     "Pos.y": 210,
                     "Parent": -1,
-                    "#": 47,
+                    "#": 18,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -205,7 +206,7 @@
                     "Pos.x": 250,
                     "Pos.y": 250,
                     "Parent": -1,
-                    "#": 48,
+                    "#": 19,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -223,7 +224,7 @@
                     "Pos.x": 290,
                     "Pos.y": 170,
                     "Parent": -1,
-                    "#": 48,
+                    "#": 20,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -337,7 +338,7 @@
                     "Pos.x": 390,
                     "Pos.y": 130,
                     "Parent": -1,
-                    "#": 29,
+                    "#": 11,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -348,7 +349,7 @@
                     "Pos.x": 390,
                     "Pos.y": 150,
                     "Parent": -1,
-                    "#": 30,
+                    "#": 12,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -359,7 +360,7 @@
                     "Pos.x": 390,
                     "Pos.y": 170,
                     "Parent": -1,
-                    "#": 31,
+                    "#": 13,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -370,52 +371,8 @@
                     "Pos.x": 390,
                     "Pos.y": 190,
                     "Parent": -1,
-                    "#": 32,
+                    "#": 14,
                     "Var.Type": "Int",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "tstr1",
-                    "Pos.x": 480,
-                    "Pos.y": 130,
-                    "Parent": -1,
-                    "#": 49,
-                    "Var.Type": "Str",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "tstr2",
-                    "Pos.x": 480,
-                    "Pos.y": 150,
-                    "Parent": -1,
-                    "#": 50,
-                    "Var.Type": "Str",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "DefSplt",
-                    "Pos.x": 560,
-                    "Pos.y": 130,
-                    "Parent": -1,
-                    "#": 51,
-                    "Var.Type": "Str",
-                    "Init": "",
-                    "Global": false
-                },
-                {
-                    "Type": "TVar",
-                    "Name": "i",
-                    "Pos.x": 560,
-                    "Pos.y": 150,
-                    "Parent": -1,
-                    "#": 52,
-                    "Var.Type": "Unknown",
                     "Init": "",
                     "Global": false
                 },
@@ -425,7 +382,7 @@
                     "Pos.x": 650,
                     "Pos.y": 130,
                     "Parent": -1,
-                    "#": 45,
+                    "#": 15,
                     "Var.Type": "Unknown",
                     "Init": "",
                     "Global": false
@@ -436,8 +393,19 @@
                     "Pos.x": 650,
                     "Pos.y": 150,
                     "Parent": -1,
-                    "#": 46,
+                    "#": 16,
                     "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr1",
+                    "Pos.x": 480,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 21,
+                    "Var.Type": "Str",
                     "Init": "",
                     "Global": false
                 },
@@ -447,8 +415,41 @@
                     "Pos.x": 650,
                     "Pos.y": 190,
                     "Parent": -1,
-                    "#": 49,
+                    "#": 22,
                     "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr2",
+                    "Pos.x": 480,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 23,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "DefSplt",
+                    "Pos.x": 560,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 24,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "i",
+                    "Pos.x": 560,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 25,
+                    "Var.Type": "Unknown",
                     "Init": "",
                     "Global": false
                 }
@@ -501,13 +502,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 8,
-            "End": 15,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 7,
             "End": 10,
             "Nom": 0,
@@ -515,15 +509,22 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 23,
-            "End": 24,
+            "Begin": 17,
+            "End": 20,
             "Nom": 0,
             "Arrow": true
         },
         {
             "Type": "TGraphLink",
-            "Begin": 24,
-            "End": 10,
+            "Begin": 20,
+            "End": 8,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 18,
             "Nom": 0,
             "Arrow": true
         }

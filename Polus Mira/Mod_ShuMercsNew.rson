@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 58,
-    "ViewPos.y": -522,
+    "ViewPos.x": -226,
+    "ViewPos.y": -261,
     "ScriptName": "Mod_ShuMercs",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -6076,7 +6076,7 @@
                 {
                     "Type": "Top",
                     "Name": "",
-                    "Pos.x": 560,
+                    "Pos.x": 540,
                     "Pos.y": 370,
                     "Parent": -1,
                     "#": 230,
@@ -6559,8 +6559,8 @@
                         "ShipMoney(Player(), ShipMoney(Player()) - cost);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MeetingMade');",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MeetingThx');"
+                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingMade');",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingThx');"
                     ]
                 },
                 {
@@ -6850,8 +6850,8 @@
                         "ShipMoney(Player(), ShipMoney(Player()) - cost);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MeetingMade');",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MeetingThx');"
+                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingMade');",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingThx');"
                     ]
                 },
                 {
@@ -6889,8 +6889,8 @@
                         "ShipMoney(Player(), ShipMoney(Player()) - cost);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MeetingMade');",
-                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MeetingThx');"
+                        "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingMade');",
+                        "tstr2 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.MeetingThx');"
                     ]
                 },
                 {
