@@ -1460,7 +1460,7 @@
                         "else if(PirateWin()) int0 = 1;",
                         "else int0 = 1;",
                         "",
-                        "InjectAnswer('Info',\"Спасибо, я узнал всё, что мне нужно\",0);",
+                        "InjectAnswer('Exit',\"Спасибо, я узнал всё, что мне нужно\",0);",
                         "",
                         "i=0;",
                         "tstr1 = '</color>' + CT('FormRuins.RC.History.PlayerOk');",
