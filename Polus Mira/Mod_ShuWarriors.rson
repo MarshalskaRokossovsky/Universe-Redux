@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -71,
-    "ViewPos.y": -293,
+    "ViewPos.x": -219,
+    "ViewPos.y": -213,
     "ScriptName": "Mod_ShuWarriors",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
@@ -1805,6 +1805,7 @@
                         "    dword ship;",
                         "",
                         "    ship = BuyWarrior(plan,3000);",
+                        "    ShipRefit(ship);",
                         "    ShipRefit(ship,500+125*GalaxyTechLevel(),ShipMoney(ship) + GalaxyMoney(4,4));",
                         "    ShipRefit(ship);",
                         "    ShipType(ship,'Captain');",
