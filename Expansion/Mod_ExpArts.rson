@@ -950,6 +950,12 @@
                         "",
                         "    DropItem(cur_ship,ShipEqInSlot(cur_ship,type));",
                         "    check = 1;",
+                        "",
+                        "    for(i=0;ShipArts(Player())>i;i=i+1) {",
+                        "        if(EquipmentImageName(ShipArts(Player(),i)) != 'Hasker_PROx64') continue;",
+                        "        ItemDurability(ShipArts(Player(),i),max(0,ItemDurability(ShipArts(Player(),i)-12)));",
+                        "        if(ItemDurability(ShipArts(Player(),i)) < 1) NewsAdd(CT('Artefacts.CustomArtefacts.Hasker_PROx64.BrokenInUse'));",
+                        "    }",
                         "}"
                     ]
                 }

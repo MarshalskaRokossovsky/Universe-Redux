@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -563,
-    "ViewPos.y": 511,
+    "ViewPos.x": -839,
+    "ViewPos.y": -38,
     "ScriptName": "Mod_DevKit",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Tweaks\\DevKit\\DATA\\Script\\Mod_DevKit.txt",
@@ -966,7 +966,7 @@
                     "Pos.y": 560,
                     "Parent": -1,
                     "#": 273,
-                    "Msg": "Выдача определённого ММ, оружия, акрина или серии",
+                    "Msg": "Выдача определённого ММ, оружия, акрина, юзлесса или серии",
                     "AMsg.Num": "94"
                 },
                 {
@@ -2263,7 +2263,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 320,
-                    "Pos.y": 760,
+                    "Pos.y": 780,
                     "Parent": -1,
                     "#": 626,
                     "Msg": "Получить бонус к энерговыработке",
@@ -2273,7 +2273,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 320,
-                    "Pos.y": 790,
+                    "Pos.y": 810,
                     "Parent": -1,
                     "#": 627,
                     "Msg": "Получить бонус к энерговыработке каждого оборудования в слотах",
@@ -3608,6 +3608,46 @@
                     "#": 1029,
                     "Msg": "Доминаторские пушки (PolDomiksPlus)",
                     "AMsg.Num": "358"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 320,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 1038,
+                    "Msg": "Выдать артефакты из Cat_Arts",
+                    "AMsg.Num": "359"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 40,
+                    "Pos.y": 930,
+                    "Parent": -1,
+                    "#": 1040,
+                    "Msg": "Запретить доминаторам атаковать текущую систему",
+                    "AMsg.Num": "360"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 10,
+                    "Pos.y": 930,
+                    "Parent": -1,
+                    "#": 1042,
+                    "Msg": "Разрешить доминаторам атаковать текущую систему",
+                    "AMsg.Num": "361"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 20,
+                    "Pos.y": 660,
+                    "Parent": -1,
+                    "#": 1044,
+                    "Msg": "Выдать юзлесс",
+                    "AMsg.Num": "362"
                 }
             ],
             "DialogMessages": 
@@ -6441,7 +6481,8 @@
                     "Code": 
                     [
                         "//InjectAnswer('Testing',\"Быстрое оборудования для тестинга\", 99);",
-                        "InjectAnswer('Buffs', \"Выдать бонусы (bonHull, bonDroid и т.д.)\", 20);"
+                        "//InjectAnswer('Buffs', \"Выдать бонусы (bonHull, bonDroid и т.д.)\", 20);",
+                        "int dab;"
                     ]
                 },
                 {
@@ -6720,7 +6761,7 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,159);",
                         "ChangeGlobalRelationsPlanets(Player(),0,1,100,31);",
                         "SetRelationPlanet(PlanetPirateClan(),Player(),90);",
-                        "Sound('Sound.Buy');"
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -6740,7 +6781,7 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,128);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,128);",
                         "SetRelationPlanet(PlanetPirateClan(),Player(),90);",
-                        "Sound('Sound.Buy');"
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -6760,7 +6801,7 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,31);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,31);",
                         "ChangeGlobalRelationsPlanets(Player(),0,1,100,31);",
-                        "Sound('Sound.Buy');"
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -6780,7 +6821,7 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,31);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,31);",
                         "ChangeGlobalRelationsPlanets(Player(),0,0,0,31);",
-                        "Sound('Sound.Buy');"
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -8666,7 +8707,7 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,2,128);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,4,128);",
                         "RelationToRanger(PlanetPirateClan(),Player(),0);",
-                        "Sound('Sound.Buy');"
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -9907,7 +9948,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 470,
-                    "Pos.y": 760,
+                    "Pos.y": 780,
                     "Parent": -1,
                     "#": 645,
                     "Code.Type": "Turn",
@@ -9923,7 +9964,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 470,
-                    "Pos.y": 790,
+                    "Pos.y": 810,
                     "Parent": -1,
                     "#": 646,
                     "Code.Type": "Turn",
@@ -10194,7 +10235,6 @@
                         "tint=tint+Rnd(-4,4);",
                         "tdwd=CreateCustomArt('Stimulyakr_Art',tint,1000,tint3);",
                         "AddItemToShip(Player(),tdwd);",
-                        "Sound('Sound.Buy');",
                         "tstr=CT('Artefacts.CustomArtefacts.Detsell_Art.Size');",
                         "tint=tstr;",
                         "tint=tint+Rnd(-4,4);",
@@ -11602,7 +11642,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,8,1);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,1);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,1);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,1);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,1);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11621,7 +11662,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,8,2);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,2);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,2);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,2);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,2);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11640,7 +11682,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,8,4);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,4);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,4);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,4);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,4);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11659,7 +11702,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,8,8);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,8);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,8);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,8);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,8);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11678,7 +11722,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,0,0,8,16);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,16,16);",
                         "ChangeGlobalRelationsShips(Player(),0,0,0,32,16);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,16);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,0,0,16);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11697,7 +11742,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,8,1);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,1);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,1);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,1);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,1);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11716,7 +11762,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,8,2);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,2);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,2);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,2);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,2);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11735,7 +11782,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,8,4);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,4);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,4);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,4);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,4);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11754,7 +11802,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,8,8);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,8);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,8);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,8);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,8);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -11773,7 +11822,8 @@
                         "ChangeGlobalRelationsShips(Player(),0,1,100,8,16);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,16,16);",
                         "ChangeGlobalRelationsShips(Player(),0,1,100,32,16);",
-                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,16);"
+                        "ChangeGlobalRelationsPlanets(Player(),0,1,100,16);",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -12840,6 +12890,118 @@
                     "Code": 
                     [
                         "Sound('Sound.NewMsg');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 470,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 1039,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tint3 = NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\");",
+                        "tstr=CT('Artefacts.CustomArtefacts.Antirocket_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Antirocket_CatArt',tint,1000,tint3);",
+                        "CustomArtData(tdwd,1,45);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.Asteroid_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Asteroid_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.Cactus_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Cactus_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.Catolisator_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Catolisator_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.FifthElement_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('FifthElement_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.Rocketfel_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Rocketfel_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "tstr=CT('Artefacts.CustomArtefacts.Vanomit_CatArt.Size');",
+                        "tint=tstr;",
+                        "tint=tint+Rnd(-4,4);",
+                        "tdwd=CreateCustomArt('Vanomit_CatArt',tint,1000,tint3);",
+                        "AddItemToShip(Player(),tdwd);",
+                        "Sound('Sound.Buy');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 40,
+                    "Pos.y": 890,
+                    "Parent": -1,
+                    "#": 1041,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "NoComeKlingToStar(ShipStar(Player()),1);",
+                        "Sound('Sound.Buy');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 10,
+                    "Pos.y": 890,
+                    "Parent": -1,
+                    "#": 1043,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "NoComeKlingToStar(ShipStar(Player()),0);",
+                        "Sound('Sound.Buy');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 20,
+                    "Pos.y": 700,
+                    "Parent": -1,
+                    "#": 1045,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "temp_str = TextBox(\"Введите название из ланга\");"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 20,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 1046,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr2='Items.Weapon.CustomWeapon.'+temp_str+'.BaseGun';",
+                        "if(tstr2 != '') {",
+                        "    AddItemToShip(Player(),CreateQuestItem(temp_str,NumberBox('Bm.Items.2FuelTanks14s',\"Выберите расу\",0,7,7,'',3,\"Малокское\",\"Пеленгское\",\"Человеческое\",\"Фэянское\",\"Гаальское\",\"Доминаторское (блазер)\",\"Неизвестное\",\"Пиратское\")));",
+                        "    Sound('Sound.Buy');",
+                        "}",
+                        "else {",
+                        "    MessageBox(\"Юзлесс не найден. Проверьте правильность написания названия юзлесса и то, подключён ли мод с таким юзлессом\");",
+                        "    Sound('Sound.UserMsgAdd');",
+                        "}"
                     ]
                 }
             ],
@@ -13968,7 +14130,7 @@
                     "Type": "Tif",
                     "Name": "",
                     "Pos.x": 290,
-                    "Pos.y": 790,
+                    "Pos.y": 810,
                     "Parent": -1,
                     "#": 625,
                     "Code.Type": "Turn",
@@ -14833,6 +14995,19 @@
                     "Code": 
                     [
                         "1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 290,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 1037,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "CurrentMods('Kotyanka\\Cat_Arts')"
                     ]
                 }
             ],
@@ -24368,6 +24543,104 @@
             "End": 982,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1037,
+            "End": 1038,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1038,
+            "End": 1039,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1039,
+            "End": 434,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 50,
+            "End": 1037,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 95,
+            "End": 1040,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1040,
+            "End": 1041,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1041,
+            "End": 282,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1042,
+            "End": 1043,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1043,
+            "End": 282,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 95,
+            "End": 1042,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 274,
+            "End": 1044,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1044,
+            "End": 1045,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1045,
+            "End": 1046,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1046,
+            "End": 282,
+            "Nom": 0,
+            "Arrow": true
         }
     ],
     "Rect.Text": 
@@ -24557,7 +24830,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 583,
+    "BlockPar.EC.Total.Strings": 587,
     "BlockPar.EC": 
     [
         {
@@ -24814,7 +25087,7 @@
         },
         {
             "#": "179",
-            "String": "Выдача определённого ММ, оружия, акрина или серии"
+            "String": "Выдача определённого ММ, оружия, акрина, юзлесса или серии"
         },
         {
             "#": "180",
@@ -25913,10 +26186,6 @@
             "String": "Манипуляции с оборудованием на борту игрока"
         },
         {
-            "#": "452",
-            "String": "Выдать бонусы (bonHull, bonDroid и т.д.)"
-        },
-        {
             "#": "453",
             "String": "- установлен"
         },
@@ -26851,6 +27120,26 @@
         {
             "#": "684",
             "String": "Операции с разными объектами-NPC"
+        },
+        {
+            "#": "685",
+            "String": "Выдать артефакты из Cat_Arts"
+        },
+        {
+            "#": "686",
+            "String": "Запретить доминаторам атаковать текущую систему"
+        },
+        {
+            "#": "687",
+            "String": "Разрешить доминаторам атаковать текущую систему"
+        },
+        {
+            "#": "688",
+            "String": "Выдать юзлесс"
+        },
+        {
+            "#": "689",
+            "String": "Юзлесс не найден. Проверьте правильность написания названия юзлесса и то, подключён ли мод с таким юзлессом"
         },
         {
             "#": "74",

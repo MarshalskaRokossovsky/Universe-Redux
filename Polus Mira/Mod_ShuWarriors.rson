@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -219,
-    "ViewPos.y": -213,
+    "ViewPos.x": -371,
+    "ViewPos.y": -348,
     "ScriptName": "Mod_ShuWarriors",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
@@ -3631,7 +3631,9 @@
                         "                                      '');",
                         "        tstr2 = '</color>' + CT(dialog_path + '.PlayerAfterPlanningNotFound');",
                         "    }",
-                        "}"
+                        "}",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -4110,7 +4112,7 @@
                         "",
                         "        //Добавляем количество кораблей в системе, а то надоедает прокликивать",
                         "        tstr1 = tstr1 + ' ('+StarShips(cur_star)+')';",
-                        "        ",
+                        "",
                         "        if(StarOwner(cur_star) == 1)",
                         "        {",
                         "            tstr2 = StarCustomFaction(cur_star);",
@@ -4408,7 +4410,9 @@
                         "    tstr4 = '</color>' + CT(dialog_path + '.PlayerCancelOperation');",
                         "",
                         "    check = 0;",
-                        "}"
+                        "}",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -4685,7 +4689,9 @@
                         "    }",
                         "",
                         "    check = 0; //Снимаем блокировку",
-                        "}"
+                        "}",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5247,7 +5253,9 @@
                         "cost3 = GalaxyMoney(4,race);",
                         "cost4 = GalaxyMoney(4,race)*2;",
                         "cost5 = GalaxyMoney(4,race)*3;",
-                        "tstr1 = \"гаалец\";"
+                        "tstr1 = \"гаалец\";",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5266,7 +5274,9 @@
                         "cost3 = GalaxyMoney(4,race);",
                         "cost4 = GalaxyMoney(4,race)*2;",
                         "cost5 = GalaxyMoney(4,race)*3;",
-                        "tstr1 = \"фэянин\";"
+                        "tstr1 = \"фэянин\";",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5285,7 +5295,9 @@
                         "cost3 = GalaxyMoney(4,race);",
                         "cost4 = GalaxyMoney(4,race)*2;",
                         "cost5 = GalaxyMoney(4,race)*3;",
-                        "tstr1 = \"человек\";"
+                        "tstr1 = \"человек\";",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5304,7 +5316,9 @@
                         "cost3 = GalaxyMoney(4,race);",
                         "cost4 = GalaxyMoney(4,race)*2;",
                         "cost5 = GalaxyMoney(4,race)*3;",
-                        "tstr1 = \"пеленг\";"
+                        "tstr1 = \"пеленг\";",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5323,7 +5337,9 @@
                         "cost3 = GalaxyMoney(4,race);",
                         "cost4 = GalaxyMoney(4,race)*2;",
                         "cost5 = GalaxyMoney(4,race)*3;",
-                        "tstr1 = \"малок\";"
+                        "tstr1 = \"малок\";",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5587,7 +5603,9 @@
                         "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;",
                         "",
                         "DuringConstruction = 1;",
-                        "GotoGov(2);"
+                        "GotoGov(2);",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {
@@ -5745,7 +5763,9 @@
                         "",
                         "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;",
                         "",
-                        "ShipCalcParam(cur_ship);"
+                        "ShipCalcParam(cur_ship);",
+                        "",
+                        "Sound('Sound.NewMsg');"
                     ]
                 },
                 {

@@ -2914,7 +2914,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "if(CurrentMods('Evolution\\EvoTranc')) AddDialogInject('EvoTranc:Tranc_MainMenu', \"Улучшить транклюкатора\", 21);",
+                        "if(CurrentMods('Evolution\\EvoTranc')) InjectAnswer('EvoTranc:Tranc_MainMenu', \"Улучшить транклюкатора\", 21);",
                         "InjectAnswer('probe_up',\"Улучшить зонд\", 10);"
                     ]
                 },
