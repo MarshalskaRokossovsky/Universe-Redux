@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 21,
-    "ViewPos.y": 670,
+    "ViewPos.x": 463,
+    "ViewPos.y": 536,
     "ScriptName": "Mod_ShuRebellion",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRebellion\\DATA\\Script\\Mod_ShuRebellion.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuRebellion\\DATA\\Script\\Mod_ShuRebellion.txt",
@@ -1198,7 +1198,9 @@
                         "    AddPlanetNews(tstr,63);",
                         "    NewsAdd(tstr);",
                         "    Sound('Sound.NewMsg');",
-                        "}"
+                        "}",
+                        "",
+                        "EventTime = 0;"
                     ]
                 },
                 {
@@ -1380,6 +1382,38 @@
                         "    if(ShipInStar(Player(),star)) {",
                         "        if(GetShipPlanet(Player())) GotoGov(1);",
                         "    }",
+                        "}",
+                        "",
+                        "EventTime = EventTime + 1;",
+                        "",
+                        "if(EventTime > 730) {",
+                        "    for(i=0;StarPlanets(star)>i;i=i+1) {",
+                        "        tdwd = StarPlanets(star,i);",
+                        "        if(StarOwner(star) == 2) {",
+                        "            PlanetOwner(tdwd,PirateClan);",
+                        "        }",
+                        "        else {",
+                        "            PlanetOwner(tdwd,PlanetRace(tdwd));",
+                        "        }",
+                        "    }",
+                        "",
+                        "    if(StarOwner(star) == 2) {",
+                        "        tstr = \"Новые известия приходят из системы <Name(star)> - силы пиратского Клана смогли полностью подавить сопротивление проправительственных формирований и взять контроль над системой. Прямо сейчас бандиты заняты дележом добычи, поэтому КВСМК призывает всех свободных пилотов воспользоваться этим моментом и нанести контрудар по захватчикам.\";",
+                        "        AddPlanetNews(tstr,63);",
+                        "        NewsAdd(tstr);",
+                        "        Sound('Sound.NewMsg');",
+                        "        PlanetOwner(tdwd,PirateClan);",
+                        "    }",
+                        "    else {",
+                        "        tstr = \"Новые известия приходят из системы <Name(star)> - силам Коалиции там удалось покончить с пиратскими элементами, а это значит, что больше ничего там не угрожает законному строю. В честь этого на планетах звёздной системы объявлены торжества, которые смогут посетить все желающие.\";",
+                        "        AddPlanetNews(tstr,63);",
+                        "        NewsAdd(tstr);",
+                        "        Sound('Sound.NewMsg');",
+                        "        PlanetOwner(tdwd,PlanetRace(tdwd));",
+                        "    }",
+                        "",
+                        "    rev_date = CurTurn();",
+                        "    AllShipOut();",
                         "}"
                     ]
                 },
@@ -3042,6 +3076,17 @@
                     "Parent": -1,
                     "#": 149,
                     "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "EventTime",
+                    "Pos.x": 390,
+                    "Pos.y": 1020,
+                    "Parent": -1,
+                    "#": 188,
+                    "Var.Type": "Int",
                     "Init": "",
                     "Global": false
                 }
