@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -931,
-    "ViewPos.y": -480,
+    "ViewPos.x": -541,
+    "ViewPos.y": -446,
     "ScriptName": "Mod_ExpTC",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpTC\\DATA\\Script\\Mod_ExpTC.txt",
@@ -2914,7 +2914,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "if(CurrentMods('Evolution\\EvoTranc')) InjectAnswer('EvoTranc:Tranc_MainMenu', \"Улучшить транклюкатора\", 21);",
+                        "if(CurrentMods('Evolution\\EvoTranc')) InjectAnswer('Mod_EvoTranc:Tranc_MainMenu', \"Улучшить транклюкатора\", 21);",
                         "InjectAnswer('probe_up',\"Улучшить зонд\", 10);"
                     ]
                 },
@@ -2928,7 +2928,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "if(CurrentMods('Evolution\\EvoTranc')) tstr1 = '</color>' + \"Улучшение транклюкаторов\";"
+                        "if(CurrentMods('Evolution\\EvoTranc')) tstr1 = '</color>2. ' + \"Улучшение транклюкаторов\";"
                     ]
                 }
             ],

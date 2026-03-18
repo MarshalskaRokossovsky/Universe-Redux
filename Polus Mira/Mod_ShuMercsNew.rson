@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -461,
-    "ViewPos.y": -71,
+    "ViewPos.x": 51,
+    "ViewPos.y": 195,
     "ScriptName": "Mod_ShuMercs",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -768,6 +768,36 @@
                     "#": 484,
                     "Msg": "<tstr2>",
                     "AMsg.Num": "74"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 930,
+                    "Pos.y": 780,
+                    "Parent": -1,
+                    "#": 491,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "75"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 930,
+                    "Pos.y": 810,
+                    "Parent": -1,
+                    "#": 492,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "76"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 930,
+                    "Pos.y": 840,
+                    "Parent": -1,
+                    "#": 495,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "77"
                 }
             ],
             "DialogMessages": 
@@ -1441,6 +1471,16 @@
                     "#": 483,
                     "Msg": "<tstr1>",
                     "DMsg.Num": "66"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 900,
+                    "Pos.y": 780,
+                    "Parent": -1,
+                    "#": 490,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "67"
                 }
             ],
             "Dialogs": 
@@ -1652,6 +1692,14 @@
                     "Pos.y": 960,
                     "Parent": -1,
                     "#": 463
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "MercTribute",
+                    "Pos.x": 900,
+                    "Pos.y": 720,
+                    "Parent": -1,
+                    "#": 488
                 }
             ],
             "Groups": 
@@ -4651,10 +4699,12 @@
                         "    }",
                         "    else {",
                         "        if(ShipType(cur_ship) == 'Merc') {",
-                        "            if(GetTalkType() == 0) {",
-                        "                if(ShipFindCustomShipInfoByType(Player(),'ShuMercs_PlayerTalked') == -1) {",
+                        "            if(GetTalkType() == 0 || GetTalkType() == 1) {",
+                        "                /*if(ShipFindCustomShipInfoByType(Player(),'ShuMercs_PlayerTalked') == -1) {",
                         "                    ShipAddCustomShipInfo(Player(),'ShuMercs_PlayerTalked','NoShow',ShipMoney(Player()),0,0,ShipCustomFaction(GetTalkShip()));",
-                        "                }",
+                        "                }*/",
+                        "                //Пора переходить от костылей к нормальным штукам",
+                        "                AddDialogOverride('MercTribute',99999);",
                         "            }",
                         "        }",
                         "    }",
@@ -9172,6 +9222,154 @@
                     [
                         "tstr1 = '</color>' + CT('Script.Mod_ShuMercs.MercCenterDialogs.TrainingAsk');"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 900,
+                    "Pos.y": 750,
+                    "Parent": -1,
+                    "#": 489,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "str path;",
+                        "cur_ship = GetTalkShip();",
+                        "tint1 = GalaxyMoney(4,4) * 5;",
+                        "if(GetTalkType() == 0) path = 'Money';",
+                        "if(GetTalkType() == 1) path = 'Goods';",
+                        "//Формируем требование выкупа от наймита",
+                        "tstr1 = '</color>' + Format(CT('Talk.'+path+'.Send'+int(Rnd(1,4))),'<Money'+'>',tint1);",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "if(GetTalkType() == 0) {",
+                        "    if(ShipMoney(Player()) < tint1) {",
+                        "        tstr3 = '</color>' + CT('Talk.'+path+'.PlayerNotMoney'+int(Rnd(1,9)));",
+                        "    }",
+                        "    else {",
+                        "        tstr3 = '</color>' + CT('Talk.'+path+'.PlayerOk'+int(Rnd(1,7)));",
+                        "    }",
+                        "    //Диалог посылания",
+                        "    if(Dist(Player(),cur_ship) <= 1500) {",
+                        "        tstr2 = '</color>' + CT('Talk.'+path+'.PlayerNo'+int(Rnd(1,7)));",
+                        "    }",
+                        "    else {",
+                        "        tstr2 = '</color>' + CT('Talk.'+path+'.PlayerLongDistance'+int(Rnd(1,8)));",
+                        "    }",
+                        "}",
+                        "else {",
+                        "    tint2 = 0;",
+                        "    if(GoodsCount(Player(),t_Alcohol)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Arms)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Minerals)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Food)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Narcotics)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Luxury)) tint2 = 1;",
+                        "    if(GoodsCount(Player(),t_Medicine)) tint2 = 1;",
+                        "",
+                        "    if(tint2) {",
+                        "        tstr3 = '</color>' + CT('Talk.'+path+'.PlayerOk'+int(Rnd(1,4)));",
+                        "    }",
+                        "    else {",
+                        "        tstr3 = '</color>' + CT('Talk.'+path+'.PlayerNotGoods'+int(Rnd(1,4)));",
+                        "    }",
+                        "    //Диалог посылания",
+                        "    if(Dist(Player(),cur_ship) <= 1500) {",
+                        "        tstr2 = '</color>' + CT('Talk.'+path+'.PlayerNo'+int(Rnd(1,4)));",
+                        "    }",
+                        "    else {",
+                        "        tstr2 = '</color>' + CT('Talk.'+path+'.PlayerLongDistance'+int(Rnd(1,4)));",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 930,
+                    "Pos.y": 870,
+                    "Parent": -1,
+                    "#": 496,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(GetTalkType() == 0) {",
+                        "    ShipMoney(Player(),ShipMoney(Player())-tint1);",
+                        "    ShipMoney(cur_ship,ShipMoney(cur_ship)+tint1);",
+                        "    Sound('Sound.Buy');",
+                        "}",
+                        "else {",
+                        "    tint2 = 0;",
+                        "    if(GoodsCount(Player(),t_Alcohol)) {",
+                        "        if(GoodsCount(Player(),t_Alcohol) < 30) {",
+                        "            GoodsDrop(Player(),t_Alcohol,GoodsCount(Player(),t_Alcohol));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Alcohol,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "    if(GoodsCount(Player(),t_Arms)) {",
+                        "        if(GoodsCount(Player(),t_Arms) < 30) {",
+                        "            GoodsDrop(Player(),t_Arms,GoodsCount(Player(),t_Arms));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Arms,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "    if(GoodsCount(Player(),t_Minerals)) {",
+                        "        if(GoodsCount(Player(),t_Minerals) < 30) {",
+                        "            GoodsDrop(Player(),t_Minerals,GoodsCount(Player(),t_Minerals));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Minerals,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "    if(GoodsCount(Player(),t_Food)) {",
+                        "        if(GoodsCount(Player(),t_Food) < 30) {",
+                        "            GoodsDrop(Player(),t_Food,GoodsCount(Player(),t_Food));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Food,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "    if(GoodsCount(Player(),t_Narcotics)) {",
+                        "        if(GoodsCount(Player(),t_Narcotics) < 30) {",
+                        "            GoodsDrop(Player(),t_Narcotics,GoodsCount(Player(),t_Narcotics));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Narcotics,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "    if(GoodsCount(Player(),t_Luxury)) {",
+                        "        if(GoodsCount(Player(),t_Luxury) < 30) {",
+                        "            GoodsDrop(Player(),t_Luxury,GoodsCount(Player(),t_Luxury));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Luxury,Rnd(3,25));",
+                        "        }",
+                        "    };",
+                        "    if(GoodsCount(Player(),t_Medicine)) {",
+                        "        if(GoodsCount(Player(),t_Medicine) < 30) {",
+                        "            GoodsDrop(Player(),t_Medicine,GoodsCount(Player(),t_Medicine));",
+                        "        }",
+                        "        else {",
+                        "            GoodsDrop(Player(),t_Medicine,Rnd(3,25));",
+                        "        }",
+                        "    }",
+                        "",
+                        "    if(tint2) {",
+                        "        tstr3 = '</color>' + CT('Talk.'+path+'.PlayerOk'+int(Rnd(1,4)));",
+                        "    }",
+                        "}",
+                        "",
+                        "",
+                        "tint1 = ShipGroup(cur_ship);",
+                        "if(tint1 == RedAxesMercs) MercOrganisationsData['RedAxes', 'RelationToPlayer'] = MercOrganisationsData['RedAxes', 'RelationToPlayer'] + Rnd(12,30);",
+                        "else if(tint1 == AtlantMercs) MercOrganisationsData['Atlant', 'RelationToPlayer'] = MercOrganisationsData['Atlant', 'RelationToPlayer'] + Rnd(12,30);",
+                        "else if(tint1 == FaeyangelionMercs) MercOrganisationsData['Faeyangelion', 'RelationToPlayer'] = MercOrganisationsData['Faeyangelion', 'RelationToPlayer'] + Rnd(12,30);"
+                    ]
                 }
             ],
             "Planets": 
@@ -10703,6 +10901,32 @@
                     "Code": 
                     [
                         "cnt < 1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 900,
+                    "Pos.y": 810,
+                    "Parent": -1,
+                    "#": 493,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < tint1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 900,
+                    "Pos.y": 840,
+                    "Parent": -1,
+                    "#": 494,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) >= tint1"
                     ]
                 }
             ],
@@ -15136,6 +15360,62 @@
             "Type": "TGraphLink",
             "Begin": 487,
             "End": 68,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 488,
+            "End": 489,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 489,
+            "End": 490,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 490,
+            "End": 491,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 490,
+            "End": 493,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 490,
+            "End": 494,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 493,
+            "End": 492,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 494,
+            "End": 495,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 495,
+            "End": 496,
             "Nom": 0,
             "Arrow": true
         }
