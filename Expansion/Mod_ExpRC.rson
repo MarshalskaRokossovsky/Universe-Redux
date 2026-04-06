@@ -1060,6 +1060,7 @@
                         "{",
                         "    dwd0 = ShipItems(Player(), i);",
                         "    if(ItemType(dwd0) != t_MicroModule) continue;",
+                        "    if(EqCustomFaction(dwd0) == 'Klissan') continue;",
                         "    ArrayAdd(array0, i);",
                         "    ArrayAdd(array1, ShipItems(Player(), i));",
                         "}"
