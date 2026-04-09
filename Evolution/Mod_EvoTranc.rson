@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -497,
-    "ViewPos.y": -397,
+    "ViewPos.x": -577,
+    "ViewPos.y": -330,
     "ScriptName": "Mod_EvoTranc",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoTranc\\DATA\\Script\\Mod_EvoTranc.txt",
@@ -6293,7 +6293,7 @@
                 {
                     "Type": "Tif",
                     "Name": "",
-                    "Pos.x": 520,
+                    "Pos.x": 430,
                     "Pos.y": -130,
                     "Parent": -1,
                     "#": 246,
@@ -6306,7 +6306,7 @@
                 {
                     "Type": "Tif",
                     "Name": "",
-                    "Pos.x": 560,
+                    "Pos.x": 480,
                     "Pos.y": -130,
                     "Parent": -1,
                     "#": 247,

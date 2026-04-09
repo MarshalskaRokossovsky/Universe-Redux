@@ -928,6 +928,7 @@
                     "Code": 
                     [
                         "cur_ship = GetTalkShip();",
+                        "dword item;",
                         "RelationToRanger(cur_ship,Player(),0);",
                         "ShipSetBad(cur_ship,Player());",
                         "",
@@ -952,9 +953,11 @@
                         "    check = 1;",
                         "",
                         "    for(i=0;ShipArts(Player())>i;i=i+1) {",
-                        "        if(EquipmentImageName(ShipArts(Player(),i)) != 'Hasker_PROx64') continue;",
-                        "        ItemDurability(ShipArts(Player(),i),max(0,ItemDurability(ShipArts(Player(),i)-12)));",
-                        "        if(ItemDurability(ShipArts(Player(),i)) < 1) NewsAdd(CT('Artefacts.CustomArtefacts.Hasker_PROx64.BrokenInUse'));",
+                        "        item = ShipArts(Player(),i);",
+                        "        if(!item) continue;",
+                        "        if(EquipmentImageName(item) != 'Hasker_PROx64') continue;",
+                        "        ItemDurability(item,max(0,ItemDurability(item)-12));",
+                        "        if(ItemDurability(item) < 1) NewsAdd(CT('Artefacts.CustomArtefacts.Hasker_PROx64.BrokenInUse'));",
                         "    }",
                         "}"
                     ]
