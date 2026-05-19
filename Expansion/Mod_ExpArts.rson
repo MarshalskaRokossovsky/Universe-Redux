@@ -954,7 +954,7 @@
                         "",
                         "    for(i=0;ShipArts(Player())>i;i=i+1) {",
                         "        item = ShipArts(Player(),i);",
-                        "        if(!item) continue;",
+                        "        if(item < 1) continue;",
                         "        if(EquipmentImageName(item) != 'Hasker_PROx64') continue;",
                         "        ItemDurability(item,max(0,ItemDurability(item)-12));",
                         "        if(ItemDurability(item) < 1) NewsAdd(CT('Artefacts.CustomArtefacts.Hasker_PROx64.BrokenInUse'));",

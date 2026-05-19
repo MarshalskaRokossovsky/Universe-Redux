@@ -3324,7 +3324,7 @@
                         "    result = handler;",
                         "}",
                         "",
-                        "function SpawnMachpella(dword star, dword planet)//, dword star_to_transfer)",
+                        "function SpawnMachpella(dword star, dword planet)",
                         "{",
                         "    dword machpella = BuyRanger(planet);",
                         "    RangerExcludedFromRating(machpella, 1);",

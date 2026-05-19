@@ -560,7 +560,7 @@
                         "    ArrayAdd(tarr1, CT(tstr1+CT(tstr1+'NukeTypes.'+i)+'NukesPerYear'), 'NukesPerYear'); //Лимит ядерных торпед, которые игрок может выкупить за год (-1 - лимит отключён)",
                         "    ArrayAdd(tarr1, CT(tstr1+CT(tstr1+'NukeTypes.'+i)+'NukesSold'), 'NukesSold'); //Сколько ядерных торпед за текущий год игрок уже купил (обнуление происходит 1 января)",
                         "    ArrayAdd(tarr1, CT(tstr1+CT(tstr1+'NukeTypes.'+i)+'DialogStatus'), 'DialogStatus');",
-                        "    ArrayAdd(g_NukeParams, tarr1, 'NukeTorpedo');",
+                        "    ArrayAdd(g_NukeParams, tarr1, CT(tstr1+'NukeTypes.'+i));",
                         "    tarr1 = newarray(1);",
                         "}",
                         "",
