@@ -1053,7 +1053,7 @@
                 },
                 {
                     "Type": "TVar",
-                    "Name": "daysLeft",
+                    "Name": "DaysLeft",
                     "Pos.x": -90,
                     "Pos.y": -390,
                     "Parent": -1,

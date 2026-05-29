@@ -587,7 +587,7 @@
                         "                AddDialogBlock(CT('FormGov.I_QueryQuest'),2);",
                         "                //В нижней фразе использована латинская 'c'",
                         "                //Нет, не в этой, а в той, что в ланге. Да, я был злой",
-                        "                AddDialogInject('DialogStart','',\"ЭТА ИГРА ПОЛНАЯ ХУЙНЯ\",1);",
+                        "                AddDialogInject('DialogStart','',CT('Script.Mod_ExpBeerQuest.StartDialog'),1);",
                         "            }",
                         "        }",
                         "    }",
@@ -2696,7 +2696,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 56,
+    "BlockPar.EC.Total.Strings": 55,
     "BlockPar.EC": 
     [
         {
@@ -2902,10 +2902,6 @@
         {
             "#": "75",
             "String": "Жизнь великого пивовара закончилась..."
-        },
-        {
-            "#": "78",
-            "String": "ЭТА ИГРА ПОЛНАЯ ХУЙНЯ"
         },
         {
             "#": "79",
