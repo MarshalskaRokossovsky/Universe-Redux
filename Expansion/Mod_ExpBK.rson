@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 501,
-    "ViewPos.y": 165,
+    "ViewPos.x": 506,
+    "ViewPos.y": -93,
     "ScriptName": "Mod_ExpBK",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -5469,7 +5469,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "InjectAnswer('FinProducts',\"Вернуться к выбору услуг\");"
+                        "InjectAnswer('FinProducts',\"Вернуться к выбору услуг\",0);"
                     ]
                 },
                 {
@@ -5688,17 +5688,17 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int = GalaxyMoney(4,4) * 2;",
-                        "temp_int_1 = GalaxyMoney(4,4) * 5;",
-                        "temp_int_2 = GalaxyMoney(4,4) * 9;",
+                        "temp_int_2 = GalaxyMoney(4,4);",
+                        "temp_int_1 = GalaxyMoney(4,4) * 3;",
+                        "temp_int = GalaxyMoney(4,4) * 5;",
                         "",
-                        "temp_int_3 = GalaxyMoney(3,4);",
+                        "temp_int_5 = GalaxyMoney(3,4);",
                         "temp_int_4 = GalaxyMoney(3,4) * 2;",
-                        "temp_int_5 = GalaxyMoney(3,4) * 3;",
+                        "temp_int_3 = GalaxyMoney(3,4) * 3;",
                         "",
-                        "tint1 = Rnd(10,30) + 25 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
-                        "tint2 = Rnd(10,30) + 45 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
-                        "tint3 = Rnd(10,30) + 65 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
+                        "tint1 = Rnd(10,30) + 15 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
+                        "tint2 = Rnd(10,30) + 25 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
+                        "tint3 = Rnd(10,30) + 45 * PortionInDiapason(GalaxyDiffLevels(7)/50,1,10,11,2);",
                         "",
                         "tstr1 = '</color>' + Format(CT('FormRuins.BK.TakeDebt.BK'),'<Player'+'>',Name(Player()),'<Percent'+'>',PlayerDepositPercent(),'<MaxMoney'+'>',temp_int,'<MinDay'+'>',tint1,'<MaxMoneyAdd'+'>',temp_int_3,'<AveMoney'+'>',temp_int_1,'<AveDay'+'>',tint2,'<AveMoneyAdd'+'>',temp_int_4,'<MinMoney'+'>',temp_int_2,'<MaxDay'+'>',tint3,'<MinMoneyAdd'+'>',temp_int_5);",
                         "tstr2 = '</color>' + CT('FormRuins.BK.TakeDebt.PlayerNo');",
@@ -5724,7 +5724,7 @@
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
                         "PlayerDebt(temp_int+temp_int_3);",
-                        "PlayerDebtDate(CurTurn());",
+                        "PlayerDebtDate(CurTurn()+tint3);",
                         "PlayerDebtCnt(0);",
                         "",
                         "DebtDays = tint1;"
@@ -5747,7 +5747,7 @@
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
                         "PlayerDebt(temp_int_2+temp_int_5);",
-                        "PlayerDebtDate(CurTurn());",
+                        "PlayerDebtDate(CurTurn()+tint2);",
                         "PlayerDebtCnt(0);",
                         "",
                         "DebtDays = tint3;"
@@ -5770,7 +5770,7 @@
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
                         "PlayerDebt(temp_int_1+temp_int_4);",
-                        "PlayerDebtDate(CurTurn());",
+                        "PlayerDebtDate(CurTurn()+tint1);",
                         "PlayerDebtCnt(0);",
                         "",
                         "DebtDays = tint2;"

@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 51,
-    "ViewPos.y": 195,
+    "ViewPos.x": 33,
+    "ViewPos.y": 103,
     "ScriptName": "Mod_ShuMercs",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuMercs\\DATA\\Script\\Mod_ShuMercs.txt",
@@ -771,7 +771,7 @@
                 },
                 {
                     "Type": "TDialogAnswer",
-                    "Name": "restart",
+                    "Name": "fastexit",
                     "Pos.x": 930,
                     "Pos.y": 780,
                     "Parent": -1,
@@ -781,7 +781,7 @@
                 },
                 {
                     "Type": "TDialogAnswer",
-                    "Name": "restart",
+                    "Name": "fastexit",
                     "Pos.x": 930,
                     "Pos.y": 810,
                     "Parent": -1,
@@ -791,7 +791,7 @@
                 },
                 {
                     "Type": "TDialogAnswer",
-                    "Name": "restart",
+                    "Name": "fastexit",
                     "Pos.x": 930,
                     "Pos.y": 840,
                     "Parent": -1,
