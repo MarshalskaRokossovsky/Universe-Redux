@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -1287,
-    "ViewPos.y": -314,
+    "ViewPos.x": -612,
+    "ViewPos.y": -476,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -882,7 +882,7 @@
                 {
                     "Type": "TDialogAnswer",
                     "Name": "",
-                    "Pos.x": 160,
+                    "Pos.x": 210,
                     "Pos.y": 130,
                     "Parent": -1,
                     "#": 399,
@@ -9877,7 +9877,7 @@
                         "        {",
                         "            next_spawn = 10;",
                         "            //Первое время клисане особо толкучие",
-                        "            if(KlissanInvasion['StartDay'] + KlissanInvasion['KlissanDiffLevel'] * 3 > CurTurn()) next_spawn = Rnd(1,4);",
+                        "            if(KlissanInvasion['StartDay'] + min(KlissanInvasion['KlissanDiffLevel'] * 3,400) > CurTurn()) next_spawn = Rnd(1,4);",
                         "            SetData(CurTurn() + next_spawn, 3);",
                         "        }",
                         "    }",
@@ -12630,6 +12630,19 @@
                     "Code": 
                     [
                         "AddDialogInject('Mod_ExpRC:Info','',tstr2,1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 160,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 533,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tstr1 = '</color>' + CT('Script.Mod_ShuKlissan.KlissanInvestSB.KlissanMainPage') + Format('<br>') + Format(CT('Script.Mod_ShuKlissan.KlissanInvestSB.SBAnswer'), '<SBSectionInfo'+'>', ComposeResearchDepartmentsText(), '');"
                     ]
                 }
             ],
@@ -16666,13 +16679,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 399,
-            "End": 388,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 398,
             "End": 399,
             "Nom": 0,
@@ -17697,6 +17703,20 @@
             "Type": "TGraphLink",
             "Begin": 529,
             "End": 530,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 399,
+            "End": 533,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 533,
+            "End": 388,
             "Nom": 0,
             "Arrow": true
         }

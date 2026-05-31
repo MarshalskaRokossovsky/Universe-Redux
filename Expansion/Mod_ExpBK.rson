@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": 506,
-    "ViewPos.y": -93,
+    "ViewPos.x": 601,
+    "ViewPos.y": -182,
     "ScriptName": "Mod_ExpBK",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -5513,17 +5513,17 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "tstr1 = '</color>' + CT('FormRuins.BK.Policy.BK');",
+                        "temp_int_1 = GalaxyMoney(4,4);",
+                        "temp_int_2 = GalaxyMoney(4,4) * 3;",
+                        "temp_int_3 = GalaxyMoney(4,4) * 9;",
+                        "",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Policy.BK'),'<cost5'+'>',temp_int_1,'<cost7'+'>',temp_int_2,'<cost10'+'>',temp_int_3);",
                         "tstr2 = '</color>' + CT('FormRuins.BK.Policy.PlayerOk5');",
                         "tstr3 = '</color>' + CT('FormRuins.BK.Policy.PlayerAsk');",
                         "tstr4 = '</color>' + CT('FormRuins.BK.Policy.PlayerNo');",
                         "tstr5 = '</color>' + Format(CT('FormRuins.BK.Policy.BKAfterAsk'),'<Player'+'>',Name(Player()));",
                         "tstr6 = '</color>' + CT('FormRuins.BK.Policy.PlayerOk7');",
-                        "temp_str = '</color>' + CT('FormRuins.BK.Policy.PlayerOk10');",
-                        "",
-                        "temp_int_1 = GalaxyMoney(4,4);",
-                        "temp_int_2 = GalaxyMoney(4,4) * 3;",
-                        "temp_int_3 = GalaxyMoney(4,4) * 7;"
+                        "temp_str = '</color>' + CT('FormRuins.BK.Policy.PlayerOk10');"
                     ]
                 },
                 {
@@ -5573,7 +5573,7 @@
                         "",
                         "ShipMoney(Player(),ShipMoney(Player())-temp_int_2);",
                         "Sound('Sound.Buy');",
-                        "PlayerMedPolicy(365*5);"
+                        "PlayerMedPolicy(365*7);"
                     ]
                 },
                 {
@@ -5591,7 +5591,7 @@
                         "",
                         "ShipMoney(Player(),ShipMoney(Player())-temp_int_3);",
                         "Sound('Sound.Buy');",
-                        "PlayerMedPolicy(365*5);"
+                        "PlayerMedPolicy(365*10);"
                     ]
                 },
                 {
@@ -5625,13 +5625,13 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipMoney(Player(),ShipMoney(Player())-temp_int_2);",
+                        "ShipMoney(Player(),ShipMoney(Player())-temp_int_3);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_2,'<Percent'+'>',PlayerDepositPercent());",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_3,'<Percent'+'>',PlayerDepositPercent());",
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
-                        "PlayerDeposit(temp_int_2);",
+                        "PlayerDeposit(temp_int_3);",
                         "PlayerDepositDate(CurTurn());",
                         "PlayerDepositDay(0);"
                     ]
@@ -5646,13 +5646,13 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipMoney(Player(),ShipMoney(Player())-temp_int_3);",
+                        "ShipMoney(Player(),ShipMoney(Player())-temp_int_2);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_3,'<Percent'+'>',PlayerDepositPercent());",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_2,'<Percent'+'>',PlayerDepositPercent());",
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
-                        "PlayerDeposit(temp_int_3);",
+                        "PlayerDeposit(temp_int_2);",
                         "PlayerDepositDate(CurTurn());",
                         "PlayerDepositDay(0);"
                     ]
@@ -5717,13 +5717,14 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipMoney(Player(),ShipMoney(Player())+temp_int);",
+                        "//Минимальный",
+                        "ShipMoney(Player(),ShipMoney(Player())+temp_int_2);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int,'<DebtMoney'+'>',temp_int+temp_int_3,'<Percent'+'>',PlayerDepositPercent());",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_2,'<DebtMoney'+'>',temp_int_2+temp_int_5,'<Percent'+'>',PlayerDepositPercent());",
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
-                        "PlayerDebt(temp_int+temp_int_3);",
+                        "PlayerDebt(temp_int_2+temp_int_5);",
                         "PlayerDebtDate(CurTurn()+tint3);",
                         "PlayerDebtCnt(0);",
                         "",
@@ -5740,13 +5741,14 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipMoney(Player(),ShipMoney(Player())+temp_int_2);",
+                        "//Максимальный",
+                        "ShipMoney(Player(),ShipMoney(Player())+temp_int);",
                         "Sound('Sound.Buy');",
                         "",
-                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int_2,'<DebtMoney'+'>',temp_int_2+temp_int_5,'<Percent'+'>',PlayerDepositPercent());",
+                        "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BKAfterOk'),'<Player'+'>',Name(Player()),'<SendMoney'+'>',temp_int,'<DebtMoney'+'>',temp_int+temp_int_3,'<Percent'+'>',PlayerDepositPercent());",
                         "tstr2 = '</color>' + \"Вернуться к выбору услуг\";",
                         "",
-                        "PlayerDebt(temp_int_2+temp_int_5);",
+                        "PlayerDebt(temp_int+temp_int_3);",
                         "PlayerDebtDate(CurTurn()+tint2);",
                         "PlayerDebtCnt(0);",
                         "",
@@ -5763,6 +5765,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
+                        "//Средний",
                         "ShipMoney(Player(),ShipMoney(Player())+temp_int_1);",
                         "Sound('Sound.Buy');",
                         "",
@@ -7382,7 +7385,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_1 >= ShipMoney(Player())"
+                        "temp_int_1 <= ShipMoney(Player())"
                     ]
                 },
                 {
@@ -7395,7 +7398,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_2 >= ShipMoney(Player())"
+                        "temp_int_2 <= ShipMoney(Player())"
                     ]
                 },
                 {
@@ -7408,7 +7411,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_3 >= ShipMoney(Player())"
+                        "temp_int_3 <= ShipMoney(Player())"
                     ]
                 },
                 {
@@ -7421,7 +7424,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_3 < ShipMoney(Player())"
+                        "temp_int_3 > ShipMoney(Player())"
                     ]
                 },
                 {
@@ -7434,7 +7437,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_1 < ShipMoney(Player())"
+                        "temp_int_1 > ShipMoney(Player())"
                     ]
                 },
                 {
@@ -7447,7 +7450,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "temp_int_2 < ShipMoney(Player())"
+                        "temp_int_2 > ShipMoney(Player())"
                     ]
                 },
                 {
