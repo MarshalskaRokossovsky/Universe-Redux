@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -261,
-    "ViewPos.y": 228,
+    "ViewPos.x": -234,
+    "ViewPos.y": 81,
     "ScriptName": "Mod_EvoSB",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Evolution\\EvoSB\\DATA\\Script\\Mod_EvoSB.txt",
@@ -2254,6 +2254,7 @@
                         "        }",
                         "",
                         "        cur_item = CreateZond(tint, RndObject(0, 4, cur_ruin));",
+                        "        if(tint > 8) ItemCost(cur_item,ItemCost(cur_item)*3);",
                         "",
                         "",
                         "        //Определяем, к какому конкретно параметру зонд получил бонус (и получил ли его вообще)",
