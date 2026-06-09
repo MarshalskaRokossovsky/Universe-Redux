@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -618,
-    "ViewPos.y": -149,
+    "ViewPos.x": 830,
+    "ViewPos.y": -134,
     "ScriptName": "Mod_ExpBK",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\Expansion\\ExpBK\\DATA\\Script\\Mod_ExpBK.txt",
@@ -1042,8 +1042,8 @@
                 {
                     "Type": "TDialogAnswer",
                     "Name": "restart",
-                    "Pos.x": 1720,
-                    "Pos.y": 310,
+                    "Pos.x": 1750,
+                    "Pos.y": 220,
                     "Parent": -1,
                     "#": 498,
                     "Msg": "Ну, ладно",
@@ -1173,7 +1173,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 1660,
-                    "Pos.y": 370,
+                    "Pos.y": 400,
                     "Parent": -1,
                     "#": 537,
                     "Msg": "<tstr3>",
@@ -1183,7 +1183,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 1690,
-                    "Pos.y": 370,
+                    "Pos.y": 400,
                     "Parent": -1,
                     "#": 538,
                     "Msg": "<tstr4>",
@@ -1193,7 +1193,7 @@
                     "Type": "TDialogAnswer",
                     "Name": "",
                     "Pos.x": 1720,
-                    "Pos.y": 370,
+                    "Pos.y": 400,
                     "Parent": -1,
                     "#": 539,
                     "Msg": "<tstr5>",
@@ -1338,6 +1338,36 @@
                     "#": 577,
                     "Msg": "Да, я согласен. Переводите деньги!",
                     "AMsg.Num": "131"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1690,
+                    "Pos.y": 280,
+                    "Parent": -1,
+                    "#": 587,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "132"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1720,
+                    "Pos.y": 280,
+                    "Parent": -1,
+                    "#": 588,
+                    "Msg": "<tstr4>",
+                    "AMsg.Num": "133"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 1750,
+                    "Pos.y": 280,
+                    "Parent": -1,
+                    "#": 589,
+                    "Msg": "<tstr5>",
+                    "AMsg.Num": "134"
                 }
             ],
             "DialogMessages": 
@@ -2105,8 +2135,8 @@
                 {
                     "Type": "TDialogMsg",
                     "Name": "",
-                    "Pos.x": 1690,
-                    "Pos.y": 310,
+                    "Pos.x": 1720,
+                    "Pos.y": 220,
                     "Parent": -1,
                     "#": 497,
                     "Msg": "Какой ещё депозит, <Player>?! На нашу систему напали, идёт срочная эвакуация служащих. Работа нашей станции временно ограничена с целью недопущения махинаций в условиях неразберихи!",
@@ -2195,8 +2225,8 @@
                 {
                     "Type": "TDialogMsg",
                     "Name": "",
-                    "Pos.x": 1720,
-                    "Pos.y": 430,
+                    "Pos.x": 1690,
+                    "Pos.y": 460,
                     "Parent": -1,
                     "#": 544,
                     "Msg": "<tstr1>",
@@ -2866,7 +2896,7 @@
                         "        if(PlayerDebtDate() + DebtDays + DebtDays * PlayerDebtCnt() < CurTurn()) {",
                         "            PlayerDebtCnt(PlayerDebtCnt()+1);",
                         "            Sound('Sound.NewMsg');",
-                        "        ",
+                        "",
                         "            if(PlayerDebtCnt() < 5) {",
                         "                NewsAdd(Format(CT('GalaxyNews.BK.DebtInfo'),'<Player'+'>',Name(Player()),'<OldMoney'+'>',PlayerDebt(),'<Penalty'+'>',GalaxyMoney(4,4)));",
                         "                ChangeGlobalRelationsPlanets(Player(),0,3,70,159);",
@@ -2878,7 +2908,7 @@
                         "                ChangeGlobalRelationsShips(Player(),0,3,70,63,159);",
                         "                RelationToShip(PlanetPirateClan(),Player(),20);",
                         "            }",
-                        "        ",
+                        "",
                         "            PlayerDebt(PlayerDebt()+GalaxyMoney(4,4));",
                         "        }",
                         "    }",
@@ -2901,7 +2931,7 @@
                         "cur_ruin = GetShipRuins(Player());",
                         "if(cur_ruin)",
                         "{",
-                        "    if(int(is_equip_purchase) == -1) AddDialogOverride('CloseEquipShopDialog', 1000);",
+                        "    if(int(is_equip_purchase) == -1 && cur_store > 0) AddDialogOverride('CloseEquipShopDialog', 1000);",
                         "",
                         "    temp_str = ShipType(cur_ruin);",
                         "    if(temp_str == 'BK')",
@@ -5497,7 +5527,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "PlayerDeposit()+DepositPercentCalc();",
+                        "ShipMoney(Player(),ShipMoney(Player())+PlayerDeposit()+DepositPercentCalc());",
                         "Sound('Sound.Buy');",
                         "PlayerDeposit(0);",
                         "",
@@ -5607,8 +5637,8 @@
                     "Code": 
                     [
                         "temp_int_1 = 1000;",
-                        "temp_int_2 = ShipMoney(Player()) / 2;",
-                        "temp_int_3 = ShipMoney(Player());",
+                        "temp_int_3 = ShipMoney(Player()) / 2;",
+                        "temp_int_2 = ShipMoney(Player());",
                         "",
                         "tstr1 = '</color>' + Format(CT('FormRuins.BK.Deposit.BK'),'<Player'+'>',Name(Player()),'<Percent'+'>',PlayerDepositPercent());",
                         "tstr2 = '</color>' + CT('FormRuins.BK.Deposit.PlayerNo');",
@@ -5621,7 +5651,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 1660,
-                    "Pos.y": 400,
+                    "Pos.y": 430,
                     "Parent": -1,
                     "#": 541,
                     "Code.Type": "Turn",
@@ -5642,7 +5672,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 1690,
-                    "Pos.y": 400,
+                    "Pos.y": 430,
                     "Parent": -1,
                     "#": 542,
                     "Code.Type": "Turn",
@@ -5663,7 +5693,7 @@
                     "Type": "Top",
                     "Name": "",
                     "Pos.x": 1720,
-                    "Pos.y": 400,
+                    "Pos.y": 430,
                     "Parent": -1,
                     "#": 543,
                     "Code.Type": "Turn",
@@ -7277,7 +7307,7 @@
                     "Type": "Tif",
                     "Name": "",
                     "Pos.x": 1690,
-                    "Pos.y": 280,
+                    "Pos.y": 220,
                     "Parent": -1,
                     "#": 490,
                     "Code.Type": "Turn",
@@ -7479,6 +7509,84 @@
                     "Code": 
                     [
                         "ShipMoney(Player()) >= 3*GalaxyMoney(3,4)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1660,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 584,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) >= temp_int_3"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1690,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 585,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) >= temp_int_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1720,
+                    "Pos.y": 370,
+                    "Parent": -1,
+                    "#": 586,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) >= temp_int_1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1690,
+                    "Pos.y": 310,
+                    "Parent": -1,
+                    "#": 590,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < temp_int_3"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1720,
+                    "Pos.y": 310,
+                    "Parent": -1,
+                    "#": 591,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < temp_int_2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1750,
+                    "Pos.y": 310,
+                    "Parent": -1,
+                    "#": 592,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < temp_int_1"
                     ]
                 }
             ],
@@ -11753,27 +11861,6 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 536,
-            "End": 537,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 536,
-            "End": 538,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 536,
-            "End": 539,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 539,
             "End": 543,
             "Nom": 0,
@@ -12126,6 +12213,90 @@
             "Type": "TGraphLink",
             "Begin": 581,
             "End": 308,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 584,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 585,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 586,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 586,
+            "End": 539,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 585,
+            "End": 538,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 584,
+            "End": 537,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 590,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 591,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 536,
+            "End": 592,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 592,
+            "End": 589,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 591,
+            "End": 588,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 590,
+            "End": 587,
             "Nom": 0,
             "Arrow": true
         }
