@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -770,
-    "ViewPos.y": -331,
+    "ViewPos.x": -878,
+    "ViewPos.y": -362,
     "ScriptName": "Mod_ShuDomiks",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuDomiks\\DATA\\Script\\Mod_ShuDomiks.txt",
@@ -2152,7 +2152,7 @@
                 {
                     "Type": "TGroup",
                     "Name": "KellerSupers",
-                    "Pos.x": -360,
+                    "Pos.x": -370,
                     "Pos.y": 260,
                     "Parent": -1,
                     "#": 421,
@@ -2420,22 +2420,32 @@
                         "    ShipAddCustomShipInfo(cur_ship,'ShuDomiks_NPCInstalled','NoShow');",
                         "    CoordX(cur_ship,500);",
                         "    CoordY(cur_ship,1200);",
+                        "    NoTargetToShip(cur_ship,1);",
+                        "    ShipSpecialBonuses(cur_ship,bonDroid,200);",
                         "    cur_ship = SpawnInhibitor(cur_star);",
                         "    ShipAddCustomShipInfo(cur_ship,'ShuDomiks_NPCInstalled','NoShow');",
                         "    CoordX(cur_ship,-500);",
                         "    CoordY(cur_ship,1200);",
+                        "    NoTargetToShip(cur_ship,1);",
+                        "    ShipSpecialBonuses(cur_ship,bonDroid,200);",
                         "    cur_ship = SpawnInhibitor(cur_star);",
                         "    ShipAddCustomShipInfo(cur_ship,'ShuDomiks_NPCInstalled','NoShow');",
                         "    CoordX(cur_ship,0);",
                         "    CoordY(cur_ship,-1500);",
+                        "    NoTargetToShip(cur_ship,1);",
+                        "    ShipSpecialBonuses(cur_ship,bonDroid,200);",
                         "    cur_ship = SpawnInhibitor(cur_star);",
                         "    ShipAddCustomShipInfo(cur_ship,'ShuDomiks_NPCInstalled','NoShow');",
                         "    CoordX(cur_ship,-800);",
                         "    CoordY(cur_ship,-700);",
+                        "    NoTargetToShip(cur_ship,1);",
+                        "    ShipSpecialBonuses(cur_ship,bonDroid,200);",
                         "    cur_ship = SpawnInhibitor(cur_star);",
                         "    ShipAddCustomShipInfo(cur_ship,'ShuDomiks_NPCInstalled','NoShow');",
                         "    CoordX(cur_ship,800);",
                         "    CoordY(cur_ship,-700);",
+                        "    NoTargetToShip(cur_ship,1);",
+                        "    ShipSpecialBonuses(cur_ship,bonDroid,200);",
                         "}",
                         "",
                         "//MS_Terron_Crack_Submodem - глобальная переменная из модифицированного скрипта MS_Terron",
@@ -11898,6 +11908,21 @@
                         "//На случай, если этот ублюдок как-то починит своего ремонтника",
                         "ShipSpecialBonuses(GetTalkShip(),bonDroid,-5000000);"
                     ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -600,
+                    "Pos.y": 260,
+                    "Parent": -1,
+                    "#": 508,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(GetShipRuins(CurShip)) {",
+                        "    OrderTakeOff(CurShip);",
+                        "}"
+                    ]
                 }
             ],
             "Places": 
@@ -13461,7 +13486,7 @@
                 {
                     "Type": "TState",
                     "Name": "FreeState",
-                    "Pos.x": -590,
+                    "Pos.x": -570,
                     "Pos.y": 260,
                     "Parent": -1,
                     "#": 424,
@@ -17848,6 +17873,13 @@
             "Type": "TGraphLink",
             "Begin": 505,
             "End": 506,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 424,
+            "End": 508,
             "Nom": 0,
             "Arrow": true
         }
