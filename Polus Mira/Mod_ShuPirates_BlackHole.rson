@@ -1,18 +1,19 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -336,
+    "ViewPos.x": -328,
     "ViewPos.y": 171,
     "ScriptName": "Mod_ShuPirates_BlackHole",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPirates\\DATA\\Script\\Mod_ShuPirates_BlackHole.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPirates\\DATA\\Script\\Mod_ShuPirates_BlackHole.txt",
+    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPirates\\DATA\\Script\\Mod_ShuPirates_BlackHole.scr",
+    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuPirates\\DATA\\Script\\Mod_ShuPirates_BlackHole.txt",
     "LangDatIn": "",
     "LangDatOut": "",
     "MainDatIn": "",
     "MainDatOut": "",
     "CacheDatIn": "",
     "CacheDatOut": "",
-    "ExportLang": false,
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
     "Visual.Objects": 
     [
         {
@@ -24,7 +25,7 @@
                     "Pos.x": 240,
                     "Pos.y": 570,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 22,
                     "Owner": 62,
                     "Group.Type": 126,
                     "CntShipMin": 1,
@@ -53,7 +54,7 @@
                     "Pos.x": 350,
                     "Pos.y": 570,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 23,
                     "Owner": 62,
                     "Group.Type": 126,
                     "CntShipMin": 0,
@@ -85,7 +86,7 @@
                     "Pos.x": 290,
                     "Pos.y": 480,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 24,
                     "Code.Type": "Global",
                     "Code": 
                     [
@@ -113,7 +114,7 @@
                     "Pos.x": 320,
                     "Pos.y": 480,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 25,
                     "Code.Type": "Init",
                     "Code": 
                     [
@@ -154,7 +155,7 @@
                     "Pos.x": 350,
                     "Pos.y": 480,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 26,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -434,7 +435,7 @@
                     "Pos.x": 350,
                     "Pos.y": 630,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 27,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -470,7 +471,7 @@
                     "Pos.x": 350,
                     "Pos.y": 680,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 28,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -489,7 +490,7 @@
                     "Pos.x": 240,
                     "Pos.y": 540,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 16,
                     "Race": 62,
                     "Owner": 63,
                     "Economy": 14,
@@ -504,7 +505,7 @@
                     "Pos.x": 350,
                     "Pos.y": 540,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 17,
                     "Race": 62,
                     "Owner": 257,
                     "Economy": 14,
@@ -522,7 +523,7 @@
                     "Pos.x": 240,
                     "Pos.y": 480,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 18,
                     "Count": 1,
                     "Owner": 62,
                     "Ship.Type": 126,
@@ -551,7 +552,7 @@
                     "Pos.x": 240,
                     "Pos.y": 510,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 14,
                     "Constellation": 0,
                     "Priority": 0,
                     "NoKling": true,
@@ -563,7 +564,7 @@
                     "Pos.x": 350,
                     "Pos.y": 510,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 15,
                     "Constellation": 0,
                     "Priority": 1,
                     "NoKling": false,
@@ -578,7 +579,7 @@
                     "Pos.x": 380,
                     "Pos.y": 480,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 29,
                     "Code.Type": "Turn",
                     "Code": 
                     [
@@ -594,7 +595,7 @@
                     "Pos.x": 240,
                     "Pos.y": 600,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 19,
                     "Move": 0,
                     "MoveObj": -1,
                     "Attack.Count": 0,
@@ -612,7 +613,7 @@
                     "Pos.x": 350,
                     "Pos.y": 600,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 20,
                     "Move": 0,
                     "MoveObj": -1,
                     "Attack.Count": 0,
@@ -630,7 +631,7 @@
                     "Pos.x": 350,
                     "Pos.y": 650,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 21,
                     "Move": 2,
                     "MoveObj": 8,
                     "Attack.Count": 1,
@@ -668,7 +669,7 @@
                     "Pos.x": 460,
                     "Pos.y": 510,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 1,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -679,7 +680,7 @@
                     "Pos.x": 460,
                     "Pos.y": 530,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 2,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -690,7 +691,7 @@
                     "Pos.x": 520,
                     "Pos.y": 570,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 3,
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
@@ -701,7 +702,7 @@
                     "Pos.x": 520,
                     "Pos.y": 510,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 4,
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
@@ -712,7 +713,7 @@
                     "Pos.x": 600,
                     "Pos.y": 510,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 5,
                     "Var.Type": "Str",
                     "Init": "",
                     "Global": false
@@ -723,7 +724,7 @@
                     "Pos.x": 460,
                     "Pos.y": 610,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 6,
                     "Var.Type": "Int",
                     "Init": "-1",
                     "Global": false
@@ -734,7 +735,7 @@
                     "Pos.x": 460,
                     "Pos.y": 630,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 7,
                     "Var.Type": "Int",
                     "Init": "0",
                     "Global": false
@@ -745,7 +746,7 @@
                     "Pos.x": 570,
                     "Pos.y": 610,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 8,
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
@@ -756,7 +757,7 @@
                     "Pos.x": 520,
                     "Pos.y": 530,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 9,
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
@@ -767,7 +768,7 @@
                     "Pos.x": 460,
                     "Pos.y": 570,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 10,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -778,7 +779,7 @@
                     "Pos.x": 520,
                     "Pos.y": 550,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 11,
                     "Var.Type": "Dword",
                     "Init": "",
                     "Global": false
@@ -789,7 +790,7 @@
                     "Pos.x": 460,
                     "Pos.y": 550,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 12,
                     "Var.Type": "Int",
                     "Init": "",
                     "Global": false
@@ -800,7 +801,7 @@
                     "Pos.x": 460,
                     "Pos.y": 660,
                     "Parent": -1,
-                    "#": 0,
+                    "#": 13,
                     "Var.Type": "Array",
                     "Init": "",
                     "Global": false
@@ -812,65 +813,6 @@
     [
         {
             "Type": "TGraphLink",
-            "Begin": 4,
-            "End": 3,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 6,
-            "End": 5,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 7,
-            "End": 3,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TStarLink",
-            "Begin": 5,
-            "End": 3,
-            "Nom": 0,
-            "Arrow": false,
-            "DistMin": 0,
-            "DistMax": 149,
-            "Hole": false
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 9,
-            "End": 6,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 8,
-            "End": 4,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 8,
-            "End": 12,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 9,
-            "End": 13,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
             "Begin": 14,
             "End": 16,
             "Nom": 0,
@@ -878,7 +820,42 @@
         },
         {
             "Type": "TGraphLink",
-            "Begin": 13,
+            "Begin": 21,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
             "End": 15,
             "Nom": 0,
             "Arrow": true
@@ -886,9 +863,33 @@
         {
             "Type": "TGraphLink",
             "Begin": 23,
-            "End": 11,
+            "End": 17,
             "Nom": 0,
             "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TStarLink",
+            "Begin": 14,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": false,
+            "DistMin": 0,
+            "DistMax": 149,
+            "Hole": false
         }
     ],
     "BlockPar.EC.Total.Strings": 0,

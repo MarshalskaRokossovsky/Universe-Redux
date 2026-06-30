@@ -9593,7 +9593,28 @@
                     "Code": 
                     [
                         "if(GetShipPlanet(GetShipRuins(Player()))) temp_int = MessageBoxYesNo(\"Вы уверены, что хотите покинуть планету <PlanetName(GetShipPlanet(GetShipRuins(Player())))>?\");",
-                        "else temp_int = MessageBoxYesNo(\"Вы уверены, что хотите покинуть <Name(GetShipRuins(GetShipRuins(Player())))>?\");"
+                        "else temp_int = MessageBoxYesNo(\"Вы уверены, что хотите покинуть <Name(GetShipRuins(GetShipRuins(Player())))>?\");",
+                        "",
+                        "if(!ShipEqInSlot(Player(),t_Engine)) {",
+                        "    temp_int = 0;",
+                        "    MessageBox(\"Отсутствует двигатель, взлёт невозможен!\");",
+                        "}",
+                        "else if(ItemIsBroken(ShipEqInSlot(Player(),t_Engine))) {",
+                        "    temp_int = 0;",
+                        "    MessageBox(\"Двигатель повреждён, взлёт невозможен!\");",
+                        "}",
+                        "else if(!ShipEqInSlot(t_FuelTanks)) {",
+                        "    temp_int = 0;",
+                        "    MessageBox(\"Отсутствует бак, взлёт невозможен!\");",
+                        "}",
+                        "else if(ItemIsBroken(ShipEqInSlot(Player(),t_FuelTanks))) {",
+                        "    temp_int = 0;",
+                        "    MessageBox(\"Топливный бак повреждён, взлёт невозможен!\");",
+                        "}",
+                        "else if(ShipFuel(Player()) < 1) {",
+                        "    temp_int = 0;",
+                        "    MessageBox(\"Отсутствует топливо, взлёт невозможен!\");",
+                        "}"
                     ]
                 },
                 {
@@ -18235,7 +18256,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 405,
+    "BlockPar.EC.Total.Strings": 410,
     "BlockPar.EC": 
     [
         {
@@ -19461,6 +19482,26 @@
         {
             "#": "1630",
             "String": "RC"
+        },
+        {
+            "#": "1632",
+            "String": "Отсутствует топливо, взлёт невозможен!"
+        },
+        {
+            "#": "1633",
+            "String": "Топливный бак повреждён, взлёт невозможен!"
+        },
+        {
+            "#": "1634",
+            "String": "Отсутствует бак, взлёт невозможен!"
+        },
+        {
+            "#": "1635",
+            "String": "Двигатель повреждён, взлёт невозможен!"
+        },
+        {
+            "#": "1636",
+            "String": "Отсутствует двигатель, взлёт невозможен!"
         },
         {
             "#": "212",
