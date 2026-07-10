@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -681,
-    "ViewPos.y": -476,
+    "ViewPos.x": -1061,
+    "ViewPos.y": -315,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -11500,7 +11500,7 @@
                     "Code": 
                     [
                         "function SpawnAllyMachpella(dword star) {",
-                        "    dword machpella = BuyRanger(FindPlanet(star));",
+                        "    dword machpella = BuyRanger(FindPlanet(star,'NotNone'));",
                         "    RangerExcludedFromRating(machpella, 1);",
                         "    ShipType(machpella, 'Machpella');",
                         "    ShipPilotRace(machpella, Gaal); //Чтобы точно не прилетела графика Таухито",

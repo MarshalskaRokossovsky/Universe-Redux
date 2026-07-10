@@ -519,12 +519,14 @@
                         "}",
                         "",
                         "if(!cur_star1) {",
-                        "    SFT('SR1Epidemy logging: script start failed due to not finding planets');",
+                        "    SFT('SR1Epidemy logging: script start failed due to not finding planets, retrying at '+run_cnt+' time');",
+                        "    run_cnt = run_cnt + 1;",
                         "    AllShipOut();",
                         "}",
                         "else {",
                         "    StarId2 = Id(cur_star1);",
                         "    PlanId2 = Id(FindPlanet(cur_star1,CT(path+QuestNum+'.PlanetNearRace')));",
+                        "    run_cnt = 0;",
                         "}"
                     ]
                 },
@@ -1429,6 +1431,17 @@
                     "#": 99,
                     "Var.Type": "Dword",
                     "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "run_cnt",
+                    "Pos.x": 100,
+                    "Pos.y": -20,
+                    "Parent": -1,
+                    "#": 101,
+                    "Var.Type": "Int",
+                    "Init": "0",
                     "Global": false
                 }
             ]

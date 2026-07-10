@@ -203,7 +203,7 @@
                         "ShipStatus(Player(), 2, 100); //Военный статус",
                         "star = CreateQuestItem('Usl_Rvk',startRace);",
                         "AddItemToShip(Player(),star);",
-                        "UselessItemText(star,'</color>'+Format(CT('UselessItems.Usl_Rvk.CommonText'),'<ShipName'+'>',ShortName(Player()))+Format('<br>')+CT('UselessItems.Usl_Rvk.CommonText'));",
+                        "UselessItemText(star,'</color>'+Format(CT('UselessItems.Usl_Rvk.CommonText'),'<ShipName'+'>',ShortName(Player()))+Format('<br>')+CT('UselessItems.Usl_Rvk.Text'));",
                         "",
                         "ShipRaiseRank(Player(),2);",
                         "",
@@ -319,7 +319,7 @@
                         "InterfaceState('Ship', 'CustomRankImage_2_NR', 0);",
                         "InterfaceImage('Ship', 'CustomRankImageL_' + 4, 'GI,Bm.FormShip2.2SR1_img');",
                         "",
-                        "g_FixForUniExtraStarts();",
+                        "RunFunctionFromScript('Mod_ExpScienceRanks','FixForUniExtraStarts');",
                         "",
                         "//}",
                         "//SFT('UniExtraStarts logging:назначили назначению ранга ученого');"
