@@ -5581,7 +5581,7 @@
                         "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
                         "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
                         "        GetItemFromShip(cur_ship,tdwd);",
-                        "        ddItemToShip(Player(),tdwd);",
+                        "        AddItemToShip(Player(),tdwd);",
                         "    }",
                         "}",
                         "",
