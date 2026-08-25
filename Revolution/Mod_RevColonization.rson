@@ -1594,7 +1594,7 @@
                         "//Выбор системы для старта",
                         "if(!scrStatus) {",
                         "  system=SelectSystem();",
-                        "  if(system) {    //Запоминаем Id нужных планет, меняем статус скрипта, создаем новости",
+                        "  if(system > 0) {    //Запоминаем Id нужных планет, меняем статус скрипта, создаем новости",
                         "    systemId=Id(system);",
                         "//    NoComeKlingToStar(system,1);",
                         "    planetColonyId=Id(FindPlanet(system,'NotMaloc,NotPeleng,NotPeople,NotFei,NotGaal,NotKling,NotPirateClan',0,0));",
