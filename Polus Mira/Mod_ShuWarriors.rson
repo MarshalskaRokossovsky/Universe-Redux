@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -331,
-    "ViewPos.y": -209,
+    "ViewPos.x": -515,
+    "ViewPos.y": -59,
     "ScriptName": "Mod_ShuWarriors",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
@@ -5817,23 +5817,25 @@
                     "Code": 
                     [
                         "if(GetData() > 0) {",
-                        "    //Проверяем, не сел ли куда военный",
-                        "    if(!ShipInNormalSpace(CurShip)) {",
-                        "        if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) {",
-                        "            ShipMoney(CurShip,ShipMoney(CurShip)+GalaxyMoney(2)); //Зарплатка!",
-                        "            ShipRefuel(CurShip);",
-                        "            ShipRepairEq(CurShip); //На всякий случай в ручном режиме чинимся, заправляемся и обновляемся",
-                        "            ShipRefit(CurShip);",
-                        "            HullHP(CurShip,'To100');",
-                        "",
-                        "            OrderTakeOff(CurShip);",
-                        "            exit;",
+                        "    if(Name(GetData()) != 'NameError') {",
+                        "        //Проверяем, не сел ли куда военный",
+                        "        if(!ShipInNormalSpace(CurShip)) {",
+                        "            if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) {",
+                        "                ShipMoney(CurShip,ShipMoney(CurShip)+GalaxyMoney(2)); //Зарплатка!",
+                        "                ShipRefuel(CurShip);",
+                        "                ShipRepairEq(CurShip); //На всякий случай в ручном режиме чинимся, заправляемся и обновляемся",
+                        "                ShipRefit(CurShip);",
+                        "                HullHP(CurShip,'To100');",
+                        "    ",
+                        "                OrderTakeOff(CurShip);",
+                        "                exit;",
+                        "            }",
                         "        }",
+                        "    ",
+                        "    ",
+                        "        //Дипломат",
+                        "        def_ship = IdToShip(GetData());",
                         "    }",
-                        "",
-                        "",
-                        "    //Дипломат",
-                        "    def_ship = IdToShip(GetData());",
                         "}",
                         "else exit;"
                     ]
@@ -5874,8 +5876,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "if(ShipOrder(def_ship) == 3) OrderJump(CurShip,ShipOrderObj(def_ship));",
-                        "else if(ShipInNormalSpace(def_ship)) OrderJump(CurShip,ShipStar(def_ship));"
+                        "if(ShipInNormalSpace(def_ship)) OrderJump(CurShip,ShipStar(def_ship));"
                     ]
                 },
                 {
