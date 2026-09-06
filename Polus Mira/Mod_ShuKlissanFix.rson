@@ -1,8 +1,8 @@
 {
     "FileID": 573785173,
     "FileVersion": 8,
-    "ViewPos.x": -624,
-    "ViewPos.y": -390,
+    "ViewPos.x": -1145,
+    "ViewPos.y": -237,
     "ScriptName": "Mod_ShuKlissan",
     "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.scr",
     "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuKlissan\\DATA\\Script\\Mod_ShuKlissan.txt",
@@ -7554,8 +7554,8 @@
                         "//Пришло время сваливать обратно в ЧД",
                         "if(GetData(0))",
                         "{",
-                        "    if(!ShipInNormalSpace(CurShip)) ShipDestroy(CurShip, 1);",
-                        "    else OrderJumpHole(CurShip, IdToHole(GetData(0)));",
+                        "    if(ShipInNormalSpace(CurShip)) OrderJumpHole(CurShip, IdToHole(GetData(0)));",
+                        "    else if(ShipInHyperSpace(CurShip)) ShipDestroy(CurShip, 1);",
                         "}"
                     ]
                 },
