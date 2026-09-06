@@ -4,16 +4,16 @@
     "ViewPos.x": -515,
     "ViewPos.y": -59,
     "ScriptName": "Mod_ShuWarriors",
-    "ScriptFileOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
-    "ScriptTextOut": "C:\\Users\\DmitB\\Documents\\Фиксы\\Universe Redux Fixes\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
-    "LangDatIn": "",
-    "LangDatOut": "",
-    "MainDatIn": "",
-    "MainDatOut": "",
-    "CacheDatIn": "",
-    "CacheDatOut": "",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
+    "ScriptFileOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
+    "ScriptTextOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
+    "LangDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.txt",
+    "LangDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.dat",
+    "MainDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.txt",
+    "MainDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.dat",
+    "CacheDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.txt",
+    "CacheDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
     "Visual.Objects": 
     [
         {
@@ -5817,7 +5817,7 @@
                     "Code": 
                     [
                         "if(GetData() > 0) {",
-                        "    if(Name(GetData()) != 'NameError') {",
+                        "    if(Name(IdToShip(GetData())) != 'NameError') {",
                         "        //Проверяем, не сел ли куда военный",
                         "        if(!ShipInNormalSpace(CurShip)) {",
                         "            if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) {",
