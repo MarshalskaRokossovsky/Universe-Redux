@@ -5817,7 +5817,8 @@
                     "Code": 
                     [
                         "if(GetData() > 0) {",
-                        "    if(Name(IdToShip(GetData())) != 'NameError') {",
+                        "    def_ship = IdToShip(GetData()); //Присваиваем handle сразу, до проверки Name",
+                        "    if(Name(def_ship) != 'NameError') {",
                         "        //Проверяем, не сел ли куда военный",
                         "        if(!ShipInNormalSpace(CurShip)) {",
                         "            if(GetShipPlanet(CurShip) || GetShipRuins(CurShip)) {",
@@ -5834,8 +5835,8 @@
                         "    ",
                         "    ",
                         "        //Дипломат",
-                        "        def_ship = IdToShip(GetData());",
                         "    }",
+                        "    else def_ship = 0; //Опекаемый корабль мёртв: обнуляем висячий handle, иначе он проходит def_ship>0 и ShipOrder(def_ship) крашит скрипт на освобождённом TShip",
                         "}",
                         "else exit;"
                     ]
