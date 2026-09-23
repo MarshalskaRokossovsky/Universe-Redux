@@ -1153,7 +1153,9 @@
                         "    AddItemToShip(Player(),CreateQuestItem(flag));",
                         "}",
                         "HullSeries(ShipItems(Player(),0),FindSeriesByName(CT('HullType.UniStart_Hulls_Veteran.Name')));",
-                        "AddItemToShip(Player(),CreateQuestItem('Usl_Rvk',startRace));"
+                        "star = CreateQuestItem('Usl_Rvk',startRace);",
+                        "AddItemToShip(Player(),star);",
+                        "UselessItemText(star,'</color>'+Format(CT('UselessItems.Usl_Rvk.CommonText'),'<ShipName'+'>',ShortName(Player()))+Format('<br>')+CT('UselessItems.Usl_Rvk.Text'));"
                     ]
                 },
                 {

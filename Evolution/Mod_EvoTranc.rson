@@ -5724,9 +5724,9 @@
                         "for(i=1;i<ArrayDim(hold_trancs);i=i+1)",
                         "{",
                         "    if(Name(hold_trancs[i])==Name(cur_Tranc)) continue;",
-                        "    tstr1 = tstr1 + '<color=0,50,200>'+Name(hold_trancs[i])+'</color> '+\"(в ангаре)\" + Format('<br>');",
-                        "    tstr1 = tstr1 + \"Структура корпуса:\"+' '+ItemSize(ShipEqInSlot(hold_trancs[i],t_Hull))+' '+\"ед.\" + Format('<br>');",
-                        "    tstr1 = tstr1 + \"Технический уровень:\"+' '+ItemLevel(ShipEqInSlot(hhold_trancs[i],t_Hull))+ Format('<br>') + split_str + Format('<br>');",
+                        "    tstr1 = tstr1 + '<color=0,50,200>'+Name(hold_trancs[i])+'</color> '+\"(в трюме)\" + Format('<br>');",
+                        "    tstr1 = tstr1 + \"Структура корпуса:\"+' '+ItemSize(ShipEqInSlot(ArtTranclucatorToShip(hold_trancs[i]),t_Hull))+' '+\"ед.\" + Format('<br>');",
+                        "    tstr1 = tstr1 + \"Технический уровень:\"+' '+ItemLevel(ShipEqInSlot(ArtTranclucatorToShip(hold_trancs[i]),t_Hull))+ Format('<br>') + split_str + Format('<br>');",
                         "}",
                         "InjectAnswer('Canceled',\"Я передумал, продолжаем улучшать <color=0,50,200><Name(cur_Tranc)></color>\",20);"
                     ]

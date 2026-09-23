@@ -3038,8 +3038,8 @@
                         "if(CurrentMods('Reflection\\RefNisper')) {",
                         "    if(GetValueFromScript('Mod_RefNisper','NewsFlag')) {",
                         "            if(!ShipOnSidePirateClan(Player())) {",
-                        "                if(GetValueFromScript('Mod_RefNisper','SBDialog')) AddDialogInject('dSB', '', \"Я хочу сдать вам ошметки доминаторов для разработок новой серии\", 0);",
-                        "                else AddDialogInject('dSBStart', '', \"Ходят слухи про некий Проект, который перевернёт все представления о ведении боевых действий с доминаторами...\", 100);",
+                        "                if(GetValueFromScript('Mod_RefNisper','SBDialog')) InjectAnswer('Mod_RefNisper:dSB', \"Я хочу сдать вам ошметки доминаторов для разработок новой серии\", 19);",
+                        "                else InjectAnswer('Mod_RefNisper:dSBStart', \"Ходят слухи про некий Проект, который перевернёт все представления о ведении боевых действий с доминаторами...\", 18);",
                         "            }",
                         "    }",
                         "}"

@@ -2935,7 +2935,7 @@
                         "    ShipFreeFlight(CurShip, 1); //Автонаведение орудий",
                         "",
                         "    object = ShipGetBad(CurShip);",
-                        "    if(object)",
+                        "    if(object && Name(object) != 'NameError')",
                         "    {",
                         "        //Всяких рандомных уёбков-пиратов, нападающих на отдельных военных, атакующие будут валить всей отарой",
                         "        //Через 10 дней этот корабль автоматически удалится из группы",
@@ -6876,7 +6876,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "ShipGetBad(def_ship) > 0"
+                        "ShipGetBad(def_ship) > 0 && Name(ShipGetBad(def_ship)) != 'NameError'"
                     ]
                 },
                 {
