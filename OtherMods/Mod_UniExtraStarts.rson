@@ -1144,6 +1144,7 @@
                         "    flag = 'gaalflag';",
                         "}",
                         "TransferToRuin('WB');",
+                        "GiveReward(Player(),ShipPilotRace(Player()),0);",
                         "",
                         "ShipStatus(Player(), 0, 10); //Торговый статус",
                         "ShipStatus(Player(), 1, 0); //Пиратский статус",

@@ -4,21 +4,19 @@
     "ViewPos.x": -515,
     "ViewPos.y": -59,
     "ScriptName": "Mod_ShuWarriors",
-    "ScriptFileOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
-    "ScriptTextOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
-    "LangDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.txt",
-    "LangDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.dat",
-    "MainDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.txt",
-    "MainDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.dat",
-    "CacheDatIn": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.txt",
-    "CacheDatOut": "D:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.dat",
+    "ScriptFileOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.scr",
+    "ScriptTextOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\DATA\\Script\\Mod_ShuWarriors.txt",
+    "LangDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.txt",
+    "LangDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Rus\\Lang.dat",
+    "MainDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.txt",
+    "MainDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\Main.dat",
+    "CacheDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.txt",
+    "CacheDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuWarriors\\CFG\\CacheData.dat",
     "ExportLangTxt": true,
     "ExportLangDat": true,
-    "Visual.Objects": 
-    [
+    "Visual.Objects": [
         {
-            "DialogAnswers": 
-            [
+            "DialogAnswers": [
                 {
                     "Type": "TDialogAnswer",
                     "Name": "",
@@ -420,8 +418,7 @@
                     "AMsg.Num": "39"
                 }
             ],
-            "DialogMessages": 
-            [
+            "DialogMessages": [
                 {
                     "Type": "TDialogMsg",
                     "Name": "",
@@ -663,8 +660,7 @@
                     "DMsg.Num": "23"
                 }
             ],
-            "Dialogs": 
-            [
+            "Dialogs": [
                 {
                     "Type": "TDialog",
                     "Name": "MilitaryOperationWBDialog",
@@ -754,8 +750,7 @@
                     "#": 279
                 }
             ],
-            "Groups": 
-            [
+            "Groups": [
                 {
                     "Type": "TGroup",
                     "Name": "PlayerState",
@@ -1018,8 +1013,7 @@
                     "Ruins": ""
                 }
             ],
-            "Operations": 
-            [
+            "Operations": [
                 {
                     "Type": "Top",
                     "Name": "",
@@ -1028,8 +1022,7 @@
                     "Parent": 5,
                     "#": 0,
                     "Code.Type": "Global",
-                    "Code": 
-                    [
+                    "Code": [
                         "//mass_attack_stage == 0 - стандартное состояние",
                         "//mass_attack_stage == 1 - операция назначена, системы выбраны, ВБ подобрана",
                         "//mass_attack_stage == 2 - операция начата, распределяем войска",
@@ -1046,8 +1039,7 @@
                     "Parent": 0,
                     "#": 8,
                     "Code.Type": "Init",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Впервые заводим таймер до спавна группы элитных военных",
                         "EliteWarriorsSpawnTimer = 0;//CurTurn() + Rnd(9, 121);",
                         "",
@@ -1412,7 +1404,7 @@
                         "        int dist_summ = 0;",
                         "        for(int j = GalaxyStars() - 1; j >= 1; j = j - 1)",
                         "        {",
-                        "            dword coal_star = GalaxyStar(j);",
+                        "            dword coal_star = StarNearbyStars(star, j);",
                         "            if(StarOwner(coal_star)) continue; //Запоминаем дистанции только до коалиционных систем",
                         "            if(StarCustomFaction(coal_star) != '') continue;",
                         "            dist_summ = dist_summ + StarNearbyStarsDist(star, j);",
@@ -1434,8 +1426,14 @@
                         "    //Выбираем систему автоматически, по ванильному принципу",
                         "    else",
                         "    {",
+                        "        //Если атаковать нечего - stars_arr[1] не существует",
+                        "        if(ArrayDim(stars_arr) < 2)",
+                        "        {",
+                        "            result = 0;",
+                        "            exit;",
+                        "        }",
                         "        if(ruin) for(i = ArrayDim(dist_arr) - 1; i >= 1; i = i - 1) dist_arr[i] = round(0.1 * RndObject(10, 20, ruin) * dist_arr[i]);",
-                        "        else if(ruin) for(i = ArrayDim(dist_arr) - 1; i >= 1; i = i - 1) dist_arr[i] = round(0.1 * Rnd(10, 20) * dist_arr[i]);",
+                        "        else for(i = ArrayDim(dist_arr) - 1; i >= 1; i = i - 1) dist_arr[i] = round(0.1 * Rnd(10, 20) * dist_arr[i]);",
                         "        ArraySort(dist_arr, stars_arr);",
                         "        result = stars_arr[1];",
                         "        exit;",
@@ -1499,7 +1497,7 @@
                         "    //Первым кораблём всегда должен быть игрок!",
                         "    //Чтобы игрок мог продолжать пользоваться своими транками, но при этом случайно не получил чужих",
                         "    str trancs_str = '';",
-                        "    for(int i = ShipArts(player); i >= 0; i = i - 1)",
+                        "    for(int i = ShipArts(player) - 1; i >= 0; i = i - 1)",
                         "    {",
                         "        dword art = ShipArts(player, i);",
                         "        if(ItemType(art) != t_ArtefactTranclucator) continue;",
@@ -1516,18 +1514,21 @@
                         "    if(HullType(hull) == 10) hull_no_drop_mark = NoDropItem(hull, 1); //Игрок садится на флагман",
                         "    else NoDropItem(ShipEqInSlot(flagship, t_Hull), hull_no_drop_mark); //Игрок покидает флагман",
                         "",
-                        "    for(i = ShipArts(player); i >= 0; i = i - 1)",
+                        "    for(i = ShipArts(player) - 1; i >= 0; i = i - 1)",
                         "    {",
                         "        art = ShipArts(player, i);",
                         "        if(ItemType(art) != t_ArtefactTranclucator) continue;",
                         "        GetArtFromShip(player, art);",
                         "        AddItemToShip(flagship, art);",
                         "    }",
-                        "    for(i = ParsCountFromString(trancs_str, ','); i >= 0; i = i - 1)",
+                        "    for(i = ParsCountFromString(trancs_str, ',') - 1; i >= 0; i = i - 1)",
                         "    {",
                         "        art = GetParFromString(trancs_str, ',', i, 0);",
-                        "        GetArtFromShip(flagship, art);",
-                        "        AddItemToShip(player, art);",
+                        "        if(art)",
+                        "        {",
+                        "            GetArtFromShip(flagship, art);",
+                        "            AddItemToShip(player, art);",
+                        "        }",
                         "    }",
                         "",
                         "    //По умолчанию вместе с пушками также переносятся и цели, записанные в них, а это нам здесь вообще не к чему",
@@ -1707,7 +1708,7 @@
                         "            }",
                         "        }",
                         "    }",
-                        "    else if(t_OnDealingFatalDamage) {",
+                        "    else if(ScriptItemActionType(t_OnDealingFatalDamage)) {",
                         "        if(!ShipOnSidePirateClan(Player())) {",
                         "            tstr1 = ShipType(ScriptItemActObject1());",
                         "",
@@ -1802,6 +1803,7 @@
                         "",
                         "function SpawnCaptain(dword star) {",
                         "    dword plan = FindPlanet(star,'NotNone');",
+                        "    if(!plan) exit; //BuyWarrior(0) - краш",
                         "    dword ship;",
                         "",
                         "    ship = BuyWarrior(plan,3000);",
@@ -1915,7 +1917,126 @@
                         "}",
                         "",
                         "//Чтобы не нападали массово сразу, Коалиции нужно в себя ещё прийти",
-                        "mass_attack_cd = 300 + 730 + GalaxyDiffLevels() * 2;"
+                        "mass_attack_cd = 300 + 730 + GalaxyDiffLevels() * 2;",
+                        "",
+                        "//=== Сборка своего военного (CreateWarrior) ===",
+                        "//cur_ship - общая рабочая переменная скрипта и перезаписывается другим кодом (DialogBegin, Turn-логика),",
+                        "//поэтому собираемый военный всегда восстанавливается по WarriorId",
+                        "function ConstrGetWarrior()",
+                        "{",
+                        "    dword w = 0;",
+                        "    result = 0;",
+                        "    if(WarriorId) w = IdToShip(WarriorId);",
+                        "    if(w)",
+                        "    {",
+                        "        if(Name(w) != 'NameError')",
+                        "        {",
+                        "            if(!ShipDestroy(w, -1)) result = w;",
+                        "        }",
+                        "    }",
+                        "}",
+                        "//Игрок находится там же, где собирается военный: на той же планете, либо на ВБ в той же системе (учитывая мостик)",
+                        "function ConstrPlayerAtSite(dword w)",
+                        "{",
+                        "    dword r = GetShipRuins(Player());",
+                        "    dword p = GetShipPlanet(Player());",
+                        "    result = 0;",
+                        "    if(r)",
+                        "    {",
+                        "        if(ShipType(r) == 'PlayerBridge')",
+                        "        {",
+                        "            p = GetShipPlanet(r);",
+                        "            r = GetShipRuins(r);",
+                        "        }",
+                        "    }",
+                        "    if(r)",
+                        "    {",
+                        "        if(ShipType(r) == 'WB')",
+                        "        {",
+                        "            if(ShipStar(r) == ShipStar(w)) result = 1;",
+                        "        }",
+                        "    }",
+                        "    else if(p)",
+                        "    {",
+                        "        if(GetShipPlanet(w) == p) result = 1;",
+                        "    }",
+                        "}",
+                        "//Досоздание слотов (с ограничением числа попыток - серия/акрин корпуса может не дать слот, и while зациклился бы навсегда)",
+                        "function ConstrOpenSlots(dword w)",
+                        "{",
+                        "    int k;",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 1) >= 5) break; ShipSpecialBonuses(w, bonSlotWeapon, ShipSpecialBonuses(w, bonSlotWeapon) + 1); }",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 3) >= 1) break; ShipSpecialBonuses(w, bonSlotRadar, ShipSpecialBonuses(w, bonSlotRadar) + 1); }",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 4) >= 1) break; ShipSpecialBonuses(w, bonSlotScaner, ShipSpecialBonuses(w, bonSlotScaner) + 1); }",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 5) >= 1) break; ShipSpecialBonuses(w, bonSlotDroid, ShipSpecialBonuses(w, bonSlotDroid) + 1); }",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 6) >= 1) break; ShipSpecialBonuses(w, bonSlotHook, ShipSpecialBonuses(w, bonSlotHook) + 1); }",
+                        "    for(k = 0; k < 10; k = k + 1) { if(ShipSlots(w, 7) >= 1) break; ShipSpecialBonuses(w, bonSlotDef, ShipSpecialBonuses(w, bonSlotDef) + 1); }",
+                        "}",
+                        "//Очищаем военного: оставляем только корпус и штатные двигатель с баком (их Id запоминаем, чтобы при отмене не отдать игроку)",
+                        "function ConstrPrepareWarrior(dword w)",
+                        "{",
+                        "    int k;",
+                        "    dword it;",
+                        "    ConstrEngineId = 0;",
+                        "    ConstrTankId = 0;",
+                        "    for(k = ShipItems(w) - 1; k >= 1; k = k - 1)",
+                        "    {",
+                        "        it = ShipItems(w, k);",
+                        "        if(!it) continue;",
+                        "        if(!ConstrEngineId && it == ShipEqInSlot(w, t_Engine)) { ConstrEngineId = Id(it); continue; }",
+                        "        if(!ConstrTankId && it == ShipEqInSlot(w, t_FuelTanks)) { ConstrTankId = Id(it); continue; }",
+                        "        GetItemFromShip(w, it);",
+                        "        FreeItem(it);",
+                        "    }",
+                        "    for(k = ShipArts(w) - 1; k >= 0; k = k - 1)",
+                        "    {",
+                        "        it = ShipArts(w, k);",
+                        "        if(!it) continue;",
+                        "        GetArtFromShip(w, it);",
+                        "        FreeItem(it);",
+                        "    }",
+                        "}",
+                        "//Возвращаем игроку ВСЁ, что он поставил/положил на военного (оборудование, захват, груз, артефакты), кроме корпуса и штатных двигателя с баком",
+                        "function ConstrReturnItems(dword w)",
+                        "{",
+                        "    int k;",
+                        "    dword it;",
+                        "    int is_own;",
+                        "    for(k = ShipItems(w) - 1; k >= 1; k = k - 1)",
+                        "    {",
+                        "        it = ShipItems(w, k);",
+                        "        if(!it) continue;",
+                        "        is_own = 0;",
+                        "        if(ConstrEngineId) { if(Id(it) == ConstrEngineId) is_own = 1; }",
+                        "        if(ConstrTankId) { if(Id(it) == ConstrTankId) is_own = 1; }",
+                        "        GetItemFromShip(w, it);",
+                        "        if(is_own) FreeItem(it);",
+                        "        else AddItemToShip(Player(), it);",
+                        "    }",
+                        "    for(k = ShipArts(w) - 1; k >= 0; k = k - 1)",
+                        "    {",
+                        "        it = ShipArts(w, k);",
+                        "        if(!it) continue;",
+                        "        GetArtFromShip(w, it);",
+                        "        AddItemToShip(Player(), it);",
+                        "    }",
+                        "}",
+                        "//Прерывание сборки: вещи игроку, недособранного военного - в утиль, снимаем запрет на выход из правительства",
+                        "function ConstrCancel()",
+                        "{",
+                        "    dword w = ConstrGetWarrior();",
+                        "    if(w)",
+                        "    {",
+                        "        ConstrReturnItems(w);",
+                        "        OrderLock(w, 0);",
+                        "        ShipDestroy(w, 1);",
+                        "    }",
+                        "    WarriorId = 0;",
+                        "    ConstrEngineId = 0;",
+                        "    ConstrTankId = 0;",
+                        "    DuringConstruction = 0;",
+                        "    GotoGov(0);",
+                        "}"
                     ]
                 },
                 {
@@ -1926,14 +2047,20 @@
                     "Parent": 112,
                     "#": 9,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Если в настоящий момент скриптом запущена хотя бы одна военная операция",
                         "tint1 = ArrayDim(GlobalWBOperationsArray) - 1;",
                         "if(tint1)",
                         "{",
                         "    for(i = tint1; i >= 1; i = i - 1)",
                         "    {",
+                        "        //Вычищаем Id погибших/исчезнувших участников (t_OnDeath срабатывает не во всех случаях, напр. ShipDestroy/захват),",
+                        "        //иначе ниже GetData/StateIs/SetData получают 0 вместо корабля",
+                        "        for(k = ArrayDim(GlobalWBOperationsArray[i, 'AlliesForcesId']) - 1; k >= 1; k = k - 1)",
+                        "        {",
+                        "            if(!IdToShip(GlobalWBOperationsArray[i, 'AlliesForcesId', k])) ArrayDelete(GlobalWBOperationsArray[i, 'AlliesForcesId'], k);",
+                        "        }",
+                        "",
                         "        //Если атакуемая система была как-либо захвачена Коалицией, то операция в любом случае завершена",
                         "        cur_star = GalaxyStar(GlobalWBOperationsArray[i, 'StarToAttackId'] - 1);",
                         "",
@@ -2162,7 +2289,13 @@
                         "                }",
                         "",
                         "                tint1 = tint1 - 1;",
-                        "                EtherDelete('ShuWarriors_Operation' + IdToShip(GlobalWBOperationsArray[i, 'MilitaryBaseId']));",
+                        "                EtherDelete('ShuWarriors_Operation' + GlobalWBOperationsArray[i, 'MilitaryBaseId']);",
+                        "                //ВБ, оставшаяся в скрипте без операции, блокирует заказ новых операций, а в WBOnPrepare роняет диалог (operation_num = 0)",
+                        "                cur_ruin = IdToShip(GlobalWBOperationsArray[i, 'MilitaryBaseId']);",
+                        "                if(cur_ruin)",
+                        "                {",
+                        "                    if(ShipInCurScript(cur_ruin)) ShipOut(cur_ruin);",
+                        "                }",
                         "                ArrayDelete(GlobalWBOperationsArray, i);",
                         "            }",
                         "        }",
@@ -2195,7 +2328,7 @@
                         "            check = check + PlanetWarriors(cur_planet);",
                         "        }",
                         "",
-                        "        if(check < 7) ArrayAdd(tarr1, cur_star);",
+                        "        if(check < 7 && FindPlanet(cur_star, 'NotNone')) ArrayAdd(tarr1, cur_star); //Без обитаемой планеты SpawnEliteWarrior получит 0",
                         "        else continue;",
                         "    }",
                         "",
@@ -2206,7 +2339,7 @@
                         "        cur_ruin = StarRuins(cur_star, 'WB');",
                         "",
                         "        //Спавним на выбранной планете от 5 до 8 элитных военных",
-                        "        for(i = RndObject(5, 8, cur_planet); i >= 1; i = i - 1)",
+                        "        for(i = RndObject(5, 8, cur_ruin); i >= 1; i = i - 1)",
                         "        {",
                         "            cur_ship = SpawnEliteWarrior(FindPlanet(cur_star, 'NotNone'), 500);",
                         "            //После чего отправляем их на военную базу, чтобы сымитировать его \"рождение\" корабля именно на ней",
@@ -2249,6 +2382,7 @@
                         "                cur_ship = StarShips(GalaxyStar(target_star-1),j);",
                         "                if(~ShipFindCustomShipInfoByType(cur_ship,'ShuWarriors_SystemDetecting')) {",
                         "                    if(GalaxyEventData(i,3) > 4) {",
+                        "                        dword gift_star = GalaxyStar(target_star-1); //Запоминаем до обнуления target_star",
                         "                        target_star = 0;",
                         "                        ClearGiftInfos();",
                         "                        if(gift_type == 1) {",
@@ -2258,14 +2392,18 @@
                         "                        }",
                         "                        else if(gift_type == 2) {",
                         "                            Sound('Sound.NewMsg');",
-                        "                            if(StarSeries(GalaxyStar(target_star-1)) == 0) tstr1 = \"Блазер\";",
-                        "                            else if(StarSeries(GalaxyStar(target_star-1)) == 1) tstr1 = \"Келлер\";",
+                        "                            k = StarSeries(gift_star);",
+                        "                            if(k < 0 || k > 2) k = 2;",
+                        "                            if(k == 0) tstr1 = \"Блазер\";",
+                        "                            else if(k == 1) tstr1 = \"Келлер\";",
                         "                            else tstr1 = \"Террон\";",
+                        "                            //Раньше камуфляж только объявлялся в новости, но не выдавался",
+                        "                            PlayerChameleonCharges(k, PlayerChameleonCharges(k) + gift_count);",
                         "                            NewsAdd(\"Эге, рейнджер! Ты неплохо себя показал в этом бою. И вправду - рейнджеры чего-то да стоят! Наше командование уже оформило тебе\"+' '+gift_count+' '+\"копий камуфляжа серии\"+' '+tstr1+'. '+\"Будем рады увидеть тебя бок о бок с нами в дальнейших сражениях\"+Format('<br>')+Format('<br>')+\"Войска Межзвёздной Коалиции\");",
                         "                        }",
                         "                        else if(gift_type == 3) {",
                         "                            Sound('Sound.NewMsg');",
-                        "                            GiveReward(Player(),ShipPilotRace(GalaxyStar(target_star-1)),0);",
+                        "                            k = ShipPilotRace(cur_ship); if(k < 0 || k > 4) k = People; GiveReward(Player(),k,0); //Раньше в ShipPilotRace передавалась звезда",
                         "                            NewsAdd(\"Эге, рейнджер! Ты неплохо себя показал в этом бою. И вправду - рейнджеры чего-то да стоят! Наше командование уже оформило на твоё имя новенькую награду. Будем рады увидеть тебя бок о бок с нами в дальнейших сражениях\"+Format('<br>')+Format('<br>')+\"Войска Межзвёздной Коалиции\");",
                         "                        }",
                         "                        else {",
@@ -2394,7 +2532,8 @@
                         "                    if(ItemLevel(ShipEqInSlot(cur_ruin,t_Engine)) < GalaxyTechLevel()) ItemLevel(ShipEqInSlot(cur_ruin,t_Engine),GalaxyTechLevel());",
                         "",
                         "                    //Чтобы сопровождение не оказалось бесполезной обузой",
-                        "                    while(ShipSpeed(cur_ruin) + 75 < ShipSpeed(cur_ship)) {",
+                        "                    for(j = 0; j < 50; j = j + 1) { //Ограничение, чтобы не зависнуть, если скорость упёрлась в потолок",
+                        "                        if(ShipSpeed(cur_ruin) + 75 >= ShipSpeed(cur_ship)) break;",
                         "                        ShipSpecialBonuses(cur_ruin,bonSpeed,ShipSpecialBonuses(cur_ruin,bonSpeed)+100);",
                         "                        ShipCalcParam(cur_ruin);",
                         "                    }",
@@ -2676,8 +2815,16 @@
                     "Parent": 8,
                     "#": 10,
                     "Code.Type": "DialogBegin",
-                    "Code": 
-                    [
+                    "Code": [
+                        "//Сборка своего военного: после ухода с правительства (инвентарь, форма корабля военного и т.п.) диалог стартует заново -",
+                        "//возвращаем игрока к сборке (на ВБ и на планете, откуда её запускает AskForWarriorsOnPlanets), либо прерываем её, если игрок ушёл/военный пропал",
+                        "if(DuringConstruction)",
+                        "{",
+                        "    tdwd = ConstrGetWarrior();",
+                        "    if(!tdwd) ConstrCancel();",
+                        "    else if(!ConstrPlayerAtSite(tdwd)) ConstrCancel();",
+                        "    else if(GetShipPlanet(Player())) AddDialogOverride('ConstructionOverride',99);",
+                        "}",
                         "cur_ruin = GetShipRuins(Player());",
                         "if(cur_ruin)",
                         "{",
@@ -2712,7 +2859,9 @@
                         "            on_prepare = 0;",
                         "            if(ShipInCurScript(cur_ruin))",
                         "            {",
-                        "                if(StateIs(cur_ruin, 'WBOnPrepare')) on_prepare = 1;",
+                        "                //Если операции этой ВБ уже нет (все участники погибли) - ВБ застряла в скрипте, отпускаем её",
+                        "                if(!FindWBOperation(Id(cur_ruin))) ShipOut(cur_ruin);",
+                        "                else if(StateIs(cur_ruin, 'WBOnPrepare')) on_prepare = 1;",
                         "            }",
                         "",
                         "            if((!ShipInGameEvent(cur_ruin) && ShipInNormalSpace(cur_ruin)) || on_prepare)",
@@ -2801,7 +2950,7 @@
                         "                dialog_path = 'Script.Mod_ShuWarriors.MilitaryOperationWBDialog.OnLevel' + operation_lvl;",
                         "",
                         "                //Диалог на оснащение своего военного",
-                        "                if(!ShipInGameEvent(cur_ruin) && ShipInNormalSpace(cur_ruin) && player_rank > 2) {",
+                        "                if(!ShipInGameEvent(cur_ruin) && ShipInNormalSpace(cur_ruin) && player_rank > 2 && !DuringConstruction && NearCivilPlanet(cur_ruin)) {",
                         "                    AddDialogInject('CreateWarrior',\"Если у тебя завалялось много лишнего оборудования, то можешь помочь нам с оснащением пилотов.\",\"Хочу оснастить пилота\",10);",
                         "                }",
                         "",
@@ -2909,8 +3058,7 @@
                     "Parent": 29,
                     "#": 30,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Data0 == номер хода до начала движения военного к месту сбора (если >0) или маркер (-1), что данный военный является флагманом операции (ожидается, что это может быть только линкор или дредноут)",
                         "//Data1 == Id системы сбора, в которую полетит данный военный перед тем, как получить приказ прыгать в атакуемую систему (если <0, значит, военный уже летит в систему атаки, если 0, значит, военный уже долетел, либо сбор назначен на ВБ)",
                         "//Data2 == принимает 3 значения: 0 - лететь в скриптовое место GatheringPlace, <0 - Id атакуемой системы, который обнулится, как только первый военный из группы долетит до системы сбора и выставит координаты точки сбора, >0 - Id ВБ, на которой необходимо собраться и ждать дальнейших приказов",
@@ -2987,8 +3135,11 @@
                         "                for(i = count_wars; i >= 1; i = i - 1)",
                         "                {",
                         "                    dword warrior = IdToShip(GlobalWBOperationsArray[oper_num, 'AlliesForcesId', i]);",
-                        "                    SetData(0, 2, warrior); //Маркер движения в точку сбора в целевой системе",
-                        "                    ChangeState('WarriorsOnPrepare'); //На всякий случай сразу же дёргаем логику, если кто-то из военных вышел из гипера одновременно с этим кораблём в той же системе",
+                        "                    if(warrior)",
+                        "                    {",
+                        "                        SetData(0, 2, warrior); //Маркер движения в точку сбора в целевой системе",
+                        "                        if(warrior != CurShip) ChangeState('WarriorsOnPrepare', warrior); //На всякий случай сразу же дёргаем логику, если кто-то из военных вышел из гипера одновременно с этим кораблём в той же системе",
+                        "                    }",
                         "                }",
                         "",
                         "                //Если военному требуется дозаправка, то сперва отправляем его к ближайшей заселённой планете",
@@ -3087,8 +3238,7 @@
                     "Parent": 31,
                     "#": 32,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Data0 == маркер (от -1 до -4), что данный военный является флагманом операции (ожидается, что это может быть только линкор или дредноут)",
                         "//Data1 == ---",
                         "//Data2 == ---",
@@ -3231,8 +3381,7 @@
                     "Parent": 34,
                     "#": 35,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(operation_lvl >= 2)",
                         "{",
                         "    //Если военные участники атаки ещё живы",
@@ -3350,8 +3499,7 @@
                     "Parent": 45,
                     "#": 48,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Если уровень вовлечённости игрока слишком мал, то операция составляется за него автоматически",
                         "if(operation_lvl <= 1)",
                         "{",
@@ -3554,8 +3702,7 @@
                     "Parent": 44,
                     "#": 50,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr1 = '</color>' + Format(CT(dialog_path + '.WBConfirmationNo'),",
                         "                              '<PlayerRank'+'>', player_str_rank,",
                         "                              '');",
@@ -3570,8 +3717,7 @@
                     "Parent": 58,
                     "#": 59,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr1 = '</color>' + Format(CT(dialog_path + '.WBCancelOperation'),",
                         "                              '<PlayerRank'+'>', player_str_rank,",
                         "                              '');",
@@ -3586,8 +3732,7 @@
                     "Parent": 56,
                     "#": 61,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Запускаем подготовку к новой операции по запросу игрока",
                         "ShipMoney(Player(), ShipMoney(Player()) - new_operation_arr['OperationCost']);",
                         "Sound('Sound.Buy');",
@@ -3737,8 +3882,7 @@
                     "Parent": 55,
                     "#": 63,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Здесь собирается текст для экрана планирования",
                         "if(!new_operation_arr['StarToAttackId'])",
                         "{",
@@ -3802,17 +3946,17 @@
                         "            if(i == 1 && count(tstr6) > 20)",
                         "            {",
                         "                tstr6 = CT('Script.Mod_ShuWarriors.MilitaryBaseShort') + ' ' + ShortName(cur_ruin);",
-                        "                CutStrLenght(tstr6, 20);",
+                        "                tstr6 = CutStrLenght(tstr6, 20);",
                         "            }",
                         "            else if(i == 2 && count(tstr6) > 19)",
                         "            {",
                         "                tstr6 = CT('Script.Mod_ShuWarriors.MilitaryBaseShort') + ' ' + ShortName(cur_ruin);",
-                        "                CutStrLenght(tstr6, 19);",
+                        "                tstr6 = CutStrLenght(tstr6, 19);",
                         "            }",
                         "            else if(i == 3 && count(tstr6) > 18)",
                         "            {",
                         "                tstr6 = CT('Script.Mod_ShuWarriors.MilitaryBaseShort') + ' ' + ShortName(cur_ruin);",
-                        "                CutStrLenght(tstr6, 18);",
+                        "                tstr6 = CutStrLenght(tstr6, 18);",
                         "            }",
                         "            tstr6 = '<color=0,50,200>' + tstr6 + '</color>';",
                         "        }",
@@ -3855,8 +3999,7 @@
                     "Parent": 64,
                     "#": 65,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(check < 0) exit; //Для отсечения лишних ответов при выборе системы/кораблей",
                         "",
                         "//Здесь собираются ответы для экрана планирования",
@@ -3926,8 +4069,7 @@
                     "Parent": 114,
                     "#": 71,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "FindStarToAttack(cur_ruin, stars_to_attack_arr);",
                         "ships_available = FindAllMilitaryShipsInSector(cur_sector, militaries_arr, 1);",
                         "",
@@ -3968,35 +4110,31 @@
                         "                              '<Sector'+'>', '<color=0,50,200>' + Name(StarToCon(ShipStar(cur_ruin))) + '</color>',",
                         "                              '<MilitaryBase'+'>', '<color=0,50,200>' + ShipName(cur_ruin) + '</color>',",
                         "                              '');",
+                        "    tstr2 = '</color>' + CT(dialog_path + '.PlayerConfirmationYes');",
+                        "    tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');",
                         "}",
-                        "//Если вдруг атаковать нечего",
+                        "//Цели есть, но в секторе не нашлось ни одного простого военного",
                         "else if(ArrayDim(stars_to_attack_arr) > 1)",
                         "{",
-                        "    tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperationNoTargetStars'),",
+                        "    tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperationNoWarriors'),",
                         "                                  '<PlayerRank'+'>', player_str_rank,",
                         "                                  '<Sector'+'>', Name(cur_sector),",
                         "                                  '');",
-                        "    tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNoTargetStars');",
-                        "    operation_lvl = -1;",
+                        "    tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNoWarriors');",
+                        "    tstr3 = tstr2;",
+                        "    operation_lvl = -1; //Ответ «Да» (#43) скрывается - иначе #48 полез бы в пустые массивы",
                         "}",
-                        "//Если вдруг атаковать некем (в секторе не нашлось ни одного простого военного)",
-                        "else //if(ArrayDim(militaries_arr['Warriors']) > 1)",
+                        "//Атаковать нечего",
+                        "else",
                         "{",
                         "    tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperationNoTargetStars'),",
                         "                                  '<PlayerRank'+'>', player_str_rank,",
                         "                                  '<Sector'+'>', Name(cur_sector),",
                         "                                  '');",
                         "    tstr2 = '</color>' + CT(dialog_path + '.PlayerRequestOperationNoTargetStars');",
+                        "    tstr3 = tstr2;",
                         "    operation_lvl = -1;",
-                        "}",
-                        "",
-                        "tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperation'),",
-                        "                              '<PlayerRank'+'>', player_str_rank,",
-                        "                              '<Sector'+'>', '<color=0,50,200>' + Name(StarToCon(ShipStar(cur_ruin))) + '</color>',",
-                        "                              '<MilitaryBase'+'>', '<color=0,50,200>' + ShipName(cur_ruin) + '</color>',",
-                        "                              '');",
-                        "tstr2 = '</color>' + CT(dialog_path + '.PlayerConfirmationYes');",
-                        "tstr3 = '</color>' + CT(dialog_path + '.PlayerConfirmationNo');"
+                        "}"
                     ]
                 },
                 {
@@ -4007,8 +4145,7 @@
                     "Parent": 66,
                     "#": 79,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Выбор системы для атаки",
                         "if(GAnswerData == 1)",
                         "{",
@@ -4333,8 +4470,7 @@
                     "Parent": 84,
                     "#": 85,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Выбор или перевыбор системы обнуляет всю ранее заданную информацию",
                         "if(check == -1)",
                         "{",
@@ -4612,8 +4748,7 @@
                     "Parent": 110,
                     "#": 111,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//В эту группу попадают всякие случайные мудаки (пираты), рандомно нападающие на атакующих военных",
                         "//Data0 - таймер до автоматического вывода данного корабля из группы",
                         "if(GetData(0))",
@@ -4630,8 +4765,7 @@
                     "Parent": 90,
                     "#": 115,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr1 = '</color>' + Format(CT(dialog_path + '.WBRequestOperationNo'),",
                         "                              '<PlayerRank'+'>', player_str_rank,",
                         "                              '');",
@@ -4648,8 +4782,7 @@
                     "Parent": 125,
                     "#": 117,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "cur_ship = CurShip;",
                         "SetData(-2, 0, cur_ship);",
                         "",
@@ -4680,8 +4813,7 @@
                     "Parent": 122,
                     "#": 123,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr1 = '</color>' + Format(CT('Script.Mod_ShuWarriors.OperationFlagshipDialog.FlagshipAskDirectControlYes'),",
                         "                               '<PlayerRank'+'>', player_str_rank,",
                         "                               '<Flagship'+'>', '<color=0,50,200>' + Name(cur_ship) + '</color>',",
@@ -4700,8 +4832,7 @@
                     "Parent": 124,
                     "#": 126,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "cur_ship = GetTalkShip();",
                         "SetData(-2, 0, cur_ship); //На всякий случай",
                         "",
@@ -4746,8 +4877,7 @@
                     "Parent": 130,
                     "#": 131,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Игрока выгоняют с флагмана за плохое поведение или потому, что бой в системе подошёл к концу",
                         "dword flagship = cur_ship;",
                         "dword star = ShipStar(Player());",
@@ -4774,7 +4904,7 @@
                         "    if(ShipFuelLow(flagship)) ShipRefuel(flagship);",
                         "    for(i = ShipItems(flagship) - 1; i >= 1; i = i - 1)",
                         "    {",
-                        "        dword cur_item = ShipItems(flagship, 1);",
+                        "        dword cur_item = ShipItems(flagship, i);",
                         "        //Чинят только стандартную оборудку",
                         "        if(ItemType(cur_item) >= t_Weapon13 && ItemType(cur_item) <= t_Weapon15) continue;",
                         "        else if(ItemType(cur_item) == t_CustomWeapon)",
@@ -4846,7 +4976,7 @@
                         "    OrderNone(Player());",
                         "    ShipOrder(Player(), 5);",
                         "    ShipOrder(Player(), 'X', CoordX(Player()));",
-                        "    ShipOrder(Player(), 'Y', CoordX(Player()));",
+                        "    ShipOrder(Player(), 'Y', CoordY(Player()));",
                         "}"
                     ]
                 },
@@ -4858,8 +4988,7 @@
                     "Parent": 136,
                     "#": 137,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipCustomShipInfoData(Player(), 'ShuWarriors_FlagshipDirectControl', 1, -1);"
                     ]
                 },
@@ -4871,8 +5000,7 @@
                     "Parent": 140,
                     "#": 141,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Игрок выбрал ответ на мостике для покидания флагмана",
                         "player_rank = ShipRank(Player());",
                         "if(player_rank >= 7) player_str_rank = lowercase(CT('Rank.Admiral.Name')); //Адмирал",
@@ -4892,8 +5020,7 @@
                     "Parent": 142,
                     "#": 144,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "PlayerBridge(3);"
                     ]
                 },
@@ -4905,8 +5032,7 @@
                     "Parent": 145,
                     "#": 146,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "dword star = ShipStar(Player());",
                         "dword flagship = IdToShip(ShipCustomShipInfoData(Player(), 'ShuWarriors_FlagshipDirectControl', 1));",
                         "TransferShip(flagship, star);",
@@ -4937,7 +5063,7 @@
                         "OrderNone(Player());",
                         "ShipOrder(Player(), 5);",
                         "ShipOrder(Player(), 'X', CoordX(Player()));",
-                        "ShipOrder(Player(), 'Y', CoordX(Player()));",
+                        "ShipOrder(Player(), 'Y', CoordY(Player()));",
                         "FormChange('StarMap');",
                         "ForceNextDay();"
                     ]
@@ -4950,8 +5076,7 @@
                     "Parent": 133,
                     "#": 148,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "FormChange('StarMap');"
                     ]
                 },
@@ -4963,8 +5088,7 @@
                     "Parent": 149,
                     "#": 150,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "cur_ship = GetTalkShip();",
                         "",
                         "player_rank = ShipRank(Player());",
@@ -5009,8 +5133,7 @@
                     "Parent": 151,
                     "#": 152,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(!GAnswerData) //Указание новой цели",
                         "{",
                         "    j = ShipNearbyShips(cur_ship, -1, 0, 1+2+8+128+4096, '', '');",
@@ -5048,8 +5171,7 @@
                     "Parent": 153,
                     "#": 154,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "target_Id = Id(GAnswerData);",
                         "",
                         "check = 0;",
@@ -5089,8 +5211,7 @@
                     "Parent": 155,
                     "#": 156,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "SetData(target_Id, 1, cur_ship); //Задаём военному новую цель",
                         "OrderLock(cur_ship, 1);",
                         "OrderFollowShip(cur_ship, GAnswerData, 1);",
@@ -5112,8 +5233,7 @@
                     "Parent": -1,
                     "#": 158,
                     "Code.Type": "Init",
-                    "Code": 
-                    [
+                    "Code": [
                         "function DialogAttach(int action = 0)",
                         "{",
                         "    target_Id = tdwd1;",
@@ -5155,8 +5275,7 @@
                     "Parent": -1,
                     "#": 172,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "race = 4;",
                         "cost1 = GalaxyMoney(3,race);",
                         "cost2 = GalaxyMoney(3,race)*2;",
@@ -5165,7 +5284,8 @@
                         "cost5 = GalaxyMoney(4,race)*3;",
                         "tstr1 = \"гаалец\";",
                         "",
-                        "Sound('Sound.NewMsg');"
+                        "Sound('Sound.NewMsg');",
+                        "ConstrRaceName = tstr1;"
                     ]
                 },
                 {
@@ -5176,8 +5296,7 @@
                     "Parent": -1,
                     "#": 173,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "race = 3;",
                         "cost1 = GalaxyMoney(3,race);",
                         "cost2 = GalaxyMoney(3,race)*2;",
@@ -5186,7 +5305,8 @@
                         "cost5 = GalaxyMoney(4,race)*3;",
                         "tstr1 = \"фэянин\";",
                         "",
-                        "Sound('Sound.NewMsg');"
+                        "Sound('Sound.NewMsg');",
+                        "ConstrRaceName = tstr1;"
                     ]
                 },
                 {
@@ -5197,8 +5317,7 @@
                     "Parent": -1,
                     "#": 174,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "race = 2;",
                         "cost1 = GalaxyMoney(3,race);",
                         "cost2 = GalaxyMoney(3,race)*2;",
@@ -5207,7 +5326,8 @@
                         "cost5 = GalaxyMoney(4,race)*3;",
                         "tstr1 = \"человек\";",
                         "",
-                        "Sound('Sound.NewMsg');"
+                        "Sound('Sound.NewMsg');",
+                        "ConstrRaceName = tstr1;"
                     ]
                 },
                 {
@@ -5218,8 +5338,7 @@
                     "Parent": -1,
                     "#": 175,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "race = 1;",
                         "cost1 = GalaxyMoney(3,race);",
                         "cost2 = GalaxyMoney(3,race)*2;",
@@ -5228,7 +5347,8 @@
                         "cost5 = GalaxyMoney(4,race)*3;",
                         "tstr1 = \"пеленг\";",
                         "",
-                        "Sound('Sound.NewMsg');"
+                        "Sound('Sound.NewMsg');",
+                        "ConstrRaceName = tstr1;"
                     ]
                 },
                 {
@@ -5239,8 +5359,7 @@
                     "Parent": -1,
                     "#": 176,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "race = 0;",
                         "cost1 = GalaxyMoney(3,race);",
                         "cost2 = GalaxyMoney(3,race)*2;",
@@ -5249,7 +5368,8 @@
                         "cost5 = GalaxyMoney(4,race)*3;",
                         "tstr1 = \"малок\";",
                         "",
-                        "Sound('Sound.NewMsg');"
+                        "Sound('Sound.NewMsg');",
+                        "ConstrRaceName = tstr1;"
                     ]
                 },
                 {
@@ -5260,8 +5380,7 @@
                     "Parent": -1,
                     "#": 184,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ArrayClear(tarr1);",
                         "",
                         "tint1 = 200 + GalaxyTechLevel() * 25; //1 ГТУ - 225   8 ГТУ - 400",
@@ -5279,11 +5398,12 @@
                     "Parent": -1,
                     "#": 190,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "size = tint5;",
                         "cost = cost5;",
-                        "tstr2 = \"класса S\";"
+                        "tstr2 = \"класса S\";",
+                        "ConstrClassName = tstr2;",
+                        "ConstrCost = cost;"
                     ]
                 },
                 {
@@ -5294,11 +5414,12 @@
                     "Parent": -1,
                     "#": 191,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "size = tint4;",
                         "cost = cost4;",
-                        "tstr2 = \"класса L\";"
+                        "tstr2 = \"класса L\";",
+                        "ConstrClassName = tstr2;",
+                        "ConstrCost = cost;"
                     ]
                 },
                 {
@@ -5309,11 +5430,12 @@
                     "Parent": -1,
                     "#": 192,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "size = tint3;",
                         "cost = cost3;",
-                        "tstr2 = \"класса J\";"
+                        "tstr2 = \"класса J\";",
+                        "ConstrClassName = tstr2;",
+                        "ConstrCost = cost;"
                     ]
                 },
                 {
@@ -5324,11 +5446,12 @@
                     "Parent": -1,
                     "#": 193,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "size = tint2;",
                         "cost = cost2;",
-                        "tstr2 = \"класса N\";"
+                        "tstr2 = \"класса N\";",
+                        "ConstrClassName = tstr2;",
+                        "ConstrCost = cost;"
                     ]
                 },
                 {
@@ -5339,11 +5462,12 @@
                     "Parent": -1,
                     "#": 194,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "size = tint1;",
                         "cost = cost1;",
-                        "tstr2 = \"класса M\";"
+                        "tstr2 = \"класса M\";",
+                        "ConstrClassName = tstr2;",
+                        "ConstrCost = cost;"
                     ]
                 },
                 {
@@ -5354,13 +5478,18 @@
                     "Parent": -1,
                     "#": 203,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "tint1 = PlanetRace(NearCivilPlanet(Player()));",
-                        "PlanetRace(NearCivilPlanet(Player()),race);",
+                    "Code": [
+                        "//Если предыдущая сборка почему-то не была завершена - корректно прерываем её (вещи игроку), иначе военный и вещи зависнут навсегда",
+                        "if(DuringConstruction) ConstrCancel();",
+                        "",
+                        "//Планета спавна: та, на которой стоит игрок (с ВБ - ближайшая обитаемая планета системы)",
+                        "tdwd1 = GetShipPlanet(Player());",
+                        "if(!tdwd1) tdwd1 = NearCivilPlanet(Player());",
+                        "tint1 = PlanetRace(tdwd1);",
+                        "PlanetRace(tdwd1,race);",
                         "",
                         "//Чтобы не напрягать булки, создадим военного заранее",
-                        "cur_ship = BuyWarrior(NearCivilPlanet(Player()));",
+                        "cur_ship = BuyWarrior(tdwd1);",
                         "WarriorId = Id(cur_ship);",
                         "OrderLock(cur_ship,1);",
                         "//Побалуемся с расстановкой навыков от расы",
@@ -5410,92 +5539,48 @@
                         "    ShipSkill(cur_ship,5,6);",
                         "}",
                         "//На всякий случай обеспечим ему полный набор слотов",
-                        "while(ShipSlots(cur_ship,1) < 5) ShipSpecialBonuses(cur_ship,bonSlotWeapon,ShipSpecialBonuses(cur_ship,bonSlotWeapon)+1);",
-                        "while(ShipSlots(cur_ship,3) < 1) ShipSpecialBonuses(cur_ship,bonSlotRadar,ShipSpecialBonuses(cur_ship,bonSlotRadar)+1);",
-                        "while(ShipSlots(cur_ship,4) < 1) ShipSpecialBonuses(cur_ship,bonSlotScaner,ShipSpecialBonuses(cur_ship,bonSlotScaner)+1);",
-                        "while(ShipSlots(cur_ship,5) < 1) ShipSpecialBonuses(cur_ship,bonSlotDroid,ShipSpecialBonuses(cur_ship,bonSlotDroid)+1);",
-                        "while(ShipSlots(cur_ship,6) < 1) ShipSpecialBonuses(cur_ship,bonSlotHook,ShipSpecialBonuses(cur_ship,bonSlotHook)+1);",
-                        "while(ShipSlots(cur_ship,7) < 1) ShipSpecialBonuses(cur_ship,bonSlotDef,ShipSpecialBonuses(cur_ship,bonSlotDef)+1);",
-                        "//Очистим ему шмот, а то мало ли",
-                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "/*if(ShipEqInSlot(cur_ship,t_Engine)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}*/",
-                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
-                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
-                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
-                        "        GetItemFromShip(cur_ship,tdwd);",
-                        "        FreeItem(tdwd);",
-                        "    }",
-                        "}",
-                        "//Сформируем диалог-шаблон, на основании которого мы потом внаглую будем собирать итоговый, показывающийся игроку",
+                        "ConstrOpenSlots(cur_ship);",
+                        "//Очистим ему шмот (кроме корпуса и штатных двигателя с баком)",
+                        "ConstrPrepareWarrior(cur_ship);",
+                        "ItemSize(ShipEqInSlot(cur_ship,t_Hull),size);",
+                        "HullHP(cur_ship,'To100');",
+                        "ShipCalcParam(cur_ship);",
                         "tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
                         "if(ShipEqInSlot(cur_ship,t_Radar)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
                         "    tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
                         "}",
-                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_Engine)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
                         "    tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
                         "}",
-                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
                         "    tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
                         "}",
-                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
                         "    tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
                         "}",
-                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
                         "    tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
                         "}",
-                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
                         "    tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\"+')');",
                         "}",
-                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
                         "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
                         "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
                         "    tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+' '+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
                         "}",
-                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
+                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
                         "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
                         "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
                         "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
@@ -5505,12 +5590,9 @@
                         "}",
                         "tstr4 = Format(tstr4,'place',ShipFreeSpace(cur_ship));",
                         "",
-                        "ItemSize(ShipEqInSlot(cur_ship,t_Hull),size);",
-                        "HullHP(cur_ship,'To100');",
-                        "",
                         "//Возвращаем планете её расу",
-                        "PlanetRace(NearCivilPlanet(Player()),tint1);",
-                        "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;",
+                        "PlanetRace(tdwd1,tint1);",
+                        "costDisc = round(0.01 * ConstrCost * (100 - ShipStatus(Player(),2)/4));",
                         "",
                         "DuringConstruction = 1;",
                         "GotoGov(2);",
@@ -5526,8 +5608,7 @@
                     "Parent": -1,
                     "#": 204,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "InjectAnswer('All',\"Перейти к изменению оборудования пилота\",1);"
                     ]
                 },
@@ -5539,59 +5620,9 @@
                     "Parent": -1,
                     "#": 206,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "//Отдаём шмот игроку (О НЕТ АБУЗ НА ДВИГЛО И БАЧОК)",
-                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    AddItemToShip(Player(),tdwd);",
-                        "}",
-                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
-                        "    GetItemFromShip(cur_ship,tdwd);",
-                        "    FreeItem(tdwd);",
-                        "}",
-                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
-                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
-                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
-                        "        GetItemFromShip(cur_ship,tdwd);",
-                        "        AddItemToShip(Player(),tdwd);",
-                        "    }",
-                        "}",
-                        "",
-                        "//Уничтожаем невезучего военного",
-                        "OrderLock(cur_ship);",
-                        "ShipDestroy(cur_ship);",
-                        "WarriorId = 0;",
-                        "",
-                        "DuringConstruction = 0;",
-                        "GotoGov(0);"
+                    "Code": [
+                        "//Отдаём игроку всё, что он навесил на военного (включая захват, груз и артефакты), кроме штатных двигателя и бака",
+                        "ConstrCancel();"
                     ]
                 },
                 {
@@ -5602,16 +5633,25 @@
                     "Parent": -1,
                     "#": 211,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "tstr5 = Name(NearCivilPlanet(Player()));",
+                    "Code": [
+                        "cur_ship = ConstrGetWarrior();",
+                        "tstr5 = '';",
+                        "if(cur_ship) {",
+                        "    tstr5 = Name(GetShipPlanet(cur_ship));",
+                        "    //Оплата сборки (цена со скидкой, которую показывали игроку)",
+                        "    costDisc = round(0.01 * ConstrCost * (100 - ShipStatus(Player(),2)/4));",
+                        "    ShipMoney(Player(), ShipMoney(Player()) - costDisc);",
+                        "    OrderLock(cur_ship,0);",
+                        "    Chameleon(cur_ship);",
+                        "    HullHP(cur_ship,'To100');",
+                        "    ShipCalcParam(cur_ship);",
+                        "    //Задрал обновлять свой шмот",
+                        "    OrderTakeOff(cur_ship);",
+                        "}",
                         "WarriorId = 0;",
-                        "OrderLock(cur_ship,0);",
+                        "ConstrEngineId = 0;",
+                        "ConstrTankId = 0;",
                         "ArrayClear(tarr1);",
-                        "Chameleon(cur_ship);",
-                        "HullHP(cur_ship,'To100');",
-                        "//Задрал обновлять свой шмот",
-                        "OrderTakeOff(cur_ship);",
                         "",
                         "DuringConstruction = 0;",
                         "GotoGov(0);"
@@ -5625,57 +5665,62 @@
                     "Parent": -1,
                     "#": 216,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
-                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
-                        "    tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
-                        "    tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
-                        "    tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
-                        "    tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
-                        "}",
-                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
-                        "    tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
-                        "}",
-                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
-                        "    tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
-                        "    tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
-                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
-                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
-                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
-                        "        tstr4 = Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. урона на расстоянии\"+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+                    "Code": [
+                        "cur_ship = ConstrGetWarrior();",
+                        "if(cur_ship) {",
+                        "    tstr1 = ConstrRaceName;",
+                        "    tstr2 = ConstrClassName;",
+                        "    //Если игрок переложил что-то на военного через форму корабля - он сам пока не в курсе",
+                        "    ShipCalcParam(cur_ship);",
+                        "    tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
+                        "    if(ShipEqInSlot(cur_ship,t_Radar)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+                        "        tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
                         "    }",
-                        "    else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
+                        "    else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_Engine)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+                        "        tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+                        "        tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+                        "        tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+                        "        tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+                        "        tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\"+')');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+                        "        tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+' '+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
+                        "    for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
+                        "        if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+                        "            tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+                        "            tstr4 = Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. урона на расстоянии\"+' '+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+                        "        }",
+                        "        else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
+                        "    }",
+                        "    tstr4 = Format(tstr4,'place',ShipFreeSpace(cur_ship));",
+                        "    costDisc = round(0.01 * ConstrCost * (100 - ShipStatus(Player(),2)/4));",
+                        "    Sound('Sound.NewMsg');",
                         "}",
-                        "",
-                        "costDisc = cost * (100 - (ShipStatus(Player(),2)/4)) / 100;",
-                        "",
-                        "ShipCalcParam(cur_ship);",
-                        "",
-                        "Sound('Sound.NewMsg');"
+                        "//Военный погиб/исчез - сбрасываем сборку, чтобы не висел запрет на выход из правительства",
+                        "else ConstrCancel();"
                     ]
                 },
                 {
@@ -5686,8 +5731,7 @@
                     "Parent": -1,
                     "#": 232,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Если система атакована, то отпускаем резервиста",
                         "if(StarBattle(ShipStar(CurShip))) {",
                         "    ShipOut(CurShip);",
@@ -5724,8 +5768,7 @@
                     "Parent": -1,
                     "#": 238,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//0 - система для действия",
                         "if(mass_attack_stage == 3) {",
                         "    tdwd = GalaxyStar(GetData()-1);",
@@ -5747,8 +5790,7 @@
                     "Parent": -1,
                     "#": 245,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Вытаскиваем звание игрока",
                         "player_rank = ShipRank(Player());",
                         "if(player_rank >= 7) player_str_rank = 'Admiral';",
@@ -5814,8 +5856,7 @@
                     "Parent": -1,
                     "#": 248,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(GetData() > 0) {",
                         "    def_ship = IdToShip(GetData()); //Присваиваем handle сразу, до проверки Name",
                         "    if(Name(def_ship) != 'NameError') {",
@@ -5849,8 +5890,7 @@
                     "Parent": -1,
                     "#": 251,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOut(CurShip);"
                     ]
                 },
@@ -5862,8 +5902,7 @@
                     "Parent": -1,
                     "#": 257,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderFollowShip(CurShip,def_ship);"
                     ]
                 },
@@ -5875,8 +5914,7 @@
                     "Parent": -1,
                     "#": 259,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipInNormalSpace(def_ship)) OrderJump(CurShip,ShipStar(def_ship));"
                     ]
                 },
@@ -5888,8 +5926,7 @@
                     "Parent": -1,
                     "#": 264,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderLanding(CurShip,ShipOrderObj(def_ship));"
                     ]
                 },
@@ -5901,8 +5938,7 @@
                     "Parent": -1,
                     "#": 265,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Вытаскиваем звание игрока",
                         "player_rank = ShipRank(Player());",
                         "if(player_rank >= 6) player_str_rank = 'Admiral';",
@@ -5953,8 +5989,7 @@
                     "Parent": -1,
                     "#": 273,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderJump(CurShip,ShipOrderObj(def_ship));"
                     ]
                 },
@@ -5966,8 +6001,7 @@
                     "Parent": -1,
                     "#": 277,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//"
                     ]
                 },
@@ -5979,10 +6013,12 @@
                     "Parent": -1,
                     "#": 280,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "Sound('Sound.Scan');",
-                        "FormChange('Ship',cur_ship);"
+                    "Code": [
+                        "cur_ship = ConstrGetWarrior();",
+                        "if(cur_ship) {",
+                        "    Sound('Sound.Scan');",
+                        "    FormChange('Ship',cur_ship);",
+                        "}"
                     ]
                 },
                 {
@@ -5993,8 +6029,7 @@
                     "Parent": -1,
                     "#": 282,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr1 = '</color>' + CT('FormRuins.WB.CheckEnemies.Answer');",
                         "tstr2 = '</color>' + CT('FormRuins.WB.CheckEnemies.PlayerThx');",
                         "",
@@ -6052,8 +6087,7 @@
                     "Parent": -1,
                     "#": 285,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tstr2 = '</color>' + CT('FormRuins.WB.WarWithKlingAndPirates.PlayerAnswer');",
                         "if(!SectorVisible(StarToCon(PlanetToStar(PlanetPirateClan())))) k = GalaxyStars() - 2;",
                         "else k = GalaxyStars();",
@@ -6110,17 +6144,16 @@
                         "    if(StarToCon(PlanetToStar(PlanetPirateClan())) == StarToCon(cur_star)) {",
                         "        if(!SectorVisible(StarToCon(PlanetToStar(PlanetPirateClan())))) continue;",
                         "    }",
-                        "",
-                        "    p1 = round(c1*100/k);",
-                        "    p2 = round(c2*100/k);",
-                        "    p3 = round(c3*100/k);",
-                        "    p4 = round(c4*100/k);",
-                        "    p5 = round(c5*100/k);",
-                        "    p6 = round(c6*100/k);",
-                        "    p7 = round(c7*100/k);",
-                        "    while(p1+p2+p3+p4+p5+p6+p7<100) p1 = p1 + 1;",
-                        "    while(p1+p2+p3+p4+p5+p6+p7>100) p1 = p1 - 1;",
                         "}",
+                        "p1 = round(c1*100/k);",
+                        "p2 = round(c2*100/k);",
+                        "p3 = round(c3*100/k);",
+                        "p4 = round(c4*100/k);",
+                        "p5 = round(c5*100/k);",
+                        "p6 = round(c6*100/k);",
+                        "p7 = round(c7*100/k);",
+                        "while(p1+p2+p3+p4+p5+p6+p7<100) p1 = p1 + 1;",
+                        "while(p1+p2+p3+p4+p5+p6+p7>100) p1 = p1 - 1;",
                         "//Заканчиваем поиск пути",
                         "if(p1 < 10) tstr9 = tstr9 + 'WBAnswerWeControlMore00Percent';",
                         "else if(p1 < 30) tstr9 = tstr9 + 'WBAnswerWeControlMore10Percent';",
@@ -6162,9 +6195,8 @@
                     "Parent": -1,
                     "#": 289,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "for(i=0;ShipSlots(CurShip,1)>i;i=i+1) {",
+                    "Code": [
+                        "for(i=1;ShipSlots(CurShip,1)>=i;i=i+1) {",
                         "    if(ShipEqInSlot(CurShip,t_Weapon1,i)) {",
                         "        WeaponTarget(ShipEqInSlot(CurShip,t_Weapon1,i),ShipGetBad(def_ship));",
                         "    }",
@@ -6179,10 +6211,9 @@
                     "Parent": -1,
                     "#": 290,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "if(CurrentMods('ShusRangers\\ShuWarriors')) {",
-                        "    AddDialogInject('Mod_ShuBounty:AboutPirates', '', \"Расскажите подробнее о награде\", 5);",
+                    "Code": [
+                        "if(CurrentMods('ShusRangers\\ShuBounty')) {",
+                        "    InjectAnswer('Mod_ShuBounty:AboutPirates', \"Расскажите подробнее о награде\", 0);",
                         "}"
                     ]
                 },
@@ -6194,57 +6225,114 @@
                     "Parent": -1,
                     "#": 292,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "//Сформируем диалог-шаблон, на основании которого мы потом внаглую будем собирать итоговый, показывающийся игроку",
-                        "tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
-                        "if(ShipEqInSlot(cur_ship,t_Radar)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Radar);",
-                        "    tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_Engine)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Engine);",
-                        "    tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
-                        "    tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_Scaner)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
-                        "    tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
-                        "}",
-                        "else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
-                        "    tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
-                        "}",
-                        "else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
-                        "    tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
-                        "if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
-                        "    tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
-                        "    tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
-                        "}",
-                        "else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
-                        "for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
-                        "    if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
-                        "        tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
-                        "        tstr4 = Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. урона на расстоянии\"+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+                    "Code": [
+                        "cur_ship = ConstrGetWarrior();",
+                        "if(cur_ship) {",
+                        "    tstr1 = ConstrRaceName;",
+                        "    tstr2 = ConstrClassName;",
+                        "    //Если игрок переложил что-то на военного через форму корабля - он сам пока не в курсе",
+                        "    ShipCalcParam(cur_ship);",
+                        "    tstr4 = '</color>' + CT('FormRuins.WB.PilotConstruction.MainDialog');",
+                        "    if(ShipEqInSlot(cur_ship,t_Radar)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Radar);",
+                        "        tstr4 = Format(tstr4,'radar',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
                         "    }",
-                        "    else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
-                        "}"
+                        "    else tstr4 = Format(tstr4,'radar',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_Engine)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Engine);",
+                        "        tstr4 = Format(tstr4,'engine',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'engine',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_FuelTanks)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_FuelTanks);",
+                        "        tstr4 = Format(tstr4,'tank',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. топлива)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'tank',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_Scaner)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_Scaner);",
+                        "        tstr4 = Format(tstr4,'scaner',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'scaner',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_DefGenerator)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_DefGenerator);",
+                        "        tstr4 = Format(tstr4,'def',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+'%)');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'def',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_RepairRobot)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_RepairRobot);",
+                        "        tstr4 = Format(tstr4,'droid',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"ед. урона\"+')');",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'droid',\"<color=220,20,20>отсутствует</color>\");",
+                        "    if(ShipEqInSlot(cur_ship,t_CargoHook)) {",
+                        "        tdwd = ShipEqInSlot(cur_ship,t_CargoHook);",
+                        "        tstr4 = Format(tstr4,'hook',Name(tdwd)+' ('+GetEquipmentStats(tdwd,0)+' '+\"т. на расстоянии\"+' '+GetEquipmentStats(tdwd,1)+' '+\"млн км)\");",
+                        "    }",
+                        "    else tstr4 = Format(tstr4,'hook',\"<color=220,20,20>отсутствует</color>\");",
+                        "    for(i=1;ShipSlots(cur_ship,1)>=i;i=i+1) {",
+                        "        if(ShipEqInSlot(cur_ship,t_Weapon1,i)) {",
+                        "            tdwd = ShipEqInSlot(cur_ship,t_Weapon1,i);",
+                        "            tstr4 = Format(tstr4,'weap'+i,Name(tdwd)+' ('+GetEquipmentStats(tdwd,1)+' - '+GetEquipmentStats(tdwd,0)+' '+\"ед. урона на расстоянии\"+' '+GetEquipmentStats(tdwd,2)+' '+\"млн км)\");",
+                        "        }",
+                        "        else tstr4 = Format(tstr4,'weap'+i,\"<color=220,20,20>отсутствует</color>\");",
+                        "    }",
+                        "    tstr4 = Format(tstr4,'place',ShipFreeSpace(cur_ship));",
+                        "    costDisc = round(0.01 * ConstrCost * (100 - ShipStatus(Player(),2)/4));",
+                        "    Sound('Sound.NewMsg');",
+                        "}",
+                        "//Военный погиб/исчез - сбрасываем сборку, чтобы не висел запрет на выход из правительства",
+                        "else ConstrCancel();"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1010,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 298,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "cur_ship"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1050,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 299,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "!cur_ship"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1100,
+                    "Pos.y": 220,
+                    "Parent": -1,
+                    "#": 300,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "cur_ship"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 1140,
+                    "Pos.y": 220,
+                    "Parent": -1,
+                    "#": 301,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "!cur_ship"
                     ]
                 }
             ],
-            "Planets": 
-            [
+            "Planets": [
                 {
                     "Type": "TPlanet",
                     "Name": "InitPlanet",
@@ -6261,8 +6349,7 @@
                     "Dialog": -1
                 }
             ],
-            "Ships": 
-            [
+            "Ships": [
                 {
                     "Type": "TStarShip",
                     "Name": "",
@@ -6290,8 +6377,7 @@
                     "Ruins": ""
                 }
             ],
-            "Stars": 
-            [
+            "Stars": [
                 {
                     "Type": "TStar",
                     "Name": "InitStar",
@@ -6305,8 +6391,7 @@
                     "NoComeKling": false
                 }
             ],
-            "Statements": 
-            [
+            "Statements": [
                 {
                     "Type": "Tif",
                     "Name": "",
@@ -6315,8 +6400,7 @@
                     "Parent": 24,
                     "#": 34,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "on_prepare"
                     ]
                 },
@@ -6328,8 +6412,7 @@
                     "Parent": 36,
                     "#": 42,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6341,9 +6424,8 @@
                     "Parent": 36,
                     "#": 43,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "1"
+                    "Code": [
+                        "operation_lvl > 0"
                     ]
                 },
                 {
@@ -6354,8 +6436,7 @@
                     "Parent": 49,
                     "#": 51,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "new_operation_arr['OrganizedByPlayer'] >= 2"
                     ]
                 },
@@ -6367,8 +6448,7 @@
                     "Parent": 49,
                     "#": 52,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "new_operation_arr['AttackDate'] && ShipMoney(Player()) >= new_operation_arr['OperationCost']"
                     ]
                 },
@@ -6380,8 +6460,7 @@
                     "Parent": 49,
                     "#": 53,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6393,8 +6472,7 @@
                     "Parent": 49,
                     "#": 54,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!new_operation_arr['AttackDate'] || ShipMoney(Player()) < new_operation_arr['OperationCost']"
                     ]
                 },
@@ -6406,8 +6484,7 @@
                     "Parent": 79,
                     "#": 67,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!check"
                     ]
                 },
@@ -6419,8 +6496,7 @@
                     "Parent": 79,
                     "#": 68,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "check"
                     ]
                 },
@@ -6432,8 +6508,7 @@
                     "Parent": 85,
                     "#": 86,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!check"
                     ]
                 },
@@ -6445,8 +6520,7 @@
                     "Parent": 46,
                     "#": 88,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6458,8 +6532,7 @@
                     "Parent": 24,
                     "#": 90,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!operation_lvl && !on_prepare"
                     ]
                 },
@@ -6471,8 +6544,7 @@
                     "Parent": 85,
                     "#": 96,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "check"
                     ]
                 },
@@ -6484,8 +6556,7 @@
                     "Parent": 88,
                     "#": 106,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6497,8 +6568,7 @@
                     "Parent": 62,
                     "#": 107,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6510,8 +6580,7 @@
                     "Parent": 10,
                     "#": 112,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!ShipIsTakeoff(Player())"
                     ]
                 },
@@ -6523,8 +6592,7 @@
                     "Parent": 24,
                     "#": 114,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "operation_lvl && !on_prepare"
                     ]
                 },
@@ -6536,8 +6604,7 @@
                     "Parent": 118,
                     "#": 119,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6549,8 +6616,7 @@
                     "Parent": 118,
                     "#": 120,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6562,8 +6628,7 @@
                     "Parent": 116,
                     "#": 124,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "GAnswerData == 1"
                     ]
                 },
@@ -6575,8 +6640,7 @@
                     "Parent": 116,
                     "#": 125,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!GAnswerData"
                     ]
                 },
@@ -6588,8 +6652,7 @@
                     "Parent": 116,
                     "#": 130,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "GAnswerData == 2"
                     ]
                 },
@@ -6601,8 +6664,7 @@
                     "Parent": 132,
                     "#": 134,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "check"
                     ]
                 },
@@ -6614,8 +6676,7 @@
                     "Parent": 132,
                     "#": 135,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!check"
                     ]
                 },
@@ -6627,8 +6688,7 @@
                     "Parent": 116,
                     "#": 140,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "GAnswerData == 3"
                     ]
                 },
@@ -6640,8 +6700,7 @@
                     "Parent": 141,
                     "#": 142,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!check"
                     ]
                 },
@@ -6653,8 +6712,7 @@
                     "Parent": 141,
                     "#": 143,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "check"
                     ]
                 },
@@ -6666,8 +6724,7 @@
                     "Parent": -1,
                     "#": 159,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "new_operation_arr['OrganizedByPlayer'] >= 2 || new_operation_arr['AttackDate']"
                     ]
                 },
@@ -6679,8 +6736,7 @@
                     "Parent": -1,
                     "#": 160,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "new_operation_arr['OrganizedByPlayer'] <= 1 && !new_operation_arr['AttackDate']"
                     ]
                 },
@@ -6692,8 +6748,7 @@
                     "Parent": -1,
                     "#": 161,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -6705,9 +6760,8 @@
                     "Parent": -1,
                     "#": 207,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "ShipMoney(Player()) >= costDisc && ready >=4 && ShipCntWeapon(cur_ship) && ShipEqInSlot(cur_ship,t_Engine) && ShipFreeSpace(cur_ship) > 0 && ShipEqInSlot(cur_ship,t_FuelTanks)"
+                    "Code": [
+                        "ShipMoney(Player()) >= costDisc && ShipCntWeapon(cur_ship) && ShipEqInSlot(cur_ship,t_Engine) && ShipEqInSlot(cur_ship,t_FuelTanks) && ShipFreeSpace(cur_ship) >= 0"
                     ]
                 },
                 {
@@ -6718,9 +6772,8 @@
                     "Parent": -1,
                     "#": 209,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "ShipMoney(Player()) < costDisc || ready >= 5 || !ShipCntWeapon(cur_ship)"
+                    "Code": [
+                        "ShipMoney(Player()) < costDisc || !ShipCntWeapon(cur_ship) || !ShipEqInSlot(cur_ship,t_Engine) || !ShipEqInSlot(cur_ship,t_FuelTanks) || ShipFreeSpace(cur_ship) < 0"
                     ]
                 },
                 {
@@ -6731,8 +6784,7 @@
                     "Parent": -1,
                     "#": 249,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "def_ship > 0"
                     ]
                 },
@@ -6744,8 +6796,7 @@
                     "Parent": -1,
                     "#": 250,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "def_ship < 1"
                     ]
                 },
@@ -6757,8 +6808,7 @@
                     "Parent": -1,
                     "#": 253,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInStar(def_ship,ShipStar(CurShip))"
                     ]
                 },
@@ -6770,8 +6820,7 @@
                     "Parent": -1,
                     "#": 255,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!ShipInStar(def_ship,ShipStar(CurShip))"
                     ]
                 },
@@ -6783,8 +6832,7 @@
                     "Parent": -1,
                     "#": 261,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) != 2 || ShipTurnBeforeEndOrder(def_ship) > 2"
                     ]
                 },
@@ -6796,8 +6844,7 @@
                     "Parent": -1,
                     "#": 263,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) == 2 && ShipTurnBeforeEndOrder(def_ship) <= 2"
                     ]
                 },
@@ -6809,8 +6856,7 @@
                     "Parent": -1,
                     "#": 267,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInNormalSpace(CurShip)"
                     ]
                 },
@@ -6822,8 +6868,7 @@
                     "Parent": -1,
                     "#": 268,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) != 3"
                     ]
                 },
@@ -6835,8 +6880,7 @@
                     "Parent": -1,
                     "#": 270,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) == 3"
                     ]
                 },
@@ -6848,8 +6892,7 @@
                     "Parent": -1,
                     "#": 271,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipTurnBeforeEndOrder(def_ship) > 2"
                     ]
                 },
@@ -6861,8 +6904,7 @@
                     "Parent": -1,
                     "#": 272,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipTurnBeforeEndOrder(def_ship) <= 2"
                     ]
                 },
@@ -6874,8 +6916,7 @@
                     "Parent": -1,
                     "#": 288,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipGetBad(def_ship) > 0 && Name(ShipGetBad(def_ship)) != 'NameError'"
                     ]
                 },
@@ -6887,14 +6928,12 @@
                     "Parent": -1,
                     "#": 291,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInNormalSpace(ShipGetBad(def_ship)) && ShipInStar(CurShip,ShipStar(ShipGetBad(def_ship)))"
                     ]
                 }
             ],
-            "States": 
-            [
+            "States": [
                 {
                     "Type": "TState",
                     "Name": "PlayerGroup",
@@ -6923,8 +6962,7 @@
                     "Move": 5,
                     "MoveObj": -1,
                     "Attack.Count": 1,
-                    "Attack.Items": 
-                    [
+                    "Attack.Items": [
                         {
                             "Target.0": 109
                         }
@@ -6947,8 +6985,7 @@
                     "Move": 5,
                     "MoveObj": -1,
                     "Attack.Count": 1,
-                    "Attack.Items": 
-                    [
+                    "Attack.Items": [
                         {
                             "Target.0": 109
                         }
@@ -6971,8 +7008,7 @@
                     "Move": 5,
                     "MoveObj": -1,
                     "Attack.Count": 1,
-                    "Attack.Items": 
-                    [
+                    "Attack.Items": [
                         {
                             "Target.0": 109
                         }
@@ -6995,8 +7031,7 @@
                     "Move": 5,
                     "MoveObj": -1,
                     "Attack.Count": 1,
-                    "Attack.Items": 
-                    [
+                    "Attack.Items": [
                         {
                             "Target.0": 109
                         }
@@ -7118,8 +7153,7 @@
                     "EMsg": ""
                 }
             ],
-            "Variables": 
-            [
+            "Variables": [
                 {
                     "Type": "TVar",
                     "Name": "i",
@@ -8054,12 +8088,66 @@
                     "Var.Type": "Str",
                     "Init": "",
                     "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ConstrRaceName",
+                    "Pos.x": 1170,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 293,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ConstrClassName",
+                    "Pos.x": 1170,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 294,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ConstrCost",
+                    "Pos.x": 1170,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 295,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ConstrEngineId",
+                    "Pos.x": 1170,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 296,
+                    "Var.Type": "Dword",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ConstrTankId",
+                    "Pos.x": 1170,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 297,
+                    "Var.Type": "Dword",
+                    "Init": "0",
+                    "Global": false
                 }
             ]
         }
     ],
-    "Visual.Links": 
-    [
+    "Visual.Links": [
         {
             "Type": "TGraphLink",
             "Begin": 4,
@@ -9113,7 +9201,7 @@
         {
             "Type": "TGraphLink",
             "Begin": 216,
-            "End": 196,
+            "End": 298,
             "Nom": 0,
             "Arrow": true
         },
@@ -9526,14 +9614,55 @@
         {
             "Type": "TGraphLink",
             "Begin": 292,
+            "End": 300,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 216,
+            "End": 299,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 298,
             "End": 196,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 299,
+            "End": 164,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 292,
+            "End": 301,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 300,
+            "End": 196,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 301,
+            "End": 164,
             "Nom": 0,
             "Arrow": true
         }
     ],
     "BlockPar.EC.Total.Strings": 55,
-    "BlockPar.EC": 
-    [
+    "BlockPar.EC": [
         {
             "#": "109",
             "String": "класса J"
