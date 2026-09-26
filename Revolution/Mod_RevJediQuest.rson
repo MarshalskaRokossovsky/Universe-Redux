@@ -4,8 +4,8 @@
   "ViewPos.x":  110,
   "ViewPos.y":  -69,
   "ScriptName":  "Mod_RevJediQuest",
-  "ScriptFileOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevJediQuest\\DATA\\Script\\Mod_RevJediQuest.scr",
-  "ScriptTextOut":  "C:\\Users\\DmitB\\Фиксы\\Universe Redux Fixes\\Mods\\Revolution\\RevJediQuest\\DATA\\Script\\Mod_RevJediQuest.txt",
+  "ScriptFileOut":  "E:\\disasm2500\\Mods\\Revolution\\RevJediQuest\\DATA\\Script\\Mod_RevJediQuest.scr",
+  "ScriptTextOut":  "E:\\disasm2500\\Mods\\Revolution\\RevJediQuest\\DATA\\Script\\Mod_RevJediQuest.txt",
   "Visual.Objects":  
   [
     {
@@ -1310,7 +1310,7 @@
           "Code.Type":  "Turn",
           "Code":          
           [
-              "ItemIn(LS,GroupToShip(Pirate))"          
+              "ItemIn(LS,CurShip)"          
           ]        
         },
         {

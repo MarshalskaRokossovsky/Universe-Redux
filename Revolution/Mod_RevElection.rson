@@ -4337,7 +4337,8 @@
                         "    }",
                         "}*/",
                         "//Если помогли 3+ из 5 - переходим к следующему этапу",
-                        "if(vTalkAgit<8) {",
+                        "//Только после расчёта агитатора за голос (vTalkAgit>=4), иначе он застревает в StateF",
+                        "if(vTalkAgit>=4 && vTalkAgit<8) {",
                         "    if(vShips>=3) {",
                         "        vTalkAgit=10;",
                         "    }",
@@ -12897,6 +12898,27 @@
             "Type": "TGraphLink",
             "Begin": 6,
             "End": 599,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 6,
+            "End": 551,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 6,
+            "End": 504,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 6,
+            "End": 468,
             "Nom": 0,
             "Arrow": true
         }
