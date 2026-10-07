@@ -1,0 +1,1963 @@
+﻿{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -317,
+    "ViewPos.y": -339,
+    "ScriptName": "MS_Terron",
+    "ScriptFileOut": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\DATA\\Script\\MS_Terron.scr",
+    "ScriptTextOut": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\DATA\\Script\\MS_Terron.txt",
+    "LangDatIn": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\Rus\\Lang.txt",
+    "LangDatOut": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\Rus\\Lang.dat",
+    "MainDatIn": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\Main.txt",
+    "MainDatOut": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\Main.dat",
+    "CacheDatIn": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\CacheData.txt",
+    "CacheDatOut": "E:\\disasm2500\\Mods\\Tweaks\\UtilityFunctionsPack\\CFG\\CacheData.dat",
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
+    "Visual.Objects": [
+        {
+            "DialogAnswers": [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 180,
+                    "Parent": -1,
+                    "#": 34,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 35,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 36,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 37,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 420,
+                    "Parent": -1,
+                    "#": 38,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 480,
+                    "Parent": -1,
+                    "#": 39,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 530,
+                    "Pos.y": 170,
+                    "Parent": -1,
+                    "#": 40,
+                    "Msg": "<tstr4>",
+                    "AMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 580,
+                    "Pos.y": 170,
+                    "Parent": -1,
+                    "#": 41,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 580,
+                    "Pos.y": 230,
+                    "Parent": -1,
+                    "#": 42,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 630,
+                    "Pos.y": 230,
+                    "Parent": -1,
+                    "#": 43,
+                    "Msg": "<tstr4>",
+                    "AMsg.Num": "9"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit_end",
+                    "Pos.x": 630,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 44,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "10"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 260,
+                    "Parent": -1,
+                    "#": 45,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "11"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 320,
+                    "Parent": -1,
+                    "#": 46,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "12"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 490,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 47,
+                    "Msg": "<tstr3>",
+                    "AMsg.Num": "13"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 48,
+                    "Msg": "<tstr5>",
+                    "AMsg.Num": "14"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 570,
+                    "Pos.y": 420,
+                    "Parent": -1,
+                    "#": 49,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "15"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 490,
+                    "Pos.y": 480,
+                    "Parent": -1,
+                    "#": 50,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "16"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 180,
+                    "Parent": -1,
+                    "#": 51,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "17"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 52,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "18"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 53,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "19"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 54,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "20"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 350,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 55,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "21"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 270,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 56,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "22"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 710,
+                    "Pos.y": 480,
+                    "Parent": -1,
+                    "#": 57,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "23"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 310,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 58,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "24"
+                }
+            ],
+            "DialogMessages": [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 12,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 13,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 14,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 15,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 16,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 17,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 410,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 18,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 600,
+                    "Pos.y": 200,
+                    "Parent": -1,
+                    "#": 19,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 550,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 20,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 550,
+                    "Pos.y": 350,
+                    "Parent": -1,
+                    "#": 21,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "9"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 490,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 22,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "10"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 23,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "11"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 570,
+                    "Pos.y": 480,
+                    "Parent": -1,
+                    "#": 24,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "12"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 650,
+                    "Pos.y": 260,
+                    "Parent": -1,
+                    "#": 25,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "13"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 730,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 26,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "14"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 370,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 27,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "15"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 600,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 28,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "16"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 29,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "17"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 730,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 30,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "18"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 730,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 31,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "19"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 290,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 32,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "20"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 330,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 33,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "21"
+                }
+            ],
+            "Dialogs": [
+                {
+                    "Type": "TDialog",
+                    "Name": "dTerron",
+                    "Pos.x": 350,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 11
+                }
+            ],
+            "Groups": [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupTerron",
+                    "Pos.x": 0,
+                    "Pos.y": 225,
+                    "Parent": -1,
+                    "#": 8,
+                    "Owner": 64,
+                    "Group.Type": 524289,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": false,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 490,
+                    "Pos.y": 420,
+                    "Parent": -1,
+                    "#": 59,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "TerronWeaponLock();",
+                        "if(CurrentMods('ShusRangers\\\\ShuDomiks')) MS_Terron_Crack_Submodem=1;",
+                        "MS_Terron_Crack=1;",
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.46');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.53');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 420,
+                    "Parent": -1,
+                    "#": 60,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "TerronGrowLock();",
+                        "MS_Terron_Crack=1;",
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.47');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.53');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 570,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 61,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "TerronLandingLock();",
+                        "MS_Terron_Crack=1;",
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.48');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.53');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 420,
+                    "Parent": -1,
+                    "#": 62,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "MS_Terron_ToStar=1;",
+                        "TerronToStar();",
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.17');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.44');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 69,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "MS_Terron_DialogOk=1;",
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.0');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.21');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 480,
+                    "Pos.y": 380,
+                    "Parent": -1,
+                    "#": 75,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//ответы 13-14 раньше ветки RobotSupport (порядок как в ванили)"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 76,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.1');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.22');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 77,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.2');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.23');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 78,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.3');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.25');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 450,
+                    "Parent": -1,
+                    "#": 79,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.4');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.26');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 80,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.5');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.24');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 81,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.6');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.38');",
+                        "tstr3 = '</color>' + CT('Script.MS_Terron.28');",
+                        "tstr4 = '</color>' + CT('Script.MS_Terron.27');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 580,
+                    "Pos.y": 200,
+                    "Parent": -1,
+                    "#": 82,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.7');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.32');",
+                        "tstr3 = '</color>' + CT('Script.MS_Terron.29');",
+                        "tstr4 = '</color>' + CT('Script.MS_Terron.30');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 83,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.8');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.33');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 350,
+                    "Parent": -1,
+                    "#": 84,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.52');",
+                        "tstr4 = '</color>' + CT('Script.MS_Terron.30');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.51');",
+                        "tstr3 = '</color>' + CT('Script.MS_Terron.49');",
+                        "tstr5 = '</color>' + CT('Script.MS_Terron.50');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 630,
+                    "Pos.y": 260,
+                    "Parent": -1,
+                    "#": 85,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.13');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.31');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 86,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.14');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.40');",
+                        "tstr4 = '</color>' + CT('Script.MS_Terron.27');",
+                        "tstr3 = '</color>' + CT('Script.MS_Terron.28');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 350,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 87,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.15');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.42');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 580,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 88,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.16');",
+                        "tstr4 = '</color>' + CT('Script.MS_Terron.27');",
+                        "tstr3 = '</color>' + CT('Script.MS_Terron.28');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.38');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 89,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.18');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.39');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 90,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.19');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.41');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 91,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.20');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.43');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 310,
+                    "Pos.y": 120,
+                    "Parent": -1,
+                    "#": 92,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "//Тексты сообщения и ответов (ванильные ключи Lang Script.MS_Terron.N)",
+                        "tstr1 = '</color>' + CT('Script.MS_Terron.45');",
+                        "tstr2 = '</color>' + CT('Script.MS_Terron.37');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -140,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "Code.Type": "Init",
+                    "Code": [
+                        "//Универсальный MS_Terron (UtilityFunctionsPack). Ветки для модов, которым он нужен:",
+                        "//  ShusRangers\\ShuDomiks -MS_Terron_Crack_Submodem=1 при блокировке оружия (TerronWeaponLock),",
+                        "//    мод по нему запрещает доминаторам постройку ратторов и супердоминаторов",
+                        "//Без этих модов логика ванильная."
+                    ],
+                    "#": 99
+                }
+            ],
+            "Places": [
+                {
+                    "Type": "TPlace",
+                    "Name": "PlaceToStar",
+                    "Pos.x": 0,
+                    "Pos.y": 135,
+                    "Parent": -1,
+                    "#": 7,
+                    "Place.Type": 0,
+                    "Angle": "0",
+                    "Dist": "0",
+                    "Radius": 0,
+                    "Obj1": -1,
+                    "Obj2": -1
+                }
+            ],
+            "Planets": [
+                {
+                    "Type": "TPlanet",
+                    "Name": "Planet",
+                    "Pos.x": 0,
+                    "Pos.y": 180,
+                    "Parent": -1,
+                    "#": 6,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": 45,
+                    "Parent": -1,
+                    "#": 5,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": [
+                {
+                    "Type": "TStar",
+                    "Name": "StarTerron",
+                    "Pos.x": 0,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 3,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                },
+                {
+                    "Type": "TStar",
+                    "Name": "StarPlayer",
+                    "Pos.x": 150,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 4,
+                    "Constellation": 0,
+                    "Priority": 1,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 63,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "MS_Terron_ToStar"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 64,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "!HaveProgramm(progIntercom)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 310,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 65,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progIntercom) && MS_Terron_Crack"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 350,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 66,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progIntercom) && MS_Terron_ToStar"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 390,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 67,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progIntercom) && !MS_Terron_DialogOk && !MS_Terron_ToStar && !MS_Terron_Crack"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 580,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 68,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progIntercom) && MS_Terron_DialogOk && !MS_Terron_ToStar && !MS_Terron_Crack"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 710,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 70,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progEnergotron)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 530,
+                    "Pos.y": 230,
+                    "Parent": -1,
+                    "#": 71,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "HaveProgramm(progSabCrack)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 450,
+                    "Pos.y": 510,
+                    "Parent": -1,
+                    "#": 72,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 450,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 73,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 570,
+                    "Pos.y": 390,
+                    "Parent": -1,
+                    "#": 74,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "RobotSupport()"
+                    ]
+                }
+            ],
+            "States": [
+                {
+                    "Type": "TState",
+                    "Name": "stTerron",
+                    "Pos.x": 0,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 9,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "dTerron",
+                    "OnActCode": "dTerron",
+                    "EType": 0,
+                    "EUnique": "",
+                    "EMsg": ""
+                },
+                {
+                    "Type": "TState",
+                    "Name": "stToStar",
+                    "Pos.x": -140,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 10,
+                    "Move": 1,
+                    "MoveObj": 7,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "dTerron",
+                    "OnActCode": "dTerron",
+                    "EType": 0,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": [
+                {
+                    "Type": "TVar",
+                    "Name": "MS_Terron_DialogOk",
+                    "Pos.x": 0,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 0,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": true
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "MS_Terron_ToStar",
+                    "Pos.x": 240,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 1,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": true
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "MS_Terron_Crack",
+                    "Pos.x": 480,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 2,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": true
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr1",
+                    "Pos.x": 0,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 93,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr2",
+                    "Pos.x": 80,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 94,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr3",
+                    "Pos.x": 160,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 95,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr4",
+                    "Pos.x": 240,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 96,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr5",
+                    "Pos.x": 320,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 97,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "MS_Terron_Crack_Submodem",
+                    "Pos.x": 0,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "Var.Type": "Dword",
+                    "Init": "0",
+                    "Global": true,
+                    "#": 98
+                }
+            ]
+        }
+    ],
+    "Visual.Links": [
+        {
+            "Type": "TGraphLink",
+            "Begin": 47,
+            "End": 59,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 48,
+            "End": 60,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 49,
+            "End": 61,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 54,
+            "End": 62,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 5,
+            "End": 4,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 6,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 6,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TStarLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": false,
+            "DistMin": 0,
+            "DistMax": 500,
+            "Hole": false
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 63,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 63,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 64,
+            "End": 91,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 65,
+            "End": 92,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 66,
+            "End": 87,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 67,
+            "End": 69,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 69,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 68,
+            "End": 88,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 32,
+            "End": 56,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 64,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 58,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 65,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 27,
+            "End": 55,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 66,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 40,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 41,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 51,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 51,
+            "End": 86,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 70,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 70,
+            "End": 53,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 40,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 41,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 53,
+            "End": 89,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 30,
+            "End": 52,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 52,
+            "End": 90,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 31,
+            "End": 54,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 62,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 57,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 41,
+            "End": 82,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 71,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 42,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 43,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 71,
+            "End": 45,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 45,
+            "End": 83,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 46,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 46,
+            "End": 84,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 68,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 67,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 34,
+            "End": 76,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 35,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 43,
+            "End": 85,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 25,
+            "End": 44,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 35,
+            "End": 77,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 36,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 36,
+            "End": 80,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
+            "End": 37,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 37,
+            "End": 78,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 38,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 38,
+            "End": 79,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 39,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 39,
+            "End": 81,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 72,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 72,
+            "End": 73,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 73,
+            "End": 51,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 73,
+            "End": 41,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 73,
+            "End": 40,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 43,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 75,
+            "End": 47,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 75,
+            "End": 48,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 74,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 74,
+            "End": 49,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 60,
+            "End": 23,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 61,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 59,
+            "End": 22,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 75,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 76,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 77,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 78,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 79,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 80,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 81,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 82,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 83,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 84,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 85,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 86,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 87,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 88,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 89,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 90,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 91,
+            "End": 32,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 92,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "Rect.Text": [
+        {
+            "Type": "TGraphRectText",
+            "Rect.Left": 632,
+            "Rect.Top": -268,
+            "Rect.Right": 1339,
+            "Rect.Bottom": -80,
+            "FStyle": 0,
+            "FColor": 10710818,
+            "BStyle": 0,
+            "BColor": 14474460,
+            "BSize": 1,
+            "BCoef": "0.300000011920929",
+            "AlignX": 0,
+            "AlignY": 0,
+            "AlignRect": false,
+            "Text": "SCR Decompiling MS_Terron\r\n\r\nChangeState(...) -> Link to StateName\r\nDChange(...) -> Link to DMsg.Num\r\nDAdd(...) -> Link to AMsg.Num",
+            "Color": 16777215,
+            "Font": "Segoe UI",
+            "FontSize": 10,
+            "fsBold": true,
+            "fsItalic": false,
+            "fsUnderline": false
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 1,
+    "BlockPar.EC": [
+        {
+            "#": "9100",
+            "String": "<0>"
+        }
+    ]
+}

@@ -1,0 +1,560 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -183,
+    "ViewPos.y": -167,
+    "ScriptName": "Mod_EvoRepairBox",
+    "ScriptFileOut": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\DATA\\Script\\Mod_EvoRepairBox.scr",
+    "ScriptTextOut": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\DATA\\Script\\Mod_EvoRepairBox.txt",
+    "LangDatIn": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\Rus\\Lang.txt",
+    "LangDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\Rus\\Lang.dat",
+    "MainDatIn": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\Main.txt",
+    "MainDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\Main.dat",
+    "CacheDatIn": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\CacheData.txt",
+    "CacheDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoRepairBox\\CFG\\CacheData.dat",
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 290,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 9,
+                    "Msg": "<tstr2>",
+                    "AMsg.Num": "0"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 290,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 8,
+                    "Msg": "<tstr1>",
+                    "DMsg.Num": "0"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "RepairBox",
+                    "Pos.x": 250,
+                    "Pos.y": 170,
+                    "Parent": -1,
+                    "#": 7
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Bought",
+                    "Pos.x": 290,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 17
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": 140,
+                    "Pos.y": 280,
+                    "Parent": -1,
+                    "#": 3,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 250,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(GetShipRuins(Player())) {",
+                        "    if(ShipType(GetShipRuins(Player()))=='TC') {",
+                        "        AddDialogInject('RepairBox',CT('Script.Mod_EvoRepairBox.TCBefore'),CT('Script.Mod_EvoRepairBox.PlayerAsk'),1);",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 250,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 10,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "SetsArray = newarray(1);",
+                        "ArrayClear(SetsArray);",
+                        "ArrayDelete(SetsArray,0);",
+                        "ArrayAdd(SetsArray,int(CT('Script.Mod_EvoRepairBox.Sets.Count')),'SetsCount');",
+                        "for(i=1;i<=SetsArray['SetsCount'];i=i+1) {",
+                        "    tarr1 = newarray(1);",
+                        "    ArrayClear(tarr1);",
+                        "    ArrayDelete(tarr1,0);",
+                        "    //Цена набора",
+                        "    float coef = CT('UselessItems.'+CT('Script.Mod_EvoRepairBox.Sets.'+i)+'.CostCoef');",
+                        "    ArrayAdd(tarr1,GalaxyMoney(2,ShipOwner(GetShipRuins(Player())))*coef,'Cost');",
+                        "    //Количество наборов, доступных для покупки",
+                        "    if(i==1) ArrayAdd(tarr1,total1,'Count');",
+                        "    if(i==2) ArrayAdd(tarr1,total2,'Count');",
+                        "    if(i==3) ArrayAdd(tarr1,total3,'Count');",
+                        "    if(i==4) ArrayAdd(tarr1,total4,'Count');",
+                        "    ArrayAdd(SetsArray,tarr1,CT('Script.Mod_EvoRepairBox.Sets.'+i));",
+                        "}",
+                        "",
+                        "if(GetGameOptions('FontDialog') == '0') DefSplt = '</color>-------------------------------------------------------------';",
+                        "else if(GetGameOptions('FontDialog') == '1') DefSplt = '</color>------------------------------------------';",
+                        "else if(GetGameOptions('FontDialog') == '2') DefSplt = '</color>-----------------------------------------';",
+                        "else /*if(GetGameOptions('FontDialog') == '3')*/ DefSplt = '</color>-------------------------------------';",
+                        "",
+                        "tstr1 = '</color>' + CT('Script.Mod_EvoRepairBox.MainDialog');",
+                        "tstr1 = tstr1 + Format('<br>') + '</color>' + DefSplt;",
+                        "for(i=1;i<=SetsArray['SetsCount'];i=i+1) {",
+                        "    //Сохраняем для упрощения",
+                        "    tstr2 = CT('Script.Mod_EvoRepairBox.Sets.'+i);",
+                        "    //Собираем диалоговую строчку",
+                        "    tstr1 = tstr1 + Format('<br>') + '</color>' + CT('Script.Mod_EvoRepairBox.ForSet');",
+                        "    tstr1 = Format(tstr1,'name',CT('UselessItems.'+tstr2+'.Name'));",
+                        "    tstr1 = Format(tstr1,'desc',CT('UselessItems.'+tstr2+'.Text'));",
+                        "    //Процент ремонта вне боя (формулы из OnActCode наборов, Data1 в диалоге движок не подставляет)",
+                        "    tdwd = ShipSkill(Player(),2);",
+                        "    if(i==1) tdwd = 4+min(4*tdwd,22)/2;",
+                        "    if(i==2) tdwd = 14+6*tdwd;",
+                        "    if(i==3) tdwd = 7+3*tdwd;",
+                        "    tstr1 = Format(tstr1,'<Data1'+'>',tdwd);",
+                        "    tstr1 = Format(tstr1,'cost',SetsArray[tstr2,'Cost']);",
+                        "    tstr1 = Format(tstr1,'coun',SetsArray[tstr2,'Count']);",
+                        "    tstr1 = tstr1 + Format('<br>') + '</color>' + DefSplt;",
+                        "}",
+                        "tstr1 = tstr1 + Format('<br>') + '</color>' + CT('Script.Mod_EvoRepairBox.MainDialogEnd');",
+                        "tstr2 = '</color>' + CT('Script.Mod_EvoRepairBox.PlayerNo');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 330,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 18,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "for(i=1;i<=SetsArray['SetsCount'];i=i+1) {",
+                        "    tstr2 = CT('Script.Mod_EvoRepairBox.Sets.'+i);",
+                        "    tstr1 = '</color>' + CT('Script.Mod_EvoRepairBox.PlayerBuy')+' '+CT('UselessItems.'+tstr2+'.Name');",
+                        "    InjectAnswer('Bought',tstr1,i);",
+                        "    if(SetsArray[CT('Script.Mod_EvoRepairBox.Sets.'+i),'Cost'] > ShipMoney(Player())) {",
+                        "        AddDialogBlock(tstr1,1);",
+                        "    }",
+                        "    if(SetsArray[CT('Script.Mod_EvoRepairBox.Sets.'+i),'Count'] < 1) {",
+                        "        AddDialogBlock(tstr1,1);",
+                        "    }",
+                        "}",
+                        "tstr2 = '</color>' + CT('Script.Mod_EvoRepairBox.PlayerNo');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 250,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 19,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Квоты обновляются раз в год, начиная с первого хода работы скрипта (раньше - только в годовщину 300-го хода, и первый год купить было нечего)",
+                        "if(CurTurn() >= quota_day) {",
+                        "    quota_day = CurTurn() + 365;",
+                        "    total1=max(2+ShipRank(Player()),2+GetShipPirateRank(Player()));",
+                        "    total2=max(1+ShipRank(Player()),1+GetShipPirateRank(Player()));",
+                        "    total3=max(ShipRank(Player()),GetShipPirateRank(Player()));",
+                        "    total4=max(1+ShipRank(Player()),1+GetShipPirateRank(Player()));",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 290,
+                    "Pos.y": 170,
+                    "Parent": -1,
+                    "#": 20,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "tdwd=AddItemToShip(Player(),CreateQuestItem(CT('Script.Mod_EvoRepairBox.Sets.'+GAnswerData)));",
+                        "ItemCost(tdwd,SetsArray[CT('Script.Mod_EvoRepairBox.Sets.'+GAnswerData),'Cost']);",
+                        "ShipMoney(Player(),ShipMoney(Player())-SetsArray[CT('Script.Mod_EvoRepairBox.Sets.'+GAnswerData),'Cost']);",
+                        "Sound('Sound.Buy');",
+                        "if(GAnswerData == 1) {",
+                        "    total1=total1-1;",
+                        "}",
+                        "if(GAnswerData == 2) {",
+                        "    total2=total2-1;",
+                        "}",
+                        "if(GAnswerData == 3) {",
+                        "    total3=total3-1;",
+                        "}",
+                        "if(GAnswerData == 4) {",
+                        "    total4=total4-1;",
+                        "}"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": 140,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": 140,
+                    "Pos.y": 200,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": 140,
+                    "Pos.y": 320,
+                    "Parent": -1,
+                    "#": 4,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "total1",
+                    "Pos.x": 390,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 11,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "total2",
+                    "Pos.x": 390,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 12,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "total3",
+                    "Pos.x": 390,
+                    "Pos.y": 170,
+                    "Parent": -1,
+                    "#": 13,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "total4",
+                    "Pos.x": 390,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 14,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "quota_day",
+                    "Pos.x": 390,
+                    "Pos.y": 210,
+                    "Parent": -1,
+                    "#": 26,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "SetsArray",
+                    "Pos.x": 650,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 15,
+                    "Var.Type": "Unknown",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tarr1",
+                    "Pos.x": 650,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 16,
+                    "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr1",
+                    "Pos.x": 480,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 21,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tdwd",
+                    "Pos.x": 650,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 22,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr2",
+                    "Pos.x": 480,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 23,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "DefSplt",
+                    "Pos.x": 560,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 24,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "i",
+                    "Pos.x": 560,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 25,
+                    "Var.Type": "Unknown",
+                    "Init": "",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 3,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 3,
+            "End": 4,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 10,
+            "End": 8,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 8,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 1,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "21",
+            "String": "<0>"
+        }
+    ]
+}

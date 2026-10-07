@@ -1,0 +1,101 @@
+﻿TGE quest trace 2026-10-05 11:43:42
+Quest file: E:\disasm2500\Mods\OtherMods\SR1TextQuests\DATA\Quest\Rus\Bank.qmm
+
+--- static check ---
+  WARNINGS
+  POSSIBLE DEAD END: location 13 "- Тогда перейдем к деталям, - сказал рез..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 16 "Выберите первую книгу." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 17 "Выберите вторую книгу." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 19 "Вы находитесь в штаб-квартире. Обстановк..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 39 "Вы быстро пролистали каталог, заполненны..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 41 ""Пора, пожалуй, инсталлировать купленные..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 51 "Вы с трудом усидели на месте следующие п..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 65 "- Замечательно! - воскликнул гаалец, зак..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 88 "- Вы такой милый и хороший! - тон госпож..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 100 "Вы поймали хозяина бара за руку и предло..." - every exit depends on a condition or has probability below 1.
+  POSSIBLE DEAD END: location 101 "На улице вы быстро зашли за угол, встали..." - every exit depends on a condition or has probability below 1.
+  NOTES
+  76 location(s) have only exits with pass/visit limits (they can run out after repeated visits).
+--- run ---
+=== START === RandSeed=1125036806, start location 1
+    initial parameters:
+      p1 "Попытка" = 0  [0..35]
+      p2 "Время" = 0  [0..9]
+      p3 "Книги1" = 0  [0..15]
+      p4 "Деньги" = 1000  [0..5500]
+      p5 "Лаптоп" = 0  [-1..9]
+      p6 "Психостимулятор" = 0  [0..3]
+      p7 "Диск1" = 0  [0..3]
+      p8 "Диск2" = 0  [0..7]
+      p9 "Лекарство" = 0  [0..3]
+      p10 "Книги2" = 0  [0..15]
+      p11 "Пароль" = 0  [0..13]
+      p12 "Смена" = 0  [0..13]
+      p13 "Пароль2" = 0  [0..1]
+      p14 "Смена2" = 0  [0..1]
+
+#1 ENTER location 1 "Вы прибыли на планету <ToPlanet> ранним ...", visit 1
+    location deltas: (no parameter changes)
+    description #1 of 10 (in order)
+    TEXT: Вы прибыли на планету <ToPlanet> ранним утром, и таможенные формальности, как это и принято у пеленг...
+    exits:
+      Path 2 -> location 2 ("Ну, это... В общем, я тот самый <Ranger>"): open
+      Path 3 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 23 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 24 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 25 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 26 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 27 -> location 3 ("Я привез письмо от ректора университета "): open
+      Path 28 -> location 3 ("Я привез письмо от ректора университета "): open
+    random: 7 paths with the same caption, roll 3,3306968966499 of 7 -> picked path 26
+    answer: path 26 -> location 3: Я привез письмо от ректора университета <FromPlanet>, которое он обеща...
+    answer: path 2 -> location 2: Ну, это... В общем, я тот самый <Ranger>, который должен помочь вам ос...
+
+#2 TAKE path 26 (1 -> 3), pass 1
+    path deltas: p11 "Пароль": 0 -> 4; 
+
+#3 ENTER location 3 "- Я не жду никакого письма с планеты <Fr...", visit 1
+    location deltas: (no parameter changes)
+    description #1 of 1 (in order)
+    TEXT: - Я не жду никакого письма с планеты <FromPlanet>, придурок!!! - проорал пеленг, захлопывая дверь пе...
+    exits:
+      Path 4 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 5 -> location 5 ("Ну, это... В общем, я тот самый <Ranger>"): open
+      Path 29 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 30 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 31 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 32 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 33 -> location 4 ("Я привез письмо от ректора университета "): open
+      Path 34 -> location 4 ("Я привез письмо от ректора университета "): open
+    random: 7 paths with the same caption, roll 1,15609544585459 of 7 -> picked path 34
+    answer: path 34 -> location 4: Я привез письмо от ректора университета <FromPlanet>, которое он обеща...
+    answer: path 5 -> location 5: Ну, это... В общем, я тот самый <Ranger>, который должен помочь вам ос...
+
+#4 TAKE path 34 (3 -> 4), pass 1
+    path deltas: p12 "Смена": 0 -> 6; 
+
+#5 ENTER location 4 "- Ну наконец-то, а то мы уже стали беспо...", visit 1
+    location deltas: (no parameter changes)
+    description #1 of 10 (in order)
+    TEXT: - Ну наконец-то, а то мы уже стали беспокоиться о здоровье ректора, - ответил гаалец, пропуская вас ...
+    exits:
+      Path 6 -> location 6 ("Так вы хотите ограбить банк?"): open
+    answer: path 6 -> location 6: Так вы хотите ограбить банк?
+
+#6 TAKE path 6 (4 -> 6), pass 1
+    path deltas: p13 "Пароль2": 0 -> 1; p14 "Смена2": 0 -> 1; 
+
+#7 ENTER location 6 "- Да, с вашей помощью. Банк находится в ...", visit 1
+    location deltas: (no parameter changes)
+    description #1 of 1 (in order)
+    TEXT: - Да, с вашей помощью. Банк находится в маленьком городке Газ-Гольдере, расположенном к северу от ст...
+    exits:
+      Path 7 -> location 13 ("Что ж, все предельно ясно"): open
+      Path 11 -> location 9 ("Как мне узнать время смены дежурства?"): open
+      Path 14 -> location 7 ("Какие есть соображения по поводу комбина"): open
+      Path 17 -> location 8 ("А почему вы сами не можете добыть эти св"): open
+    answer: path 7 -> location 13: Что ж, все предельно ясно
+    answer: path 11 -> location 9: Как мне узнать время смены дежурства?
+    answer: path 14 -> location 7: Какие есть соображения по поводу комбинации сейфа? Как подступиться к ...
+    answer: path 17 -> location 8: А почему вы сами не можете добыть эти сведения?
+=== end of trace ===

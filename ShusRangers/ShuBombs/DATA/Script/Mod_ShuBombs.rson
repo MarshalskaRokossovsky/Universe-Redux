@@ -1,0 +1,587 @@
+{
+  "MainDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\Main.txt",
+  "MainDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\Main.dat",
+  "CacheDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\CacheData.txt",
+  "CacheDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\CacheData.dat",
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -558,
+  "ViewPos.y":  -520,
+  "ScriptName":  "Mod_ShuBombs",
+  "ScriptFileOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.scr",
+  "ScriptTextOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\DATA\\Script\\Mod_ShuBombs.txt",
+  "ExportLangDat": true,
+  "ExportLangTxt": true,
+  "LangDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\Rus\\Lang.dat",
+  "LangDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuBombs\\CFG\\Rus\\Lang.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  140,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "Выход",
+          "AMsg.Num":  "0"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "<tStr>",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "<tStr>",
+          "DMsg.Num":  "1"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "SelectTarget",
+          "Pos.x":  80,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  15        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "LaunchNuke",
+          "Pos.x":  140,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  19        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "//Создание кастомного оружия для запуска нова-торпеды. Нужно, чтобы был радиус взрыва 700.",
+              "tdwd=InventNewCustomWeapon('nova',t_Weapon9);",
+              "SetCustomWeaponSE(tdwd,'Weapon.3','Weapon.NoGraph','Weapon.MissileHit',8);",
+              "SetCustomWeaponPrimaryData(tdwd,6,t_Weapon9,t_Weapon15);",
+              "SetCustomWeaponSizeAndCost(tdwd,1,1);",
+              "SetCustomWeaponDamageData(tdwd,1,1,4);",
+              "SetCustomWeaponShotData(tdwd,'Torpedo1',0,1500,700,6);",
+              "SetCustomWeaponAvailability(tdwd,'NotSold');",
+              "SetCustomMissileWeaponStats(tdwd,1500,10,500,0);",
+              "//Закапываем нова-торпеды и нейтронные бомбы на незаселенках",
+              "//Заносим в массив все незаселенки, пропускаем родную систему игрока и планеты Дицеи",
+              "ArrayClear(tempArr);",
+              "for(i=0;i<GalaxyStars();i=i+1) {",
+              "    tStar=GalaxyStar(i);",
+              "    if(tStar==PlanetToStar(GetShipHomePlanet(Player()))) continue;",
+              "    if(StarToCon(tStar) == StarToCon(PlanetToStar(PlanetPirateClan()))) continue;",
+              "    for(j=0;j<StarPlanets(tStar);j=j+1) {",
+              "        tPlanet=StarPlanets(tStar,j);",
+              "        if(PlanetOwner(tPlanet)==None) ArrayAdd(tempArr,Id(tPlanet));",
+              "    }",
+              "}",
+              "ArrayDelete(tempArr, 0); //Удаляем нулевой элемент, чтобы он не перемешивался",
+              "ArrayRandomize(150,tempArr);",
+              "nBombCount=Rnd(8,12);    //Число нейтронных бомб",
+              "novaCount=Rnd(1,3);    //Число нова-торпед",
+              "i=1;    //Начальная итерация",
+              "while(nBombCount) {    //Закапываем нейтронные бомбы",
+              "    tPlanet=IdToPlanet(tempArr[i]);",
+              "    AddItemToPlanet(tPlanet,CreateQuestItem('NeutronBomb'));",
+              "    nBombCount=nBombCount-1;",
+              "    i=i+1;",
+              "}",
+              "while(novaCount) {    //Закапываем нова-торпеды",
+              "    tPlanet=IdToPlanet(tempArr[i]);",
+              "    AddItemToPlanet(tPlanet,CreateQuestItem('NovaTorpedo'));",
+              "    novaCount=novaCount-1;",
+              "    i=i+1;",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  16,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ArrayClear(tempArr);",
+              "tStar = ShipStar(Player());",
+              "for (i = 0; i < StarShips(tStar); i = i + 1) {",
+              "  tShip = StarShips(tStar, i);",
+              "  if (Dist(Player(), tShip) > ShipRadarRange(Player())) continue;",
+              "  if (!ShipInNormalSpace(tShip)) continue;",
+              "  if (NoTargetToShip(tShip)) continue;",
+              "  if (IsPlayer(tShip)) continue;",
+              "  ArrayAdd(tempArr, tShip);",
+              "}",
+              "num = GAnswerData; //Ядерка или нова-торпеда",
+              "if (ArrayDim(tempArr) <= 1) tStr = '</color>' + \"В зоне действия не обнаружено вражеских кораблей\";",
+              "else tStr = '</color>' + \"Выберите цель:\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  80,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  18,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if (ArrayDim(tempArr) > 1) {",
+              "  for (int i = 1; i < ArrayDim(tempArr); i = i + 1) InjectAnswer('LaunchNuke', Name(tempArr[i]) + '<Object=' + tempArr[i] + ',23,17,0>', i);",
+              "}",
+              "InjectAnswer('LaunchNuke', \"Отмена\", -1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  20,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if (~GAnswerData) {",
+              "  tShip = tempArr[GAnswerData];",
+              "  tStr = '</color>' + \"Производится запуск ракеты в <Name(tShip)>\";",
+              "  tdwd = SpawnMissile(ShipStar(Player()), tShip, CoordX(Player()), CoordY(Player()), Angle(tShip, Player()), 4000, 5000, 400, 'nova', -1, FindBonusByNameInCfg('ShuNukes_Nova'));",
+              "  MissileOwner(tdwd, Player());",
+              "  for (i = 0; i < ShipItems(Player()); i = i + 1) {",
+              "    tdwd = ShipItems(Player(), i);",
+              "    if (EquipmentImageName(tdwd) == 'NovaTorpedo') {",
+              "      FreeItem(GetItemFromShip(Player(), tdwd));",
+              "      break;",
+              "    }",
+              "  }",
+              "} else tStr = '</color>' + \"Запуск отменен\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  23,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipDestroy(GetTalkShip(), 1);",
+              "ArrayClear(tempArr);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(GetTalkShip()) {",
+              "    if(ShipInNormalSpace(Player())) {",
+              "        if(ShipType(GetTalkShip()) == 'ShuNukes_SelectTargetNova') AddDialogOverride('SelectTarget', 20, 1);",
+              "    }",
+              "}"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd",
+          "Pos.x":  -100,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  7,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tempArr",
+          "Pos.x":  -100,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  8,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "i",
+          "Pos.x":  -100,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  9,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tStar",
+          "Pos.x":  -100,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  10,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tPlanet",
+          "Pos.x":  -100,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  11,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "j",
+          "Pos.x":  -60,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  12,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "nBombCount",
+          "Pos.x":  10,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  13,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "novaCount",
+          "Pos.x":  10,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  14,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tShip",
+          "Pos.x":  10,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  24,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "num",
+          "Pos.x":  10,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tStr",
+          "Pos.x":  -100,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  26,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  6,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "0",
+      "String":  "Выберите цель:"    
+    },
+    {
+      "#":  "1",
+      "String":  "В зоне действия не обнаружено вражеских кораблей"    
+    },
+    {
+      "#":  "2",
+      "String":  "Запуск отменен"    
+    },
+    {
+      "#":  "3",
+      "String":  "Производится запуск ракеты в <0>"    
+    },
+    {
+      "#":  "4",
+      "String":  "<0>"    
+    },
+    {
+      "#":  "5",
+      "String":  "Выход"    
+    }  
+  ]
+}
