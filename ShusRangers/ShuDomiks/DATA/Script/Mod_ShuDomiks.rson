@@ -12,8 +12,8 @@
     "MainDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuDomiks\\CFG\\Main.dat",
     "CacheDatIn": "E:\\disasm2500\\Mods\\ShusRangers\\ShuDomiks\\CFG\\CacheData.txt",
     "CacheDatOut": "E:\\disasm2500\\Mods\\ShusRangers\\ShuDomiks\\CFG\\CacheData.dat",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
     "Visual.Objects": 
     [
         {
@@ -5530,7 +5530,7 @@
                         "",
                         "                                            for(i = 1; retry_set > 0; i = i + 1)",
                         "                                            {",
-                        "                                                retry_set = FindEquipTargetForRattors(cur_group, target, i, tarr1, retry_set);",
+                        "                                                retry_set = FindEquipTargetForRattors(cur_group, target, i, tarr1, retry_set, hull_was_damaged);",
                         "                                            }",
                         "",
                         "                                            //Выводим уведомление об инфестации корабля игрока",

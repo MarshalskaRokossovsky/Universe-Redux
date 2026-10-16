@@ -1,0 +1,188 @@
+/** @file */
+struct TGalaxy {
+    __cls* cls;
+
+    _gap_32 _004;
+    _gap_32 _008;
+    _gap_32 _00C;
+    _gap_32 _010;
+    _gap_32 _014;
+    _gap_32 _018;
+    int id_ship;                        ///< ID последнего созданного корабля
+    _gap_32 _020;
+    _gap_32 _024;
+    int player_index;                   ///< номер игрока в списке рейнджеров
+    TList* stars;                       ///< список звезд
+    TList* holes;                       ///< список черных дыр
+    TList* vault_items;                 ///< список структур TStoredItem для предметов в хранилище Vault
+    TList* planets;                     ///< список планет
+    TList* rangers;                     ///< список рейнджеров
+    int pirate_count;                   ///< PirateCount @0x40: независимые пираты (без клана); раньше значилось как RC_list
+    int pirate_clan_count;              ///< PirateClanCount @0x44
+    int transport_count;                ///< TransportCount @0x48
+    int turn;                           ///< текущий ход
+    byte diff_levels[8];                ///< сложности партии
+    int gen_seed;                       ///< сид генерации галактики
+    int rnd_seed;                       ///< сид рандома
+    int volatile rangers_average_capital; ///< средний капитал рейнджеров
+    int _064;
+    float rangers_average_strength;     ///< средняя сила рейнджеров
+    int _06C;
+    _gap_32 _070;
+    _gap_32 _074;
+    int eminent_rangers[3];             ///< три самых лучших рейнджера?
+    _gap_32 _084;
+    _gap_32 _088;
+    _gap_32 _08C;
+    _gap_32 _090;
+    _gap_32 _094;
+    _gap_32 _098;
+    _gap_32 _09C;
+    _gap_32 _0A0;
+    _gap_32 _0A4;
+    _gap_32 _0A8;
+    _gap_32 _0AC;
+    _gap_32 _0B0;
+    _gap_32 _0B4;
+    _gap_32 _0B8;
+    _gap_32 _0BC;
+    TList* planet_news;         //< список новостей
+    TList* custom_weapon_infos; //Все объявленные кастомные пушки
+    TStar* keller_attack_star;  //< цель атаки Келлера
+    int keller_mission_state;           // KellerMissionState @0xCC
+    float checksum_d0;                  // ChecksumScalarD0 @0xD0
+    TDomResearchProgress dom_researches[3]; ///< прогресс исследований доминаторских программ
+    float _0EC; // 0.01
+    byte GTL; ///< ГТУ
+    _gap _0F1;
+    _gap _0F2;
+    _gap _0F3;
+    int _0F8;
+    int _0FC;
+    int _0FD;
+
+    int _100;
+    int _104;
+    int _108;
+    int _10C;
+    int _110;
+    int terron_weapon_lock_turn;        ///< ход
+    int terron_grow_lock_turn;          ///< ход
+    int terron_landing_lock_turn;       ///< ход
+    int terron_to_star;                 ///< ход
+    int keller_leave;                   ///< ход
+    int keller_new_research;            ///< ход
+    int blazer_landing;                 ///< ход
+    int blazer_self_destruction;        ///< ход
+    int terron_turn_win;                ///< ход
+    int keller_turn_win;                ///< ход
+    int blazer_turn_win;                ///< ход
+    int pirate_win_turn;                ///< ход
+    int pirate_win_type;                ///< ход
+    int coalition_defeated_turn;        ///< ход
+    _gap_32 _14C;
+    TList* scripts;                     ///< список всех скриптов (в том числе и неактивных?)
+    TList* _154;
+    TList* _158;
+    TList* _15C;
+    _gap_32 _160;
+    TList* sectors;              ///< список секторов
+    _gap_32 _168;
+    PTR _16C;  // указатель на массив элементов размером 0x60
+    _gap_32 _170;
+    _gap_32 _174;
+    _gap_32 _178;
+    bool iron_will_mode; 				//< маркер режима "железной воли"
+	byte hell_domiks; 					//< переключатель читов для усиления доминаторов: 0 - OFF, 1 - HORROR, 2 - NIGHTMARE, 3 - HELL
+	bool unknown_cheat1;				//< маркеры каких-то других читов
+	bool unknown_cheat2;
+    byte unknown_cheat3;
+    bool unknown_cheat4;
+    bool zawarudo;                      ///< маркер чита ZAWARUDO
+    byte _183;
+    STR _184;
+
+    // Тонкие настройки:
+    bool AA_enabled; ///вкл/выкл ТН
+    byte AA_kling_strength; //Уровень экипировки доминаторов: 50-500 (по умолчанию зависит от выбранной общей сложности, режим "авто") - шаг 6.25
+    byte AA_kling_aggro; //Агрессивность со стороны доминаторов: 50-500 (по умолчанию зависит от выбранной общей сложности, режим "авто") - шаг 6.25
+    byte AA_kling_spawn; //Частота спавна новых доминаторов: 50-500 (по умолчанию зависит от выбранной общей сложности, режим "авто") - шаг 6.25
+    byte AA_pirate_aggro; //Агрессивность со стороны пиратского клана: 50-200 (по умолчанию зависит от выбранной сложности пиратов, режим "авто") - шаг 6.25
+    byte AA_coal_aggro; //Агрессивность со стороны Коалиции: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_asteroid_mod; //Количество астероидов в каждой системе: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_sun_damage_mod; //Получаемый от звёзд урон: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_extra_inventions; //Бонус к стартовым технологиям: 0-255 (по умолчанию 0), повышает стартовый ТУ всех планет и, следовательно, ГТУ
+    byte AA_akrin_mod; //Соотношение числа акриновых вещей в магазинах оборудования: 0-100 (по умолчанию 30%)
+    byte AA_node_drop_mod; //Коэффициент числа выпадающих из доминаторов нодов: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_AB_drop_value_mod; //Ценность оборудования, выпадающего из кораблей в АБ: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_drop_value_mod; //Ценность оборудования, выпадающего из кораблей в обычном космосе: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_ag_planets; //Соотношение аграрных планет в Галактике: 0-10 (по умолчанию 5)
+    byte AA_mi_planets; //Соотношение планет со смешанной экономикой в Галактике: 0-10 (по умолчанию 5)
+    byte AA_in_planets; //Соотношение индустриальных планет в Галактике: 0-10 (по умолчанию 5)
+    byte AA_extra_rangers; //Количество дополнительных рейнджеров: 0-50 (по умолчанию 0)
+    byte AA_AB_hitpoints_mod; //Запас HP у кораблей в АБ: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_AB_damage_mod; //Урон кораблей в АБ: 50-200 (по умолчанию 100%) - шаг 6.25
+    byte AA_AI_tolerate_junk; //Лимит предметов в космосе системы, после которого боты начинают их расстреливать: 0-50 (по умолчанию 7)
+    byte AA_rnd_chaotic; //Все "броски" рандомизатора всегда будут случайными, становится доступен save scumming
+    byte AA_eq_knowledge_restricted; //Возможность использовать и чинить любое оборудования на любом ГТУ без ограничений
+    byte AA_ruins_near_stars; //Станции всегда будут строиться недалеко от центра системы
+    byte AA_ruins_targetting_full; //Вдали от игрока станции не пропускают выстрелы, и сражаются с той же эффективностью
+    byte AA_special_ships_in_game; //Возможность для игрока получать особые корпуса из "Перезагрузки": Скала, Болид, Убийца
+    byte AA_zero_start_exp; //Пираты, гражданские и военные корабли будут рождаться без стартового опыта
+    byte AA_AB_battle_royale; //Противники в АБ будут атаковать не только игрока, но и друг друга
+    byte AA_kling_racial_weapons; //Строго присвоить каждой серии доминаторов свой тип доступных особых орудий: вертиксы келлероидам, торпедники блазероидам, ИМХО терроноидам
+    byte AA_start_center; //Расположение стартовой системы игрока (по центру Галактики, если включено)
+    byte AA_max_range_missiles; //боты стреляют ракетами/торпедами с максимально возможной дистанции
+    byte AA_old_hyper; //Гиперперелёты между системами из КР1
+    byte AA_pirate_nodes; //Продажа нодов на пиратских станциях
+    byte AA_AI_use_shops; //Боты будут всегда получать оборудование из магазинов
+    byte AA_ruins_use_shops; //Станции могут получать оборудование из собственного магазина
+    byte AA_duplicate_arts; //Использование нескольких однотипных артефактов
+    byte AA_hull_growth; //Размер корпусов, появляющихся в магазинах: 0 - зависит от размера корпуса игрока, 1 - зависит от размера корпуса игрока, но растёт медленнее, 2 - зависит от ТУ планеты
+	byte AA_AB_equip_change; //Разрешение на смену оборудования во время аркадного боя
+	byte AA_linear_speed_formula; //Использование линейной формулы расчёта скорости кораблей, как в КР2
+	byte AA_missiles_bonus_not_split; //Прибавление акриновых бонусов к урону от ракет применяется на каждую ракету по отдельности (как в КР2), а не делится на число ракет в залпе
+
+	_gap _1AA;
+    _gap_32 _1AC;
+    TList* events;                      ///< список галактических событий
+    TList* interface_state_overrides;   ///< список оверрайдов состояния
+    TList* interface_text_overrides;    ///< список оверрайдов текста
+    TList* interface_image_overrides;   ///< список оверрайдов изображения
+    TList* interface_pos_overrides;     ///< список оверрайдов позиции
+    TList* interface_size_overrides;    ///< список оверрайдов размера
+    _gap_32 _1C8;
+	byte some_byte1;
+	byte galaxy_is_being_destroyed; //0/1 - маркер, что запущена функция по удалению объекта-галактики, по завершении выставляется обратно в 0
+	byte some_byte2;
+	byte some_byte3;
+    _gap_32 _1CC;  // CRC
+    byte _1D0;
+    _gap _1D1;
+    _gap _1D2;
+    _gap _1D3;
+};
+
+// Сверка с GAMESOURCE (aGalaxy.pas)
+static_assert(offsetof(TGalaxy, id_ship) == 0x1C, "TGalaxy.id_ship");
+static_assert(offsetof(TGalaxy, stars) == 0x2C, "TGalaxy.stars");
+static_assert(offsetof(TGalaxy, rangers) == 0x3C, "TGalaxy.rangers");
+static_assert(offsetof(TGalaxy, pirate_count) == 0x40, "TGalaxy.pirate_count");
+static_assert(offsetof(TGalaxy, pirate_clan_count) == 0x44, "TGalaxy.pirate_clan_count");
+static_assert(offsetof(TGalaxy, transport_count) == 0x48, "TGalaxy.transport_count");
+static_assert(offsetof(TGalaxy, turn) == 0x4C, "TGalaxy.turn");
+static_assert(offsetof(TGalaxy, diff_levels) == 0x50, "TGalaxy.diff_levels");
+static_assert(offsetof(TGalaxy, gen_seed) == 0x58, "TGalaxy.gen_seed");
+static_assert(offsetof(TGalaxy, rnd_seed) == 0x5C, "TGalaxy.rnd_seed");
+static_assert(offsetof(TGalaxy, planet_news) == 0xC0, "TGalaxy.planet_news");
+static_assert(offsetof(TGalaxy, keller_attack_star) == 0xC8, "TGalaxy.keller_attack_star");
+static_assert(offsetof(TGalaxy, keller_mission_state) == 0xCC, "TGalaxy.keller_mission_state");
+static_assert(offsetof(TGalaxy, dom_researches) == 0xD4, "TGalaxy.dom_researches");
+static_assert(offsetof(TGalaxy, GTL) == 0xF0, "TGalaxy.GTL");
+static_assert(offsetof(TGalaxy, terron_weapon_lock_turn) == 0x114, "TGalaxy.terron_weapon_lock_turn");
+static_assert(offsetof(TGalaxy, coalition_defeated_turn) == 0x148, "TGalaxy.coalition_defeated_turn");
+static_assert(offsetof(TGalaxy, scripts) == 0x150, "TGalaxy.scripts");
+static_assert(offsetof(TGalaxy, sectors) == 0x164, "TGalaxy.sectors");
+static_assert(offsetof(TGalaxy, iron_will_mode) == 0x17C, "TGalaxy.iron_will_mode");
+static_assert(offsetof(TGalaxy, AA_enabled) == 0x188, "TGalaxy.AA_enabled (CustomRules)");
+static_assert(offsetof(TGalaxy, events) == 0x1B4, "TGalaxy.events");

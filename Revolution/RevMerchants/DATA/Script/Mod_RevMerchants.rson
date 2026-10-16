@@ -12,8 +12,8 @@
     "MainDatOut": "E:\\disasm2500\\Mods\\Revolution\\RevMerchants\\CFG\\Main.dat",
     "CacheDatIn": "E:\\disasm2500\\Mods\\Revolution\\RevMerchants\\CFG\\CacheData.txt",
     "CacheDatOut": "E:\\disasm2500\\Mods\\Revolution\\RevMerchants\\CFG\\CacheData.dat",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
     "Visual.Objects": 
     [
         {

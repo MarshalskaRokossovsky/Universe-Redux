@@ -12,8 +12,8 @@
     "MainDatOut": "E:\\disasm2500\\Mods\\Expansion\\ExpBlackMarket\\CFG\\Main.dat",
     "CacheDatIn": "E:\\disasm2500\\Mods\\Expansion\\ExpBlackMarket\\CFG\\CacheData.txt",
     "CacheDatOut": "E:\\disasm2500\\Mods\\Expansion\\ExpBlackMarket\\CFG\\CacheData.dat",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
     "Visual.Objects": 
     [
         {
