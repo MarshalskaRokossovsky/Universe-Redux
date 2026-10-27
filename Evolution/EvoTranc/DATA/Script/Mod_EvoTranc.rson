@@ -12,8 +12,8 @@
     "MainDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoTranc\\CFG\\Main.dat",
     "CacheDatIn": "E:\\disasm2500\\Mods\\Evolution\\EvoTranc\\CFG\\CacheData.txt",
     "CacheDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoTranc\\CFG\\CacheData.dat",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
     "Visual.Objects": 
     [
         {
@@ -2648,7 +2648,8 @@
                         "if(NavCompCheck)InjectAnswer('NavComputer',\"Навигационный компьютер\",0);",
                         "InjectAnswer('ChangeEquip',\"Уменьшение оборудования\",0);",
                         "InjectAnswer('Recolor',\"Перекраска\",0);",
-                        "InjectAnswer('Skills',\"Комплект навыков\",0);",
+                        "//Комплект навыков только пока хоть один навык ниже того, что он даёт (иначе покупка ничего не меняет)",
+                        "if(ShipSkill(cur_Tranc,0) < 3 || ShipSkill(cur_Tranc,1) < 3 || ShipSkill(cur_Tranc,2) < 6) InjectAnswer('Skills',\"Комплект навыков\",0);",
                         "if(tNumber>1)InjectAnswer('Select',\"Выбрать другого транклюкатора\",0);",
                         "InjectAnswer('Exit',\"Пожалуй, пока что хватит\",2);"
                     ]

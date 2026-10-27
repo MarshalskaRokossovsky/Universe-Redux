@@ -1814,7 +1814,7 @@
      "#": 140,
      "Code.Type": "Turn",
      "Code": [
-      "if(AdvancedAdjustmentSet(0) && AdvancedAdjustmentSet(31)) InjectAnswer('PB_Nod', DeleteTags(\"Мне нужны ноды\"), 0);",
+      "if(AdvancedAdjustmentSet(0, -1) && AdvancedAdjustmentSet(31, -1)) InjectAnswer('PB_Nod', DeleteTags(\"Мне нужны ноды\"), 0);",
       "InjectAnswer('PB_Program', DeleteTags(\"Хочу приобрести программы\"), 0);",
       "InjectAnswer('PB_Chameleon', DeleteTags(\"Я слышал, у вас есть камуфляжное устройство\"), 0);"
      ]
