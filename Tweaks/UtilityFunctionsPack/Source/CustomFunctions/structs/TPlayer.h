@@ -39,18 +39,9 @@ struct TPlayer: public TRanger {
     _gap _58A;
     _gap _58B;
 	TList* script_ships_objects;
-    _gap _590;
-    _gap _591;
-    _gap _592;
-    _gap _593;
-    _gap _594;
-    _gap _595;
-    _gap _596;
-    _gap _597;
-    _gap _598;
-    _gap _599;
-    _gap _59A;
-    _gap _59B;
+    TShip* quest_target_kill_ship;      // QuestTargetKillShip @0x590: цель текущего квеста KillShip (читает ИИ пиратов)
+    TShip* quest_target_defend_ship;    // QuestTargetDefendShip @0x594: защищаемый корабль квеста DefendShip (читает ИИ пиратов/руин)
+    TStar* quest_target_defend_star;    // QuestTargetDefendStar @0x598: нигде не читается
     TList* global_item_storage;
     UNK debt;
     int debt_date;
@@ -357,3 +348,6 @@ static_assert(offsetof(TPlayer, choosed_ship_set) == 0x6C0, "TPlayer.choosed_shi
 static_assert(offsetof(TPlayer, ship_sets) == 0x6C4, "TPlayer.ship_sets");
 static_assert(offsetof(TPlayer, pirate_partners) == 0xDA4, "TPlayer.pirate_partners");
 static_assert(offsetof(TPlayer, cur_bridge) == 0xDD4, "TPlayer.cur_bridge");
+static_assert(offsetof(TPlayer, quest_target_kill_ship) == 0x590, "TPlayer.quest_target_kill_ship");
+static_assert(offsetof(TPlayer, quest_target_defend_ship) == 0x594, "TPlayer.quest_target_defend_ship");
+static_assert(offsetof(TPlayer, quest_target_defend_star) == 0x598, "TPlayer.quest_target_defend_star");

@@ -71,18 +71,9 @@ struct TStar {
     _gap _081;
     _gap _082;
     _gap _083;
-    _gap _084;
-    _gap _085;
-    _gap _086;
-    _gap _087;
-    _gap _088;
-    _gap _089;
-    _gap _08A;
-    _gap _08B;
-    _gap _08C;
-    _gap _08D;
-    _gap _08E;
-    _gap _08F;
+    int last_dominator_presence_turn;   // LastDominatorPresenceTurn @0x84
+    int last_pirate_presence_turn;   // LastPiratePresenceTurn @0x88
+    int last_liberation_rewards_turn;   // LastLiberationRewardsTurn @0x8C
     _gap _090;
     _gap _091;
     _gap _092;
@@ -221,3 +212,6 @@ static_assert(offsetof(TStar, series) == 0x49, "TStar.series (Status.DominatorSe
 static_assert(offsetof(TStar, safe_radius) == 0x5C, "TStar.safe_radius");
 static_assert(offsetof(TStar, sector) == 0xD0, "TStar.sector");
 static_assert(offsetof(TStar, no_come_kling) == 0xD8, "TStar.no_come_kling");
+static_assert(offsetof(TStar, last_dominator_presence_turn) == 0x84, "TStar.last_dominator_presence_turn");
+static_assert(offsetof(TStar, last_pirate_presence_turn) == 0x88, "TStar.last_pirate_presence_turn");
+static_assert(offsetof(TStar, last_liberation_rewards_turn) == 0x8C, "TStar.last_liberation_rewards_turn");

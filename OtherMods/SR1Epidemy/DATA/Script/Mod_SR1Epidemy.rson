@@ -6,19 +6,17 @@
     "ScriptName": "Mod_SR1Epidemy",
     "ScriptFileOut": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\DATA\\Script\\Mod_SR1Epidemy.scr",
     "ScriptTextOut": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\DATA\\Script\\Mod_SR1Epidemy.txt",
-    "LangDatIn": "",
-    "LangDatOut": "",
-    "MainDatIn": "",
-    "MainDatOut": "",
-    "CacheDatIn": "",
-    "CacheDatOut": "",
-    "ExportLangTxt": false,
-    "ExportLangDat": false,
-    "Visual.Objects": 
-    [
+    "LangDatIn": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\Rus\\Lang.txt",
+    "LangDatOut": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\Rus\\Lang.dat",
+    "MainDatIn": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\Main.txt",
+    "MainDatOut": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\Main.dat",
+    "CacheDatIn": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\CacheData.txt",
+    "CacheDatOut": "E:\\disasm2500\\Mods\\OtherMods\\SR1Epidemy\\CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": [
         {
-            "DialogAnswers": 
-            [
+            "DialogAnswers": [
                 {
                     "Type": "TDialogAnswer",
                     "Name": "",
@@ -130,8 +128,7 @@
                     "AMsg.Num": "10"
                 }
             ],
-            "DialogMessages": 
-            [
+            "DialogMessages": [
                 {
                     "Type": "TDialogMsg",
                     "Name": "",
@@ -213,8 +210,7 @@
                     "DMsg.Num": "7"
                 }
             ],
-            "Dialogs": 
-            [
+            "Dialogs": [
                 {
                     "Type": "TDialog",
                     "Name": "dTalk",
@@ -224,8 +220,7 @@
                     "#": 46
                 }
             ],
-            "Groups": 
-            [
+            "Groups": [
                 {
                     "Type": "TGroup",
                     "Name": "PlayerGroup",
@@ -285,8 +280,7 @@
                     "Ruins": ""
                 }
             ],
-            "Operations": 
-            [
+            "Operations": [
                 {
                     "Type": "Top",
                     "Name": "",
@@ -295,8 +289,7 @@
                     "Parent": -1,
                     "#": 43,
                     "Code.Type": "Init",
-                    "Code": 
-                    [
+                    "Code": [
                         "//vState: 0 - ещё не говорили, 1 - отказ, 2 - задание взято, 3 - выполнено, 4 - провал (ждём исхода), 5 - исход идёт",
                         "//Варианты квеста: Talk.SR1Epidemy.N (см. Lang), общие строки: Talk.SR1Epidemy.Common",
                         "",
@@ -463,8 +456,15 @@
                         "    else {",
                         "        ShipJoin(ill, s);",
                         "        OrderLock(s, 1);",
+                        "        OrderNone(s);",
                         "        NoTargetToShip(s, 3); //Запрет на ограбление для ИИ",
                         "        if(GetShipPlanet(s)) OrderTakeOff(s);",
+                        "        vWaitX = CoordX(s);",
+                        "        vWaitY = CoordY(s);",
+                        "        if(DistCoords(vWaitX, vWaitY, 0, 0) < 1500) {",
+                        "            vWaitX = 2000;",
+                        "            vWaitY = 0;",
+                        "        }",
                         "        vShipName = Name(s);",
                         "        vGoods = int(EpiKey('Goods'));",
                         "        vAmount = max(int(EpiKey('Amount')), 1);",
@@ -477,6 +477,18 @@
                         "        vJoined = 1;",
                         "        UpsurgeGoods(IdToPlanet(PlanId2), vGoods); //Распродажа нужного товара на планете назначения",
                         "    }",
+                        "}",
+                        "",
+                        "//Небольшой маршрут вокруг места ожидания; не преследуем игрока.",
+                        "function EpiWait(s) {",
+                        "    if(!ShipInNormalSpace(s)) exit;",
+                        "    if(ShipOrder(s) == 1) exit;",
+                        "    int corner = CurTurn() % 4;",
+                        "    int dx = 250;",
+                        "    int dy = 250;",
+                        "    if(corner == 1 || corner == 2) dx = -250;",
+                        "    if(corner == 2 || corner == 3) dy = -250;",
+                        "    OrderMove(s, vWaitX + dx, vWaitY + dy);",
                         "}",
                         "",
                         "function EpiRelease() {",
@@ -494,9 +506,10 @@
                         "    int today = CurTurn();",
                         "    int dd = 0;",
                         "    if(vState == 2) {",
+                        "        vBought = 0;",
                         "        for(int k5 = GalaxyEvents() - 1; k5 >= 0; k5 = k5 - 1) {",
                         "            dd = GalaxyEventDate(k5);",
-                        "            if(dd < vScanFrom) break;",
+                        "            if(dd < vBegin) break;",
                         "            if(dd >= today && !inc) continue;",
                         "            if(GalaxyEventType(k5) == 'PlayerBuysGoodsFromPlanet') {",
                         "                if(GalaxyEventData(k5, 0) == vGoods && GalaxyEventData(k5, 3) == PlanId2) vBought = vBought + GalaxyEventData(k5, 1);",
@@ -537,12 +550,14 @@
                         "",
                         "function EpiTakeAlt() {",
                         "    dword it = EpiFindAlt();",
+                        "    result = 0;",
                         "    if(it) {",
                         "        if(vAltArt) {",
                         "            if(ItemIsInUse(it, Player())) ItemIsInUse(it, Player(), 0);",
                         "            FreeItem(GetArtFromShip(Player(), it));",
                         "        }",
                         "        else FreeItem(GetItemFromShip(Player(), it));",
+                        "        result = 1;",
                         "    }",
                         "}",
                         "",
@@ -555,6 +570,9 @@
                         "    ta3 = EpiDlg('TextAltAsk');",
                         "    ta4 = EpiCommon('Bye');",
                         "    ta5 = EpiDlg('TextAltGive');",
+                        "    if(vHasItem) {",
+                        "        if(Dist(GroupToShip(ill), Player()) >= 500) vHasItem = 0;",
+                        "    }",
                         "    if(m == 0) {",
                         "        ta1 = EpiDlg('TextMainAgree1');",
                         "        ta2 = EpiDlg('TextMainRefuse');",
@@ -583,6 +601,7 @@
                         "    dword s = GroupToShip(ill);",
                         "    if(vPending == 1) {",
                         "        ShipMoney(Player(), ShipMoney(Player()) + GalaxyMoney(2));",
+                        "        Sound('Sound.Buy');",
                         "        Ether(4, 'E3394CE0-4B64-4300-AC59-484317DF4BD4', '', s);",
                         "        vState = 3;",
                         "        tmsg = EpiDlg('TextRight');",
@@ -600,8 +619,8 @@
                         "    dword s = GroupToShip(ill);",
                         "    if(EpiKey(vNewsKey) != '') {",
                         "        if(EpiKey(vNewsKey + 'Type') == '0') Ether(0, '', EpiText(vNewsKey));",
-                        "        else if(ShipInNormalSpace(s)) Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ' ' + EpiText(vNewsKey), s);",
-                        "        else Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ' ' + EpiText(vNewsKey));",
+                        "        else if(ShipInNormalSpace(s)) Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ':<br>' + EpiText(vNewsKey), s);",
+                        "        else Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ':<br>' + EpiText(vNewsKey));",
                         "    }",
                         "}",
                         "",
@@ -685,8 +704,7 @@
                     "Parent": -1,
                     "#": 44,
                     "Code.Type": "Global",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(GRunFrom == 3) {",
                         "    if(!SR1Epidemy_Last) SR1Epidemy_Last = CurTurn(); //Первая пауза отсчитывается от начала игры",
                         "    if(CurTurn() - SR1Epidemy_Last > int(CT('Talk.SR1Epidemy.Cooldown'))) GRun();",
@@ -701,8 +719,7 @@
                     "Parent": -1,
                     "#": 45,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(!vJoined) {",
                         "    EpiSelect();",
                         "    exit;",
@@ -715,7 +732,7 @@
                         "}",
                         "EpiScanBuys(0);",
                         "if(vState == 0) {",
-                        "    if(CountTurn(Player(), tship) < 5) Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ' ' + EpiText('SendingEmail'), tship);",
+                        "    if(CountTurn(Player(), tship) < 5) Ether(1, '', '<clr' + '>' + vShipName + '<clrEnd' + '>' + ':<br>' + EpiText('SendingEmail'), tship);",
                         "    if(CurTurn() - vBegin > 9) { //Игрок так и не откликнулся",
                         "        EpiRelease();",
                         "        exit;",
@@ -751,8 +768,7 @@
                     "Parent": -1,
                     "#": 47,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tship = GroupToShip(ill);",
                         "EpiScanBuys(1);",
                         "if(vState == 0) {",
@@ -764,12 +780,10 @@
                         "if(vState == 2) {",
                         "    if(GoodsCount(Player(), vGoods) >= vAmount) {",
                         "        if(Dist(tship, Player()) >= 500) {",
-                        "            if(EpiKey('TextFlyNearer') != '') {",
-                        "                tmsg = EpiDlg('TextFlyNearer');",
-                        "                EpiAns(4);",
-                        "                DChange(4);",
-                        "                exit;",
-                        "            }",
+                        "            tmsg = EpiCommon('FlyNearer');",
+                        "            EpiAns(4);",
+                        "            DChange(4);",
+                        "            exit;",
                         "        }",
                         "        tmsg = EpiDlgOr('TextMainA3', 'TextWeWait');",
                         "        EpiAns(6);",
@@ -797,8 +811,7 @@
                     "Parent": -1,
                     "#": 49,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "DAdd(0);",
                         "DAdd(1);"
                     ]
@@ -811,8 +824,7 @@
                     "Parent": -1,
                     "#": 51,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(vStep2) DAdd(2);",
                         "else {",
                         "    DAdd(3);",
@@ -829,8 +841,7 @@
                     "Parent": -1,
                     "#": 53,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "DAdd(3);",
                         "DAdd(4);",
                         "if(vAlt) DAdd(5);"
@@ -844,8 +855,7 @@
                     "Parent": -1,
                     "#": 55,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(vState == 0) {",
                         "    DAdd(3);",
                         "    DAdd(4);",
@@ -862,8 +872,7 @@
                     "Parent": -1,
                     "#": 57,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "DAdd(7);"
                     ]
                 },
@@ -875,8 +884,7 @@
                     "Parent": -1,
                     "#": 59,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Вопрос про другой способ помочь только до принятия задания; после - лишь передача предмета, если он есть",
                         "if(vHasItem) DAdd(6);",
                         "DAdd(7);"
@@ -890,8 +898,7 @@
                     "Parent": -1,
                     "#": 61,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "DAdd(8);",
                         "if(EpiKey('TextRefuse') != '') DAdd(9);",
                         "if(vHasItem) DAdd(6);",
@@ -906,8 +913,7 @@
                     "Parent": -1,
                     "#": 63,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "DAdd(10);"
                     ]
                 },
@@ -919,8 +925,7 @@
                     "Parent": -1,
                     "#": 65,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tmsg = EpiDlg('TextMainA2');",
                         "EpiAns(1);",
                         "DChange(1);",
@@ -935,8 +940,7 @@
                     "Parent": -1,
                     "#": 67,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "vState = 1;",
                         "vBegin = CurTurn();",
                         "vRefuseKey = 'TextRefuseEnd';",
@@ -954,8 +958,7 @@
                     "Parent": -1,
                     "#": 69,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tmsg = EpiDlg('TextMainAskForHelp2');",
                         "EpiAns(2);",
                         "DChange(2);",
@@ -970,8 +973,7 @@
                     "Parent": -1,
                     "#": 71,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "vState = 2;",
                         "vBegin = CurTurn();",
                         "vEnd = vBegin + vMaxDay;",
@@ -992,8 +994,7 @@
                     "Parent": -1,
                     "#": 73,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "vState = 1;",
                         "vBegin = CurTurn();",
                         "vRefuseKey = 'TextRefuseEnd2';",
@@ -1012,8 +1013,7 @@
                     "Parent": -1,
                     "#": 75,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "tmsg = EpiDlg('TextAltAnswer');",
                         "EpiAns(3);",
                         "DChange(3);",
@@ -1028,10 +1028,15 @@
                     "Parent": -1,
                     "#": 77,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
-                        "EpiTakeAlt();",
+                    "Code": [
+                        "if(!EpiTakeAlt()) {",
+                        "    tmsg = EpiDlg('TextAltAnswer');",
+                        "    EpiAns(3);",
+                        "    DChange(3);",
+                        "    exit;",
+                        "}",
                         "ShipMoney(Player(), ShipMoney(Player()) + GalaxyMoney(2));",
+                        "Sound('Sound.Buy');",
                         "if(vState == 2) Ether(4, 'E3394CE0-4B64-4300-AC59-484317DF4BD4', '', GroupToShip(ill));",
                         "vState = 3;",
                         "tmsg = EpiDlg('TextAltGiven');",
@@ -1048,8 +1053,7 @@
                     "Parent": -1,
                     "#": 80,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "EpiScanBuys(1);",
                         "ShipGoods(Player(), vGoods, -vAmount);",
                         "vPending = 1;",
@@ -1076,8 +1080,7 @@
                     "Parent": -1,
                     "#": 82,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "Ether(5, 'E3394CE0-4B64-4300-AC59-484317DF4BD4', '', GroupToShip(ill));",
                         "vState = 4;",
                         "vFateTurn = CurTurn();",
@@ -1095,8 +1098,7 @@
                     "Parent": -1,
                     "#": 84,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "EpiResult();",
                         "EpiAns(4);",
                         "DChange(4);",
@@ -1111,11 +1113,11 @@
                     "Parent": -1,
                     "#": 85,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Приветствие дипломата - диалог из Turn-кода состояния корабля (как в оригинале), а не из скриптового Turn: иначе Dialog в начале дня вешает ход",
                         "tship = GroupToShip(ill);",
                         "if(tship) {",
+                        "    if(vState < 3) EpiWait(tship);",
                         "    if(vState == 0 || vState == 2) {",
                         "        if(vState == 0 || GoodsCount(Player(), vGoods) >= vAmount) {",
                         "            if(CurTurn() - vLastHail >= 3 && ShipInNormalSpace(tship) && ShipInNormalSpace(Player()) && ShipInStar(Player(), GalaxyStar(StarId1 - 1)) && Dist(tship, Player()) < 500) {",
@@ -1128,8 +1130,7 @@
                     ]
                 }
             ],
-            "Planets": 
-            [
+            "Planets": [
                 {
                     "Type": "TPlanet",
                     "Name": "Planet1",
@@ -1146,8 +1147,7 @@
                     "Dialog": -1
                 }
             ],
-            "Ships": 
-            [
+            "Ships": [
                 {
                     "Type": "TStarShip",
                     "Name": "",
@@ -1175,8 +1175,7 @@
                     "Ruins": ""
                 }
             ],
-            "Stars": 
-            [
+            "Stars": [
                 {
                     "Type": "TStar",
                     "Name": "Star1",
@@ -1190,8 +1189,7 @@
                     "NoComeKling": true
                 }
             ],
-            "States": 
-            [
+            "States": [
                 {
                     "Type": "TState",
                     "Name": "PlayerState",
@@ -1229,8 +1227,7 @@
                     "EMsg": ""
                 }
             ],
-            "Variables": 
-            [
+            "Variables": [
                 {
                     "Type": "TVar",
                     "Name": "SR1Epidemy_Last",
@@ -1626,12 +1623,33 @@
                     "Var.Type": "Str",
                     "Init": "",
                     "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "vWaitX",
+                    "Pos.x": -300,
+                    "Pos.y": 1200,
+                    "Parent": -1,
+                    "#": 86,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "vWaitY",
+                    "Pos.x": -300,
+                    "Pos.y": 1200,
+                    "Parent": -1,
+                    "#": 87,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
                 }
             ]
         }
     ],
-    "Visual.Links": 
-    [
+    "Visual.Links": [
         {
             "Type": "TGraphLink",
             "Begin": 38,
@@ -1922,13 +1940,6 @@
         {
             "Type": "TGraphLink",
             "Begin": 55,
-            "End": 76,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 55,
             "End": 78,
             "Nom": 0,
             "Arrow": true
@@ -1937,13 +1948,6 @@
             "Type": "TGraphLink",
             "Begin": 57,
             "End": 78,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 59,
-            "End": 76,
             "Nom": 0,
             "Arrow": true
         },
@@ -1965,13 +1969,6 @@
             "Type": "TGraphLink",
             "Begin": 61,
             "End": 81,
-            "Nom": 0,
-            "Arrow": true
-        },
-        {
-            "Type": "TGraphLink",
-            "Begin": 61,
-            "End": 76,
             "Nom": 0,
             "Arrow": true
         },
@@ -2068,8 +2065,7 @@
         }
     ],
     "BlockPar.EC.Total.Strings": 1,
-    "BlockPar.EC": 
-    [
+    "BlockPar.EC": [
         {
             "#": "17",
             "String": "<0>"

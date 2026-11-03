@@ -12,13 +12,11 @@
     "MainDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoDreadnought\\CFG\\Main.dat",
     "CacheDatIn": "E:\\disasm2500\\Mods\\Evolution\\EvoDreadnought\\CFG\\CacheData.txt",
     "CacheDatOut": "E:\\disasm2500\\Mods\\Evolution\\EvoDreadnought\\CFG\\CacheData.dat",
-    "ExportLangTxt": true,
-    "ExportLangDat": true,
-    "Visual.Objects": 
-    [
+    "ExportLangTxt": false,
+    "ExportLangDat": false,
+    "Visual.Objects": [
         {
-            "Groups": 
-            [
+            "Groups": [
                 {
                     "Type": "TGroup",
                     "Name": "Dreadnought",
@@ -165,8 +163,7 @@
                     "Ruins": ""
                 }
             ],
-            "Operations": 
-            [
+            "Operations": [
                 {
                     "Type": "Top",
                     "Name": "",
@@ -175,8 +172,7 @@
                     "Parent": -1,
                     "#": 3,
                     "Code.Type": "Global",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(!GCntRun(GScriptName)) GRun();"
                     ]
                 },
@@ -188,8 +184,7 @@
                     "Parent": -1,
                     "#": 4,
                     "Code.Type": "Init",
-                    "Code": 
-                    [
+                    "Code": [
                         "//Вешаем на игрока инфошку для подсветки числа батарейных орудий на многопушечных кораблях",
                         "ShipAddCustomShipInfo(Player(), 'GunBatteryLabelsSwitcher');",
                         "",
@@ -1920,7 +1915,58 @@
                         "    //Учитываем капитана",
                         "    i = i + 1;",
                         "    result = i;",
-                        "}"
+                        "}",
+                        "",
+                        "// Fixed salvos for commercially available capital hulls.",
+                        "function EvoSyncCommCapitalShip(dword ship)",
+                        "{",
+                        "    if(!ship) exit;",
+                        "    int attacks = 0;",
+                        "    dword hull = ShipItems(ship, 0);",
+                        "    int special = -1;",
+                        "    str hull_name = '';",
+                        "    if(hull) special = HullSpecial(hull);",
+                        "    if(special >= 0) hull_name = BonusNumInCfg(special);",
+                        "    if(CurrentMods('OtherMods\\DreadnoughtsForAll')) {",
+                        "        if(hull_name == 'DreadnoughtMalocComm') attacks = 2;",
+                        "        if(hull_name == 'DreadnoughtPelengComm') attacks = 2;",
+                        "        if(hull_name == 'DreadnoughtPeopleComm') attacks = 2;",
+                        "        if(hull_name == 'DreadnoughtFeiComm') attacks = 2;",
+                        "        if(hull_name == 'DreadnoughtGaalComm') attacks = 2;",
+                        "    }",
+                        "    if(CurrentMods('OtherMods\\FlagmanForAll')) {",
+                        "        if(hull_name == 'FlagmanMalocComm') attacks = 2;",
+                        "        if(hull_name == 'FlagmanPelengComm') attacks = 1;",
+                        "        if(hull_name == 'FlagmanPeopleComm') attacks = 1;",
+                        "        if(hull_name == 'FlagmanFeiComm') attacks = 1;",
+                        "        if(hull_name == 'FlagmanGaalComm') attacks = 1;",
+                        "    }",
+                        "    if(!CurrentMods('Evolution\\EvoDreadnought')) attacks = 0;",
+                        "    if(ShipFindCustomShipInfoByType(ship, 'EvoArmada_CapitalShipInfos') >= 0) attacks = 0;",
+                        "    dword info;",
+                        "    int info_index = ShipFindCustomShipInfoByType(ship, 'EvoDreadnought_CommCapitalSalvos');",
+                        "    if(info_index < 0) {",
+                        "        if(!attacks) exit;",
+                        "        info = ShipAddCustomShipInfo(ship, 'EvoDreadnought_CommCapitalSalvos', 'NoShow');",
+                        "    }",
+                        "    else info = info_index;",
+                        "    int previous = ShipCustomShipInfoData(ship, info, 1);",
+                        "    int current = ShipSpecialBonuses(ship, bonAttacks);",
+                        "    if(attacks != previous) {",
+                        "        ShipSpecialBonuses(ship, bonAttacks, current - previous + attacks);",
+                        "        ShipCustomShipInfoData(ship, info, 1, attacks);",
+                        "    }",
+                        "    if(!attacks) ShipDeleteCustomShipInfo(ship, info);",
+                        "}",
+                        "function EvoSyncCommCapitalHulls()",
+                        "{",
+                        "    EvoSyncCommCapitalShip(Player());",
+                        "    for(int ranger_index = 0; ranger_index < GalaxyRangers(); ranger_index = ranger_index + 1) {",
+                        "        dword ranger = GalaxyRangers(ranger_index);",
+                        "        if(ranger != Player()) EvoSyncCommCapitalShip(ranger);",
+                        "    }",
+                        "}",
+                        "EvoSyncCommCapitalHulls();"
                     ]
                 },
                 {
@@ -1931,8 +1977,8 @@
                     "Parent": -1,
                     "#": 10,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
+                        "EvoSyncCommCapitalHulls();",
                         "//Запоминаем текущий ГТУ, который часто используется в различных функциях",
                         "GTL = GalaxyTechLevel();",
                         "",
@@ -2219,8 +2265,7 @@
                     "Parent": 13,
                     "#": 21,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderLock(CurShip, 1);",
                         "//Текущая система",
                         "s = ShipStar(CurShip);",
@@ -2379,8 +2424,7 @@
                     "Parent": -1,
                     "#": 39,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderLock(CurShip, 0);"
                     ]
                 },
@@ -2392,8 +2436,7 @@
                     "Parent": -1,
                     "#": 60,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//GetData(0) - таймер до начала следующего патруля",
                         "//GetData(3) - ГТУ, на котором данный корабль последний раз обновлял размер корпуса",
                         "",
@@ -2440,8 +2483,7 @@
                     "Parent": -1,
                     "#": 61,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipInHyperSpace(CurShip)) exit;",
                         "",
                         "//Если в патрулируемой системе начался бой, переводим галеон в боевой (свободный) стейт",
@@ -2471,8 +2513,7 @@
                     "Parent": -1,
                     "#": 62,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipInHyperSpace(CurShip)) exit;",
                         "",
                         "//Если бой в текущей системе завершился, переводим галеон в патрульный стейт и выставляем маркер о необходимости вернуться на планету",
@@ -2491,8 +2532,7 @@
                     "Parent": -1,
                     "#": 70,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "//GetData(0) - таймер до начала следующего патруля",
                         "//GetData(3) - ГТУ, на котором данный корабль последний раз обновлял размер корпуса",
                         "",
@@ -2538,8 +2578,7 @@
                     "Parent": -1,
                     "#": 71,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipInHyperSpace(CurShip)) exit;",
                         "",
                         "//Если в патрулируемой системе начался бой, переводим фрегат в боевой (свободный) стейт",
@@ -2569,8 +2608,7 @@
                     "Parent": -1,
                     "#": 72,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipInHyperSpace(CurShip)) exit;",
                         "",
                         "//Если бой в текущей системе завершился, переводим фрегат в патрульный стейт и выставляем маркер о необходимости вернуться на планету",
@@ -2589,8 +2627,7 @@
                     "Parent": -1,
                     "#": 74,
                     "Code.Type": "DialogBegin",
-                    "Code": 
-                    [
+                    "Code": [
                         "cur_ship = GetTalkShip();",
                         "if(cur_ship)",
                         "{",
@@ -2621,8 +2658,7 @@
                     "Parent": -1,
                     "#": 78,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(GetData() > 0) {",
                         "    //Проверяем, не сел ли куда военный",
                         "    if(!ShipInNormalSpace(CurShip)) {",
@@ -2653,8 +2689,7 @@
                     "Parent": -1,
                     "#": 81,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOut(CurShip);"
                     ]
                 },
@@ -2666,8 +2701,7 @@
                     "Parent": -1,
                     "#": 84,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderLanding(CurShip,ShipOrderObj(def_ship));"
                     ]
                 },
@@ -2679,8 +2713,7 @@
                     "Parent": -1,
                     "#": 90,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderJump(CurShip,ShipOrderObj(def_ship));"
                     ]
                 },
@@ -2692,8 +2725,7 @@
                     "Parent": -1,
                     "#": 93,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "OrderFollowShip(CurShip,def_ship);"
                     ]
                 },
@@ -2705,15 +2737,13 @@
                     "Parent": -1,
                     "#": 94,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "if(ShipOrder(def_ship) == 3) OrderJump(CurShip,ShipOrderObj(def_ship));",
                         "else if(ShipInNormalSpace(def_ship)) OrderJump(CurShip,ShipStar(def_ship));"
                     ]
                 }
             ],
-            "Places": 
-            [
+            "Places": [
                 {
                     "Type": "TPlace",
                     "Name": "DreadnoughtRoute",
@@ -2757,8 +2787,7 @@
                     "Obj2": -1
                 }
             ],
-            "Planets": 
-            [
+            "Planets": [
                 {
                     "Type": "TPlanet",
                     "Name": "SpawnPlanet",
@@ -2775,8 +2804,7 @@
                     "Dialog": -1
                 }
             ],
-            "Ships": 
-            [
+            "Ships": [
                 {
                     "Type": "TStarShip",
                     "Name": "",
@@ -2804,8 +2832,7 @@
                     "Ruins": ""
                 }
             ],
-            "Stars": 
-            [
+            "Stars": [
                 {
                     "Type": "TStar",
                     "Name": "SpawnStar",
@@ -2819,8 +2846,7 @@
                     "NoComeKling": false
                 }
             ],
-            "Statements": 
-            [
+            "Statements": [
                 {
                     "Type": "Tif",
                     "Name": "",
@@ -2829,8 +2855,7 @@
                     "Parent": -1,
                     "#": 16,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "Rnd(1, 100) <= 15"
                     ]
                 },
@@ -2842,8 +2867,7 @@
                     "Parent": -1,
                     "#": 17,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInNormalSpace(CurShip)"
                     ]
                 },
@@ -2855,8 +2879,7 @@
                     "Parent": -1,
                     "#": 18,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!StarBattle(ShipStar(CurShip))"
                     ]
                 },
@@ -2868,8 +2891,7 @@
                     "Parent": 21,
                     "#": 19,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "StarBattle(s)"
                     ]
                 },
@@ -2881,8 +2903,7 @@
                     "Parent": -1,
                     "#": 20,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!StarBattle(ShipStar(CurShip))"
                     ]
                 },
@@ -2894,8 +2915,7 @@
                     "Parent": 13,
                     "#": 22,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -2907,8 +2927,7 @@
                     "Parent": -1,
                     "#": 30,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!ShipIsTakeoff(Player())"
                     ]
                 },
@@ -2920,8 +2939,7 @@
                     "Parent": 20,
                     "#": 36,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -2933,8 +2951,7 @@
                     "Parent": -1,
                     "#": 38,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipCustomShipInfoData(CurShip, 'Dreadnought_Infos', 1) <= CurTurn()"
                     ]
                 },
@@ -2946,8 +2963,7 @@
                     "Parent": -1,
                     "#": 42,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "StarBattle(ShipStar(CurShip))"
                     ]
                 },
@@ -2959,8 +2975,7 @@
                     "Parent": -1,
                     "#": 43,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "EndState"
                     ]
                 },
@@ -2972,8 +2987,7 @@
                     "Parent": -1,
                     "#": 44,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "1"
                     ]
                 },
@@ -2985,8 +2999,7 @@
                     "Parent": -1,
                     "#": 79,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "def_ship < 1"
                     ]
                 },
@@ -2998,8 +3011,7 @@
                     "Parent": -1,
                     "#": 80,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "def_ship > 0"
                     ]
                 },
@@ -3011,8 +3023,7 @@
                     "Parent": -1,
                     "#": 82,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInNormalSpace(CurShip)"
                     ]
                 },
@@ -3024,8 +3035,7 @@
                     "Parent": -1,
                     "#": 83,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) == 2 && ShipTurnBeforeEndOrder(def_ship) <= 2"
                     ]
                 },
@@ -3037,8 +3047,7 @@
                     "Parent": -1,
                     "#": 85,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) != 2 || ShipTurnBeforeEndOrder(def_ship) > 2"
                     ]
                 },
@@ -3050,8 +3059,7 @@
                     "Parent": -1,
                     "#": 86,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) == 3"
                     ]
                 },
@@ -3063,8 +3071,7 @@
                     "Parent": -1,
                     "#": 87,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipOrder(def_ship) != 3"
                     ]
                 },
@@ -3076,8 +3083,7 @@
                     "Parent": -1,
                     "#": 88,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipTurnBeforeEndOrder(def_ship) > 2"
                     ]
                 },
@@ -3089,8 +3095,7 @@
                     "Parent": -1,
                     "#": 89,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipTurnBeforeEndOrder(def_ship) <= 2"
                     ]
                 },
@@ -3102,8 +3107,7 @@
                     "Parent": -1,
                     "#": 91,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "ShipInStar(def_ship,ShipStar(CurShip))"
                     ]
                 },
@@ -3115,14 +3119,12 @@
                     "Parent": -1,
                     "#": 92,
                     "Code.Type": "Turn",
-                    "Code": 
-                    [
+                    "Code": [
                         "!ShipInStar(def_ship,ShipStar(CurShip))"
                     ]
                 }
             ],
-            "States": 
-            [
+            "States": [
                 {
                     "Type": "TState",
                     "Name": "DreadnoughtOnPatrol",
@@ -3340,8 +3342,7 @@
                     "EMsg": ""
                 }
             ],
-            "Variables": 
-            [
+            "Variables": [
                 {
                     "Type": "TVar",
                     "Name": "i",
@@ -3719,8 +3720,7 @@
             ]
         }
     ],
-    "Visual.Links": 
-    [
+    "Visual.Links": [
         {
             "Type": "TGraphLink",
             "Begin": 2,
@@ -4129,8 +4129,5 @@
         }
     ],
     "BlockPar.EC.Total.Strings": 0,
-    "BlockPar.EC": 
-    [
-      
-    ]
+    "BlockPar.EC": []
 }

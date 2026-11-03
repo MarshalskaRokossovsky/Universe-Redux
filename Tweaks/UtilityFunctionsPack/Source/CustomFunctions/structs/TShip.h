@@ -932,10 +932,10 @@ struct TNormalShip: public TShip {
     _gap_32 _4E4;
     _gap_32 _4E8;
     _gap_32 _4EC;
-    word _4F0;
-    word _4F2;
-    word _4F4;
-    word _4F6;
+    word kills_normal;     // CurrentSystemKills.Normal @0x4F0
+    word kills_dominator;  // CurrentSystemKills.Dominator @0x4F2
+    word kills_pirate;     // CurrentSystemKills.Pirate @0x4F4
+    word kills_custom;     // CurrentSystemKills.Custom @0x4F6
     TPlanet* _4F8;
     float _4FC;
     _gap _500;  // rank?
@@ -996,3 +996,7 @@ static_assert(offsetof(TPirate, sub_type) == 0x514, "TPirate.sub_type (PirateTyp
 static_assert(offsetof(TRanger, status) == 0x513, "TRanger.status (CareerStatus)");
 static_assert(offsetof(TRanger, quests) == 0x520, "TRanger.quests");
 static_assert(offsetof(TRanger, in_prison) == 0x524, "TRanger.in_prison");
+static_assert(offsetof(TNormalShip, kills_normal) == 0x4F0, "TNormalShip.kills_normal");
+static_assert(offsetof(TNormalShip, kills_dominator) == 0x4F2, "TNormalShip.kills_dominator");
+static_assert(offsetof(TNormalShip, kills_pirate) == 0x4F4, "TNormalShip.kills_pirate");
+static_assert(offsetof(TNormalShip, kills_custom) == 0x4F6, "TNormalShip.kills_custom");
