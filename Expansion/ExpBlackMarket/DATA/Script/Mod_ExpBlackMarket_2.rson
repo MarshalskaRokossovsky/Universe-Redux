@@ -26,7 +26,7 @@
                     "Pos.y": 20,
                     "Parent": 54,
                     "#": 55,
-                    "Msg": "",
+                    "Msg": "' '",
                     "AMsg.Num": "0"
                 },
                 {
@@ -56,7 +56,7 @@
                     "Pos.y": 20,
                     "Parent": 63,
                     "#": 64,
-                    "Msg": "",
+                    "Msg": "' '",
                     "AMsg.Num": "3"
                 },
                 {
@@ -89,7 +89,7 @@
                     "Pos.y": 20,
                     "Parent": 53,
                     "#": 54,
-                    "Msg": "",
+                    "Msg": "' '",
                     "DMsg.Num": "0"
                 },
                 {
@@ -252,7 +252,8 @@
                         "    ShipOwner(BlackMarket, 1);",
                         "    ShipPilotRace(BlackMarket, 1);",
                         "    RelationToRanger(BlackMarket, Player(), 55);",
-                        "    ShipJoinsClan(BlackMarket);",
+                        "    //Пиратская станция не вступает в клан",
+                        "    ShipStanding(BlackMarket, 6);",
                         "    ShipJoin(BM, BlackMarket);",
                         "",
                         "    //Запрещаем автообновление магазинов оборудования и товаров",
@@ -2452,7 +2453,7 @@
                         "//Если ещё ни одно из условий на получение доступа к ЧР не выполнено",
                         "else",
                         "{",
-                        "    //Если включён Tweaks\\RevolutionDelayed, ЧР не запускается, пока не появятся пираты (иначе он пиратского клана и уничтожается/мешает задержке)",
+                        "    //При RevolutionDelayed сохраняем исходную задержку появления рынка до выступления пиратов",
                         "    dwd0 = 0;",
                         "    if(CurrentMods('Tweaks\\RevolutionDelayed'))",
                         "    {",
@@ -2757,7 +2758,7 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "PirateWin()"
+                        "0"
                     ]
                 },
                 {

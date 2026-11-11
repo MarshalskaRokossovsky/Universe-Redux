@@ -1770,6 +1770,22 @@
                     "Pos.y": -190,
                     "Parent": -1,
                     "#": 490
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "station_pay_hull_repair",
+                    "Pos.x": 1050,
+                    "Pos.y": -250,
+                    "Parent": -1,
+                    "#": 493
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "station_pay_eq_repair",
+                    "Pos.x": 1080,
+                    "Pos.y": -250,
+                    "Parent": -1,
+                    "#": 495
                 }
             ],
             "Groups": 
@@ -2870,6 +2886,8 @@
                         "else if(ShipType(cur_ruin) == 'MC')TextCorr = '</color>' + \"медицинского центра <ShipName(cur_ruin)>\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr = '</color>' + \"бизнес-центра <ShipName(cur_ruin)>\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологического центра <ShipName(cur_ruin)>\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameGenitive');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameGenitive');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"пиратской базы <ShipName(cur_ruin)>\";"
                     ]
                 },
@@ -3021,6 +3039,8 @@
                         "else if(type == 'MC') TextCorr3 = '</color>'+\"медицинский центр <ShipName(cur_ruin)>\";",
                         "else if(type == 'BK') TextCorr3 = '</color>'+\"бизнес-центр <ShipName(cur_ruin)>\";",
                         "else if(type == 'TC') TextCorr3 = '</color>'+\"технологический центр <ShipName(cur_ruin)>\";",
+                        "else if(type == 'MB') TextCorr3 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameNominative');",
+                        "else if(type == 'Manaan') TextCorr3 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameNominative');",
                         "else if(type == 'PB') TextCorr3 = '</color>'+\"пиратская база <ShipName(cur_ruin)>\";"
                     ]
                 },
@@ -3209,6 +3229,8 @@
                         "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameReady');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameReady');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
                         "",
                         "Sound('Sound.PG_Activation');",
@@ -3312,6 +3334,8 @@
                         "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"один <color=0,50,200>медицинский центр</color>\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"другой <color=0,50,200>бизнес-центр</color>\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"другой <color=0,50,200>технологический центр</color>\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameAnother');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameAnother');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"другая <color=0,50,200>пиратская база</color>\";",
                         "if(ShipType(cur_ruin) == 'MC') TextCorr = '</color>' + \"Учтите, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправиться <clr>не можем<clrEnd>. Однако, в системах ещё только находящихся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным) может находиться большое число раненых, которым требуется срочная медицинская помощь, а такое нам игнорировать никак нельзя.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <TextCorr2>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Подобные действия расцениваются Галактическим Советом как нерациональное распределение стратегических ресурсов и наказываются по всей строгости военного времени.\";",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"Учти, что в системы, уже <clr>захваченные<clrEnd> противником, мы отправляться <clr>не будем<clrEnd>. Однако, в систему, ещё только находящуюся <clr>под угрозой захвата<clrEnd> (в списке отмечены красным), если она принадлежит Клану, мы прыгнем с удовольствием.<br><clr>Не можем<clrEnd> мы совершить скачок и в систему, где уже и так имеется <TextCorr2>, или в которой присутствует <clr>более четырёх<clrEnd> других космических станций. Увы, Верховные рассматривают это как чрезмерную растрату общака.\";",
@@ -3397,6 +3421,8 @@
                         "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameReady');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameReady');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
                         "",
                         "if(!PlayerBridge()) Sound('Sound.PG_Activation');",
@@ -3518,6 +3544,8 @@
                         "else if(ShipType(cur_ruin) == 'MC') TextCorr =  '</color>' + \"медицинский центр <ShipName(cur_ruin)>\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr = '</color>' + \"бизнес-центр <ShipName(cur_ruin)>\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr = '</color>' + \"технологический центр <ShipName(cur_ruin)>\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameNominative');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameNominative');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr = '</color>' + \"пиратская база <ShipName(cur_ruin)>\";"
                     ]
                 },
@@ -3717,6 +3745,8 @@
                         "else if(ShipType(cur_ruin) == 'MC') TextCorr2 = '</color>' + \"Медицинский центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'BK') TextCorr2 = '</color>' + \"Бизнес-центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
                         "else if(ShipType(cur_ruin) == 'TC') TextCorr2 = '</color>' + \"Технологический центр <ShipName(cur_ruin)>\" + ' ' + \"готов\";",
+                        "else if(ShipType(cur_ruin) == 'MB') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsMB.NameReadyCapital');",
+                        "else if(ShipType(cur_ruin) == 'Manaan') TextCorr2 = '</color>' + CT('Script.Mod_ExpHullsBases.DialogsManaan.NameReadyCapital');",
                         "else if(ShipType(cur_ruin) == 'PB') TextCorr2 = '</color>' + \"Пиратская база <ShipName(cur_ruin)>\" + ' ' + \"готова\";",
                         "",
                         "if(!PlayerBridge()) Sound('Sound.PG_Activation');",
@@ -4531,7 +4561,7 @@
                         "                        {",
                         "                            AddDialogInject('bridge_ruin_control', '', \"Связаться с <color=0,50,200>военной базой</color> <ShipName(cur_ruin)>\", 5,'',cur_ruin);",
                         "                        }",
-                        "                        else if(ruin_str_type == 'SB' || ruin_str_type == 'RC' || ruin_str_type == 'MC' || ruin_str_type == 'BK' || ruin_str_type == 'TC' || ruin_str_type == 'PB')",
+                        "                        else if(ruin_str_type == 'SB' || ruin_str_type == 'RC' || ruin_str_type == 'MC' || ruin_str_type == 'BK' || ruin_str_type == 'TC' || ruin_str_type == 'MB' || ruin_str_type == 'Manaan' || ruin_str_type == 'PB')",
                         "                        {",
                         "                            if(~ShipFindCustomShipInfoByType(cur_ruin, 'Teleport_Generator'))",
                         "                            {",
@@ -4542,6 +4572,8 @@
                         "                                    else if(ruin_str_type == 'MC') AddDialogInject('TeleportBridge', '', \"Связаться с <color=0,50,200>медицинским центром</color> <ShipName(cur_ruin)>\", 0, 0, cur_ruin);",
                         "                                    else if(ruin_str_type == 'BK') AddDialogInject('TeleportBridge', '', \"Связаться с <color=0,50,200>бизнес-центром</color> <ShipName(cur_ruin)>\", 0, 0, cur_ruin);",
                         "                                    else if(ruin_str_type == 'TC') AddDialogInject('TeleportBridge', '', \"Связаться с <color=0,50,200>технологическим центром</color> <ShipName(cur_ruin)>\", 0, 0, cur_ruin);",
+                        "                                    else if(ruin_str_type == 'MB') AddDialogInject('TeleportBridge', '', CT('Script.Mod_ExpHullsBases.DialogsMB.BridgeCall'), 0, 0, cur_ruin);",
+                        "                                    else if(ruin_str_type == 'Manaan') AddDialogInject('TeleportBridge', '', CT('Script.Mod_ExpHullsBases.DialogsManaan.BridgeCall'), 0, 0, cur_ruin);",
                         "                                    else if(ruin_str_type == 'PB') AddDialogInject('TeleportBridge', '', \"Связаться с <color=0,50,200>пиратской базой</color> <ShipName(cur_ruin)>\", 0, 0, cur_ruin);",
                         "                                }",
                         "                            }",
@@ -4592,8 +4624,28 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
-                        "RuinsAllowModernization(cur_ruin, 0);",
-                        "Sound('Sound.Drop');"
+                        "can_stop = 1;",
+                        "int sponsor_info = ShipFindCustomShipInfoByType(cur_ruin, 'ExpHullsBasesSponsorSlots');",
+                        "if(sponsor_info >= 0) {",
+                        "    int sponsor_mask = ShipCustomShipInfoData(cur_ruin, sponsor_info, 1);",
+                        "    int sponsor_bit = 1;",
+                        "    for(k = 1; k <= ShipSlots(cur_ruin, 1); k = k + 1) {",
+                        "        if(sponsor_mask % (sponsor_bit * 2) >= sponsor_bit && !ShipEqInSlot(cur_ruin, t_Weapon1, k)) can_stop = 0;",
+                        "        sponsor_bit = sponsor_bit * 2;",
+                        "    }",
+                        "    if(ShipSlots(cur_ruin, 3) && sponsor_mask % 64 >= 32 && !ShipEqInSlot(cur_ruin, t_Radar)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 4) && sponsor_mask % 128 >= 64 && !ShipEqInSlot(cur_ruin, t_Scaner)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 5) && sponsor_mask % 256 >= 128 && !ShipEqInSlot(cur_ruin, t_RepairRobot)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 6) && sponsor_mask % 512 >= 256 && !ShipEqInSlot(cur_ruin, t_CargoHook)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 7) && sponsor_mask % 1024 >= 512 && !ShipEqInSlot(cur_ruin, t_DefGenerator)) can_stop = 0;",
+                        "}",
+                        "if(can_stop) {",
+                        "    RuinsAllowModernization(cur_ruin, 0);",
+                        "    Sound('Sound.Drop');",
+                        "    ShipDeleteCustomShipInfo(cur_ruin, 'ExpHullsBasesSponsorSlots');",
+                        "    int upgrade_info = ShipFindCustomShipInfoByType(cur_ruin, 'ExpBasesAutoUpgradeInfo');",
+                        "    if(upgrade_info >= 0) ShipCustomShipInfoData(cur_ruin, upgrade_info, 3, CurTurn() + 90);",
+                        "}"
                     ]
                 },
                 {
@@ -4740,6 +4792,21 @@
                     "Code.Type": "Turn",
                     "Code": 
                     [
+                        "can_stop = 1;",
+                        "int sponsor_info = ShipFindCustomShipInfoByType(cur_ruin, 'ExpHullsBasesSponsorSlots');",
+                        "if(sponsor_info >= 0) {",
+                        "    int sponsor_mask = ShipCustomShipInfoData(cur_ruin, sponsor_info, 1);",
+                        "    int sponsor_bit = 1;",
+                        "    for(k = 1; k <= ShipSlots(cur_ruin, 1); k = k + 1) {",
+                        "        if(sponsor_mask % (sponsor_bit * 2) >= sponsor_bit && !ShipEqInSlot(cur_ruin, t_Weapon1, k)) can_stop = 0;",
+                        "        sponsor_bit = sponsor_bit * 2;",
+                        "    }",
+                        "    if(ShipSlots(cur_ruin, 3) && sponsor_mask % 64 >= 32 && !ShipEqInSlot(cur_ruin, t_Radar)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 4) && sponsor_mask % 128 >= 64 && !ShipEqInSlot(cur_ruin, t_Scaner)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 5) && sponsor_mask % 256 >= 128 && !ShipEqInSlot(cur_ruin, t_RepairRobot)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 6) && sponsor_mask % 512 >= 256 && !ShipEqInSlot(cur_ruin, t_CargoHook)) can_stop = 0;",
+                        "    if(ShipSlots(cur_ruin, 7) && sponsor_mask % 1024 >= 512 && !ShipEqInSlot(cur_ruin, t_DefGenerator)) can_stop = 0;",
+                        "}",
                         "if(ruin_str_type == 'WB')",
                         "{",
                         "    //Добавляем диалог для приказа смены дислокации ВБ (игрока могут позже послать, если его звание недостаточно высоко)",
@@ -4757,7 +4824,7 @@
                         "        {",
                         "            InjectAnswer('ruinhull_upgrade_talk', \"Я желаю улучшить корпус вашей станции\", 0);",
                         "            InjectAnswer('ruin_modernization', CT('FormRuins.GN.Modern.PlayerAskMod'), 0);",
-                        "            InjectAnswer('ruin_modernization_negation', \"Я прекращаю спонсирование этой станции\", 0);",
+                        "            if(can_stop) InjectAnswer('ruin_modernization_negation', \"Я прекращаю спонсирование этой станции\", 0); else InjectAnswer('DialogModernizations', CT('Script.Mod_ExpHullsBases.SponsorSlotsRequired'), 1);",
                         "        }",
                         "        else",
                         "        {",
@@ -4788,7 +4855,7 @@
                         "    if(RuinsAllowModernization(cur_ruin)) {",
                         "        InjectAnswer('ruin_modernization', CT('FormRuins.GN.Modern.PlayerAskMod'), 0);",
                         "        InjectAnswer('ruinhull_upgrade_talk', \"Я желаю улучшить корпус вашей станции\", 0);",
-                        "        InjectAnswer('ruin_modernization_negation', \"Я прекращаю спонсирование этой станции\", 0);",
+                        "        if(can_stop) InjectAnswer('ruin_modernization_negation', \"Я прекращаю спонсирование этой станции\", 0); else InjectAnswer('DialogModernizations', CT('Script.Mod_ExpHullsBases.SponsorSlotsRequired'), 1);",
                         "    }",
                         "    else {",
                         "        InjectAnswer('ruin_modernization_start', CT('FormRuins.GN.Modern.PlayerAskMod'), 0);",
@@ -4803,7 +4870,26 @@
                         "            AddDialogInject('Mod_ShuNukes:StationNukesBuy','',\"Я хочу закупить на вашу станцию ядерных торпед\",3);",
                         "        }",
                         "    }",
-                        "}"
+                        "}",
+                        "cur_item = ShipItems(cur_ruin, 0);",
+                        "if(cur_item) {",
+                        "    if(HullHP(cur_ruin) < ItemSize(cur_item)) {",
+                        "        cur_ruin_cost = max(100, (ItemSize(cur_item) - HullHP(cur_ruin)) * 100);",
+                        "        if(ShipMoney(Player()) >= cur_ruin_cost) InjectAnswer('station_pay_hull_repair', Format(CT('Script.Mod_ExpHullsBases.SponsorRepairHull'), '<Cost'+'>', cur_ruin_cost), 0);",
+                        "    }",
+                        "}",
+                        "cur_ruin_cost = 0;",
+                        "for(k = 1; k < ShipItems(cur_ruin); k = k + 1) {",
+                        "    cur_item = ShipItems(cur_ruin, k);",
+                        "    if(!ItemIsInUse(cur_item) || !ShipCanRepairEq(cur_ruin, cur_item)) continue;",
+                        "    if(ItemDurability(cur_item) < 100) cur_ruin_cost = cur_ruin_cost + max(100, ItemCost(cur_item) * (100 - ItemDurability(cur_item)) / 1000);",
+                        "}",
+                        "for(k = 0; k < ShipArts(cur_ruin); k = k + 1) {",
+                        "    cur_item = ShipArts(cur_ruin, k);",
+                        "    if(!ItemIsInUse(cur_item)) continue;",
+                        "    if(ItemDurability(cur_item) < 100) cur_ruin_cost = cur_ruin_cost + max(100, ItemCost(cur_item) * (100 - ItemDurability(cur_item)) / 1000);",
+                        "}",
+                        "if(cur_ruin_cost && ShipMoney(Player()) >= cur_ruin_cost) InjectAnswer('station_pay_eq_repair', Format(CT('Script.Mod_ExpHullsBases.SponsorRepairEquipment'), '<Cost'+'>', cur_ruin_cost), 0);"
                     ]
                 },
                 {
@@ -4821,8 +4907,26 @@
                         "tempStr2 = '</color>' + CT('FormRuins.GN.Modern.PlayerOkAgain');",
                         "",
                         "RuinsAllowModernization(cur_ruin, 1);",
+                        "if(ReduxAchStations < 10 && ShipFindCustomShipInfoByType(cur_ruin, 'ReduxAchModernizationCounted') < 0) {",
+                        "    ShipAddCustomShipInfo(cur_ruin, 'ReduxAchModernizationCounted', 'NoShow', 1);",
+                        "    ReduxAchStations = ReduxAchStations + 1;",
+                        "}",
                         "Sound('Sound.Buy');",
-                        "ShipMoney(Player(),ShipMoney(Player())-cur_ruin_cost);"
+                        "ShipMoney(Player(),ShipMoney(Player())-cur_ruin_cost);",
+                        "int sponsor_mask = 0;",
+                        "int sponsor_bit = 1;",
+                        "for(k = 1; k <= ShipSlots(cur_ruin, 1); k = k + 1) {",
+                        "    if(ShipEqInSlot(cur_ruin, t_Weapon1, k)) sponsor_mask = sponsor_mask + sponsor_bit;",
+                        "    sponsor_bit = sponsor_bit * 2;",
+                        "}",
+                        "if(ShipSlots(cur_ruin, 3) && ShipEqInSlot(cur_ruin, t_Radar)) sponsor_mask = sponsor_mask + 32;",
+                        "if(ShipSlots(cur_ruin, 4) && ShipEqInSlot(cur_ruin, t_Scaner)) sponsor_mask = sponsor_mask + 64;",
+                        "if(ShipSlots(cur_ruin, 5) && ShipEqInSlot(cur_ruin, t_RepairRobot)) sponsor_mask = sponsor_mask + 128;",
+                        "if(ShipSlots(cur_ruin, 6) && ShipEqInSlot(cur_ruin, t_CargoHook)) sponsor_mask = sponsor_mask + 256;",
+                        "if(ShipSlots(cur_ruin, 7) && ShipEqInSlot(cur_ruin, t_DefGenerator)) sponsor_mask = sponsor_mask + 512;",
+                        "int sponsor_info = ShipFindCustomShipInfoByType(cur_ruin, 'ExpHullsBasesSponsorSlots');",
+                        "if(sponsor_info < 0) ShipAddCustomShipInfo(cur_ruin, 'ExpHullsBasesSponsorSlots', 'NoShow', sponsor_mask);",
+                        "else ShipCustomShipInfoData(cur_ruin, sponsor_info, 1, sponsor_mask);"
                     ]
                 },
                 {
@@ -4864,6 +4968,63 @@
                     "Code": 
                     [
                         "InjectAnswer('DialogModernizations',\"Пожалуй, в другой раз\",1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1050,
+                    "Pos.y": -220,
+                    "Parent": -1,
+                    "#": 494,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "cur_item = ShipItems(cur_ruin, 0);",
+                        "if(cur_item) {",
+                        "    if(HullHP(cur_ruin) < ItemSize(cur_item)) {",
+                        "        cur_ruin_cost = max(100, (ItemSize(cur_item) - HullHP(cur_ruin)) * 100);",
+                        "        if(ShipMoney(Player()) >= cur_ruin_cost) {",
+                        "            ShipMoney(Player(), ShipMoney(Player()) - cur_ruin_cost);",
+                        "            HullHP(cur_ruin, ItemSize(cur_item));",
+                        "            Sound('Sound.Repair');",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1080,
+                    "Pos.y": -220,
+                    "Parent": -1,
+                    "#": 496,
+                    "Code.Type": "Turn",
+                    "Code": [
+                        "cur_ruin_cost = 0;",
+                        "for(k = 1; k < ShipItems(cur_ruin); k = k + 1) {",
+                        "    cur_item = ShipItems(cur_ruin, k);",
+                        "    if(!ItemIsInUse(cur_item) || !ShipCanRepairEq(cur_ruin, cur_item)) continue;",
+                        "    if(ItemDurability(cur_item) < 100) cur_ruin_cost = cur_ruin_cost + max(100, ItemCost(cur_item) * (100 - ItemDurability(cur_item)) / 1000);",
+                        "}",
+                        "for(k = 0; k < ShipArts(cur_ruin); k = k + 1) {",
+                        "    cur_item = ShipArts(cur_ruin, k);",
+                        "    if(!ItemIsInUse(cur_item)) continue;",
+                        "    if(ItemDurability(cur_item) < 100) cur_ruin_cost = cur_ruin_cost + max(100, ItemCost(cur_item) * (100 - ItemDurability(cur_item)) / 1000);",
+                        "}",
+                        "if(cur_ruin_cost && ShipMoney(Player()) >= cur_ruin_cost) {",
+                        "    ShipMoney(Player(), ShipMoney(Player()) - cur_ruin_cost);",
+                        "    for(k = 1; k < ShipItems(cur_ruin); k = k + 1) {",
+                        "        cur_item = ShipItems(cur_ruin, k);",
+                        "        if(!ItemIsInUse(cur_item) || !ShipCanRepairEq(cur_ruin, cur_item)) continue;",
+                        "        if(ItemDurability(cur_item) < 100) ItemDurability(cur_item, 100);",
+                        "    }",
+                        "    for(k = 0; k < ShipArts(cur_ruin); k = k + 1) {",
+                        "        cur_item = ShipArts(cur_ruin, k);",
+                        "        if(ItemIsInUse(cur_item) && ItemDurability(cur_item) < 100) ItemDurability(cur_item, 100);",
+                        "    }",
+                        "    Sound('Sound.Repair');",
+                        "}"
                     ]
                 }
             ],
@@ -7399,6 +7560,28 @@
                     "#": 447,
                     "Var.Type": "Int",
                     "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "can_stop",
+                    "Pos.x": 300,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 497,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ReduxAchStations",
+                    "Pos.x": 330,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 498,
+                    "Var.Type": "Int",
+                    "Init": "0",
                     "Global": false
                 }
             ]
@@ -10548,7 +10731,11 @@
             "End": 492,
             "Nom": 0,
             "Arrow": true
-        }
+        },
+    {"Type": "TGraphLink", "Begin": 493, "End": 494, "Nom": 0, "Arrow": true},
+    {"Type": "TGraphLink", "Begin": 494, "End": 482, "Nom": 0, "Arrow": true},
+    {"Type": "TGraphLink", "Begin": 495, "End": 496, "Nom": 0, "Arrow": true},
+    {"Type": "TGraphLink", "Begin": 496, "End": 482, "Nom": 0, "Arrow": true}
     ],
     "Rect.Text": 
     [

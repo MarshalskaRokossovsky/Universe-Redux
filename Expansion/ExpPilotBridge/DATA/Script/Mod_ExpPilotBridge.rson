@@ -6440,6 +6440,7 @@
                     "Code": 
                     [
                         "//Формируется строка оглавления Галапедии",
+                        "ReduxAchGalopedia=1;",
                         "temp_str=CT('Galapedia.TotalPages');",
                         "temp_int=temp_str;",
                         "temp_str='';",
@@ -14489,6 +14490,17 @@
                     "Pos.y": 250,
                     "Parent": -1,
                     "#": 736,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ReduxAchGalopedia",
+                    "Pos.x": 920,
+                    "Pos.y": 270,
+                    "Parent": -1,
+                    "#": 741,
                     "Var.Type": "Int",
                     "Init": "0",
                     "Global": false

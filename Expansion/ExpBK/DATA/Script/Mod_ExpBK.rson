@@ -4462,6 +4462,7 @@
                         "    PlanetEco(IdToPlanet(ColonID), Rnd(0, 2));",
                         "    PlanetPopulation(IdToPlanet(ColonID), 1000);",
                         "    PlanetOwner(IdToPlanet(ColonID), race);",
+                        "    if(ReduxAchColonies < 10) ReduxAchColonies = ReduxAchColonies + 1;",
                         "",
                         "    BuyWarrior(IdToPlanet(ColonID));",
                         "    BuyTransport(IdToPlanet(ColonID), 0);",
@@ -8925,6 +8926,17 @@
                     "#": 600,
                     "Var.Type": "Int",
                     "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ReduxAchColonies",
+                    "Pos.x": 1430,
+                    "Pos.y": 620,
+                    "Parent": -1,
+                    "#": 601,
+                    "Var.Type": "Int",
+                    "Init": "0",
                     "Global": false
                 }
             ]

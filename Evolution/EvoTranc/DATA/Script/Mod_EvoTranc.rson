@@ -1684,6 +1684,10 @@
                         "        ArrayAdd(SpecialUpgradeArray,-1);",
                         "        ArrayAdd(SpecialUpgradeArray,-1);",
                         "    }",
+                        "    if(!ReduxAchFullTranc && !HullUpCheck && !SpecialUpCheck)",
+                        "    {",
+                        "        if(ShipFindCustomShipInfoByType(cur_Tranc,'TrancNavComputerInfo') >= 0 || ShipFindCustomShipInfoByType(cur_Tranc,'TrancFakeNavComputerInfo') >= 0) ReduxAchFullTranc = 1;",
+                        "    }",
                         "}",
                         "",
                         "//Объявление массива с шансами на спавн NPC с транклюкаторами",
@@ -7345,6 +7349,17 @@
                     "#": 343,
                     "Var.Type": "Dword",
                     "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ReduxAchFullTranc",
+                    "Pos.x": 730,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 355,
+                    "Var.Type": "Int",
+                    "Init": "0",
                     "Global": false
                 }
             ]
