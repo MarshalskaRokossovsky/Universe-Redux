@@ -666,7 +666,7 @@
                     "Pos.y": 20,
                     "Parent": 389,
                     "#": 390,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "AMsg.Num": "64"
                 },
                 {
@@ -676,7 +676,7 @@
                     "Pos.y": 20,
                     "Parent": 391,
                     "#": 392,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "AMsg.Num": "65"
                 },
                 {
@@ -686,7 +686,7 @@
                     "Pos.y": 390,
                     "Parent": -1,
                     "#": 394,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "AMsg.Num": "66"
                 },
                 {
@@ -1359,7 +1359,7 @@
                     "Pos.y": 20,
                     "Parent": 372,
                     "#": 389,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "DMsg.Num": "59"
                 },
                 {
@@ -1369,7 +1369,7 @@
                     "Pos.y": 20,
                     "Parent": 338,
                     "#": 391,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "DMsg.Num": "60"
                 },
                 {
@@ -1379,7 +1379,7 @@
                     "Pos.y": 360,
                     "Parent": -1,
                     "#": 393,
-                    "Msg": "",
+                    "Msg": "<clr><clrEnd>",
                     "DMsg.Num": "61"
                 },
                 {
@@ -1896,8 +1896,8 @@
                         "cur_ruin_cost = ItemCost(ruin_hull);",
                         "if(ruin_str_type == 'WB') max_ruin_size = ((cur_ruin_techlevel * 400 + 800) * 3) / 2;",
                         "else max_ruin_size = cur_ruin_techlevel * 400 + 800;",
-                        "//Расширяем лимит размера станций для мода EvoArmada",
-                        "if(IsScriptActive('Mod_EvoArmada')) max_ruin_size = round(1.0 * max_ruin_size * (1.0 + (1.0 * (GalaxyDiffLevels() / 50))));",
+                        "//Расширяем лимит размера станций для EvoDreadnought",
+                        "if(IsScriptActive('Mod_EvoDreadnought')) max_ruin_size = round(1.0 * max_ruin_size * (1.0 + (1.0 * (GalaxyDiffLevels() / 50))));",
                         "",
                         "if(max_ruin_size < ItemSize(ruin_hull)) max_ruin_size = ItemSize(ruin_hull);",
                         "",
@@ -4066,8 +4066,8 @@
                         "    SpecialToEquipment(FindBonusByNameInCfg(tempStr4), cur_item);",
                         "    HullType(cur_item, 8); //Возвращаем станционный тип корпуса, т.к. SpecialToEquipment превратила его в акриновый",
                         "",
-                        "    //Удаляем лишние выводы строчек бонусов из EvoArmada, если она подключена",
-                        "    if(CurrentMods('Evolution\\EvoArmada') || IsScriptActive('Mod_EvoDreadnought'))",
+                        "    //Удаляем лишние строки бонусов EvoDreadnought",
+                        "    if(IsScriptActive('Mod_EvoDreadnought'))",
                         "    {",
                         "        for(i = ItemExtraSpecials(cur_item) - 1; i >= 0; i = i - 1)",
                         "        {",
@@ -4116,8 +4116,8 @@
                         "    SpecialToEquipment(FindBonusByNameInCfg(tempStr4), cur_item);",
                         "    HullType(cur_item, 8); //Возвращаем станционный тип корпуса, т.к. SpecialToEquipment превратила его в акриновый",
                         "",
-                        "    //Удаляем лишние выводы строчек бонусов из EvoArmada, если она подключена",
-                        "    if(CurrentMods('Evolution\\EvoArmada') || IsScriptActive('Mod_EvoDreadnought'))",
+                        "    //Удаляем лишние строки бонусов EvoDreadnought",
+                        "    if(IsScriptActive('Mod_EvoDreadnought'))",
                         "    {",
                         "        for(i = ItemExtraSpecials(cur_item) - 1; i >= 0; i = i - 1)",
                         "        {",
@@ -4163,8 +4163,8 @@
                         "    SpecialToEquipment(FindBonusByNameInCfg('ExpHullsBases_Polyxen'), cur_item);",
                         "    HullType(cur_item, 8); //Возвращаем станционный тип корпуса, т.к. SpecialToEquipment превратила его в акриновый",
                         "",
-                        "    //Удаляем лишние выводы строчек бонусов из EvoArmada, если она подключена",
-                        "    if(CurrentMods('Evolution\\EvoArmada') || IsScriptActive('Mod_EvoDreadnought'))",
+                        "    //Удаляем лишние строки бонусов EvoDreadnought",
+                        "    if(IsScriptActive('Mod_EvoDreadnought'))",
                         "    {",
                         "        for(i = ItemExtraSpecials(cur_item) - 1; i >= 0; i = i - 1)",
                         "        {",
@@ -4490,7 +4490,7 @@
                         "",
                         "            if(ShipOwner(Player()) <= 4)",
                         "            {",
-                        "                AddDialogInject('DialogModernizations',\"\",\"У меня есть пара вопросов о вашей станции\",0);",
+                        "                AddDialogInject('DialogModernizations','',\"У меня есть пара вопросов о вашей станции\",0);",
                         "            }",
                         "            //Если игрок на стороне клана, то улучшить ВБ он не сможет",
                         "            else if(ShipOwner(Player()) == 7)",
@@ -4812,8 +4812,7 @@
                         "    //Добавляем диалог для приказа смены дислокации ВБ (игрока могут позже послать, если его звание недостаточно высоко)",
                         "    if(!StarOwner(cur_star)) {",
                         "        if(!ShipOnSidePirateClan(Player())) {",
-                        "            if(~ShipFindCustomShipInfoByType(cur_ruin, 'WB_move')) int u;",
-                        "            else InjectAnswer('ruin_movement', \"Ваша база должна сменить дислокацию\", 1);",
+                        "            if(ShipFindCustomShipInfoByType(cur_ruin, 'WB_move') < 0) InjectAnswer('ruin_movement', \"Ваша база должна сменить дислокацию\", 1);",
                         "        }",
                         "    }",
                         "",
@@ -10809,7 +10808,7 @@
             "fsUnderline": false
         }
     ],
-    "BlockPar.EC.Total.Strings": 253,
+    "BlockPar.EC.Total.Strings": 252,
     "BlockPar.EC": 
     [
         {
@@ -11355,10 +11354,6 @@
         {
             "#": "673",
             "String": "Экипаж - приготовиться к гиперпрыжку!<br>Рейнджер <Player> - набери дистанцию и наблюдай. Такое зрелище нечасто увидишь!"
-        },
-        {
-            "#": "674",
-            "String": ""
         },
         {
             "#": "677",
